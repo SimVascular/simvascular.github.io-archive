@@ -9,10 +9,13 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Grayscale - Start Bootstrap Theme</title>
+    <title>SimVascular</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Select CSS -->
+    <link href="css/bootstrap-select.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="css/grayscale.css" rel="stylesheet">
@@ -27,7 +30,7 @@
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <![endif]-->    
 
 </head>
 
@@ -62,6 +65,9 @@
                         <a class="page-scroll" href="#docs">Documentation</a>
                     </li>
                     <li>
+                        <a class="page-scroll" href="#repository">Repository</a>
+                    </li>                    
+                    <li>
                         <a class="page-scroll" href="#team">Our Team</a>
                     </li>
                     <li>
@@ -92,14 +98,68 @@
     </header>
 
     <!-- About Section -->
-    <section id="about" class="container content-section text-center">
+    <section id="about" class="container content-section text-left">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>About SimVascular</h2>
-                <p></p>
-                <p>This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.</p>
-                <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p>
+            <div class="col-lg-9">
+              <h2>About SimVascular</h2>
+              <!-- Description -->
+              <div class="media">
+                <a class="pull-left" href="#">
+                  <img class="media-object" src="img/photo1.jpg" alt="...">
+                </a>
+                <div class="media-body">
+                  <h4 class="media-heading">Description</h4>
+                  This project is an open source release of tools for cardiovascular simulation. It includes code for reading 3D images, segmenting structures, generating models and meshes, and modeling blood flow in deformable vessels. Commercial components have been used in the model construction, mesh generation and flow solver components. The SimVascular project is derived from the ASPIRE2 software project and includes modified portions of PHASTA from RPI/SCOREC.
+                </div>
+              </div>
+              <!-- Purpose/Synopsis -->
+              <div class="media">
+                <a class="pull-left" href="#">
+                  <img class="media-object" src="img/photo2.jpg" alt="...">
+                </a>
+                <div class="media-body">
+                  <h4 class="media-heading">Purpose/Synopsis</h4>
+                  Provides a platform for patient-specific cardiovascular modeling and simulation.
+                </div>
+              </div>
+              <!-- Audience -->
+              <div class="media">
+                <a class="pull-left" href="#">
+                  <img class="media-object" src="img/photo3.jpg" alt="...">
+                </a>
+                <div class="media-body">
+                  <h4 class="media-heading">Audience</h4>
+                  Biomedical researchers interested in Cardiovascular Dynamics, which includes simulations of blood flow as well as vessel dynamics.
+                </div>
+              </div>
+              <!-- Long Term Goals and Related Uses -->
+              <div class="media">
+                <a class="pull-left" href="#">
+                  <img class="media-object" src="img/photo4.jpg" alt="...">
+                </a>
+                <div class="media-body">
+                  <h4 class="media-heading">Long Term Goals and Related Uses</h4>
+                  Allow researchers to go from medical imaging data to hemodynamic (blood flow) simulation results for patient specific models. The application, which integrates custom open-source code and best-in-class commercial components, includes an integrated flow solver with special outflow boundary conditions and fluid-structure interaction capabilities.
+                </div>
+              </div>
             </div>
+            <!-- NEWS -->
+            <div class="col-lg-3">
+              <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading"><h5>News...</h5></div>
+                <div class="panel-body">
+                  <p>...</p>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-lg-12">
+            <a href="#download" class="btn btn-circle page-scroll">
+              <i class="fa fa-angle-double-down animated"></i>
+            </a>
+          </div>
         </div>
     </section>
 
@@ -107,73 +167,286 @@
     <section id="download" class="content-section text-center">
         <div class="download-section">
             <div class="container">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Download Grayscale</h2>
-                    <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
-                    <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>
+                <div class="col-lg-12">
+                    <h2>Download SimVascular</h2>
+                    <h4>Dowload SimVascular for free!</h4>
+
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                        <label for="OS"><h5>Select OS</h5></label>
+                        <select class="selectpicker" id="OS" data-style="btn-primary">
+                          <option>Windows</option>
+                          <option>Linux</option>
+                          <option>Mac OSX</option>
+                        </select>
+                        </div>
+
+                      <div class="form-group">
+                        <label for="OS"><h5>Select version</h5></label>
+                        <select class="selectpicker" data-style="btn-primary">
+                          <option value="19">1.9</option>
+                          <option value="20">2.0</option>
+                          <option value="21">2.1</option>
+                        </select>
+                      </div>
+                      
+                      <div class="form-group">                        
+                        <button type="submit" class="btn btn-info">Download</button>                        
+                      </div>
+
+                    </form>
                 </div>
             </div>
         </div>
+        <div class="row text-center">
+          <div class="col-lg-12">
+            <a href="#docs" class="btn btn-circle page-scroll">
+              <i class="fa fa-angle-double-down animated"></i>
+            </a>
+          </div>
+        </div>        
     </section>
 
     <!-- Documentation Section -->
-    <section id="docs" class="container content-section text-center">
+    <section id="docs" class="container content-section text-left">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Contact Start Bootstrap</h2>
-                <p>Feel free to email us to provide some feedback on our templates, give us suggestions for new templates and themes, or to just say hello!</p>
-                <p><a href="mailto:feedback@startbootstrap.com">feedback@startbootstrap.com</a>
-                </p>
-                <ul class="list-inline banner-social-buttons">
-                    <li>
-                        <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                    </li>
-                    <li>
-                        <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
+            <div class="col-lg-12">
+                <h2>SimVascular Documentation</h2>
+                  <div class="row">
+                    <div class="col-lg-3">
+                      <div class="panel panel-info">
+                        <!-- Default panel contents -->
+                        <div class="panel-heading"><h4>Model Building</h4></div>
+                        <div class="panel-body">
+                          <p>Questo Manuale...</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="panel panel-info">
+                        <!-- Default panel contents -->
+                        <div class="panel-heading"><h4>Meshing</h4></div>
+                        <div class="panel-body">
+                          <p>Questo Manuale...</p>
+                        </div>
+                      </div>
 
-    <!-- Our Team Section -->
-    <section id="team" class="content-section text-center">
-        <div class="download-section">
-            <div class="container">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Download Grayscale</h2>
-                    <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
-                    <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="panel panel-info">
+                        <!-- Default panel contents -->
+                        <div class="panel-heading"><h4>Presolver</h4></div>
+                        <div class="panel-body">
+                          <p>Questo Manuale...</p>
+                        </div>
+                      </div>
+
+                    </div>                  
+                    <div class="col-lg-3">
+                      <div class="panel panel-info">
+                        <!-- Default panel contents -->
+                        <div class="panel-heading"><h4>Flowsolver</h4></div>
+                        <div class="panel-body">
+                          <p>Questo Manuale...</p>
+                        </div>
+                      </div>
+
+                    </div>                  
+
                 </div>
             </div>
         </div>
+        <div class="row text-center">
+          <div class="col-lg-12">
+            <a href="#repository" class="btn btn-circle page-scroll">
+              <i class="fa fa-angle-double-down animated"></i>
+            </a>
+          </div>
+        </div>                
+    </section>
+
+    <!-- Repository Section -->
+    <section id="repository" class="content-section text-left">
+        <div class="download-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <h2>SimVascular Model Repository</h2>
+              <!-- Description -->
+              <div class="media">
+                <a class="pull-left" href="#">
+                  <img class="media-object" src="img/photo1.jpg" alt="...">
+                </a>
+                <div class="media-body">
+                  <h4 class="media-heading">What is it</h4>
+                  This project is an open source release of tools for cardiovascular simulation. It includes code for reading 3D images, segmenting structures, generating models and meshes, and modeling blood flow in deformable vessels. Commercial components have been used in the model construction, mesh generation and flow solver components. The SimVascular project is derived from the ASPIRE2 software project and includes modified portions of PHASTA from RPI/SCOREC.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row"><br></div>
+          <div class="row text-center">
+              <div class="col-lg-12">
+                <button type="submit" class="btn btn-info">Visit the SV Model Repository</button>
+              </div>
+            </div>  
+            <div class="row text-center">
+            <div class="col-lg-12">
+              <a href="#team" class="btn btn-circle page-scroll">
+                <i class="fa fa-angle-double-down animated"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>  
+    </section>    
+
+    <!-- Our Team Section -->
+    <section id="team" class="content-section text-left">
+        <div class="download-section">
+            <div class="container">
+              <div class="col-lg-12">
+                  <h2>Our Team</h2>
+                  <div class="row">
+                    <!-- Team 1 -->
+                    <div class="col-lg-3">
+                      <div class="thumbnail">
+                        <img src="img/TeamTest.jpg" alt="...">
+                        <div class="caption">
+                          <h4>John Smith</h4>
+                          <p class="small">He started as </p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Team 2 -->
+                    <div class="col-lg-3">
+                      <div class="thumbnail">
+                        <img src="img/TeamTest.jpg" alt="...">
+                        <div class="caption">
+                          <h4>John Smith</h4>
+                          <p>He started as </p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Team 3 -->
+                    <div class="col-lg-3">
+                      <div class="thumbnail">
+                        <img src="img/TeamTest.jpg" alt="...">
+                        <div class="caption">
+                          <h4>John Smith</h4>
+                          <p>He started as </p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Team 4 -->
+                    <div class="col-lg-3">
+                      <div class="thumbnail">
+                        <img src="img/TeamTest.jpg" alt="...">
+                        <div class="caption">
+                          <h4>John Smith</h4>
+                          <p>He started as </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <!-- Team 5 -->
+                    <div class="col-lg-3">
+                      <div class="thumbnail">
+                        <img src="img/TeamTest.jpg" alt="...">
+                        <div class="caption">
+                          <h4>John Smith</h4>
+                          <p>He started as </p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Team 6 -->
+                    <div class="col-lg-3">
+                      <div class="thumbnail">
+                        <img src="img/TeamTest.jpg" alt="...">
+                        <div class="caption">
+                          <h4>John Smith</h4>
+                          <p>He started as </p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Team 7 -->
+                    <div class="col-lg-3">
+                      <div class="thumbnail">
+                        <img src="img/TeamTest.jpg" alt="...">
+                        <div class="caption">
+                          <h4>John Smith</h4>
+                          <p>He started as </p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Team 8 -->
+                    <div class="col-lg-3">
+                      <div class="thumbnail">
+                        <img src="img/TeamTest.jpg" alt="...">
+                        <div class="caption">
+                          <h4>John Smith</h4>
+                          <p>He started as </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+            </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-lg-12">
+            <a href="#contact" class="btn btn-circle page-scroll">
+              <i class="fa fa-angle-double-down animated"></i>
+            </a>
+          </div>
+        </div>                                
     </section>
 
     <!-- Contact Section -->
-    <section id="team" class="content-section text-center">
+    <section id="contact" class="content-section text-center">
         <div class="download-section">
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Download Grayscale</h2>
-                    <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
-                    <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>
+                    <h2>Contact us</h2>
+                    <h4>We are very interested in your feedback and comments.</h4>
+
+                    <form class="form-horizontal" role="form">
+  
+                      <div class="form-group">
+                        <label for="inputName" class="col-sm-2 control-label">Name</label>
+                        <div class="col-sm-10">
+                          <input type="name" class="form-control" id="inputEmail3" placeholder="Name">
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+                        <div class="col-sm-10">
+                          <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <textarea class="form-control" rows="5" placeholder="Leave us a comment..."></textarea>
+                      </div>
+
+                      <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                          <button type="submit" class="btn btn-info">Send Comment</button>
+                        </div>
+                      </div>
+                    </form>                    
                 </div>
             </div>
         </div>
     </section>
-
-
-
-    <!-- Map Section -->
-    <div id="map"></div>
 
     <!-- Footer -->
     <footer>
         <div class="container text-center">
-            <p>Copyright &copy; Your Website 2014</p>
+            <h5>Copyright &copy; The SimVascular Development Team - 2014</h5>
         </div>
     </footer>
 
@@ -183,14 +456,21 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
+    <!-- Bootstrap Select -->
+    <script src="js/bootstrap-select.min.js"></script>
+
     <!-- Plugin JavaScript -->
     <script src="js/jquery.easing.min.js"></script>
 
-    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
-
     <!-- Custom Theme JavaScript -->
     <script src="js/grayscale.js"></script>
+
+    <script>
+      $('.selectpicker').selectpicker({
+        size: 8
+      });
+    </script>
+    
 
 </body>
 
