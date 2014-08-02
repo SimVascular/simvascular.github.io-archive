@@ -87,7 +87,7 @@
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                         <h1 class="brand-heading">SimVascular</h1>
-                        <p class="intro-text">The only comprehensive software package that provides a complete pipeline from medical image data segmentation to patient specific blood flow simulation and analysis.</p>
+                        <p class="intro-text">The only comprehensive opensource software package that provides a complete pipeline from medical image data segmentation to patient specific blood flow simulation and analysis.</p>
                         <a href="#about" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-double-down animated"></i>
                         </a>
@@ -147,13 +147,79 @@
             <div class="col-lg-3">
               <div class="panel panel-default">
                 <!-- Default panel contents -->
-                <div class="panel-heading"><h5>News...</h5></div>
+                <div class="panel-heading">
+                  <h4>News...</h4>
+                  <h5><a href="../documentation/docs.html">News Archive</a></h5>
+                </div>
                 <div class="panel-body">
-                  <p>...</p>
+                <p class="newstext">
+                  <b>30 September 2004</b><br>
+                  Simascular 2.0 released available!<br>
+                </p>                                
                 </div>
               </div>
             </div>
         </div>
+
+
+        <div class="row text-left voffset5">
+          <div class="col-lg-12">
+          <h2>Main Features</h2>
+           <div class="panel-group" id="accordion">
+  <div class="panel panel-success">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+          Competely Opensource
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in">
+      <div class="panel-body">
+        <p class="newstext">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-success">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+          Two- and Three- Dimensional Segmentation algorithms
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse">
+      <div class="panel-body">
+        <p class="newstext">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-success">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+          From Images to Simulation Results
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse">
+      <div class="panel-body">
+        <p class="newstext">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.        
+        </p>
+        <img class="media-object" width="500pt" src="img/testModel.jpg" alt="...">
+        
+      </div>
+    </div>
+  </div>
+</div>
+          </div>
+        </div>
+
         <div class="row text-center">
           <div class="col-lg-12">
             <a href="#download" class="btn btn-circle page-scroll">
@@ -182,8 +248,8 @@
                         </div>
 
                       <div class="form-group">
-                        <label for="OS"><h5>Select version</h5></label>
-                        <select class="selectpicker" data-style="btn-primary">
+                        <label for="version"><h5>Select version</h5></label>
+                        <select class="selectpicker" id="version" data-style="btn-primary">
                           <option value="19">1.9</option>
                           <option value="20">2.0</option>
                           <option value="21">2.1</option>
@@ -192,6 +258,10 @@
                       
                       <div class="form-group">                        
                         <button type="submit" class="btn btn-info">Download</button>                        
+                      </div>
+
+                      <div class="form-group">                        
+                        <button class="btn btn-info">Source Code Repository</button>
                       </div>
 
                     </form>
@@ -216,18 +286,28 @@
                     <div class="col-lg-3">
                       <div class="panel panel-info">
                         <!-- Default panel contents -->
-                        <div class="panel-heading"><h4>Model Building</h4></div>
+                        <div class="panel-heading">
+                          <h4>Model Building</h4>
+                          <h5><a href="../documentation/docs.html">HTML</a> | PDF</h5>
+                        </div>
                         <div class="panel-body">
-                          <p>Questo Manuale...</p>
+                          <p class="newstext">
+                          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. 
+                          </p>
                         </div>
                       </div>
                     </div>
                     <div class="col-lg-3">
                       <div class="panel panel-info">
                         <!-- Default panel contents -->
-                        <div class="panel-heading"><h4>Meshing</h4></div>
+                        <div class="panel-heading">
+                          <h4>Meshing</h4>
+                          <h5><a href="../documentation/docs.html">HTML</a> | PDF</h5>
+                        </div>
                         <div class="panel-body">
-                          <p>Questo Manuale...</p>
+                          <p class="newstext">
+                          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. 
+                          </p>
                         </div>
                       </div>
 
@@ -235,9 +315,14 @@
                     <div class="col-lg-3">
                       <div class="panel panel-info">
                         <!-- Default panel contents -->
-                        <div class="panel-heading"><h4>Presolver</h4></div>
+                        <div class="panel-heading">
+                          <h4>Presolver</h4>
+                          <h5><a href="../documentation/docs.html">HTML</a> | PDF</h5>
+                        </div>
                         <div class="panel-body">
-                          <p>Questo Manuale...</p>
+                          <p class="newstext">
+                          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. 
+                          </p>
                         </div>
                       </div>
 
@@ -245,9 +330,14 @@
                     <div class="col-lg-3">
                       <div class="panel panel-info">
                         <!-- Default panel contents -->
-                        <div class="panel-heading"><h4>Flowsolver</h4></div>
+                        <div class="panel-heading">
+                          <h4>FlowSolver</h4>
+                          <h5><a href="../documentation/docs.html">HTML</a> | PDF</h5>
+                        </div>
                         <div class="panel-body">
-                          <p>Questo Manuale...</p>
+                          <p class="newstext">
+                          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. 
+                          </p>
                         </div>
                       </div>
 
@@ -311,40 +401,48 @@
                     <!-- Team 1 -->
                     <div class="col-lg-3">
                       <div class="thumbnail">
-                        <img src="img/TeamTest.jpg" alt="...">
+                        <img src="img/TeamTest2.jpg" alt="...">
                         <div class="caption">
                           <h4>John Smith</h4>
-                          <p class="small">He started as </p>
+                          <p class="newstext" align="justify">
+                          This project is an open source release of tools for cardiovascular simulation. It includes code for reading 3D images, segmenting structures, generating models and meshes, and modeling blood flow in deformable vessels. Commercial components have been used in the model construction, mesh generation and flow solver components. The SimVascular project is derived from the ASPIRE2 software project and includes modified portions of PHASTA from RPI/SCOREC.
+                          </p>
                         </div>
                       </div>
                     </div>
                     <!-- Team 2 -->
                     <div class="col-lg-3">
                       <div class="thumbnail">
-                        <img src="img/TeamTest.jpg" alt="...">
+                        <img src="img/TeamTest2.jpg" alt="...">
                         <div class="caption">
                           <h4>John Smith</h4>
-                          <p>He started as </p>
+                          <p class="newstext" align="justify">
+                          This project is an open source release of tools for cardiovascular simulation. It includes code for reading 3D images, segmenting structures, generating models and meshes, and modeling blood flow in deformable vessels. Commercial components have been used in the model construction, mesh generation and flow solver components. The SimVascular project is derived from the ASPIRE2 software project and includes modified portions of PHASTA from RPI/SCOREC.
+                          </p>
                         </div>
                       </div>
                     </div>
                     <!-- Team 3 -->
                     <div class="col-lg-3">
                       <div class="thumbnail">
-                        <img src="img/TeamTest.jpg" alt="...">
+                        <img src="img/TeamTest2.jpg" alt="...">
                         <div class="caption">
                           <h4>John Smith</h4>
-                          <p>He started as </p>
+                          <p class="newstext" align="justify">
+                          This project is an open source release of tools for cardiovascular simulation. It includes code for reading 3D images, segmenting structures, generating models and meshes, and modeling blood flow in deformable vessels. Commercial components have been used in the model construction, mesh generation and flow solver components. The SimVascular project is derived from the ASPIRE2 software project and includes modified portions of PHASTA from RPI/SCOREC.
+                          </p>
                         </div>
                       </div>
                     </div>
                     <!-- Team 4 -->
                     <div class="col-lg-3">
                       <div class="thumbnail">
-                        <img src="img/TeamTest.jpg" alt="...">
+                        <img src="img/TeamTest2.jpg" alt="...">
                         <div class="caption">
                           <h4>John Smith</h4>
-                          <p>He started as </p>
+                          <p class="newstext" align="justify">
+                          This project is an open source release of tools for cardiovascular simulation. It includes code for reading 3D images, segmenting structures, generating models and meshes, and modeling blood flow in deformable vessels. Commercial components have been used in the model construction, mesh generation and flow solver components. The SimVascular project is derived from the ASPIRE2 software project and includes modified portions of PHASTA from RPI/SCOREC.
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -354,40 +452,48 @@
                     <!-- Team 5 -->
                     <div class="col-lg-3">
                       <div class="thumbnail">
-                        <img src="img/TeamTest.jpg" alt="...">
+                        <img src="img/TeamTest2.jpg" alt="...">
                         <div class="caption">
                           <h4>John Smith</h4>
-                          <p>He started as </p>
+                          <p class="newstext" align="justify">
+                          This project is an open source release of tools for cardiovascular simulation. It includes code for reading 3D images, segmenting structures, generating models and meshes, and modeling blood flow in deformable vessels. Commercial components have been used in the model construction, mesh generation and flow solver components. The SimVascular project is derived from the ASPIRE2 software project and includes modified portions of PHASTA from RPI/SCOREC.
+                          </p>
                         </div>
                       </div>
                     </div>
                     <!-- Team 6 -->
                     <div class="col-lg-3">
                       <div class="thumbnail">
-                        <img src="img/TeamTest.jpg" alt="...">
+                        <img src="img/TeamTest2.jpg" alt="...">
                         <div class="caption">
                           <h4>John Smith</h4>
-                          <p>He started as </p>
+                          <p class="newstext" align="justify">
+                          This project is an open source release of tools for cardiovascular simulation. It includes code for reading 3D images, segmenting structures, generating models and meshes, and modeling blood flow in deformable vessels. Commercial components have been used in the model construction, mesh generation and flow solver components. The SimVascular project is derived from the ASPIRE2 software project and includes modified portions of PHASTA from RPI/SCOREC.
+                          </p>
                         </div>
                       </div>
                     </div>
                     <!-- Team 7 -->
                     <div class="col-lg-3">
                       <div class="thumbnail">
-                        <img src="img/TeamTest.jpg" alt="...">
+                        <img src="img/TeamTest2.jpg" alt="...">
                         <div class="caption">
                           <h4>John Smith</h4>
-                          <p>He started as </p>
+                          <p class="newstext" align="justify">
+                          This project is an open source release of tools for cardiovascular simulation. It includes code for reading 3D images, segmenting structures, generating models and meshes, and modeling blood flow in deformable vessels. Commercial components have been used in the model construction, mesh generation and flow solver components. The SimVascular project is derived from the ASPIRE2 software project and includes modified portions of PHASTA from RPI/SCOREC.
+                          </p>
                         </div>
                       </div>
                     </div>
                     <!-- Team 8 -->
                     <div class="col-lg-3">
                       <div class="thumbnail">
-                        <img src="img/TeamTest.jpg" alt="...">
+                        <img src="img/TeamTest2.jpg" alt="...">
                         <div class="caption">
                           <h4>John Smith</h4>
-                          <p>He started as </p>
+                          <p class="newstext" align="justify">
+                          This project is an open source release of tools for cardiovascular simulation. It includes code for reading 3D images, segmenting structures, generating models and meshes, and modeling blood flow in deformable vessels. Commercial components have been used in the model construction, mesh generation and flow solver components. The SimVascular project is derived from the ASPIRE2 software project and includes modified portions of PHASTA from RPI/SCOREC.
+                          </p>
                         </div>
                       </div>
                     </div>
