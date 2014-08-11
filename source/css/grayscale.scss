@@ -350,3 +350,11 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: rgba($light, .2);
 }
+
+%newstext {
+  text-align: justify;
+}
+
+#team p {
+  @extend %newstext;
+}
