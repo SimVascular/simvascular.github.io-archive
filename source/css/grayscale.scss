@@ -358,3 +358,6 @@ body {
 #team p {
   @extend %newstext;
 }
+
+.fixed { height:400px; overflow:hidden;}
+.scrollit { height:400px; overflow-y:scroll;}

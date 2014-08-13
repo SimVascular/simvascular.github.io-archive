@@ -11,7 +11,8 @@
 # Page options, layouts, aliases and proxies
 ###
 
-# page "/", :layout => :home
+page "/", :layout => "frontpage"
+page "/docs.html", :layout => "docs"
 
 # Per-page layout changes:
 #
