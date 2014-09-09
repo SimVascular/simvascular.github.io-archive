@@ -11,6 +11,9 @@
 # Page options, layouts, aliases and proxies
 ###
 
+set :markdown_engine, :redcarpet
+set :markdown, :fenced_code_blocks => true, :smartypants => true, :tables => true
+
 page "/", :layout => "frontpage"
 page "/docs.html", :layout => "docs"
 

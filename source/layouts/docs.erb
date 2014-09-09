@@ -55,24 +55,31 @@
     <%= yield %>
 
     <!-- /.container -->
-    <div class="container">
-      <hr>
-      <!-- Footer -->
-      <footer>
-        <div class="row">
-          <div class="col-lg-12">
-            <p>Copyright &copy; The SimVascular Development Team - 2014</p>
-          </div>
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">            
+                <ul class="nav navbar-nav">
+                    <li><a>Copyright &copy; The SimVascular Development Team - 2014</a></li>                
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
         </div>
-      </footer>
-    </div>
-    <!-- /.container -->
+        <!-- /.container -->
+    </nav>
+    
+    <%= javascript_include_tag "jquery-1.11.0",
+                               "bootstrap.min"%>
 
-    <!-- jQuery Version 1.11.0 -->
-    <script src="js/jquery-1.11.0.js"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+      });
+    </script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript"
+      src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
 
 </body>
 
