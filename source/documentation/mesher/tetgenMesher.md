@@ -1,1 +1,1 @@
-### TetGen Meshing for Parasolid(.xmt_txt) or Discrete(.dsm) Solids
+### TetGen Meshing for Discrete PolyDatas(.vtk,.vtp,.stl)
