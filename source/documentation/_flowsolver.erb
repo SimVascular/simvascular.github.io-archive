@@ -1,32 +1,54 @@
-<div class="container">
-  <div class="row">
-    <div class="col-lg-3">      
-      <div data-spy="affix">
-        <p class="lead"><h3>SVFlowsolver Guide</h3></p>
-        <div class="list-group">
-          <a href="#sec1" class="list-group-item active">Introduction</a>
-          <a href="#sec2" class="list-group-item">Overview</a>
-          <a href="#sec3" class="list-group-item">SVPresolver</a>
-          <a href="#sec4" class="list-group-item">Boundary Conditions - Physics</a>
-          <a href="#sec5" class="list-group-item">Boundary Conditions - Practice</a>
-          <a href="#sec6" class="list-group-item">SVFlowsolver</a>
-          <a href="#sec7" class="list-group-item">solver.inp file guide</a>
-          <a href="#sec8" class="list-group-item">Running SVFlowsolver</a>
-          <a href="#sec9" class="list-group-item">Postprocessing Results</a>
-        </div>
-      </div>
+    <!--Nav Bar -->
+    <div class="col-xs-1">
+    </div>
+    <nav class="col-xs-3 bs-docs-sidebar" id="solverSidebar">
+        <ul id="sidebar" class="nav nav-stacked fixed">
+            <p><h3>SVFlowsolver Guide</h3></p>
+            <li>
+                <a href="#solverSec1">Introduction</a>
+            </li>
+            <li>
+                <a href="#solverSec2">Overview</a>
+            </li>
+            <li>
+                <a href="#solverSec3">Presolver</a>
+            </li>            
+            <li>
+                <a href="#solverSec4">Boundary Conditions</a>
+                <ul class="nav nav-stacked">
+                    <li><a href="#solverSec4">Physics</a></li>
+                    <li><a href="#solverSec5">Practice</a></li>
+                </ul>                
+            </li>
+            <li>
+                <a href="#solverSec6">SVFlowsolver</a>
+            </li>
+            <li>
+                <a href="#solverSec7">solver.inp file guide</a>
+            </li>
+            <li>
+                <a href="#solverSec8">Running SVFlowsolver</a>
+            </li>
+            <li>
+                <a href="#solverSec9">Postprocessing Results</a>
+            </li>
+        </ul>
+    </nav>
+    <!--Main Content -->
+    <div class="col-xs-6">
+      <section id="solverSec1" class="group"><%= partial "documentation/flowsolver/intro" %></section>
+      <section id="solverSec2" class="group"><%= partial "documentation/flowsolver/overview" %></section>
+      <section id="solverSec3" class="group"><%= partial "documentation/flowsolver/presolver" %></section>
+      <section id="solverSec4" class="group"><%= partial "documentation/flowsolver/bcPhysics" %></section>
+      <section id="solverSec5" class="subgroup"><%= partial "documentation/flowsolver/bcPractice" %></section>
+      <section id="solverSec6" class="group"><%= partial "documentation/flowsolver/flowSolver" %></section>
+      <section id="solverSec7" class="group"><%= partial "documentation/flowsolver/solverInpGuide" %></section>
+      <section id="solverSec8" class="group"><%= partial "documentation/flowsolver/runningSolver" %></section>
+      <section id="solverSec9" class="group"><%= partial "documentation/flowsolver/postProcess" %></section>
     </div>
 
-    <div class="col-lg-9 test">
-      <section id="sec1"><%= partial "documentation/flowsolver/intro" %></section>
-      <section id="sec2"><%= partial "documentation/flowsolver/overview" %></section>
-      <section id="sec3"><%= partial "documentation/flowsolver/presolver" %></section>
-      <section id="sec4"><%= partial "documentation/flowsolver/bcPhysics" %></section>
-      <section id="sec5"><%= partial "documentation/flowsolver/bcPractice" %></section>
-      <section id="sec6"><%= partial "documentation/flowsolver/flowSolver" %></section>
-      <section id="sec7"><%= partial "documentation/flowsolver/solverInpGuide" %></section>
-      <section id="sec8"><%= partial "documentation/flowsolver/runningSolver" %></section>
-      <section id="sec9"><%= partial "documentation/flowsolver/postProcess" %></section>
-    </div>
-  </div>
-</div>
+
+
+  
+
+

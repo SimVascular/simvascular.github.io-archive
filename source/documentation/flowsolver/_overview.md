@@ -8,7 +8,7 @@ We then run SimVascular/Presolver using the *.supre file. The *.supre file conta
 
 Once the analysis is finished, we have a number of files that characterize the finite element solution over the cardiac cycles. These files are taken by SimVascular/Postsolver to generate visualization files (*.vis or *.vtu files) that are used to analyze the results and extract the desired hemodynamic results. 
 
-<img src="documentation/flowsolver/imgs/Fig_01.png" width="800">
+<img src="documentation/flowsolver/imgs/Fig_01.png" width="100%">
 
 In the following sections of this tutorial we will describe all the parts of this flow chart in detail. 
 
