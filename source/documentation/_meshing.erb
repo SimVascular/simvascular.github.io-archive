@@ -4,11 +4,29 @@
   <ul id="sidebar" class="nav nav-stacked fixed">
     <p><h3>Meshing Guide</h3></p>
     <li>
-    <a href="#meshSec1">Intro</a>
+    <a href="#meshSec1">Introduction</a>
+    </li>
+    <li>
+        <a href="#meshSec2">MeshSim Meshing</a>
+    	<ul class="nav nav-stacked">
+		<li><a href="meshSec2">MeshSim Overview</a></li>
+		<li><a href="meshSec3">Applying Mesh Size</a></li>
+	</ul>	
+    </li>
+    <li>
+        <a href="#meshSec4">TetGen Meshing</a>
+    	<ul class="nav nav-stacked">
+		<li><a href="meshSec4">TetGen Overview</a></li>
+		<li><a href="meshSec5">Applying Mesh Size</a></li>
+	</ul>	
     </li>
   </ul>
 </nav>
 <!--Main Content -->
 <div class="col-xs-6">
   <section id="meshSec1" class="group"><%= partial "documentation/meshing/intro" %></section>
+  <section id="meshSec2" class="group"><%= partial "documentation/meshing/meshsimOverview" %></section>
+  <section id="meshSec3" class="group"><%= partial "documentation/meshing/meshapplyingMeshSize" %></section>
+  <section id="meshSec4" class="group"><%= partial "documentation/meshing/tetgenOverview" %></section>
+  <section id="meshSec6" class="group"><%= partial "documentation/meshing/tetapplyingMeshSize" %></section>
 </div>
