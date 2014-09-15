@@ -30,17 +30,17 @@
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <a class="navbar-brand" href="../index.html">SimVascular</a>
+                <a class="navbar-brand" href="../index.html"><img src="img/test_logo.png" style="height:25px"> <b>SIMVASCULAR</b></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">            
                 <ul class="nav navbar-nav">
-                    <li><a href="#" id="btnNews">News Archive</a></li>                
-                    <li><a href="#" id="btnUserGuide">User Guide</a></li>
-                    <li><a href="#" id="btnMeshing">Meshing</a></li>
-                    <li><a href="#" id="btnPresolver">Presolver</a></li>
-                    <li><a href="#" id="btnFlowSolver">FlowSolver</a></li>
-                    <li><a href="#" id="btnTutorials">Tutorials</a></li>
+                    <li><a href="#" id="btnNews"><b><span class="glyphicon glyphicon-globe"></span> News Archive</b></a></li>                
+                    <li><a href="#" id="btnUserGuide"><b><span class="glyphicon glyphicon-user"></span> User Guide</b></a></li>
+                    <li><a href="#" id="btnMeshing"><b><span class="glyphicon glyphicon-th"></span> Meshing</b></a></li>
+                    <li><a href="#" id="btnPresolver"><b><span class="glyphicon glyphicon-log-in"></span> svPre</b></a></li>
+                    <li><a href="#" id="btnFlowSolver"><b><span class="glyphicon glyphicon-cog"></span> svSolver</b></a></li>
+                    <li><a href="#" id="btnTutorials"><b><span class="glyphicon glyphicon-eye-open"></span> Clinical Cases</b></a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -75,71 +75,89 @@
       MathJax.Hub.Config({
         tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
       });
+      $('body').scrollspy({
+        target: '.bs-docs-sidebar',
+        offset: 40
+      });
       $(document).ready(function() {
-        $("#manNews").show();
-        $("#manUserGuide").hide();
-        $("#manMeshing").hide();
-        $("#manPresolver").hide();
-        $("#manFlowSolver").hide();
-        $("#manTutorials").hide();  
-        $('body').scrollspy();       
+        $(".manNews").show();
+        $(".manUserGuide").hide();
+        $(".manMeshing").hide();
+        $(".manPresolver").hide();
+        $(".manFlowSolver").hide();
+        $(".manTutorials").hide();    
+        $('body').scrollspy('refresh');
+        var firstLi = $( ".manNews li" ).first();
+        firstLi.addClass('active').siblings().removeClass('active');
       });
       // NEWS
       $('#btnNews').on('click', function(event) {
-        $("#manNews").show();
-        $("#manUserGuide").hide();
-        $("#manMeshing").hide();
-        $("#manPresolver").hide();
-        $("#manFlowSolver").hide();
-        $("#manTutorials").hide();
-        $('body').scrollspy(); 
+        $(".manNews").show();
+        $(".manUserGuide").hide();
+        $(".manMeshing").hide();
+        $(".manPresolver").hide();
+        $(".manFlowSolver").hide();
+        $(".manTutorials").hide();
+        $('body').scrollspy('refresh');
+        var firstLi = $( ".manNews li" ).first();
+        firstLi.addClass('active').siblings().removeClass('active');
       });
       $('#btnUserGuide').on('click', function(event) {
-        $("#manNews").hide();
-        $("#manUserGuide").show();
-        $("#manMeshing").hide();
-        $("#manPresolver").hide();
-        $("#manFlowSolver").hide();
-        $("#manTutorials").hide();
-        $('body').scrollspy(); 
+        $(".manNews").hide();
+        $(".manUserGuide").show();
+        $(".manMeshing").hide();
+        $(".manPresolver").hide();
+        $(".manFlowSolver").hide();
+        $(".manTutorials").hide();
+        $('body').scrollspy('refresh');
+        var firstLi = $( ".manUserGuide li" ).first();
+        firstLi.addClass('active').siblings().removeClass('active');
       });
       $('#btnMeshing').on('click', function(event) {
-        $("#manNews").hide();
-        $("#manUserGuide").hide();
-        $("#manMeshing").show();
-        $("#manPresolver").hide();
-        $("#manFlowSolver").hide();
-        $("#manTutorials").hide();
-        $('body').scrollspy(); 
+        $(".manNews").hide();
+        $(".manUserGuide").hide();
+        $(".manMeshing").show();
+        $(".manPresolver").hide();
+        $(".manFlowSolver").hide();
+        $(".manTutorials").hide();
+        $('body').scrollspy('refresh');
+        var firstLi = $( ".manMeshing li" ).first();
+        firstLi.addClass('active').siblings().removeClass('active');
       });
       $('#btnPresolver').on('click', function(event) {
-        $("#manNews").hide();
-        $("#manUserGuide").hide();
-        $("#manMeshing").hide();
-        $("#manPresolver").show();
-        $("#manFlowSolver").hide();
-        $("#manTutorials").hide();
-        $('body').scrollspy(); 
+        $(".manNews").hide();
+        $(".manUserGuide").hide();
+        $(".manMeshing").hide();
+        $(".manPresolver").show();
+        $(".manFlowSolver").hide();
+        $(".manTutorials").hide();
+        $('body').scrollspy('refresh');
+        var firstLi = $( ".manPresolver li" ).first();
+        firstLi.addClass('active').siblings().removeClass('active');
       });
         $('#btnFlowSolver').on('click', function(event) {
-        $("#manNews").hide();
-        $("#manUserGuide").hide();
-        $("#manMeshing").hide();
-        $("#manPresolver").hide();
-        $("#manFlowSolver").show();
-        $("#manTutorials").hide();
-        $('body').scrollspy(); 
+        $(".manNews").hide();
+        $(".manUserGuide").hide();
+        $(".manMeshing").hide();
+        $(".manPresolver").hide();
+        $(".manFlowSolver").show();
+        $(".manTutorials").hide();
+        $('body').scrollspy('refresh');        
+        var firstLi = $( ".manFlowSolver li" ).first();
+        firstLi.addClass('active').siblings().removeClass('active');
       });
       $('#btnTutorials').on('click', function(event) {
-        $("#manNews").hide();
-        $("#manUserGuide").hide();
-        $("#manMeshing").hide();
-        $("#manPresolver").hide();
-        $("#manFlowSolver").hide();
-        $("#manTutorials").show();
-        $('body').scrollspy(); 
+        $(".manNews").hide();
+        $(".manUserGuide").hide();
+        $(".manMeshing").hide();
+        $(".manPresolver").hide();
+        $(".manFlowSolver").hide();
+        $(".manTutorials").show();
+        $('body').scrollspy('refresh');
+        var firstLi = $( ".manTutorials li" ).first();
+        firstLi.addClass('active').siblings().removeClass('active');
       }); 
-          
+      
     </script>
 
     <script type="text/javascript"

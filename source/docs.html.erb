@@ -1,13 +1,31 @@
 ---
-title: SimVascular Documentation
+title: SimVascular Docs
 ---
-<div class="row" id="manNews"><%= partial "documentation/news" %></div>
-<div class="row" id="manUserGuide"><%= partial "documentation/userguide" %></div>
-<div class="row" id="manMeshing"><%= partial "documentation/meshing" %></div>
-<div class="row" id="manPresolver"><%= partial "documentation/presolver" %></div>
-<div class="row" id="manFlowSolver"><%= partial "documentation/flowsolver" %></div>
-<div class="row" id="manTutorials"><%= partial "documentation/tutorials" %></div>
+<!--Nav Bar -->
+<div class="row">
+    <!-- ONE COLUMN OF SPACE -->
+    <div class="col-xs-1">
+    </div>
+    <nav class="col-xs-3 bs-docs-sidebar">
 
+      <ul id="sidebar" class="nav nav-stacked fixed manNews">      <%= partial "documentation/news_TOC" %></ul>
+      <ul id="sidebar" class="nav nav-stacked fixed manUserGuide"> <%= partial "documentation/userguide_TOC" %></ul>
+      <ul id="sidebar" class="nav nav-stacked fixed manMeshing">   <%= partial "documentation/meshing_TOC" %></ul>
+      <ul id="sidebar" class="nav nav-stacked fixed manPresolver"> <%= partial "documentation/presolver_TOC" %></ul>
+      <ul id="sidebar" class="nav nav-stacked fixed manFlowSolver"><%= partial "documentation/flowsolver_TOC" %></ul>
+      <ul id="sidebar" class="nav nav-stacked fixed manTutorials"> <%= partial "documentation/tutorials_TOC" %></ul>
+        
+    </nav>
+    <!--Main Content -->
+    <div class="col-xs-6" id="manualContent">
 
+      <!-- ACTUAL CONTENT -->
+      <div class="manNews"><%= partial "documentation/news_content" %></div>
+      <div class="manUserGuide"><%= partial "documentation/userguide_content" %></div>
+      <div class="manMeshing"><%= partial "documentation/meshing_content" %></div>
+      <div class="manPresolver"><%= partial "documentation/presolver_content" %></div>
+      <div class="manFlowSolver"><%= partial "documentation/flowsolver_content" %></div>
+      <div class="manTutorials"><%= partial "documentation/tutorials_content" %></div>
 
-
+    </div>
+</div>    

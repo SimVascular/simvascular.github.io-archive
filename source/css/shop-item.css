@@ -4,6 +4,10 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+body {
+  position: relative;
+}
+
 .thumbnail img {
     width: 100%;
 }
@@ -38,7 +42,7 @@ footer{
     padding-top: 50px;
     padding-bottom: 50px;
 }
-.group .subgroup {
+.group, .subgroup {
     /* width: 150px; */
     /* height: 200px; */
     padding-top: 50px;
@@ -110,3 +114,10 @@ footer{
     display: block;           
 }
 
+#solverTable td {
+   text-align: center;   
+}
+
+#solverTable th {
+   text-align: center;   
+}

@@ -1,20 +1,22 @@
 ## Overview
 
-### Process flow of a SVFLOWSOLVER Simulation 
+### Process flow of a **svSolver** Simulation 
 
-The following figure contains a schematic representation of a flow chart of the processes involved in running a SimVascular/Solver simulation. We start off with the files coming from the solid modeling part of the analysis: these files characterize the different entities of the finite element mesh.
+The following figure contains a schematic representation of the processes involved in running a simulation with **svSolver**.
 
-We then run SimVascular/Presolver using the *.supre file. The *.supre file contains the set of instructions that define the boundary conditions, initial conditions, and geometrical configuration of our problem. The output of SimVascular/Presolver is a set of files that are ready to be taken by SimVascular/Solver to run a blood flow analysis.
+<img src="documentation/flowsolver/imgs/Fig_01.png" width="70%" align="center">
 
-Once the analysis is finished, we have a number of files that characterize the finite element solution over the cardiac cycles. These files are taken by SimVascular/Postsolver to generate visualization files (*.vis or *.vtu files) that are used to analyze the results and extract the desired hemodynamic results. 
+We start off with the files coming from the solid modeling part of the analysis: these files characterize the different entities of the finite element mesh.
 
-<img src="documentation/flowsolver/imgs/Fig_01.png" width="100%">
+We then run **svPresolver** using the *.svpre file. The *.svpre file contains the set of instructions that define the boundary conditions, initial conditions, and geometrical configuration of our problem. The output of **svPresolver** is a set of files that are ready to be processed by svSolver to run a blood flow analysis.
 
-In the following sections of this tutorial we will describe all the parts of this flow chart in detail. 
+Once the analysis is finished, we have a number of files that characterize the finite element solution over the cardiac cycles. These files are taken by **svPost** to generate visualization files (*.vis or *.vtu files) that are used to analyze and extract the desired hemodynamic results. 
 
-### Units in a SVFLOWSOLVER Analysis
+In the following sections all the components of this flow chart will be discussed in detail.
 
-SVFlowsolver, just like many other Finite Element Programs, does not enforce a consistent set of physical units in the analysis, but it is up to the analyst to make sure that this dimensional consistency is respected in the analysis.
+### Units in a **svSolver** Analysis
+
+**svSolver**, just like many other Finite Element Programs, does not enforce a consistent set of physical units in the analysis, but it is up to the analyst to make sure that input data are dimensionally consistent.
 
 To have a consistent set of units, users are advised to either work in CGS, MGS, or SI units; see the following table. 
 
@@ -47,7 +49,7 @@ To have a consistent set of units, users are advised to either work in CGS, MGS,
 </tr>
 </table>
 
-### Useful constants in a SVFLOWSOLVER Analysis
+### Useful constants in a **svSolver** Analysis
 
 The following table gathers several important physical constants of blood given in different unit
 systems.
