@@ -3,10 +3,10 @@ title: SimVascular Docs
 ---
 <!--Nav Bar -->
 <div class="row">
-    <!-- ONE COLUMN OF SPACE -->
-    <div class="col-xs-1">
+    <div class="hidden-xs hidden-md col-lg-1">
     </div>
-    <nav class="col-xs-3 bs-docs-sidebar">
+    <!-- ONE COLUMN OF SPACE -->
+    <nav class="hidden-xs col-md-3 col-lg-3  bs-docs-sidebar">
 
       <ul id="sidebar" class="nav nav-stacked fixed manNews">      <%= partial "documentation/news_TOC" %></ul>
       <ul id="sidebar" class="nav nav-stacked fixed manUserGuide"> <%= partial "documentation/userguide_TOC" %></ul>
@@ -17,7 +17,7 @@ title: SimVascular Docs
         
     </nav>
     <!--Main Content -->
-    <div class="col-xs-6" id="manualContent">
+    <div class="col-xs-12 col-md-9 col-lg-7" id="manualContent">
 
       <!-- ACTUAL CONTENT -->
       <div class="manNews"><%= partial "documentation/news_content" %></div>

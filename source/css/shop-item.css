@@ -121,3 +121,9 @@ footer{
 #solverTable th {
    text-align: center;   
 }
+
+#brandName{
+   font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+   font-weight: 400;
+}
+
