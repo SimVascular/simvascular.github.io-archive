@@ -27,15 +27,21 @@ Finally, we note that there are several techniques to evaluate the quality of a 
 
 In the present work, a combination of these quality indicators is used by an iterative mesh optimization algorithm to improve the overall quality of the mesh.  It should be noted that there is current research interest in generating error estimators that include both solution and geometric information that may lead to more accurate solutions while requiring ewer elements.
 
-<img src="documentation/meshing/img/Delaunay_Criterion.png" width="40%">
-<caption align="bottom">{{Delaunay criterion.  The Delaunay criterion states that no other point in the triangulation can fall within the circumscribing sphere (circle in 2-D) of the points defining a simplex in the triangulation.  Figure (a) shows a valid Delaunay triangulation of four points in ℜ2 while (b) shows a non-Delaunay triangulation of the same four points.  In 2-D, the Delaunay criterion minimizes the maximum interior angle producing an optimal triangulation for a given set of points.}}</caption> 
+<figure>
+<img class="meshGuideFigure" src="documentation/meshing/img/Delaunay_Criterion.png" width="60%">
+<figcaption class="meshingGuideFigure" >Delaunay criterion.  The Delaunay criterion states that no other point in the triangulation can fall within the circumscribing sphere (circle in 2-D) of the points defining a simplex in the triangulation.  Figure (a) shows a valid Delaunay triangulation of four points in ℜ2 while (b) shows a non-Delaunay triangulation of the same four points.  In 2-D, the Delaunay criterion minimizes the maximum interior angle producing an optimal triangulation for a given set of points.</figcaption>
+</figure>
 
-<img src="documentation/meshing/img/Quadtree.png" width="40%">
-<caption align="bottom">{{Quadtree decomposition.  The figure shows an example quadtree decomposition (directly analogous to octree decomposition in 3-D) that is used to divide the geometry into less complex individual pieces for automatic mesh generation.}}</caption> 
+<figure>
+<img class="meshGuideFigure" src="documentation/meshing/img/Quadtree.png" width="40%">
+<figcaption class="meshingGuideFigure" >Quadtree decomposition.  The figure shows an example quadtree decomposition (directly analogous to octree decomposition in 3-D) that is used to divide the geometry into less complex individual pieces for automatic mesh generation.</figcaption> 
+</figure>
 
-<img src="documentation/meshing/img/Quality_Measures.png" width="40%">
-<caption align="bottom">{{Geometric mesh quality measures.  Shown are 2-D geometric mesh quality measures with direct analogies in 3-D. The radius ratio (a) is the ratio of the radius of the maximum inscribed circle (sphere in 3-D) over the radius of the circumscribed circle (sphere in 3-D).  The aspect ratio (b) is a ratio of the minimum height to the maximum base length. The maximum/minimum interior (dihedral in 3-D) angle is shown in (c).
-In this lab we will construct meshes automatically for two different geometries.  The first example is that of an idealized vessel (i.e. cylinder).  The second example will be an idealized stent, deployed in an idealized stenotic vessel with incomplete apposition.}}</caption> 
+<figure>
+<img class="meshGuideFigure" src="documentation/meshing/img/Quality_Measures.png" width="40%">
+<figcaption class="meshingGuideFigure" >Geometric mesh quality measures.  Shown are 2-D geometric mesh quality measures with direct analogies in 3-D. The radius ratio (a) is the ratio of the radius of the maximum inscribed circle (sphere in 3-D) over the radius of the circumscribed circle (sphere in 3-D).  The aspect ratio (b) is a ratio of the minimum height to the maximum base length. The maximum/minimum interior (dihedral in 3-D) angle is shown in (c).
+In this lab we will construct meshes automatically for two different geometries.  The first example is that of an idealized vessel (i.e. cylinder).  The second example will be an idealized stent, deployed in an idealized stenotic vessel with incomplete apposition.</figcaption> 
+</figure>
 
 ### SimVascular Meshers
 This document describes how to use the Meshing software for discrete and continuous solids. SimVascular meshing includes both open source and commercial options. The commercial mesher in SimVascular is MeshSim(citation) and provides boundary layer, mesh refinement, and isotropic/anisotropic adaptive meshing. MeshSim is a very powerful tool and can provide high quality meshes for irregular and complicated domains. The open source meshing includes the open source libraries of TetGen(citation) and the Vascular Modeling Tool Kit(VMTK)(citation). These tools are combined to provide boundary layer, mesh refinement, and isotropic adaptive meshing. 
