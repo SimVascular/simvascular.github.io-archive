@@ -2,4 +2,8 @@
 
 MeshSim is a component mesher used to create high quality meshes from CAD Models. Meshing capabilities include surface and volumetric meshing, boundary layer meshing, and local meshing refinement. MeshSim is a Licensed SimVascular package and must be purchased in order to be used with the Software.
 
+#### Isotropic Meshing
+
+To generate an isotropic mesh, we either need to specify a desired number of elements or some property (e.g. maximum edge length for each element) of the mesh.  In our case, we will specify the maximum allowable edge length for a given element for the entire mesh. In the “Global Max Edge Size” field, type in “0.3”. Click on the “Run Mesher (Internal)” button. A pop-up window will ask you if you would like to continue; click “Yes”. Another Pop-up Window will ask, “Use currently selected meshing options? This will save/overwrite the meshing script file.” Click, “Yes.”
+
 
