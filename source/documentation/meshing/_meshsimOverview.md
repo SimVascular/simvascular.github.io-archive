@@ -33,8 +33,8 @@ Button or Widget Functionality:
 5.  Load a previously loaded mesh for viewing (.sms)
 6.  Surface, Volume, and extended options for meshing. These options are described below.
 7.  Specify a global max edge size. This edge size will be targeted for all elements and no element will have a size larger than the specified number. 
-	A. Absolute - is used to specify a number based on the dimensions of the model. 
-	B. Relative - is a number between 0 and 1. The actual mesh size will be calculated by multiplying the length of the largest edge of the coordinate-aligned bounding box of the entity by the given parameter.
+	* Absolute - is used to specify a number based on the dimensions of the model. 
+	* Relative - is a number between 0 and 1. The actual mesh size will be calculated by multiplying the length of the largest edge of the coordinate-aligned bounding box of the entity by the given parameter.
 8.  Specify the number of optimization passes that the mesher will take on the solid. Higher optimization will change connectivity and move vertices in order to create a higher quality mesh.
 9.  Once all the meshing parameters are specified, run the MeshSim within SimVascular.
 10. Select the directory in which to place all the mesh files to be written from the mesh. These files are described in the Written Mesh Files section.
@@ -50,18 +50,18 @@ Button or Widget Functionality:
 
 1.  Select SETUP in order to read the face names associated with the model and display them in the menu buttons. In order to use boundary layer meshing or local mesh refinement, this button must be pressed first! Save Options saves a file with these specified advanced parameters for later. 
 2.  Select Mesh Parameters for local mesh refinement
-	A. Type: Select absolute or relative
-		a. Absolute - is used to specify a number based on the dimensions of the model. 
-		b. Relative - is a number between 0 and 1. The actual mesh size will be calculated by multiplying the length of the largest edge of the coordinate-aligned bounding box of the entity by the given parameter.
-	B. Create Mesh Macro: Select the mesh edge size type and apply it to the selected part of the model (part is selected with **Face Name:**). 
-		a. Global Max Edge Size: Specify maximum edge size for the entire model. 
-		b. Global Max Curvature Size: Specify maximum curvature size for the entire model (curvature is described below).
-		c. Global Min Curvature Size: Specify minimum curvature size for the entire model.
-		d. Local Max Edge Size: Specify maximum edge size for selected part of the model. If this local edge size is coarser than the global edge size, the global edge size will be used. 
-		e. Local Max Curvature Size: Specify maximum curvature size for selected part of the model.
-		f. Local Min Curvature Size: Specify minimum curvature size for selected patt of the model. If this local curvature size is larger than the global curvature minimum, the global minimum curvature will be used.
- 	C. Face Name: Select the face for the certain edge size to be applied to. The different edge sizes are described in **Type:**.
-	D. Size: This is also used to set the global maximum edge size of the entire model.
+	* Type: Select absolute or relative
+		- Absolute - is used to specify a number based on the dimensions of the model. 
+		- Relative - is a number between 0 and 1. The actual mesh size will be calculated by multiplying the length of the largest edge of the coordinate-aligned bounding box of the entity by the given parameter.
+	* Create Mesh Macro: Select the mesh edge size type and apply it to the selected part of the model (part is selected with **Face Name:**). 
+		- Global Max Edge Size: Specify maximum edge size for the entire model. 
+		- Global Max Curvature Size: Specify maximum curvature size for the entire model (curvature is described below).
+		- Global Min Curvature Size: Specify minimum curvature size for the entire model.
+		- Local Max Edge Size: Specify maximum edge size for selected part of the model. If this local edge size is coarser than the global edge size, the global edge size will be used. 
+		- Local Max Curvature Size: Specify maximum curvature size for selected part of the model.
+		- Local Min Curvature Size: Specify minimum curvature size for selected patt of the model. If this local curvature size is larger than the global curvature minimum, the global minimum curvature will be used.
+ 	* Face Name: Select the face for the certain edge size to be applied to. The different edge sizes are described in **Type:**.
+	* Size: This is also used to set the global maximum edge size of the entire model.
 3.
 4.
 5.
