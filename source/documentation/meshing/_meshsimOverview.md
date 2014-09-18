@@ -48,7 +48,9 @@ The Advanced Mesh Options Tab has the componenets to create a more advanced mesh
 
 Button or Widget Functionality:
 
-1.  Select SETUP in order to read the face names associated with the model and display them in the menu buttons. In order to use boundary layer meshing or local mesh refinement, this button must be pressed first! Save Options saves a file with these specified advanced parameters for later. 
+1.  Important buttons for running and advanced mesh! Do not skip over these buttons as they are necessary for running an advanced mesh.
+	* SETUP: Select in order to read the face names associated with the model and display them in the menu buttons. In order to use boundary layer meshing or local mesh refinement, this button must be pressed first! 
+	* SAVE OPTIONS: Apply the specified parameters in the macro to the current mesh. Must press this before running the advanced mesh! 
 2.  Select Mesh Parameters for local mesh refinement
 	* Type: Select absolute or relative
 		- Absolute - is used to specify a number based on the dimensions of the model. 
@@ -60,9 +62,22 @@ Button or Widget Functionality:
 		- Local Max Edge Size: Specify maximum edge size for selected part of the model. If this local edge size is coarser than the global edge size, the global edge size will be used. 
 		- Local Max Curvature Size: Specify maximum curvature size for selected part of the model.
 		- Local Min Curvature Size: Specify minimum curvature size for selected patt of the model. If this local curvature size is larger than the global curvature minimum, the global minimum curvature will be used.
- 	* Face Name: Select the face for the certain edge size to be applied to. The different edge sizes are described in **Type:**.
-	* Size: This is also used to set the global maximum edge size of the entire model.
-3.
+ 	* Face Name: Select the face for the certain edge size to be applied to (different edge sizes are described in **Type:**).
+	* Size: Enter the desired global or local mesh edge size.
+	* Create Size/Curvature Macro: Create the macro for setting a local or global edge size (can be viewed by selecting the radio button labelled with the number 6.
+3. Boundary Layer Meshing can be applied in a few different ways and on selected parts of the model.
+	* Type: Select one of the options from the dropdown menu
+		- Geometric Growth of Layer Thickness: Apply a gradation factor based on initial layer thickness and number of desired layers. In the **Params:** box, specify the following.
+			- [First Layer Height] [Total Height] 
+		- Relative Height Gradation (type 2): Prescribe the initial layer thickness and a gradation factor (i.e. to reduce the layers by a factor of 2, apply a gradation factor of 0.5).
+			- [First Layer Height] [Gradation Factor (0<g<1)]
+		- User Specified Heights: Specify the number of layers desired and apply a height for every individual layer. Each layer thickness is designated with the letter *t* and *n* is the number of layers.
+			- [t<sub>0</sub>] [t<sub>1</sub>] ... [t<sub>n-1</sub>]
+		- Relative Height Gradation (specify gradation factor): Apply only a gradation factor. The initial layer height will then be the global or local max edge size multiplied by the gradation factor (i.e. To have an initial layer half the size of the mesh size, apply a factor of 0.5).
+			- [Gradation Factor(0<g<1)] 
+ 	* Face Name: Select the face for the boundary layer to be applied to.
+	* Size: Currently, this entry box does not have any effect. Any number placed in this box will have no effect.
+		
 4.
 5.
 
