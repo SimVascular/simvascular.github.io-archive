@@ -35,9 +35,26 @@ Button or Widget Functionality:
 7.  Specify a global max edge size. This edge size will be targeted for all elements and no element will have a size larger than the specified number. 
 	* Absolute - is used to specify a number based on the dimensions of the model. 
 	* Relative - is a number between 0 and 1. The actual mesh size will be calculated by multiplying the length of the largest edge of the coordinate-aligned bounding box of the entity by the given parameter.
-8.  Specify the number of optimization passes that the mesher will take on the solid. Higher optimization will change connectivity and move vertices in order to create a higher quality mesh.
+8.  Specify the number of optimization passes that the mesher will take on the solid. Mesh optimization consists of two operations: Optimization - changes the mesh connectivity. Smoothing - moves vertices to an optimal location. The number of optimization passes refers to the number of smoothing operations to perform (if smoothing is turned on).
 9.  Once all the meshing parameters are specified, run the MeshSim within SimVascular.
 10. Select the directory in which to place all the mesh files to be written from the mesh. These files are described in the Written Mesh Files section.
+
+##### Surface, Volume, and Extended Options
+<figure>
+<img class="meshGuideFigure" src="documentation/meshing/img/MeshSim_VSOptions.png" width="60%">
+</figure>
+
+1.  Surface Options:
+	* Generate Surface Mesh: Generate a surface mesh if this optiion is selected (Default ON). If this option is not selected, it will not do a surface remeshing before created a volumetric mesh.
+	* Optimize Surface Mesh: Specify whether or not optimization is to be used (Default ON). Turning off optimization will result in a mesh that will not meet any specified shape metric for the mesh. 
+	* Fix Surface Mesh: This currently has no functionality.
+	* Constrain Surface: This also has no functionality currently.
+2.  Volume Options:
+	* Generate Volume Mesh: Generate a volume mesh if this option is selected (Default ON). If this option is not selected, it will only do a surface remeshing.
+	* Optimize Volume Mesh: Specify whether or not optimization is to be used (Default ON). 
+	* Smooth Volume Mesh: Specify whether or not smoothing is to be used (Default ON). The number of smoothing operations to be performed is specified by the **Num. Optimization Passes**.
+3.  Miscellaneous Options:
+	* Write Mesh Statistics: At the end of the meshing operations, display the meshing statistics in the terminal (Default ON).
 
 #### Advanced Mesh Options Tab
 
@@ -94,10 +111,48 @@ Button or Widget Functionality:
 
 #### Adapt Tab
 
-The Adapt Tab has
+The Adapt Tab is used to create an adaptive mesh based on a current solution. There are two steps identified in the GUI. First, create the error file (ybar) from the solution. Then, based on this error, run the adaptor to create a mesh optimized for this solution.  
+
 <figure>
 <img class="meshGuideFigure" src="documentation/meshing/img/MeshSim_Adapt_Labelled.png" width="60%">
 </figure>
+
+1.  Input and Output Directory: Select the directories where all the solution(restart) files are located. This must also be the same location where the files are output.
+2.  Flow Solver File Format: Identify whether the solver files are binary or ASCII. Typically, the solver files are binary.
+3.  Specify solution files and create ybar file:
+	* step number: Identify the desired output step number. For example, if you would like to start a new simulation with the new mesh from step 0, input the number 0 (make sure to name the restart file in 6 correspondingly).  
+	* solution file: Specify the solution file that contains the ybar information. Typically, this is saved every (n)?? steps and the last step of the simulation.
+	* error file: Specify the name of the ybar file to be written containing the error information.
+	* Create Error File: Create the error file from the provided solution file and written with the given name.
+4.  Adapt Mesh Options: Locate the file containing the Parasolid or Discrete Solid Model that was used to create the original mesh.
+5.  Solid Model Type: Specify whether to use Parasolid (.xmt_txt) or Discrete Solid (.dsm) for the adaptive meshing. This should be the same as when the original mesh was created.
+6.  Specify mesh files and output file:
+	* mesh file: Locate the original mesh file created by MeshSim.
+	* adapted mesh file: Give a name for the adapted mesh to be saved.
+	* projected solution file: Give a name for the initial solution file for a new simulation.
+7.  Options:
+	* Error Reduction Factor: Value multiplied by the average interpolation error in order to get a target uniform local error distribution. This should be a value between zero and one. A smaller factor will attempt to achieve a mesh with smaller error.
+	* Global Min Edge Size: Specify a minimum target edge size. No edge size will be smaller than this size, even if the adaptor identifies that solution needs a edge length smaller than this.
+	* Global Max Edge Size: Specify a maximum target edge size. No edge size will be larger than this size, even if the adaptor identifies that the solution does not require an edge length this small.
+	* Adapt Mesh: Run the mesh Adaptor. In the end, a new mesh and new restart file will be written. Visualize the information output from the Adaptor with the file **run_adaptor.log**.
+
+##### Adaptive Mesh
+
+#### MeshSim Licences Tab
+
+This tab is used to install or remove license information for the use of MeshSim (Only for Microsoft Windows).
+
+1. Check License Keys: Check the status of the license currently.
+2. Remove License Keys: Remove the current license for MeshSim.
+3. Install License Keys: Install a license in order to use MeshSim for meshing.
+
+#### Discrete Model Tab
+This tab is used to create a Discrete Solid Model from a a VTK. This Discrete Solid Model can then be meshed with MeshSim.
+
+1. Create Solid: Create the new Discrete Solid Model (.dsm) from the specified vtk file.
+2. angle (degrees): Define the angle of separation on which to define feature edges and separate regions. This angle defines the minimum angle between the normals of two adjacent cells. An angle larger than the specified angle will consider the two adjacent cells part of two separate regions.
+3. solid model type: Specify the solid model type. For this case, the initial solid type should be PolyData. The new solid will then become a Discrete Solid Model.
+
 
 
 
