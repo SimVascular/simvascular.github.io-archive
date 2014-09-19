@@ -11,11 +11,11 @@ The MeshSim tab includes all of the operations to run a mesh with the commercial
 <img class="meshGuideFigure" src="documentation/meshing/img/MeshSim_Tabs.png" width="60%">
 </figure>
 
-1. Mesh Options (This is for basic meshing parameters involving surface and volumetric meshing)
-2. Advanced Mesh Options (This is for advanced meshing techniques like local mesh refinement and boundary layer meshing)
-3. Adapt (This is for anisotropic and isotropic adaptive meshing)
-4. MeshSim Licenses (This is for checking and installing licenses in order to use the commerical package MeshSim)
-5. DiscreteModel (This is for creating a Discrete Model (.dsm), which MeshSim can then be used to mesh when using the Discrete Kernel)
+1. Mesh Options: This is for basic meshing parameters involving surface and volumetric meshing.
+2. Advanced Mesh Options: This is for advanced meshing techniques like local mesh refinement and boundary layer meshing.
+3. Adapt: This is for anisotropic and isotropic adaptive meshing.
+4. MeshSim Licenses: This is for checking and installing licenses in order to use the commerical package MeshSim.
+5. DiscreteModel: This is for creating a Discrete Model (.dsm), which MeshSim can then be used to mesh when using the Discrete Kernel.
 
 #### Mesh Options Tab
 
