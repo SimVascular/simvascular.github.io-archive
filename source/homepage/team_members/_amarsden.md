@@ -1,7 +1,1 @@
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-Markdown:
-
-* List 1
-* List 2
-* List 3
+Alison Marsden is an associate professor in the Mechanical and Aerospace  Engineering Department at the University of California San Diego. She graduated with a bachelor's degree in Mechanical Engineering from Princeton University in 1998, and a PhD in Mechanical Engineering from Stanford in 2005 working with Prof. Parviz Moin. She was a postdoctoral fellow at Stanford University in Bioengineering and Pediatric Cardiology from 2005-07 working with Charles Taylor and Jeffrey Feinstein.  She was the recipient of an American Heart Association postdoctoral fellowship, an AHA beginning grant in aid award, a Burroughs Wellcome Fund Career Award at the Scientific Interface, an NSF CAREER award, and is a member of an international Leducq Foundation Network of Excellence.  She has published over 60 peer reviewed journal papers, and her lab has received funding from the NSF, NIH, and several private foundations.  Her work focuses on the development of numerical methods for simulation of cardiovascular blood flow problems, medical device design, application of optimization to large-scale fluid mechanics simulations, and use of engineering tools to impact patient care in cardiovascular surgery and congenital heart disease.   

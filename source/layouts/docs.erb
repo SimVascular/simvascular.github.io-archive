@@ -40,12 +40,25 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">            
                 <ul class="nav navbar-nav">
-                    <li><a href="#" id="btnNews"><b><span class="glyphicon glyphicon-globe"></span> News Archive</b></a></li>                
-                    <li><a href="#" id="btnUserGuide"><b><span class="glyphicon glyphicon-user"></span> User Guide</b></a></li>
+                    <li><a href="#" id="btnNews"><b><span class="glyphicon glyphicon-globe"></span> News Archive</b></a></li>
+
+                    <li><a href="#" id="btnNews"><b><span class="glyphicon glyphicon-globe"></span> Quick Guide</b></a></li>
+
+                    <li><a href="#" id="btnNews"><b><span class="glyphicon glyphicon-globe"></span> Model Building</b></a></li>
+                    <!-- <li>
+                      <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                        <b><span class="glyphicon glyphicon-user"></span> User Guides</b>
+                      </a>
+                      <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Quick Guide</a></li>
+                        <li role="presentation" class="divider"></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Model Building</a></li>
+                      </ul>
+                    </li> -->
                     <li><a href="#" id="btnMeshing"><b><span class="glyphicon glyphicon-th"></span> Meshing</b></a></li>
                     <li><a href="#" id="btnPresolver"><b><span class="glyphicon glyphicon-log-in"></span> svPre</b></a></li>
                     <li><a href="#" id="btnFlowSolver"><b><span class="glyphicon glyphicon-cog"></span> svSolver</b></a></li>
-                    <li><a href="#" id="btnTutorials"><b><span class="glyphicon glyphicon-eye-open"></span> Clinical Cases</b></a></li>
+                    <li><a href="#" id="btnRefs"><b><span class="glyphicon glyphicon-book"></span> Refereces</b></a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -91,6 +104,7 @@
         $(".manPresolver").hide();
         $(".manFlowSolver").hide();
         $(".manTutorials").hide();    
+        $(".manRefs").hide();    
         $('body').scrollspy('refresh');
         var firstLi = $( ".manNews li" ).first();
         firstLi.addClass('active').siblings().removeClass('active');
@@ -103,6 +117,7 @@
         $(".manPresolver").hide();
         $(".manFlowSolver").hide();
         $(".manTutorials").hide();
+        $(".manRefs").hide();    
         $('body').scrollspy('refresh');
         var firstLi = $( ".manNews li" ).first();
         firstLi.addClass('active').siblings().removeClass('active');
@@ -114,6 +129,7 @@
         $(".manPresolver").hide();
         $(".manFlowSolver").hide();
         $(".manTutorials").hide();
+        $(".manRefs").hide();    
         $('body').scrollspy('refresh');
         var firstLi = $( ".manUserGuide li" ).first();
         firstLi.addClass('active').siblings().removeClass('active');
@@ -125,6 +141,7 @@
         $(".manPresolver").hide();
         $(".manFlowSolver").hide();
         $(".manTutorials").hide();
+        $(".manRefs").hide();    
         $('body').scrollspy('refresh');
         var firstLi = $( ".manMeshing li" ).first();
         firstLi.addClass('active').siblings().removeClass('active');
@@ -136,6 +153,7 @@
         $(".manPresolver").show();
         $(".manFlowSolver").hide();
         $(".manTutorials").hide();
+        $(".manRefs").hide();    
         $('body').scrollspy('refresh');
         var firstLi = $( ".manPresolver li" ).first();
         firstLi.addClass('active').siblings().removeClass('active');
@@ -147,6 +165,7 @@
         $(".manPresolver").hide();
         $(".manFlowSolver").show();
         $(".manTutorials").hide();
+        $(".manRefs").hide();    
         $('body').scrollspy('refresh');        
         var firstLi = $( ".manFlowSolver li" ).first();
         firstLi.addClass('active').siblings().removeClass('active');
@@ -158,8 +177,21 @@
         $(".manPresolver").hide();
         $(".manFlowSolver").hide();
         $(".manTutorials").show();
+        $(".manRefs").hide();    
         $('body').scrollspy('refresh');
         var firstLi = $( ".manTutorials li" ).first();
+        firstLi.addClass('active').siblings().removeClass('active');
+      }); 
+      $('#btnRefs').on('click', function(event) {
+        $(".manNews").hide();
+        $(".manUserGuide").hide();
+        $(".manMeshing").hide();
+        $(".manPresolver").hide();
+        $(".manFlowSolver").hide();
+        $(".manTutorials").hide();
+        $(".manRefs").show();    
+        $('body').scrollspy('refresh');
+        var firstLi = $( ".manRefs li" ).first();
         firstLi.addClass('active').siblings().removeClass('active');
       }); 
       

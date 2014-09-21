@@ -1,4 +1,4 @@
-### Boundary Condition Specification: the Practical Side of the Problem
+### Boundary Condition Specification: Practical Considerations
 
 Once we have clear the physics behind the boundary conditions for our simple cylindrical model, we can proceed to enter them in **SimVascular**. As we previously anticipated, this is done by entering the adequate commands in the \*.svpre file, the input of the **svPreSolver** program.
 As we also mentioned before, this can be done using **SimVascular** GUI or by editing the \*.svpre file with your favorite text editor. We will show here how to create this file using the GUI.
@@ -12,6 +12,11 @@ In the **SimVascular** GUI window, go to the _Inflow BC_ subtab under _Simulatio
 <img src="documentation/flowsolver/imgs/BCT_Creation.png" width="70%">
 
 - Under **Analytic Shape of Profile**, select the **parabolic** radio button.
+
+
+*** !!! we should document the choices for inflow boundary conditions - velocity profile, which are plug, parabolic, or womerseley.***
+
+
 - In the **Mesh Face File (.vtk)** box, click on the **Browse** button and select the **inlet.vtp** file in the _mesh-complete/mesh-surfaces/_ folder.
 - In the **Flow Rate File** box, click on **Browse** and select the desired \*.flow file. In this case, the file is **inflow.flow**.
 

@@ -1,21 +1,34 @@
 
 ## Introduction
 
-**svSolver** solves the three-dimensional Navier-Stokes equations in an arbitrary domain that in general is represented by a vascular model reconstructed from image data. This is a complex subject due to the many aspects involved in it, and therefore this document will focus mainly on the practical sides of the various steps of the analysis.
+**svSolver** solves the three-dimensional incompressible Navier-Stokes equations in an arbitrary domain, generally a vascular model reconstructed from image data. This is a complex subject with extensive underlying theory, and therefore this document will focus mainly on the practical aspects of simulation and analysis.
 
-From a historical standpoint, the **svSolver** has evolved from the academic finite element code PHASTA (this stands for Parallel, Hierarchical, Adaptive, Stabilized, Transient Analysis), developed mainly at RPI (Rensselaer Polytechnic Institute, Troy, NY) by Professor Kenneth Jansen. This code is in turned inspired by the Stabilized Finite Element theory developed by Professor Thomas J.R. Hughes during his Stanford years. As pointed above, the main features of the original PHASTA code are: 
+The **svSolver** evolved from the academic finite element code PHASTA (Parallel, Hierarchical, Adaptive, Stabilized, Transient Analysis), developed mainly at RPI (Rensselaer Polytechnic Institute, Troy, NY) by Professor Kenneth Jansen. This code was in turned inspired by the Stabilized Finite Element theory developed by Professor Thomas J.R. Hughes during his Stanford years. The main features of the original PHASTA code are: 
 
-- **Parallel**: using the MPI communication protocol (Message Passing Interface), the code is able to run analysis on multiple processors, either on Shared-Memory supercomputers, computer clusters, workstations, or regular PC desktops. The scalability of the code (i.e., the ability to make use of a large number of processors without significant losses in efficiency) has been proven up to several thousand processors.
+- **Parallel**: using the MPI communication protocol (Message Passing Interface), the code is able to run analysis on multiple processors, either on Shared-Memory supercomputers, computer clusters, workstations, or regular PC desktops. The scalability **!!! PUB-LINK** of the code (i.e., the ability to make use of a large number of processors without significant losses in efficiency) has been proven up to several thousand processors.
 
-- **Adaptive**: the code has mesh-adaptivity capabilities that make possible to generate highly anisotropic finite element meshes based on an error field computed from the finite element solution. Having mesh adaptation tools is a really important feature, since it helps to improve the quality of the numerical solution while keeping the finite element mesh size “under control”.
+- **Adaptive**: the code has mesh-adaptivity capabilities **!!! PUB-LINK** that make possible to generate highly anisotropic finite element meshes based on an error field computed from the finite element solution. Having mesh adaptation tools is a really important feature, since it helps to improve the quality of the numerical solution while keeping the finite element mesh size “under control”.
 
 - **Stabilized**: the code uses a Stabilized finite element formulation (more  specifically, a SUPG formulation: Streamline-Upwind Petrov-Galerkin) that allows for equal-order interpolation of the pressure and velocity fields, while maintaining numerical stability in both the diffusive and advective-dominated limits.
 
-- **Transient**: the code uses a time integration algorithm based on the $\alpha$-method. This is an implicit, second-order accurate, unconditionally stable (for linear systems) algorithm with user-defined level of desired numerical dissipation. On top of these features originally present in the PHASTA code, Professor Charles Taylor’s group at Stanford University developed a number of important additions in the areas of Boundary Conditions and Fluid-Solid Interaction (FSI) coupling. These additions are crucial to represent with a high level of realism the way blood flows in arteries, since this flow - which can be reasonably assumed to be incompressible - is highly dependent on the characteristics of the vascular trees that are downstream of our three-dimensional model, and the compliance of the three-dimensional vascular tree.
+- **Transient**: the code uses a time integration algorithm based on the generalized $\alpha$-method. This is an implicit, second-order accurate, unconditionally stable (for linear systems) algorithm with user-defined level of desired numerical dissipation. 
+
+Building on the original PHASTA code, there have been a number of important additions and modifications. Professor Charles Taylor’s group at Stanford University developed key additions in the areas of Boundary Conditions and Fluid-Solid Interaction (FSI) coupling. These additions are crucial to represent with a high level of realism the way blood flows in arteries, since this flow is highly dependent on the characteristics of the vascular trees that are downstream of our three-dimensional model, and the compliance of the three-dimensional vascular tree.
+
+### What's New?
+Building on the above features, the Marsden lab at UCSD has added additional key functionality enabling efficient and stable solutions with models of the circulatory physiology:
+
+- **Backflow stabilization.** **!!! PUB-LINK** This problem usually arises in large vessels that are exposed to backflow in 3D and 2D flow simulations. This phenomenon may be a cause of divergence of the numerical scheme due to bulk reversal of the flow through an outlet, localized areas of flow reversal or use of a boundary 0D circulation model. 
+
+- Custom and efficient **linear solver.** **!!! PUB-LINK** Accurate simulation of blood flow in vessels require the repeated solution of linear systems of equations with millions of unknowns. Moreover, use of closed-loop boundary models significantly increases the degree of coupling between boundary degrees of freedoms. The **svLS** linear solver is designed to efficiently handle large cardiovascular simulations with arbitrary boundary conditions and reduce solution times. 
+
+- Multiscale Coupling for **closed loop boundary conditions.** **!!! PUB-LINK** Coupling a three-dimensional finite element solver with a 0D lumped circulation model drastically improves the possibility of realistically simulate patient-specific hemodynamics and phisiology.
+
+### About this guide
 
 This document will teach you the fundamentals of:
 
-1. Preparing the necessary svSolver input files (**Pre-processing**)
+1. Preparing the necessary svSolver input files (**Pre-processing**) **!!! LINK**
 2. Running a flow analysis (**Solution**)
 3. Looking and providing interpretation to the results generated by the code (**Post-processing**)
 
@@ -23,11 +36,4 @@ In addition, this tutorial will show you how to use some of the adaptivity tools
 
 ### Theory and Implementation
 
-The theory and implementation details are not covered in this document. For more information about those details, please refer to the following theses:
-
-- Figueroa C.A., _“A Coupled-Momentum Method to Model Blood Flow and Vessel Deformation in Human Arteries: Applications in Disease Research and Simulation-Based Medical Planning”_, Department of Mechanical Engineering, Stanford University, 2006.
-
-- Vignon-Clementel I.E., _“A Coupled Multidomain Method for Computational Modeling of Blood Flow”_,  Department of Mechanical Engineering, Stanford University, 2006.
-
-- Whiting C.H., _“Stabilized Finite Element Methods for Fluid Dynamics using a Hierarchical Basis”_, Department of Mechanical Engineering, Rensselaer Polytechnic Institute, 1999.
-
+The theory and implementation details are not covered in this document. For more information about those details, please refer to our publications page.

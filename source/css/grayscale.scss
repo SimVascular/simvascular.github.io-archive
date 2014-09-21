@@ -262,7 +262,7 @@ a {
 
 @media(min-width:767px) {
     .content-section {
-        padding-top: 250px;
+        padding-top: 100px;
     }
 
     .download-section {
@@ -361,3 +361,22 @@ body {
 
 .fixed { height:400px; overflow:hidden;}
 .scrollit { height:400px; overflow-y:scroll;}
+
+
+.LegalStuff{
+  font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: small;
+}
+
+.content {display:none;}
+
+.BioPar p{
+  font-family: "Montserrat";
+  font-size: x-small;
+}
+
+.top-buffer { margin-top:30px; }
+
+.justifiedText {
+  text-align: justify;  
+}

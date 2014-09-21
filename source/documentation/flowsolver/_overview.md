@@ -6,13 +6,13 @@ The following figure contains a schematic representation of the processes involv
 
 <img src="documentation/flowsolver/imgs/Fig_01.png" width="70%" align="center">
 
-We start off with the files coming from the solid modeling part of the analysis: these files characterize the different entities of the finite element mesh.
+We start off with the files coming from the solid modeling **!!! LINK** part of the analysis: these files contain nodal and connectivity information for the finite element mesh.
 
 We then run **svPresolver** using the *.svpre file. The *.svpre file contains the set of instructions that define the boundary conditions, initial conditions, and geometrical configuration of our problem. The output of **svPresolver** is a set of files that are ready to be processed by svSolver to run a blood flow analysis.
 
-Once the analysis is finished, we have a number of files that characterize the finite element solution over the cardiac cycles. These files are taken by **svPost** to generate visualization files (*.vis or *.vtu files) that are used to analyze and extract the desired hemodynamic results. 
+Once the analysis is finished, the solver outputs files that characterize the finite element solution over a defined time perior, typically several cardiac cycles. These files are taken by **svPost** to generate visualization files (*.vis or *.vtu files) that are used to post-process and analyze the desired hemodynamic results. 
 
-In the following sections all the components of this flow chart will be discussed in detail.
+In the following sections the components of this flow chart will be discussed in detail.
 
 ### Units in a **svSolver** Analysis
 

@@ -1,241 +1,609 @@
-Full Format of the input.config file
+### Solver.inp File Guide
+
+This section discusses the options available in the **solver.inp** file. 
+
+#### Solution Control
+
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th>Command</th>
+  <th>Default</th>
+  <th>Possible Values</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tr>
+  <td>Viscous Control</td>
+  <td>(Viscous)</td>
+  <td>Viscous</td>
+  <td>This entry activates the viscous terms in the Navier-Stokes equations. A value different from the default will neglect the contribution of the viscosity and solver the inviscid Navier-Stokes equations.</td>
+</tr>
+<tr>
+  <td>Number of Timesteps</td>
+  <td>NO DEFAULT</td>
+  <td>(double)</td>
+  <td>Total number of timesteps in the simulation</td>
+</tr>
+</table>
+
+#### Material Properties
+
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th>Command</th>
+  <th>Default</th>
+  <th>Possible Values</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tr>
+  <td>Viscosity</td>
+  <td>NO DEFAULT</td>
+  <td>(double)</td>
+  <td>Fluid viscosity</td>
+</tr>
+<tr>
+  <td>Density</td>
+  <td>NO DEFAULT</td>
+  <td>(double)</td>
+  <td>Fluid density</td>
+</tr>
+</table>
+
+#### Body Forces
+
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th>Command</th>
+  <th>Default</th>
+  <th>Possible Values</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tr>
+  <td>Body Force Option</td>
+  <td>(None)</td>
+  <td>(Vector,User e3source.f)</td>
+  <td>The vector option applies a constant body force. A user-defined body force can also be specified through the e3source.f Fortran subroutine</td>
+</tr>
+<tr>
+  <td>Body Force</td>
+  <td>(0.0 0.0 0.0)</td>
+  <td>(double double double)</td>
+  <td>The vector valued constant body force</td>
+</tr>
+<tr>
+  <td>Body Force Pressure Gradient</td>
+  <td>(0.0 0.0 0.0)</td>
+  <td>(double double double)</td>
+  <td></td>
+</tr>
+<tr>
+  <td>Rotating Frame of Reference</td>
+  <td>(False)</td>
+  <td>False,True</td>
+  <td>Specifies whether the object is subject to a constant rotational speed about a rotation axis</td>
+</tr>
+<tr>
+  <td>Rotating frame of reference rotation rate</td>
+  <td>(0.0 0.0 0.0)</td>
+  <td>(double double double)</td>
+  <td>Specified the vector components of the rotational speed. Note that the rotational origin is always the point at (0.0,0.0,0.0)</td>
+</tr>
+</table>
+
+#### Output Control
+
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th>Command</th>
+  <th>Default</th>
+  <th>Possible Values</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tr>
+  <td>Number of timesteps between restarts</td>
+  <td>(500)</td>
+  <td>(integer)</td>
+  <td>Number of time steps between a new restart.<step>.<proc> is saved. This values decides how often the complete status of the model is saved to disk.</td>
+</tr>
+<tr>
+  <td>Print ybar</td>
+  <td>(True)</td>
+  <td>False,True</td>
+  <td>Print discretization error estimates in restart files. These errors can be used by the <b>svAdapt</b> application to refine the computational mesh increasing the accuracy of the resulting pressure/velocity distribution.</td>
+</tr>
+<tr>
+  <td>Number of Surfaces which Output Pressure and Flow</td>
+  <td>(0)</td>
+  <td>(integer)</td>
+  <td>Total number of surfaces where average pressure and total flow rate need to be integrated. The results will be written in the simulation folder to the files PressHist.dat and FlowHist.dat</td>
+</tr>
+<tr>
+  <td>List of Output Surfaces</td>
+  <td>NO DEFAULT</td>
+  <td>(space separated integer list)</td>
+  <td>List of ID for surfaces where average pressure and total flow rate need to be integrated</td>
+</tr>
+</table>
+
+#### Linear Solver Options
+
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th>Command</th>
+  <th>Default</th>
+  <th>Possible Values</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tr>
+  <td>Solver Type</td>
+  <td>(svLS)</td>
+  <td>svLS</td>
+  <td>Selected linear solver</td>
+</tr>
+<tr>
+  <td>Maximum Number of Iterations for svLS NS Solver</td>
+  <td>(1)</td>
+  <td>(integer)</td>
+  <td></td>
+</tr>
+<tr>
+  <td>Maximum Number of Iterations for svLS Momentum Loop</td>
+  <td>(2)</td>
+  <td>(integer)</td>
+  <td></td>
+</tr>
+<tr>
+  <td>Maximum Number of Iterations for svLS Continuity Loop</td>
+  <td>(400)</td>
+  <td>(integer)</td>
+  <td>DES - CAREFUL FOR DEFORMABLE WALL SIM - USE 10,20,400</td>
+</tr>
+</table>
+
+#### Discretization Control
+
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th>Command</th>
+  <th>Default</th>
+  <th>Possible Values</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tr>
+  <td>Time Integration Rule</td>
+  <td>(Second Order)</td>
+  <td>First Order,Second Order</td>
+  <td>This option allows the user to select the parameters in the generalized $\alpha$ time integration method for systems of first order ordinary differential equations in time. Setting a first order scheme is equivalent to adopt a backward (or implicit) Euler scheme. If the user selects a second order scheme then the value of the generalized alpha parameters are determined as $\alpha_m = \frac{1}{2}\frac{3-\rho_{\infty}}{1+\rho_{\infty}}$, $\alpha_f = \frac{1}{1+\rho_{\infty}}$, and $\gamma = \frac{1}{2} + \alpha_m - \alpha_f$</td>
+</tr>
+<tr>
+  <td>Time Integration Rho Infinity</td>
+  <td>(0.5)</td>
+  <td>(double in [0,1])</td>
+  <td>Value of $\rho_{\infty}$ for the generalized $\alpha$ method</td>
+</tr>
+<tr>
+  <td>Predictor at Start of Step</td>
+  <td>(Same Velocity)</td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>Flow Advection Form</td>
+  <td>(Convective)</td>
+  <td>Convective,Conservative</td>
+  <td></td>
+</tr>
+<tr>
+  <td>Tau Matrix</td>
+  <td>(Diagonal-Shakib)</td>
+  <td>Diagonal-Shakib,Diagonal-Franca,Diagonal-Jansen(dev),Diagonal-Compressible</td>
+  <td></td>
+</tr>
+<tr>
+  <td>Tau Time Constant</td>
+  <td>(1.0)</td>
+  <td>(double)</td>
+  <td></td>
+</tr>
+<tr>
+  <td>Tau C Scale Factor</td>
+  <td>(1.0)</td>
+  <td>(double)</td>
+  <td></td>
+</tr>
+<tr>
+  <td>Quadrature Rule on Interior</td>
+  <td>(2)</td>
+  <td>1,2,3,4</td>
+  <td>This option sets the integration order for elements that do not contain boundary faces. Orders 1,2,3,4 correspond to 1,4,16,29 integration points, respectively.</td>
+</tr>
+<tr>
+  <td>Quadrature Rule on Boundary</td>
+  <td>(3)</td>
+  <td>(integer)</td>
+  <td>This option sets the integration order for boundary elements. Orders 1,2,3,4 correspond to 1,4,16,29 integration points, respectively.</td>
+</tr>
+<tr>
+  <td>Number of Elements Per Block</td>
+  <td>(255)</td>
+  <td>(integer)</td>
+  <td></td>
+</tr>
+</table>
+
+#### Cardiovascular Modelling Parameters
+
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th>Command</th>
+  <th>Default</th>
+  <th>Possible Values</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tr>
+  <td>Time Varying Boundary Conditions From File</td>
+  <td>(False)</td>
+  <td>False,True</td>
+  <td>If the <b>bct.dat</b> file was created containg prescribed velocity at the inlet, this option should be set to True.</td>
+</tr>
+<tr>
+  <td>BCT Time Scale Factor</td>
+  <td>(1.0)</td>
+  <td>(double)</td>
+  <td>Defines an amplification factor for the velocity data contained in the <b>bct.dat</b> file</td>
+</tr>
+<tr>
+  <td>Number of Coupled Surfaces</td>
+  <td>(0)</td>
+  <td>(integer)</td>
+  <td>Total number of boundary surfaces with flow-pressure coupling</td>
+</tr>
+<tr>
+  <td>Pressure Coupling</td>
+  <td>(None)</td>
+  <td>None,Explicit,Implicit,P-Implicit</td>
+  <td></td>
+</tr>
+<tr>
+  <td>Number of Resistance Surfaces</td>
+  <td>(0)</td>
+  <td>(integer)</td>
+  <td>Total number of surfaces with assigned resistance boundary condition</td>
+</tr>
+<tr>
+  <td>List of Resistance Surfaces</td>
+  <td>NO DEFAULT</td>
+  <td>(space separated integer list)</td>
+  <td>List of IDs (same ID defined in the model.svpre file) of surfaces with resistance boundary condition applied</td>
+</tr>
+<tr>
+  <td>Resistance Values</td>
+  <td>NO DEFAULT</td>
+  <td>(space separated double list)</td>
+  <td>Resistance values for the previously specified list of faces IDs</td>
+</tr>
+<tr>
+  <td>Number of Impedance Surfaces</td>
+  <td>(0)</td>
+  <td>(integer)</td>
+  <td>Total number of faces with impedance boundary condition</td>
+</tr>
+<tr>
+  <td>List of Impedance Surfaces</td>
+  <td>NO DEFAULT</td>
+  <td>(space-separated integer list)</td>
+  <td>List of IDs (same ID defined in the model.svpre file) of surfaces with impedance boundary condition applied</td>
+</tr>
+<tr>
+  <td>Impedance From File</td>
+  <td>(False)</td>
+  <td>False,True</td>
+  <td>Must be set to True to read the impedance information from file</td>
+</tr>
+<tr>
+  <td>Number of RCR Surfaces</td>
+  <td>(0)</td>
+  <td>(integer)</td>
+  <td>Total number of faces with boundary RCR blocks</td>
+</tr>
+<tr>
+  <td>List of RCR Surfaces</td>
+  <td>NO DEFAULT</td>
+  <td>(space-separated integer list)</td>
+  <td>List of IDs (same ID defined in the model.svpre file) of surfaces with boundary RCR block applied</td>
+</tr>
+<tr>
+  <td>RCR Values From File</td>
+  <td>(False)</td>
+  <td>False,True</td>
+  <td></td>
+</tr>
+<tr>
+  <td>Number of COR Surfaces</td>
+  <td>(0)</td>
+  <td>(integer)</td>
+  <td>Total number of faces with coronary boundary conditions</td>
+</tr>
+<tr>
+  <td>List of COR Surfaces</td>
+  <td>NO DEFAULT</td>
+  <td>(space-separated integer list)</td>
+  <td>List of IDs (same ID defined in the model.svpre file) of surfaces with applied coronary boundary condition</td>
+</tr>
+<tr>
+  <td>COR Values From File</td>
+  <td>(False)</td>
+  <td>False,True</td>
+  <td></td>
+</tr>
+</table>
+
+#### Format of Impedance boundary condition file
+
+Impedance boundary conditions are defined through the **Qhistor.dat** file where the flow rate time history at each face is specifiedd and the **impt.dat** files containing impedance data. These two files must be present in the folder with all others solver files when executing **svSolver**. 
+
+The **Qhistor.dat** file has the following format:
 
 ~~~
-# ==============
-SOLUTION CONTROL
-# ==============
-{
-  Equation of State: Incompressible     # sets ipress=-1 matflag(1,n)
-  Viscous Control: Viscous              #replaces navier (0 no, 1 yes)
-  Number of Timesteps: NODEFAULT        #replaces nsteps(1) (ntseq wired =1)
-  Time Step Size: NODEFAULT             # Delt(1)
-  Solve Flow : True            # solveflow         
-  Solve Heat : False           # solveheat
-  Solve Scalars : 0            # nsclrS total number of scalars must be <=4
-}
-
-# =================
-MATERIAL PROPERTIES
-# =================
-{
-  Shear Law: Constant Viscosity  # ishear=0  => matflag(2,n)
-  Bulk Viscosity Law: Constant Bulk Viscosity # ibulk=0 => matflag(3,n)
-  Conductivity Law: Constant Conductivity # icond=0 => matflag(4,n)
-  Viscosity: NODEFAULT       # fills datmat (2 values REQUIRED if iLset=1)
-  Density: 1.0               # ditto
-  Thermal Conductivity: 0.2  # ditto
-  Prandtl Number: 0.72  # Compressible code sets diffusivity with this
-  Scalar Diffusivity: 0.2    # fills scdiff(1:nsclrS)
-#     Body Force Option: Vector # ibody=1 => matflag(5,n)
-#     Body Force Option: Boussinesq # ibody=2 => matflag(5,n)
-#     Body Force Option: User e3source.f  # ibody=3 => matflag(5,n)
-#     Body Force Option: Cooling Analytic  # ibody=4 => matflag(5,n)
-#     Body Force Option: Cooling Initial Condition  # ibody=5 => matflag(5,n)
-  Body Force Option: None    # ibody=0 => matflag(5,n)
-  Body Force: 0.0 0.0 0.0    # (datmat(i,5,n),i=1,nsd)
-  Body Force Pressure Gradient: 0.0 0.0 0.0    # (datmat(i,7,n),i=1,nsd)
-  Rotating Frame of Reference: False
-  Rotating Frame of Reference Rotation Rate: 0. 0. 0.
-  Surface Tension Option: No #isurf=0
-
-}
-
-# ============
-OUTPUT CONTROL
-# ============
-{
-  Number of Timesteps between Restarts: 500 #replaces nout/ntout
-  Verbosity Level: 3                        #replaces necho
-  Print Statistics: False          #False=> ioform=1, True=> ioform=2
-  Print Wall Fluxes: True         #No current action but it will come later
-  Print Residual at End of Step: False # T lstres=1 F lstres=0
-  Print FieldView: False              # outpar.iofieldv
-  Print ybar: True                   # F ioybar = 0, T ioybar = 1
-  Surface ID for Integrated Mass: 1   # isrfIM
-  Number of Force Surfaces: 0         # nsrfCM
-  Surface ID's for Force Calculation: NODEFAULT  # nreadlist(j),j=1,nsrfCM
-# this must be processed as in input.f or passed to input.f for processing
-# not read if nsrfCM=0
-  Data Block Format : binary #iotype, options 'binary','ascii'
-}
-
-# ===========
-LINEAR SOLVER
-# ===========
-{
-
-#  Solver Type: ACUSIM                           # iprjFlag=0 ipresPrjFlag=0
-#  Solver Type: ACUSIM with P Projection          # iprjFlag=0 ipresPrjFlag=1
-#  Solver Type: ACUSIM with Velocity Projection  # iprjFlag=1 ipresPrjFlag=0
-#  Solver Type: ACUSIM with Full Projection      # iprjFlag=1 ipresPrjFlag=1
-#  The above 4 are for incompressible flow.
-
-  Solver Type: memLS                           # iprjFlag=2 ipresPrjFlag=0
-
-  Number of GMRES Sweeps per Solve: 1      # replaces nGMRES
-  Number of Krylov Vectors per GMRES Sweep: 100           # replaces Kspace
-  Number of Solves per Left-hand-side Formation: 1  #nupdat/LHSupd(1)
-
-  Tolerance on Momentum Equations: 0.05                   # epstol(1)
-  Tolerance on Continuity Equations: 0.4                   # epstol(7)
-  Tolerance on memLS NS Solver: 0.4                   # epstol(8)
-
-  Number of Solves of Temperature per Left-hand-side Formation: 1 
-  Temperature Solver Tolerance: 0.001
-
-  Number of Solves of Scalar 1 per Left-hand-side Formation: 1 
-  Number of Solves of Scalar 2 per Left-hand-side Formation: 1 
-  Number of Solves of Scalar 3 per Left-hand-side Formation: 1 
-  Number of Solves of Scalar 4 per Left-hand-side Formation: 1 
-  Scalar 1 Solver Tolerance: 0.001
-  Scalar 2 Solver Tolerance: 0.001
-  Scalar 3 Solver Tolerance: 0.001
-  Scalar 4 Solver Tolerance: 0.001
-
-  Tolerance on ACUSIM Pressure Projection: 0.1           # prestol 
-  Minimum Number of Iterations per Nonlinear Iteration: 1  # minIters
-  Maximum Number of Iterations per Nonlinear Iteration: 500 # maxIters
-  Velocity Delta Ratio :0.   #utol deltol(1,1)  Stop factor for steady solve
-  Pressure Delta Ratio :0.   #ptol deltol(1,2)  Stop factor for steady solve
-  Number of Velocity Projection Vectors: 20  #nPrjs
-  Number of Pressure Projection Vectors: 20  #nPresPrjs
-  ACUSIM Verbosity Level               : 0   #iverbose
-
-#  DES - CAREFUL FOR DEFORMABLE WALL SIM - USE 10,20,400
-  Maximum Number of Iterations for memLS NS Solver : 1  #maxNSIters
-  Maximum Number of Iterations for memLS Momentum Loop: 2  #maxMomentumIters
-  Maximum Number of Iterations for memLS Continuity Loop: 400  #maxContinuityIters
-}
-
-# ====================
-DISCRETIZATION CONTROL
-# ====================
-{
-  Basis Function Order: 1                 # ipord
-
-# Time Integration Rule: First Order      # 1st Order sets rinf(1) -1
-  Time Integration Rule: Second Order    # Second Order sets rinf next
-  Time Integration Rho Infinity: 0.5     # rinf(1) Only used for 2nd order
-  Predictor at Start of Step : Same Velocity  # ipred=1 (more options later)
-  Weak Form: SUPG # alternate is Galerkin only for compressible
-  Flow Advection Form: Convective        # iconvflow=2
-# Flow Advection Form: Conservative       # iconvflow=1
-  Scalar Advection Form: Convective       # iconvsclr=2
-# Scalar Advection Form: Conservative     # iconvsclr=1
-# Use Conservative Scalar Convection Velocity: True
-  Use Conservative Scalar Convection Velocity: False
-  Tau Matrix: Diagonal-Shakib                #itau=0
-# Tau Matrix: Diagonal-Franca               #itau=1
-# Tau Matrix: Diagonal-Jansen(dev)          #itau=2
-# Tau Matrix: Diagonal-Compressible         #itau=3
-# Tau Matrix: Matrix-Mallet                 #itau=10
-  Tau Time Constant: 1.                      #dtsfct
-  Tau C Scale Factor: 1.0                    # taucfct  best value depends on Tau Matrix chosen
-  Discontinuity Capturing: Off               # Sets IDC to 0 for now
-# Discontinuity Capturing:  "DC-mallet"      #Sets IDC to 1
-  Scalar Discontinuity Capturing: 0 0        #Sets idcsclr to [0 0], no DC 
-                                             #on any scalar
-# idcsclr(1)--> Type of DC (see flow), idcsclr(2)---> on which scalar DC acting
-# Scalar Discontinuity Capturing: 1 1       #Sets DC=1 on first scalar
-# Scalar Discontinuity Capturing: 1 2       #Sets DC=1 on second scalar
-  Include Viscous Correction in Stabilization: True    # if p=1 idiff=1
-                                                          # if p=2 idiff=2  
-  Lumped Mass Fraction on Left-hand-side: 0.           # flmpl
-  Lumped Mass Fraction on Right-hand-side: 0.          # flmpr
-  Dump CFL: False                           #iCFLworst=0
-  Quadrature Rule on Interior: 2           #int(1)
-  Quadrature Rule on Boundary: 3           #intb(1)
-  Number of Elements Per Block: 255        #ibksiz
-  Entropy Form of Pressure Constraint on Weight Space: 0  # 1 turns it on
-}
-
-# =========================
-SOLUTION SCALING PARAMETERS
-# =========================
-{
-  Density: 1.     #ro      This is used in sponge
-  Velocity: 1.    #vel     This affects tau currently
-  Pressure: 1.    #pres    This is used in sponge
-  Temperature: 1. #temper  This scales diagonal energy tau (see e3tau.f)
-  Entropy: 1.     #entrop
-}
-
-# ================================
-CARDIOVASCULAR MODELING PARAMETERS
-# ================================  
-{   
-  Backflow Stabilization Coefficient: 0.2 # backFlowStabCoef 
-  Time Varying Boundary Conditions From File: False # F itvn=0 T itvn=1
-  BCT Time Scale Factor : 1.0
-  Number of Coupled Surfaces: 0 # icardio
-  Pressure Coupling: None # Explicit, Implicit, P-Implicit 
-                          # none ipvsq=0, expl ipvsq=1, 
-                          # impl ipvsq=2, P-Imp ipvsq=3
-  Number of Resistance Surfaces: 0 # numResistSrfs   
-  List of Resistance Surfaces: NODEFAULT # nsrflistResist(j), j=0,MAXSURF
-  Resistance Values : NODEFAULT  # ValueListResist(j),j=1,icardio
-   
-# CLOSEDLOOP
-  Number of Neumann Surfaces: 0 # numNeumannSrfs   
-  List of Neumann Surfaces: NODEFAULT # nsrflistNeumann(j), j=0,MAXSURF
-  Find the GenBC Inside the Running Directory: True # iGenFromFile
-  Number of Timesteps for GenBC Initialization: 0 # iGenInitialization
-  Number of Dirichlet Surfaces: 0 # numDirichletSrfs   
-  List of Dirichlet Surfaces: NODEFAULT # nsrflistDirichlet(j), j=0,MAXSURF
-
-  Number of Normal Constrained Surfaces: 0 # numNormalSrfs
-  List of Normal Constrained Surfaces: NODEFAULT # nsrflistNormal(j), j=0,MAXSURF
-# ==========
-   
-  Number of Impedance Surfaces: 0 # numImpSrfs
-  List of Impedance Surfaces: NODEFAULT # nsrflistImp(j), j=0,MAXSURF
-  Impedance From File: False #False impfile=0, True impfile=1
-  Number of RCR Surfaces: 0 # numRCRSrfs
-  List of RCR Surfaces: NODEFAULT # nsrflistRCR(j), j=0,MAXSURF
-  RCR Values From File: False #False ircrfile=0, True ircrfile=1
-
-# CORONARY
-  Number of COR Surfaces: 0 # numRCRSrfs
-  List of COR Surfaces: NODEFAULT # nsrflistRCR(j), j=0,MAXSURF
-  COR Values From File: False #False ircrfile=0, True ircrfile=1
-# ========
-
-  Number of Surfaces which zero out in-plane tractions: 0 # numVisFluxSrfs
-  List of Surfaces which zero out in-plane tractions: NODEFAULT # nsrflistVisFlux(j), j=0,MAXSURF        
-  Number of Surfaces which Output Pressure and Flow: 0 # numCalcSrfs
-  List of Output Surfaces: NODEFAULT # nsrflistCalc(j), j=0,MAXSURF
-  Lagrange Multipliers: False # False Lagrange=0, True Lagrange=1
-  Number of Constrained Surfaces: 0 # numLagrangeSrfs
-  List of Constrained Surfaces: NODEFAULT # nsrflistLagrange(j)  
-  Constrained Surface Information From File: False #False iLagfile=0, True iLagfile=1
-  Residual Control: True # False rescontrol=0, True rescontrol=1
-  Residual Criteria: 0.01 # ResCriteria 
-  Minimum Required Iterations: 3 # MinNumIter
-  Deformable Wall: False #False ideformwall=0, True ideformwall=1
-
-# VARWALL
-  Variable Wall Thickness and Young Mod: Flase # False ivarwallprop=0, True ivarwallprop=1 
-# =======
-  Number of Wall Properties per Node: 10 # nProps
-                                         # nProps=10: Isotropic
-                                         # nProps=21: Orthotropic
-  Density of Vessel Wall: NODEFAULT # rhovw
-  Thickness of Vessel Wall: NODEFAULT # thicknessvw
-  Young Mod of Vessel Wall: NODEFAULT # evw
-  Poisson Ratio of Vessel Wall: 0.5 # rnuvw
-  Shear Constant of Vessel Wall: NODEFAULT # rshearconstantvw
-  Wall Mass Matrix for LHS: True   # iwallmassfactor=1
-# Wall Mass Matrix for LHS: False  # iwallmassfactor=0
-  Wall Stiffness Matrix for LHS: True   # iwallstiffactor=1
-# Wall Stiffness Matrix for LHS: False  # iwallstiffactor=0
-}
-
-# ===========
-STEP SEQUENCE
-# ===========
-{
-  Step Construction  : 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1
-}
+totTS
+Q0,0 Q0,1 ... Q0,n
+Q1,0 Q1,1 ... Q1,n
+...
+...
+QtotTS,0 QtotTS,1 ... QtotTS,n
 ~~~
+
+where **n** denotes the total number of faces with impedance boundary condition applied and **totTS** the total number of time steps. 
+
+The **impt.dat** file has the following format:
+
+~~~
+nptsImpmax
+numDataImp,1
+t0 impVal0
+...
+t_numDataImp impVal_numDataImp
+...
+...
+numDataImp,n
+t0 impVal0
+...
+t_numDataImp impVal_numDataImp
+~~~
+
+where **nptsImpmax** is the maximum number of time steps defined on all the boundary faces with impedance boundary condition. 
+There are **n** blocks in the file, each defining impedance data for each face. Every block is defined by two columns, the first denoting time and the second impedance values. 
+
+#### Format of RCR boundary condition file
+
+#### Format of COR boundary condition file
+
+#### Backflow Control
+
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th>Command</th>
+  <th>Default</th>
+  <th>Possible Values</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tr>
+  <td>Backflow Stabilization Coefficient</td>
+  <td>(0.2)</td>
+  <td>(double in [0,1])</td>
+  <td></td>
+</tr>
+<tr>
+  <td>Number of Surfaces which zero out in-plane tractions</td>
+  <td>(0)</td>
+  <td>(integer)</td>
+  <td></td>
+</tr>
+<tr>
+  <td>List of Surfaces which zero out in-plane tractions</td>
+  <td>NO DEFAULT</td>
+  <td>(space-separated integer list)</td>
+  <td></td>
+</tr>
+<tr>
+  <td>Lagrange Multipliers</td>
+  <td>(False)</td>
+  <td>False,True</td>
+  <td></td>
+</tr>
+<tr>
+  <td>Number of Constrained Surfaces</td>
+  <td>(0)</td>
+  <td>(integer)</td>
+  <td>Total number of face with applied Lagrange multiplier constraints</td>
+</tr>
+<tr>
+  <td>List of Constrained Surfaces</td>
+  <td>NO DEFAULT</td>
+  <td>(space-separated integer list)</td>
+  <td></td>
+</tr>
+<tr>
+  <td>Constrained Surface Information From File</td>
+  <td>(False)</td>
+  <td>False,True</td>
+  <td></td>
+</tr>
+</table>
+
+#### Closed Loop Boundary Conditions
+
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th>Command</th>
+  <th>Default</th>
+  <th>Possible Values</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tr>
+  <td>Find the GenBC Inside the Running Directory</td>
+  <td>(True)</td>
+  <td>False,True</td>
+  <td></td>
+</tr>
+<tr>
+  <td>Number of Timesteps for GenBC Initialization</td>
+  <td>(0)</td>
+  <td>(integer)</td>
+  <td></td>
+</tr>
+<tr>
+  <td>Number of Dirichlet Surfaces</td>
+  <td>(0)</td>
+  <td>(integer)</td>
+  <td></td>
+</tr>
+<tr>
+  <td>List of Dirichlet Surfaces</td>
+  <td>NO DEFAULT</td>
+  <td>(space-separated integer list)</td>
+  <td></td>
+</tr>
+<tr>
+  <td>Number of Neumann Surfaces</td>
+  <td>(0)</td>
+  <td>(integer)</td>
+  <td></td>
+</tr>
+<tr>
+  <td>List of Neumann Surfaces</td>
+  <td>NO DEFAULT</td>
+  <td>(space-separated integer list)</td>
+  <td></td>
+</tr>
+</table>
+
+#### Non-linear Iteration Control
+
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th>Command</th>
+  <th>Default</th>
+  <th>Possible Values</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tr>
+  <td>Residual Control</td>
+  <td>(True)</td>
+  <td>False,True</td>
+  <td></td>
+</tr>
+<tr>
+  <td>Residual Criteria</td>
+  <td>(0.01)</td>
+  <td>(double)</td>
+  <td></td>
+</tr>
+<tr>
+  <td>Minimum Required Iterations</td>
+  <td>(3)</td>
+  <td>(integer)</td>
+  <td></td>
+</tr>
+<tr>
+  <td>Step Construction</td>
+  <td>(0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1)</td>
+  <td>(Sequence of )</td>
+  <td></td>
+</tr>
+</table>
+
+#### Deformable Wall Simulations
+
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th>Command</th>
+  <th>Default</th>
+  <th>Possible Values</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tr>
+  <td>Deformable Wall</td>
+  <td>(False)</td>
+  <td>False,True</td>
+  <td></td>
+</tr>
+<tr>
+  <td>Number of Wall Properties per Node</td>
+  <td>(10)</td>
+  <td>10,21</td>
+  <td>nProps=10: Isotropic, nProps=21: Orthotropic</td>
+</tr>
+<tr>
+  <td>Density of Vessel Wall</td>
+  <td>NO DEFAULT</td>
+  <td>(double)</td>
+  <td></td>
+</tr>
+<tr>
+  <td>Thickness of Vessel Wall</td>
+  <td>NO DEFAULT</td>
+  <td>(double)</td>
+  <td></td>
+</tr>
+<tr>
+  <td>Young Mod of Vessel Wall</td>
+  <td>NO DEFAULT</td>
+  <td>(double)</td>
+  <td></td>
+</tr>
+<tr>
+  <td>Poisson Ratio of Vessel Wall</td>
+  <td>(0.5)</td>
+  <td>(double in [0.0,0.5])</td>
+  <td></td>
+</tr>
+<tr>
+  <td>Shear Constant of Vessel Wall</td>
+  <td>NO DEFAULT</td>
+  <td>(double in [0.0,0.5])</td>
+  <td></td>
+</tr>
+<tr>
+  <td>Wall Mass Matrix for LHS</td>
+  <td>(True)</td>
+  <td>False,True</td>
+  <td></td>
+</tr>
+<tr>
+  <td>Wall Stiffness Matrix for LHS</td>
+  <td>(True)</td>
+  <td>False,True</td>
+  <td></td>
+</tr>
+<tr>
+  <td>Variable Wall Thickness and Young Mod</td>
+  <td>(True)</td>
+  <td>False,True</td>
+  <td></td>
+</tr>
+</table>
+  
 
 

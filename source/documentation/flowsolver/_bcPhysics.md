@@ -1,6 +1,6 @@
 ### Boundary Condition Specification: the Physical Side of the Problem
 
-The first question we need to address when specifying boundary conditions for a problem is to think about what kind of things are going on at the boundaries of our model from a physical standpoint. To do this, we need to know some physiologic information about our problem, for instance:
+Boundary conditions are crucial to obtaining high quality cardiovascular simulation results. It is essential that boundary conditions accurately capture the physiology of vascular networks outside of the 3D domain of the model. **SimVascular** provides several different options for boundary condition assignment at inlets and outlets that are describe in this section. Typically, we begin with some physiologic information about our problem, for instance:
 
 - Flow rate info coming from MRI or ultrasound measurements.
 - Pressure values in the model obtained with a catheter transducer or a pressure cuff.
@@ -10,11 +10,11 @@ The first question we need to address when specifying boundary conditions for a 
 
 From a conceptual standpoint, no matter how geometrically complex a vascular model is (we’ll refer to this as $\Omega$), its boundaries can be classified into three groups (see figure above):
 
-- An inflow boundary $\Gamma_g$. This is the set of face(s) of the model where we will prescribe a flow wave that we obtain from a clinical measurement.
-- A vessel wall boundary $\Gamma_s$. This boundary represents the interface between the fluid domain and the vessel wall. In the physical world, this boundary is lined by a layer of endothelial cells. The treatment of this boundary can be pretty complex. In general, blood flow simulations traditionally considered the so-called rigid wall assumption whereby, as a first approximation, the motion of the vessel wall due to the interaction with the internal pulsatile flow is neglected. Under these circumstances, a zero velocity condition is applied on these surfaces. 
-- An outflow boundary $\Gamma_h$. On this boundary, we will typically prescribe a constant pressure (by constant we mean CONSTANT OVER THE FACE, spatially, not necessarily temporally) in a **weak manner**. A **weakly applied** pressure means that we are not prescribing nodal values of pressure at the nodes of the outlet face as Dirichlet boundary conditions. Instead, we apply this pressure by enforcing that the integral of the pressure field on that face must be a certain value.
+- An inflow boundary $\Gamma_g$. This is the set of face(s) of the model where we will prescribe a flow wave form that we obtain from a clinical measurement.
+- A vessel wall boundary $\Gamma_s$. This boundary represents the interface between the fluid domain and the vessel wall. In the physical world, this boundary is lined by a layer of endothelial cells, the treatment of which can be complex. Boundary can be pretty complex. Many blood flow simulations have traditionally used a rigid wall assumption. Under these circumstances, a zero velocity condition is applied on these surfaces. **SimVascular** also offers options for fluid structure interaction that are described below.
+- An outflow boundary $\Gamma_h$. On this boundary, we will typically prescribe a pressure value that is uniform over the face (i.e. spatially not temporally constant) in a **weak manner**. A **weakly applied** pressure means that we are not prescribing nodal values of pressure at the nodes of the outlet face as Dirichlet boundary conditions. Instead, we apply this pressure by enforcing that the integral of the pressure field on that face must be a certain value.
 
-These boundaries have an absolutely critical impact on the numerical simulation results. The Taylor lab has developed a number of boundary conditions techniques that allow prescribing a weak pressure in a way that takes into account the effects of the downstream vasculature on the vascular model (see figure below). These boundary conditions include:
+These boundaries have an absolutely critical impact on the numerical simulation results. The SimVascular package contains several options for boundary condition assignment. All of these use a weakly prescribed pressure formulation, with the purpose of accounting for effects of the downstream vasculature on the vascular model (see figure below). These boundary conditions include:
 
 1. **Resistance Boundary condition**. Here, the condition prescribed on the face is a relationship between flow and pressure of the form: 
 
@@ -32,7 +32,11 @@ $$
 
 where $Z$ is the Inverse Fourier Transform of an impedance function that characterizes the downstream vasculature, $p$ is the weakly prescribed pressure, $Q$ is the flow rate passing through the face, and $T$ is the cardiac cycle.
 
-<img src="documentation/flowsolver/imgs/Fig_16.png" width="70%">
+<figure>
+  <img src="documentation/flowsolver/imgs/Fig_16.png" width="70%">
+  <figcaption>Test Caption.</figcaption>
+</figure>
+
 
 <img src="documentation/flowsolver/imgs/Fig_17.png" width="800">
 
@@ -48,9 +52,11 @@ That is, a relationship between pressure and flow modes for different frequencie
 
 <img src="documentation/flowsolver/imgs/Fig_18.png" width="40%">
 
+** !!! We should add something here very brief about multiscale modeling.     We should state that the coupling capability is built into the solver, and that documentation on this feature will be added at some future time.    Link to publication of Mahdi on coupling.**
+
 ### Boundary conditions considered in this problem
 
-Before we move on, let us recap the type of _physical problem_ we are solving: the geometry used in this problem consists of an idealized blood vessel, represented by a cylindrical segment with a radius $r=2$ cm and length $L=9$ cm. We prescribe an idealized constant inlet volumetric flow rate $Q$ of $1.570$ cc/sec to a parabolic profile at the inlet face of the model ($\Gamma\_g$). The dynamic viscosity $\mu$ and density $\rho$ of the blood are 0.04 poise and 1.06 gr/cm$^3$, respectively. The lateral surface of the vessel ($\Gamma\_{s}$) is considered to be rigid (therefore, we will apply a zero-velocity condition there). As for the outlet boundary ($\Gamma_h$), a spatially-constant pressure boundary condition is weakly enforced via a resistance $R$. 
+Before we move on, let us recap the type of _physical problem_ we are solving: the geometry used in this problem consists of an idealized blood vessel, represented by a cylindrical segment with a radius $r=2$ cm and length $L=9$ cm. We prescribe an idealized constant inlet volumetric flow rate $Q$ of $1.570$ cc/sec to a parabolic profile at the inlet face of the model ($\Gamma\_g$). The dynamic viscosity $\mu$ and density $\rho$ of the blood are 0.04 poise and 1.06 gr/cm$^3$, respectively. The lateral surface of the vessel ($\Gamma\_{s}$) is considered to be rigid (therefore, we will apply a zero-velocity condition there). For the outlet boundary ($\Gamma_h$), a spatially-constant pressure boundary condition is weakly enforced via a resistance $R$. 
 In this problem, we will consider a resistance of $R = 84917$ dynes·s/cm$^5$. 
 
 This resistance will give a (weakly-applied) pressure at the outlet face of
