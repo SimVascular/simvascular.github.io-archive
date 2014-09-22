@@ -7,7 +7,7 @@ We will now generate a boundary layer mesh from the "wall_aorta" model:
 1.	Go to the "Advanced Mesh Options" tab.
 2.	Under the "Boundary Layer Meshing" header make sure that the "Type:" is set to "Relative Gradation (type 4)" and the "Growth Direction:" is set to "both."
 3.	Select the desired face name from the "Face Name:" drop-down menu. In this case, we use "wall_aorta". 
-4.	Set the desired mesh edge size to in the "Global Max Edge Size:" entry widget on the Mesh Options Tab. In this case, we use "0.4".  
+4.	Set the desired mesh edge size in the "Global Max Edge Size:" entry widget on the Mesh Options Tab. In this case, we use "0.4".  
 5.	Set the desired number of layers in the "num Layers:". In this case, we use "3". 
 6.	Set the gradation factor in the "Params:" entry widget. In this case, we use "0.5"  
 7.	Click on the “Create Boundary Layer Macro” button. 
