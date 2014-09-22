@@ -11,8 +11,18 @@
             </a>
             <div class="media-body">
               <h4 class="media-heading">Description</h4>
-              This project is an open source release of tools for cardiovascular simulation. It includes software for loading and viewing medical image data, segmenting vascular anatomy, generating 3D patient specific models and meshes, and modeling blood flow in deformable vessels. The SimVascular originated in the lab of Charles Taylor at Stanford University, and is now maintained by an active community of domestic and international academic and industrial researchers. The project is part of the Stanford Simbios Center hosted on simtk.org. The SimVascular revitalization project, started in 2013 by Alison Marsden, Shawn Shadden and Nathan Wilson, aims to provide the first truly open source package for cardiovascular simulation with enhanced funcationality for both clinical and basic science research.
-            </div>
+              SimVascular is an open source software suite for cardiovascular simulation, providing a complete pipeline from medical image data to 3D model construction, meshing, and blood flow simulation.  SimVacular represents the state of the art in cardiovascular simulation, including advanced tools for physiologic boundary conditions, fluid structure interaction, and an accurate and efficient finite element Navier-Stokes solver.  SimVascular integrates custom code with best-in-class open source packages to support clinical and basic science research.
+              </div>
+          </div>
+          <!-- Origins -->
+          <div class="media">
+            <a class="pull-left" href="#">
+              <img class="media-object" src="img/Img_About_Coro.png" alt="...">
+            </a>
+            <div class="media-body">
+              <h4 class="media-heading">Origins</h4>
+              SimVascular originated in the lab of Charles Taylor at Stanford University, and incorporates flow solver code from the PHASTA project (SCOREC at RPI).  The SimVascular revitalization project now aims to provide the first truly open source package for cardiovascular simulation with enhanced functionality for clinical and basic science research. SimVascular is now developed and maintained by an active international group of researchers in academia and industry.
+              </div>
           </div>
           <!-- Purpose/Synopsis -->
           <div class="media">
@@ -21,8 +31,8 @@
             </a>
             <div class="media-body">
               <h4 class="media-heading">Purpose</h4>
-              Provides a platform for patient-specific cardiovascular modeling and simulation to support research and clinical efforts in medical computing. SimVascular represents the state of the art in the CV simulation community, including advanced tools for physiologic boundary conditions, fluid structure interaction (FSI), and an accurate and efficient finite element flow solver.
-            </div>
+              To provide a platform for patient-specific cardiovascular modeling and simulation that enables advances in cardiovascular disease through basic science and clinical research.
+              </div>
           </div>
           <!-- Audience -->
           <div class="media">
@@ -31,18 +41,18 @@
             </a>
             <div class="media-body">
               <h4 class="media-heading">Audience</h4>
-              Biomedical and clinical researchers interested in Cardiovascular Hemodynamics and Biomechanics, including medical image segmentation, patient specific model construction, blood flow simulations, and vessel dynamics.  
-            </div>
+              Biomedical and clinical researchers interested in medical computing, cardiovascular hemodynamics and biomechanics, including medical image segmentation, patient specific model construction, blood flow simulations, vessel biomechanics, and finite element flow simulations.
+              </div>
           </div>
-          <!-- Long Term Goals and Related Uses -->
+          <!-- Broader Uses -->
           <div class="media">
             <a class="pull-left" href="#">
               <img class="media-object" src="img/Img_About_Aorta.png" alt="...">
             </a>
             <div class="media-body">
-              <h4 class="media-heading">Long Term Goals and Related Uses</h4>
-              Allow researchers to go from medical imaging data to hemodynamic (blood flow) simulation results for patient specific models. The application, which integrates custom open-source code and best-in-class open source packages, includes an integrated flow solver with special outflow boundary conditions and fluid-structure interaction capabilities. This package has also been applied in simulations of medical devices, respiratory flows, and cardiac development.
-            </div>
+              <h4 class="media-heading">Broader Uses</h4>
+              Beyond hemodynamics simulations, SimVascular has been used in simulations of medical devices, respiratory flows, and cardiac development.  SimVascular provides a full Navier-Stokes flow solver for complex geometries that can be flexibly applied across a wide range of problems in engineering and medicine.
+              </div>
           </div>
 
 
@@ -55,9 +65,18 @@
             <div class="media-body">
               <h4 class="media-heading">New features in SimVascular 2.0</h4>
               <ul>
-              <li>Opensource meshing tools with adaption</li>
-              <li>Multiscale Modelling</li>
-              </ul>             
+              <li>Replacement of all prior commercial components:
+                <ul>
+                  <li>Opensource meshing tools with adaption</li>
+                  <li>Efficient linear solver customized for blood flow</li>
+                  <li>Solid modeling Boolean operations</li>
+                </ul>
+              </li>
+              <li>Multiscale modelling capabilities</li>
+              <li>Coronary boundary conditions</li>
+              <li>Improved image segmentation tools</li>
+              <li>Backflow stabilization</li>
+              </ul>
             </div>
           </div>
 
