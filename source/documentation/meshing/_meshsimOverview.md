@@ -1,6 +1,7 @@
 ### MeshSim Meshing for Parasolid(.xmt_txt) or Discrete(.dsm) Solids
 
 #### About MeshSim
+
 MeshSim is a component mesher used to create high quality meshes from CAD Models. Meshing capabilities include surface and volumetric meshing, boundary layer meshing, and local meshing refinement. MeshSim is a Licensed SimVascular package and must be purchased in order to be used with the Software.
 
 #### MeshSim Interface
@@ -20,6 +21,7 @@ The MeshSim tab includes all of the operations to run a mesh with the commercial
 #### Mesh Options Tab
 
 The Mesh Options Tab has all the components to create a simple mesh.
+
 <figure>
 <img class="meshGuideFigure" src="documentation/meshing/img/MeshSim_MeshOptions_Labelled.png" width="60%">
 </figure>
@@ -40,6 +42,7 @@ Button or Widget Functionality:
 10. Select the directory in which to place all the mesh files to be written from the mesh. These files are described in the Written Mesh Files section.
 
 ##### Surface, Volume, and Extended Options
+
 <figure>
 <img class="meshGuideFigure" src="documentation/meshing/img/MeshSim_VSOptions.png" width="60%">
 </figure>
@@ -59,6 +62,7 @@ Button or Widget Functionality:
 #### Advanced Mesh Options Tab
 
 The Advanced Mesh Options Tab has the componenets to create a more advanced mesh such as a boundary layer mesh or a mesh with local refinement.
+
 <figure>
 <img class="meshGuideFigure" src="documentation/meshing/img/MeshSim_AdvancedMeshOptions_Labelled.png" width="60%">
 </figure>
@@ -148,6 +152,7 @@ This tab is used to install or remove license information for the use of MeshSim
 3. Install License Keys: Install a license in order to use MeshSim for meshing.
 
 #### Discrete Model Tab
+
 This tab is used to create a Discrete Solid Model from a a VTK. This Discrete Solid Model can then be meshed with MeshSim.
 
 1. Create Solid: Create the new Discrete Solid Model (.dsm) from the specified vtk file.

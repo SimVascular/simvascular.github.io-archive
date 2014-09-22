@@ -8,10 +8,10 @@ We will now specify increased mesh density on the inflow and outflow faces.  Und
 
 First, we will specify the mesh density for the inflow face:
 
-1)	Under the "Global/Local Size and Curvature Mesh Parameters" header make sure that the "Type:" is set as "absolute" and the "Create Mesh Macro:" is set as "Local Max Edge Size." 
-2)	Select the desired face names from the "Face Name:" drop-down menu. In this case, we use "Inflow","R_ext_iliac", and "L_ext_iliac".
-3)	Set the desired size n the "Size" entry box. In this case, we apply a local edge size 0f "0.05". 
-4)	Click on the “Create Size/Curvature Macro” button. 
+1.	Under the "Global/Local Size and Curvature Mesh Parameters" header make sure that the "Type:" is set as "absolute" and the "Create Mesh Macro:" is set as "Local Max Edge Size." 
+2.	Select the desired face names from the "Face Name:" drop-down menu. In this case, we use "Inflow","R_ext_iliac", and "L_ext_iliac".
+3.	Set the desired size n the "Size" entry box. In this case, we apply a local edge size 0f "0.05". 
+4.	Click on the “Create Size/Curvature Macro” button. 
 
 At the bottom of the "Advanced Mesh Options" tab check the "Display currently selected meshing parameters" box. The "Current List of Specified Meshing Parameters" should now appear. In this case, ours displays "size inflow absolute 0.05". Note that you can edit the text in the "Current List of Specified meshing Parameters" box. This may be useful if you decide you don’t like the meshing you specified and want to delete the previous refinement text and generate a new one. You can also edit the refinement text directly on that box. 
 
