@@ -48,6 +48,6 @@ If you don’t already see the exterior surface mesh you just created, in the 3D
 If you zoom in on the inflow face, you will see that the triangulation for that face is more refined than the rest of the vessel mesh as shown below: 
 
 <figure>
-<img class="meshGuideFigure" src="documentation/meshing/img/MeshSim_Local_Refinement.png" width="60%">
+<img class="meshGuideFigure" src="documentation/meshing/img/MeshSim_LocalRefinement.png" width="60%">
 </figure>
 
