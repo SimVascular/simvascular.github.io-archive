@@ -10,7 +10,7 @@ The opacity transfer function should be a list of points with each point enclose
 
 This corresponds to the following piecewise linear opacity lookup table:
 
-<table class="table table-bordered">
+<table class="imagingGuideTable">
 <tr>
   <th>Scalar intensity value</th>
   <th>Opacity</th>
@@ -42,7 +42,7 @@ The scalar intensity value is the same as the intensity values we previously use
 Check on "Turn on Volume Rendering."  Depending on your hardware and dataset, you may see the program run slower using this visualization technique. You should see something similar to the following image:
 
 <figure>
-<img  src="documentation/imaging/imgs/volume_rendering/1.jpg" width="100%"> 
+<img class="imagingGuideFigure"  src="documentation/imaging/imgs/volume_rendering/1.jpg" width="100%"> 
 </figure>
 
 Now we are going to try a different opacity and color transfer function.  In the “Volume Rendering” tab enter the following:
@@ -53,12 +53,12 @@ color function:		{0 0 0 0} {80 0 1 0} {128 1 0 0} {5000 1 0 0}
 and press RETURN inside the entry widget.  You should see an image like that below:
 
 <figure>
-<img  src="documentation/imaging/imgs/volume_rendering/2.jpg" width="100%"> 
+<img class="imagingGuideFigure"  src="documentation/imaging/imgs/volume_rendering/2.jpg" width="100%"> 
 </figure>
 
 How did that work?  The color function corresponds to the following table, where each color component is specified as a value between 0 (turned off) to 1.0 (full intensity):
 
-<table class="table table-bordered">
+<table class="imagingGuideTable">
   <tr>
     <th rowspan="2">Scalar value</th>
     <th colspan="3">Color</th>

@@ -1,0 +1,16 @@
+<!--Nav Bar -->
+<p><h3>Visualizing Medical Imaging Data</h3></p>
+<li><a href="#imagingOverview">Overview</a></li>
+<li><a href="#imagingLoading">Loading Medical Imaging Data</a></li>
+<li><a href="#imagingSlicePlanes">Viewing Image Slice Planes</a></li>
+<li><a href="#imagingWindowLevel">Changing the Window Level</a></li>
+<li><a href="#imagingPointClouds">Visualzing Point Clouds</a></li>
+<li><a href="#imagingVolumeRendering">Using Volume Rendering</a></li>
+<li><a href="#imagingMIP">Creating a Maximum Intensity Projection (MIP)</a></li>
+<li><a href="#imagingSubvolume">Resampling the Volume Data</a></li>
+<li><a href="#imagingCombining">Combining Several Visualization Techniques</a></li>
+
+
+  
+
+

@@ -21,12 +21,12 @@ Now click on the “Smooth Current Path” button. Go back to the “Manual” t
 You should see a much smoother path that better represents the medial axis of the vessel. Furthermore, you will notice that this smoothed path is saved under a new ID number in your path treeview display window. You should now see “aorta   (ID: 101) (Number of Spline Pts: 300)”.  Note that smoothing occurs on the current working path.  (See the section on “Use Fourier Smoothing” below for an example of how to select the current working path.)  Depending on how many points you had in your original path, you may find that the smoothing may make the new path deviate from the vessel! This is why smoothing should be used with caution.
 
 <figure>
-<img  src="documentation/modeling/imgs/path_planning/smoothing_path/1.jpg" width="100%"> 
+<img class="modelingGuideFigure"  src="documentation/modeling/imgs/path_planning/smoothing_path/1.jpg" width="100%"> 
 </figure>
 
 Let’s examine these parameters more closely.
 
-“Subsample every ____ points”: This parameter specifies which points will be used in the smoothing.  If you enter “5,” then only every 5th point will be used.  
+“Subsample every ____ points”: This parameter specifies which points will be used in the smoothing.  If you enter “5,” then only every 5th point will be used.
 
 “Create/Replace Path ID”: The resulting smoothed path will be saved under this ID number (integers only).  If you specify a path ID that has already been used, then that original path will be overwritten so BE CAREFUL!  In this example, our original path had a path ID of 100 and the smoothed path was written to a path ID of 101.
 
@@ -43,7 +43,7 @@ Try this exercise.  Go back to the “Smooth” tab under the “Paths” tab. I
 Click on “Smooth Current Path”. You may need to go back to the “Manual” tab and toggle “Show Spline” under the “Display Options” drop-down menu off and on before you see your new path (ID: 102). What happened when you changed the number of Fourier modes to 5? You should see a very smooth line with few to no kinks. Does this ultra-smooth path still fit inside the boundaries of the vessel?
 
 <figure>
-<img  src="documentation/modeling/imgs/path_planning/smoothing_path/2.jpg" width="100%"> 
+<img class="modelingGuideFigure"  src="documentation/modeling/imgs/path_planning/smoothing_path/2.jpg" width="100%"> 
 </figure>
 
 <font color="red">**HELPFUL HINT:** </font>   Smoothing occurs on whatever path is selected as the current working path.  Make sure you’ve selected the right Path ID for your current working path!

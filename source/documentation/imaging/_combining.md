@@ -5,6 +5,6 @@ We will try combining different visualization techniques previously discussed. O
 Under the “Volume Properties” tab in the Display Options pane (top right corner), set the threshold min value to 100, the max to 334, and click on the “point cloud” checkbox in the “Volume Properties” window.  In addition, turn on the “A/P” image slice.  Try changing the position of the A/P scale bar.  You should see something similar to that shown below.
 
 <figure>
-<img  src="documentation/imaging/imgs/combining/1.jpg" width="100%"> 
+<img class="imagingGuideFigure"  src="documentation/imaging/imgs/combining/1.jpg" width="100%"> 
 </figure>
 
