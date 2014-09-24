@@ -40,11 +40,9 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">            
                 <ul class="nav navbar-nav">
-                    <li><a href="#" id="btnNews"><b><span class="glyphicon glyphicon-globe"></span> News Archive</b></a></li>
-
-                    <li><a href="#" id="btnNews"><b><span class="glyphicon glyphicon-globe"></span> Quick Guide</b></a></li>
-
-                    <li><a href="#" id="btnNews"><b><span class="glyphicon glyphicon-globe"></span> Model Building</b></a></li>
+                    <li><a href="#" id="btnQuickGuide"><b><span class="glyphicon glyphicon-flash"></span> Quick Guide</b></a></li>
+                    <li><a href="#" id="btnImageGuide"><b><span class="glyphicon glyphicon-eye-open"></span> Viewing Medical Images</b></a></li>
+                    <li><a href="#" id="btnModelGuide"><b><span class="glyphicon glyphicon-road"></span> Model Building</b></a></li>
                     <!-- <li>
                       <a href="#" id="dropdownMenu1" data-toggle="dropdown">
                         <b><span class="glyphicon glyphicon-user"></span> User Guides</b>
@@ -97,46 +95,71 @@
         target: '.bs-docs-sidebar',
         offset: 40
       });
+      // DEFAULT-BEHAVIOR
       $(document).ready(function() {
-        $(".manNews").show();
-        $(".manUserGuide").hide();
+        $(".manQuickGuide").show();
+        $(".manImageGuide").hide();
+        $(".manModelGuide").hide();
         $(".manMeshing").hide();
         $(".manPresolver").hide();
         $(".manFlowSolver").hide();
         $(".manTutorials").hide();    
         $(".manRefs").hide();    
         $('body').scrollspy('refresh');
-        var firstLi = $( ".manNews li" ).first();
+        var firstLi = $( ".manQuickGuide li" ).first();
         firstLi.addClass('active').siblings().removeClass('active');
       });
-      // NEWS
-      $('#btnNews').on('click', function(event) {
-        $(".manNews").show();
-        $(".manUserGuide").hide();
+      // QUICK-GUIDE
+      $('#btnQuickGuide').on('click', function(event) {
+        $(".manQuickGuide").show();
+        $(".manImageGuide").hide();
+        $(".manModelGuide").hide();
         $(".manMeshing").hide();
         $(".manPresolver").hide();
         $(".manFlowSolver").hide();
         $(".manTutorials").hide();
         $(".manRefs").hide();    
         $('body').scrollspy('refresh');
-        var firstLi = $( ".manNews li" ).first();
+        var firstLi = $( ".manQuickGuide li" ).first();
         firstLi.addClass('active').siblings().removeClass('active');
       });
-      $('#btnUserGuide').on('click', function(event) {
-        $(".manNews").hide();
-        $(".manUserGuide").show();
+      // IMAGE-GUIDE
+      $('#btnImageGuide').on('click', function(event) {
+        $(".manQuickGuide").hide();
+        $(".manImageGuide").show();
+        $(".manModelGuide").hide();
         $(".manMeshing").hide();
         $(".manPresolver").hide();
         $(".manFlowSolver").hide();
         $(".manTutorials").hide();
         $(".manRefs").hide();    
         $('body').scrollspy('refresh');
-        var firstLi = $( ".manUserGuide li" ).first();
+        var firstLi = $( ".manImageGuide li" ).first();
         firstLi.addClass('active').siblings().removeClass('active');
       });
+
+
+      // MODELING-GUIDE
+      $('#btnModelGuide').on('click', function(event) {
+        $(".manQuickGuide").hide();
+        $(".manImageGuide").hide();
+        $(".manModelGuide").show();
+        $(".manMeshing").hide();
+        $(".manPresolver").hide();
+        $(".manFlowSolver").hide();
+        $(".manTutorials").hide();
+        $(".manRefs").hide();    
+        $('body').scrollspy('refresh');
+        var firstLi = $( ".manModelGuide li" ).first();
+        firstLi.addClass('active').siblings().removeClass('active');
+      });
+
+
+      // MESHING-GUIDE
       $('#btnMeshing').on('click', function(event) {
-        $(".manNews").hide();
-        $(".manUserGuide").hide();
+        $(".manQuickGuide").hide();
+        $(".manImageGuide").hide();
+        $(".manModelGuide").hide();
         $(".manMeshing").show();
         $(".manPresolver").hide();
         $(".manFlowSolver").hide();
@@ -146,9 +169,11 @@
         var firstLi = $( ".manMeshing li" ).first();
         firstLi.addClass('active').siblings().removeClass('active');
       });
+      // PRESOLVER-GUIDE
       $('#btnPresolver').on('click', function(event) {
-        $(".manNews").hide();
-        $(".manUserGuide").hide();
+        $(".manQuickGuide").hide();
+        $(".manImageGuide").hide();
+        $(".manModelGuide").hide();
         $(".manMeshing").hide();
         $(".manPresolver").show();
         $(".manFlowSolver").hide();
@@ -158,9 +183,11 @@
         var firstLi = $( ".manPresolver li" ).first();
         firstLi.addClass('active').siblings().removeClass('active');
       });
-        $('#btnFlowSolver').on('click', function(event) {
-        $(".manNews").hide();
-        $(".manUserGuide").hide();
+      // FLOWSOLVER-GUIDE
+      $('#btnFlowSolver').on('click', function(event) {
+        $(".manQuickGuide").hide();
+        $(".manImageGuide").hide();
+        $(".manModelGuide").hide();
         $(".manMeshing").hide();
         $(".manPresolver").hide();
         $(".manFlowSolver").show();
@@ -170,21 +197,11 @@
         var firstLi = $( ".manFlowSolver li" ).first();
         firstLi.addClass('active').siblings().removeClass('active');
       });
-      $('#btnTutorials').on('click', function(event) {
-        $(".manNews").hide();
-        $(".manUserGuide").hide();
-        $(".manMeshing").hide();
-        $(".manPresolver").hide();
-        $(".manFlowSolver").hide();
-        $(".manTutorials").show();
-        $(".manRefs").hide();    
-        $('body').scrollspy('refresh');
-        var firstLi = $( ".manTutorials li" ).first();
-        firstLi.addClass('active').siblings().removeClass('active');
-      }); 
+      // REFERENCES
       $('#btnRefs').on('click', function(event) {
-        $(".manNews").hide();
-        $(".manUserGuide").hide();
+        $(".manQuickGuide").hide();
+        $(".manImageGuide").hide();
+        $(".manModelGuide").hide();
         $(".manMeshing").hide();
         $(".manPresolver").hide();
         $(".manFlowSolver").hide();
