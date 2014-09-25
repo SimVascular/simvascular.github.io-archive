@@ -9,5 +9,5 @@ Let’s start by creating a group:
 Under the “General” tab, type in *aorta* in the “Group Name:” field. Then click the button “Create New Group”. In the group treeview display window, a group with the name “aorta” should appear (highlighted in blue):
 
 <figure>
-<img  src="documentation/modeling/imgs/segmentation/using_groups/1.jpg" width="100%"> 
+<img class="modelingGuideFigure"  src="documentation/modeling/imgs/segmentation/using_groups/1.jpg" width="100%"> 
 </figure>

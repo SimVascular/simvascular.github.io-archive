@@ -7,7 +7,7 @@ Now, under the “Solids” tab, you should see the group “aorta” in your gr
 Under the “Level Set” tab, click on “Add Current Position to Group”. Under your group treeview window, the number “0” should appear, corresponding to the path position of the segmentation that was just added to the group (highlighted in blue):
 
 <figure>
-<img  src="documentation/modeling/imgs/segmentation/adding_to_group/1.jpg" width="100%"> 
+<img class="modelingGuideFigure"  src="documentation/modeling/imgs/segmentation/adding_to_group/1.jpg" width="100%"> 
 </figure>
 
 Let’s do another one. Move to position 10. You may already have a segmentation there from ]Section: Copying and Pasting Contours](#modelingCopyingPastingContours). We are going to overwrite it with a level set segmentation. Again, make and modify a level set contour until it represents the image data satisfactorily.
@@ -15,7 +15,7 @@ Let’s do another one. Move to position 10. You may already have a segmentation
 When you are through, click on the “Add Current Position to Group” button, and the number “10” should now appear below the number “0” in your group treeview window (highlighted in blue):
 
 <figure>
-<img  src="documentation/modeling/imgs/segmentation/adding_to_group/2.jpg" width="100%"> 
+<img class="modelingGuideFigure"  src="documentation/modeling/imgs/segmentation/adding_to_group/2.jpg" width="100%"> 
 </figure>
 
 You may now have the idea that creating each segmentation one-by-one would be pretty tedious. In [Section: Creating and Modifying Segmentations in Batches](#modelingBatch), we will learn how to create and modify segmentations by the batch. But first, it is helpful to learn to display our 2D contours in our 3D display window.

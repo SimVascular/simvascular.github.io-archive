@@ -2,7 +2,7 @@
 <br>
 ##Overview##
 
-Typically imaging data is a set of scalar values (e.g. integers ranging from 0 to 4096) defined on a structured 3D grid. Note that this data may be acquired in 2D slices and resampled in some fashion. The most common use for (diagnostic) medical imaging data is for visualization.  For example, a vascular surgeon may acquire image data on a patient suspected of having vascular disease.  Traditionally, most surgeons and radiologists look at sets of 2D slices of image data acquired in a 3D volume.  This requires the person to create a mental image of the patient’s 3D anatomy.  
+Typically imaging data is a set of scalar values (e.g. integers ranging from 0 to 4096) defined on a structured 3D grid. Note that this data may be acquired in 2D slices and resampled in some fashion. The most common use for (diagnostic) medical imaging data is for visualization.  For example, a vascular surgeon may acquire image data on a patient suspected of having vascular disease.  Traditionally, most surgeons and radiologists look at sets of 2D slices of image data acquired in a 3D volume.  This requires the person to create a mental image of the patient’s 3D anatomy.
 
 **SimVascular** has numerous ways to view and interact with medical imaging data.  The first is to visualize slices of image data parallel to the major coordinate axes.  See [Viewing Image Slice Planes](#imagingSlicePlanes). Note that this method is somewhat similar to the way some radiologists visualize data.
 
@@ -21,5 +21,6 @@ Most of the above techniques can be combined inside of SimVascular.  This will b
 The demo data that we will be using throughout the manual are magnetic resonance images of the aorta and the iliac bifurcation, shown below in blue.  You can also see parts of the kidney attached to the renal arteries, which branch off of the aorta.
 
 <figure>
-<img  src="documentation/imaging/imgs/1.jpg" width="100%">
+<img class="imagingGuideFigure" src="documentation/imaging/imgs/1.jpg" width="40%">
 </figure>
+
