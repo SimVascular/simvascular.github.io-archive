@@ -1,0 +1,75 @@
+---
+title: SimVascular Docs
+---
+<!--Nav Bar -->
+<div class="row">
+    <div class="hidden-xs hidden-md col-lg-1">
+    </div>
+    <!-- ONE COLUMN OF SPACE -->
+    <nav class="hidden-xs col-md-3 col-lg-3  bs-docs-sidebar">
+
+      <% if man_name == "QuickGuide" %>
+        <ul id="sidebar" class="nav nav-stacked fixed manQuickGuide"> <%= partial "documentation/userguide_TOC" %></ul>
+      <% end %>
+
+      <% if man_name == "ImageGuide" %>
+        <ul id="sidebar" class="nav nav-stacked fixed manImageGuide"> <%= partial "documentation/imaging_TOC" %></ul>
+      <% end %>
+
+      <% if man_name == "ModelGuide" %>
+        <ul id="sidebar" class="nav nav-stacked fixed manModelGuide"> <%= partial "documentation/modeling_TOC" %></ul>
+      <% end %>
+
+      <% if man_name == "Meshing" %>
+        <ul id="sidebar" class="nav nav-stacked fixed manMeshing">    <%= partial "documentation/meshing_TOC" %></ul>
+      <% end %>
+
+      <% if man_name == "Presolver" %>
+        <ul id="sidebar" class="nav nav-stacked fixed manPresolver">  <%= partial "documentation/presolver_TOC" %></ul>
+      <% end %>
+
+      <% if man_name == "FlowSolver" %>
+        <ul id="sidebar" class="nav nav-stacked fixed manFlowSolver"> <%= partial "documentation/flowsolver_TOC" %></ul>
+      <% end %>
+
+      <% if man_name == "Refs" %>
+        <ul id="sidebar" class="nav nav-stacked fixed manRefs">       <%= partial "documentation/refs_TOC" %></ul>
+      <% end %>
+        
+    </nav>
+    
+    <!--Main Content -->
+    <div class="col-xs-12 col-md-9 col-lg-7" id="manualContent">
+
+      <!-- ACTUAL CONTENT -->
+
+      <% if man_name == "QuickGuide" %>
+        <div class="manQuickGuide"><%= partial "documentation/userguide_content" %></div>
+      <% end %>
+
+      <% if man_name == "ImageGuide" %>
+        <div class="manImageGuide"><%= partial "documentation/imaging_content" %></div>
+      <% end %>
+
+      <% if man_name == "ModelGuide" %>
+        <div class="manModelGuide"><%= partial "documentation/modeling_content" %></div>
+      <% end %>
+
+      <% if man_name == "Meshing" %>
+        <div class="manMeshing">   <%= partial "documentation/meshing_content" %></div>
+      <% end %>
+
+      <% if man_name == "Presolver" %>
+        <div class="manPresolver"> <%= partial "documentation/presolver_content" %></div>
+      <% end %>
+
+      <% if man_name == "FlowSolver" %>
+        <div class="manFlowSolver"><%= partial "documentation/flowsolver_content" %></div>
+      <% end %>
+
+      <% if man_name == "Refs" %>
+        <div class="manRefs">      <%= partial "documentation/refs_content" %></div>
+      <% end %>
+
+    </div>
+</div>    

@@ -15,7 +15,7 @@ set :markdown_engine, :redcarpet
 set :markdown, :fenced_code_blocks => true, :smartypants => true, :tables => true
 
 page "/", :layout => "frontpage"
-page "/docs.html", :layout => "docs"
+page "/docs*.html", :layout => "docs"
 page "/clinical.html", :layout => "clinical"
 
 # Per-page layout changes:
@@ -34,6 +34,10 @@ page "/clinical.html", :layout => "clinical"
 # Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
 # proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
 #  :which_fake_page => "Rendering a fake page with a local variable" }
+
+["QuickGuide", "ImageGuide", "ModelGuide", "Meshing", "Presolver", "FlowSolver", "Refs"].each do |name|
+  proxy "/docs#{name}.html", "/docsTemplate.html", :locals => { :man_name => name }, :ignore => true
+end
 
 ###
 # Helpers

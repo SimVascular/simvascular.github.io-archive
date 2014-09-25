@@ -40,9 +40,10 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">            
                 <ul class="nav navbar-nav">
-                    <li><a href="#" id="btnQuickGuide"><b><span class="glyphicon glyphicon-flash"></span> Quick Guide</b></a></li>
-                    <li><a href="#" id="btnImageGuide"><b><span class="glyphicon glyphicon-eye-open"></span> Viewing Medical Images</b></a></li>
-                    <li><a href="#" id="btnModelGuide"><b><span class="glyphicon glyphicon-road"></span> Model Building</b></a></li>
+                    <li><a href="docsQuickGuide.html" id="btnQuickGuide"><b><span class="glyphicon glyphicon-flash"></span> Quick Guide</b></a></li>
+                    <li><a href="docsImageGuide.html" id="btnImageGuide"><b><span class="glyphicon glyphicon-eye-open"></span> Viewing Medical Images</b></a></li>
+                    <li><a href="docsModelGuide.html" id="btnModelGuide"><b><span class="glyphicon glyphicon-road"></span> Model Building</b></a></li>
+
                     <!-- <li>
                       <a href="#" id="dropdownMenu1" data-toggle="dropdown">
                         <b><span class="glyphicon glyphicon-user"></span> User Guides</b>
@@ -53,10 +54,10 @@
                         <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Model Building</a></li>
                       </ul>
                     </li> -->
-                    <li><a href="#" id="btnMeshing"><b><span class="glyphicon glyphicon-th"></span> Meshing</b></a></li>
-                    <li><a href="#" id="btnPresolver"><b><span class="glyphicon glyphicon-log-in"></span> svPre</b></a></li>
-                    <li><a href="#" id="btnFlowSolver"><b><span class="glyphicon glyphicon-cog"></span> svSolver</b></a></li>
-                    <li><a href="#" id="btnRefs"><b><span class="glyphicon glyphicon-book"></span> Refereces</b></a></li>
+                    <li><a href="docsMeshing.html" id="btnMeshing"><b><span class="glyphicon glyphicon-th"></span> Meshing</b></a></li>
+                    <li><a href="docsPresolver.html" id="btnPresolver"><b><span class="glyphicon glyphicon-log-in"></span> svPre</b></a></li>
+                    <li><a href="docsFlowSolver.html" id="btnFlowSolver"><b><span class="glyphicon glyphicon-cog"></span> svSolver</b></a></li>
+                    <li><a href="docsRefs.html" id="btnRefs"><b><span class="glyphicon glyphicon-book"></span> Refereces</b></a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -95,123 +96,6 @@
         target: '.bs-docs-sidebar',
         offset: 40
       });
-      // DEFAULT-BEHAVIOR
-      $(document).ready(function() {
-        $(".manQuickGuide").show();
-        $(".manImageGuide").hide();
-        $(".manModelGuide").hide();
-        $(".manMeshing").hide();
-        $(".manPresolver").hide();
-        $(".manFlowSolver").hide();
-        $(".manTutorials").hide();    
-        $(".manRefs").hide();    
-        $('body').scrollspy('refresh');
-        var firstLi = $( ".manQuickGuide li" ).first();
-        firstLi.addClass('active').siblings().removeClass('active');
-      });
-      // QUICK-GUIDE
-      $('#btnQuickGuide').on('click', function(event) {
-        $(".manQuickGuide").show();
-        $(".manImageGuide").hide();
-        $(".manModelGuide").hide();
-        $(".manMeshing").hide();
-        $(".manPresolver").hide();
-        $(".manFlowSolver").hide();
-        $(".manTutorials").hide();
-        $(".manRefs").hide();    
-        $('body').scrollspy('refresh');
-        var firstLi = $( ".manQuickGuide li" ).first();
-        firstLi.addClass('active').siblings().removeClass('active');
-      });
-      // IMAGE-GUIDE
-      $('#btnImageGuide').on('click', function(event) {
-        $(".manQuickGuide").hide();
-        $(".manImageGuide").show();
-        $(".manModelGuide").hide();
-        $(".manMeshing").hide();
-        $(".manPresolver").hide();
-        $(".manFlowSolver").hide();
-        $(".manTutorials").hide();
-        $(".manRefs").hide();    
-        $('body').scrollspy('refresh');
-        var firstLi = $( ".manImageGuide li" ).first();
-        firstLi.addClass('active').siblings().removeClass('active');
-      });
-
-
-      // MODELING-GUIDE
-      $('#btnModelGuide').on('click', function(event) {
-        $(".manQuickGuide").hide();
-        $(".manImageGuide").hide();
-        $(".manModelGuide").show();
-        $(".manMeshing").hide();
-        $(".manPresolver").hide();
-        $(".manFlowSolver").hide();
-        $(".manTutorials").hide();
-        $(".manRefs").hide();    
-        $('body').scrollspy('refresh');
-        var firstLi = $( ".manModelGuide li" ).first();
-        firstLi.addClass('active').siblings().removeClass('active');
-      });
-
-
-      // MESHING-GUIDE
-      $('#btnMeshing').on('click', function(event) {
-        $(".manQuickGuide").hide();
-        $(".manImageGuide").hide();
-        $(".manModelGuide").hide();
-        $(".manMeshing").show();
-        $(".manPresolver").hide();
-        $(".manFlowSolver").hide();
-        $(".manTutorials").hide();
-        $(".manRefs").hide();    
-        $('body').scrollspy('refresh');
-        var firstLi = $( ".manMeshing li" ).first();
-        firstLi.addClass('active').siblings().removeClass('active');
-      });
-      // PRESOLVER-GUIDE
-      $('#btnPresolver').on('click', function(event) {
-        $(".manQuickGuide").hide();
-        $(".manImageGuide").hide();
-        $(".manModelGuide").hide();
-        $(".manMeshing").hide();
-        $(".manPresolver").show();
-        $(".manFlowSolver").hide();
-        $(".manTutorials").hide();
-        $(".manRefs").hide();    
-        $('body').scrollspy('refresh');
-        var firstLi = $( ".manPresolver li" ).first();
-        firstLi.addClass('active').siblings().removeClass('active');
-      });
-      // FLOWSOLVER-GUIDE
-      $('#btnFlowSolver').on('click', function(event) {
-        $(".manQuickGuide").hide();
-        $(".manImageGuide").hide();
-        $(".manModelGuide").hide();
-        $(".manMeshing").hide();
-        $(".manPresolver").hide();
-        $(".manFlowSolver").show();
-        $(".manTutorials").hide();
-        $(".manRefs").hide();    
-        $('body').scrollspy('refresh');        
-        var firstLi = $( ".manFlowSolver li" ).first();
-        firstLi.addClass('active').siblings().removeClass('active');
-      });
-      // REFERENCES
-      $('#btnRefs').on('click', function(event) {
-        $(".manQuickGuide").hide();
-        $(".manImageGuide").hide();
-        $(".manModelGuide").hide();
-        $(".manMeshing").hide();
-        $(".manPresolver").hide();
-        $(".manFlowSolver").hide();
-        $(".manTutorials").hide();
-        $(".manRefs").show();    
-        $('body').scrollspy('refresh');
-        var firstLi = $( ".manRefs li" ).first();
-        firstLi.addClass('active').siblings().removeClass('active');
-      }); 
-      
     </script>
 
     <script type="text/javascript"
