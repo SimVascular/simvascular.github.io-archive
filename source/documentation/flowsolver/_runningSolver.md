@@ -2,7 +2,7 @@
 
 At this point we have generated all the files we need for this problem. I recommend now to copy them to a different folder before launching the analysis. You can make a folder called, for instance, _Simulation-files_, and copy the five files there.
 
-At this point you are ready to launch the analysis. For that, you simple have to type:
+At this point you are ready to launch **svSolver**. For that, you simple have to type:
 
 ~~~
 %mpiexec -n 1 mysolver
@@ -17,7 +17,7 @@ restart.0.1 => restart.0.1 , restart.0.2
 
 At the same time, the solver copies all these files to a newly created folder called **2-procs_case/**, and this is where all the output files of the analysis will be written to. In general, if you launch a **n** processor job, all the files will be copied to a **n-procs_case/** folder.
 
-The bottom part of the red box contains general info about the domain size, the number of nodes in the bct.dat file, etc. The important information is what is in the green rectangle. This info is being written to a file called **histor.dat** and it is what you need to use in order to evaluate how well your numerical simulation is doing. Here’s a brief description of what each of those columns means.
+The solver writes a file called **histor.dat** containing details that allows to evaluate how well your numerical simulation is doing. Here’s a brief description of what each of those columns means.
 
 <table class='table borderless' id="solverTable">
 <thead>
@@ -297,31 +297,32 @@ The bottom part of the red box contains general info about the domain size, the 
 </tr>
 </table>
 
-- **a: Time step number** - We see that each time step number appears twice: this is because we are considering two non-linear iterations. This column will go from 1 to the total number of time steps in our problem (in this case, 75). 
+- **a: Time step number** - We see that each time step number appears twice: this is because we are considering two non-linear iterations. This column will go from 1 to the total number of time steps in our problem (in this case, 100). 
 
 - **b: CPU time in seconds** - This is counted since you launched the analysis.
 
 - **c: Measure of the nonlinear residual** - This gives you and idea of how accurate your solution is. Note that for each time step, the second entry is smaller than the first entry. This is a good sign that shows that the nonlinear iteration loop of the solver is doing a good job in improving the solution. You should always aim to a nonlinear residual at the end of the time step of at most $1\times10^{-3}$.
 
-- **d: Logarithm of the residual change** - This provides you a very good way of quickly evaluating how well the solution is doing. If this number is very small and negative, then it is a good sign. An entry with the value -10 means that you have reduced the residual by an order of magnitude from the beginning of the analysis, a -20, by **2 orders of magnitude**, and so on. 
+- **d: Logarithm of the residual change** - This provides you a very good way of quickly evaluating how well the solution is doing. If this number is very small and negative, then it is a good sign. An entry with the value "-10" means that you have reduced the residual by an order of magnitude from the beginning of the analysis, a -20, by **2 orders of magnitude**, and so on. 
 
-- **e: Entropy norm of the residual for the velocity field (max $\Delta u$/ u)**
+- **e: Entropy norm of the residual for the velocity field (max $\Delta u/ u$)**
 
-- **f: entropy norm of the residual for the pressure field (max $\Delta p$/ p)**
+- **f: entropy norm of the residual for the pressure field (max $\Delta p/ p$)**
 
 - **g: < a – b | c>**
-+ a: block where the maximum residual happens (each block has 255 elements).
++ a: block where the maximum residual happens (each block has 255 elements by default).
 + b: node in the block with the maximum error.
 + c: logarithmic measure of the ratio between the maximum residusl and the average residual: want this number to be as small as possible: it will be an
 indicator of the spatial uniformity of the residual.
 
-- [a-b] a: number of Krylov vectors used in the pre-conditioner solver (Conjugate-Gradients for the pressure). b: number of Krylov vectors used in the GMRES solver (for the full pressure-velocity system).
+- **h: [a-b]** 
+- a: number of Krylov vectors used in the pre-conditioner solver. 
+- b: number of Krylov vectors used in the GMRES solver.
 
-Once the analysis is done, you will see the collection of restart files corresponding to the different points in the time you decided to save. The folder will look like this:
+**NOTE** - these numbers are zero when using the default **svLS**.
 
-Ignore the flux.* files for now. The important files here are the histor.dat that contains the info about your simulation explained in the previous paragraph, and of course the different restarts. If you plot the residual at the end of the time step versus the time step (or the physical time, since you know the time step size), you should get a plot like this:
+Once the analysis is done, you will see the collection of restart files corresponding to the different points in the time you decided to save. 
 
-
-This plot shows that the residual stabilizes around time 0.1 seconds (time step 25) and does not change much after that. This behavior is consistent with the steady flow that we are pushing through the cylinder: the problem is starting off from an arbitrary initial condition, and it eventually finds the right solution that satisfies our boundary conditions. Since our boundary conditions are steady, so is the overall solution to our problem. We are now ready to look at the restart files containing the solution. You will read these files in SimVascular/PostSolver to generate the visualization files (*.vis and *.vtu). We explain that process in the following section.
+We are now ready to look at the restart files containing the solution. You will read these files in **svPost** to generate the visualization files. We explain that process in the following section.
 
 

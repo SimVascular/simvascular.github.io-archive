@@ -1,4 +1,4 @@
-## Pre-processing: **svPre**
+## Model Pre-processing
 
 **svPre** is the preprocessor for **svSolver**. The input files to svPre contain a complete description of the discrete model: nodal coordinates, element connectivity, element adjacency information and connectivity of boundary nodes and elements. Running **svPresolver** with an input \*.svpre file with the appropriate commands, generates the input files for **svSolver**.
 
@@ -8,7 +8,7 @@ The **svPresolver** program is called either from the command line (in cygwin fo
 
 Assume we have the triangulated external surface of a cylinder in a \*.stl file format **!!!**, and information about the inflow wave form that we want to prescribe at the model inlet. We also need a solver.inp file that will be described in detail in later sections.
 
-The files for this example can be found **!!!** here. Create an empty folder on your hard drive to unzip the content of the archive. The following files are contained:
+The files for this example can be found **!!! PUT FILES SOMEWHERE** here. Create an empty folder on your hard drive to unzip the content of the archive. The following files are contained:
 
 <table class="table table-bordered">
 <thead>
@@ -33,12 +33,12 @@ The files for this example can be found **!!!** here. Create an empty folder on 
 
 **HINT** - It is advisable that you place all your simulation files in a folder called _cylinder_. **SimVascular** will use this folder name as the default when creating new files. Using a meaningful folder name will make sure that your model files are named consistently. Also store the files containing the inlet flow rates in a folder called _flow-files_. Your problem may have more that one inflow wave form file. In this case, we only have a single flow file (called inflow.flow).
 
-The format of the inflow.flow file is as follows:
+The format of the **inflow.flow** file is as follows:
 
 ~~~
 # Time (sec) Flow (cc/sec)
-0 -1.570
-0.3 -1.570
+0 -15.0
+0.3 -15.0
 ~~~
 
 The first line is a comment line that you don’t need to include, but it helps to remember what units you used in the analysis. Then, two columns of numbers follow. The first column contains time values, and the second column flow values.
@@ -51,9 +51,9 @@ On the other hand, in a situation of back flow,  the numerical value in the \*.f
 
 <img src="documentation/flowsolver/imgs/Fig_05.png" width="40%" align="centre">
 
-In this problem, since we are running a steady case, our physical time goes from 0.0 to 0.2 seconds, and the flow is constant with a value of 1.570 cc/sec.
+In this problem, since we are running a steady case, our physical time goes from 0.0 to 0.2 seconds, and the flow is constant with a value of 15.0 cc/sec.
 
-**HINT**: it is very important that you are absolutely sure about the physical dimensions of your model: every unit (length, time, flow, density, etc.) in your analysis must be dimensionally consistent. You can easily check the size of your model in **Paraview** **!!! LINK** before importing it into **SimVascular**.
+**HINT**: it is very important that you are absolutely sure about the physical dimensions of your model: every unit (length, time, flow, density, etc.) in your analysis must be dimensionally consistent. You can easily check the size of your model in [Paraview](http://www.paraview.org/) before importing it into **SimVascular**.
 
 In this case, our cylinder has a radius $r=2.0$ cm and length $L=30$ cm.
 
@@ -81,7 +81,7 @@ If you click on a single item on the list, you can change the color of a face us
 <img src="documentation/flowsolver/imgs/FacesIdAssigned.png" width="70%">
 
 Before proceeding it is a good idea to save your model. Click on _Save Model_ under the _File Input/Output_ dropdown. 
-Let’s go now to the meshing menu to generate the mesh and the rest of the input files that will be used by **svSolver**. Two meshing engines are currently supported in **SimVascular**, _MeshSim_ and _TetGen_. In this tutorial we will use TetGen to produce a discrete solid mesh of our cylinder from its triangulated exterior. The process of generating a solid mesh with MeshSim is very similar **!!! LINK**. In the _Set maximum tetrahedron edge size_ editbox enter a value of $0.5$ (cm). This will give us approximately 8 finite elements across the diameter of the vessel (recall that the diameter of this cylinder is $D = 2\,r = 4.0$ cm).
+Let’s go now to the meshing menu to generate the mesh and the rest of the input files that will be used by **svSolver**. Two meshing engines are currently supported in **SimVascular**, _MeshSim_ and _TetGen_. In this tutorial we will use TetGen to produce a discrete solid mesh of our cylinder from its triangulated exterior. The process of generating a solid mesh with MeshSim is very similar (see the SimVascular [meshing guide](docsMeshing.html#meshSec2)). In the _Set maximum tetrahedron edge size_ editbox enter a value of $0.5$ (cm). This will give us approximately 8 finite elements across the diameter of the vessel (recall that the diameter of this cylinder is $D = 2\,r = 4.0$ cm).
 
 <img src="documentation/flowsolver/imgs/tetGenOptions.png" width="70%">
 
@@ -96,7 +96,7 @@ Now, click on the _Write Files_ button to generate all the files that **svPresol
 
 These files are:
 
-- **cylinder.stl, cylinder.vtk, cylinder.vtk.facenames**, the original \*.stl, the same model saved in vtk format and the _cylinder.vtk.facenames_ containting the information for the associated boundary surfaces. 
+- **cylinder.stl**, **cylinder.vtk**, **cylinder.vtk.facenames**, the original \*.stl, the same model saved in vtk format and the _cylinder.vtk.facenames_ containting the information for the associated boundary surfaces. 
 
 in the **mesh-complete/** folder: 
 

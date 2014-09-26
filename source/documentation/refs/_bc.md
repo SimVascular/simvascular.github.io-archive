@@ -1,4 +1,4 @@
-### svSolver: Boundary Conditions
+### Boundary Conditions
 
 1. Kim, H.J. and Vignon-Clementel, I.E. and Coogan, J.S. and Figueroa, C.A. and Jansen, K.E. and Taylor, C.A., Patient-specific modeling of blood flow and pressure in human coronary arteries, 38(10):3195-3209, 2010.
 

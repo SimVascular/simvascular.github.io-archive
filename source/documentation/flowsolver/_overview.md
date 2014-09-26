@@ -4,13 +4,13 @@
 
 The following figure contains a schematic representation of the processes involved in running a simulation with **svSolver**.
 
-<img src="documentation/flowsolver/imgs/Fig_01.png" width="70%" align="center">
+<img src="documentation/flowsolver/imgs/Fig_01.png" width="70%">
 
-We start off with the files coming from the solid modeling **!!! LINK** part of the analysis: these files contain nodal and connectivity information for the finite element mesh.
+We start off with the files coming from the [solid modeling](docsModelGuide.html) part of the analysis: these files contain nodal and connectivity information for the finite element mesh.
 
 We then run **svPresolver** using the *.svpre file. The *.svpre file contains the set of instructions that define the boundary conditions, initial conditions, and geometrical configuration of our problem. The output of **svPresolver** is a set of files that are ready to be processed by svSolver to run a blood flow analysis.
 
-Once the analysis is finished, the solver outputs files that characterize the finite element solution over a defined time perior, typically several cardiac cycles. These files are taken by **svPost** to generate visualization files (*.vis or *.vtu files) that are used to post-process and analyze the desired hemodynamic results. 
+Once the analysis is finished, the solver outputs files that characterize the finite element solution over a defined time period, typically several cardiac cycles. These files are taken by **svPost** to generate visualization files (typically *.vtu files) that are used to post-process and analyze the desired hemodynamic results. 
 
 In the following sections the components of this flow chart will be discussed in detail.
 
@@ -64,13 +64,13 @@ systems.
 </tr>
 </thead>
 <tr>
-  <td>Dynamic viscosity μ [M· L -1 · T -1 ]</td>
+  <td>Dynamic viscosity $\mu$ [M· L -1 · T -1 ]</td>
   <td>0.04 poise [gr· cm -1 · s -1 ]</td>
   <td>0.004 [gr· mm -1 · s -1 ]</td>
   <td>0.004 [Pa· s -1 ]</td>
 </tr>
 <tr>
-  <td>Blood density ρ [M· L -3 ]</td>
+  <td>Blood density $\rho$ [M· L -3 ]</td>
   <td>1.06 [gr· cm -3 ]</td>
   <td>0.00106 [gr· mm -3 ] </td>
   <td>1060 [Kg· m -3 ]</td>

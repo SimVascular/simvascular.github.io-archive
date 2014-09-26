@@ -75,24 +75,6 @@ This section discusses the options available in the **solver.inp** file.
   <td>(double double double)</td>
   <td>The vector valued constant body force</td>
 </tr>
-<tr>
-  <td>Body Force Pressure Gradient</td>
-  <td>(0.0 0.0 0.0)</td>
-  <td>(double double double)</td>
-  <td></td>
-</tr>
-<tr>
-  <td>Rotating Frame of Reference</td>
-  <td>(False)</td>
-  <td>False,True</td>
-  <td>Specifies whether the object is subject to a constant rotational speed about a rotation axis</td>
-</tr>
-<tr>
-  <td>Rotating frame of reference rotation rate</td>
-  <td>(0.0 0.0 0.0)</td>
-  <td>(double double double)</td>
-  <td>Specified the vector components of the rotational speed. Note that the rotational origin is always the point at (0.0,0.0,0.0)</td>
-</tr>
 </table>
 
 #### Output Control
@@ -153,21 +135,23 @@ This section discusses the options available in the **solver.inp** file.
   <td>Maximum Number of Iterations for svLS NS Solver</td>
   <td>(1)</td>
   <td>(integer)</td>
-  <td></td>
+  <td>Maximum number of iterations for the full Navier-Stokes solver</td>
 </tr>
 <tr>
   <td>Maximum Number of Iterations for svLS Momentum Loop</td>
   <td>(2)</td>
   <td>(integer)</td>
-  <td></td>
+  <td>Maximum number of iterations for the Momentum equation solver</td>
 </tr>
 <tr>
   <td>Maximum Number of Iterations for svLS Continuity Loop</td>
   <td>(400)</td>
   <td>(integer)</td>
-  <td>DES - CAREFUL FOR DEFORMABLE WALL SIM - USE 10,20,400</td>
+  <td>Maximum number of iterations for the continuity equation solver</td>
 </tr>
 </table>
+
+**WARNING:** For simulations of deformable vessels these defaults may need to be changed to 10,20,400, respectvely. 
 
 #### Discretization Control
 
@@ -193,36 +177,6 @@ This section discusses the options available in the **solver.inp** file.
   <td>Value of $\rho_{\infty}$ for the generalized $\alpha$ method</td>
 </tr>
 <tr>
-  <td>Predictor at Start of Step</td>
-  <td>(Same Velocity)</td>
-  <td></td>
-  <td></td>
-</tr>
-<tr>
-  <td>Flow Advection Form</td>
-  <td>(Convective)</td>
-  <td>Convective,Conservative</td>
-  <td></td>
-</tr>
-<tr>
-  <td>Tau Matrix</td>
-  <td>(Diagonal-Shakib)</td>
-  <td>Diagonal-Shakib,Diagonal-Franca,Diagonal-Jansen(dev),Diagonal-Compressible</td>
-  <td></td>
-</tr>
-<tr>
-  <td>Tau Time Constant</td>
-  <td>(1.0)</td>
-  <td>(double)</td>
-  <td></td>
-</tr>
-<tr>
-  <td>Tau C Scale Factor</td>
-  <td>(1.0)</td>
-  <td>(double)</td>
-  <td></td>
-</tr>
-<tr>
   <td>Quadrature Rule on Interior</td>
   <td>(2)</td>
   <td>1,2,3,4</td>
@@ -238,7 +192,7 @@ This section discusses the options available in the **solver.inp** file.
   <td>Number of Elements Per Block</td>
   <td>(255)</td>
   <td>(integer)</td>
-  <td></td>
+  <td>To improve the efficiency, the elements belonging to each processor are stored in separate groups. The size of these groups can be set by the user through this option</td>
 </tr>
 </table>
 
@@ -275,7 +229,7 @@ This section discusses the options available in the **solver.inp** file.
   <td>Pressure Coupling</td>
   <td>(None)</td>
   <td>None,Explicit,Implicit,P-Implicit</td>
-  <td></td>
+  <td>This line sets the implicit implementation of the <b>Coupled-Multidomain Method</b> in the code.</td>
 </tr>
 <tr>
   <td>Number of Resistance Surfaces</td>
@@ -329,7 +283,7 @@ This section discusses the options available in the **solver.inp** file.
   <td>RCR Values From File</td>
   <td>(False)</td>
   <td>False,True</td>
-  <td></td>
+  <td>Must be set to True to read the impedance information from file</td>
 </tr>
 <tr>
   <td>Number of COR Surfaces</td>
@@ -347,7 +301,7 @@ This section discusses the options available in the **solver.inp** file.
   <td>COR Values From File</td>
   <td>(False)</td>
   <td>False,True</td>
-  <td></td>
+  <td>Must be set to True to read the impedance information from file</td>
 </tr>
 </table>
 
@@ -389,7 +343,104 @@ There are **n** blocks in the file, each defining impedance data for each face. 
 
 #### Format of RCR boundary condition file
 
+RCR boundary conditions are defined through the **rcrt.dat** file using the following format:
+
+~~~
+nptsRCRmax
+...
+...
+numDataRCR_1
+Rp_1
+C_1
+Rd_1
+time_1_1 Pdist_1_1
+... 
+... 
+time_1_numDataRCR Pdist_1_numDataRCR
+...
+...
+numDataRCR_i
+Rp_i
+C_i
+Rd_i
+time_i_1 Pdist_i_1
+... 
+... 
+time_i_numDataRCR Pdist_i_numDataRCR
+~~~
+
+The first quantity **nptsRCRmax** defines the maximum number of time points for the curves defined at each outlet.
+This quantity is followed by one block for each outlet, containing **numDataRCR_i**, i.e., the number of time point for RCR outlet i.
+The three values **Rp_i**, **C_i**, **Rd_i** are defined for the proximal resistance, compliance and distal vessel resistance, respectively.
+A time series follows, defining the evolution in time of the reference pressure at the distal end of the RCR block.
+
 #### Format of COR boundary condition file
+
+Coronary boundary conditions are defined through the **cort.dat** file using the following format
+
+~~~
+nptsCORmax
+...
+...
+numDataCOR_1
+q0_1
+q1_1
+q2_1
+p0_1
+p1_1
+p2_1
+b0_1(=0)
+b1_1
+b2_1(=0)
+time_1_1 Plv_1_1 (/Prv_1_1)
+... 
+... 
+time_1_numDataCOR Plv_1_numDataCOR
+...
+...
+...
+numDataCOR_i
+q0_i
+q1_i
+q2_i
+p0_i
+p1_i
+p2_i
+b0_i(=0)
+b1_i
+b2_i(=0)
+time_i_1 Plv_i_1 (/Prv_i_1)
+... 
+... 
+time_i_numDataCOR Plv_i_numDataCOR
+~~~
+
+The first quantity **nptsCORmax** defines the maximum number of time points for the curves defined at each outlet defining the ventricular pressures.
+This quantity is followed by one block for each outlet, containing **numDataCOR_i**, i.e., the number of time point for Coronary outlet i.
+Nine constants need also to be defined for each coronary outlet, i.e., $q\_0$, $q\_1$, $q\_2$, $p\_0$, $p\_1$, $p\_2$, $b\_0$, $b\_1$, $b\_2$.
+The physical meaning of these constants is related to the resistances and capacitances used to simulated each coronary outlet, as shown in the picture below:
+
+<img src="documentation/flowsolver/imgs/CorBC.png" width="50%">
+
+The following expressions are used in [this paper]() **!!! LINK**
+
+$$
+p\_0 = 1,\quad
+p\_1 = R\_{a-micro}C\_a + (R\_v + R\_{v-micro})(C\_a + C\_{im}),\quad
+p\_2 = C\_{a}\,C\_{im}\,R\_{a-micro}(R\_v + R\_{v-micro}).
+$$
+
+$$
+q\_0 = R\_{a} + R\_{a-micro} + R\_{v} + R\_{v-micro},\quad
+q\_1 = R\_{a}C\_{a}(R\_{a-micro} + R\_{v} + R\_{v-micro}) + C\_{im}(R\_{a} + R\_{a-micro})(R\_{v} + R\_{v-micro}).
+$$
+
+$$
+q\_2 = C\_{a}C\_{im}R\_{a}R\_{a-micro}(R\_v + R\_{v-micro}),\quad
+b\_0 = 0,\quad
+b\_1 = C\_{im}(R\_v + R\_{v-micro}),\quad
+b\_2 = 0.
+$$
 
 #### Backflow Control
 
@@ -406,25 +457,25 @@ There are **n** blocks in the file, each defining impedance data for each face. 
   <td>Backflow Stabilization Coefficient</td>
   <td>(0.2)</td>
   <td>(double in [0,1])</td>
-  <td></td>
+  <td>Backflow stabilization coefficient. For the definition of these coefficient, see the [following publications]() **!!! LINK**</td>
 </tr>
 <tr>
-  <td>Number of Surfaces which zero out in-plane tractions</td>
+  <td>Number of Surfaces with zero in-plane tractions</td>
   <td>(0)</td>
   <td>(integer)</td>
-  <td></td>
+  <td>Number of surfaces with prescribed zero in-plane tractions.</td>
 </tr>
 <tr>
-  <td>List of Surfaces which zero out in-plane tractions</td>
+  <td>List of Surfaces with zero in-plane tractions</td>
   <td>NO DEFAULT</td>
   <td>(space-separated integer list)</td>
-  <td></td>
+  <td>List of surfaces with zero in-plane tractions. This list should adopt the same numbering strategy defined in the svPre input file</td>
 </tr>
 <tr>
   <td>Lagrange Multipliers</td>
   <td>(False)</td>
   <td>False,True</td>
-  <td></td>
+  <td>Activate/deactivate Lagrange multipliers</td>
 </tr>
 <tr>
   <td>Number of Constrained Surfaces</td>
@@ -436,13 +487,13 @@ There are **n** blocks in the file, each defining impedance data for each face. 
   <td>List of Constrained Surfaces</td>
   <td>NO DEFAULT</td>
   <td>(space-separated integer list)</td>
-  <td></td>
+  <td>List of surfaces with applied Lagrange multipliers. This list should adopt the same numbering strategy defined in the svPre input file</td>
 </tr>
 <tr>
   <td>Constrained Surface Information From File</td>
   <td>(False)</td>
   <td>False,True</td>
-  <td></td>
+  <td>This flag needs to be set to true if a file is available with the information on how to set Lagrange multipliers at selected outlets</td>
 </tr>
 </table>
 
@@ -461,37 +512,37 @@ There are **n** blocks in the file, each defining impedance data for each face. 
   <td>Find the GenBC Inside the Running Directory</td>
   <td>(True)</td>
   <td>False,True</td>
-  <td></td>
+  <td>Look for a GenBC executable inside the current simulation folder. This executable implements a 0D lumped circulation model providing the boundary conditions to the 3D Finite Element solver</td>
 </tr>
 <tr>
   <td>Number of Timesteps for GenBC Initialization</td>
   <td>(0)</td>
   <td>(integer)</td>
-  <td></td>
+  <td>This defines the number of steps to be performed before activation the the closed-loop boundary conditions. For timesteps smaller than this value, the GenBC application will provide fixed boundary pressures at each outlet equal to the initial values provided by the user.</td>
 </tr>
 <tr>
   <td>Number of Dirichlet Surfaces</td>
   <td>(0)</td>
   <td>(integer)</td>
-  <td></td>
+  <td>This is the total number of surfaces where the 3D model exchanges Pressure information with the 0D lumped parameter network model. For details the reader should read [this publication]() **!!! LINK**</td>
 </tr>
 <tr>
   <td>List of Dirichlet Surfaces</td>
   <td>NO DEFAULT</td>
   <td>(space-separated integer list)</td>
-  <td></td>
+  <td>This is the list of surface IDs where the 3D model exchanges pressure information with the 0D lumped parameter network model</td>
 </tr>
 <tr>
   <td>Number of Neumann Surfaces</td>
   <td>(0)</td>
   <td>(integer)</td>
-  <td></td>
+  <td>This is the total number of surfaces where the 3D model exchanges flow rate information with the 0D lumped parameter network model. For details the reader should read [this publication]() **!!! LINK**</td>
 </tr>
 <tr>
   <td>List of Neumann Surfaces</td>
   <td>NO DEFAULT</td>
   <td>(space-separated integer list)</td>
-  <td></td>
+  <td>This is the list of surface IDs where the 3D model exchanges flow rate information with the 0D lumped parameter network model</td>
 </tr>
 </table>
 
@@ -510,25 +561,25 @@ There are **n** blocks in the file, each defining impedance data for each face. 
   <td>Residual Control</td>
   <td>(True)</td>
   <td>False,True</td>
-  <td></td>
+  <td>Activates the possibility of adjusting the number of iterations based on the value of the residual norm at the current iteration</td>
 </tr>
 <tr>
   <td>Residual Criteria</td>
   <td>(0.01)</td>
   <td>(double)</td>
-  <td></td>
+  <td>Lower bound on the residual norm that triggers convergence. In other words, if the residual norm is lower than this value the solver will consider the current time step converged and continue to the next step</td>
 </tr>
 <tr>
   <td>Minimum Required Iterations</td>
   <td>(3)</td>
   <td>(integer)</td>
-  <td></td>
+  <td>This are the number of iterations that are performed independently on the value of the residual norm in the current time step</td>
 </tr>
 <tr>
   <td>Step Construction</td>
   <td>(0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1)</td>
-  <td>(Sequence of )</td>
-  <td></td>
+  <td>(Sequence of 0 and 1)</td>
+  <td>Non linear iteration sequence. The 0 tells the solver to make a solve, the 1 to make an update of the solution. For example, a ten iterations solution is specified as default as a sequence of solve/update operations</td>
 </tr>
 </table>
 
@@ -547,61 +598,61 @@ There are **n** blocks in the file, each defining impedance data for each face. 
   <td>Deformable Wall</td>
   <td>(False)</td>
   <td>False,True</td>
-  <td></td>
+  <td>Activates/deactivates the deformability of vessel walls using the coupled-momentum method **LINK**</td>
 </tr>
 <tr>
   <td>Number of Wall Properties per Node</td>
   <td>(10)</td>
   <td>10,21</td>
-  <td>nProps=10: Isotropic, nProps=21: Orthotropic</td>
+  <td>Defines the material model for the vessel wall. Option "10" (default option) means that an isotropic material model needs to be used. Option "21" means that an orthotropic material model needs to be used</td>
 </tr>
 <tr>
   <td>Density of Vessel Wall</td>
   <td>NO DEFAULT</td>
   <td>(double)</td>
-  <td></td>
+  <td>Mass density of the vessel wall material</td>
 </tr>
 <tr>
   <td>Thickness of Vessel Wall</td>
   <td>NO DEFAULT</td>
   <td>(double)</td>
-  <td></td>
+  <td>Uniform thinkness of the vessel wall material</td>
 </tr>
 <tr>
   <td>Young Mod of Vessel Wall</td>
   <td>NO DEFAULT</td>
   <td>(double)</td>
-  <td></td>
+  <td>Uniform elastic modulus for the vessel walls</td>
 </tr>
 <tr>
   <td>Poisson Ratio of Vessel Wall</td>
   <td>(0.5)</td>
   <td>(double in [0.0,0.5])</td>
-  <td></td>
+  <td>Uniform Poisson ratio for the vessel walls</td>
 </tr>
 <tr>
   <td>Shear Constant of Vessel Wall</td>
   <td>NO DEFAULT</td>
   <td>(double in [0.0,0.5])</td>
-  <td></td>
+  <td>Uniform Shear constant for the vessel walls</td>
 </tr>
 <tr>
   <td>Wall Mass Matrix for LHS</td>
   <td>(True)</td>
   <td>False,True</td>
-  <td></td>
+  <td>Assembles the contribution of the wall mass matrix in the global LHS matrix</td>
 </tr>
 <tr>
   <td>Wall Stiffness Matrix for LHS</td>
   <td>(True)</td>
   <td>False,True</td>
-  <td></td>
+  <td>Assembles the contribution of the wall stiffness matrix in the global LHS matrix</td>
 </tr>
 <tr>
   <td>Variable Wall Thickness and Young Mod</td>
   <td>(True)</td>
   <td>False,True</td>
-  <td></td>
+  <td>Activates/deactivates the possibility of specifying a variable thickness/elastic modulus for the vessel wall material</td>
 </tr>
 </table>
   
