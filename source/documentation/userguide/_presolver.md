@@ -5,7 +5,7 @@ We continue to create other required input files for simulation.
 	Tab: Simulations  → Create 3-D Solver Files
 	Click “Create File” to output numstart.dat in the project folder.
 
-Manually write presolver script file demo.cvpre in the text area:
+Manually write presolver script file *demo.cvpre* in the text area:
 
 	mesh_and_adjncy_vtu mesh-complete/mesh-complete.mesh.vtu
 	noslip_vtp mesh-complete/walls_combined.vtp

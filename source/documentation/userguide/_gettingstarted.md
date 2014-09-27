@@ -7,7 +7,7 @@ When you first launch **SimVascular**, you will see the following windows:backgr
 <figure>
 <img class="userGuideFigure"  src="documentation/userguide/imgs/getting_started/1.jpg" width="60%"> 
 </figure>
-
+<br>
 <figure>
 <img class="userGuideFigure"  src="documentation/userguide/imgs/getting_started/2.jpg" width="60%"> 
 </figure>

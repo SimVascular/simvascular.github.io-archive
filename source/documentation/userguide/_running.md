@@ -43,6 +43,6 @@ Convert the simulation files to .vtu files, which we can use to show the results
 <img class="userGuideFigure"  src="documentation/userguide/imgs/simulation/convertingtovtu.jpg" width="70%"> 
 </figure>
 
-Since it is a steady case, only the last time step is needed. The output file steady.vtu is created in the folder *simulation*.
+Since it is a steady case, only the last time step is needed. The output file *steady.vtu* is created in the folder *simulation*.
 
 <font color="red">**HELPFUL HINT:** </font>   You can check more details on [using SimVascualr/Solver for simulation in the svSolver Guide](docsFlowSolver.html).  

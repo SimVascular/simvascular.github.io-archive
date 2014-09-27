@@ -7,6 +7,7 @@ The demo data we are using are magnetic resonance images of the aorta and the il
 <figure>
 <img class="userGuideFigure"  src="documentation/userguide/imgs/imaging/1.jpg" width="40%"> 
 </figure>
+<br>
 
 	Menu: File → Load Image (VTI)
 	Choose the file: sample_data/image_data/vti/sample_data-cm.vti, and click “Open.” 
