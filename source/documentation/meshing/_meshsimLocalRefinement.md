@@ -4,33 +4,31 @@ Often, a designer may have insight into locations of interest or regions of comp
 
 Go to the "Model" tab. Click on the "File Input/Output" drop-down menu and select "Read model." Select the same model that you previously selected for meshing. You should now see your solid model in the 3D window. Click on the first FaceId and continue down the list by clicking on subsequent Face Ids. Look at the "surf_name:" entry for each Face Id to remind yourself of the names that you gave each face.  Once you have reviewed the model faces you can change the "Solid Model Object:" to "None" and return to the "Meshing" tab.
 
-We will now specify increased mesh density on the inflow and outflow faces.  Under the "Meshing" tab, go to the "Advanced Mesh Options" tab. Click on the "SETUP" button. This will update your "Face Name:" drop-down menu options. You will need to click this button anytime you make changes to the model (face name changes, blending, etc.). 
+We will now specify increased mesh density on the inflow and outflow faces.  Under the "Meshing" tab,
 
 First, we will specify the mesh density for the inflow face:
 
-1.	Under the "Global/Local Size and Curvature Mesh Parameters" header make sure that the "Type:" is set as "absolute" and the "Create Mesh Macro:" is set as "Local Max Edge Size." 
-2.	Select the desired face names from the "Face Name:" drop-down menu. In this case, we use "Inflow","R_ext_iliac", and "L_ext_iliac".
+1.	Under the "Global/Local Size and Curvature Mesh Parameters" header make sure that the "Size Type:" is set as "absolute" and the "Type:" is set as "Local Max Edge Size." 
+2.	Select the desired face in the 3D viewing window by pressing "p". In this case, we use "Inflow".
 3.	Set the desired size n the "Size" entry box. In this case, we apply a local edge size 0f "0.05". 
-4.	Click on the “Create Size/Curvature Macro” button. 
+4.	Click on the "Add Face Meshing" button. 
 
 At the bottom of the "Advanced Mesh Options" tab check the "Display currently selected meshing parameters" box. The "Current List of Specified Meshing Parameters" should now appear. In this case, ours displays "size inflow absolute 0.05". Note that you can edit the text in the "Current List of Specified meshing Parameters" box. This may be useful if you decide you don’t like the meshing you specified and want to delete the previous refinement text and generate a new one. You can also edit the refinement text directly on that box. 
 
 <figure>
-<img class="meshGuideFigure" src="documentation/meshing/img/MeshSim_Local_Refinement_Options_1.png" width="60%">
+<img class="meshGuideFigure" src="documentation/meshing/img/MeshSim_Local_Refinement_Options_1.png" width="90%">
 </figure>
 
-We will now repeat this process for the outflow face, specifying a different mesh density:
+We will now repeat this process for the outflow faces, specifying a different mesh density:
 
-1.	Under the "Global/local Size and Curvature Mesh Parameters" change the face name to another face name by selecting it from the "Face Name:" drop-down menu.
+1.	Under the "local Size and Curvature Mesh Parameters" change the face name to another face name by selecting it in the viewing window with "p".
 2.	Set the desired size for this face. 
-3.	Click on the “Create Size/Curvature Macro” button. 
-4.	The “Current List of Specified Meshing Parameters” should now ALSO show the text “size outflow_aorta_test absolute 0.5.”
+3.	Click on the "Add Face Meshing" button. 
+4.	The "Meshing Parameters" should now ALSO show the text "R_ext_iliac absolute 0.5" and "L_ext_iliac 0.5".
 
 <figure>
-<img class="meshGuideFigure" src="documentation/meshing/img/MeshSim_Local_Refinement_Options_2.png" width="60%">
+<img class="meshGuideFigure" src="documentation/meshing/img/MeshSim_Local_Refinement_Options_2.png" width="90%">
 </figure>
-
-At the top of the "Advanced Mesh Options" tab click on the "SAVE OPTIONS" button. You will need to click on the "SAVE OPTIONS" button anytime the text on the "Current List of Specified Meshing Parameters" changes. 
 
 Now we will generate the mesh for the model that includes the refined mesh specifications:
 
@@ -48,6 +46,6 @@ If you don’t already see the exterior surface mesh you just created, in the 3D
 If you zoom in on the inflow face, you will see that the triangulation for that face is more refined than the rest of the vessel mesh as shown below: 
 
 <figure>
-<img class="meshGuideFigure" src="documentation/meshing/img/MeshSim_LocalRefinement.png" width="60%">
+<img class="meshGuideFigure" src="documentation/meshing/img/MeshSim_LocalRefinement.png" width="90%">
 </figure>
 
