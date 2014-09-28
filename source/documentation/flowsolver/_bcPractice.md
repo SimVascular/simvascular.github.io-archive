@@ -9,7 +9,10 @@ First we need to create a file called **bct.dat** that specifies the boundary co
 
 In the **SimVascular** GUI window, go to the _Inflow BC_ subtab under _Simulations_. You will have to enter the following values in the various boxes/buttons of the GUI (see figure below):
 
-<img src="documentation/flowsolver/imgs/BCT_Creation.png" width="70%">
+<figure>
+  <img class="svSolverImg" src="documentation/flowsolver/imgs/BCT_Creation.png" width="70%">
+  <figcaption class="svSolverCaption" >Creating a <b>bct.dat</b> file through the GUI</figcaption>
+</figure>
 
 - Under **Analytic Shape of Profile**, select the **parabolic** radio button. This options allows a parabolic velocity profile to be applied at the inlet. Other oprions are **plug**, which applies a constant velocity profile throughout the inlet face and Womerseley, that uses a closed form solution for the velocity profile of pulsatile flow in arteries. 
 
@@ -19,7 +22,7 @@ In the **SimVascular** GUI window, go to the _Inflow BC_ subtab under _Simulatio
 
 Under the **Parameters** menu, enter the following values:
 
-- **Period**: $0.2$ sec. For a steady flow problem like ours, the concept of _period_ is somewhat vague. In this case, $0.2$ means the amount of physical time that we are going to run our simulation for.
+- **Period**: $20.0$ sec. For a steady flow problem like ours, the concept of _period_ is somewhat vague. In this case, $20.0$ means the amount of physical time that we are going to run our simulation for.
 
 - **viscosity**: $0.04$ Poise (gr/cm/s).
 
@@ -68,13 +71,19 @@ Each block of data has, for each of the $n\_p = 220$ spatial points, the followi
 
 A vtp file can be written using this option to graphically visualize the velocity distribution at the inlet surface with Paraview, as shown in the picture below.
 
-<img src="documentation/flowsolver/imgs/BCT_Cration_VTP.png" width="50%">
+<figure>
+  <img class="svSolverImg" src="documentation/flowsolver/imgs/BCT_Cration_VTP.png" width="50%">
+  <figcaption class="svSolverCaption" >Visualizing the inlet velocity profile in Paraview</figcaption>
+</figure>
 
 ### Processing the \*.svpre file
 
 To process the \*.svpre file, entering the appropriate commands to define the boundary conditions of this problem, we go to the _Simulations->Create 3-D Solver Files_ tab. In the “Create PreSolver script file” menu (see figure  below), make sure that the right \*.supre file is loaded in the box (in this case, it should be cylinder-steady.supre . Click on the “Load PreSolver scriptfile” button. The following screen will appear:
 
-<img src="documentation/flowsolver/imgs/SVPre_File.png" width="70%">
+<figure>
+  <img class="svSolverImg" src="documentation/flowsolver/imgs/SVPre_File.png" width="70%">
+  <figcaption class="svSolverCaption" >Running <b>svPre</b> through the GUI</figcaption>
+</figure>
 
 The contents of the \*.supre script file are:
 
@@ -154,7 +163,7 @@ The following command is used to assign an ID to all model surfaces.
 set_surface_id_vtp cylinder.exterior.vtp 1
 ~~~
 
-**HINT**: This line tags all the exterior faces in the model with an identifier (a Suface ID) , in this case, the number one. We will use it later on to calculate the wall shear stress on all the exterior faces of the model **!!! MAKE SURE**. 
+**HINT**: This line tags all the exterior faces in the model with an identifier (a Suface ID) , in this case, the number one. 
 We also need to introduce a new command if we want to activate the resistance boundary condition at the outlet face. We had previously determined that a resistance equal to $R = 8888.0$ dynes$\,$s/cm$^5$ needs to be applied at that outlet. 
 
 In order to do this, we need to assign a Surface ID that will help us later to identify the face and assign the correct resistance value. This is a trivial case, because we only have one single outflow face, and therefore one single resistance. But imagine one case where many more are needed. In this case, it is very important to meticulously label all the outlet faces with a meaningful name, and to make a sketch that helps you remember the list of Surface IDs that you considered in the model. Each surface ID will have a corresponding Resistance value (or impedance function, or set of RCR parameters etc.).

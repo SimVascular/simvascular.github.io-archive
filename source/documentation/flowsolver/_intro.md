@@ -5,9 +5,9 @@
 
 The **svSolver** evolved from the academic finite element code PHASTA (Parallel, Hierarchical, Adaptive, Stabilized, Transient Analysis), developed mainly at RPI (Rensselaer Polytechnic Institute, Troy, NY) by Professor Kenneth Jansen. This code was in turned inspired by the Stabilized Finite Element theory developed by Professor Thomas J.R. Hughes during his Stanford years. The main features of the original PHASTA code are: 
 
-- **Parallel**: using the MPI communication protocol (Message Passing Interface), the code is able to run analysis on multiple processors, either on Shared-Memory supercomputers, computer clusters, workstations, or regular PC desktops. The scalability **!!! PUB-LINK** of the code (i.e., the ability to make use of a large number of processors without significant losses in efficiency) has been proven up to several thousand processors.
+- **Parallel**: using the MPI communication protocol (Message Passing Interface), the code is able to run analysis on multiple processors, either on Shared-Memory supercomputers, computer clusters, workstations, or regular PC desktops. The [scalability](docsRefs.html#refSec1) of the code (i.e., the ability to make use of a large number of processors without significant losses in efficiency) has been proven up to several thousand processors.
 
-- **Adaptive**: the code has mesh-adaptivity capabilities **!!! PUB-LINK** that make possible to generate highly anisotropic finite element meshes based on an error field computed from the finite element solution. Having mesh adaptation tools is a really important feature, since it helps to improve the quality of the numerical solution while keeping the finite element mesh size “under control”.
+- **Adaptive**: the code has [mesh-adaptivity capabilities](docsRefs.html#refSec4) that make possible to generate highly anisotropic finite element meshes based on an error field computed from the finite element solution. Having mesh adaptation tools is a really important feature, since it helps to improve the quality of the numerical solution while keeping the finite element mesh size “under control”.
 
 - **Stabilized**: the code uses a Stabilized finite element formulation (more  specifically, a SUPG formulation: Streamline-Upwind Petrov-Galerkin) that allows for equal-order interpolation of the pressure and velocity fields, while maintaining numerical stability in both the diffusive and advective-dominated limits.
 
@@ -18,11 +18,11 @@ Building on the original PHASTA code, there have been a number of important addi
 ### What's New?
 Building on the above features, the Marsden lab at UCSD has added additional key functionality enabling efficient and stable solutions with models of the circulatory physiology:
 
-- **Backflow stabilization.** **!!! PUB-LINK** This problem usually arises in large vessels that are exposed to backflow in 3D and 2D flow simulations. This phenomenon may be a cause of divergence of the numerical scheme due to bulk reversal of the flow through an outlet, localized areas of flow reversal or use of a boundary 0D circulation model. 
+- [**Backflow stabilization.**](docsRefs.html#refSec2) This problem usually arises in large vessels that are exposed to backflow in 3D and 2D flow simulations. This phenomenon may be a cause of divergence of the numerical scheme due to bulk reversal of the flow through an outlet, localized areas of flow reversal or use of a boundary 0D circulation model. 
 
-- Custom and efficient **linear solver.** **!!! PUB-LINK** Accurate simulation of blood flow in vessels require the repeated solution of linear systems of equations with millions of unknowns. Moreover, use of closed-loop boundary models significantly increases the degree of coupling between boundary degrees of freedoms. The **svLS** linear solver is designed to efficiently handle large cardiovascular simulations with arbitrary boundary conditions and reduce solution times. 
+- Custom and efficient [**linear solver.**](docsRefs.html#refSec3) Accurate simulation of blood flow in vessels require the repeated solution of linear systems of equations with millions of unknowns. Moreover, use of closed-loop boundary models significantly increases the degree of coupling between boundary degrees of freedoms. The **svLS** linear solver is designed to efficiently handle large cardiovascular simulations with arbitrary boundary conditions and reduce solution times. 
 
-- Multiscale Coupling for **closed loop boundary conditions.** **!!! PUB-LINK** Coupling a three-dimensional finite element solver with a 0D lumped circulation model drastically improves the possibility of realistically simulate patient-specific hemodynamics and phisiology.
+- Multiscale Coupling for [**closed loop boundary conditions.**](docsRefs.html#refSec2)  Coupling a three-dimensional finite element solver with a 0D lumped circulation model drastically improves the possibility of realistically simulate patient-specific hemodynamics and phisiology.
 
 ### About this guide
 

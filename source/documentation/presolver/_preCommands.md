@@ -1,4 +1,6 @@
-This sections lists the available svPre commands and explains their usage.
+## svPre Commands
+
+This sections lists the available **svPre** commands, the associated parameters and what they do. 
 
 ### General commands
 

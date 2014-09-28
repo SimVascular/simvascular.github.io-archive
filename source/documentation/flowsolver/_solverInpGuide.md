@@ -420,9 +420,12 @@ This quantity is followed by one block for each outlet, containing **numDataCOR_
 Nine constants need also to be defined for each coronary outlet, i.e., $q\_0$, $q\_1$, $q\_2$, $p\_0$, $p\_1$, $p\_2$, $b\_0$, $b\_1$, $b\_2$.
 The physical meaning of these constants is related to the resistances and capacitances used to simulated each coronary outlet, as shown in the picture below:
 
-<img src="documentation/flowsolver/imgs/CorBC.png" width="50%">
+<figure>
+  <img class="svSolverImg" src="documentation/flowsolver/imgs/CorBC.png" width="50%">
+  <figcaption class="svSolverCaption" >Circuit visualization for coronary boundary condition</figcaption>
+</figure>
 
-The following expressions are used in [this paper]() **!!! LINK**
+The following expressions are used in [this paper](docsRefs.html#refSec2).
 
 $$
 p\_0 = 1,\quad
@@ -457,7 +460,7 @@ $$
   <td>Backflow Stabilization Coefficient</td>
   <td>(0.2)</td>
   <td>(double in [0,1])</td>
-  <td>Backflow stabilization coefficient. For the definition of these coefficient, see the [following publications]() **!!! LINK**</td>
+  <td>Backflow stabilization coefficient. For the definition of these coefficient, see the [following publications](docsRefs.html#refSec2)</td>
 </tr>
 <tr>
   <td>Number of Surfaces with zero in-plane tractions</td>
@@ -524,7 +527,7 @@ $$
   <td>Number of Dirichlet Surfaces</td>
   <td>(0)</td>
   <td>(integer)</td>
-  <td>This is the total number of surfaces where the 3D model exchanges Pressure information with the 0D lumped parameter network model. For details the reader should read [this publication]() **!!! LINK**</td>
+  <td>This is the total number of surfaces where the 3D model exchanges Pressure information with the 0D lumped parameter network model. For details the reader should read [this publication](docsRefs.html#refSec2)</td>
 </tr>
 <tr>
   <td>List of Dirichlet Surfaces</td>
@@ -536,7 +539,7 @@ $$
   <td>Number of Neumann Surfaces</td>
   <td>(0)</td>
   <td>(integer)</td>
-  <td>This is the total number of surfaces where the 3D model exchanges flow rate information with the 0D lumped parameter network model. For details the reader should read [this publication]() **!!! LINK**</td>
+  <td>This is the total number of surfaces where the 3D model exchanges flow rate information with the 0D lumped parameter network model. For details the reader should read [this publication](docsRefs.html#refSec2)</td>
 </tr>
 <tr>
   <td>List of Neumann Surfaces</td>

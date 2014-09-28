@@ -4,7 +4,10 @@
 
 The following figure contains a schematic representation of the processes involved in running a simulation with **svSolver**.
 
-<img src="documentation/flowsolver/imgs/Fig_01.png" width="70%">
+<figure>
+  <img class="svSolverImg" src="documentation/flowsolver/imgs/Fig_01.png" width="70%">
+  <figcaption class="svSolverCaption" >Workflow for generating hemodynamic results of a cylindrical model starting from a stereolithography of its exterior surface</figcaption>
+</figure>
 
 We start off with the files coming from the [solid modeling](docsModelGuide.html) part of the analysis: these files contain nodal and connectivity information for the finite element mesh.
 

@@ -14,7 +14,7 @@ The main goal of this section is to define the file we are missing to run the an
 # ================
 Equation of State: Incompressible
 Number of Timesteps: 100
-Time Step Size: 0.003
+Time Step Size: 0.2
 
 # ===================
 # MATERIAL PROPERTIES
@@ -75,13 +75,13 @@ In this block, the different commands are:
 
 1. **Equation of State: Incompressible** - Here, we are telling the solver that it has to solve the **INCOMPRESSIBLE** Navier-Stokes equations. You should not change this line. If you simply don't include this line the incompressible NS solver will be used as defualt.
 
-2. **Number of Timesteps: 100** and **Time Step Size: 0.003** - These two lines control the amount of physical time that you run your problem for. In this case,
+2. **Number of Timesteps: 100** and **Time Step Size: 0.2** - These two lines control the amount of physical time that you run your problem for. In this case,
 
 $$
-\text{Total physical time} = \text{N. time steps} \times \text{Time Step Size} = T = N \times \Delta t = 100 \times 0.003 = 0.3\,\text{sec}
+\text{Total physical time} = \text{N. time steps} \times \text{Time Step Size} = T = N \times \Delta t = 100 \times 0.2 = 20.0\,\text{sec}
 $$
 
-Note that this matches the **period** options we specified to generate the **bct.dat**. In this case, like we mentioned before, it does not really make sense to talk about a _cardiac cycle_ (this is a steady flow), but if we wanted to run this analysis for _two_ cardiac cycles, we would have to run the problem for $0.6$ seconds of physical time. If we kept our choice of time step size the same ( $\Delta t = 0.003$ sec), we will need a total number of time steps of $N = 200$.
+Note that this matches the **period** options we specified to generate the **bct.dat**. In this case, like we mentioned before, it does not really make sense to talk about a _cardiac cycle_ (this is a steady flow), but if we wanted to run this analysis for _two_ cardiac cycles, we would have to run the problem for $40.0$ seconds of physical time. If we kept our choice of time step size the same ( $\Delta t = 0.2$ sec), we will need a total number of time steps of $N = 200$.
 
 **WARNING**: Note that this $N$ is the total number of time steps you need in your numerical simulation to model a certain physical time, given a prescribed $\Delta t$. This is not to be confused with the previous number of time steps you used to generate the bct.dat!
 
@@ -94,7 +94,7 @@ $$
 We want this **CFL** number to be around $1.0$. This will mean that, for the velocities present in our fluid domain, the temporal and spatial discretizations are _balanced_. In our problem, it can be shown that the average expected velocity is about $v = 2.4$ cm/s; the spatial discretization parameter or finite element size is $h = 0.5$. Therefore, if we shoot for a CFL number close to one, we have:
 
 $$
-\Delta t = \frac{h}{v} = \frac{0.5}{2.4} = 0.2 **!!! CHECK**
+\Delta t = \frac{h}{v} = \frac{0.5}{2.4} = 0.2
 $$
 
 Of course, you can imagine that in a real-world problem things are way more complicated to evaluate: it will be much harder to estimate where your model will have the largest velocities, what the mesh element size will be there, etc. The time step size $\Delta t$ is a parameter that will have a very important impact on the performance of the linear solver of equations. The smaller you make it, the _easier_ you will be for the solver to find a solution, but the longer it will take you to reach a certain point in time.
@@ -107,7 +107,7 @@ This block contains the values for density and dynamic viscosity of blood: nothi
 
 In this block, the meaning of each command is:
 
-1. **Number of Timesteps between Restarts: 5** - This line tells the solver how often it should save solution files. In this problem, you are really calculating $100$ solutions to the problem at $100$ different time points, but in general you do not want to save a solution file for every single time step. Keep in mind that two consecutive solutions are only $\Delta t = 0.003$ seconds apart! In this line, we are asking the solver to save every other $5$ files. Therefore, the output files of the solver will look like this: restart.0.\*, restart.5.\*, restart.10.\*, restart.15.\*, ...., restart.70.\*, restart.75.\*
+1. **Number of Timesteps between Restarts: 5** - This line tells the solver how often it should save solution files. In this problem, you are really calculating $100$ solutions to the problem at $100$ different time points, but in general you do not want to save a solution file for every single time step. Keep in mind that two consecutive solutions are only $\Delta t = 0.2$ seconds apart! In this line, we are asking the solver to save every other $5$ files. Therefore, the output files of the solver will look like this: restart.0.\*, restart.5.\*, restart.10.\*, restart.15.\*, ...., restart.70.\*, restart.75.\*
 
 2. **Print ybar: True** - This line tells the solver to keep track of a variable (ybar) that is an estimate of the error of the numerical solution through the simulation. This variable is saved at the **last time step** (restart.75.\*), together with the other solution variables (pressure, velocity, traction, etc...). This variable ybar is used by the adaptivity code to generate a new adapted mesh based on the errors of the current simulation.
 
@@ -135,7 +135,10 @@ This is the block that controls the Boundary Conditions and the other features s
 
 Let us illustrate this with a more complex problem with 4 outlets (see figure below)
 
-<img src="documentation/flowsolver/imgs/FourOutlets.png" width="50%">
+<figure>
+  <img class="svSolverImg" src="documentation/flowsolver/imgs/FourOutlets.png" width="50%">
+  <figcaption class="svSolverCaption" >Schematic representation of a model with four outlets</figcaption>
+</figure>
 
 The *.supre file should read something like this:
 
@@ -143,16 +146,16 @@ The *.supre file should read something like this:
 .
 .
 .
-zero_pressure mesh-surfaces/outlet1.ebc.gz
-zero_pressure mesh-surfaces/outlet2.ebc.gz
-zero_pressure mesh-surfaces/outlet3.ebc.gz
-zero_pressure mesh-surfaces/outlet4.ebc.gz
+zero_pressure_vtp mesh-surfaces/outlet1.vtp
+zero_pressure_vtp mesh-surfaces/outlet2.vtp
+zero_pressure_vtp mesh-surfaces/outlet3.vtp
+zero_pressure_vtp mesh-surfaces/outlet4.vtp
 #
-set_surface_id all_exterior_faces.ebc.gz 1
-set_surface_id mesh-surfaces/outlet1.ebc.gz 2
-set_surface_id mesh-surfaces/outlet2.ebc.gz 3
-set_surface_id mesh-surfaces/outlet3.ebc.gz 4
-set_surface_id mesh-surfaces/outlet4.ebc.gz 5
+set_surface_id_vtp exterior_faces.vtp 1
+set_surface_id_vtp mesh-surfaces/outlet1.vtp 2
+set_surface_id_vtp mesh-surfaces/outlet2.vtp 3
+set_surface_id_vtp mesh-surfaces/outlet3.vtp 4
+set_surface_id_vtp mesh-surfaces/outlet4.vtp 5
 .
 .
 .

@@ -7,8 +7,8 @@ Boundary conditions are crucial to obtaining high quality cardiovascular simulat
 - Vessel wall elastic properties (if we are modeling the vessel walls as deformable).
 
 <figure>
-<img class="svSolverImg" src="documentation/flowsolver/imgs/Fig_15.png" width="40%">
-<figcaption class="svSolverCaption" >Test Caption.</figcaption>
+  <img class="svSolverImg" src="documentation/flowsolver/imgs/Fig_15.png" width="40%">
+  <figcaption class="svSolverCaption" >Inflow, outflow and wall characterization in a simple cylindrical vessel</figcaption>
 </figure>
 
 From a conceptual standpoint, no matter how geometrically complex a vascular model is (we’ll refer to this as $\Omega$), its boundaries can be classified into three groups (see figure above):
@@ -31,12 +31,14 @@ $$
 where $Z$ is the Inverse Fourier Transform of an impedance function that characterizes the downstream vasculature, $p$ is the weakly prescribed pressure, $Q$ is the flow rate passing through the face, and $T$ is the cardiac cycle.
 
 <figure>
-  <img src="documentation/flowsolver/imgs/Fig_16.png" width="70%">
-  <figcaption>Test Caption.</figcaption>
+  <img class="svSolverImg" src="documentation/flowsolver/imgs/Fig_16.png" width="70%">
+  <figcaption class="svSolverCaption" >Cardiovascular model with various boundary conditions</figcaption>
 </figure>
 
-
-<img src="documentation/flowsolver/imgs/Fig_17.png" width="800">
+<figure>
+  <img class="svSolverImg" src="documentation/flowsolver/imgs/Fig_17.png" width="800">
+  <figcaption class="svSolverCaption" >Frequency content of impedance from the literature for the left external iliac and a canine femoral artery</figcaption>
+</figure>
 
 The mathematical definition of an impedance function is:
 
@@ -48,9 +50,12 @@ That is, a relationship between pressure and flow modes for different frequencie
 
 - **RCR lumped parameters condition**. In this boundary condition type, we use a _reduced-order_ model of the downstream vasculature, considering an electric circuit analog. In this theory, the behavior of the vasculature is represented by three parameters: a proximal resistance $R\_p$, a capacitance $C$, and a distal resistance $R\_d$.
 
-<img src="documentation/flowsolver/imgs/Fig_18.png" width="40%">
+<figure>
+  <img class="svSolverImg" src="documentation/flowsolver/imgs/Fig_18.png" width="40%">
+  <figcaption class="svSolverCaption" >Circuit representation of RCR block</figcaption>
+</figure>
 
-- **Coronary boundary conditions**. These conditions simulate what happens at the coronary outlets. The implementation in the **svSolver** follows the derivations in [this paper]() **!!! LINK**
+- **Coronary boundary conditions**. These conditions simulate what happens at the coronary outlets. The implementation in the **svSolver** follows the derivations in [this paper](docsRefs.html#refSec2).
 
 - **Closed-loop boundary circulation model**. The capability of coupling a 3D finite element model with a lumped parameter model is built into the **svSolver**. Documentation on this feature will be available with later releases of the code. 
 
