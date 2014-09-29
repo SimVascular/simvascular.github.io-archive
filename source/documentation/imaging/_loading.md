@@ -3,7 +3,8 @@
 **SimVascular** allows you to load in your image data as VTI data. Once you have the new window open, in the Menu bar, select File → Load Image (VTI). Choose the file: sample_data/image_data/vti/sample_data-cm.vti, and then click on “Open.” 
 
 <figure>
-<img class="imagingGuideFigure" src="documentation/imaging/imgs/loading/1.jpg" width="40%">
+  <img class="svImg svImgMd" src="documentation/imaging/imgs/loading/1.jpg">
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 <font color="red">**HELPFUL HINT:**</font> Unfortunately, you cannot load in other image data into **SimVascular** once you have loaded in the first data set. You have to open another window. You can always close the current window you are working on as long as you have already saved any work that you have done during the given session.  You can also have multiple windows of SimVascular open at once.

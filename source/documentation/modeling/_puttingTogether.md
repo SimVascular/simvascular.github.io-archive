@@ -7,5 +7,6 @@ Use the level set method to make 2D segmentations of the vessel wall and combine
 When you are finished, you can check out your segmentations by viewing them with the point cloud turned on:
 
 <figure>
-<img class="modelingGuideFigure"  src="documentation/modeling/imgs/segmentation/putting_together/1.jpg" width="100%"> 
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/putting_together/1.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>

@@ -5,7 +5,8 @@ This exercise assumes that you have added two segmentations to the group, as des
 To display your contours in 3D space, go to the taskbar underneath the 3D display window and click on the “Display Options” menu. Select “Branch Controls” and then check “Level Set Segmentation”:
 
 <figure>
-<img class="modelingGuideFigure"  src="documentation/modeling/imgs/segmentation/displaying_contours_3D/1.jpg" width="100%"> 
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/displaying_contours_3D/1.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 As you move the “Current Position” Slider bar under the “Create Vessel” tab from position “0” to position “10”, you should see the segmentations that you’ve created appear in blue along the path in the 3D display window.

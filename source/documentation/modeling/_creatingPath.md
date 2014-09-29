@@ -23,7 +23,8 @@ After you have entered “100” for the Path ID, “aorta” for the Path Name,
 After you click the "Create New Path" button, you should see a "+" appear beside the text "All Paths".  Click on the "+" will expand the list of all paths, and you should see something similar to the following window:
 
 <figure>
-<img class="modelingGuideFigure"  src="documentation/modeling/imgs/path_planning/creating_path/1.jpg" width="100%"> 
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/path_planning/creating_path/1.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 Additional functionality available under “Paths → General” tab: 
@@ -43,7 +44,8 @@ Additional functionality available under “Paths → General” tab:
 Under the “Paths” tab, click on the “Manual” tab:
 
 <figure>
-<img class="modelingGuideFigure"  src="documentation/modeling/imgs/path_planning/creating_path/2.jpg" width="100%"> 
+  <img class="svImg svImgXl" src="documentation/modeling/imgs/path_planning/creating_path/2.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 There are five basic ways to select points to manually add to the path.  The technique you use will be a combination of preference and your specific application.  You can seamlessly switch between techniques, so using a combination for a particular path is common.  The major techniques consist of:
@@ -61,7 +63,8 @@ Before we begin, you should familiarize yourself with the options found under th
 **Display Options:**
 
 <figure>
-<img class="modelingGuideFigure"  src="documentation/modeling/imgs/path_planning/creating_path/3.jpg" width="100%"> 
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/path_planning/creating_path/3.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 “Show Cursor”:  This toggles the display of the 3-D cursor (“cross-hair”) in the 3D display window.  Clicking on this option should result in a white crosshair to appear in a corner of your blue volumetric wireframe box. This cursor is controlled by the scrollbars in the “Paths → Manual” frame.   It can also be interactively moved by positioning the mouse cursor over the cross-hair and clicking on it.  The cross-hair will turn green while you interactively move it.  See “Attach Image Axis” and “Fix Axis” for additional functionality related to the 3-D cursor.
@@ -79,7 +82,8 @@ Before we begin, you should familiarize yourself with the options found under th
 **Attaching an Image Axis:**
 
 <figure>
-<img class="modelingGuideFigure"  src="documentation/modeling/imgs/path_planning/creating_path/4.jpg" width="100%"> 
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/path_planning/creating_path/4.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 “R”, “A”, “S”:  Toggling on a coordinate direction under the “Attach Image Axis” drop-down menu “connects” the path planning scale bars with the volume visualization primary slice planes.  This means that when you move one of the scale bars in the path planning window, the volume visualization scale bar is automatically updated.  This allows the user to turn on a slice plane, e.g. the axial slice (“S”), and then control the slice interactively using the 3-D cursor or the path planning scale bars.  This technique is used extensively when selecting points manually.  Many users find it easier to pick points in 3-D space using an image slice and the 3-D cursor in contrast to using a 3-D visualization display such as a point cloud or volume rendered image.  Note that you must manually turn on the image slice under the “Volume Properties” tab in the Display Options pane (i.e. click the checkbox), attaching the image axis will not have a visible effect in the 3-D Window even though the scale bars are being updated. 
@@ -89,7 +93,8 @@ Before we begin, you should familiarize yourself with the options found under th
 **Fixing an Axis:**
 
 <figure>
-<img class="modelingGuideFigure"  src="documentation/modeling/imgs/path_planning/creating_path/5.jpg" width="100%"> 
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/path_planning/creating_path/5.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 “R”, “A”, “S”:  Interactively selecting points in 3-D space using a 2-D display (i.e. monitor) can be challenging.  When you select the 3-D cursor (see above) and interactively move inside of the window, the program has to “guess” what 3-D motion you want given a 2-D input (left/right and up/down mouse motion).  “Fixing” an axis means that motion is not permitted for the 3-D cursor when the user interactively selects it.  For example, if you toggle on (i.e. fix) the “R” axis, when you interactively move the 3-D cursor in the 3-D window using the mouse, the motion is “constrained” to only occur in the “A/P” and “S/I” directions.  If you are displaying the 2-D image slice at the time and trying to select a point found on the image slice, you will find fixing the “R” axis leads an intuitive motion of the 3-D cursor.  Note that you can still control the “R” direction in this example using the “L/R” scale bar in the “Path → Manual” frame.  Thus a user might position the “R” slice using the scale bar, select a point using the 3-D cursor, and repeat this process to select a series of points for a vessel.
@@ -101,7 +106,8 @@ NOTE:  If you are using the interactive spline and image reslice, all of the Fix
 **Cursor Increment:**
 
 <figure>
-<img class="modelingGuideFigure"  src="documentation/modeling/imgs/path_planning/creating_path/6.jpg" width="100%"> 
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/path_planning/creating_path/6.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 “one pixel”, ‘half pixel”, “other” (fraction of a pixel):  When you move the path scale bars or the 3-D cursor, by default the cursor moves in whole pixel increments (i.e. by “one pixel”).  This can lead to a “jerky” motion.  By clicking the “half pixel” button, the cursor will move in half-pixel increments, leading to a smoother motion of the cursor.  You can also move in fractions of a pixel for an even smoother motion by changing the value found in the “other:” entry widget and hit RETURN.  It is not recommended to change this value to be less than “0.1”.
@@ -111,7 +117,8 @@ Now we are ready to start building a path! First, we need to decide where we sho
 Let’s pick a point in the supra-celiac aorta.  Remember that you can display the point cloud or use another visualization technique to re-familiarize yourself with the data.  If you haven’t done so already, display the white 3-D path planning cursor (“cross-hairs”) by using selecting “Show Cursor” from “Paths → Manual → Display Options”:
 
 <figure>
-<img class="modelingGuideFigure"  src="documentation/modeling/imgs/path_planning/creating_path/7.jpg" width="100%"> 
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/path_planning/creating_path/7.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 If you haven’t modified the location the values of the “Paths → Manual” scale bars, the 3-D cursor will appear in the lower left corner of the blue wireframe 3D box. You should now be able to click and “grab” the 3-D cursor in the 3-D graphics window.  Position the mouse pointer near the intersection of the three white lines making up the 3-D cross-hair.  You can then left mouse click on the cross-hair and drag the cursor around the 3-D window. 
@@ -126,7 +133,8 @@ Now you will see that if you move the 3-D cursor in the 3-D Graphics Window, the
 Then click “Add Point to End of Path” button to add the point to the “aorta”. The point should appear under “aorta” in the path treeview window (shown highlighted in blue in the following picture).
 
 <figure>
-<img class="modelingGuideFigure"  src="documentation/modeling/imgs/path_planning/creating_path/8.jpg" width="100%"> 
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/path_planning/creating_path/8.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 <font color="red">**HELPFUL HINT:** </font>  It is generally a good practice to create paths that extend beyond where you may plan to create a model.  The reason for this is that the path is not explicitly included in the final geometric model, and you will see later that it is difficult to change a path AFTER you have started creating segmentations.
@@ -136,7 +144,8 @@ Keep the “S” image axis attached, and zoom in and rotate the image so that y
 <font color="red">**HELPFUL HINT:** </font>  If you accidently put a point in an undesired location and would like to delete a point, you can skip to later in this exercise to learn more about, “Deleting points in your path:”
 
 <figure>
-<img class="modelingGuideFigure"  src="documentation/modeling/imgs/path_planning/creating_path/9.jpg" width="100%"> 
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/path_planning/creating_path/9.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 Continue to move down the aorta inferiorly (from “S” to “I”) in increments of 25-50 using EITHER the slider bars associated with the “Volume Properties” tab in the Display Options pane OR the slider bars associated with the “Path → Manual” tab in the Functional Toolbox pane, adding points to your path by centering your mouse inside the aorta and typing “t” on your keyboard. If your S/I slider bar associated with the “Volume Properties” tab is not moving as you move down the path, then your “S” image axis is probably not attached (“Attach Image Axis → S”) and the points you choose will not necessarily be in the correct 3D location. 
@@ -144,24 +153,31 @@ Continue to move down the aorta inferiorly (from “S” to “I”) in incremen
 When you reach the bifurcation (the aorta splits into the two iliac arteries), continue your path down the LEFT iliac artery:
 
 <figure>
-<img class="modelingGuideFigure"  src="documentation/modeling/imgs/path_planning/creating_path/10.jpg" width="100%"> 
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/path_planning/creating_path/10.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 Once you have finished building your path down as far as possible (you should be able to get to around slider position 6 before things get a harder to see – remember that you can change the window level in the 3D display window by clicking on the image slice and using your up/down and right/left arrow keys on the keyboard), visualize the current path by clicking on the “Display Options” drop-down menu under the “Paths” tab and check “Show Points” and “Show Spline”. The points you have chosen will appear as purple boxes, and the spline should show as a red line:
 
 <figure>
-<img class="modelingGuideFigure"  src="documentation/modeling/imgs/path_planning/creating_path/11.jpg" width="100%"> 
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/path_planning/creating_path/11.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 You can quickly see how well your path stays within the vessel by:
 
 1.	Sliding through the “S/I” slider bar under the “Volume Properties” tab
+
 <figure>
-<img class="modelingGuideFigure"  src="documentation/modeling/imgs/path_planning/creating_path/12.jpg" width="100%"> 
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/path_planning/creating_path/12.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
+
 2.	Setting the “Threshold Range” min value to “110” and displaying the “point cloud” under “Visualization Options”
+
 <figure>
-<img class="modelingGuideFigure"  src="documentation/modeling/imgs/path_planning/creating_path/13.jpg" width="100%"> 
+  <img class="svImg svImgXl" src="documentation/modeling/imgs/path_planning/creating_path/13.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 <font color="red">**HELPFUL HINT:** </font>  When creating your paths, the 3D point clouds are a helpful guide in selecting your points.  However, they are highly dependent on the threshold values, so the slice planes are a better way to check if your path is inside the vessels of interest.
@@ -173,7 +189,8 @@ Here are some ways you can modify your path so that it is more true to the image
 Select the pathpoint you want to delete by going to your 3D display window, placing your mouse arrow over the purple box representing the point you would like to delete, and typing “p” on your keyboard. Typing “p” when your mouse arrow is over a particular object “picks” that object. Anything in the window can be “picked” including the path, image slices, and the point cloud. You will know when something is selected when it becomes highlighted in yellow. You should also notice that when you have “picked” a pathpoint, that point’s coordinates will become highlighted in blue in your path treeview display. To delete the point, select the “Additional Options” drop-down menu under the “Path → Manual” tab and select “Delete currently selected point”. The pathpoint should disappear and your spline should regenerate based upon the points that are remaining.
 
 <figure>
-<img class="modelingGuideFigure"  src="documentation/modeling/imgs/path_planning/creating_path/14.jpg" width="100%"> 
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/path_planning/creating_path/14.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 **Copying and pasting a point in your path:**
@@ -192,7 +209,8 @@ Using point cloud or 2D image slice visualization techniques under the “Volume
 Once you are happy with your path, click on the “Update Path” button in the “Interactor” widget. Your old path will now be replaced by the new path you just adjusted.
 
 <figure>
-<img class="modelingGuideFigure"  src="documentation/modeling/imgs/path_planning/creating_path/15.jpg" width="100%"> 
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/path_planning/creating_path/15.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 <font color="orange">**WARNING:**</font> If you don’t click “Update Path” and then save the path, none of the handle adjustments will be saved! When you click “Update Path” you will notice that the numbers in the path treeview display will be updated.

@@ -7,7 +7,8 @@ In the group treeview display window, select the groups that you would like to u
 Under the “ Parasolid → Create Model” tab, click on the “Create Pre-Op Solid” button. In the field next to “Save Model”, type in a model name, keeping the “.xmt_txt” file extension intact. Click on the “Save Model” button.
 
 <figure>
-<img class="modelingGuideFigure"  src="documentation/modeling/imgs/solid_modeling/joining/1.jpg" width="100%"> 
+  <img class="svImg svImgXl" src="documentation/modeling/imgs/solid_modeling/joining/1.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 If you would like to view the model you have just created, clear the 3D display window by clicking on the “Window” drop-down menu and selecting “Clear Window”.
@@ -15,7 +16,8 @@ If you would like to view the model you have just created, clear the 3D display 
 Under the “Solids” tab, select the “View Model” tab. Next to “Solid Model Object”, pull down the menu where it says “None” and select “Preop Solid”. Your joined model should now appear in the 3D display window.
 
 <figure>
-<img class="modelingGuideFigure"  src="documentation/modeling/imgs/solid_modeling/joining/2.jpg" width="100%"> 
+  <img class="svImg svImgXl" src="documentation/modeling/imgs/solid_modeling/joining/2.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 If you zoom into the bifurcation area of the model, you will find the seam where the two solids were united. You will learn how to smooth out this seam in the next section.

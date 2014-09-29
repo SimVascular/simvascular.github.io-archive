@@ -21,7 +21,8 @@ Now click on the “Smooth Current Path” button. Go back to the “Manual” t
 You should see a much smoother path that better represents the medial axis of the vessel. Furthermore, you will notice that this smoothed path is saved under a new ID number in your path treeview display window. You should now see “aorta   (ID: 101) (Number of Spline Pts: 300)”.  Note that smoothing occurs on the current working path.  (See the section on “Use Fourier Smoothing” below for an example of how to select the current working path.)  Depending on how many points you had in your original path, you may find that the smoothing may make the new path deviate from the vessel! This is why smoothing should be used with caution.
 
 <figure>
-<img class="modelingGuideFigure"  src="documentation/modeling/imgs/path_planning/smoothing_path/1.jpg" width="100%"> 
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/path_planning/smoothing_path/1.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 Let’s examine these parameters more closely.
@@ -43,7 +44,8 @@ Try this exercise.  Go back to the “Smooth” tab under the “Paths” tab. I
 Click on “Smooth Current Path”. You may need to go back to the “Manual” tab and toggle “Show Spline” under the “Display Options” drop-down menu off and on before you see your new path (ID: 102). What happened when you changed the number of Fourier modes to 5? You should see a very smooth line with few to no kinks. Does this ultra-smooth path still fit inside the boundaries of the vessel?
 
 <figure>
-<img class="modelingGuideFigure"  src="documentation/modeling/imgs/path_planning/smoothing_path/2.jpg" width="100%"> 
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/path_planning/smoothing_path/2.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 <font color="red">**HELPFUL HINT:** </font>   Smoothing occurs on whatever path is selected as the current working path.  Make sure you’ve selected the right Path ID for your current working path!

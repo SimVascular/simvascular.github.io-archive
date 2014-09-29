@@ -7,13 +7,15 @@ That path took a while to create and you would probably prefer not to have to re
 In the Menu Bar (top left), click on the “Save Paths” button.
 
 <figure>
-<img class="modelingGuideFigure"  src="documentation/modeling/imgs/path_planning/saving_loading_paths/1.jpg" width="100%"> 
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/path_planning/saving_loading_paths/1.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 The following window should appear:
 
 <figure>
-<img class="modelingGuideFigure"  src="documentation/modeling/imgs/path_planning/saving_loading_paths/2.jpg" width="50%"> 
+  <img class="svImg svImgMd"  src="documentation/modeling/imgs/path_planning/saving_loading_paths/2.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 Make sure you are in the correct project directory. Enter the desired name for the file under “File name:” with the ending “.paths” and click on the “Save” button.  All the paths since opening **SimVascular** that you’ve created will be saved into this one file.  Note that if you choose a filename that already exists, the file will be replaced and the original file will be deleted.  If you select an existing filename, you will be prompted with a dialog box asking if you wish to cancel the save prior to proceeding.

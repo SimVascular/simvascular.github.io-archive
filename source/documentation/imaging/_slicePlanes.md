@@ -3,7 +3,8 @@
 Once your data (VTI) has loaded, a blue box outline should now appear in the 3D window. 
 
 <figure>
-<img class="imagingGuideFigure"  src="documentation/imaging/imgs/slice_planes/1.jpg" width="60%"> 
+  <img class="svImg svImgLg"  src="documentation/imaging/imgs/slice_planes/1.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 A 3-button mouse is ideal for maneuvering about the 3D display window. Place your mouse within the 3D window. You should find that the:
@@ -19,7 +20,8 @@ You may only see a zoomed-in part of the blue outlined box. To zoom in/out and s
 To see your image data go to the “Volume Properties” tab under the Display Options toolbox and check the box next to the A/P slice. Then slide the A/P slider to position 24. You should now see the 24th slice of the Anterior/Posterior slicing data as shown below!
 
 <figure>
-<img class="imagingGuideFigure"  src="documentation/imaging/imgs/slice_planes/2.jpg" width="100%"> 
+  <img class="svImg svImgXl" src="documentation/imaging/imgs/slice_planes/2.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 What you are seeing is the kidneys and part of the aorta.
@@ -31,7 +33,8 @@ The volume dataset we are using for this demo is 512 x 64 x 512 voxels.  This ex
 Select the options exactly as they appear below (L/R: 159, A/P: 32, S/I: 231).  The corresponding physical location in space is indicated at the top of the window (R: -7.974, A: 1.290, S:  -4.899). You should see something similar to the image below in the 3D display window:
 
 <figure>  
-<img class="imagingGuideFigure"  src="documentation/imaging/imgs/slice_planes/3.jpg" width="100%"> 
+  <img class="svImg svImgXl" src="documentation/imaging/imgs/slice_planes/3.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 Try changing the size of the viewing window, moving the sliders and turning on/off different combinations of the image planes.  
