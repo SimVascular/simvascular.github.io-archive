@@ -1,7 +1,9 @@
 source 'https://rubygems.org'
 
-gem "middleman"
+gem 'middleman'
 
-gem "redcarpet"
+gem 'redcarpet'
+
+gem 'font-awesome-sass'
 
 
