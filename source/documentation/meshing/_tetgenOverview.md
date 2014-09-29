@@ -11,7 +11,8 @@ TetGen is an open source mesh generation software developed by Hang Si through W
 The TetGen tab includes all of the the operations to run an open source using a discrete polydata. The interface for TetGen includes three tabs:
 
 <figure>
-<img class="meshGuideFigure" src="documentation/meshing/img/TetGen_Tabs.png" width="90%">
+  <img class="svImg svImgLg" src="documentation/meshing/img/TetGen_Tabs.png">
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 1. Mesh Options: This is for basic meshing parameters involving surface and volumetric meshing.
@@ -23,7 +24,8 @@ The TetGen tab includes all of the the operations to run an open source using a 
 The Mesh Options Tab has all the components to create a simple mesh.
 
 <figure>
-<img class="meshGuideFigure" src="documentation/meshing/img/TetGen_Mesh_Options.png" width="90%">
+  <img class="svImg svImgLg" src="documentation/meshing/img/TetGen_Mesh_Options.png">
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 Button or Widget Functionality:
@@ -64,7 +66,8 @@ Specify the TetGen meshing parameters. These parameters apply ONLY to the volume
 The Advanced Mesh Options Tab has the componenets to create a more advanced mesh such as a boundary layer mesh or a mesh with spherical refinement.
 
 <figure>
-<img class="meshGuideFigure" src="documentation/meshing/img/TetGen_Advanced_Mesh_Options.png" width="90%">
+  <img class="svImg svImgLg" src="documentation/meshing/img/TetGen_Advanced_Mesh_Options.png">
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 ##### Boundary Layer Meshing
@@ -85,7 +88,8 @@ The Advanced Mesh Options Tab has the componenets to create a more advanced mesh
 The Adapt Tab is used to create an adaptive mesh based on a current solution. There are two steps identified in the GUI. First, create the error file (ybar) from the solution. Then, based on this error, run the adaptor to create a mesh optimized for this solution.  
 
 <figure>
-<img class="meshGuideFigure" src="documentation/meshing/img/TetGen_Adapt.png" width="90%">
+  <img class="svImg svImgLg" src="documentation/meshing/img/TetGen_Adapt.png">
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 ##### Filenames

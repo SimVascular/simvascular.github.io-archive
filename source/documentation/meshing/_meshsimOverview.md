@@ -9,7 +9,8 @@ MeshSim is a component mesher used to create high quality meshes from CAD Models
 The MeshSim tab includes all of the operations to run a mesh with the commercial component MeshSim. The interface for MeshSim includes five tabs:
 
 <figure>
-<img class="meshGuideFigure" src="documentation/meshing/img/MeshSim_Tabs.png" width="90%">
+  <img class="svImg svImgLg" src="documentation/meshing/img/MeshSim_Tabs.png">
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 1. Mesh: This is for basic meshing parameters involving surface and volumetric meshing.
@@ -23,7 +24,8 @@ The MeshSim tab includes all of the operations to run a mesh with the commercial
 The Mesh Options Tab has all the components to create a simple mesh.
 
 <figure>
-<img class="meshGuideFigure" src="documentation/meshing/img/MeshSim_MeshOptions.png" width="90%"> 
+  <img class="svImg svImgLg" src="documentation/meshing/img/MeshSim_MeshOptions.png"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 Button or Widget Functionality:
@@ -58,7 +60,8 @@ Button or Widget Functionality:
 The Advanced Mesh Options Tab has the componenets to create a more advanced mesh such as a boundary layer mesh or a mesh with local refinement.
 
 <figure>
-<img class="meshGuideFigure" src="documentation/meshing/img/MeshSim_AdvancedMeshOptions.png" width="90%">
+  <img class="svImg svImgLg" src="documentation/meshing/img/MeshSim_AdvancedMeshOptions.png">
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 Button or Widget Functionality:
@@ -97,7 +100,8 @@ There are found different types of boundary layer meshing and can be applied on 
 ##### Global Size and Curvature
 
 <figure>
-<img class="meshGuideFigure" src="documentation/meshing/img/MeshSim_AdvancedGlobalSize.png" width="90%">
+  <img class="svImg svImgLg" src="documentation/meshing/img/MeshSim_AdvancedGlobalSize.png">
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 	* Type:
@@ -112,7 +116,8 @@ There are found different types of boundary layer meshing and can be applied on 
 ##### Spatial Options
 
 <figure>
-<img class="meshGuideFigure" src="documentation/meshing/img/MeshSim_AdvancedSpatialOptions.png" width="90%">
+  <img class="svImg svImgLg" src="documentation/meshing/img/MeshSim_AdvancedSpatialOptions.png">
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 ###### Sphere Refinement 
@@ -131,7 +136,8 @@ There are found different types of boundary layer meshing and can be applied on 
 ##### Mesh Control Options
 
 <figure>
-<img class="meshGuideFigure" src="documentation/meshing/img/MeshSim_AdvancedMeshControlOptions.png" width="90%">
+  <img class="svImg svImgLg" src="documentation/meshing/img/MeshSim_AdvancedMeshControlOptions.png">
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 ###### Surface Options
@@ -160,7 +166,8 @@ Displays the current macro for the specified meshing parameters. These parameter
 The Adapt Tab is used to create an adaptive mesh based on a current solution. There are two steps identified in the GUI. First, create the error file (ybar) from the solution. Then, based on this error, run the adaptor to create a mesh optimized for this solution.  
 
 <figure>
-<img class="meshGuideFigure" src="documentation/meshing/img/MeshSim_Adapt.png" width="90%"> 
+  <img class="svImg svImgLg" src="documentation/meshing/img/MeshSim_Adapt.png"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 ##### Filenames
@@ -205,7 +212,8 @@ This tab is used to install or remove license information for the use of MeshSim
 This tab is used to create a Discrete Solid Model from a a VTK. This Discrete Solid Model can then be meshed with MeshSim.
 
 <figure>
-<img class="meshGuideFigure" src="documentation/meshing/img/MeshSim_DiscreteModel.png" width="90%"> 
+  <img class="svImg svImgLg" src="documentation/meshing/img/MeshSim_DiscreteModel.png"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 ##### Model Faces

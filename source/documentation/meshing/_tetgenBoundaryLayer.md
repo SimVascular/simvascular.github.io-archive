@@ -12,7 +12,8 @@ We will now generate a boundary layer mesh from a model of an Aorta.
 6. 	Set the desired gradation factor in the "Layer Decreasing Ratio" entry box. In this case, we would like each layer to be 0.8 of the previous layer. 
 
 <figure>
-<img class="meshGuideFigure" src="documentation/meshing/img/TetGen_Load_BoundaryLayer.png" width="90%">
+  <img class="svImg svImgXl" src="documentation/meshing/img/TetGen_Load_BoundaryLayer.png">
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 Now we will generate the mesh for the model that includes the boundary layer specifications:
@@ -24,7 +25,8 @@ Now we will generate the mesh for the model that includes the boundary layer spe
 5. 	A pop up dialog box will ask you to "Select a surface for the boundary layer". Click into the 3D viewing window screen and press "p" over the desired surface.
 
 <figure>
-<img class="meshGuideFigure" src="documentation/meshing/img/TetGen_BoundaryLayer_Select.png" width="90%">
+  <img class="svImg svImgXl" src="documentation/meshing/img/TetGen_BoundaryLayer_Select.png">
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 6.	When the meshing is finished, a dialog box appears with mesh statistics.  Once you have reviewed the meshing output, you can click on the "OK" button in the "Mesh Statistics" dialog box.
@@ -32,7 +34,8 @@ Now we will generate the mesh for the model that includes the boundary layer spe
 The mesh generated will have the boundary layer mesh on the specified region. Zooming in, you can see that the number of layers in the volumetric mesh is four. The boundary layer extends all the way down the length of the surface named wall, and each layer is 0.8 of the previous layer.
 
 <figure>
-<img class="meshGuideFigure" src="documentation/meshing/img/TetGen_BoundaryLayer.png" width="90%">
+  <img class="svImg svImgXl" src="documentation/meshing/img/TetGen_BoundaryLayer.png">
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
  It is important to note, once again, that you have generated a volumetric mesh.  That is, the entire volume of the geometry has been filled with tetrahedral elements. Thus, the boundary layer meshing pattern that you see on the outflow face (in the figure above) continues up the entire volume of the aorta. It is difficult to visualize thousands of elements at one time, so we only visualize this refinement on the exterior surface mesh.  

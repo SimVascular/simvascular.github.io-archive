@@ -15,7 +15,8 @@ We will now generate a boundary layer mesh from the "wall_aorta" model:
 9. 	Add the same boundary layer to the other surfaces that comprise the aorta wall. In our case, the other surface is "wall_R_ext_iliac".
 
 <figure>
-<img class="meshGuideFigure" src="documentation/meshing/img/MeshSim_BoundaryLayer_Options.png" width="90%">
+  <img class="svImg svImgXl" src="documentation/meshing/img/MeshSim_BoundaryLayer_Options.png">
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 Now we will generate the mesh for the model that includes the boundary layer mesh options:
@@ -29,7 +30,8 @@ Now we will generate the mesh for the model that includes the boundary layer mes
 The mesh generated will have the boundary layer mesh on the specified region. Zooming in, you can see that the number of layers in the volumetric mesh is three. This boundary layer extends all the way up the length of the aorta wall. 
 
 <figure>
-<img class="meshGuideFigure" src="documentation/meshing/img/MeshSim_BoundaryLayer_Labelled.png" width="90%">
+  <img class="svImg svImgMd" src="documentation/meshing/img/MeshSim_BoundaryLayer_Labelled.png">
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
  It is important to note, once again, that you have generated a volumetric mesh.  That is, the entire volume of the geometry has been filled with tetrahedral elements. Thus, the boundary layer meshing pattern that you see on the outflow face (in the figure above) continues up the entire volume of the aorta. It is difficult to visualize thousands of elements at one time, so we only visualize this refinement on the exterior surface mesh.  

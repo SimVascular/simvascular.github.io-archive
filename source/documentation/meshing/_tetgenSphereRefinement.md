@@ -13,7 +13,8 @@ We will now refine a region with a sphere from a model of an Aorta.
 6. 	Enter a mesh size for the refined region into the "Refinement Factor" entry box. The refinement factor we used in this case is "0.5". This means the elements in the refined region should be half the size of the rest of the elements.
 
 <figure>
-<img class="meshGuideFigure" src="documentation/meshing/img/TetGen_Load_Sphere_Refinement.png" width="90%">
+  <img class="svImg svImgXl" src="documentation/meshing/img/TetGen_Load_Sphere_Refinement.png">
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 Now we will generate the mesh for the model that includes the refined mesh specifications:
@@ -25,7 +26,8 @@ Now we will generate the mesh for the model that includes the refined mesh speci
 5.	When the meshing is finished, a dialog box appears with mesh statistics.  Once you have reviewed the meshing output, you can click on the "OK" button in the "Mesh Statistics" dialog box.
 
 <figure>
-<img class="meshGuideFigure" src="documentation/meshing/img/TetGen_Sphere_Refinement.png" width="90%">
+  <img class="svImg svImgXl" src="documentation/meshing/img/TetGen_Sphere_Refinement.png">
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 You can now go back and do a full mesh combining a boundary layer and spherical refinment. 

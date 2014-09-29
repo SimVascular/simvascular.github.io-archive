@@ -16,7 +16,8 @@ First, we will specify the mesh density for the inflow face:
 At the bottom of the "Advanced Mesh Options" tab check the "Display currently selected meshing parameters" box. The "Current List of Specified Meshing Parameters" should now appear. In this case, ours displays "size inflow absolute 0.05". Note that you can edit the text in the "Current List of Specified meshing Parameters" box. This may be useful if you decide you don’t like the meshing you specified and want to delete the previous refinement text and generate a new one. You can also edit the refinement text directly on that box. 
 
 <figure>
-<img class="meshGuideFigure" src="documentation/meshing/img/MeshSim_Local_Refinement_Options_1.png" width="90%">
+  <img class="svImg svImgXl" src="documentation/meshing/img/MeshSim_Local_Refinement_Options_1.png">
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 We will now repeat this process for the outflow faces, specifying a different mesh density:
@@ -27,7 +28,8 @@ We will now repeat this process for the outflow faces, specifying a different me
 4.	The "Meshing Parameters" should now ALSO show the text "R_ext_iliac absolute 0.5" and "L_ext_iliac 0.5".
 
 <figure>
-<img class="meshGuideFigure" src="documentation/meshing/img/MeshSim_Local_Refinement_Options_2.png" width="90%">
+  <img class="svImg svImgXl" src="documentation/meshing/img/MeshSim_Local_Refinement_Options_2.png">
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 Now we will generate the mesh for the model that includes the refined mesh specifications:
@@ -46,6 +48,7 @@ If you don’t already see the exterior surface mesh you just created, in the 3D
 If you zoom in on the inflow face, you will see that the triangulation for that face is more refined than the rest of the vessel mesh as shown below: 
 
 <figure>
-<img class="meshGuideFigure" src="documentation/meshing/img/MeshSim_LocalRefinement.png" width="90%">
+  <img class="svImg svImgMd" src="documentation/meshing/img/MeshSim_LocalRefinement.png">
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 

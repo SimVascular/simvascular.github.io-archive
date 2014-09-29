@@ -12,9 +12,10 @@ When simulating blood flow, interesting phenomenon can occur around the site of 
 	- P/A: 42
 	- I/S: 192
 7.	The pixel locations of the splice planes are shown above the scale bars. Under the "Sphere Refinement" header, set the desired center point. Our center point is "1.088 3.290 -7.946", and we put this in the "center pt" entry widget. Make sure you leave a space between each value. 
-                                                         
+                                             
 <figure>
-<img class="meshGuideFigure" src="documentation/meshing/img/MeshSim_SRefinement_Options.png" width="90%">
+  <img class="svImg svImgXl" src="documentation/meshing/img/MeshSim_SRefinement_Options.png">
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 8.	Click on the "Add Sphere Refinement" button. 
@@ -31,7 +32,8 @@ Now we will generate the mesh for the model that includes the sphere refinement 
 The mesh in the area around the bifurcation should now be refined as compared to the mesh for the rest of the vessel. 
 
 <figure>
-<img class="meshGuideFigure" src="documentation/meshing/img/MeshSim_Sphere_Refinement.png" width="90%">
+  <img class="svImg svImgMd" src="documentation/meshing/img/MeshSim_Sphere_Refinement.png">
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 ### Spherical Refinement
@@ -39,7 +41,8 @@ The mesh in the area around the bifurcation should now be refined as compared to
 In addition to the interesting phenomenon that may occur at the site of vessel bifurcations, we may be similarly interested in blood flow phenomenon at other sites of the model, such as the site of an aneurism. To refine the mesh of sites of interest along the vessel, we can use cylindrical refinement. Cylinder refinement is very similar to spherical refinement; however for cylinder refinement we will define a "length" and a "normal" direction in addition to radius and size. In this section we will refine the mesh near the outflow face of the left common iliac artery.
 
 <figure>
-<img class="meshGuideFigure" src="documentation/meshing/img/MeshSim_Cylinder_Refinement_Options.png" width="90%">
+  <img class="svImg svImgXl" src="documentation/meshing/img/MeshSim_Cylinder_Refinement_Options.png">
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 1.	Go to the "Advanced Mesh Options" tab
@@ -70,7 +73,8 @@ Now we will generate the mesh for the model that includes the cylinder refinemen
 The mesh near the desired area should now be refined as desired as shown below:
 
 <figure>
-<img class="meshGuideFigure" src="documentation/meshing/img/MeshSim_Cylinder_Refinement.png" width="90%">
+  <img class="svImg svImgMd" src="documentation/meshing/img/MeshSim_Cylinder_Refinement.png">
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 You can now go back and do a full mesh combining local mesh refinement, a boundary layer, and spherical or cylindrical refinment. 
