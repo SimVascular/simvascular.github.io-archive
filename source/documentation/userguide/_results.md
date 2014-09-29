@@ -6,7 +6,8 @@ Launch ParaView.
 	Click the button “Apply”
 
 <figure>
-<img class="userGuideFigure"  src="documentation/userguide/imgs/results/1.jpg" width="100%"> 
+  <img class="svImg svImgXl"  src="documentation/userguide/imgs/results/1.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 The pressure result is displayed in the display window.  In order to visualize the velocities in the lumen, we need to use a volume render visualization technique.
@@ -20,7 +21,8 @@ To do this, we must calculate the scalar quantity representing the magnitude of 
 	Representation: Volume
 
 <figure>
-<img class="userGuideFigure"  src="documentation/userguide/imgs/results/2.jpg" width="100%"> 
+  <img class="svImg svImgXl"  src="documentation/userguide/imgs/results/2.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 You should get a similar volume rendering result as the figure above. Click the button “Edit” to get different visual effects.

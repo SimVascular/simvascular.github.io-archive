@@ -24,7 +24,8 @@ Manually write presolver script file *demo.cvpre* in the text area:
 	Click “Run PreSolver” 
 
 <figure>
-<img class="userGuideFigure"  src="documentation/userguide/imgs/simulation/presolver.jpg" width="70%"> 
+  <img class="svImg svImgLg"  src="documentation/userguide/imgs/simulation/presolver.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 Two more solver files ***geombc.dat.1*** and ***restart.0.1*** are created in the project folder.

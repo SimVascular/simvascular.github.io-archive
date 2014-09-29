@@ -46,15 +46,15 @@ The first line is a comment line that you don’t need to include, but it helps 
 **WARNING**: please note that flow coming **into** the model (forward flow) will have a negative sign, (like in the example considered here), whereas flow coming **out of** the model (backflow) will be positive. A good way to remember that is that in the case of forward flow, the vector that gives you the direction of the flow and the normal to the face of the model point in opposite directions, and therefore their dot product will be negative.
 
 <figure>
-  <img class="svSolverImg" src="documentation/flowsolver/imgs/Fig_04.png" width="40%" align="centre">
-  <figcaption class="svSolverCaption" >Cylinder with negative inflow</figcaption>
+  <img class="svImg svImgMd" src="documentation/flowsolver/imgs/Fig_04.png">
+  <figcaption class="svCaption" >Cylinder with negative inflow</figcaption>
 </figure>
 
 On the other hand, in a situation of back flow,  the numerical value in the \*.flow file with be positive. 
 
 <figure>
-  <img class="svSolverImg" src="documentation/flowsolver/imgs/Fig_05.png" width="40%" align="centre">
-  <figcaption class="svSolverCaption" >Cylinder with positive inflow</figcaption>
+  <img class="svImg svImgMd" src="documentation/flowsolver/imgs/Fig_05.png">
+  <figcaption class="svCaption" >Cylinder with positive inflow</figcaption>
 </figure>
 
 In this problem, since we are running a steady case, our physical time goes from 0.0 to 0.2 seconds, and the flow is constant with a value of 15.0 cc/sec.
@@ -68,14 +68,14 @@ We are now ready to start. First, launch **SimVascular** from the folder where y
 Go to the _Model_ tab and select _PolyData_ for the _Solid Model Type_. Than select _Read Model_ from the _File Input/output_ dropdown. You should now see your cylinder.stl file in the open file dialog. Select the file and open it. 
 
 <figure>
-  <img class="svSolverImg" src="documentation/flowsolver/imgs/Read_STL_01.png" width="70%">
-  <figcaption class="svSolverCaption" >Reading a stereolithography in <b>SimVascular</b> as PolyData</figcaption>
+  <img class="svImg svImgLg" src="documentation/flowsolver/imgs/Read_STL_01.png">
+  <figcaption class="svCaption" >Reading a stereolithography in <b>SimVascular</b> as PolyData</figcaption>
 </figure>
 
 Press the **R** keyboard button to see a complete visualization of your model in the 3D window.
 
 <figure>
-  <img class="svSolverImg" src="documentation/flowsolver/imgs/ShowSTL.png" width="70%">
+  <img class="svImg svImgLg" src="documentation/flowsolver/imgs/ShowSTL.png">
   <figcaption class="svSolverCaption" >Triangulated cylinder surface visualized in the <b>SimVascular</b> GUI</figcaption>
 </figure>
 
@@ -83,45 +83,45 @@ Now that you have imported all the external faces of the cylinder, you need to l
 We use the angle between surface normals to perform this separation. Go to the _PolyData_ tab and select the _Boundary_ subtab. Make sure that a $50.0$ degree angle is selected and that the file _cylinder.stl_ is shown. Click on _Extract Boundaries_ to create three separate surfaces. 
 
 <figure>
-  <img class="svSolverImg" src="documentation/flowsolver/imgs/SeparateWithAngles.png" width="70%">
-  <figcaption class="svSolverCaption" >Separating boundary surfaces using a normal angle threshold of 50 degrees</figcaption>
+  <img class="svImg svImgLg" src="documentation/flowsolver/imgs/SeparateWithAngles.png">
+  <figcaption class="svCaption" >Separating boundary surfaces using a normal angle threshold of 50 degrees</figcaption>
 </figure>
 
 If you go back to the _Model_ tab, you should now be able to see three surfaces listed under the _Face Ids_ listbox. Generic names have been assigned to the faces and we should name these surfaces before proceeding to make the assignment of boundary conditions easier. 
 
 <figure>
-  <img class="svSolverImg" src="documentation/flowsolver/imgs/SeparatedSurfaces.png" width="70%">
-  <figcaption class="svSolverCaption" >The resulting surfaces are listed on the right</figcaption>
+  <img class="svImg svImgLg" src="documentation/flowsolver/imgs/SeparatedSurfaces.png">
+  <figcaption class="svCaption" >The resulting surfaces are listed on the right</figcaption>
 </figure>
 
 If you click on a single item on the list, you can change the color of a face using the _Change Color_ button. Additionally, you can also right-mouse-click in the **SimVascular** 3-D Graphics Window, place the mouse pointer on top of a face of the model, click the key “p” (for “pick”), and see what face name it has in the  SimVascular GUI. Go ahead and assign the names of **inlet**, **outlet** and **wall** to the various faces. Use the button _Set Value_ to change the name of the face selected on the _Face Ids_ listbox. Your screen should now appear as in the following figure. 
 
 <figure>
-  <img class="svSolverImg" src="documentation/flowsolver/imgs/FacesIdAssigned.png" width="70%">
-  <figcaption class="svSolverCaption" >A name is assigned to the inlet, outlet and wall boundary surfaces, respectively</figcaption>
+  <img class="svImg svImgLg" src="documentation/flowsolver/imgs/FacesIdAssigned.png">
+  <figcaption class="svCaption" >A name is assigned to the inlet, outlet and wall boundary surfaces, respectively</figcaption>
 </figure>
 
 Before proceeding it is a good idea to save your model. Click on _Save Model_ under the _File Input/Output_ dropdown. 
 Let’s go now to the meshing menu to generate the mesh and the rest of the input files that will be used by **svSolver**. Two meshing engines are currently supported in **SimVascular**, _MeshSim_ and _TetGen_. In this tutorial we will use TetGen to produce a discrete solid mesh of our cylinder from its triangulated exterior. The process of generating a solid mesh with MeshSim is very similar (see the SimVascular [meshing guide](docsMeshing.html#meshSec2)). In the _Set maximum tetrahedron edge size_ editbox enter a value of $0.5$ (cm). This will give us approximately 8 finite elements across the diameter of the vessel (recall that the diameter of this cylinder is $D = 2\,r = 4.0$ cm).
 
 <figure>
-  <img class="svSolverImg" src="documentation/flowsolver/imgs/tetGenOptions.png" width="70%">
-  <figcaption class="svSolverCaption" >Main TetGen meshing window and associated options</figcaption>
+  <img class="svImg svImgLg" src="documentation/flowsolver/imgs/tetGenOptions.png">
+  <figcaption class="svCaption" >Main TetGen meshing window and associated options</figcaption>
 </figure>
 
 Click on the _Run Mesher (Internal)_ button to generate the finite element mesh. This process will take a few seconds. 
 This will generate an isotropic mesh with $68469$ elements and $16439$ nodes.
 
 <figure>
-  <img class="svSolverImg" src="documentation/flowsolver/imgs/MeshedCylinder.png" width="70%">
-  <figcaption class="svSolverCaption" >Final tetrahedral mesh visualized in the <b>SimVascular</b> GUI</figcaption>
+  <img class="svImg svImgLg" src="documentation/flowsolver/imgs/MeshedCylinder.png">
+  <figcaption class="svCaption" >Final tetrahedral mesh visualized in the <b>SimVascular</b> GUI</figcaption>
 </figure>
 
 Now, click on the _Write Files_ button to generate all the files that **svPresolver** will need.
 
 <figure>
-  <img class="svSolverImg" src="documentation/flowsolver/imgs/CylinderFiles.png" width="50%">
-  <figcaption class="svSolverCaption" >Folder structure and file created after clicking on <b>Write Files</b></figcaption>
+  <img class="svImg svImgMd" src="documentation/flowsolver/imgs/CylinderFiles.png">
+  <figcaption class="svCaption" >Folder structure and file created after clicking on <b>Write Files</b></figcaption>
 </figure>
 
 These files are:

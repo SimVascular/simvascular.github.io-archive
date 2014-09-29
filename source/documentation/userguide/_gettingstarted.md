@@ -5,11 +5,13 @@
 When you first launch **SimVascular**, you will see the following windows:background window and startup window.
 
 <figure>
-<img class="userGuideFigure"  src="documentation/userguide/imgs/getting_started/1.jpg" width="60%"> 
+  <img class="svImg svImgLg"  src="documentation/userguide/imgs/getting_started/1.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
-<br>
+
 <figure>
-<img class="userGuideFigure"  src="documentation/userguide/imgs/getting_started/2.jpg" width="60%"> 
+  <img class="svImg svImgLg"  src="documentation/userguide/imgs/getting_started/2.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 The Startup Window will automatically disappear once SimVascular has loaded. The black Background Window will remain open, running in the background, for the entirety of your session. 
@@ -19,8 +21,10 @@ The Startup Window will automatically disappear once SimVascular has loaded. The
 ###Overview
 
 Once **SimVascular** has loaded, you will see the following main window:
+
 <figure>
-<img class="userGuideFigure"  src="documentation/userguide/imgs/getting_started/3.jpg" width="100%"> 
+  <img class="svImg svImgXl"  src="documentation/userguide/imgs/getting_started/3.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 **BOX A | Menu Bar:** The menu bar that is enclosed by box “A” (top left corner) includes some file options. These functions will be used to load/save files such as paths and groups that you have created in SimVascular. It also provides view control and you can hide tabs in BOX B and BOX D. 
@@ -43,5 +47,6 @@ It is recommended that the files that are created for each project are all saved
 	“Set default filenames using project directory name?” Select, “Yes.”
 
 <figure>
-<img class="userGuideFigure"  src="documentation/userguide/imgs/getting_started/4.jpg" width="40%"> 
+  <img class="svImg svImgSm" src="documentation/userguide/imgs/getting_started/4.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>

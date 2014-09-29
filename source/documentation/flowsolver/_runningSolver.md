@@ -39,7 +39,7 @@ The solver writes a file called **histor.dat** containing details that allows to
 <td> (0) </td>
 <td> 2.10E+002 </td>
 <td> 2.62E+028 </td>
-<td> < -10474 1 | 15 > </td>
+<td> &lt; -10474 1 | 15 &gt; </td>
 <td> [199-190] </td>
 </tr>
 
@@ -50,7 +50,7 @@ The solver writes a file called **histor.dat** containing details that allows to
 <td> (-1) </td>
 <td> 2.93E-001 </td>
 <td> 5.15E+000 </td>
-<td> < -3237 1 | 13> </td>
+<td> &lt; -3237 1 | 13&gt; </td>
 <td> [117-200] </td>
 </tr>
 
@@ -61,7 +61,7 @@ The solver writes a file called **histor.dat** containing details that allows to
 <td> (-16) </td>
 <td> 1.75E-001 </td>
 <td> 1.69E-001 </td>
-<td> < -1357 1 | 5> </td>
+<td> &lt; -1357 1 | 5&gt; </td>
 <td> [63-1] </td>
 </tr>
 
@@ -72,7 +72,7 @@ The solver writes a file called **histor.dat** containing details that allows to
 <td> (-2) </td>
 <td> 8.07E-002 </td>
 <td> 2.67E-002 </td>
-<td> < -3286 1 | 11> </td>
+<td> &lt; -3286 1 | 11&gt; </td>
 <td> [21-13] </td>
 </tr>
 
@@ -83,7 +83,7 @@ The solver writes a file called **histor.dat** containing details that allows to
 <td> (-10) </td>
 <td> 8.75E-002 </td>
 <td> 2.44E-002 </td>
-<td> < -2342 1 | 7> </td>
+<td> &lt; -2342 1 | 7&gt; </td>
 <td> [36-1] </td>
 </tr>
 
@@ -94,7 +94,7 @@ The solver writes a file called **histor.dat** containing details that allows to
 <td> (-3) </td>
 <td> 2.13E-002 </td>
 <td> 3.59E-003 </td>
-<td> < -3277 1 | 10> </td>
+<td> &lt; -3277 1 | 10&gt; </td>
 <td> [6-6] </td>
 </tr>
 
@@ -105,7 +105,7 @@ The solver writes a file called **histor.dat** containing details that allows to
 <td> (-2) </td>
 <td> 5.57E-002 </td>
 <td> 6.13E-003 </td>
-<td> < -3146 1 | 9> </td>
+<td> &lt; -3146 1 | 9&gt; </td>
 <td> [24-2] </td>
 </tr>
 
@@ -116,7 +116,7 @@ The solver writes a file called **histor.dat** containing details that allows to
 <td> (-7) </td>
 <td> 7.33E-003 </td>
 <td> 3.15E-004 </td>
-<td> < -3233 1 | 11> </td>
+<td> &lt; -3233 1 | 11&gt; </td>
 <td> [9-5] </td>
 </tr>
 
@@ -127,7 +127,7 @@ The solver writes a file called **histor.dat** containing details that allows to
 <td> (-1) </td>
 <td> 4.22E-002 </td>
 <td> 3.45E-004 </td>
-<td> < -3141 1 | 10> </td>
+<td> &lt; -3141 1 | 10&gt; </td>
 <td> [27-3] </td>
 </tr>
 
@@ -138,7 +138,7 @@ The solver writes a file called **histor.dat** containing details that allows to
 <td> (-10) </td>
 <td> 3.57E-003 </td>
 <td> 1.24E-004 </td>
-<td> < -3237 1 | 12> </td>
+<td> &lt; -3237 1 | 12&gt; </td>
 <td> [7-5] </td>
 </tr>
 
@@ -149,7 +149,7 @@ The solver writes a file called **histor.dat** containing details that allows to
 <td> (0) </td>
 <td> 3.31E-002 </td>
 <td> 3.16E-004 </td>
-<td> < -3024 1 | 10> </td>
+<td> &lt; -3024 1 | 10&gt; </td>
 <td> [16-2] </td>
 </tr>
 
@@ -160,7 +160,7 @@ The solver writes a file called **histor.dat** containing details that allows to
 <td> (-10) </td>
 <td> 3.98E-003 </td>
 <td> 3.30E-005 </td>
-<td> < -3220 1 | 11> </td>
+<td> &lt; -3220 1 | 11&gt; </td>
 <td> [6-5] </td>
 </tr>
 
@@ -171,7 +171,7 @@ The solver writes a file called **histor.dat** containing details that allows to
 <td> (0) </td>
 <td> 2.70E-002 </td>
 <td> 1.87E-004 </td>
-<td> < -3019 1 | 10> </td>
+<td> &lt; -3019 1 | 10&gt; </td>
 <td> [8-2] </td>
 </tr>
 
@@ -182,7 +182,7 @@ The solver writes a file called **histor.dat** containing details that allows to
 <td> (-11) </td>
 <td> 3.50E-003 </td>
 <td> 4.35E-005 </td>
-<td> < -2993 1 | 11> </td>
+<td> &lt; -2993 1 | 11&gt; </td>
 <td> [5-5] </td>
 </tr>
 
@@ -193,7 +193,7 @@ The solver writes a file called **histor.dat** containing details that allows to
 <td> (-1) </td>
 <td> 2.25E-002 </td>
 <td> 1.16E-004 </td>
-<td> < -2993 1 | 10> </td>
+<td> &lt; -2993 1 | 10&gt; </td>
 <td> [8-2] </td>
 </tr>
 
@@ -204,7 +204,7 @@ The solver writes a file called **histor.dat** containing details that allows to
 <td> (-11) </td>
 <td> 2.92E-003 </td>
 <td> 5.63E-005 </td>
-<td> < -2871 1 | 12> </td>
+<td> &lt; -2871 1 | 12&gt; </td>
 <td> [5-5] </td>
 </tr>
 
@@ -215,7 +215,7 @@ The solver writes a file called **histor.dat** containing details that allows to
 <td> (-1) </td>
 <td> 1.89E-002 </td>
 <td> 8.19E-005 </td>
-<td> < -2876 1 | 10> </td>
+<td> &lt; -2876 1 | 10&gt; </td>
 <td> [7-2] </td>
 </tr>
 
@@ -226,7 +226,7 @@ The solver writes a file called **histor.dat** containing details that allows to
 <td> (-12) </td>
 <td> 2.47E-003 </td>
 <td> 7.07E-005 </td>
-<td> < -2850 1 | 12> </td>
+<td> &lt; -2850 1 | 12&gt; </td>
 <td> [7-5] </td>
 </tr>
 
@@ -237,7 +237,7 @@ The solver writes a file called **histor.dat** containing details that allows to
 <td> (-2) </td>
 <td> 1.65E-002 </td>
 <td> 8.52E-005 </td>
-<td> < -2871 1 | 10> </td>
+<td> &lt; -2871 1 | 10&gt; </td>
 <td> [11-3] </td>
 </tr>
 
@@ -248,7 +248,7 @@ The solver writes a file called **histor.dat** containing details that allows to
 <td> (-14) </td>
 <td> 1.39E-003 </td>
 <td> 3.55E-005 </td>
-<td> < -6284 2 | 11> </td>
+<td> &lt; -6284 2 | 11&gt; </td>
 <td> [7-5] </td>
 </tr>
 
@@ -259,7 +259,7 @@ The solver writes a file called **histor.dat** containing details that allows to
 <td> (-2) </td>
 <td> 1.42E-002 </td>
 <td> 5.24E-005 </td>
-<td> < -2845 1 | 10> </td>
+<td> &lt; -2845 1 | 10&gt; </td>
 <td> [6-3] </td>
 </tr>
 
@@ -270,7 +270,7 @@ The solver writes a file called **histor.dat** containing details that allows to
 <td> (-14) </td>
 <td> 1.28E-003 </td>
 <td> 3.41E-005 </td>
-<td> < -6284 2 | 11> </td>
+<td> &lt; -6284 2 | 11&gt; </td>
 <td> [8-5] </td>
 </tr>
 
@@ -281,7 +281,7 @@ The solver writes a file called **histor.dat** containing details that allows to
 <td> (-3) </td>
 <td> 1.23E-002 </td>
 <td> 4.06E-005 </td>
-<td> < -2728 1 | 10> </td>
+<td> &lt; -2728 1 | 10&gt; </td>
 <td> [7-3] </td>
 </tr>
 
@@ -292,7 +292,7 @@ The solver writes a file called **histor.dat** containing details that allows to
 <td> (-15) </td>
 <td> 1.18E-003 </td>
 <td> 3.95E-005 </td>
-<td> < -6284 2 | 11> </td>
+<td> &lt; -6284 2 | 11&gt; </td>
 <td> [9-6] </td>
 </tr>
 </table>
@@ -309,7 +309,7 @@ The solver writes a file called **histor.dat** containing details that allows to
 
 - **f: entropy norm of the residual for the pressure field (max $\Delta p/ p$)**
 
-- **g: < a – b | c>**
+- **g: &gt; a – b | c&gt;**
 + a: block where the maximum residual happens (each block has 255 elements by default).
 + b: node in the block with the maximum error.
 + c: logarithmic measure of the ratio between the maximum residusl and the average residual: want this number to be as small as possible: it will be an

@@ -7,7 +7,8 @@ Along the path we created, a group of contours of the aorta vessel wall can be d
 	Click the button “Create New Group”
 
 <figure>
-<img class="userGuideFigure"  src="documentation/userguide/imgs/modeling/segmentation1.jpg" width="100%"> 
+  <img class="svImg svImgXl"  src="documentation/userguide/imgs/modeling/segmentation1.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 In the group treeview, a group with the name *aorta* appears.
@@ -29,7 +30,8 @@ To visualize 2-D segmentations (contours):
 	Toggle on: Display Options → Level Set → segmentation
 
 <figure>
-<img class="userGuideFigure"  src="documentation/userguide/imgs/modeling/segmentation2.jpg" width="100%"> 
+  <img class="svImg svImgXl"  src="documentation/userguide/imgs/modeling/segmentation2.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 Now under the 3D Display  Window, there are two more 2D Display Windows showing image intensity and potential on the probe plane (the green square on the 3D Display Window).
@@ -40,7 +42,8 @@ Now under the 3D Display  Window, there are two more 2D Display Windows showing 
 	Click the button “Add Current Segmentation to Group”
 
 <figure>
-<img class="userGuideFigure"  src="documentation/userguide/imgs/modeling/segmentation3.jpg" width="100%"> 
+  <img class="svImg svImgXl"  src="documentation/userguide/imgs/modeling/segmentation3.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 A segmentation (contour) of the aorta on the probe plane is defined and added to the group *aorta*, as shown in the group treeview. 
@@ -59,7 +62,8 @@ To show all the paths and the segmentations for the aorta and the right iliac ar
 	Click the button “Display Groups” and choose a color
 
 <figure>
-<img class="userGuideFigure"  src="documentation/userguide/imgs/modeling/segmentation4.jpg" width="100%"> 
+  <img class="svImg svImgXl"  src="documentation/userguide/imgs/modeling/segmentation4.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 To save groups:

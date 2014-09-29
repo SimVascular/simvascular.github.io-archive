@@ -1,4 +1,4 @@
-###Meshing Using TetGen
+### Meshing Using TetGen
 
 	Tab: TetGen → MeshOptions
 	Meshing Kernel: TetGen
@@ -11,13 +11,15 @@
 	Click “Run Mesher (Internal)”
 
 <figure>
-<img class="userGuideFigure"  src="documentation/userguide/imgs/meshing/tetgen1.jpg" width="100%"> 
+  <img class="svImg svImgXl" src="documentation/userguide/imgs/meshing/tetgen1.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 Now the mesh is created for the model as below.
 
 <figure>
-<img class="userGuideFigure"  src="documentation/userguide/imgs/meshing/tetgen2.jpg" width="100%"> 
+  <img class="svImg svImgXl" src="documentation/userguide/imgs/meshing/tetgen2.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 To output mesh data files (later used for simulation):

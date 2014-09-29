@@ -1,6 +1,6 @@
 $("a.thumbnail").click(function() {
 
-    var $target         = "ani_"+$(this).attr("rel");
+    var $target         = "ani_"+$(this).attr("id");
     var $content_path   = "img/gallery/";
 
     
@@ -30,4 +30,4 @@ $("a.thumbnail").click(function() {
     });
 });
 
-$("a.thumbnail[rel='CABG']").click();
+$("a.thumbnail[id='CABG']").click();

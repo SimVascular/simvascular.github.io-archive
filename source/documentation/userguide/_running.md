@@ -12,7 +12,8 @@
 	Click “Run Simulation” 
 
 <figure>
-<img class="userGuideFigure"  src="documentation/userguide/imgs/simulation/running1.jpg" width="70%"> 
+  <img class="svImg svImgLg"  src="documentation/userguide/imgs/simulation/running1.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 Now SimVascular/Solver is running. To check the progress of simulation:
@@ -21,7 +22,8 @@ Now SimVascular/Solver is running. To check the progress of simulation:
 	Go to the tab “Console”
 
 <figure>
-<img class="userGuideFigure"  src="documentation/userguide/imgs/simulation/running2.jpg" width="70%"> 
+  <img class="svImg svImgLg"  src="documentation/userguide/imgs/simulation/running2.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 In the console, the first column is the time step number, the second is the time used in seconds, and the third column is the nonlinear residual which gives you an idea of how accurate the solution is.
@@ -40,7 +42,8 @@ Convert the simulation files to .vtu files, which we can use to show the results
 	Click “Convert Files Only”
 
 <figure>
-<img class="userGuideFigure"  src="documentation/userguide/imgs/simulation/convertingtovtu.jpg" width="70%"> 
+  <img class="svImg svImgLg"  src="documentation/userguide/imgs/simulation/convertingtovtu.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 Since it is a steady case, only the last time step is needed. The output file *steady.vtu* is created in the folder *simulation*.

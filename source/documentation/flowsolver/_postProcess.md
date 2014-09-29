@@ -10,8 +10,8 @@ In order to generate the visualization files (*.vis) and (*.vtu) files, you need
 - Select the folder that contains the restart files under **Input Files/Dir** and that where you want your VTU files to be written under **Output Files/Dir**. 
 
 <figure>
-  <img class="svSolverImg" src="documentation/flowsolver/imgs/post_VTU.png" width="70%">
-  <figcaption class="svSolverCaption" >Creating VTU result files from <b>svSolver</b> restart files.</figcaption>
+  <img class="svImg svImgLg" src="documentation/flowsolver/imgs/post_VTU.png">
+  <figcaption class="svCaption" >Creating VTU result files from <b>svSolver</b> restart files.</figcaption>
 </figure>
 
 The following options are also provided:
@@ -32,8 +32,8 @@ To visualize the time dependent results we use **ParaView**.
 - Select _File->Open..._. The _Open File_ dialog should appear. Go to the folder **n-procs_case** (where **n** is the number of processors you chose when running **svSolver**), select the entry **cylinder_..vtu** and click **OK**.
 
 <figure>
-  <img class="svSolverImg" src="documentation/flowsolver/imgs/open_PARAVIEW.png" width="70%">
-  <figcaption class="svSolverCaption" >Opening a collection of time step results in Paraview</figcaption>
+  <img class="svImg svImgLg" src="documentation/flowsolver/imgs/open_PARAVIEW.png">
+  <figcaption class="svCaption" >Opening a collection of time step results in Paraview</figcaption>
 </figure>
 
 - Under _Properties_ click **Apply**. The solid model will show up on the screen.
@@ -41,14 +41,14 @@ To visualize the time dependent results we use **ParaView**.
 - At this point, you can interact with the model by rotating it using the rotation or translation buttons. Use the **Surface with Edges** option to visualize the finite element mesh.
 
 <figure>
-  <img class="svSolverImg" src="documentation/flowsolver/imgs/para_showEdges.png" width="40%">
-  <figcaption class="svSolverCaption" >By showing edges, the finite element mesh will become apparent</figcaption>
+  <img class="svImg svImgMd" src="documentation/flowsolver/imgs/para_showEdges.png">
+  <figcaption class="svCaption" >By showing edges, the finite element mesh will become apparent</figcaption>
 </figure>
 
 
 <figure>
-  <img class="svSolverImg" src="documentation/flowsolver/imgs/para_CylMesh.png" width="70%">
-  <figcaption class="svSolverCaption" >Visualizing the cylinder mesh in Paraview</figcaption>
+  <img class="svImg svImgLg" src="documentation/flowsolver/imgs/para_CylMesh.png">
+  <figcaption class="svCaption" >Visualizing the cylinder mesh in Paraview</figcaption>
 </figure>
 
 ### Visualizing Pressure Results
@@ -56,15 +56,15 @@ To visualize the time dependent results we use **ParaView**.
 - First you should increase your current result time from **0** to **20** (the last available time step). 
 
 <figure>
-  <img class="svSolverImg" src="documentation/flowsolver/imgs/para_time.png" width="25%">
-  <figcaption class="svSolverCaption" >Choosing the last time step results in Paraview</figcaption>
+  <img class="svImg svImgSm" src="documentation/flowsolver/imgs/para_time.png">
+  <figcaption class="svCaption" >Choosing the last time step results in Paraview</figcaption>
 </figure>
 
 - You should now see the available result quantities for your model, i.e., cellsNormals, GlobalElementID, GlobalNodeID, pressure, timeDeriv, traction, velocity, WSS. 
 
 <figure>
-  <img class="svSolverImg" src="documentation/flowsolver/imgs/para_Results.png" width="15%">
-  <figcaption class="svSolverCaption" >Available model results</figcaption>
+  <img class="svImg svImgXs" src="documentation/flowsolver/imgs/para_Results.png">
+  <figcaption class="svCaption" >Available model results</figcaption>
 </figure>
 
 - Go to _Properties-Coloring_ click on **Show** and **Rescale**. The default color map of the model is showing the pressure results in dynes/cm$^{2}$. Let’s transform the pressure scale to mmHg (1 mmHg = 1333.2 dyn/cm$^{2}$). To do this, use the **calculator** filter.
@@ -76,6 +76,6 @@ To visualize the time dependent results we use **ParaView**.
 You should now see the following contour plot. 
 
 <figure>
-  <img class="svSolverImg" src="documentation/flowsolver/imgs/para_ConvertTommHg.png" width="70%">
-  <figcaption class="svSolverCaption" >Final contour of pressures in mmHg</figcaption>
+  <img class="svImg svImgLg" src="documentation/flowsolver/imgs/para_ConvertTommHg.png">
+  <figcaption class="svCaption" >Final contour of pressures in mmHg</figcaption>
 </figure>

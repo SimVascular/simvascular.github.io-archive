@@ -9,7 +9,8 @@ With the two groups of segmentation, we are now able to create a model for the a
 	Click the button “Boolean”
 
 <figure>
-<img class="userGuideFigure"  src="documentation/userguide/imgs/modeling/polydata1.jpg" width="100%"> 
+  <img class="svImg svImgXl"  src="documentation/userguide/imgs/modeling/polydata1.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 A geometric model is created for the blood vessels.
@@ -24,7 +25,8 @@ A model file *demo.vtp* is created in the projector folder.
 	Click the button “”Extract Boundaries”
 
 <figure>
-<img class="userGuideFigure"  src="documentation/userguide/imgs/modeling/polydata2.jpg" width="100%"> 
+  <img class="svImg svImgXl" src="documentation/userguide/imgs/modeling/polydata2.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 All the faces of the model are listed under Model Faces. 
@@ -44,7 +46,8 @@ Now we need to give them more meaningful names. Go to the tab Model. All the fac
 	Enter inflow_aorta for surf name, and click “Set Value”
 
 <figure>
-<img class="userGuideFigure"  src="documentation/userguide/imgs/modeling/polydata3.jpg" width="100%"> 
+  <img class="svImg svImgXl"  src="documentation/userguide/imgs/modeling/polydata3.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 Now the inlet face name is changde to *inflow_aorta* in the list. Similarly, we change the names of the two outlet faces and the wall. As we changed the face names, we need to save the model again.
@@ -53,5 +56,6 @@ Now the inlet face name is changde to *inflow_aorta* in the list. Similarly, we 
 	Save to the file demo.vtp
 
 <figure>
-<img class="userGuideFigure"  src="documentation/userguide/imgs/modeling/polydata4.jpg" width="100%"> 
+  <img class="svImg svImgXl"  src="documentation/userguide/imgs/modeling/polydata4.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>

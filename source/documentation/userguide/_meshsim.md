@@ -8,14 +8,11 @@
 	“Creating mesh can take a long time. Continue anyway?”: Yes
 	“Use currently selected meshing options?...” :“Yes”
 
-<figure>
-<img class="userGuideFigure"  src="documentation/userguide/imgs/meshing/meshsim1.jpg" width="100%"> 
-</figure>
-
 Now the mesh is created for the model as below.
 
 <figure>
-<img class="userGuideFigure"  src="documentation/userguide/imgs/meshing/meshsim2.jpg" width="100%"> 
+  <img class="svImg svImgXl"  src="documentation/userguide/imgs/meshing/meshsim2.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 To output mesh data files (later used for simulation):

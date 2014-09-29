@@ -123,8 +123,12 @@ footer{
    font-weight: 400;
 }
 
-/* IMAGE STYLE - SVSOLVER GUIDE */
-img.svSolverImg{
+#barIcon{
+  color: white;
+}
+
+/* IMAGE STYLE - SVGUIDE */
+img.svImg{
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -132,7 +136,8 @@ img.svSolverImg{
   margin-bottom: 5px;
 }
 
-figcaption.svSolverCaption{
+/* CAPTION STYLE - SVGUIDE */
+figcaption.svCaption{
   text-align: center;
   font-family: times;
   font-style: italic;
@@ -141,6 +146,19 @@ figcaption.svSolverCaption{
   margin-bottom: 20px;
 }
 
-#barIcon{
-  color: white;
+/* IMAGE SIZE */
+img.svImgXs{
+  width: 15%;
+}
+img.svImgSm{
+  width: 25%;
+}
+img.svImgMd{
+  width: 50%; 
+}
+img.svImgLg{
+  width: 75%; 
+}
+img.svImgXl{
+  width: 95%; 
 }

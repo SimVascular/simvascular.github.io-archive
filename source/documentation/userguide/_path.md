@@ -9,7 +9,8 @@ To create a geometric model for a vessel, you need to first create a path, which
 	Click the button “Create New Path”
 
 <figure>
-<img class="userGuideFigure"  src="documentation/userguide/imgs/modeling/path1.jpg" width="100%"> 
+  <img class="svImg svImgXl" src="documentation/userguide/imgs/modeling/path1.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 A new path *aorta* appears under the “All Paths” in the path treeview. We’ll find some center points of the vessel based on the imaging data and add them into the path. The highlighted region in the 3-D display window is the intersection of the aorta.
@@ -23,7 +24,8 @@ A new path *aorta* appears under the “All Paths” in the path treeview. We’
 <font color="red">**HELPFUL HINT:** </font>  Don’t complete hide **Display Options** pane, otherwise the volume visualization scale bars in the Volume Properties tab can’t be automatically updated.  
 
 <figure>
-<img class="userGuideFigure"  src="documentation/userguide/imgs/modeling/path2.jpg" width="100%"> 
+  <img class="svImg svImgXl"  src="documentation/userguide/imgs/modeling/path2.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 The point should appear under aorta in the path treeview.
@@ -31,7 +33,8 @@ The point should appear under aorta in the path treeview.
 Continue to move down the aorta inferiorly (from “S” to “I”) in increments of 25-50 using the I/S slider, center the 3-D cursor inside the aorta and add the center points to your path. When you reach the bifurcation (the aorta splits into the two iliac arteries), continue your path down the LEFT iliac artery:
 
 <figure>
-<img class="userGuideFigure"  src="documentation/userguide/imgs/modeling/path3.jpg" width="100%"> 
+  <img class="svImg svImgXl"  src="documentation/userguide/imgs/modeling/path3.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 <font color="red">**HELPFUL HINT:** </font>  To delete a point in the path, select the one you want to remove in the path treeview, then click Additional Options → Delete currently selected point. 
@@ -42,7 +45,8 @@ Build your path down as far as possible (you should be able to get to around I/S
 	Toggle on: Display Options → Show Points, Show Spline
 
 <figure>
-<img class="userGuideFigure"  src="documentation/userguide/imgs/modeling/path4.jpg" width="100%"> 
+  <img class="svImg svImgXl"  src="documentation/userguide/imgs/modeling/path4.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
 </figure>
 
 To save paths:

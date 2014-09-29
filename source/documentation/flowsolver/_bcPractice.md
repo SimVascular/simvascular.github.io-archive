@@ -10,8 +10,8 @@ First we need to create a file called **bct.dat** that specifies the boundary co
 In the **SimVascular** GUI window, go to the _Inflow BC_ subtab under _Simulations_. You will have to enter the following values in the various boxes/buttons of the GUI (see figure below):
 
 <figure>
-  <img class="svSolverImg" src="documentation/flowsolver/imgs/BCT_Creation.png" width="70%">
-  <figcaption class="svSolverCaption" >Creating a <b>bct.dat</b> file through the GUI</figcaption>
+  <img class="svImg scImgLg" src="documentation/flowsolver/imgs/BCT_Creation.png">
+  <figcaption class="svCaption" >Creating a <b>bct.dat</b> file through the GUI</figcaption>
 </figure>
 
 - Under **Analytic Shape of Profile**, select the **parabolic** radio button. This options allows a parabolic velocity profile to be applied at the inlet. Other oprions are **plug**, which applies a constant velocity profile throughout the inlet face and Womerseley, that uses a closed form solution for the velocity profile of pulsatile flow in arteries. 
@@ -72,8 +72,8 @@ Each block of data has, for each of the $n\_p = 220$ spatial points, the followi
 A vtp file can be written using this option to graphically visualize the velocity distribution at the inlet surface with Paraview, as shown in the picture below.
 
 <figure>
-  <img class="svSolverImg" src="documentation/flowsolver/imgs/BCT_Cration_VTP.png" width="50%">
-  <figcaption class="svSolverCaption" >Visualizing the inlet velocity profile in Paraview</figcaption>
+  <img class="svImg svImgMd" src="documentation/flowsolver/imgs/BCT_Cration_VTP.png">
+  <figcaption class="svCaption" >Visualizing the inlet velocity profile in Paraview</figcaption>
 </figure>
 
 ### Processing the \*.svpre file
@@ -81,8 +81,8 @@ A vtp file can be written using this option to graphically visualize the velocit
 To process the \*.svpre file, entering the appropriate commands to define the boundary conditions of this problem, we go to the _Simulations->Create 3-D Solver Files_ tab. In the “Create PreSolver script file” menu (see figure  below), make sure that the right \*.supre file is loaded in the box (in this case, it should be cylinder-steady.supre . Click on the “Load PreSolver scriptfile” button. The following screen will appear:
 
 <figure>
-  <img class="svSolverImg" src="documentation/flowsolver/imgs/SVPre_File.png" width="70%">
-  <figcaption class="svSolverCaption" >Running <b>svPre</b> through the GUI</figcaption>
+  <img class="svImg svImgLg" src="documentation/flowsolver/imgs/SVPre_File.png">
+  <figcaption class="svCaption" >Running <b>svPre</b> through the GUI</figcaption>
 </figure>
 
 The contents of the \*.supre script file are:

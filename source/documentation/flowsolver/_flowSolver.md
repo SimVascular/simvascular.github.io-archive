@@ -136,8 +136,8 @@ This is the block that controls the Boundary Conditions and the other features s
 Let us illustrate this with a more complex problem with 4 outlets (see figure below)
 
 <figure>
-  <img class="svSolverImg" src="documentation/flowsolver/imgs/FourOutlets.png" width="50%">
-  <figcaption class="svSolverCaption" >Schematic representation of a model with four outlets</figcaption>
+  <img class="svImg svImgMd" src="documentation/flowsolver/imgs/FourOutlets.png">
+  <figcaption class="svCaption" >Schematic representation of a model with four outlets</figcaption>
 </figure>
 
 The *.supre file should read something like this:
