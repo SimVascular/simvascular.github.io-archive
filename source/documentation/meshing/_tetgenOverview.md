@@ -8,7 +8,7 @@ TetGen is an open source mesh generation software developed by Hang Si through W
 
 ### TetGen Interface
 
-The TetGen tab includes all of the the operations to run an open source using a discrete polydata. The interface for TetGen includes three tabs:
+The TetGen tab includes all of the the operations to run an open source meshing using a discrete polydata. The interface for TetGen includes three tabs:
 
 <figure>
   <img class="svImg svImgLg" src="documentation/meshing/img/TetGen_Tabs.png">
@@ -41,7 +41,7 @@ Button or Widget Functionality:
 #### TetGen Flags
 	* Specify the TetGen meshing parameters. These parameters apply ONLY to the volumetric meshing operation.
 	 - O: Specity the number of times to optomize the mesh. This moves nodes to reach a better quality mesh.
-	 -  q: Specify a quality measure for the mesh. This number corresponds to the ratio between the radius of the circumsphere of an element and the maximum edge size (See below for figure). This number can be anywhere from 2.0 to 1.1, and a lower number corresponds to a higher quality element. A mesh with a quality ratio 1.0 is not attainable and the mesher will run infinitely.  
+	 - q: Specify a quality measure for the mesh. This number corresponds to the ratio between the radius of the circumsphere of an element and the maximum edge size (See below for figure). This number can be anywhere from 2.0 to 1.1, and a lower number corresponds to a higher quality element. A mesh with a quality ratio 1.0 is not attainable and the mesher will run infinitely.  
 	 - T: Apply a tolerance to check whether a point lies on the surface or not (Default is $10^{-8}$).
 	 - Y: Preserve the exact surface mesh. If this parameter is used without a surface remeshing, make sure a mesh size that corresponds to the surface mesh is applied.
 	 - M: Do not merge facets that are coplanar or have very close vertices.
@@ -53,7 +53,7 @@ Button or Widget Functionality:
 
 #### Basic Options
 
-	* Set maximum edge size for equilateral triangle - Apply a mesh size. TetGen applies a maximum tetrahedron volume constraint. The value here is an edge size (a). The volume is then computed from this as a tetrahedron with equilateral sides. (i.e. $V = (a^3)/(6*sqrt(2))$)
+	* Set maximum edge size for equilateral triangle - Apply a mesh size. TetGen applies a maximum tetrahedron volume constraint. The value here is an edge size (a). The volume is then computed from this as a tetrahedron with equilateral sides. Volume of an equilateral tetrahedron: $V = (a^3)/(6*sqrt(2))$
 	* Run Mesher: Once all the meshing parameters are specified, run TetGen within SimVascular.
 
 #### Write Files

@@ -73,7 +73,7 @@ To add local size meshing and boundary layer meshing, select a face in the 3D vi
 ##### Local Size and Curvature
 	* Type: Select the mesh edge size type and apply it to the selected part of the model. 
 		- Local Max Edge Size: Specify maximum edge size for selected part of the model. If this local edge size is coarser than the global edge size, the global edge size will be used. 
-		- Local Max Curvature Size: Specify maximum curvature size for selected part of the model.
+		- Local Max Curvature Size: Specify maximum curvature size for selected part of the model. See **Curvature** section below for description.
 		- Local Min Curvature Size: Specify minimum curvature size for selected patt of the model. If this local curvature size is larger than the global curvature minimum, the global minimum curvature will be used.
 	* Size Type: Select absolute or relative
 		- Absolute - is used to specify a number based on the dimensions of the model. 
@@ -161,6 +161,12 @@ There are found different types of boundary layer meshing and can be applied on 
 Displays the current macro for the specified meshing parameters. These parameters are written to the .mss script file when the mesh is run.
 
 #### Curvature "UPDATE"
+Curvature refinement allows the mesh to be automatically refined to match the curvature of the entities in the geometric model. This allows MeshSim to automatically control the level of geometric approximation in the mesh. The value specified for curvature is a value relative to the element size. In the figure below, $*Curv Size*$>d/h$. The value specified should always be less than 0.5, and typical values are in the range of 0.01 to 0.4. A smaller value corresponds to more refinement. 
+
+<figure>
+  <img class="svImg svImgLg" src="documentation/meshing/img/MeshSim_Curvature.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
 
 ### Adapt Tab
 
