@@ -1,4 +1,4 @@
-### Boundary Layer Meshing
+## Boundary Layer Meshing
 
 When simulating blood flow, interesting phenomenon can occur near the vessel walls.  Under laminar flow, for example, boundary layers can form with large velocity and pressure gradients near the wall.  It is advantageous to have increased mesh density in the areas of high gradients.  If a preferential flow direction is known, you can often “elongate” elements in the direction of the flow without loss of accuracy to reduce computational costs.  In the area of mesh generation applied to fluid flow, this is often referred to as boundary layer meshing.
 

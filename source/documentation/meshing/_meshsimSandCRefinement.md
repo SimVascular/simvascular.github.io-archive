@@ -1,4 +1,4 @@
-### Spherical Refinement
+## Spherical Refinement
 
 When simulating blood flow, interesting phenomenon can occur around the site of vessel bifurcations. It is advantageous to have increased mesh density at and around bifurcations. In this section we will refine the mesh at the abdominal aorta and common iliac artery bifurcation using sphere refinement:
 
@@ -36,7 +36,7 @@ The mesh in the area around the bifurcation should now be refined as compared to
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-### Spherical Refinement
+## Cylindrical Refinement
 
 In addition to the interesting phenomenon that may occur at the site of vessel bifurcations, we may be similarly interested in blood flow phenomenon at other sites of the model, such as the site of an aneurism. To refine the mesh of sites of interest along the vessel, we can use cylindrical refinement. Cylinder refinement is very similar to spherical refinement; however for cylinder refinement we will define a "length" and a "normal" direction in addition to radius and size. In this section we will refine the mesh near the outflow face of the left common iliac artery.
 

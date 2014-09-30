@@ -1,4 +1,4 @@
-### Local Mesh Refinement
+## Local Mesh Refinement
 
 Often, a designer may have insight into locations of interest or regions of complex behavior and may want to locally increase the mesh density in those regions to improve the quality of the given finite element analysis results for a given number of nodes.  In this example, we will assume the ends of a model are areas of interest and want to locally increase the mesh density near these faces.  In SimVascular you can specify different mesh densities on a local geometric model face.  First, let’s review the solid model.
 
