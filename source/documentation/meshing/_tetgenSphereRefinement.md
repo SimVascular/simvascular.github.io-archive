@@ -1,4 +1,4 @@
-### Spherical Refinement
+## Spherical Refinement
 
 When simulating blood flow, interesting phenomenon can occur around the site of vessel bifurcations. It is advantageous to have increased mesh density at and around bifurcations. In this section we will refine the mesh at the abdominal aorta and common iliac artery bifurcation using sphere refinement:
 
