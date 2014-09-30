@@ -50,7 +50,7 @@ In the present work, a combination of these quality indicators is used by an ite
 
 ### SimVascular Meshers
 
-This document describes how to use the Meshing software for discrete and continuous solids. SimVascular meshing includes both open source and commercial options. The commercial mesher in SimVascular is MeshSim(citation) and provides boundary layer, mesh refinement, and isotropic/anisotropic adaptive meshing. MeshSim is a very powerful tool and can provide high quality meshes for irregular and complicated domains. The open source meshing includes the open source libraries of TetGen(citation) and the Vascular Modeling Tool Kit(VMTK)(citation). These tools are combined to provide boundary layer, mesh refinement, and isotropic adaptive meshing. 
+This document describes how to use the Meshing software for discrete and continuous solids. SimVascular meshing includes both open source and commercial options. The commercial mesher in SimVascular is MeshSim and provides boundary layer, mesh refinement, and isotropic/anisotropic adaptive meshing. MeshSim is a very powerful tool and can provide high quality meshes for irregular and complicated domains. The open source meshing includes the open source libraries of TetGen and the Vascular Modeling Tool Kit(VMTK). These tools are combined to provide boundary layer, mesh refinement, and isotropic adaptive meshing. 
 
 The following describes the file formats used by the meshers in SimVascular:
 
