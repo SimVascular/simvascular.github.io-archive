@@ -1,8 +1,9 @@
-/*!
- * Start Bootstrap - Shop Item HTML Template (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
+@import "variables";
+@import "mixins";
+
+$grid-float-breakpoint: 1000px;
+
+@import "bootstrap";
 
 body {
   position: relative;
@@ -43,6 +44,10 @@ footer{
 .subgroup {
     padding-top: 50px;
     padding-bottom: 0px;
+}
+
+.bottom-buffer {
+    padding-bottom: 50px;
 }
 
 #sidebar{
@@ -116,11 +121,6 @@ footer{
 
 #solverTable th {
    text-align: center;   
-}
-
-#brandName{
-   font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
-   font-weight: 400;
 }
 
 #barIcon{

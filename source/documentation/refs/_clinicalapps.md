@@ -9,3 +9,7 @@ A.L. Marsden, **Simulation based planning of surgical interventions in pediatric
 A.S. Les, S.C. Shadden, C.A. Figueroa, J.M. Park, M.M. Tedesco, R.J. Herfkens, R.L. Dalman and C.A. Taylor, **Quantification of hemodynamics in abdominal aortic aneurysms during rest and exercise using magnetic resonance imaging and computational fluid dynamics**, _Annals of Biomedical Engineering_, 38(4):1288-1313, 2010. [Link](http://link.springer.com/article/10.1007/s10439-010-9949-x#page-1)
 
 J. M. Oakes, A. L. Marsden, C. Grandmont, S. C. Shadden, C. Darquenne and I. E. Vignon-Clementel, **Airflow and Particle Deposition Simulations in Health and Emphysema: From In Vivo to In Silico Animal Experiments**, _Annals of Biomedical Engineering_, 42(4):899-914, 2014. [Link](http://link.springer.com/article/10.1007/s10439-013-0954-8#page-1)
+
+#### Simbios
+
+J.P. Schmidt, S.L. Delp, M.A. Sherman, C.A. Taylor, V.S. Pande, R.B. Altman, **The Simbios National Center: Systems Biology in Motion**, _Proceedings of the IEEE, special issue on Computational System Biology_, 96(8):1266-1280, 2008. [Link](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2811325/)

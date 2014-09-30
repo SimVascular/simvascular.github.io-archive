@@ -3,15 +3,7 @@
 
 **svSolver** solves the three-dimensional incompressible Navier-Stokes equations in an arbitrary domain, generally a vascular model reconstructed from image data. This is a complex subject with extensive underlying theory, and therefore this document will focus mainly on the practical aspects of simulation and analysis.
 
-The **svSolver** evolved from the academic finite element code PHASTA (Parallel, Hierarchical, Adaptive, Stabilized, Transient Analysis), developed mainly at RPI (Rensselaer Polytechnic Institute, Troy, NY) by Professor Kenneth Jansen. This code was in turned inspired by the Stabilized Finite Element theory developed by Professor Thomas J.R. Hughes during his Stanford years. The main features of the original PHASTA code are: 
-
-- **Parallel**: using the MPI communication protocol (Message Passing Interface), the code is able to run analysis on multiple processors, either on Shared-Memory supercomputers, computer clusters, workstations, or regular PC desktops. The [scalability](docsRefs.html#refSec1) of the code (i.e., the ability to make use of a large number of processors without significant losses in efficiency) has been proven up to several thousand processors.
-
-- **Adaptive**: the code has [mesh-adaptivity capabilities](docsRefs.html#refSec4) that make possible to generate highly anisotropic finite element meshes based on an error field computed from the finite element solution. Having mesh adaptation tools is a really important feature, since it helps to improve the quality of the numerical solution while keeping the finite element mesh size “under control”.
-
-- **Stabilized**: the code uses a Stabilized finite element formulation (more  specifically, a SUPG formulation: Streamline-Upwind Petrov-Galerkin) that allows for equal-order interpolation of the pressure and velocity fields, while maintaining numerical stability in both the diffusive and advective-dominated limits.
-
-- **Transient**: the code uses a time integration algorithm based on the generalized $\alpha$-method. This is an implicit, second-order accurate, unconditionally stable (for linear systems) algorithm with user-defined level of desired numerical dissipation. 
+The **svSolver** evolved from the academic finite element code PHASTA (Parallel, Hierarchical, Adaptive, Stabilized, Transient Analysis), developed mainly at RPI (Rensselaer Polytechnic Institute, Troy, NY) by Professor Kenneth Jansen. This code was in turned inspired by the Stabilized Finite Element theory developed by Professor Thomas J.R. Hughes during his Stanford years.
 
 Building on the original PHASTA code, there have been a number of important additions and modifications. Professor Charles Taylor’s group at Stanford University developed key additions in the areas of Boundary Conditions and Fluid-Solid Interaction (FSI) coupling. These additions are crucial to represent with a high level of realism the way blood flows in arteries, since this flow is highly dependent on the characteristics of the vascular trees that are downstream of our three-dimensional model, and the compliance of the three-dimensional vascular tree.
 

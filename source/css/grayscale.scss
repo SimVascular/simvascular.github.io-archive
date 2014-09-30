@@ -395,3 +395,25 @@ body {
 #visitorMessage{ 
   resize:none; 
 }
+
+.test{
+  border:0px;
+  border-color: black;
+  border-width: 0px;
+}
+
+.repoImgLeft{
+  float: left;
+}
+.repoImgRight{
+  float: right;
+}
+.repoImgCenter{
+  float: center;
+}
+
+.thumBlackRepo{
+  background-color: black;
+  border-color: black;
+  height: 150px;
+}
