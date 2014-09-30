@@ -11,7 +11,7 @@
 
     <title><%= current_page.data.title || "SimVascular" %></title>
 
-    <%= stylesheet_link_tag "bootstrap.min",
+    <%= stylesheet_link_tag "bootstrap",
                             "bootstrap-select.min",
                             "grayscale" %>
 
@@ -31,12 +31,24 @@
 </head>
 
   <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+  <!-- FB STUFF -->
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+
     <%= yield %>
 
     <!-- Footer -->
     <footer>
         <div class="container text-center">
-            <h5>Copyright &copy; The SimVascular Development Team - 2014</h5>
+            <h5>Copyright &copy; SV Development Team - 2014</h5>
         </div>
     </footer>
 

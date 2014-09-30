@@ -1,10 +1,7 @@
-$("a.thumbnail").click(function() {
+$("a.thumbnail").click(function(){
 
     var $target         = "ani_"+$(this).attr("id");
     var $content_path   = "img/gallery/";
-
-    // hide the current loaded poster
-    $("img.vjs-poster").hide();
     
     $("div_video").ready(function() {
       var vjs = videojs("div_video");
@@ -20,14 +17,15 @@ $("a.thumbnail").click(function() {
       ]);
 
       // replace the poster source
-      //$('#div_video video').attr('poster', $content_path+$target+".png");
+      var myposter = $content_path+$target+".png";
+      vjs.poster(myposter);
 
       // Pause
       vjs.removeClass("vjs-playing").addClass("vjs-paused");
 
       // Load the new sources
       vjs.load();
-      vjs.loop();
+      //vjs.loop();
       vjs.show();
     });
 });

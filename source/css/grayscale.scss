@@ -149,17 +149,49 @@ a {
     }
 }
 
+@media(max-width:320px) {
+    .intro {
+        height: 100%;
+        padding: 0px;
+        .intro-body {
+            .brand-heading {
+                font-size: 25px;
+            }
+
+            .intro-text {
+                font-size: 15px;
+            }
+        }
+    }
+}
+
 @media(min-width:767px) {
+    .intro {
+        height: 100%;
+        padding: 100px;
+        .intro-body {
+            .brand-heading {
+                font-size: 40px;
+            }
+
+            .intro-text {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media(min-width:1024px) {
     .intro {
         height: 100%;
         padding: 0;
         .intro-body {
             .brand-heading {
-                font-size: 100px;
+                font-size: 50px;
             }
 
             .intro-text {
-                font-size: 25px;
+                font-size: 18px;
             }
         }
     }
@@ -416,4 +448,8 @@ body {
   background-color: black;
   border-color: black;
   height: 150px;
+}
+
+.likeSch{
+  display: inline-block;
 }
