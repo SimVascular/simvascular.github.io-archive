@@ -2,7 +2,7 @@
 
 Window leveling determines the mapping between your imaging data and the colors that are displayed.  Specifically, the “window” value actually defines the center of the color range, while the level defines the width of the “band” around the center.  For example, the default color map of “[0 255]” corresponds to values of window = 127.5 and level = 255 as seen in the following color lookup table:
 
-<table class="imagingGuideTable">
+<table class="table table-bordered">
 <tr>
   <th>Scalar value</th>
   <th>Color</th>
@@ -38,7 +38,7 @@ To see what effect the window leveling has on the data displayed, first turn off
 The reason you don’t see much for the native range is because we are doing a simple linear mapping from black to white as seen in the following color lookup table:
 
 
-<table class="imagingGuideTable">
+<table class="table table-bordered">
 <tr>
   <th>Intensity value</th>
   <th>Color</th>

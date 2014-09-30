@@ -8,7 +8,7 @@ By defining the size and center of a box, you determine what sub-volume of the d
 
 To begin with, set the values as follows: 
 
-<table class="imagingGuideTable">
+<table class="table table-bordered">
   <tr>
     <th>Box dims</th>
     <th>R</th>
@@ -63,7 +63,7 @@ Visually, this displays the same sub-volume as using a “resample voxel size”
 
 Reset the values as follows: 
 
-<table class="imagingGuideTable">
+<table class="table table-bordered">
   <tr>
     <th>Box dims</th>
     <th>R</th>

@@ -10,7 +10,7 @@ The opacity transfer function should be a list of points with each point enclose
 
 This corresponds to the following piecewise linear opacity lookup table:
 
-<table class="imagingGuideTable">
+<table class="table table-bordered">
 <tr>
   <th>Scalar intensity value</th>
   <th>Opacity</th>
@@ -60,7 +60,7 @@ and press RETURN inside the entry widget.  You should see an image like that bel
 
 How did that work?  The color function corresponds to the following table, where each color component is specified as a value between 0 (turned off) to 1.0 (full intensity):
 
-<table class="imagingGuideTable">
+<table class="table table-bordered">
   <tr>
     <th rowspan="2">Scalar value</th>
     <th colspan="3">Color</th>
