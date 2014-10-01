@@ -4,11 +4,19 @@ $("a.thumbnail").click(function(){
     var $content_path   = "img/gallery/";
     
     $("div_video").ready(function() {
+      
+      // Assign Video Object
       var vjs = videojs("div_video");
+
+      // Show Poster
+      $("#div_video .vjs-poster").show();
+      
       // hide the video UI
       vjs.hide();
+      
       // and stop it from playing
       vjs.pause();
+      
       // assign the targeted videos to the source nodes
       vjs.src([
         { type: "video/mp4", src: $content_path+$target+".mp4" },
