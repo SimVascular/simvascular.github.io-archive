@@ -41,7 +41,7 @@ page "/clinical*.html", :layout => "clinical"
 end
 
 # CLINICAL TEST CASES
-["Case1"].each do |name|
+["Case1", "Case2", "Case3", "Case4"].each do |name|
   proxy "/clinical#{name}.html", "/clinicalTemplate.html", :locals => { :clinical_name => name }, :ignore => true
 end
 

@@ -1,6 +1,6 @@
 ##Clinical Data 
 
-Patient-specific volumetric image data was obtained to create physiological models and blood flow simulations. The RAS coordinate system was assumed for the image data orientation. Voxel Spacing, voxel dimensions, and physical dimensions are provided in the Right-Left (R), Anterior-Posterior (A), and Superior-Inferior (S) direction. The patient was 67 years old and male. Details of the image data are listed as below:
+Patient-specific volumetric image data was obtained to create physiological models and blood flow simulations. The RAS coordinate system was assumed for the image data orientation. Voxel Spacing, voxel dimensions, and physical dimensions are provided in the Right-Left (R ), Anterior-Posterior (A), and Superior-Inferior (S) direction. The patient was 67 years old and male. Details of the image data are listed as below:
 
 **Volumetric image data details (MR)**
 <table class="table table-bordered">
