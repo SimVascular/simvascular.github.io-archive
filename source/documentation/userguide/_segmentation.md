@@ -48,7 +48,16 @@ Now under the 3D Display  Window, there are two more 2D Display Windows showing 
 
 A segmentation (contour) of the aorta on the probe plane is defined and added to the group *aorta*, as shown in the group treeview. 
 
-Continue to move along the path in increments of about 10-20 using the “Current Position” slider until 285, and define and add segmentations to the group. If a segmentation is abnormal because the probe plane is at the vessel bifurcation region, just skip this segmentation and move down the path to get a better segmentation.  
+Continue to move along the path in increments of about 5-10 using the “Current Position” slider until approximately 285, and define and add segmentations to the group. You may wish to additionally smooth certain contours, using the 'Fourier Smooth Button'.
+Values between 6 and 10 for fourier smoothing are appropriate for this section of the aorta.
+If a segmentation is abnormal because the probe plane is at the vessel bifurcation region, just skip this segmentation and move down the path to get a better segmentation.
+
+To speed up modeling, simvascular can perform batch segmentations.  To perform batch segmentation:
+
+	Enter "155-285 by 10" in the batch segmentation text box.
+	Select "Add to Group" and "Smooth" check boxes.
+	Click "Batch Segmentation."
+
 
 Similarly, we create a path and a group of segmentations for the right iliac artery.
 
