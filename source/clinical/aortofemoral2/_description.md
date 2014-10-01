@@ -34,7 +34,7 @@ The aortofemoral model extends from the ascending or thoracic aorta to the femor
 </thead>
 <tr>
   <td>0.04 g/cm•s<sup>2</sup></td>
-  <td>1.06 g/cm</td>
+  <td>1.06 g/cm<sup>3</sup></td>
 </tr>
 </table>
 

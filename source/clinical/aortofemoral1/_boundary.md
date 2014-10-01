@@ -2,7 +2,7 @@
 
 ###Inlet Boundary Conditions
 
-A supraceliac aorta blood flow waveform derived from PC-MRI data was prescribed to the inlet of the computational fluid dynamics (CFD) model (Figure 1). Note that the cardiac output is not the same as the supraceliac flow, or the flow prescribed at the inlet. The flow to the supraceliac aorta from PC-MRI was 4.04 L/min.
+A supraceliac aorta blood flow waveform derived from PC-MRI data was prescribed to the inlet of the computational fluid dynamics (CFD) model. Note that the cardiac output is not the same as the supraceliac flow, or the flow prescribed at the inlet. The flow to the supraceliac aorta from PC-MRI was 4.04 L/min.
 
 **Flow Waveform:**
 
@@ -29,7 +29,7 @@ A supraceliac aorta blood flow waveform derived from PC-MRI data was prescribed 
 
 ###Outlet Boundary Conditions
 
-In order to represent the effects of vessels distal to the CFD model, a three-element Windkessel model can be applied at each outlet . This model consists of proximal resistance (Rp), capacitance (C), and distal resistance (Rd) representing the resistance of the proximal vessels, the capacitance of the proximal vessels, and the resistance of the distal vessels downstream of each outlet, respectively. 
+In order to represent the effects of vessels distal to the CFD model, a three-element Windkessel model can be applied at each outlet . This model consists of proximal resistance (Rp), capacitance (C ), and distal resistance (Rd) representing the resistance of the proximal vessels, the capacitance of the proximal vessels, and the resistance of the distal vessels downstream of each outlet, respectively. 
 
 **Windkessel Model:**
 <figure>

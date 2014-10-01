@@ -29,7 +29,7 @@ The inflow waveform was adapted from literature and then smoothed. The mean valu
 
 ###Outlet Boundary Conditions
 
-In order to represent the effects of vessels distal to the CFD model, a three-element Windkessel model can be applied at each outlet (Figure). This model consists of proximal resistance (Rp), capacitance (C), and distal resistance (Rd) representing the resistance of the proximal vessels, the capacitance of the proximal vessels, and the resistance of the distal vessels downstream of each outlet, respectively. 
+In order to represent the effects of vessels distal to the CFD model, a three-element Windkessel model can be applied at each outlet. This model consists of proximal resistance (Rp), capacitance (C ), and distal resistance (Rd) representing the resistance of the proximal vessels, the capacitance of the proximal vessels, and the resistance of the distal vessels downstream of each outlet, respectively. 
 
 **Windkessel Model:**
 <figure>

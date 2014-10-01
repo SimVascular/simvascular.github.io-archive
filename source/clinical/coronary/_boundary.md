@@ -29,7 +29,7 @@ A typical aortic waveform was prescribed to the inlet of the model. Since pulmon
 
 ###Outlet Boundary Conditions
 
-In order to represent the effects of vessels distal to the CFD model, a three-element Windkessel model can be applied at the aorta outlet. This model consists of proximal resistance (Rp), capacitance (C), and distal resistance (Rd) representing the resistance of the proximal vessels, the capacitance of the proximal vessels, and the resistance of the distal vessels downstream.
+In order to represent the effects of vessels distal to the CFD model, a three-element Windkessel model can be applied at the aorta outlet. This model consists of proximal resistance (Rp), capacitance (C ), and distal resistance (Rd) representing the resistance of the proximal vessels, the capacitance of the proximal vessels, and the resistance of the distal vessels downstream.
 
 **Windkessel Model:**
 <figure>

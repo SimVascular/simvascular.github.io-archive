@@ -34,7 +34,7 @@ The models extend from the main pulmonary artery to various levels of branching 
 </thead>
 <tr>
   <td>0.04 g/cm•s<sup>2</sup></td>
-  <td>1.06 g/cm</td>
+  <td>1.06 g/cm<sup>3</sup></td>
 </tr>
 </table>
 

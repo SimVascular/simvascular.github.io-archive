@@ -4,12 +4,14 @@ Conservation of mass and Navier-Stokes equations were solved using 3D finite ele
 
 <figure>
   <img class="svImg svImgXl" src="clinical/aortofemoral2/imgs/vel.jpg"> 
-  <figcaption class="svCaption" >(a)Peak Systole; (b)End Systole; (c)End Diastole</figcaption>
+  <figcaption class="svCaption" >(a)Peak Systole; (b)End Systole; (\(c\))End Diastole</figcaption>
 </figure>
 
 Surface distribution of time-averaged blood pressure (TABP), time-averaged wall shear stress (TAWSS) and oscillatory shear index (OSI) were also visualized and can be seen.
 
 <figure>
   <img class="svImg svImgXl" src="clinical/aortofemoral2/imgs/timeaverage.jpg"> 
-  <figcaption class="svCaption" >(a)TABP; (b)TAWSS; (c)OSI</figcaption>
+  <figcaption class="svCaption" >(a)TABP; (b)TAWSS; (\(c\))OSI</figcaption>
 </figure>
+<br>
+<br>

@@ -19,7 +19,7 @@ The normal coronary model includes the ascending aorta ostium and the left and r
   <td>25</td>
   <td>64.629</td>
   <td>159.507</td>
-  <td>369</td>
+  <td>36</td>
   <td>341</td>
 </tr>
 </table>
@@ -34,7 +34,7 @@ The normal coronary model includes the ascending aorta ostium and the left and r
 </thead>
 <tr>
   <td>0.04 g/cm•s<sup>2</sup></td>
-  <td>1.06 g/cm</td>
+  <td>1.06 g/cm<sup>3</sup></td>
 </tr>
 </table>
 
