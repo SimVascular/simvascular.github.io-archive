@@ -10,9 +10,15 @@
 
     <title><%= current_page.data.title || "SimVascular Documentation" %></title>
 
-    <%= stylesheet_link_tag "bootstrap.min"%>
+    <%= stylesheet_link_tag "bootstrap"%>
 
     <%= stylesheet_link_tag "shop-item" %>
+
+    <link rel="stylesheet" href="font-awesome-4.1.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
+
+    
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -23,45 +29,25 @@
 </head>
 <body>
 
-    <div class="container-fluid">
     <!-- Navigation -->
-    <div class="row">
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                <i class="fa fa-bars"><img src="img/test_logo_small.png"></i>
+                <i class="fa fa-bars" id="barIcon"></i>
               </button>
                 <a class="navbar-brand" id="brandName" href="index.html">
-                  <img src="img/test_logo_small.png">  <b>SIMVASCULAR</b>
+                  <b>SIMVASCULAR</b>
                 </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">            
-              <ul class="nav navbar-nav">                    
-                <li><a href="#" id="btnClinicalCase1"><b><span class="glyphicon glyphicon-globe"></span> Aortofemoral Normal - Case 1</b></a></li>
-                <li><a href="#" id="btnClinicalCase2"><b><span class="glyphicon glyphicon-globe"></span> Aortofemoral Normal - Case 2</b></a></li>
-                <li><a href="#" id="btnClinicalCase3"><b><span class="glyphicon glyphicon-globe"></span> Coronary Normal</b></a></li>
-                <li><a href="#" id="btnClinicalCase4"><b><span class="glyphicon glyphicon-th"></span> Healthy Pulmonary</b></a></li>
-              </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-    </div>
-
-    <!-- Page Content -->
-    <%= yield %>
-
-    <!-- /.container -->
-    <nav class="navbar navbar-default navbar-fixed-bottom">
-        <div class="container">
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">            
                 <ul class="nav navbar-nav">
-                    <li><a>Copyright &copy; The SimVascular Development Team - 2014</a></li>                
+                    <li><a href="clinicalCase1.html"><b>Aortofemoral Normal (Case 1)</b></a></li>
+                    <li><a href=""><b>Aortofemoral Normal (Case 2)</b></a></li>
+                    <li><a href=""><b>Coronary Normal (Case 3)</b></a></li>
+                    <li><a href=""><b>Healthy Pulmonary (Case 4)</b></a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -69,7 +55,19 @@
         <!-- /.container -->
     </nav>
 
-    </div>
+    <!-- Page Content -->
+    <%= yield %>
+
+    <!-- /.container -->
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container-fluid text-center">
+          <ul class="nav navbar-nav">
+            <li><a>Copyright &copy; SV Development Team - 2014</a></li>                
+          </ul>
+        </div>
+        <!-- /.container -->
+    </nav>
+
     
     <%= javascript_include_tag "jquery-1.11.0",
                                "bootstrap.min"%>
@@ -82,104 +80,6 @@
         target: '.bs-docs-sidebar',
         offset: 40
       });
-      $(document).ready(function() {
-        $(".manNews").show();
-        $(".manUserGuide").hide();
-        $(".manMeshing").hide();
-        $(".manPresolver").hide();
-        $(".manFlowSolver").hide();
-        $(".manTutorials").hide();    
-        $(".manRefs").hide();    
-        $('body').scrollspy('refresh');
-        var firstLi = $( ".manNews li" ).first();
-        firstLi.addClass('active').siblings().removeClass('active');
-      });
-      // NEWS
-      $('#btnNews').on('click', function(event) {
-        $(".manNews").show();
-        $(".manUserGuide").hide();
-        $(".manMeshing").hide();
-        $(".manPresolver").hide();
-        $(".manFlowSolver").hide();
-        $(".manTutorials").hide();
-        $(".manRefs").hide();    
-        $('body').scrollspy('refresh');
-        var firstLi = $( ".manNews li" ).first();
-        firstLi.addClass('active').siblings().removeClass('active');
-      });
-      $('#btnUserGuide').on('click', function(event) {
-        $(".manNews").hide();
-        $(".manUserGuide").show();
-        $(".manMeshing").hide();
-        $(".manPresolver").hide();
-        $(".manFlowSolver").hide();
-        $(".manTutorials").hide();
-        $(".manRefs").hide();    
-        $('body').scrollspy('refresh');
-        var firstLi = $( ".manUserGuide li" ).first();
-        firstLi.addClass('active').siblings().removeClass('active');
-      });
-      $('#btnMeshing').on('click', function(event) {
-        $(".manNews").hide();
-        $(".manUserGuide").hide();
-        $(".manMeshing").show();
-        $(".manPresolver").hide();
-        $(".manFlowSolver").hide();
-        $(".manTutorials").hide();
-        $(".manRefs").hide();    
-        $('body').scrollspy('refresh');
-        var firstLi = $( ".manMeshing li" ).first();
-        firstLi.addClass('active').siblings().removeClass('active');
-      });
-      $('#btnPresolver').on('click', function(event) {
-        $(".manNews").hide();
-        $(".manUserGuide").hide();
-        $(".manMeshing").hide();
-        $(".manPresolver").show();
-        $(".manFlowSolver").hide();
-        $(".manTutorials").hide();
-        $(".manRefs").hide();    
-        $('body').scrollspy('refresh');
-        var firstLi = $( ".manPresolver li" ).first();
-        firstLi.addClass('active').siblings().removeClass('active');
-      });
-        $('#btnFlowSolver').on('click', function(event) {
-        $(".manNews").hide();
-        $(".manUserGuide").hide();
-        $(".manMeshing").hide();
-        $(".manPresolver").hide();
-        $(".manFlowSolver").show();
-        $(".manTutorials").hide();
-        $(".manRefs").hide();    
-        $('body').scrollspy('refresh');        
-        var firstLi = $( ".manFlowSolver li" ).first();
-        firstLi.addClass('active').siblings().removeClass('active');
-      });
-      $('#btnTutorials').on('click', function(event) {
-        $(".manNews").hide();
-        $(".manUserGuide").hide();
-        $(".manMeshing").hide();
-        $(".manPresolver").hide();
-        $(".manFlowSolver").hide();
-        $(".manTutorials").show();
-        $(".manRefs").hide();    
-        $('body').scrollspy('refresh');
-        var firstLi = $( ".manTutorials li" ).first();
-        firstLi.addClass('active').siblings().removeClass('active');
-      }); 
-      $('#btnRefs').on('click', function(event) {
-        $(".manNews").hide();
-        $(".manUserGuide").hide();
-        $(".manMeshing").hide();
-        $(".manPresolver").hide();
-        $(".manFlowSolver").hide();
-        $(".manTutorials").hide();
-        $(".manRefs").show();    
-        $('body').scrollspy('refresh');
-        var firstLi = $( ".manRefs li" ).first();
-        firstLi.addClass('active').siblings().removeClass('active');
-      }); 
-      
     </script>
 
     <script type="text/javascript"

@@ -1,0 +1,28 @@
+---
+title: SimVascular Clinical Test Cases
+---
+<!--Nav Bar -->
+<div class="row">
+
+    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+    </div>
+
+    <!-- ONE COLUMN OF SPACE -->
+    <nav class="hidden-xs hidden-sm col-md-3 col-lg-3  bs-docs-sidebar">
+
+      <% if clinical_name == "Case1" %>
+        <ul id="sidebar" class="nav nav-stacked fixed"> <%= partial "clinical/aortofemoral1_TOC" %></ul>
+      <% end %>
+        
+    </nav>
+    
+    <!--Main Content -->
+    <div class="col-xs-11 col-sm-11 col-md-8 col-lg-8" id="manualContent">
+
+      <!-- ACTUAL CONTENT -->
+      <% if clinical_name == "Case1" %>
+        <div><%= partial "clinical/aortofemoral1_content" %></div>
+      <% end %>
+
+    </div>
+</div>    

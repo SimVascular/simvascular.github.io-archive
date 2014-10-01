@@ -16,7 +16,7 @@ set :markdown, :fenced_code_blocks => true, :smartypants => true, :tables => tru
 
 page "/", :layout => "frontpage"
 page "/docs*.html", :layout => "docs"
-page "/clinical.html", :layout => "clinical"
+page "/clinical*.html", :layout => "clinical"
 
 # Per-page layout changes:
 #
@@ -35,8 +35,14 @@ page "/clinical.html", :layout => "clinical"
 # proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
 #  :which_fake_page => "Rendering a fake page with a local variable" }
 
+# DOCS
 ["QuickGuide", "ImageGuide", "ModelGuide", "Meshing", "Presolver", "FlowSolver", "Refs"].each do |name|
   proxy "/docs#{name}.html", "/docsTemplate.html", :locals => { :man_name => name }, :ignore => true
+end
+
+# CLINICAL TEST CASES
+["Case1"].each do |name|
+  proxy "/clinical#{name}.html", "/clinicalTemplate.html", :locals => { :clinical_name => name }, :ignore => true
 end
 
 ###
