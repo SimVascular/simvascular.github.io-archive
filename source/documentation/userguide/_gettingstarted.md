@@ -27,7 +27,12 @@ Once **SimVascular** has loaded, you will see the following main window:
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-**BOX A | Menu Bar:** The menu bar that is enclosed by box “A” (top left corner) includes some file options. These functions will be used to load/save files such as paths and groups that you have created in SimVascular. It also provides view control and you can hide tabs in BOX B and BOX D. 
+**BOX A | Menu Bar:** The menu bar that is enclosed by box “A” (top left corner) includes some file options. These functions will be used to load/save files such as paths and groups that you have created in SimVascular. It also provides view control and you can show/hide tabs in BOX B and BOX D by toggling on/off in the Image Menus and Work Menus. 
+
+<figure>
+  <img class="svImg svImgMd"  src="documentation/userguide/imgs/getting_started/3_5.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
 
 **BOX B | Display Options:** The area that is enclosed by box “B” (top right corner) includes all of the display options. The tabs that are included in this pane allow you to change the settings for displaying your medical imaging data.
 
