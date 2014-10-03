@@ -41,7 +41,7 @@ Open a text editor and manually write the solver input file ***solver.inp*** in 
 	Viscosity: 0.04 
 	Density: 1.06
 	
-	Number of Timesteps between Restarts:50   #output every 50 timesteps
+	Number of Timesteps between Restarts: 50   #output every 50 timesteps
 	Print ybar: True   # track the error of the numerical solution through the simulation
 	
 	Time Varying Boundary Conditions From File: True # Needing bct.dat 

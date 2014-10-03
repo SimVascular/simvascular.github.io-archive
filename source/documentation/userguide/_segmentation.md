@@ -52,7 +52,7 @@ Continue to move along the path in increments of about 5-10 using the “Current
 Values between 6 and 10 for fourier smoothing are appropriate for this section of the aorta.
 If a segmentation is abnormal because the probe plane is at the vessel bifurcation region, just skip this segmentation and move down the path to get a better segmentation.
 
-To speed up modeling, simvascular can perform batch segmentations.  To perform batch segmentation:
+To speed up modeling, **SimVascular** can perform batch segmentations.  To perform batch segmentation:
 
 	Enter "155-285 by 10" in the batch segmentation text box.
 	Select "Add to Group" and "Smooth" check boxes.

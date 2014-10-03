@@ -1,6 +1,6 @@
 ###Creating a Model (with PolyData)
 
-With the two groups of segmentation, we are now able to create a model for the aorta with two branch vessels.
+With the two groups of segmentation, we are now able to create a model for the aorta with two branch vessels using PolyData.
 
 	Tab: PolyData → Boolean
 	Click the button “Select Ordered Groups” 
@@ -22,7 +22,7 @@ A model file *demo.vtp* is created in the projector folder.
 	Tab: PolyData → Boundaries
 	File Input/Output → Read Model 
 	Choose the model file demo.vtp
-	Click the button “”Extract Boundaries”
+	Click the button “Extract Boundaries”
 
 <figure>
   <img class="svImg svImgXl" src="documentation/userguide/imgs/modeling/polydata2.jpg"> 
@@ -39,7 +39,7 @@ All the faces of the model are listed under Model Faces.
 	Choose the model file demo.vtp
 	Go back to tab PolyData → Boundaries
 
-Now we need to give them more meaningful names. Go to the tab Model. All the faces of the model are listed under “Face Ids”. We can select a face from the list and change color to make sure where the face is located. For the inlet and outlets, we change the names as: *inflow\_aorta*, *outflow\_aorta*, *outflow\_right\_iliac* and *all\_wall*.
+Now we need to give them more meaningful names. Go to the tab Model. All the faces of the model are listed under “Face Ids”. You can move the cursor to a face of interest in the 3D display window and hit “p” in the keyboard, and the face will be highlighted in yellow and the corresponding face id/name is highlighted in the list under "Face Ids". We can also select a face from the list and change color to make sure where the face is located. For the inlet and outlets, we change the names as: *inflow_aorta*, *outflow\_aorta* and *outflow\_right\_iliac*.
 
 	Tab: Model
 	Select the inlet face in the list and change color to green

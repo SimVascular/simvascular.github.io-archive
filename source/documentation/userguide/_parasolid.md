@@ -1,6 +1,6 @@
 ###Creating a Model (with Parasolid)
 
-With the two groups of segmentation, we are now able to create a model for the aorta with two branch vessels.
+With the two groups of segmentation, we are now able to create a model for the aorta with two branch vessels using Parasolid.
 
 	Tab: 2D Segmentation
 	Select the groups aorta and right_iliac in the group tree view
@@ -29,7 +29,7 @@ Now a 3D model is shown in the 3D Display Window. Here we only consider two bran
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-All the faces of the model are listed under “Face Ids”. We can select a face from the list and change color to make sure where the face is located. For the inlet and outlets, we change the names as: *inflow_aorta*, *outflow\_aorta* and *outflow\_right\_iliac*.
+All the faces of the model are listed under “Face Ids”. You can move the cursor to a face of interest in the 3D display window and hit “p” in the keyboard, and the face will be highlighted in yellow and the corresponding face id/name is highlighted in the list under "Face Ids". We can also select a face from the list and change color to make sure where the face is located. For the inlet and outlets, we change the names as: *inflow_aorta*, *outflow\_aorta* and *outflow\_right\_iliac*.
 
 	Tab: Model
 	Select the inlet face in the list and change color to green

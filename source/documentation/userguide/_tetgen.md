@@ -1,11 +1,8 @@
 ### Meshing Using TetGen
 
-	Tab: TetGen → MeshOptions
-	Meshing Kernel: TetGen
+	Tab: TetGen → Mesh Options
 	File: <project folder>/demo.vtp
-	Toggle on: –a  Set maximum tetrahedron edge size: 0.3
-	Toggle on: -O  Specifies level of mesh optimization: 3
-	Toggle on: -q  Minimum radius-edge ratio (quality): 1.4
+	Set maximum edge size for equilateral tetrahedron: 0.3
 	Toggle on: Surface Mesh
 	Toggle on: Volume Mesh
 	Click “Run Mesher (Internal)”

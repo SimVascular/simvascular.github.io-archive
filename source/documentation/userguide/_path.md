@@ -39,7 +39,7 @@ Continue to move down the aorta inferiorly (from “S” to “I”) in incremen
 
 <font color="red">**HELPFUL HINT:** </font>  To delete a point in the path, select the one you want to remove in the path treeview, then click Additional Options → Delete currently selected point. 
 
-Build your path down as far as possible (you should be able to get to around I/S slider position 10 before things get a harder to see. To visualize the current path:
+Build your path down as far as possible (you should be able to get to around I/S slider position 10 before things get harder to see. To visualize the current path:
 
 	Tab: Paths → Manual
 	Toggle on: Display Options → Show Points, Show Spline

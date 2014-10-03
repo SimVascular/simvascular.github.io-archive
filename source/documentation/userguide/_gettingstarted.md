@@ -27,7 +27,7 @@ Once **SimVascular** has loaded, you will see the following main window:
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-**BOX A | Menu Bar:** The menu bar that is enclosed by box “A” (top left corner) includes some file options. These functions will be used to load/save files such as paths and groups that you have created in SimVascular. It also provides view control and you can show/hide tabs in BOX B and BOX D by toggling on/off in the Image Menus and Work Menus. 
+**BOX A | Menu Bar:** The menu bar that is enclosed by box “A” (top left corner) includes some file options. These functions will be used to load/save files such as paths and groups that you have created in **SimVascular**. It also provides view control and you can show/hide tabs in BOX B and BOX D by toggling on/off in the Image Menus and Work Menus. 
 
 <figure>
   <img class="svImg svImgMd"  src="documentation/userguide/imgs/getting_started/3_5.jpg"> 
@@ -38,7 +38,7 @@ Once **SimVascular** has loaded, you will see the following main window:
 
 **BOX C | Display Windows:** The area that is enclosed by box “C” (left half) houses the display windows. The top display window (the largest window) is the 3D display. This is where operations, such as rotating medical imaging data and creating geometric models in three-dimensional space, will be performed. The smaller, bottom two windows are 2D windows that will be useful for 2D operations such as image segmentation.
 
-**BOX D | Functional Toolbox:** The area that is enclosed by box “D” (bottom right corner) includes the main functional components of SimVascular. The tabs that are housed within this pane will allow you to build a solid, 3D model from medical imaging data, mesh that solid model into a 3D volumetric finite element mesh, apply boundary conditions to your finite element mesh, and create the files that are needed to initialize your flow simulation. It will also help you post-process the files that you generate in your flow simulation.
+**BOX D | Functional Toolbox:** The area that is enclosed by box “D” (bottom right corner) includes the main functional components of **SimVascular**. The tabs that are housed within this pane will allow you to build a solid, 3D model from medical imaging data, mesh that solid model into a 3D volumetric finite element mesh, apply boundary conditions to your finite element mesh, and create the files that are needed to initialize your flow simulation. It will also help you post-process the files that you generate in your flow simulation.
 
 <font color="red">**HELPFUL HINT:** </font>  The red arrows indicate panes within the window that can be resized. Just simply click and drag on the pane borders to resize each pane. For your convenience, you can enlarge or hide some panes.
 
