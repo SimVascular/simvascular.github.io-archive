@@ -5,8 +5,13 @@
 	File: demo.xmt_txt
 	Global Max Edge Size: 0.3  (absolute)
 	Click “Run Mesher”
-	“Creating mesh can take a long time. Continue anyway?”: Yes
-	“Use currently selected meshing options?...” :“Yes”
+	“Creating mesh can take a long time. Continue anyway?”: "Yes"
+	“Use currently selected meshing options?...”: "Yes"
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/userguide/imgs/meshing/meshsim1.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
 
 Now the mesh is created for the model as below.
 
