@@ -36,7 +36,7 @@ Under the **Output Parameters** menu, enter the following values:
 
 - **num pts in period**: 2. This is the number of _temporal_ data points that you want to have in your bct.dat. This is not necessarily the number of time points in the \*.flow file. In this case, they match (2 in both cases), but this is because this is a very simple example using steady flow and two time points is all we need to characterize a constant flow. In general, your \*.flow file will have in the order of $20$ data points over the cardiac cycle (that’s about how many points you will be able to reconstruct using **PC-MRI**, for example), and your bct.dat will have on the order of $100$-$200$ points. Whatever is enough to have a smooth  representation of the inflow wave mapping to velocity vectors at the inlet face.
 
-- **num fourier modes**: 10. Fourier smoothing allows to smooth your inlet flow curve and to make sure that you have a periodic function in the specified interval. 
+- **num fourier modes**: 1. Fourier smoothing allows to smooth your inlet flow curve and to make sure that you have a periodic function in the specified interval. 
 
 **WARNING**: Be careful with this! **SimVascular** is doing a Fourier Series approximation of the data that you provide in the \*.flow file. Since in this case, our data is constant flow, we only need one Fourier mode to capture this appropriately. For pulsatile flow problems, we will need more Fourier Modes to accurately represent the \*.flow data (usually, $10$ Fourier modes is enough for a pulsatile problem). After you are done entering all these parameters, click on the _CREATE 3-D FLOW SOLVER BC FILE_ button to generate the bct.dat file. 
 
@@ -107,10 +107,10 @@ zero_pressure_vtp mesh-surfaces/outlet.vtp
 
 # SURFACE NUMBERING
 
-set_surface_id_vtp cylinder.exterior.vtp 0
-set_surface_id_vtp mesh-surfaces/inlet.vtp 1
-set_surface_id_vtp mesh-surfaces/outlet.vtp 2
-set_surface_id_vtp mesh-surfaces/wall.vtp 3
+set_surface_id_vtp cylinder.exterior.vtp 1
+set_surface_id_vtp mesh-surfaces/inlet.vtp 2
+set_surface_id_vtp mesh-surfaces/outlet.vtp 3
+set_surface_id_vtp mesh-surfaces/wall.vtp 4
 
 # WRITE SOLVER FILES
 
