@@ -22,28 +22,28 @@ Selecting any of the following surface operators will edit the entire surface of
 
 Surface Operators summary:
 
-Smooth Poly Data Model: 
-	smooths the bumps and ridges of the model
-	Laplacian Smooth -> Relax Factor -> Choose between .01 and .05 
+	Smooth Poly Data Model: 
+		smooths the bumps and ridges of the model
+		Laplacian Smooth -> Relax Factor -> Choose between .01 and .05 
 
 
-Butterfly Subdivision:
-	Divides the meshing triangles based on number placed in “Num Divisions”
-	For example, to divide each triangle in half: Num Divisions = 1
-	This creates a finer mesh made up of smaller triangles
+	Butterfly Subdivision:
+		Divides the meshing triangles based on number placed in “Num Divisions”
+		For example, to divide each triangle in half: Num Divisions = 1
+		This creates a finer mesh made up of smaller triangles
 
 
-Decimate Surface:
-	Based on target rate, makes the meshing triangles bigger
-	
+	Decimate Surface:
+		Based on target rate, makes the meshing triangles bigger
+		
 
-WindowSync Smooth:
-	Smooths more than Laplacian smooth
-	still smooths caps of arteries
+	WindowSync Smooth:
+		Smooths more than Laplacian smooth
+		still smooths caps of arteries
 
-Densify:
-	divides triangles based on “Num Divisions”
-		does same thing as Butterfly Subdivision?
+	Densify:
+		divides triangles based on “Num Divisions”
+			does same thing as Butterfly Subdivision?
 
 **Trimming a PolyData Model:**
 
@@ -69,5 +69,8 @@ Cut Surface:
 
 	Save model: File I/O -> click “save”
 		name “demo_trimmed.vtp”, make sure it is in the right directory, click save
+<br>
+<br>
+<br>
 
 
