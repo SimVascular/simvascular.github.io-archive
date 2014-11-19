@@ -1,15 +1,22 @@
 ### Editing a PolyData Model ###
 
 To load the model for editing navigate to “PolyData” —> “Smooth” —> Click “Load” next to “Input File” and select the file you want to modify, in this case “demo.vtp” and the path should appear in the box. 
+
 Next, click “Save” next to output file and name it with a .vtp extension i.e.: demo_smooth.vtp the path should appear in the box. This is the file that the modified or “smoothed” model with be saved to.
+
 Click Visualize Surface to show a triangle meshed model that can be modified using the Global Operators in the functional toolbox. Again, this can be viewed a variety of ways using the keyboard shortcuts.
 
+**Deleting Cells:**
+
 If there is a unwanted bump or rough part of the model, specific cells can be selected and deleted and the hole created filled to create a smoother model.
+
 	Navigate to “PolyData” —>  “Delete Cells”
 	Press “E” while hovering over the model in the view window to view the edges of the triangulated surface
-	Select cells to be deleted by hovering over them and pressing “C”. Pressing “ctrl + C” will select multiple cells at the same time
+	Select cells to be deleted by hovering over them and pressing “C”. 
+	Pressing “ctrl + C” will select multiple cells at the same time
 	“Delete Selected Cells” will delete these cells, making a hole in the model.
-	“Fill Holes” will fill in this hole with a triangulated mesh surface that is hopefully smoother than the section just deleted.
+	“Fill Holes” will fill in this hole with a triangulated mesh surface.
+	The goal is to create a new surface that is smoother than the section just deleted.
 
 **Smoothing a PolyData Model:**
 
@@ -43,7 +50,7 @@ Surface Operators summary:
 
 	Densify:
 		divides triangles based on “Num Divisions”
-			does same thing as Butterfly Subdivision?
+			
 
 **Trimming a PolyData Model:**
 
