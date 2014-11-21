@@ -1,9 +1,7 @@
 ## Creating a Solid Model with PolyData ##
 
 
-In the previous section, it was shown how to create individual 2-D segmentations along a particular vessel path. It is worthwhile to reinforce at this point the distinction between visualizing geometry and utilizing geometry for numerical simulation. If you were to graphically display all the segmentations that you created in the previous exercise, your mind may “connect the dots” and create a 3-D mental image of the geometry. However, we need to create a 3-D solid model that the computer can understand.
-
-Fortunately for us, an ordered relationship between some of the curves is known. That is, for each path we have an ordered set of curves defining the geometry for the given vessel. These sets are the groups that we have used to organize the segmentations. All of the segmentations are associated with one and only one vessel. Through an ordered Boolean Addition, a vessel is created from each of these groups of segmentations and added to the groups lofted before them.
+In the previous section, it was shown how to create a solid model using Parasolid software. The PolyData software combines the created set of groups differently than Parasolid, through an ordered Boolean Addition. Each group of segmentations respresents a vessel and these are placed in a ordered list. The first of these ordered groups of segmentations is lofted with the second and each subsequent group is lofted to this growing union until the model is complete.
 
 **Preparing for Modeling:**
 
