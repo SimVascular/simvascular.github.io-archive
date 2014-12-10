@@ -2,6 +2,23 @@
 
 This section discusses the options available in the **solver.inp** file. 
 
+#### Default Inp File
+
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th>Command</th>
+  <th>Values</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tr>
+  <td>Default Inp File</td>
+  <td>File name with relative or absolute path</td>
+  <td>Most parameters are already assigned default values for cardiovascular simulation as shown in the following tables. Only a very small number of parameters must be set up in solver.inp. If the user needs different default values for a few parameters, the new values can also be assigned for them in solver.inp. But if the user needs different default values for many parameters, a default input file can be created and the new default values are put in this file. </td>
+</tr>
+</table>
+
 #### Solution Control
 
 <table class="table table-bordered">
@@ -13,6 +30,12 @@ This section discusses the options available in the **solver.inp** file.
   <th>Description</th>
 </tr>
 </thead>
+<tr>
+  <td>Equation of State</td>
+  <td>(Incompressible)</td>
+  <td>Incompressible, Compressible</td>
+  <td>This entry tells the solver to solve the <b>INCOMPRESSIBLE</b> or <b>COMPRESSIBLE</b> Navier-Stokes equations.</td>
+</tr>
 <tr>
   <td>Viscous Control</td>
   <td>(Viscous)</td>
@@ -90,7 +113,7 @@ This section discusses the options available in the **solver.inp** file.
 </thead>
 <tr>
   <td>Number of timesteps between restarts</td>
-  <td>(500)</td>
+  <td>NO DEFAULT</td>
   <td>(integer)</td>
   <td>Number of time steps between a new restart.<step>.<proc> is saved. This values decides how often the complete status of the model is saved to disk.</td>
 </tr>
@@ -129,7 +152,7 @@ This section discusses the options available in the **solver.inp** file.
   <td>Solver Type</td>
   <td>(svLS)</td>
   <td>svLS</td>
-  <td>Selected linear solver</td>
+  <td>sv linear solver selected by default</td>
 </tr>
 <tr>
   <td>Maximum Number of Iterations for svLS NS Solver</td>
@@ -148,6 +171,12 @@ This section discusses the options available in the **solver.inp** file.
   <td>(400)</td>
   <td>(integer)</td>
   <td>Maximum number of iterations for the continuity equation solver</td>
+</tr>
+<tr>
+  <td>Number of Solves per Left-hand-side Formation</td>
+  <td>(1)</td>
+  <td>(integer)</td>
+  <td>It tells the solver how often the left-hand-side of the system of equations should be updated in the non-linear iteration loop. 1 is a good value, we recommend you to use it.</td>
 </tr>
 </table>
 
@@ -174,7 +203,13 @@ This section discusses the options available in the **solver.inp** file.
   <td>Time Integration Rho Infinity</td>
   <td>(0.5)</td>
   <td>(double in [0,1])</td>
-  <td>Value of $\rho_{\infty}$ for the generalized $\alpha$ method</td>
+  <td>Value of $\rho_{\infty}$ for the generalized $\alpha$ method. It sets the parameter that controls the amount of user-defined numerical dissipation. This parameter takes values in the range (0,1). The value 0 corresponds to maximal numerical dissipation, where the under-resolved frequencies are annihilated within one time step. The value 1 implies no numerical  dissipation: all the frequencies present in the simulation are maintained through the time steps. These can be dangerous if the temporal and spatial discretizations are not adequate.</td>
+</tr>
+<tr>
+  <td>Flow Advection Form</td>
+  <td>(Convective)</td>
+  <td>Convective,Conservative</td>
+  <td>It sets the solver to use the advective or conservative form of the Navier-Stokes equations.</td>
 </tr>
 <tr>
   <td>Quadrature Rule on Interior</td>
@@ -209,15 +244,15 @@ This section discusses the options available in the **solver.inp** file.
 </thead>
 <tr>
   <td>Time Varying Boundary Conditions From File</td>
-  <td>(False)</td>
-  <td>False,True</td>
-  <td>If the <b>bct.dat</b> file was created containg prescribed velocity at the inlet, this option should be set to True.</td>
+  <td>(True)</td>
+  <td>True,False</td>
+  <td>If the <b>bct.dat</b> file was created containg prescribed velocity at the inlet (this will be the case for most simulations), this option should be set to <b>True</b>.</td>
 </tr>
 <tr>
   <td>BCT Time Scale Factor</td>
   <td>(1.0)</td>
   <td>(double)</td>
-  <td>Defines an amplification factor for the velocity data contained in the <b>bct.dat</b> file</td>
+  <td>Defines an amplification factor for the velocity data contained in the <b>bct.dat</b> file. It allows scaling the time history given in the <b>bct.dat</b> file by the factor specified in this line. For example, if your original bct.dat has a period of $0.8$ seconds, and if you wanted to simulate a problem with the same inflow wave shape, but with a period of $0.4$ seconds, you would have to enter a BCT Time Scale Factor of 0.5 in this line. <b>For most cases</b>, it should be 1.0.</td>
 </tr>
 <tr>
   <td>Number of Coupled Surfaces</td>
@@ -227,7 +262,7 @@ This section discusses the options available in the **solver.inp** file.
 </tr>
 <tr>
   <td>Pressure Coupling</td>
-  <td>(None)</td>
+  <td>(Implicit)</td>
   <td>None,Explicit,Implicit,P-Implicit</td>
   <td>This line sets the implicit implementation of the <b>Coupled-Multidomain Method</b> in the code.</td>
 </tr>
@@ -582,7 +617,7 @@ $$
   <td>Step Construction</td>
   <td>(0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1)</td>
   <td>(Sequence of 0 and 1)</td>
-  <td>Non linear iteration sequence. The 0 tells the solver to make a solve, the 1 to make an update of the solution. For example, a ten iterations solution is specified as default as a sequence of solve/update operations</td>
+  <td>Non linear iteration sequence. It controls the non-linear iteration loop within the time step . The Navier-Stokes equations constitute a no-linear system of partial differential equations. Like any non-linear system, in order to find a solution for a given time step, we must undergo an iteration process to obtain a solution that reduces the residual (i.e., the error) as we iterate more and more. The 0 tells the solver to make a solve, the 1 to make an update of the solution. For example, a ten iterations solution is specified as default as a sequence of solve/update operations</td>
 </tr>
 </table>
 
@@ -653,11 +688,12 @@ $$
 </tr>
 <tr>
   <td>Variable Wall Thickness and Young Mod</td>
-  <td>(True)</td>
+  <td>(False)</td>
   <td>False,True</td>
   <td>Activates/deactivates the possibility of specifying a variable thickness/elastic modulus for the vessel wall material</td>
 </tr>
 </table>
-  
+<br>
+<br>
 
 
