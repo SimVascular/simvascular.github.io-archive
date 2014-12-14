@@ -2,20 +2,28 @@
 
 This section discusses the options available in the **solver.inp** file. 
 
-#### Default Inp File
+#### Input Control
 
 <table class="table table-bordered">
 <thead>
 <tr>
   <th>Command</th>
-  <th>Values</th>
+  <th>Default</th>
+  <th>Possible Values</th>
   <th>Description</th>
 </tr>
 </thead>
 <tr>
-  <td>Default Inp File</td>
+  <td>Default Input File</td>
+  <td> </td>
   <td>File name with relative or absolute path</td>
   <td>Most parameters are already assigned default values for cardiovascular simulation as shown in the following tables. Only a very small number of parameters must be set up in solver.inp. If the user needs different default values for a few parameters, the new values can also be assigned for them in solver.inp. But if the user needs different default values for many parameters, a default input file can be created and the new default values are put in this file. </td>
+</tr>
+<tr>
+  <td>BCT File Type</td>
+  <td>(DAT) </td>
+  <td>DAT,VTP</td>
+  <td>This entry tells the solver to read inflwo boundary conditions from <b>bct.dat</b> or <b>bct.dat.vtp</b>.</td>
 </tr>
 </table>
 
