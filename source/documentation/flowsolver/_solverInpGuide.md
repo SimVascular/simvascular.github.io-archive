@@ -228,8 +228,8 @@ This section discusses the options available in the **solver.inp** file.
 <tr>
   <td>Quadrature Rule on Boundary</td>
   <td>(3)</td>
-  <td>(integer)</td>
-  <td>This option sets the integration order for boundary elements. Orders 1,2,3,4 correspond to 1,4,16,29 integration points, respectively.</td>
+  <td>1,2,3,4</td>
+  <td>This option sets the integration order for boundary elements. Orders 1,2,3,4 correspond to 1,3,6,12 integration points, respectively.</td>
 </tr>
 <tr>
   <td>Number of Elements Per Block</td>
@@ -506,16 +506,16 @@ $$
   <td>Backflow stabilization coefficient. For the definition of these coefficient, see the [following publications](docsRefs.html#refSec2)</td>
 </tr>
 <tr>
-  <td>Number of Surfaces with zero in-plane tractions</td>
+  <td>Number of Surfaces which zero out in-plane tractions</td>
   <td>(0)</td>
   <td>(integer)</td>
   <td>Number of surfaces with prescribed zero in-plane tractions.</td>
 </tr>
 <tr>
-  <td>List of Surfaces with zero in-plane tractions</td>
+  <td>List of Surfaces which zero out in-plane tractions</td>
   <td>NO DEFAULT</td>
   <td>(space-separated integer list)</td>
-  <td>List of surfaces with zero in-plane tractions. This list should adopt the same numbering strategy defined in the svPre input file</td>
+  <td>List of surfaces which zero out in-plane tractions. This list should adopt the same numbering strategy defined in the svPre input file</td>
 </tr>
 <tr>
   <td>Lagrange Multipliers</td>
@@ -679,7 +679,7 @@ $$
 <tr>
   <td>Shear Constant of Vessel Wall</td>
   <td>NO DEFAULT</td>
-  <td>(double in [0.0,0.5])</td>
+  <td>(double)</td>
   <td>Uniform Shear constant for the vessel walls</td>
 </tr>
 <tr>
