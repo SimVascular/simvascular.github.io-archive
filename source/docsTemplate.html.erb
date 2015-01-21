@@ -8,6 +8,10 @@ title: SimVascular Docs
     <!-- ONE COLUMN OF SPACE -->
     <nav class="hidden-xs hidden-sm col-md-2 col-lg-2  bs-docs-sidebar">
 
+      <% if man_name == "Installation" %>
+        <ul id="sidebar" class="nav nav-stacked fixed manInstallation"> <%= partial "documentation/installation_TOC" %></ul>
+      <% end %>
+
       <% if man_name == "QuickGuide" %>
         <ul id="sidebar" class="nav nav-stacked fixed manQuickGuide"> <%= partial "documentation/userguide_TOC" %></ul>
       <% end %>
@@ -42,6 +46,10 @@ title: SimVascular Docs
     <div class="col-xs-10 col-sm-10 col-md-9 col-lg-9" id="manualContent">
 
       <!-- ACTUAL CONTENT -->
+
+      <% if man_name == "Installation" %>
+        <div class="manQuickGuide"><%= partial "documentation/installation_content" %></div>
+      <% end %>
 
       <% if man_name == "QuickGuide" %>
         <div class="manQuickGuide"><%= partial "documentation/userguide_content" %></div>
