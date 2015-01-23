@@ -4,7 +4,7 @@
 
 2. Login to SimTk or create a new account.
 
-3. List your intended use for the software and agree to the license agreement. THe download should begin, if not, click the link given and follow the instructions.
+3. List your intended use for the software and agree to the license agreement. The download should begin, if not, click the link given and follow the instructions.
 
 4. Launch the downloaded package and agree to the terms of service.
 

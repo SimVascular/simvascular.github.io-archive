@@ -19,8 +19,7 @@ below.*
 
 ### OS requirements ###
 
-SimVascular can be installed on Windows XP/Vista/7/8 (32-bit version) and Windows Vista/7/8 (64-bit version if 64-bit
-version of OS is installed). SimVascular 32-bit and 64-bit versions can be installed “side-by-side”.
+SimVascular can be installed on Windows Vista/7/8 
 
 #### Windows 8 ####
 
@@ -31,6 +30,7 @@ can skip steps 1-9 below, and only do them if the software fails to run.
 
 Install MSVC & Intel Fortran runtime compiler libraries:
 
+<!--
 	1. Install vcredist_x86-2008-sp0.exe
 	2. Install msvc10_vcredist_x64.exe (64-bit machines only)
 	3. Install msvc2010sp1-vcredist_x64.exe (64 bit machines only)
@@ -39,7 +39,8 @@ Install MSVC & Intel Fortran runtime compiler libraries:
 	6. w_fcompxe_redist_ia32_2011.6.233.msi
 	7. w_fcompxe_redist_intel64_2011.11.344.msi (64-bit machines only)
 	8. w_fcompxe_redist_ia32_2011.11.344.msi
-	9. Install Windows runtime libraries: NetFx20SP2_x86.exe
+	-->
+	NetFx20SP2_x86.exe
 
 Required External Packages for DICOM
 	
@@ -53,7 +54,7 @@ Required External Packages for DICOM
 	Install MPICH2:
 
 	1. mpich2-1.4.1p1-win-x86-64.msi (64-bit machines only)
-	2. mpich2-1.4.1p1-win-ia32.msi (32-bit machines only)
+<!--	2. mpich2-1.4.1p1-win-ia32.msi (32-bit machines only) -->
 
 *__NOTE:__ install for ALL users. MPICH2 must be installed from the REAL Administrator account, NOT just a user with
 administrative privileges!!!! To enable the Administrator account, first you’ll need to open a command prompt in
