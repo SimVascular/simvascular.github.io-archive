@@ -143,6 +143,18 @@ This section discusses the options available in the **solver.inp** file.
   <td>(space separated integer list)</td>
   <td>List of ID for surfaces where average pressure and total flow rate need to be integrated</td>
 </tr>
+<tr>
+  <td>Number of Force Surfaces</td>
+  <td>(0)</td>
+  <td>(integer)</td>
+  <td>This line specifies the number of surfaces where we are going to collect tractions (i.e., wall shear stress) in our model. Tractions are collected as a ‘post-processing’ step after the velocity and pressure fields are obtained.</td>
+</tr>
+<tr>
+  <td>Surface ID's for Force Calculation</td>
+  <td>NO DEFAULT</td>
+  <td>(space separated integer list)</td>
+  <td>List of ID for surfaces tagged for Force Calculation (i.e., shear stress calculation).</td>
+</tr>
 </table>
 
 #### Linear Solver Options
@@ -162,6 +174,11 @@ This section discusses the options available in the **solver.inp** file.
   <td>svLS</td>
   <td>sv linear solver selected by default</td>
 </tr>
+<tr>
+  <td>svLS Type</td>
+  <td>(NS)</td>
+  <td>CG,GMRES,NS</td>
+  <td>Type selected for svLS. For deformable wall cases, GMRES is recommended to improve computing performance.</tr>
 <tr>
   <td>Maximum Number of Iterations for svLS NS Solver</td>
   <td>(1)</td>
