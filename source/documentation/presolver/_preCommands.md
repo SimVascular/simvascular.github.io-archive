@@ -14,13 +14,13 @@ This sections lists the available **svPre** commands, the associated parameters 
 </thead>
 <tr>
   <td>ascii_format</td>
-  <td>(true, false)</td>
-  <td>Indicator if the output files are in ASCII format. The default is false (output files are in binary format)</td>
+  <td>(none)</td>
+  <td>Indicator to make the output files in ASCII format. The default is false (output files are in binary format)</td>
 </tr>
 <tr>
   <td>verbose</td>
   <td>(none)</td>
-  <td>ndicator to print progress. The default is off (no progress information)</td>
+  <td>Indicator to print progress. The default is off (no progress information)</td>
 </tr>
 </table>
 
@@ -37,27 +37,27 @@ This sections lists the available **svPre** commands, the associated parameters 
 <tr>
   <td>number_of_nodes</td>
   <td>(integer)</td>
-  <td>Number of nodes in the model</td>
+  <td>Set the number of nodes in the model</td>
 </tr>
 <tr>
   <td>number_of_elements</td>
   <td>(integer)</td>
-  <td>Number of elements in the model</td>
+  <td>Set the number of elements in the model</td>
 </tr>
 <tr>
   <td>number_of_mesh_edges</td>
   <td>(integer)</td>
-  <td>Number of mesh edges in the model</td>
+  <td>Set the number of mesh edges in the model</td>
 </tr>
 <tr>
   <td>number_of_mesh_faces</td>
   <td>(integer)</td>
-  <td>Number of mesh faces in the model</td>
+  <td>Set the number of mesh faces in the model</td>
 </tr>
 <tr>
   <td>number_of_variables</td>
   <td>(integer)</td>
-  <td>Number of variables in the model. Default: 0, usually 5: ($v_x$ ,$v_y$ ,$v_z$ , $p$, $T$)</td>
+  <td>Set the number of variables in the model. Default: 5 ($v_x$ ,$v_y$ ,$v_z$ , $p$, $T$)</td>
 </tr>
 </table>
 
@@ -74,47 +74,47 @@ This sections lists the available **svPre** commands, the associated parameters 
 <tr>
   <td>nodes</td>
   <td>(file name)</td>
-  <td>Name of file with nodal coordinates</td>
+  <td>Read nodal coordinates from the given file</td>
 </tr>
 <tr>
   <td>elements</td>
   <td>(file name)</td>
-  <td>Name of file with element connectivity</td>
+  <td>Read element connectivity from the given file</td>
 </tr>
 <tr>
   <td>boundary_faces</td>
   <td>(file name)</td>
-  <td>Name of the file with the element face data of elements of the boundary</td>
+  <td>Read face data of boundary elements from the given file</td>
 </tr>
 <tr>
   <td>adjacency</td>
   <td>(file name)</td>
-  <td>Name of the file with the element adjacency info</td>
+  <td>Read element adjacency info from the given file</td>
 </tr>
 <tr>
   <td>noslip</td>
   <td>(file name)</td>
-  <td>Name of the file with the nodes where the noslip condition will be applied</td>
+  <td>Noslip condition will be applied on the nodes provided by the given file</td>
 </tr>
 <tr>
   <td>prescribed_velocities</td>
   <td>(file name)</td>
-  <td>Name of the file with the nodes with a Dirichlet boundary condition coming from a bct.dat file</td>
+  <td>Same as "noslip"</td>
 </tr>
 <tr>
   <td>zero_pressure</td>
   <td>(file name)</td>
-  <td>Name of the file with element face connectivity data with a prescribed pressure boundary condition equal to zero</td>
+  <td>Zero pressure boundary condition will be appied on the element faces provided by the given file</td>
 </tr>
 <tr>
   <td>pressure</td>
   <td>(file name)(double)</td>
-  <td>Name of the file with element face connectivity data with a prescribed pressure boundary condition equal to $p$</td>
+  <td>Prescribed pressure boundary condition will be appied on the element faces provided by the given file</td>
 </tr>
 <tr>
   <td>set_surface_id</td>
   <td>(file name)(integer)</td>
-  <td>Name of the file with the element face data and the surface ID of the face. Mostly used to tag exterior surfaces for Boundary Condition attributes, and also to compute tractions at the boundary</td>
+  <td>Set a ID for the element faces provided by the given file. Mostly used to tag exterior surfaces for Boundary Condition attributes, and also to compute tractions at the boundary</td>
 </tr>
 </table>
 
@@ -131,37 +131,42 @@ This sections lists the available **svPre** commands, the associated parameters 
 <tr>
   <td>mesh_vtu</td>
   <td>(file name)</td>
-  <td>Name of the vtu file to be used when reading node coordinates and element connectivities</td>
+  <td>Read node coordinates and element connectivities from the given vtu file</td>
 </tr>
 <tr>
   <td>mesh_and_adjncy_vtu</td>
   <td>(file name)</td>
-  <td>Name of the vtu file to be used when reading node coordinates, element connectivities and element adjacencies</td>
+  <td>Read node coordinates,element connectivities and adjacencies from the give vtu file</td>
 </tr>
 <tr>
   <td>noslip_vtp</td>
   <td>(file name)</td>
-  <td>Name of the vtp file with the nodes where the noslip condition will be applied</td>
+  <td>Noslip condition will be applied on the nodes provided by the given vtp file</td>
 </tr>
 <tr>
   <td>prescribed_velocities_vtp</td>
   <td>(file name)</td>
-  <td>Name of the vtp file with element face connectivity data with a prescribed pressure boundary condition equal to zero</td>
+  <td>Same as "noslip_vtp"</td>
 </tr>
 <tr>
   <td>zero_pressure_vtp</td>
   <td>(file name)</td>
-  <td>Name of the vtp file with element face connectivity data with a prescribed pressure boundary condition equal to zero</td>
+  <td>Zero pressure boundary condition will be appied on the element faces provided by the given vtp file</td>
 </tr>
 <tr>
   <td>pressure_vtp</td>
   <td>(file name)(double)</td>
-  <td>Name of the vtp file with element face connectivity data with a prescribed pressure boundary condition equal to $p$</td>
+  <td>Prescribed pressure boundary condition will be appied on the element faces provided by the given vtp file</td>
 </tr>
 <tr>
   <td>set_surface_id_vtp</td>
   <td>(file name)(integer)</td>
-  <td>Name of the vtp file with the element face data and the surface ID of the face. Mostly used to tag exterior surfaces for Boundary Condition attributes, and also to compute tractions at the boundary</td>
+  <td>Set a ID for the element faces provided by the given vtp file. Mostly used to tag exterior surfaces for Boundary Condition attributes, and also to compute tractions at the boundary</td>
+</tr>
+<tr>
+  <td>read_initial_conditions_vtu</td>
+  <td>(file name)</td>
+  <td>Read initial conditions: global node id, pressure, velocity (and displacement, time derivative of solution, if available) from the given vtu file.</td>
 </tr>
 </table>
 
@@ -178,27 +183,27 @@ This sections lists the available **svPre** commands, the associated parameters 
 <tr>
   <td>read_restart_solution</td>
   <td>(restart file name)</td>
-  <td>Command that reads a previously computed restart solution (velocity  and pressure fields). This is used in deformable wall simulations</td>
+  <td>Read a previously computed restart solution (velocity  and pressure fields). This could be used in deformable wall simulations</td>
 </tr>
 <tr>
   <td>read_restart_displacements</td>
   <td>(restart file name)</td>
-  <td>Command that reads a previously computed restart solution (displacement field). This is used in deformable wall simulations</td>
+  <td>Read a previously computed restart solution (displacement field). This is used in deformable wall simulations</td>
 </tr>
 <tr>
   <td>read_restart_accelerations</td>
   <td>(restart file name)</td>
-  <td>Command that reads a previously computed restart Solution (acceleration field)</td>
+  <td>Read a previously computed restart Solution (acceleration field)</td>
 </tr>
 <tr>
   <td>read_displacements</td>
-  <td>(restart file name)</td>
-  <td>This command reads the displacements that define the initial stress of the vessel wall structure from an external ASCII file. This is used in conjunction with “read_restart_solution” and requires a “write_restart” command</td>
+  <td>(file name)</td>
+  <td>Read the displacements from an external ASCII file. This is used in conjunction with “read_restart_solution” and requires a “write_restart” command</td>
 </tr>
 <tr>
   <td>read_restart_varwallprop</td>
   <td>(restart file name)</td>
-  <td>Command that reads a previously computed restart Solution (variable wall properties)</td>
+  <td>Read a previously computed restart Solution (variable wall properties)</td>
 </tr>
 </table>
 
@@ -214,14 +219,13 @@ This sections lists the available **svPre** commands, the associated parameters 
 </thead>
 <tr>
   <td>write_restart</td>
-  <td>(file name)</td>
-  <td>Name of the svSolver restart file. Hard-coded file name: restart.0.1 </td>
+  <td>(none)</td>
+  <td>Write the file restart.0.1 for svSolver. It contains initial conditions:pressure, velocity (and displacement, time derivative of solution if applicable). </td>
 </tr>
 <tr>
   <td>write_geombc</td>
-  <td>(file name)</td>
-  <td>Name of the SimVascular/Solver geombc file.
-Hard-coded file name: geombc.dat.1</td>
+  <td>(none)</td>
+  <td>Write the file geombc.dat.1 for svSolver. It contains the info of geometry and boundary conditions. </td>
 </tr>
 </table>
 
@@ -238,12 +242,12 @@ Hard-coded file name: geombc.dat.1</td>
 <tr>
   <td>initial_pressure</td>
   <td>(double)</td>
-  <td>Value of the initial pressure in the model. The default is $p_0$ = $0$</td>
+  <td>Set the initial pressure as the given value in the model. The default is $p_0$ = $0$</td>
 </tr>
 <tr>
   <td>initial_velocity</td>
   <td>(double),(double),(double)</td>
-  <td>Value of the initial velocity in the model. The default is $v_0 = 0.001,\,0.001,\,0.001$</td>
+  <td>Set the initial velocity as the given values in the model. The default is $v_0 = 0.001,\,0.001,\,0.001$</td>
 </tr>
 </table>
 
@@ -296,7 +300,7 @@ blood</td>
 <tr>
   <td>fix_free_edge_nodes</td>
   <td>(file name)</td>
-  <td>Name of the surface representing the vessel wall. This condition fixes the edges of this face with a zero-displacement condition</td>
+  <td>Fix the free edges of the face specified by the given file with a zero-displacement condition</td>
 </tr>
 <tr>
   <td>deformable_write_vtk_mesh</td>
@@ -379,9 +383,8 @@ blood</td>
 <tr>
   <td>append_displacements</td>
   <td>(file name)</td>
-  <td>This commands appends the displacement field calculated by deformable_solve/
-deformable_direct_solve commands to the specified file (file name). <b> The file (filename) contains the converged steady rigid wall . This command does
-not need a posterior “write_restart” command</b></td>
+  <td>Append the displacement field calculated by deformable_solve/
+deformable_direct_solve commands to the specified file (file name). <b> The file (filename) contains the converged steady rigid wall . This command does not need a posterior “write_restart” command</b></td>
 </tr>
 <tr>
   <td>append_varwallprop</td>
