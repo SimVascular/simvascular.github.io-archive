@@ -108,12 +108,12 @@ This sections lists the available **svPre** commands, the associated parameters 
 </tr>
 <tr>
   <td>pressure</td>
-  <td>(file name)(double)</td>
+  <td>(file name) (double)</td>
   <td>Prescribed pressure boundary condition will be appied on the element faces provided by the given file</td>
 </tr>
 <tr>
   <td>set_surface_id</td>
-  <td>(file name)(integer)</td>
+  <td>(file name) (integer)</td>
   <td>Set a ID for the element faces provided by the given file. Mostly used to tag exterior surfaces for Boundary Condition attributes, and also to compute tractions at the boundary</td>
 </tr>
 </table>
@@ -155,22 +155,22 @@ This sections lists the available **svPre** commands, the associated parameters 
 </tr>
 <tr>
   <td>pressure_vtp</td>
-  <td>(file name)(double)</td>
+  <td>(file name) (double)</td>
   <td>Prescribed pressure boundary condition will be appied on the element faces provided by the given vtp file</td>
 </tr>
 <tr>
   <td>set_surface_id_vtp</td>
-  <td>(file name)(integer)</td>
+  <td>(file name) (integer)</td>
   <td>Set a ID for the element faces provided by the given vtp file. Mostly used to tag exterior surfaces for Boundary Condition attributes, and also to compute tractions at the boundary</td>
 </tr>
 <tr>
   <td>read_initial_conditions_vtu</td>
   <td>(file name)</td>
-  <td>Read initial conditions: global node id, pressure, velocity (and displacement, time derivative of solution, if available) from the given vtu file.</td>
+  <td>Read initial conditions: global node id, pressure, velocity (and displacement, time derivative of solution, wall property for variable wall, if available) from the given vtu file.</td>
 </tr>
 </table>
 
-### Read from restart files
+### Read Initial Conditions from Non-VTU files
 
 <table class="table table-bordered">
 <thead>
@@ -193,7 +193,7 @@ This sections lists the available **svPre** commands, the associated parameters 
 <tr>
   <td>read_restart_accelerations</td>
   <td>(restart file name)</td>
-  <td>Read a previously computed restart Solution (acceleration field)</td>
+  <td>Read a previously computed restart solution (acceleration field)</td>
 </tr>
 <tr>
   <td>read_displacements</td>
@@ -203,7 +203,12 @@ This sections lists the available **svPre** commands, the associated parameters 
 <tr>
   <td>read_restart_varwallprop</td>
   <td>(restart file name)</td>
-  <td>Read a previously computed restart Solution (variable wall properties)</td>
+  <td>Read a previously computed restart solution (variable wall properties)</td>
+</tr>
+<tr>
+  <td>read_geombc_varwallprop</td>
+  <td>(geombc file name)</td>
+  <td>Read a previously computed geombc file (variable wall properties)</td>
 </tr>
 </table>
 
@@ -219,12 +224,12 @@ This sections lists the available **svPre** commands, the associated parameters 
 </thead>
 <tr>
   <td>write_restart</td>
-  <td>(none)</td>
+  <td>restart.0.1</td>
   <td>Write the file restart.0.1 for svSolver. It contains initial conditions:pressure, velocity (and displacement, time derivative of solution if applicable). </td>
 </tr>
 <tr>
   <td>write_geombc</td>
-  <td>(none)</td>
+  <td>geombc.dat.1</td>
   <td>Write the file geombc.dat.1 for svSolver. It contains the info of geometry and boundary conditions. </td>
 </tr>
 </table>
@@ -246,7 +251,7 @@ This sections lists the available **svPre** commands, the associated parameters 
 </tr>
 <tr>
   <td>initial_velocity</td>
-  <td>(double),(double),(double)</td>
+  <td>(double) (double) (double)</td>
   <td>Set the initial velocity as the given values in the model. The default is $v_0 = 0.001,\,0.001,\,0.001$</td>
 </tr>
 </table>
@@ -264,27 +269,37 @@ This sections lists the available **svPre** commands, the associated parameters 
 <tr>
   <td>deformable_wall</td>
   <td>(file name)</td>
-  <td>Name of the file with element face connectivity data of elements at the vessel wall. This is used to run deformable wall problems.</td>
+  <td>Set the face specified by the given text file as deformable wall.</td>
+</tr>
+<tr>
+  <td>deformable_wall_vtp</td>
+  <td>(file name)</td>
+  <td>Set the face specified by the given vtp file as deformable wall</td>
 </tr>
 <tr>
   <td>deformable_create_mesh</td>
   <td>(file name)</td>
-  <td>This command generate a new Finite Element Mesh with the nodes and elements on the Face given by (filename), with the purpose of solving the solid mechanics Finite Element problem of the pressurization of that surface with the fluid’s internal pressure</td>
+  <td>Generate a new finite element mesh with the nodes and elements on the face specified by the given text file (filename), with the purpose of solving the solid mechanics fFinite flement problem of the pressurization of that surface with the fluid’s internal pressure</td>
+</tr>
+<tr>
+  <td>deformable_create_mesh_vtp</td>
+  <td>(file name)</td>
+  <td>Generate a new finite element mesh with the nodes and elements on the face specified by the given vtp file (filename), with the purpose of solving the solid mechanics fFinite flement problem of the pressurization of that surface with the fluid’s internal pressure</td>
 </tr>
 <tr>
   <td>deformable_Evw</td>
   <td>(double)</td>
-  <td>Young’s modulus of the vessel wall, assumed uniform</td>
+  <td>Set the elastic modulus  of the vessel wall to the given value, assumed uniform</td>
 </tr>
 <tr>
   <td>deformable_nuvw</td>
   <td>(double)</td>
-  <td>Poisson’s ratio of the vessel wall, assumed uniform</td>
+  <td>Set the Poisson’s ratio  of the vessel wall to the given value, assumed uniform.</td>
 </tr>
 <tr>
   <td>deformable_thickness</td>
   <td>(double)</td>
-  <td>Thickness of the vessel wall, assumed uniform</td>
+  <td>Set the thickness of the vessel wall to the given value, assumed uniform.</td>
 </tr>
 <tr>
   <td>deformable_pressure</td>
@@ -295,12 +310,17 @@ blood</td>
 <tr>
   <td>deformable_kcons</td>
   <td>(double)</td>
-  <td>Shear correction factor for the vessel wall, assumed uniform</td>
+  <td>Set the Shear correction factor of the vessel wall to the given value, assumed uniform.</td>
 </tr>
 <tr>
   <td>fix_free_edge_nodes</td>
   <td>(file name)</td>
-  <td>Fix the free edges of the face specified by the given file with a zero-displacement condition</td>
+  <td>Fix the free edges of the face specified by the given text file with a zero-displacement condition</td>
+</tr>
+<tr>
+  <td>fix_free_edge_nodes_vtp</td>
+  <td>(file name)</td>
+  <td>Fix the free edges of the face specified by the given vtp file with a zero-displacement condition</td>
 </tr>
 <tr>
   <td>deformable_write_vtk_mesh</td>
@@ -346,27 +366,48 @@ blood</td>
 </tr>
 <tr>
   <td>set_surface_thickness</td>
-  <td>(file name)(double)</td>
-  <td>Set the thickness of the face specified by (file name) to a prescribed value. This can be used to assign the thickness to various outlet surfaces and then interpolate the wall thickness from these values using the Laplace_Thickness command.</td>
+  <td>(file name) (double)</td>
+  <td>Set the thickness of the face specified by the given text file (file name) to a prescribed value. This can be used to assign the thickness to various outlet surfaces and then interpolate the wall thickness from these values using the Laplace_Thickness command.</td>
+</tr>
+<tr>
+  <td>set_surface_thickness_vtp</td>
+  <td>(file name) (double)</td>
+  <td>Set the thickness of the face specified by the given vtp file (file name) to a prescribed value. This can be used to assign the thickness to various outlet surfaces and then interpolate the wall thickness from these values using the Laplace_Thickness command.</td>
 </tr>
 <tr>
   <td>set_surface_Evw</td>
-  <td>(file name)(double)</td>
-  <td>Set the elastic modulus of the face specified by (file name) to a prescribed value. This can be used to assign the elastic modulus to various outlet surfaces and then interpolate the wall elastic modulus from these values using the Laplace_Evw command.</td>
+  <td>(file name) (double)</td>
+  <td>Set the elastic modulus of the face specified by the given text file (file name) to a prescribed value. This can be used to assign the elastic modulus to various outlet surfaces and then interpolate the wall elastic modulus from these values using the Laplace_Evw command.</td>
+</tr>
+<tr>
+  <td>set_surface_Evw_vtp</td>
+  <td>(file name) (double)</td>
+  <td>Set the elastic modulus of the face specified by the given vtp file(file name) to a prescribed value. This can be used to assign the elastic modulus to various outlet surfaces and then interpolate the wall elastic modulus from these values using the Laplace_Evw command.</td>
 </tr>
 <tr>
   <td>Laplace_Thickness</td>
   <td>(none)</td>
-  <td>Solve the Laplace problem and determines a variable thinkness distribution in the wall</td>
+  <td>Solve the Laplace problem and determines a variable thinkness distribution in the wall.</td>
 </tr>
 <tr>
   <td>Laplace_Evw</td>
   <td>(none)</td>
-  <td>Solve the Laplace problem and determines a variable elastic modulus distribution in the wall</td>
+  <td>Solve the Laplace problem and determines a variable elastic modulus distribution in the wall.</td>
 </tr>
 <tr>
-  <td>set_surface_initialBCs</td>
-  <td></td>
+  <td>set_surface_initial_Evw</td>
+  <td>(file name) (double)</td>
+  <td>Set the initial elastic modulus of the face specified by the given text file(file name) to a prescribed value for posterior transient Laplace solving (command Transient_Laplace_Evw).</td>
+</tr>
+<tr>
+  <td>set_surface_initial_Evw_vtp</td>
+  <td>(file name) (double)</td>
+  <td>Set the initial elastic modulus of the face specified by the given vtp file (file name) to a prescribed value for posterior transient Laplace solving (command Transient_Laplace_Evw).</td>
+</tr>
+<tr>
+  <td>Transient_Laplace_Evw</td>
+  <td>(none)</td>
+  <td>Solve the Transient Laplace problem and determines a variable elastic modulus distribution in the wall.</td>
 </tr>
 </table>
 
@@ -381,16 +422,9 @@ blood</td>
 </tr>
 </thead>
 <tr>
-  <td>append_displacements</td>
-  <td>(file name)</td>
-  <td>Append the displacement field calculated by deformable_solve/
-deformable_direct_solve commands to the specified file (file name). <b> The file (filename) contains the converged steady rigid wall . This command does not need a posterior “write_restart” command</b></td>
-</tr>
-<tr>
   <td>append_varwallprop</td>
   <td>(file name)</td>
-  <td>This commands appends the displacement field calculated by deformable_solve/
-deformable_direct_solve commands to the specified file (file name).</td>
+  <td>Append the variable wall thickness and elastic modulus to the specified file (file name), such as restart.0.1 or geombc.dat.1.</td>
 </tr>
 </table>
 
