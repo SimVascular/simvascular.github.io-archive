@@ -270,10 +270,6 @@ a {
     }
 }
 
-.content-section {
-    padding-top: 100px;
-}
-
 .download-section {
     width: 100%;
     padding: 50px 0;
@@ -292,11 +288,17 @@ a {
     margin-top: 100px;
 }
 
-@media(min-width:767px) {
-    .content-section {
-        padding-top: 100px;
-    }
+.content-section {
+  padding-top: 100px;
+}
 
+@media screen and (min-width :768px) and  (max-width : 1200px) {
+  .content-section {
+    padding-top: 200px;
+  }
+}
+
+@media(min-width: 768px) {
     .download-section {
         padding: 100px 0;
     }
@@ -410,6 +412,7 @@ body {
 .top-buffer { margin-top:30px; }
 .bottom-buffer-small { margin-bottom:5px; }
 .top-buffer-small { margin-top:5px; }
+.top-buffer-md { margin-top:15px; }
 
 
 .justifiedText {
@@ -458,4 +461,9 @@ body {
 
 #svLogoTitle{
   width: 100%;
+}
+
+.centerTitleText{
+  margin: auto; 
+  text-align: center;   
 }

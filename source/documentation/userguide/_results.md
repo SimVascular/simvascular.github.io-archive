@@ -26,3 +26,7 @@ To do this, we must calculate the scalar quantity representing the magnitude of 
 </figure>
 
 You should get a similar volume rendering result as the figure above. Click the button “Edit” to get different visual effects.
+<br>
+<br>
+<br>
+<br>
