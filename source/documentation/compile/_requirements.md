@@ -1,12 +1,12 @@
 ----------------------------------------------------------------------------
-#            Compiling Instructions for SimVascular with CMake
-######                     Revised 2014-10-12
+#            Compiling Instructions for SimVascular with CMake #
+
 ----------------------------------------------------------------------------
-##
-----------------------------------------------------------------------------
-#							Overview 
-----------------------------------------------------------------------------
-##### This is a guide for compiling the source code for SimVascular.
+
+
+This is a guide for compiling the source code for SimVascular.
+
+
 ----------------------------------------------------------------------------
 #				Tested Configurations and System Requirements
 ----------------------------------------------------------------------------
@@ -32,9 +32,7 @@ Compiler environments currently supported:
 - Visual Studio 2010 Service Pack 1 (for x64)
 - Intel Visual Fortran Fortran compiler (ifort)
 
-*We currently **only support MS Visual Stuidio 2010**, later versions are **not
-** supported at this time. MinGW gfortran is not supported but we plan to add 
-this functionality in future releases.*
+*We currently __only support MS Visual Stuidio 2010__, later versions are __not__ supported at this time. MinGW gfortran is not supported but we plan to add this functionality in future releases.*
 
 #### Apple OS X
 - Version 10.8.5 (Mountain Lion) and 10.9 (Mavericks)

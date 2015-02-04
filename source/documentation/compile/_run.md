@@ -1,7 +1,7 @@
 ## Running SimVascular
 ----------------------------------------------------------------------------
 
-To open the executables simply the corresponding scripts:
+To open the executables simply run the corresponding scripts:
 
 	|  Executable    |  Unix Script  |  Windows Script  |
 	| -------------- | ------------- |  --------------- |

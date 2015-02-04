@@ -9,58 +9,71 @@ support standard MakeFiles.  For details on using MakeFiles see .
 
 ## What libraries you need to build SimVascular
 ----------------------------------------------------------------------------
-#### Linux
+### Linux
 	
 You will need the following packages, available from the APT repository:
 
 ```bash
 sudo apt-get cmake-curses-qui
 sudo apt-get cmake-gui
+```
 
-### Build Tools (Fortran is optional)
+##### Build Tools (Fortran is optional)
+```
 sudo apt-get install gcc-multilib build-essential g++ gfortran
-	
-### Tcl/Tk
+```
+
+##### Tcl/Tk
+```bash
 sudo apt-get install tcl8.5 tcl8.5-dev tcl8.5-lib
 sudo apt-get install tk8.5 tk8.5-dev tk8.5-lib
-	
-### For flowsolver
-sudo apt-get install libmpich2-dev
-	
-### For VTK   
-sudo apt-get install libglu1-mesa-dev libxt-dev libgl1-mesa-dev
+```
 
-##Optional (plugin libraries)
+##### For flowsolver
+```
+sudo apt-get install libmpich2-dev
+```
+
+##### For VTK   
+```
+sudo apt-get install libglu1-mesa-dev libxt-dev libgl1-mesa-dev
+```
+
+##### Optional (plugin libraries)
+```
 sudo apt-get install glib2.0-dev
 ```
 
 
-#### Apple OS X
+### Apple OS X
 To install CMake on OS X visit http://www.cmake.org/ for details
 
 If you have clang 5.0, you will also need to install MacPorts. MacPorts can be
 downloaded at: https://www.macports.org/. The following libraries and tool
 should be installed using MacPorts:
 
-```bash
-	### Build Tools 
-	sudo port install gcc46
-	sudo port install mpich-gcc46
-
-	### For flowsolver only (Optional)
-	port install mpich
-
-	## For Plugins (Optional)
-	sudo port install glib2-devel
-	sudo port install pkgconfig
+##### Build Tools 
+```
+sudo port install gcc46
+sudo port install mpich-gcc46
 ```
 
-#### Windows
+##### For flowsolver only (Optional)
+```
+port install mpich
+```
+##### For Plugins (Optional)
+```
+sudo port install glib2-devel
+sudo port install pkgconfig
+```
+
+### Windows
 You need to install: 
- * CMake, Visit http://www.cmake.org/ for details
- * Microsoft Visual Studio 2010 Win (with x64 compilers)
- * Intel Visual Fortran installed. 
- * MPICH2, available at: mpich2-1.4.1p1-win-x86-64.msi
+ - CMake, Visit http://www.cmake.org/ for details
+ - Microsoft Visual Studio 2010 Win (with x64 compilers)
+ - Intel Visual Fortran installed. 
+ - MPICH2, available at: mpich2-1.4.1p1-win-x86-64.msi
 
 
 ## Steps for compiling
