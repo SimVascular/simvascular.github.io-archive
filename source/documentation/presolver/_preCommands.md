@@ -163,14 +163,9 @@ This sections lists the available **svPre** commands, the associated parameters 
   <td>(file name) (integer)</td>
   <td>Set a ID for the element faces provided by the given vtp file. Mostly used to tag exterior surfaces for Boundary Condition attributes, and also to compute tractions at the boundary</td>
 </tr>
-<tr>
-  <td>read_initial_conditions_vtu</td>
-  <td>(file name)</td>
-  <td>Read initial conditions: global node id, pressure, velocity (and displacement, time derivative of solution, wall property for variable wall, if available) from the given vtu file.</td>
-</tr>
 </table>
 
-### Read Initial Conditions from Non-VTU files
+### Read variable values from non-vtk files
 
 <table class="table table-bordered">
 <thead>
@@ -212,6 +207,75 @@ This sections lists the available **svPre** commands, the associated parameters 
 </tr>
 </table>
 
+### Read variable values from vtk files
+
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th>svPre Command</th>
+  <th>Argument Format</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tr>
+  <td>read_all_variables_vtu</td>
+  <td>(file name)</td>
+  <td>Read the values for all variables: pressure, velocity (and displacement, time derivative of solution, wall property for variable wall, if available) from the given vtu file.</td>
+</tr>
+<tr>
+  <td>read_pressure_velocity_vtu</td>
+  <td>(file name)</td>
+  <td>Read the values for pressure and velocity from the given vtu file.</td>
+</tr>
+<tr>
+  <td>read_pressure_vtu</td>
+  <td>(file name) (variable name in vtu)</td>
+  <td>Read the values for pressure from the given vtu file using an optional variable name.</td>
+</tr>
+<tr>
+  <td>read_velocity_vtu</td>
+  <td>(file name) (variable name in vtu)</td>
+  <td>Read the values for velocity from the given vtu file using an optional variable name.</td>
+</tr>
+<tr>
+  <td>read_displacements_vtu</td>
+  <td>(file name) (variable name in vtu)</td>
+  <td>Read the values for displacements from the given vtu file using an optional variable name.</td>
+</tr>
+<tr>
+  <td>read_accelerations_vtu</td>
+  <td>(file name) (variable name in vtu)</td>
+  <td>Read the values for time derivative of solution from the given vtu file using an optional variable name.</td>
+</tr>
+<tr>
+  <td>read_varwallprop_vtu</td>
+  <td>(file name) (variable name in vtu)</td>
+  <td>Read the values for variable wall properties from the given vtu file using an optional variable name.</td>
+</tr>
+</table>
+
+### Intial Conditions
+
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th>svPre Command</th>
+  <th>Argument Format</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tr>
+  <td>initial_pressure</td>
+  <td>(double)</td>
+  <td>Set the initial pressure as the given value in the model if not read from other files. The default is $p_0$ = $0$</td>
+</tr>
+<tr>
+  <td>initial_velocity</td>
+  <td>(double) (double) (double)</td>
+  <td>Set the initial velocity as the given values in the model if not read from other files. The default is $v_0 = 0.001,\,0.001,\,0.001$</td>
+</tr>
+</table>
+
 ### Write simulation files
 
 <table class="table table-bordered">
@@ -231,28 +295,6 @@ This sections lists the available **svPre** commands, the associated parameters 
   <td>write_geombc</td>
   <td>geombc.dat.1</td>
   <td>Write the file geombc.dat.1 for svSolver. It contains the info of geometry and boundary conditions. </td>
-</tr>
-</table>
-
-### Intial Conditions
-
-<table class="table table-bordered">
-<thead>
-<tr>
-  <th>svPre Command</th>
-  <th>Argument Format</th>
-  <th>Description</th>
-</tr>
-</thead>
-<tr>
-  <td>initial_pressure</td>
-  <td>(double)</td>
-  <td>Set the initial pressure as the given value in the model. The default is $p_0$ = $0$</td>
-</tr>
-<tr>
-  <td>initial_velocity</td>
-  <td>(double) (double) (double)</td>
-  <td>Set the initial velocity as the given values in the model. The default is $v_0 = 0.001,\,0.001,\,0.001$</td>
 </tr>
 </table>
 
