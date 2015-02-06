@@ -17,13 +17,19 @@ This section discusses the options available in the **solver.inp** file.
   <td>Default Input File</td>
   <td> </td>
   <td>File name with relative or absolute path</td>
-  <td>Most parameters are already assigned default values for cardiovascular simulation as shown in the following tables. Only a very small number of parameters must be set up in solver.inp. If the user needs different default values for a few parameters, the new values can also be assigned for them in solver.inp. But if the user needs different default values for many parameters, a default input file can be created and the new default values are put in this file. </td>
+  <td>Most parameters are already assigned default values by hard-coding for cardiovascular simulation as shown in the following tables. Only a very small number of parameters must be set up in solver.inp. If the user needs different default values for a few parameters, the new values can also be assigned for them in solver.inp. But if the user needs different default values for many parameters, a default input file can be created and the new default values are put in this file. Users can use the file <b>default.inp</b> under SimVascular home(installation) folder as a reference to create solver.inp or a custom default input file.</td>
 </tr>
 <tr>
   <td>BCT File Type</td>
   <td>(DAT) </td>
   <td>DAT,VTP</td>
-  <td>This entry tells the solver to read inflwo boundary conditions from <b>bct.dat</b> or <b>bct.dat.vtp</b>.</td>
+  <td>This entry tells the solver to read inflwo boundary conditions from <b>bct.dat</b> or <b>bct.vtp</b>.</td>
+</tr>
+<tr>
+  <td>BCT Matching Type</td>
+  <td>(Global Node ID) </td>
+  <td>Global Node ID,Coordinates</td>
+  <td>This entry tells the solver to match bct nodes by global node id or coordinates.</td>
 </tr>
 </table>
 
