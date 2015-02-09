@@ -1,14 +1,11 @@
-----------------------------------------------------------------------------
-# 							Building SimVascular
-----------------------------------------------------------------------------
 
+# Building SimVascular
+<br>
 This readme gives an overview of compiling SimVascular using CMake.  We also 
-support standard MakeFiles.  For details on using MakeFiles see .
+support standard MakeFiles.
 
+## Required Libraries to build SimVascular
 
-
-## What libraries you need to build SimVascular
-----------------------------------------------------------------------------
 ### Linux
 	
 You will need the following packages, available from the APT repository:
@@ -75,9 +72,10 @@ You need to install:
  - Intel Visual Fortran installed. 
  - MPICH2, available at: mpich2-1.4.1p1-win-x86-64.msi
 
+<br>
 
 ## Steps for compiling
-----------------------------------------------------------------------------
+
 
 By default SimVascular will build using a superbuild mode that downloads and
 configures many of the libraries automatically.  If you wish to perform this

@@ -1,15 +1,12 @@
-----------------------------------------------------------------------------
+
 #            Compiling Instructions for SimVascular with CMake #
-
-----------------------------------------------------------------------------
-
-
+<br>
 This is a guide for compiling the source code for SimVascular.
 
+<br>
 
-----------------------------------------------------------------------------
 #				Tested Configurations and System Requirements
-----------------------------------------------------------------------------
+
 
 #### Linux
 - Ubuntu 13.04 64-bit desktop (w/ patches)

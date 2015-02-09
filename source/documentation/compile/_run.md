@@ -1,5 +1,4 @@
 ## Running SimVascular
-----------------------------------------------------------------------------
 
 To open the executables simply run the corresponding scripts:
 
