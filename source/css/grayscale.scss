@@ -467,3 +467,16 @@ body {
   margin: auto; 
   text-align: center;   
 }
+
+.centreDoc{
+  width: 50%;
+  margin: 0 auto;
+}
+
+.rotate90 {
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
