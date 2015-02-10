@@ -464,9 +464,14 @@ blood</td>
 </tr>
 </thead>
 <tr>
+  <td>append_displacements</td>
+  <td>(file name)</td>
+  <td>Append the displacement field calculated by deformable_solve or deformable_direct_solve commands to the specified file (file name), such as restart.0.1. <b>The file (filename) contains the converged steady rigid wall. This command does not need a posterior “write_restart” command.</b></td>
+</tr>
+<tr>
   <td>append_varwallprop</td>
   <td>(file name)</td>
-  <td>Append the variable wall thickness and elastic modulus to the specified file (file name), such as restart.0.1 or geombc.dat.1.</td>
+  <td>Append the variable wall thickness and elastic modulus to the specified file (file name), such as geombc.dat.1.</td>
 </tr>
 </table>
 
