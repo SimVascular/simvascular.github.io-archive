@@ -43,6 +43,10 @@ title: SimVascular Docs
       <% if man_name == "Refs" %>
         <ul id="sidebar" class="nav nav-stacked fixed manRefs">       <%= partial "documentation/refs_TOC" %></ul>
       <% end %>
+
+      <% if man_name == "CodeSnippets" %>
+        <ul id="sidebar" class="nav nav-stacked fixed manCodeSnippets">       <%= partial "documentation/codesnippets_TOC" %></ul>
+      <% end %>
         
     </nav>
     
@@ -85,6 +89,10 @@ title: SimVascular Docs
 
       <% if man_name == "Refs" %>
         <div class="manRefs">      <%= partial "documentation/refs_content" %></div>
+      <% end %>
+
+      <% if man_name == "CodeSnippets" %>
+        <div class="manCodeSnippets">      <%= partial "documentation/codesnippets_content" %></div>
       <% end %>
 
     </div>
