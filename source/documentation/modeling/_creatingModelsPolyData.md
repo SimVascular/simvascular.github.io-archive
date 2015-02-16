@@ -6,15 +6,12 @@ Make sure the paths and groups you intend to model have been loaded.
  
 Navigate to the 2D Segmentation Tab and Display your groups.
 
-Navigate to the “PolyData —> Boolean” tab in the functional toolbox. Click “Select Ordered Groups” and a window should pop up containing your groups. Move the groups “aorta” and “right iliac” from the “available” to “selected” by clicking each to highlight them and pressing right arrow button in the window.
+Navigate to the “PolyData —> Boolean” tab in the functional toolbox. Click “Select Groups” and a window should pop up containing your groups. Move the groups “aorta” and “right iliac” from the “available” to “selected” by clicking each to highlight them and pressing right arrow button in the window.
 
 <figure>
   <img class="svImg svImgXl"  src="documentation/modeling/imgs/polyData/creating_models/selectingOrderedGroups.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
-
-<font color="red">**HELPFUL HINT:** </font> **Ordering Groups:**
-The Boolean union takes the first group listed and unions it with the second. It then takes this lofted result and unions it with the next group. The operation follows down the list until the model is rendered. To ensure a complete model, be sure the order of the listed groups follows the order of the flow of the model. For this example, "aorta" should be placed first and "right iliac", which is a branch vessel of the aorta should be second.
 
 Using the default parameters, click the button “Boolean” under “Execute and Save”. A solid model created from the selected groups should appear in the Display Window. 
 
@@ -47,3 +44,10 @@ Clear the Display Window by choosing “Clear Window” under the window tab.
 Navigate to “Model” tab and by “Solid Model Type” select “PolyData”
 Hit “Read Model” and select the model created with PolyData, in this case “demo.vtp”.
 The Model should appear in the Display Window.
+
+<font color="red">**HELPFUL HINT:** </font> **Boolean Solid:**
+At the end of the Boolean operation, a window pop up will display the number of free edges and bad cells on the surfaces. Bad cells are denoted by triangles that have more than one neighbor which should not be possible if you have a valid 3D surface. If these numbers are not zero, please report this occurence to the SimVascular development team.  
+
+In addition, you should now be able to switch to the "PolyData -> Extract Faces" tab and see the face names retained from your group segmentations. There should be wall and cap surfaces. If there are two caps for a surface, this means that after lofting, this surface had two holes. For a typical model, you should have one vessel like this and the rest should have one cap. If you have two caps, it may be the case that one of your vessels does not completely intersect into another vessel.
+
+

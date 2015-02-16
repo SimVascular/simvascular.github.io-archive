@@ -68,7 +68,7 @@ TetGen:
 
 ### Using this Manual
 
-Discretizing a domain can a tricky process and this document attempts to make this process more understandable and less daunting. This document will teach you the following things:
+Discretizing a domain can be a tricky process and this document attempts to make this process more understandable and less daunting. This document will teach you the following things:
 
 1. Preparing and running a surface remeshing
 2. Preparing and running a volumetric mesh (with or without boundary layer and refinement)

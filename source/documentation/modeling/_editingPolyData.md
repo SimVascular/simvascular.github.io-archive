@@ -36,9 +36,6 @@ Navigate to PolyData -> Smooth
 
 Selecting any of the following surface operators will edit the entire surface of the model
 
-<font color="red">**HELPFUL HINT:** </font> to undo the any of the following operations:
-        Undo -> Undo last operation
-
 Surface Operators summary:
 
         Smooth Poly Data Model: 

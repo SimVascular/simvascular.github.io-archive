@@ -160,8 +160,8 @@ There are found different types of boundary layer meshing and can be applied on 
 #### Meshing Parameters
 Displays the current macro for the specified meshing parameters. These parameters are written to the .mss script file when the mesh is run.
 
-#### Curvature "UPDATE"
-Curvature refinement allows the mesh to be automatically refined to match the curvature of the entities in the geometric model. This allows MeshSim to automatically control the level of geometric approximation in the mesh. The value specified for curvature is a value relative to the element size. In the figure below, $*Curv Size*$>d/h$. The value specified should always be less than 0.5, and typical values are in the range of 0.01 to 0.4. A smaller value corresponds to more refinement. 
+#### Curvature
+Curvature refinement allows the mesh to be automatically refined to match the curvature of the entities in the geometric model. This allows MeshSim to automatically control the level of geometric approximation in the mesh. The value specified for curvature is a value relative to the element size. In the figure below, $*Curv Size*>d/h$. The value specified should always be less than 0.5, and typical values are in the range of 0.01 to 0.4. A smaller value corresponds to more refinement. 
 
 <figure>
   <img class="svImg svImgLg" src="documentation/meshing/img/MeshSim_Curvature.png"> 
