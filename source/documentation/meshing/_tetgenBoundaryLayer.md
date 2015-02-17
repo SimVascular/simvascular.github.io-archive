@@ -5,11 +5,11 @@ When simulating blood flow, interesting phenomenon can occur near the vessel wal
 We will now generate a boundary layer mesh from a model of an Aorta.
 
 1. 	In the "Mesh Options" tab, load in the desired polydata that already has regions that have been named (One of these faces must be named wall!) The region named wall will be the one given a boundary layer. 
-2.	Set the desired mesh edge size in the "Edge Size:" entry widget on the Mesh Options Tab. In this case, we use "0.3".  
-3.	Go to the "Advanced Mesh Options" tab under the "TetGen" tab, and click "Select Boundary Layer Surfaces".
-4.	Set the desired size of the initial layer in the "Portion of Edge Size" entry box. In this case, we use 0.6. 
+2.	Set the desired mesh edge size in the "Edge Size:" entry widget on the Mesh Options Tab. In this case, we use "0.15".  
+3.	Go to the "Advanced Mesh Options" tab under the "TetGen" tab, and click "Select Boundary Layer Surfaces". Select and move to the right side all walls of the model.
+4.	Set the desired size of the initial layer in the "Portion of Edge Size" entry box. In this case, we use 0.5. 
 5.	Set the desired number of Layers in the "Num Layers" entry box. In this case, we use 4 layers.
-6. 	Set the desired gradation factor in the "Layer Decreasing Ratio" entry box. In this case, we would like each layer to be 0.8 of the previous layer. 
+6. 	Set the desired gradation factor in the "Layer Decreasing Ratio" entry box. In this case, we would like each layer to be 0.6 of the previous layer. 
 
 <figure>
   <img class="svImg svImgXl" src="documentation/meshing/img/TetGen_Load_BoundaryLayer.png">

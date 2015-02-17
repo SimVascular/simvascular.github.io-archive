@@ -3,8 +3,7 @@
 ### About TetGen
 
 TetGen is an open source mesh generation software developed by Hang Si through WIAS in Berlin. TetGen is a tetrahedral mesh generator that uses 3D Delaunay Triangulation.
-
-**More about TetGen**
+Learn more about [TetGen](http://wias-berlin.de/software/tetgen/) here.
 
 ### TetGen Interface
 
@@ -53,6 +52,7 @@ Button or Widget Functionality:
 
 #### Basic Options
 
+	* Estimate Global Edge Size: Based on the areas of the surfaces on your solid, SimVascular will calculate a reasonable mesh edge size. This size is slightly smaller than what may be necessary, but start with this size and slowly increase the size for a larger mesh edge size. 
 	* Set maximum edge size for equilateral triangle - Apply a mesh size. TetGen applies a maximum tetrahedron volume constraint. The value here is an edge size (a). The volume is then computed from this as a tetrahedron with equilateral sides. Volume of an equilateral tetrahedron: $V = (a^3)/(6*sqrt(2))$
 	* Run Mesher: Once all the meshing parameters are specified, run TetGen within SimVascular.
 

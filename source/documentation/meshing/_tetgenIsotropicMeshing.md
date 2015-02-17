@@ -1,6 +1,6 @@
 ## Isotropic Meshing
 
-To generate an isotropic mesh, we either need to specify a desired number of elements or some property (e.g. maximum edge length for each element) of the mesh.  In our case, we will specify the maximum allowable edge length for a given element for the entire mesh. In the "Set maximum edge size for equilateral tetrahedron" box, enter the value for the isotropic mesh. In this case, we use an absolute mesh size of "0.5". Click on the “Run Mesher (Internal)” button. A pop-up window will ask you if you would like to continue; click “Yes”. Another Pop-up Window will ask, “Use currently selected meshing options? This will save/overwrite the meshing script file.” Click, “Yes.”
+To generate an isotropic mesh, we either need to specify a desired number of elements or some property (e.g. maximum edge length for each element) of the mesh.  In our case, we will specify the maximum allowable edge length for a given element for the entire mesh. We have the ability to specify our own mesh size or have SimVascular calculate a size for us. Click "Estimate Global Edge Size". In this case, we get an absolute mesh size of "0.108". Click on the “Run Mesher (Internal)” button. A pop-up window will ask you if you would like to continue; click “Yes”. Another Pop-up Window will ask, “Use currently selected meshing options? This will save/overwrite the meshing script file.” Click, “Yes.”
 
 <figure>
   <img class="svImg svImgXl" src="documentation/meshing/img/TetGen_Iso_Generation.png">

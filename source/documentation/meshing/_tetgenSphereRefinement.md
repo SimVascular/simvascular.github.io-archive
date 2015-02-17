@@ -4,14 +4,12 @@ When simulating blood flow, interesting phenomenon can occur around the site of 
 
 We will now refine a region with a sphere from a model of an Aorta.
 
-1. 	In the "Mesh Options" tab, load in the desired polydata  that already has regions that have been named (One of these faces must be named wall!) The region named wall will be the one given a boundary layer. 
-2.	Make sure Meshing Kernel is set to "TetGen" and the Solid Model Type is set to "PolyData".
-3.	Set the desired mesh edge size in the "edge size:" entry widget on the Mesh Options Tab. In this case, we use "0.3".  
-4.	Go to the "Advanced Mesh Options" tab under the "TetGen" tab, and select "Sphere Refinement".
-4.	Play around with the radius of the sphere in the "Sphere Radius" entry box. When you put in a new value for the radius, hit ENTER to apply the new size. Find a radius that works for your model. In our case, the sphere radius we use is "3".
-5. 	Move the radius to the desired location. We place ours right at the base of the aorta where is branch into the two iliac arteries, as this is an area of more complicated flow. 
-6. 	Enter a mesh size for the refined region into the "Refinement Factor" entry box. The refinement factor we used in this case is "0.5". This means the elements in the refined region should be half the size of the rest of the elements.
-7.	To add this spherical reginement region to the Meshing Paramters, select "Add Sphere Refinement"
+1.	Set the desired mesh edge size in the "edge size:" entry widget on the Mesh Options Tab. In this case, we use "0.3".  
+2.	Go to the "Advanced Mesh Options" tab under the "TetGen" tab, and select "Sphere Refinement".
+3.	Play around with the radius of the sphere in the "Sphere Radius" entry box. When you put in a new value for the radius, hit ENTER to apply the new size. Find a radius that works for your model. In our case, the sphere radius we use is "3".
+4. 	Move the radius to the desired location. We place ours right at the base of the aorta where is branch into the two iliac arteries, as this is an area of more complicated flow. 
+5. 	Enter a mesh size for the refined region into the "Refinement Factor" entry box. The refinement factor we used in this case is "0.5". This means the elements in the refined region should be half the size of the rest of the elements.
+6.	To add this spherical reginement region to the Meshing Paramters, select "Add Sphere Refinement"
 
 <figure>
   <img class="svImg svImgXl" src="documentation/meshing/img/TetGen_Load_Sphere_Refinement.png">
