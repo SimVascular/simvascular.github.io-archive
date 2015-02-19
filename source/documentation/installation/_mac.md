@@ -1,4 +1,4 @@
-# Installation Instructions for Mac #
+# Installation Instructions for Apple OS X #
 
 1. Launch the downloaded package and agree to the terms of service.
 
