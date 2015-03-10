@@ -321,12 +321,12 @@ This sections lists the available **svPre** commands, the associated parameters 
 <tr>
   <td>deformable_create_mesh</td>
   <td>(file name)</td>
-  <td>Generate a new finite element mesh with the nodes and elements on the face specified by the given text file (filename), with the purpose of solving the solid mechanics fFinite flement problem of the pressurization of that surface with the fluid’s internal pressure</td>
+  <td>Generate a new finite element mesh with the nodes and elements on the face specified by the given text file (filename), with the purpose of solving the solid mechanics finite element problem of the pressurization of that surface with the fluid’s internal pressure</td>
 </tr>
 <tr>
   <td>deformable_create_mesh_vtp</td>
   <td>(file name)</td>
-  <td>Generate a new finite element mesh with the nodes and elements on the face specified by the given vtp file (filename), with the purpose of solving the solid mechanics fFinite flement problem of the pressurization of that surface with the fluid’s internal pressure</td>
+  <td>Generate a new finite element mesh with the nodes and elements on the face specified by the given vtp file (filename), with the purpose of solving the solid mechanics finite element problem of the pressurization of that surface with the fluid’s internal pressure</td>
 </tr>
 <tr>
   <td>deformable_Evw</td>
