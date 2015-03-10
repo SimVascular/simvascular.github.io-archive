@@ -2,11 +2,18 @@
 
 **Extracting Faces:**
 
-Under PolyData navigate to the “Face Selection” tab. Load the PolyData solid, “demo.vtp” with the menu on the upper right. Under “Boundary Extraction” set the angle of separation to around 50 degrees and click “Extract Boundaries".
+Under PolyData navigate to the “Face Selection” tab. Either load the saved PolyData solid, “demo.vtp” with the main PolyData menu, or select the "PolyData->Update Solid Model" button. Your model should have the names (shown below) from your segmentation groups inhereted as surface names. If you would like to use these preset names and surfaces, neglect the following instructions.
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/polyData/faces/prenamedFaces.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+However,if you would like to have one wall surface, under “Boundary Extraction” set the angle of separation to around 50 degrees and click “Extract Boundaries".Follow the instructions below to name your surfaces.
 
 A list of the model faces found will appear in the window to the left.
 
-If the number of faces listed in the functional toolbox exceeds the number of actual faces on your model, toggle the “Boundary Extraction” angle to a higher number, extracting boundaries until the number listed is the number of faces on your model, toggle the angle to a lower value. Through trial and error, try to achieve the number of desired faces for your model with the right extraction angle.
+If the number of faces listed does not match the number of faces expected, you must toggle the extraction angle to get the desired number. After extracting the faces, hover over a surface in the window and select "p". This will highlight your face. The key here is to make sure that the caps of your vessels are isolated from the other surfaces of your vessel. Once this is done, follow the direction below to "Select and Combine Faces". 
 
 <figure>
   <img class="svImg svImgXl"  src="documentation/modeling/imgs/polyData/faces/Selection.png"> 
@@ -49,9 +56,15 @@ If necessary you can delete unwanted faces:
 
         Select and Delete Faces —> click the button, move the faces you want to delete to the right of the popup window and press ok
 
-In this case, we deleted the face 5/5 which did not respresent a known face on the model:
-
 <figure>
   <img class="svImg svImgXl"  src="documentation/modeling/imgs/polyData/faces/Deleting.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
+
+**Selecting and Remeshing Faces:**
+
+If you would like to improve the quality of the surfaces on your mesh prior to meshing, this is possible in both the PolyData tab and the Meshing tab. In order to remesh the surface in the PolyData tab, you must select a mesh edge size that will give a reasonable surface mesh, and then select "Select and Remesh Faces". Select the faces you would like to remesh from the list and click "OK". This will take a while, as it must preserve the boundaries between surfaces, so be patient. 
+
+**Filling Holes with Ids:**
+
+After deleting some faces of the model, it may be desirable to keep the current names of the other surfaces in the model. In this case, select "Fill Holes with Ids" and this will fill in the holes of the model. For each new surface created, a new id number will be assigned. It is possible to name these surfaces to your liking following the instructions above for "Naming Faces".

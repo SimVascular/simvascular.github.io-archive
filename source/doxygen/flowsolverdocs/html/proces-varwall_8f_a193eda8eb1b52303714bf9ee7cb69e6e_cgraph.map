@@ -1,0 +1,51 @@
+<map id="proces" name="proces">
+<area shape="rect" id="node2" href="$solver__subroutines_8f.html#a13211eaac8c2d63cd4cc2c2c8e26d459" title="This routine inputs the geometry and the boundary conditions. " alt="" coords="152,574,214,602"/>
+<area shape="rect" id="node10" href="$blkdat_8h.html#ae303c54974fc06aed44b250ae924c6e5" title="lcblkb" alt="" coords="482,497,537,525"/>
+<area shape="rect" id="node15" href="$solver__subroutines_8f.html#a63900e05cdf781d4557ac472d6875763" title="setper" alt="" coords="153,239,212,267"/>
+<area shape="rect" id="node16" href="$solver__subroutines_8f.html#a3cd2894d40ae393f6c2b4b10fbcfc505" title="perprep" alt="" coords="149,291,216,319"/>
+<area shape="rect" id="node17" href="$solver__subroutines_8f.html#a399882c6f121a869e9ada80779fff241" title="Create the new statistics arrays. " alt="" coords="149,57,216,85"/>
+<area shape="rect" id="node19" href="$solver__subroutines_8f.html#a3785c66a7c905ccf5b80f40573d9ed25" title="This subroutine performs a vector gather/scatter operation for the nodal coordinates array..." alt="" coords="482,187,537,215"/>
+<area shape="rect" id="node21" href="$solver__subroutines_8f.html#a3ccd1b27c1f99e3f4385a3e12c81d7af" title="Natural pressure boundary condition can be calculated with p, the pressure, related (in some prescrib..." alt="" coords="151,187,214,215"/>
+<area shape="rect" id="node25" href="$solver__subroutines_8f.html#aedb63b6f76b3937f52e444433082e5a0" title="initsponge" alt="" coords="142,626,224,654"/>
+<area shape="rect" id="node26" href="$varwall__subroutines_8f.html#ad4fae022fc176eb792a9a411ebe0621e" title="local_elemwallprop" alt="" coords="115,678,250,706"/>
+<area shape="rect" id="node27" href="$itrdrv-closedloop-varwall-coronary_8f.html#a434c3bb9c07f0dd15f596333d2bad214" title="This iterative driver is the semi&#45;discrete, predictor multi&#45;corrector algorithm. It contains the Hulb..." alt="" coords="317,1433,368,1461"/>
+<area shape="rect" id="node3" href="$solver__subroutines_8f.html#a2b870c4c85b99a9405437c7ca78b853c" title="Compute the bounding box for the computational domain. " alt="" coords="303,678,382,706"/>
+<area shape="rect" id="node4" href="$solver__subroutines_8f.html#ae008518db432c6f0fb13bb5a0042f520" title="This subroutine generates shape functions for tetra elements. " alt="" coords="310,367,375,395"/>
+<area shape="rect" id="node5" href="$solver__subroutines_8f.html#a397fada3c9be3510f131e949fb0b76d2" title="This utility routine prints out the error and stops the program. " alt="" coords="643,419,693,447"/>
+<area shape="rect" id="node6" href="$solver__subroutines_8f.html#a4287ed747fd2030008e929e6c4a9d681" title="This routine reads the boundary condition codes. " alt="" coords="312,834,373,862"/>
+<area shape="rect" id="node7" href="$solver__subroutines_8f.html#a9f902c5cf88211462d655e45ce30b177" title="This routine generates the essential prescribed boundary conditions. " alt="" coords="314,522,371,550"/>
+<area shape="rect" id="node8" href="$solver__subroutines_8f.html#a1a52adeb41bcb0660a666520c1cb7ccf" title="This subroutine compute the total number of nodes in the model. " alt="" coords="312,574,373,602"/>
+<area shape="rect" id="node9" href="$solver__subroutines_8f.html#a345c9c817731dda7c74dc9062abe899a" title="initdtn" alt="" coords="314,626,371,654"/>
+<area shape="rect" id="node11" href="$solver__subroutines_8f.html#a22dd32083f6c9f8176080387b1d87a58" title="This subroutine generates shape functions for tetra elements. " alt="" coords="306,782,379,810"/>
+<area shape="rect" id="node12" href="$genini-coronary_8f.html#a16cf0fb2d7a7e3961640ab631ed89696" title="This routine reads the initial values in primitive form (density, velocity and temperature), satisfies the boundary conditions and converts them to Y&#45;variables. " alt="" coords="314,886,371,914"/>
+<area shape="rect" id="node13" href="$solver__subroutines_8f.html#a4455ca311f5023ae743d966a83351478" title="bcint" alt="" coords="485,886,534,914"/>
+<area shape="rect" id="node14" href="$solver__subroutines_8f.html#a93172ab3be4865722619861367500b09" title="This routine satisfies the boundary conditions on the isclr. " alt="" coords="476,834,543,862"/>
+<area shape="rect" id="node18" href="$solver__subroutines_8f.html#a6a9a325de41d3536159597d772d8c547" title="Compute the necessary terms for the statistics projection matrices. " alt="" coords="299,57,387,85"/>
+<area shape="rect" id="node20" href="$solver__subroutines_8f.html#a01fb97b083c3964c114b1040f0fb4d6f" title="Compute the Lhs matrices needed for the conservative projection of the statistics. " alt="" coords="306,5,379,33"/>
+<area shape="rect" id="node22" href="$asbnabi-closedloop_8f.html#aeed5f0fff5b6867879be4111d16d0951" title="This routine computes and assembles the data corresponding to the boundary elements. " alt="" coords="309,109,377,137"/>
+<area shape="rect" id="node23" href="$asbnasc-closedloop_8f.html#a3348227959bd68198160485bee8dce29" title="This routine computes and assembles the data corresponding to the boundary elements. " alt="" coords="307,161,378,189"/>
+<area shape="rect" id="node24" href="$solver__subroutines_8f.html#a1c150293c76c042271ad405a1bb7c455" title="This routine computes and assembles data required for an Augmented Lagrangian Method. " alt="" coords="305,213,380,241"/>
+<area shape="rect" id="node28" href="$solver__subroutines_8f.html#a47bc85904e6e04c634bff3cca6451c7a" title="genadj" alt="" coords="479,1406,540,1434"/>
+<area shape="rect" id="node29" href="$closedloop__subroutines_8f.html#a499985d5ec98e97099ae4d3b0b142c80" title="This subroutine initiate the General boundary condition. " alt="" coords="472,1458,547,1486"/>
+<area shape="rect" id="node30" href="$solver__subroutines_8f.html#ad5bb6ee2b444495fcc39b39cacb1ea9b" title="This program satisfies the boundary conditions on the Y&#45;variables. " alt="" coords="486,1510,533,1538"/>
+<area shape="rect" id="node31" href="$solver__subroutines_8f.html#a290703a5343fb3cb72460bc4594d6559" title="getflowq" alt="" coords="633,1901,703,1929"/>
+<area shape="rect" id="node32" href="$closedloop__subroutines_8f.html#a5cbc3333f24e5e9df40d05123971621d" title="Main subroutine for gathering required information and communicating with 0D to acquire necessary inf..." alt="" coords="469,1614,550,1642"/>
+<area shape="rect" id="node33" href="$itrdrv-closedloop-varwall-coronary_8f.html#aa880f450909006392630207cc4722a0a" title="addneumannbctosvls" alt="" coords="436,1666,583,1694"/>
+<area shape="rect" id="node34" href="$solver__subroutines_8f.html#a72dbbc6ba3143074cc4a7ea7151b14af" title="genlmass" alt="" coords="470,1718,549,1746"/>
+<area shape="rect" id="node35" href="$solver__subroutines_8f.html#a529a86dcf49156893507696157dc80e0" title="Initialize the predictor multicorrector (set up parameters) " alt="" coords="477,1770,542,1798"/>
+<area shape="rect" id="node36" href="$solver__subroutines_8f.html#a6df6a4adf7a878bcc7c8b9824c8c77fb" title="calcimpconvcoef" alt="" coords="449,1822,569,1850"/>
+<area shape="rect" id="node37" href="$solver__subroutines_8f.html#a43f7f8044b330a11cd4d13880b3aa46f" title="calcrcric" alt="" coords="474,1874,544,1902"/>
+<area shape="rect" id="node38" href="$solver__subroutines_8f.html#a8a76b9a085d27b74eb5fac30b2db869a" title="calccalcic" alt="" coords="470,2082,549,2110"/>
+<area shape="rect" id="node39" href="$solver__subroutines_8f.html#a8f1ad53bc4f540ab722c1d8f56388f33" title="calclagrangeic" alt="" coords="456,1978,563,2006"/>
+<area shape="rect" id="node40" href="$coronary__subroutines_8f.html#aaa4dbfc3929885edda752da22c043cec" title="calccoric" alt="" coords="473,1562,546,1590"/>
+<area shape="rect" id="node41" href="$solver__subroutines_8f.html#a28a3485fa9c915718f772b8137e5ea39" title="Returns in pold the history dependent part of the pressure in the impedance/flow rate convolution for..." alt="" coords="643,1121,693,1149"/>
+<area shape="rect" id="node42" href="$solver__subroutines_8f.html#a246472c3f34552a21a98f2e297ce1c02" title="calchoprcr" alt="" coords="468,938,551,966"/>
+<area shape="rect" id="node43" href="$solver__subroutines_8f.html#ad1eb587b89e7eb1fd5cf3b2a9902ec92" title="calcrcrconvcoef" alt="" coords="452,990,566,1018"/>
+<area shape="rect" id="node44" href="$coronary__subroutines_8f.html#a020b9a9f72209e5c439502781c19eeb5" title="calccorconvcoef" alt="" coords="451,1042,568,1070"/>
+<area shape="rect" id="node45" href="$coronary__subroutines_8f.html#a66bc6976655d0260cbef7f34b20a1de3" title="calchopcor" alt="" coords="466,1094,552,1122"/>
+<area shape="rect" id="node46" href="$solver__subroutines_8f.html#a177f02dfd1fe349fed529bd88bd8cf8f" title="calclagrangeerroric" alt="" coords="442,1926,577,1954"/>
+<area shape="rect" id="node47" href="$solver__subroutines_8f.html#a983fe545703daeda9995839f3e884e2c" title="Predict solution at time n+1. " alt="" coords="473,1198,546,1226"/>
+<area shape="rect" id="node48" href="$closedloop__subroutines_8f.html#aba75d34e599588251de2973fedef1d88" title="Main subroutine for calculating the general surface pressure derivative with respect to flow rate..." alt="" coords="440,1250,579,1278"/>
+<area shape="rect" id="node49" href="$solver__subroutines_8f.html#a9fde8f1991ccf99f744113f0cf9a2a24" title="This is the 2nd interface routine to the linear equation solver library that uses the CGP and GMRES m..." alt="" coords="478,1302,540,1330"/>
+<area shape="rect" id="node50" href="$solver__subroutines_8f.html#a7a67f5331587ba01e7fb6b78cd122aee" title="This is the 2nd interface routine to the linear equation solver library. " alt="" coords="480,1354,539,1382"/>
+</map>

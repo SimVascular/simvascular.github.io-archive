@@ -3,8 +3,6 @@
 	Tab: TetGen → Mesh Options
 	File: <project folder>/demo.vtp
 	Set maximum edge size for equilateral tetrahedron: 0.3
-	Toggle on: Surface Mesh
-	Toggle on: Volume Mesh
 	Click “Run Mesher (Internal)”
 
 <figure>
