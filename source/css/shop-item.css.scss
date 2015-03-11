@@ -158,3 +158,9 @@ img.svImgLg{
 img.svImgXl{
   width: 95%; 
 }
+
+/* SCROLL PROPERTY FOR DOCS AND CLINICAL CASES*/
+.bs-docs-sidebar > ul {
+    overflow-y: auto;
+    height: 100%;
+}

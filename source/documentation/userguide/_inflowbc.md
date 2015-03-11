@@ -4,8 +4,8 @@ For the boundary condition of the inlet face: *inflow_aorta*, we need to create 
 
 ***steady.flow***
 
-	0.0 100
-	0.2 100
+	0.0 -100
+	0.2 -100
 
 The first column is time (s), the second is flow rate (cm^3/s).
 
