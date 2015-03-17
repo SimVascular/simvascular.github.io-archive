@@ -19,6 +19,25 @@ This section discusses the options available in the **solver.inp** file.
   <td>File name with relative or absolute path</td>
   <td>Most parameters are already assigned default values by hard-coding for cardiovascular simulation as shown in the following tables. Only a very small number of parameters must be set up in solver.inp. If the user needs different default values for a few parameters, the new values can also be assigned for them in solver.inp. But if the user needs different default values for many parameters, a default input file can be created and the new default values are put in this file. Users can use the file <b>default.inp</b> under SimVascular home(installation) folder as a reference to create solver.inp or a custom default input file.</td>
 </tr>
+</table>
+
+#### BCT Control
+
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th>Command</th>
+  <th>Default</th>
+  <th>Possible Values</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tr>
+  <td>Time Varying Boundary Conditions From File</td>
+  <td>(True)</td>
+  <td>True,False</td>
+  <td>If the <b>bct.dat</b> file was created containg prescribed velocity at the inlet (this will be the case for most simulations), this option should be set to <b>True</b>.</td>
+</tr>
 <tr>
   <td>BCT File Type</td>
   <td>(DAT) </td>
@@ -26,10 +45,22 @@ This section discusses the options available in the **solver.inp** file.
   <td>This entry tells the solver to read inflwo boundary conditions from <b>bct.dat</b> or <b>bct.vtp</b>.</td>
 </tr>
 <tr>
+  <td>Number of BCT Files</td>
+  <td>(1) </td>
+  <td>(integer)</td>
+  <td>This entry tells the solver how many bct files need to be read. If there is only one, name it as bct.dat (or bct.vtp); if there are multiple, name them as bct1.dat, bct2.dat...(or bct1.vtp, bct2.vtp...)</td>
+</tr>
+<tr>
   <td>BCT Matching Type</td>
   <td>(Global Node ID) </td>
   <td>Global Node ID,Coordinates</td>
   <td>This entry tells the solver to match bct nodes by global node id or coordinates.</td>
+</tr>
+<tr>
+  <td>BCT Time Scale Factor</td>
+  <td>(1.0)</td>
+  <td>(double)</td>
+  <td>Defines an amplification factor for the velocity data contained in the <b>bct.dat</b> file. It allows scaling the time history given in the <b>bct.dat</b> file by the factor specified in this line. For example, if your original bct.dat has a period of $0.8$ seconds, and if you wanted to simulate a problem with the same inflow wave shape, but with a period of $0.4$ seconds, you would have to enter a BCT Time Scale Factor of 0.5 in this line. <b>For most cases</b>, it should be 1.0.</td>
 </tr>
 </table>
 
@@ -59,8 +90,14 @@ This section discusses the options available in the **solver.inp** file.
 <tr>
   <td>Number of Timesteps</td>
   <td>NO DEFAULT</td>
-  <td>(double)</td>
+  <td>(integer)</td>
   <td>Total number of timesteps in the simulation</td>
+</tr>
+<tr>
+  <td>Time Step Size</td>
+  <td>NO DEFAULT</td>
+  <td>(double)</td>
+  <td>Time size of each step</td>
 </tr>
 </table>
 
@@ -273,18 +310,6 @@ This section discusses the options available in the **solver.inp** file.
   <th>Description</th>
 </tr>
 </thead>
-<tr>
-  <td>Time Varying Boundary Conditions From File</td>
-  <td>(True)</td>
-  <td>True,False</td>
-  <td>If the <b>bct.dat</b> file was created containg prescribed velocity at the inlet (this will be the case for most simulations), this option should be set to <b>True</b>.</td>
-</tr>
-<tr>
-  <td>BCT Time Scale Factor</td>
-  <td>(1.0)</td>
-  <td>(double)</td>
-  <td>Defines an amplification factor for the velocity data contained in the <b>bct.dat</b> file. It allows scaling the time history given in the <b>bct.dat</b> file by the factor specified in this line. For example, if your original bct.dat has a period of $0.8$ seconds, and if you wanted to simulate a problem with the same inflow wave shape, but with a period of $0.4$ seconds, you would have to enter a BCT Time Scale Factor of 0.5 in this line. <b>For most cases</b>, it should be 1.0.</td>
-</tr>
 <tr>
   <td>Number of Coupled Surfaces</td>
   <td>(0)</td>
