@@ -10,3 +10,7 @@
 	</figure>
 
 3. Launch SimVascular through your Applications folder or using the Terminal.
+
+4. (Optional) To install the SimvVascular command line tools run:
+
+		sudo /Applications/SimVascular.app/Contents/Resources/setup-symlinks.sh

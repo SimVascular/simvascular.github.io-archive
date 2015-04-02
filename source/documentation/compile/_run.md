@@ -1,12 +1,12 @@
 ## Running SimVascular
 
-To open the executables simply run the corresponding scripts:
+To run SimVascular and other executables you need to run these scripts which will set up the environmnet variables and start the executable. These scripts should be run from the top level of the build directory:
 
 <table class="table table-bordered">
 <thead>
 <tr>
   <th>Executable</th>
-  <th>Unix Script</th>
+  <th>Linux/OSX Script</th>
   <th>Windows Script</th>
 </tr>
 </thead>
@@ -16,21 +16,23 @@ To open the executables simply run the corresponding scripts:
   <td>mysim.bat</td>
 </tr>
 <tr>
-  <td>Flow Solver</td>
+  <td>svSolver</td>
   <td>mysolver</td>
   <td>mysolver.bat</td>
 </tr>
 <tr>
-  <td>Adaptor</td>
-  <td>myadaptor</td>
-  <td>myadaptor.bat</td>
+  <td>svAdapt</td>
+  <td>myadapt</td>
+  <td>myadapt.bat</td>
 </tr>
 <tr>
-  <td>Post Solver</td>
+  <td>svTetAdapt</td>
+  <td>mytetadapt</td>
+  <td>mytetadapt.bat</td>
+</tr>
+<tr>
+  <td>svPost</td>
   <td>mypost</td>
   <td>mypost.bat</td>
 </tr>
 </table>
-<br>
-<br>
-<br>
