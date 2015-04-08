@@ -2,7 +2,7 @@
 
 This macro convert arbitrary polydata to volume data. 
 
-```ruby
+```tcl
 seg_convertPdtoVolume pdName volName
 ```
 

@@ -13,10 +13,19 @@
 
 set :markdown_engine, :redcarpet
 set :markdown, :fenced_code_blocks => true, :smartypants => true, :tables => true
+#set :markdown_engine, :kramdown
 
 page "/", :layout => "frontpage"
 page "/docs*.html", :layout => "docs"
 page "/clinical*.html", :layout => "clinical"
+page "/comingSoon*.html", :layout => "comingSoon"
+
+###
+# Code highlighting
+###
+
+activate :syntax
+
 
 # Per-page layout changes:
 #

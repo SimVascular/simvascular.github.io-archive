@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Build Site
-bundle exec middleman build
+bundle exec middleman build --verbose
 
 # Change Permissions
 chmod -R 777 ./build/*
