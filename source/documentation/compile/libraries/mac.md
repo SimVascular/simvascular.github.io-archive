@@ -1,8 +1,9 @@
 ### Apple OS X
 To install CMake on OS X visit <a href="http://www.cmake.org/"target="blank"> cmake.org</a> for details
 
-If you have clang 5.0, you will also need to install MacPorts, which you can download at <a href="https://www.macports.org/"target="blank"> macports.org</a>
+If you have Clang 5.0, you will also need to install MacPorts, which you can download at <a href="https://www.macports.org/"target="blank"> macports.org</a>
 <br>
+
 
 The Xcode comman line tools need to be installed. This can done with this command:
 	
@@ -16,9 +17,11 @@ Build Tools:
 	sudo port install mpich-gcc46
 
 
-For flowsolver (Optional):
+For SVsolver (Optional):
 
 	sudo port install mpich
+
+*__To use Clang 6.0, you must insatll mpich 2 which is available in macports__*
 
 Plugin Libraries (Optional):
 

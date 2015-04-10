@@ -1,5 +1,5 @@
 
-#            Compiling Instructions for SimVascular with CMake #
+#            Compiling SimVascular using CMake #
 <br>
 *This guide gives an overview of compiling SimVascular using CMake.  We also support standard MakeFiles.*
 

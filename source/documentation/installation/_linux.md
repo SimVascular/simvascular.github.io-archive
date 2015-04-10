@@ -20,6 +20,3 @@
 
 		cd /folder/with/input
 		mpiexec -np 2 svsolver
-<br>
-<br>
-<br>
