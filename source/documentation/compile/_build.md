@@ -10,7 +10,7 @@ step manually, turn off SimVascular_SUPERBUILD from the CMake menu.
 
 
 		Source: /home/[username]/SimVascular/Code
-		Build: /home/[username]/SimVascularBin.
+		Build: /home/[username]/SimVascularBin
 
 **Note to Windows Users:** *There is a bug in MSVC10 that causes errors if the compile paths are too long,  It is reccomended that you place your source directoy so that the path to it is short (C:/Code/SimVascular is known to work).*
 

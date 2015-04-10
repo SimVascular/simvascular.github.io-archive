@@ -1,4 +1,5 @@
-## Running SimVascular From the Command Line (OSX and Linux)
+
+## Running SimVascular From the Command Line
 
 __Note:__ Currently, Windows does not support command line tools
 <br>
@@ -13,7 +14,7 @@ __Note:__ Currently, Windows does not support command line tools
 </thead>
 <tr>
   <td>SimVascular</td>
-  <td>svsim</td>
+  <td>simvascular</td>
 </tr>
 <tr>
   <td>svSolver</td>

@@ -1,20 +1,4 @@
 
-#Downloading SimVascular#
-
-1. On the SimVascular hompage, click 
-<a href="https://simtk.org/project/xml/downloads.xml?group_id=188" target="_blank">Download Installation Package</a>. 
-
-	Once on simtk.org choose the correct download link:
-
-		Windows: simvascular-2.0.10129-Win64.msi 
-		Mac: simvascular-2.0.10129-darwin-x86_64.dmg
-		Linux: simvascular-2.0.10129-Linux-x64.tar.gz
-
-2. Login to SimTk or create a new account.
-
-3. List your intended use for the software and agree to the license agreement. The download should begin, if not, click the link given and follow the instructions.
-
-
 # Installation Instructions for Windows #
 
 <br>
@@ -78,7 +62,7 @@ search box) and then typing:*
 Install SimVascular & configure firewall (for flow solver if needed):
 
 	1. Install simvascular-2.0.10129-Win64.msi 
-	2. Add exceptions to Windows Firewall for “flowsolver-bin.exe” and “mpiexec.exe” installed in “Program Files (x86/SimVascular/sv/??????????”. Be careful since “private” networks and “public” networks have different settings.
+	2. Add exceptions to Windows Firewall for “flowsolver.exe” and “mpiexec.exe” installed in “Program Files". Be careful since “private” networks and “public” networks have different settings.
 
 <br>
 

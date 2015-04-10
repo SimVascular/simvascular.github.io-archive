@@ -10,10 +10,10 @@ You may get these from source or use the SV_thirdparty_svn
 
 The following settings are required when building VTK on your own:
 
-* BUILD\_SHARED\_LIBS=OFF
-* BUILD_TESTING=OFF
-* VTK\_Group\_Tk=ON
-* VTK\_WRAP\_TCL=ON
+* BUILD\_SHARED\_LIBS OFF
+* BUILD_TESTING OFF
+* VTK\_Group\_Tk ON
+* VTK\_WRAP\_TCL ON
 
 __Note__: Different versions of VTK have slightly different CMake Variable names.
 
@@ -28,8 +28,8 @@ We reccomend using VTK 6.0.0.  SimVascular does not compile using VTK 6.1.0 yet.
 ITK will need these settings if building on your own:
 
 * BUILD\_SHARED\_LIBS OFF
-* BUILD_TESTING OFF
-* ITKVTKGlue ON
+* BUILD\_TESTING OFF
+* Module\_ITKVtkGlue ON
 * ITK_Review ON
 
 You also must ensure that the VTK_DIR from above. We reccomend using ITK 4.5.0

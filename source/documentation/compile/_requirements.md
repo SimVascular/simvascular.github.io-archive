@@ -37,6 +37,7 @@
       <ul>
       <li>i686-apple-darwin11-gcc-4.2.1 (GCC) 4.2.1 (Apple Inc. build 5666)</li>
       <li>MacPorts with gcc (4.6.4)</li>
+      <li>Clang 6.0 (experimental)</li>
     </ul>
   </td>
   <td>Tested Configurations:
@@ -60,7 +61,7 @@
 
 *XCode's tools and libraries are required but compiling with XCode is currently __unsupported.__*
 
-*Clang 5.0+ is*  **not** *supported*
+*Clang 5.0+ is*  **not** *supported*, we are working on supporting this in the near future.
 
 <!-- #### Linux
 - Ubuntu 13.04 64-bit desktop (w/ patches)

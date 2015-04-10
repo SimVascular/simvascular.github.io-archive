@@ -6,7 +6,7 @@
 		sudo apt-get install mpich2
 		sudo apt-get install gfortran
 
-5. To use Meshim on linux copy your Meshsimlicense file into the simvascular directory and rename it meshsim-license.dat
+5. To use Meshim on linux copy your Meshsim license file into the simvascular directory and rename it meshsim-license.dat
 
 6. To add SimVascular to your path (this is very helpful with using svsolver), you will need to run the post-install script:
 
