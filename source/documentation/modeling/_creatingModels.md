@@ -11,22 +11,27 @@ Then, under the “2D Segmentation” tab:
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-Highlight “aorta\_test” in the group treeview display window. Next to the group treeview display window, click on the “Use Groups” button under “Solid Model Lofting”. After this button is pressed, you should see a “YES” appear in the column “Use in Lofting” next to “aorta\_test” in the group treeview window. This indicates that you would like to loft a 3D solid from the group “aorta_test”.
+Highlight “aorta\_test” in the group treeview display window. Next to the group treeview display window, click on the “Model Operations → Use Surface” button under “Operations” on the right hand side of the screen. After this button is pressed, you should see a “X” appear in the column “Use in Model” next to “aorta\_test” in the group treeview window. This indicates that you would like to loft a 3D solid from the group “aorta_test”.
 
-Under the “Parasolid → Create Model” tab, click on the “Create Pre-Op Solid Model” button. A window will appear asking you if you would like to “Recreate all solids”. Click on the “Yes” button. Another window appears asking if you would like to “Create missing solids using defaults.” Click on the “Yes” button. 
+Under the “Model → Parasolid → Create Model” tab, click on the “Create Pre-Op Solid Model” button. A window will appear asking you to name your new model. Name your model "NewModel" and then click "Enter". Another window will appear asking you if you would like to “Recreate all solids”. Click on the “Yes” button. Another window appears asking if you would like to “Create missing solids using defaults.” Click on the “Yes” button. 
 
 <figure>
   <img class="svImg svImgXl"  src="documentation/modeling/imgs/solid_modeling/creating_models/2.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-The blue outlines representing your segmentation should begin to turn red, and a red solid representing your vessel should appear.
+A box will pop up informing you that it is renaming one of the surfaces so that you do not have two surfaces with the same name. Then, a red solid representing your vessel should appear.
+
+In addition, the name of the solid will appear underneath Parasolid in the dropdown list. The model should also have faces corresponding to the groups used to create the solid. Click on the model name to expand the list and see the faces.
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/solid_modeling/creating_models/2.5.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
 
 The “num sample pts” under “Lofting Options” describes how many sample points around each segmentation are used to connect one contour to the adjacent contour. You can imagine that using fewer sample points creates a more smooth model, but one that may not adhere as well to the 2D segmentations. You are encouraged to play around with the option. Change the value in “num sample pts” and click on the “Create Pre-Op Solid Model” button to see how it affects the solid.
 
-Now, let’s examine the solid in more detail. Click your mouse in the 3D display window and click on the semi-transparent solid model. If you type “p” on the keyboard, the model should now become opaque yellow and easier to visualize. This is a trick – if you would actually like to change the opacity of the lofted solid (optional), “pick” the 3D solid, which turns it opaque and yellow, and go to the “Displays” tab in the Functional Toolbox. Under the “Display” tab, click on the “Actor Properties” tab. This tab allows you to change the 3D representation, color, and overall display properties of anything you have “picked” in your display windows.
-
-In the “Opacity” field, you can change “0.5” to “1.0” for totally opaque, and click on the button “Set Opacity”:
+Now, let’s examine the solid in more detail. Click your mouse in the 3D display window and click on the semi-transparent solid model. If you type “p” on the keyboard, the model should now become opaque yellow and easier to visualize. If you would like to change the opacity of the lofted solid (optional), “pick” the 3D solid, which turns it opaque and yellow, and go to the “Visualization” portion on the right hand side of the screen. Click “Color and Opacity → Change Selected Opacity” and choose a desired opacity. Use this same button and click "Change Selected Color" to change the color of the model. 
 
 <figure>
   <img class="svImg svImgXl"  src="documentation/modeling/imgs/solid_modeling/creating_models/3.jpg"> 
