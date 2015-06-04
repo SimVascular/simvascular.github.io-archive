@@ -86,7 +86,7 @@ In the Functional Toolbox pane, click on the “Displays” tab and then click o
 
 Type in “0.1” in the place of “1.0” and hit RETURN.
 
-Now, return to the “Parasolid → Create Model” tabs in your Functional Toolbox. With your solid model “picked” (opaque yellow), click on the “Actor” drop-down menu underneath the 3D display window and select “Delete Actor”. Your model should have disappeared. Now create a new model by making sure that “aorta_test” is selected as “YES” under the “use in lofting” column of the group treeview display window, and then click on “Create Pre-Op Solid” under the “Create Model” tab. By refreshing the window this way, you should see that the creases have disappeared:
+Now, return to the “Model → Parasolid → Create Model” tabs in your Functional Toolbox. With your solid model “picked” (opaque yellow), under visualization on the right hand side, click "Model Operations → Copy Model". Give a name for your new model. This will display the model with smaller faces and give you a smoother looking surface. You should see that the creases have disappeared:
 
 <figure>
   <img class="svImg svImgXl"  src="documentation/modeling/imgs/solid_modeling/creating_models/8.jpg"> 

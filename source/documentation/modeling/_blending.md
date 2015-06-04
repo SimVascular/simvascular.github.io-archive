@@ -21,7 +21,7 @@ Now is also a good time to change the names of all the faces to be more descript
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-Next, navigate to the “Parasolid → Blend Model” tab. Next to “Solid model file:”, browse for the solid model you created and then click “Load”.
+Next, navigate to the “Model → Parasolid → Blend Model” tab. Next to “Solid model file:”, browse for the solid model you created and then click “Load”.
 
 In the bottom frame of the “Blend Model” tab, you will find a field with three columns, labeled “face 1”, “face 2”, and radius. Type in the two names of the “wall” faces you would like to blend, and then type in “0.3” for the radius. At least one space must be separating each of these typed fields.
 
