@@ -1,27 +1,49 @@
-### Post-processing: **svPost**
+### Post-processing (svPost)
 
-### Generating the *.vis and *.vtu files in SimVascular 
+### Generating the *.vip and *.vtu files in SimVascular 
 
-In order to generate the visualization files (*.vis) and (*.vtu) files, you need to launch again Simvascular in the folder containing the restart files you want to post-process. Go to the _Simulations->Create VTU Files_ tab, and enter the following parameters: 
+In order to generate the visualization files (*.vip) and (*.vtu) files:
 
-- In the **start** box, enter the initial restart file number (0)
-- In the **stop** box, enter the final restart file number (100)
-- In the **increment** box, enter the increment between restart files (5). These value should be equal to the quantity **Number of Timesteps between Restarts** specified in the **solver.inp** file.
-- Select the folder that contains the restart files under **Input Files/Dir** and that where you want your VTU files to be written under **Output Files/Dir**. 
+~~~
+Tab: Simulations->Create VTU Files 
+Select a restart file in the running dir .../cylinder/4-procs_case for Input Files/Dir
+start:  the initial restart file number (0)
+stop: the final restart file number (200)
+increment: the increment between restart files (10). 
+Toggle on "Volume Mesh" and "Surface Mesh"
+Click the button "Convert Files Only"
+~~~
 
 <figure>
-  <img class="svImg svImgLg" src="documentation/flowsolver/imgs/post_VTU.png">
+  <img class="svImg svImgLg" src="documentation/flowsolver/imgs/svpost_gui1.png">
   <figcaption class="svCaption" >Creating VTU result files from <b>svSolver</b> restart files.</figcaption>
 </figure>
 
-The following options are also provided:
+\*.vtp or \*.vtu files are generated in the project folder, containing the results for the whole finite element model using partitioned restart files as inputs.
 
-- **Volume Mesh**, 
-- **Surface Mesh**,
-- **Single File**, this options combines all the results at different time steps into a single \*.vtu file. 
+Other options are also provided:
+
+- **Single File**, this options combines all the results at different time steps into a single \*.vtp or \*.vtu file. 
+- **Last Step to restart.x.0**, this options combines all the resart files of the last step (200) to a single restart file restart.200.0. which can be used to start a new simulation after renamed as restart.0.1.
 - **Sim Units**, enter **cm** as we used **GCS** units throughout this tutorial. 
+- **Use Wall Options**, toggle on to apply more options for postprocessing. 
 
-Click on the button **Convert Files Only** to generate \*.vtu files contaning the results for the whole finite element model using partitioned restart files as inputs.
+<figure>
+  <img class="svImg svImgLg" src="documentation/flowsolver/imgs/svpost_gui_wall.png">
+  <figcaption class="svCaption" >Wall Options</figcaption>
+</figure>
+
+- **Wall File**, this limit the data output only on the specified wall.
+- **Recalculate Wall Stresses**, this enables postprocessing to calculate the wall stress again.
+- **Apply Wall Deformation**, this enables the update wall coordinates for deformable wall.
+- **Viscosity**, this sets a new viscosity value for wall stress calculation.
+
+If Single File option is on when postprocessing, all\_results.vtp or all\_results.vtu will be produced. In this case, svPost can calculate pressure and flow rate for outlets. Just click "Calculate Flows Only".
+
+<figure>
+  <img class="svImg svImgLg" src="documentation/flowsolver/imgs/svpost_gui2.png">
+  <figcaption class="svCaption" >Calculate Pressure and Flow rate</figcaption>
+</figure>
 
 ### Visualizing the results in ParaView
 
@@ -29,12 +51,7 @@ To visualize the time dependent results we use **ParaView**.
 
 - Launch **Paraview**.
 
-- Select _File->Open..._. The _Open File_ dialog should appear. Go to the folder **n-procs_case** (where **n** is the number of processors you chose when running **svSolver**), select the entry **cylinder_..vtu** and click **OK**.
-
-<figure>
-  <img class="svImg svImgLg" src="documentation/flowsolver/imgs/open_PARAVIEW.png">
-  <figcaption class="svCaption" >Opening a collection of time step results in Paraview</figcaption>
-</figure>
+- Select _File->Open..._. The _Open File_ dialog should appear. Go to the project folder , select the entry **all_results..vtu** and click **OK**.
 
 - Under _Properties_ click **Apply**. The solid model will show up on the screen.
 

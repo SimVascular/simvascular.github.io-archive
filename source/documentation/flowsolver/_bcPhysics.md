@@ -59,15 +59,15 @@ That is, a relationship between pressure and flow modes for different frequencie
 
 - **Closed-loop boundary circulation model**. The capability of coupling a 3D finite element model with a lumped parameter model is built into the **svSolver**. Documentation on this feature will be available with later releases of the code. 
 
-### Boundary conditions considered in this problem
+### Boundary conditions considered in Example 1
 
-Before we move on, let us recap the type of _physical problem_ we are solving: the geometry used in this problem consists of an idealized blood vessel, represented by a cylindrical segment with a radius $r=2$ cm and length $L=9$ cm. We prescribe an idealized constant inlet volumetric flow rate $Q$ of $15$ cc/sec to a parabolic profile at the inlet face of the model ($\Gamma\_g$). The dynamic viscosity $\mu$ and density $\rho$ of the blood are 0.04 poise and 1.06 gr/cm$^3$, respectively. The lateral surface of the vessel ($\Gamma\_{s}$) is considered to be rigid (therefore, we will apply a zero-velocity condition there). For the outlet boundary ($\Gamma_h$), a spatially-constant pressure boundary condition is weakly enforced via a resistance $R$. 
-In this problem, we will consider a resistance of $R = 8888.0$ dynes·s/cm$^5$. 
+Before we move on, let us recap the type of _physical problem_ (**Example 1**) we are solving: the geometry used in this problem consists of an idealized blood vessel, represented by a cylindrical segment with a radius $r=2$ cm and length $L=30$ cm. We prescribe an idealized constant inlet volumetric flow rate $Q$ of $100$ cc/sec to a parabolic profile at the inlet face of the model ($\Gamma\_g$). The dynamic viscosity $\mu$ and density $\rho$ of the blood are 0.04 poise and 1.06 gr/cm$^3$, respectively. The lateral surface of the vessel ($\Gamma\_{s}$) is considered to be rigid (therefore, we will apply a zero-velocity condition there). For the outlet boundary ($\Gamma_h$), a spatially-constant pressure boundary condition is weakly enforced via a resistance $R$. 
+In this problem, we will consider a resistance of $R = 1333.0$ dynes·s/cm$^5$. 
 
 This resistance will give a (weakly-applied) pressure at the outlet face of
 
 $$
-p=p\_0 + R\,Q = 0.0 + 8888.0 \cdot 15.0=133319.69 \approx 100\,\text{mmHg}
+p=p\_0 + R\,Q = 0.0 + 1333.0 \cdot 100.0=133300.00 \approx 100\,\text{mmHg}
 $$
 
 (recall that $1.0$ mmHg = $1333.2$ dyn/cm$^2$). For steady flow in a long tube with a circular cross  section, the flow will develop a flow profile known as the _Poiseuille_ flow profile assuming the flow remains laminar. The flow will remain laminar in a circular tube assuming that the non-dimensional parameter given by the _Reynolds_ number $Re$ is $Re < 2100$.
@@ -80,7 +80,7 @@ $$
 
 where $V$ is a representative velocity of the flow, $D$ is a characteristic dimension of the vessel where the flow is happening (in this case, the diameter), and $\mu$ and $\rho$ are the dynamic viscosity and density, respectively.
 
-For this problem, the Reynolds number is about $125$, so it is well within the laminar flow regime. For a fully developed flow, the axisymmetric profile is parabolic and is given by: 
+For this problem, the Reynolds number is about $884$, so it is well within the laminar flow regime. For a fully developed flow, the axisymmetric profile is parabolic and is given by: 
 
 $$
 v\_z(a) = v\_z^{max}\left[1-\left(\frac{a}{r}\right)^2\right]
@@ -98,6 +98,6 @@ $$
 \tau = \frac{2\,\mu\,v\_z^{max}}{r}
 $$
 
-For this example, the maximum velocity is $v\_z^{max} = 2.4$ cm/s and the wall shear stress is $\tau$ = $0.1$ dynes/cm$^2$.
+For this example, the maximum velocity is $v\_z^{max} = 16.68$ cm/s and the wall shear stress is $\tau$ = $0.67$ dynes/cm$^2$.
 
 

@@ -1,23 +1,39 @@
-### Running a flow simulation
+### Running Simulation
 
-At this point we have generated all the files we need for this problem. I recommend now to copy them to a different folder before launching the analysis. You can make a folder called, for instance, _Simulation-files_, and copy the five files there.
-
-At this point you are ready to launch **svSolver**. For that, you simple have to type:
+At this point we have generated all the files we need for this problem. Start simulation from the GUI.
 
 ~~~
-%mpiexec -n 1 mysolver
+Tab: Simulation -> Run Solver -> localhost
+Select the project dir for Run Dir
+Select Log Dir
+Starting Step Number: 0
+Click the button "whoami" to set username
+Choose the number of processors - localhost num procs:4
+Click "Run Simulation"
+Wait a few seconds, Click the last "Start Trail" button to track the simulation progress
 ~~~
 
-This will launch a one-processor job in your computer. I have launched a two-processor job in my computer, since it happens to have two cpu’s, and therefore the job will run twice as fast (approximately). Therefore, the input file are split as follows: 
+<figure>
+  <img class="svImg scImgLg" src="documentation/flowsolver/imgs/svsolver_gui.png">
+  <figcaption class="svCaption" >Running simulation through the GUI</figcaption>
+</figure>
+
+You cana also run simulation by a command lines.
 
 ~~~
-geombc.dat.1 => geombc.dat.1 , geombc.dat.2
-restart.0.1 => restart.0.1 , restart.0.2
+%mpiexec -np 4 svsolver
 ~~~
 
-At the same time, the solver copies all these files to a newly created folder called **2-procs_case/**, and this is where all the output files of the analysis will be written to. In general, if you launch a **n** processor job, all the files will be copied to a **n-procs_case/** folder.
+This will launch a four-processor job in your computer.  Therefore, the input file are split as follows: 
 
-The solver writes a file called **histor.dat** containing details that allows to evaluate how well your numerical simulation is doing. Here’s a brief description of what each of those columns means.
+~~~
+geombc.dat.1 => geombc.dat.1, geombc.dat.2, geombc.dat.3, geombc.dat.4
+restart.0.1 => restart.0.1, restart.0.2, restart.0.3, restart.0.4
+~~~
+
+At the same time, the solver copies all these files to a newly created folder called **4-procs_case/** under the project folder, and this is where all the output files of the analysis will be written to. In general, if you launch a **n** processor job, all the files will be copied to a **n-procs_case/** folder.
+
+You can check the simulation progress in tab Console. It contains containing details that allows to evaluate how well your numerical simulation is doing. Here’s a brief description of what each of those columns means.
 
 <table class='table borderless' id="solverTable">
 <thead>
@@ -323,6 +339,22 @@ indicator of the spatial uniformity of the residual.
 
 Once the analysis is done, you will see the collection of restart files corresponding to the different points in the time you decided to save. 
 
-We are now ready to look at the restart files containing the solution. You will read these files in **svPost** to generate the visualization files. We explain that process in the following section.
+Sometimes you want to restart the finished simulation. 
+
+~~~
+Select  .../cylinder/4-procs_case for Run Dir
+Starting Step Number: 200 (the last time steop from previous simulation)
+Choose the same number of processors as the previous
+Click "Run Simulation"
+~~~
+
+<figure>
+  <img class="svImg scImgLg" src="documentation/flowsolver/imgs/restart_gui.png">
+  <figcaption class="svCaption" >Restart simulation through the GUI</figcaption>
+</figure>
+
+Not the solver starts another 200-step simulation from time start 200.
+
+As the simulation is completed, we are now ready to look at the restart files containing the solution. You will read these files in **svPost** to generate the visualization files. We explain that process in the following section.
 
 
