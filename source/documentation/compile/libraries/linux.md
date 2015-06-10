@@ -1,9 +1,10 @@
 ### Linux
 	
 You will need the following packages, available from the APT repository:
-
-	sudo apt-get cmake-curses-qui
-	sudo apt-get cmake-gui
+	
+	sudo apt-get install cmake
+	sudo apt-get install cmake-curses-gui
+	sudo apt-get install cmake-gui
 
 
 Build Tools (Fortran is optional):
@@ -13,13 +14,18 @@ Build Tools (Fortran is optional):
 
 Tcl/Tk:
 
-	sudo apt-get install tcl8.5 tcl8.5-dev tcl8.5-lib
-	sudo apt-get install tk8.5 tk8.5-dev tk8.5-lib
+	sudo apt-get install tcl8.5 tcl8.5-dev tcl8.5-lib tcllib
+	sudo apt-get install tk8.5 tk8.5-dev tk8.5-lib tklib
 
 
 For flowsolver:
 
 	sudo apt-get install libmpich2-dev
+
+DICOM: 
+
+	sudo apt-get install dcmtk
+	sudo apt-get install libgdcm-tools
 
 
 For VTK:
