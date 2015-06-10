@@ -45,7 +45,7 @@ write_geombc
 write_restart
 ~~~
 
-As we said before, each line of this \*.svpre file represents a command that will be executed by **svPre**. This file needs to be edited to incorporate the right parameters/conditions for this problem. Here is a description of each line.
+As we said before, each line of this \*.svpre file represents a command that will be executed by **svPre**. This file needs to be edited to incorporate the right parameters/conditions for this problem. A complete list of svpre commands available is [this section](#solverSec71).Here is a description of each line.
 
 The first line is used to define the topology of the finite element mesh. The first command **mesh\_and\_adjncy_vtu** used a vtk unstructured mesh file to define node coordinates, element connectivities and an adjacency relationship between elements. 
 
@@ -78,7 +78,7 @@ The following line uses the existing **inflow.vtp** file to define a boundary su
 prescribed_velocities_vtp mesh-complete/mesh-surfaces/inflow.vtp
 ~~~
 
-Note that we are just pointing to the right file (inflow.vtp) in the mesh-surfaces folder where we want some velocity vectors to be prescribed. These velocity vectors are given by the **bct.dat** file, already created from GUI as shown above. We must use the command prescribed_velocities_vtp in each surface where we prescribe some flow wave via a Dirichlet condition on the velocity vectors of that face. Instead, we can also create bct.dat (and bct.vtp) here using script commands as below. Similar to the GUI example above, these commands need provide info about fluid density, fluid viscosiyt, velocity profile shape, period length, number of points in one period, number of fourier modes, inlet face, and flow file.
+Note that we are just pointing to the right file (inflow.vtp) in the mesh-surfaces folder where we want some velocity vectors to be prescribed. These velocity vectors are given by the **bct.dat** file, already created from GUI as shown above. We must use the command prescribed_velocities_vtp in each surface where we prescribe some flow wave via a Dirichlet condition on the velocity vectors of that face. Instead, we can also create bct.dat (and bct.vtp) here using script commands as below. Similar to the GUI example above, these commands need to provide info about fluid density, fluid viscosiyt, velocity profile shape, period length, number of points in one period, number of fourier modes, inlet face, and flow file.
 
 ~~~
 fluid_density 1.06

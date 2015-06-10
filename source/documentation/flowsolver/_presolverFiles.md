@@ -3,7 +3,7 @@
 These prerequisite files for svPre are generate by the output from Meshing Module (Click _Write Files_ button in Mesh tab after meshing).
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/flowsolver/imgs/CylinderFiles.png">
+  <img class="svImg svImgMd" src="documentation/flowsolver/imgs/meshfiles.png">
   <figcaption class="svCaption" >Folder structure and file created after clicking on <b>Write Files</b></figcaption>
 </figure>
 
@@ -12,7 +12,6 @@ These files are:
 in the **mesh-complete/** folder: 
 
 - **mesh-complete.mesh.vtu**, vtu file containing the solid mesh generated with TetGen.
-- **mesh-complete.xadj.gz**, compressed adjacency file. 
 - **mesh-complete.exterior.vtp**, vtp file containig all the exterior elements of the mesh generated with TetGen.
 - **walls_combined.vtp**, vtp file containing all surface elements assigned to the wall, possibily combined from various surfaces. 
 
@@ -22,9 +21,9 @@ in the **mesh-complete/mesh-surfaces/** folder:
 - **outlet.vtp**, vtp file containing the meshed outlet surface.
 - **wall.vtp**, vtp file containing the meshed wall surface.
 
-The files for Example 1 can be found [here](documentation/flowsolver/files/cylinder_example.tar.gz). Create an empty folder on your hard drive to unzip the content of the archive. The following files are contained:
+The files for Example 1 can be found [here](documentation/flowsolver/files/examples.zip). Create an empty folder on your hard drive to unzip the content of the archive. The following files are contained:
 
-**HINT** - It is advisable that you place all your simulation files in a folder called _cylinder_. **SimVascular** will use this folder name as the default when creating new files. Using a meaningful folder name will make sure that your model files are named consistently. Also store the files containing the inlet flow rates in a folder called _flow-files_. Your problem may have more that one inflow wave form file. In this case, we only have a single flow file (called inflow.flow).
+**HINT** - It is advisable that you set the project folder as _cylinder_. **SimVascular** will use this folder name as the default when creating new files. Using a meaningful folder name will make sure that your model files are named consistently. Also store the files containing the inlet flow rates in a folder called _flow-files_. Your problem may have more that one inflow wave form file. In this case, we only have a single flow file (called inflow.flow).
 
 The format of the **steady.flow** file is as follows:
 

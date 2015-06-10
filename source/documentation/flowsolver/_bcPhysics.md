@@ -1,4 +1,4 @@
-### Boundary Condition Specification: the Physical Side of the Problem
+## Boundary Condition Specification: the Physical Side of the Problem
 
 Boundary conditions are crucial to obtaining high quality cardiovascular simulation results. It is essential that boundary conditions accurately capture the physiology of vascular networks outside of the 3D domain of the model. **SimVascular** provides several different options for boundary condition assignment at inlets and outlets that are described in this section. Typically, we begin with some physiologic information about our problem, for instance:
 

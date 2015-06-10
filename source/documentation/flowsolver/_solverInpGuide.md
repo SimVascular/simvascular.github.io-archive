@@ -198,6 +198,18 @@ This section discusses the options available in the **solver.inp** file.
   <td>(space separated integer list)</td>
   <td>List of ID for surfaces tagged for Force Calculation (i.e., shear stress calculation).</td>
 </tr>
+<tr>
+  <td>Force Calculation Method</td>
+  <td>(Velocity Based)</td>
+  <td>Velocity Based,Residual Based</td>
+  <td>Specify a method for surface force calculation (i.e., traction, shear stress).</td>
+</tr>
+<tr>
+  <td>Apply Wall Deformation</td>
+  <td>(False)</td>
+  <td>True,False</td>
+  <td>Decide whether to udpate wall coordinates for deformable wall during wall stress calculation</td>
+</tr>
 </table>
 
 #### Linear Solver Options
@@ -395,146 +407,6 @@ This section discusses the options available in the **solver.inp** file.
   <td>Must be set to True to read the impedance information from file</td>
 </tr>
 </table>
-
-#### Format of Impedance boundary condition file
-
-Impedance boundary conditions are defined through the **Qhistor.dat** file where the flow rate time history at each face is specifiedd and the **impt.dat** files containing impedance data. These two files must be present in the folder with all others solver files when executing **svSolver**. 
-
-The **Qhistor.dat** file has the following format:
-
-~~~
-totTS
-Q0,0 Q0,1 ... Q0,n
-Q1,0 Q1,1 ... Q1,n
-...
-...
-QtotTS,0 QtotTS,1 ... QtotTS,n
-~~~
-
-where **n** denotes the total number of faces with impedance boundary condition applied and **totTS** the total number of time steps. 
-
-The **impt.dat** file has the following format:
-
-~~~
-nptsImpmax
-numDataImp,1
-t0 impVal0
-...
-t_numDataImp impVal_numDataImp
-...
-...
-numDataImp,n
-t0 impVal0
-...
-t_numDataImp impVal_numDataImp
-~~~
-
-where **nptsImpmax** is the maximum number of time steps defined on all the boundary faces with impedance boundary condition. 
-There are **n** blocks in the file, each defining impedance data for each face. Every block is defined by two columns, the first denoting time and the second impedance values. 
-
-#### Format of RCR boundary condition file
-
-RCR boundary conditions are defined through the **rcrt.dat** file using the following format:
-
-~~~
-nptsRCRmax
-...
-...
-numDataRCR_1
-Rp_1
-C_1
-Rd_1
-time_1_1 Pdist_1_1
-... 
-... 
-time_1_numDataRCR Pdist_1_numDataRCR
-...
-...
-numDataRCR_i
-Rp_i
-C_i
-Rd_i
-time_i_1 Pdist_i_1
-... 
-... 
-time_i_numDataRCR Pdist_i_numDataRCR
-~~~
-
-The first quantity **nptsRCRmax** defines the maximum number of time points for the curves defined at each outlet.
-This quantity is followed by one block for each outlet, containing **numDataRCR_i**, i.e., the number of time point for RCR outlet i.
-The three values **Rp_i**, **C_i**, **Rd_i** are defined for the proximal resistance, compliance and distal vessel resistance, respectively.
-A time series follows, defining the evolution in time of the reference pressure at the distal end of the RCR block.
-
-#### Format of COR boundary condition file
-
-Coronary boundary conditions are defined through the **cort.dat** file using the following format
-
-~~~
-nptsCORmax
-...
-...
-numDataCOR_1
-q0_1
-q1_1
-q2_1
-p0_1
-p1_1
-p2_1
-b0_1(=0)
-b1_1
-b2_1(=0)
-time_1_1 Plv_1_1 (/Prv_1_1)
-... 
-... 
-time_1_numDataCOR Plv_1_numDataCOR
-...
-...
-...
-numDataCOR_i
-q0_i
-q1_i
-q2_i
-p0_i
-p1_i
-p2_i
-b0_i(=0)
-b1_i
-b2_i(=0)
-time_i_1 Plv_i_1 (/Prv_i_1)
-... 
-... 
-time_i_numDataCOR Plv_i_numDataCOR
-~~~
-
-The first quantity **nptsCORmax** defines the maximum number of time points for the curves defined at each outlet defining the ventricular pressures.
-This quantity is followed by one block for each outlet, containing **numDataCOR_i**, i.e., the number of time point for Coronary outlet i.
-Nine constants need also to be defined for each coronary outlet, i.e., $q\_0$, $q\_1$, $q\_2$, $p\_0$, $p\_1$, $p\_2$, $b\_0$, $b\_1$, $b\_2$.
-The physical meaning of these constants is related to the resistances and capacitances used to simulated each coronary outlet, as shown in the picture below:
-
-<figure>
-  <img class="svImg svImgMd" src="documentation/flowsolver/imgs/CorBC.png">
-  <figcaption class="svCaption" >Circuit visualization for coronary boundary condition</figcaption>
-</figure>
-
-The following expressions are used in [this paper](docsRefs.html#refSec2).
-
-$$
-p\_0 = 1,\quad
-p\_1 = R\_{a-micro}C\_a + (R\_v + R\_{v-micro})(C\_a + C\_{im}),\quad
-p\_2 = C\_{a}\,C\_{im}\,R\_{a-micro}(R\_v + R\_{v-micro}).
-$$
-
-$$
-q\_0 = R\_{a} + R\_{a-micro} + R\_{v} + R\_{v-micro},\quad
-q\_1 = R\_{a}C\_{a}(R\_{a-micro} + R\_{v} + R\_{v-micro}) + C\_{im}(R\_{a} + R\_{a-micro})(R\_{v} + R\_{v-micro}).
-$$
-
-$$
-q\_2 = C\_{a}C\_{im}R\_{a}R\_{a-micro}(R\_v + R\_{v-micro}),\quad
-b\_0 = 0,\quad
-b\_1 = C\_{im}(R\_v + R\_{v-micro}),\quad
-b\_2 = 0.
-$$
 
 #### Backflow Control
 
@@ -747,6 +619,25 @@ $$
   <td>(False)</td>
   <td>False,True</td>
   <td>Activates/deactivates the possibility of specifying a variable thickness/elastic modulus for the vessel wall material</td>
+</tr>
+</table>
+
+#### Task Control
+
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th>Command</th>
+  <th>Default</th>
+  <th>Possible Values</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tr>
+  <td>Solver Task</td>
+  <td>(Full Simulation)</td>
+  <td>Full Simulation,Only Partition</td>
+  <td>Decide whether to do full simulation or just partition restart.01 and geombc.dat.1</td>
 </tr>
 </table>
 <br>

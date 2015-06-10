@@ -11,7 +11,7 @@ The following figure contains a schematic representation of the processes involv
 
 We start off with the files coming from the [meshing](docsMeshing.html) of the analysis: these files contain nodal and connectivity information for the finite element mesh, located in the the _mesh-complete/mesh-surfaces/_ folder.
 
-We then run **Presolver(svPre)** using the *.svpre file. The *.svpre file contains the set of instructions that define the boundary conditions, initial conditions, and geometrical configuration of our problem. The output of **svPre** is a set of files (**bct.dat, geombc.dat.1, restart.0.1, numstart.dat**) that are ready to be processed by **svSolver** to run a blood flow analysis. Running svSolver also need **solver.inp**, which provide further info for flowsolver.
+We then run **Presolver(svPre)** using the \*.svpre_ file. The \*.svpre file contains the set of instructions that define the boundary conditions, initial conditions, and geometrical configuration of our problem. The output of **svPre** is a set of files (**bct.dat, geombc.dat.1, restart.0.1, numstart.dat**) that are ready to be processed by **svSolver** to run a blood flow analysis. Running svSolver also need **solver.inp**, which provide further info for flowsolver.
 
 Once the analysis is finished, the solver outputs files that characterize the finite element solution over a defined time period, typically several cardiac cycles. These files are taken by **svPost** to generate visualization files (typically *.vtu and *.vtp files) that are used to post-process and analyze the desired hemodynamic results. 
 

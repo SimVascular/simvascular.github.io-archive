@@ -353,7 +353,7 @@ Click "Run Simulation"
   <figcaption class="svCaption" >Restart simulation through the GUI</figcaption>
 </figure>
 
-Not the solver starts another 200-step simulation from time start 200.
+Not the solver starts another 200-step simulation from time step 200.
 
 As the simulation is completed, we are now ready to look at the restart files containing the solution. You will read these files in **svPost** to generate the visualization files. We explain that process in the following section.
 

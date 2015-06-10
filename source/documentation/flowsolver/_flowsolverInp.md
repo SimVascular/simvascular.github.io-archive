@@ -151,7 +151,7 @@ This line controls the non-linear iteration loop within the time step. The synta
 
 **WARNING**: Deciding on the adequate number of non-linear iterations for a problem is also a non-trivial problem. In principle, we need to iterate until the residual (i.e., the _error_) of our numerical solution is small enough. But doing many non-linear iterations on each time step is very costly. In general, for steady flow problems, 1 or 2 non-linear iterations are enough. For pulsatile problems, at least three non-linear iterations are needed. For deformable wall problems, 4 or more non-linear iterations are required. This parameter, together with the time step size $\Delta t$ and the quality of the spatial discretization given by the finite element mesh, will completely determine the performance of the linear solver of equations. The better chosen these parameters are, the faster and more accurately our simulation will run. We will talk more about this later.
 
-The set of instructions explained here constitute a very small sample of all the possible instructions the **svSolver** can take via a solver.inp file. A more detailed discussion can be found in [this section](#solverSec7).
+The set of instructions explained here constitute a very small sample of all the possible instructions the **svSolver** can take via a solver.inp file. A more detailed discussion can be found in [this section](#solverSec72).
 
 
 

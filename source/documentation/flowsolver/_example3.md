@@ -1,75 +1,147 @@
-### Inlet Boundary Condition Specification (From GUI)
+### Example 3
 
-First we need to create a file called **bct.dat** (its vtp format file is also created, called **bct.vtp**) that specifies the boundary conditions at the inlet defined by inflow.vtp
+This example shows how to simulate a cylinder with plug steady flow at the inlet, RCR at the outlet and deformable wall with uniform wall properties. The most robust way to simulate a deformable wall case is to first simulate a rigid wall case with the same boundary conditions. For this example, Example 2 is the rigid case we need to run. After the simulation of Example 2 is complete, use svPost to reduce the restart files for the last step to a single file, which would be restart.500.0. Copy this file to the project folder of Example 3 and rename it as restart.0.1.
 
-In the **SimVascular** GUI window, go to the _Inflow BC_ subtab under _Simulations_. You will have to enter the following values in the various boxes/buttons of the GUI (see figure below):
-
-<figure>
-  <img class="svImg scImgLg" src="documentation/flowsolver/imgs/BCT_Creation.png">
-  <figcaption class="svCaption" >Creating a <b>bct.dat</b> file through the GUI</figcaption>
-</figure>
-
-- Under **Analytic Shape of Profile**, select the **parabolic** radio button. This options allows a parabolic velocity profile to be applied at the inlet. Other options are **plug**, which applies a constant velocity profile throughout the inlet face and Womerseley, that uses a closed form solution for the velocity profile of pulsatile flow in arteries. 
-
-- In the **Mesh Face File (vtp)** box, click on the **Browse** button and select the **inflow.vtp** file in the _mesh-complete/mesh-surfaces/_ folder.
-
-- In the **Flow Rate File** box, click on **Browse** and select the desired \*.flow file. In this case, the file is **steady.flow**.
-
-Under the **Parameters** menu, enter the following values:
-
-- **Period**: $1.0$ sec. For a steady flow problem like ours, the concept of _period_ is somewhat vague. In this case, $1.0$ means the amount of physical time that we are going to run our simulation for.
-
-- **viscosity**: $0.04$ Poise (gr/cm/s).
-
-**WARNING**: Be very careful with the units! This is one the points where it is easy to make a mistake with the dimensions. For consistency, besides entering the right numerical value, try to also modify the units listed next to it (see figure below).
-
-- **density**: $1.06$ gr/cm$^3$. Same as before, be very careful with these units!
-
-Under the **Output Parameters** menu, enter the following values:
-
-- **num of periods**: always enter 1 here. If you want to run your simulation for multiple cardiac cycles, it is possible to ask **svSolver** to loop over the information given by the **bct.dat** file for just one cycle (using the **solver.inp** file). By doing this, you will minimize the size of this file that can  potentially be very large. 
-
-- **num pts in period**: 2. This is the number of _temporal_ data points that you want to have in your bct.dat. This is not necessarily the number of time points in the \*.flow file. In this case, they match (2 in both cases), but this is because this is a very simple example using steady flow and two time points is all we need to characterize a constant flow. In general, your \*.flow file will have in the order of $20$ data points over the cardiac cycle (that’s about how many points you will be able to reconstruct using **PC-MRI**, for example), and your bct.dat will have on the order of $100$-$200$ points. Whatever is enough to have a smooth  representation of the inflow wave mapping to velocity vectors at the inlet face.
-
-- **num fourier modes**: 1. Fourier smoothing allows to smooth your inlet flow curve and to make sure that you have a periodic function in the specified interval. 
-
-**WARNING**: Be careful with this! **SimVascular** is doing a Fourier Series approximation of the data that you provide in the \*.flow file. Since in this case, our data is constant flow, we only need one Fourier mode to capture this appropriately. For pulsatile flow problems, we will need more Fourier Modes to accurately represent the \*.flow data (usually, $10$ Fourier modes is enough for a pulsatile problem).
-
-After you are done entering all these parameters, click on the _CREATE 3-D FLOW SOLVER BC FILE_ button to generate the **bct.dat** file. The format of this file is as follows:
+The script file cylinder.svpre used is as below:
 
 ~~~
-np nl
-x1 y1 z1 nl nn
-vx1  vy1  vz1  t1
- .    .    .    .
- .    .    .    .
- .    .    .    .
-vxnl vynl vznl tnl
- .    .    .    .
- .    .    .    .
- .    .    .    .
-xnp  ynp  znp   nl
+# Read Mesh info
+mesh_and_adjncy_vtu mesh-complete/mesh-complete.mesh.vtu
 
-vx1 vy1 vz1 t1
- .   .   .   .
- .   .   .   .
- .   .   .   .
+# Assign IDs to the surfaces
+set_surface_id_vtp mesh-complete/mesh-complete.exterior.vtp 1
+set_surface_id_vtp mesh-complete/mesh-surfaces/inflow.vtp 2
+set_surface_id_vtp mesh-complete/mesh-surfaces/outlet.vtp 3
+
+# Set Inlet BC
+prescribed_velocities_vtp mesh-complete/mesh-surfaces/inflow.vtp
+
+# Set BCT for Inlet
+fluid_density 1.06
+fluid_viscosity 0.04
+bct_analytical_shape plug
+bct_period 1.0
+bct_point_number 2
+bct_fourier_mode_number 1
+bct_create mesh-complete/mesh-surfaces/inflow.vtp flow-files/steady.flow
+bct_write_dat
+bct_write_vtp
+
+# Set Outlet BC
+zero_pressure_vtp mesh-complete/mesh-surfaces/outlet.vtp
+
+# Set Wall BC
+deformable_wall_vtp mesh-complete/walls_combined.vtp
+deformable_thickness 0.2
+deformable_E 4000000.0
+deformable_nu 0.5
+deformable_kcons 0.833333
+deformable_pressure 133300
+deformable_solve_displacements
+wall_displacements_write_vtp
+
+# Write Geometry and Property data to geombc.dat.1
+write_geombc
+
+# Append displacement to restart.0.1
+append_displacements
 ~~~
 
-The file defines the inflow boundary condition both spatially and in time. The spatial definition is obtained through $n\_p$ point-wise velocity input blocks. In this case, $n\_p = 102$, this is the total number of nodes on the **inflow.vtp** face. The temporal definition is given by $n\_l$ input lines of the values at a certain position for $n\_l$ time points, $t\_1$ to $t\_{n\_l}$. In this case, $n\_l = 2$ points (this is the value we entered in the _num pts in period_ box. 
+The difference from Example 2 in the presolver script is to indicate which surfaces are deformable, set up uniform wall properties, provide an initial pressure (which is estimated form the simulation result of the rigid case Example 2), solve initial displacement, write the initial displacment to a vtp for review the solution, and finaly append it to restar.0.1 we just copied and renamed.
 
-Each block of data has, for each of the $n\_p = 102$ spatial points, the following info:
+<font color="red">
+deformable\_wall\_vtp mesh-complete/walls\_combined.vtp<br>
 
-- The coordinates of the point: $x\_1$ $x\_2$ $x\_3$ and the number of time points $n\_l$.
+deformable\_thickness 0.2<br>
+deformable\_E 4000000.0<br>
+deformable\_nu 0.5<br>
+deformable\_kcons 0.833333<br>
+deformable\_pressure 133300<br>
+deformable\_solve\_displacements<br>
+wall\_displacements\_write_vtp<br>
 
-- The list of velocity vectors $v\_x$ $v\_y$ $v\_z$ at time t.
+append\_displacements<br>
+</font> 
 
-A vtp file **bct.vtp** can be written using this option **Create Vtp** to graphically visualize the velocity distribution at the inlet surface with Paraview, as shown in the picture below.
+After running the script, displacment.vtp is create in the project folder, which shows the initial displacement:
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/flowsolver/imgs/BCT_Cration_VTP.png">
-  <figcaption class="svCaption" >Visualizing the inlet velocity profile in Paraview</figcaption>
+  <img class="svImg svImgLg" src="documentation/flowsolver/imgs/disp_paraview.png">
+  <figcaption class="svCaption" >Initila Displacement Calculated form svPre </figcaption>
 </figure>
 
+The solver.inp used for this example is as below:
 
+~~~
+# ================
+# SOLUTION CONTROL
+# ================
+Number of Timesteps: 500
+Time Step Size: 0.001
 
+# ==============
+# OUTPUT CONTROL
+# ==============
+Number of Timesteps between Restarts: 20
+Number of Force Surfaces: 1
+Surface ID's for Force Calculation: 1 
+
+# ===================
+# MATERIAL PROPERTIES
+# ===================
+Viscosity: 0.04
+Density: 1.06
+
+# ==========================
+# DEFORMABLE WALL PROPERTIES
+# ==========================
+Deformable Wall: True 
+Thickness of Vessel Wall: 0.2 
+Young Mod of Vessel Wall: 4000000.0
+Density of Vessel Wall: 1.0 
+Poisson Ratio of Vessel Wall: 0.5 
+Shear Constant of Vessel Wall: 0.833333 
+
+# ==================================
+# CARDIOVASCULAR MODELING PARAMETERS
+# ==================================
+Number of Coupled Surfaces: 1 
+Number of RCR Surfaces: 1
+List of RCR Surfaces: 3
+RCR Values From File: True
+
+# =============
+# STEP SEQUENCE
+# =============
+Step Construction: 0 1 0 1 0 1 0 1
+
+# =============
+# LINEAR SOLVER
+# =============
+svLS Type: GMRES
+~~~
+
+There are a few differences compared to Example 2 in solver.inp:
+
+<font color="red">
+Deformable Wall: True <br>
+Thickness of Vessel Wall: 0.2 <br>
+Young Mod of Vessel Wall: 4000000.0<br>
+Density of Vessel Wall: 1.0 <br>
+Poisson Ratio of Vessel Wall: 0.5 <br>
+Shear Constant of Vessel Wall: 0.833333 <br>
+</font> 
+
+The solver.inp indicates the wall is deformable and assign uniform wall properties for flowsolver simulation.
+
+<font color="red">
+Step Construction: 0 1 0 1 0 1 0 1<br>
+</font> 
+
+For deformable cases, the flowsolver needs more iterations of step sequence to derive accurate solution. 
+
+<font color="red">
+svLS Type: GMRES<br>
+</font> 
+
+For deformable cases, linear solver has better performance with GMRES.
