@@ -50,7 +50,7 @@ Now we need to give them more meaningful names. Go to the tab Model. All the fac
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-Now the inlet face name is changde to *inflow_aorta* in the list. Similarly, we change the names of the two outlet faces and the wall. As we changed the face names, we need to save the model again.
+Now the inlet face name is changed to *inflow_aorta* in the list. Similarly, we change the names of the two outlet faces and the wall. As we changed the face names, we need to save the model again.
 
 	File Input/Output → Save Model
 	Save to the file demo.vtp

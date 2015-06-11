@@ -14,7 +14,7 @@ Navigate to the “Segmentation” tab in the functional toolbox. Under the Oper
 </figure>
 
 Now navigate to the "Model → PolyData → Create Model" and click the button called "Create Pre-Op Solid Model".
-A window will pop up asking what you would like to create a model. Name your model and click "Enter".
+A window will pop up asking what you would like to create a model. Name your model and click "Enter". You may not give a blank name, a name containing ".", or a name containing "/".
 
 <figure>
   <img class="svImg svImgXl"  src="documentation/modeling/imgs/polyData/creating_models/namingNewModel.jpg"> 
