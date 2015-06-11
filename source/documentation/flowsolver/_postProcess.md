@@ -1,4 +1,4 @@
-### Post-processing (svPost)
+## Post-processing (svPost)
 
 ### Generating the *.vip and *.vtu files in SimVascular 
 

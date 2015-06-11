@@ -43,7 +43,8 @@ The file consists of a number of blocks, each block containing a number of lines
 
 The lines preceded by a **#** sign are comments and are ignored by the solver. Likewise, anything placed after a **#** on a given line is also ignored.
 
-### Solution Control Block
+<br>
+#### Solution Control Block
 
 In this block, the different commands are:
 
@@ -71,11 +72,13 @@ $$
 
 Of course, you can imagine that in a real-world problem things are way more complicated to evaluate: it will be much harder to estimate where your model will have the largest velocities, what the mesh element size will be there, etc. The time step size $\Delta t$ is a parameter that will have a very important impact on the performance of the linear solver of equations. The smaller you make it, the _easier_ you will be for the solver to find a solution, but the longer it will take you to reach a certain point in time.
 
-### Material Properties Block
+<br>
+#### Material Properties Block
 
 This block contains the values for density and dynamic viscosity of blood: nothing really new here. Be careful though and make sure that you use the same units you have been using through the simulation process!
 
-### Output Control Block
+<br>
+#### Output Control Block
 
 In this block, the meaning of the command is:
 
@@ -85,7 +88,8 @@ In this block, the meaning of the command is:
 
 **Surface ID's for Force Calculation: 1** - This line  is list of surface ID’s considered for walls stress calculation. In our case, we only defined one surface ID (the number 1, assigned to the cylinder in svPre).
 
-### Cardiovascular Modeling Parameters Block
+<br>
+#### Cardiovascular Modeling Parameters Block
 
 This is the block that controls the Boundary Conditions and the other features such as deformable wall parameters. The meaning of each command is:
 
@@ -144,7 +148,7 @@ Resistance Values : 20000 10000 15000 21000
 .
 ~~~
 
-
+<br>
 #### Step sequence Block
 
 This line controls the non-linear iteration loop within the time step. The syntax of the line represents a two nonlinear iteration process for each time step. The **0** tells the solver to make a solve, the **1** to make an update of the solution. Since this sequence 0 1 is repeated, the two iterations are defined. 

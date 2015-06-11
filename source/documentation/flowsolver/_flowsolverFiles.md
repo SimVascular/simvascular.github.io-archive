@@ -1,6 +1,4 @@
-## Flowsolver (svSolver)
-
-### Prerequisite files for svSolver
+### Prerequisite Files for svSolver
 
 Besides bct.dat, geombc.dat.1,restart.0.1 and numstart.dat, we are only missing one file in order to be able to run our analysis. This file is another input file for the solver that controls the actual flow of the numerical simulation, specifying parameters such as time step size, number of time steps, number of nonlinear iterations, boundary condition control, etc. This file needs to have the name **solver.inp** (input file for the solver), and we will characterize it in detail in the following section. A detailed description is also presented in [this section](#solverSec72).
 
