@@ -16,9 +16,9 @@ Before creating a solid from your groups, it is important to inspect the groups 
 <font color="red">**HELPFUL HINT:** </font> **Some Useful Keyboard Shortcuts:**
 
 	Hover the cursor over the Display Window and press the following:
-		W - view the model as a wire mesh
-		S - view the model as a solid
-		E - view the edges of the triangulated mesh on the solid model:
+		w - view the model as a wire mesh
+		s - view the model as a solid
+		e - view the edges of the triangulated mesh on the solid model:
 	Hover over the desired area and press:
-		P - to “pick” or select the model, highlighting it yellow for a better visualization
-		C - to “choose” and highlight a cell to be modified or deleted
+		p - to “pick” or select the model, highlighting it yellow for a better visualization
+		c - to “choose” and highlight a cell to be modified or deleted

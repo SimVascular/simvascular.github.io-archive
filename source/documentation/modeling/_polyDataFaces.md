@@ -2,18 +2,18 @@
 
 **Extracting Faces:**
 
-Under PolyData navigate to the “Face Selection” tab. Either load the saved PolyData solid, “demo.vtp” with the main PolyData menu, or select the "PolyData->Update Solid Model" button. Your model should have the names (shown below) from your segmentation groups inhereted as surface names. If you would like to use these preset names and surfaces, neglect the following instructions.
+Under "Model → PolyData" navigate to the “Face Manipulation” tab. 
 
 <figure>
   <img class="svImg svImgXl"  src="documentation/modeling/imgs/polyData/faces/prenamedFaces.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-However,if you would like to have one wall surface, under “Boundary Extraction” set the angle of separation to around 50 degrees and click “Extract Boundaries".Follow the instructions below to name your surfaces.
+However,if you would like to have one wall surface, under “Boundary Extraction” set the angle of separation to around 50 degrees and click "Extract Boundaries".
 
-A list of the model faces found will appear in the window to the left.
+A list of the model faces found will appear in the window to the right.
 
-If the number of faces listed does not match the number of faces expected, you must toggle the extraction angle to get the desired number. After extracting the faces, hover over a surface in the window and select "p". This will highlight your face. The key here is to make sure that the caps of your vessels are isolated from the other surfaces of your vessel. Once this is done, follow the direction below to "Select and Combine Faces". 
+If the number of faces listed does not match the number of faces expected, you must toggle the extraction angle to get the desired number. After extracting the faces, hover over a surface in the window and select "p". Alternatively, select the face from the model in the list. Either of these methods will highlight your face in the 3D window. The key here is to make sure that the caps of your vessels are isolated from the other surfaces of your vessel. Once this is done, follow the direction below to "Select and Combine Faces". 
 
 <figure>
   <img class="svImg svImgXl"  src="documentation/modeling/imgs/polyData/faces/Selection.png"> 
@@ -22,10 +22,7 @@ If the number of faces listed does not match the number of faces expected, you m
 
 **Naming Faces:**
 
-To select and name the faces, navigate to the “Model” tab in the functional toolbox. Hover over the outflow face of the right iliac on the model and press “p” to pick the face and highlight it yellow. The Face ID that corresponds to this face will be highlighted in blue on the left side of the functional toolbox. Change the surface name to “outflow_right_iliac” and click “Set Value”.
-
-
-Go To “Model” Tab to rename the faces of inflow and outflow
+In order to rename a face, find the box called "surf name: " above the Object list.
 
         1. Pick the inflow face by hovering over it with the mouse and pressing “p” on the keyboard
         2. Go to “surf name” box and type in “inflow_aorta”
@@ -41,20 +38,22 @@ Naming the wall of the model:
 
 **Combining and Deleting Faces:**
 
-If there are excess faces other than the ones named, and toggling the boundary extraction angle did not yield your desired results, attempt to highlight each to find the face it should be a part of. To further identify faces, select the Face ID, click “Change Color” and select a color. The face should change to the selected color in the viewing window.      
-
-Go Back to PolyData Tab
+If there are excess faces other than the ones named, and toggling the boundary extraction angle did not yield your desired results, attempt to highlight each to find the face it should be a part of. To further identify faces, select the Face ID, click “Color and Opacity → Change Selected Color” and select a color. The face should change to the selected color in the viewing window.      
         
-        1. Choose “Select and Combine Faces”
-        2. Move “all_wall” and the rest of the unnamed faces to the right side of the pop up box
-                This can be done quickly by shift+down arrow to highlight many faces to move over
-        3. Click “Save” under Load Poly Data to save model
-                You can rename this “demo_named” if want to keep old vtp model
+        1. In the window highlight "all_wall" and any unamed faces. This can be easily done by holding "Shift" and clicking the first and last names or by holding "Ctrl" and clicking on the desired names.
+        2. Choose “Select and Combine Faces”
+	3. The 
+        3. Click “Save Model” under "File Input/Output" to save model. You can rename this “demo_named” if want to keep the old vtp model
         4. Now we only have boundaries where we want them (total of 4)
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/polyData/faces/Combining.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
 
 If necessary you can delete unwanted faces:
 
-        Select and Delete Faces —> click the button, move the faces you want to delete to the right of the popup window and press ok
+        Select and Delete Faces —> Highlight faces in the window and click the button.
 
 <figure>
   <img class="svImg svImgXl"  src="documentation/modeling/imgs/polyData/faces/Deleting.png"> 
@@ -63,7 +62,7 @@ If necessary you can delete unwanted faces:
 
 **Selecting and Remeshing Faces:**
 
-If you would like to improve the quality of the surfaces on your mesh prior to meshing, this is possible in both the PolyData tab and the Meshing tab. In order to remesh the surface in the PolyData tab, you must select a mesh edge size that will give a reasonable surface mesh, and then select "Select and Remesh Faces". Select the faces you would like to remesh from the list and click "OK". This will take a while, as it must preserve the boundaries between surfaces, so be patient. 
+If you would like to improve the quality of the surfaces on your mesh prior to meshing, this is possible in both the PolyData tab and the Meshing tab. In order to remesh the surface in the PolyData tab, you must select a mesh edge size that will give a reasonable surface mesh, highlight the faces you would like to remesh and then select "Select and Remesh Faces". This will take a while, as it must preserve the boundaries between surfaces, so be patient. 
 
 **Filling Holes with Ids:**
 
