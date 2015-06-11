@@ -9,9 +9,9 @@ Under "Model → PolyData" navigate to the “Face Manipulation” tab.
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-However,if you would like to have one wall surface, under “Boundary Extraction” set the angle of separation to around 50 degrees and click "Extract Boundaries". This will create a new version of your model called "Name_facesextracted" in the window. Follow the instructions below to name your surfaces.
+However,if you would like to have one wall surface, under “Boundary Extraction” set the angle of separation to around 50 degrees and click "Extract Boundaries".
 
-A list of the model faces found will appear in the window to the left.
+A list of the model faces found will appear in the window to the right.
 
 If the number of faces listed does not match the number of faces expected, you must toggle the extraction angle to get the desired number. After extracting the faces, hover over a surface in the window and select "p". Alternatively, select the face from the model in the list. Either of these methods will highlight your face in the 3D window. The key here is to make sure that the caps of your vessels are isolated from the other surfaces of your vessel. Once this is done, follow the direction below to "Select and Combine Faces". 
 
@@ -42,8 +42,8 @@ If there are excess faces other than the ones named, and toggling the boundary e
         
         1. In the window highlight "all_wall" and any unamed faces. This can be easily done by holding "Shift" and clicking the first and last names or by holding "Ctrl" and clicking on the desired names.
         2. Choose “Select and Combine Faces”
-        3. A new model with 4 face names will pop up. Click “Save Model” under "File Input/Output" to save model
-                You can rename this “demo_named” if want to keep the old vtp model
+	3. The 
+        3. Click “Save Model” under "File Input/Output" to save model. You can rename this “demo_named” if want to keep the old vtp model
         4. Now we only have boundaries where we want them (total of 4)
 
 <figure>

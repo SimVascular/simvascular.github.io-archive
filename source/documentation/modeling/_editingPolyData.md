@@ -60,12 +60,21 @@ Surface Operators summary:
 
 There are specialized operations to perform function only on specific portions of the model.
 
-Navigate to "Model → PolyData → Local Ops". There are two ways to selection regions of the model for localized operations. 
+Navigate to "Model → PolyData → Local Ops". There are four ways to select regions of the model for localized operations. 
 
-	1. Face Selection - Faces highlighted and then added to the "Local Parameters" window will be operated on.
+	1. Face Selection - Highlight faces in the list, and then click "Add Faces" to add the faces to the  "Local Parameters" window will be operated on. Only these faces will be operated on now when performing local operations.
 	2. Blend - When faces are highlighted and then added to the "Local Parameters" window, a special region will be selected for operation. The boundary between the two faces will be found and the radius value corresponds to the size of a sphere to be selected from this boundary region to perform localized operations. 
+	2. Sphere Region - With a model highlighted, select "Show Sphere Interactor". Move the sphere around and set a radius for the sphere. When the desired location is selected, click "Add Sphere Region". This will add a line to the "Local Parameters" window. 
+	2. Cell Selection - First, a model must be displayed as a Full Model. Then, it is possible to select a cell with "c", or multiple with "C". After selecting cells, click "Add Cells" to add these cells to the "Local Parameters" window. 
 
-Highlight the walls of the surface and click "Add Faces" under the "Face Selection" Tab. This will add the following line to the Local Parameters window:
+Highlight the walls of the surface and click "Add Faces" under the "Face Selection" Tab. 
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/polyData/editing/selectingLocalRegions.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>    
+
+This will add the following line to the Local Parameters window:
 	
 	faces 1 2 ModelFaceID ActiveCells 1
 
@@ -78,12 +87,6 @@ These have the following meaning:
 	* 1 (Do not change!) - This designates that the output region selection array will be a cell data array
 
 Now, when an operation is clicked (i.e Decimate, Laplacian Smooth), the information in the Local Parameters window is used to set the local regions. If you no longer want to use a region selection, the line should be deleted from this window!
-
-<figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/polyData/editing/selectingLocalRegions.png"> 
-  <figcaption class="svCaption" ></figcaption>
-</figure>    
-
 Local Surface Operators summary:
 
         Decimate Surface:
@@ -100,7 +103,7 @@ Local Surface Operators summary:
 		surface
 		Num Iters - Choose between 3 and 10
 		Constrain Factor - How much the smoothed surface should be 
-		"pushed back to the original" - Choose between 0 and 1.
+		pushed back to the original - Choose between 0 and 1.
 
        Linear Suvdivision
                 Divides the meshing triangles based on number placed in “Num Divisions”
