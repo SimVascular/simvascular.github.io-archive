@@ -180,6 +180,11 @@ This section lists the available **svPre** commands, the associated parameters a
   <td>(file name)</td>
   <td>Write the specified file (geombc.dat.1 if a file name not provided) for svSolver. It contains the info of geometry, boundary conditions and material properties. </td>
 </tr>
+<tr>
+  <td>write_numstart</td>
+  <td>(integer)</td>
+  <td>Write numstart.dat with the specified time step number (0 if a number not provided) for svSolver. </td>
+</tr>
 </table>
 
 #### Read variable values from non-vtk files
