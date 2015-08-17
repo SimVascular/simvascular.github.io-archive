@@ -1,6 +1,3 @@
-## Appendix
-
-<br>
 ### svPre Commands
 
 This section lists the available **svPre** commands, the associated parameters and what they do. 
