@@ -1,0 +1,51 @@
+---
+title: SimVascular Clinical Test Cases
+---
+<!--Nav Bar -->
+<div class="row">
+
+    <div class="col-xs-1 col-sm-1 hidden-md hidden-lg">
+    </div>
+
+    <!-- ONE COLUMN OF SPACE -->
+    <nav class="hidden-xs hidden-sm col-md-2 col-lg-2  bs-docs-sidebar">
+
+      <% if clinical_name == "Case1" %>
+        <ul id="sidebar" class="nav nav-stacked fixed"> <%= partial "clinical/aortofemoral1_TOC" %></ul>
+      <% end %>
+
+      <% if clinical_name == "Case2" %>
+        <ul id="sidebar" class="nav nav-stacked fixed"> <%= partial "clinical/aortofemoral2_TOC" %></ul>
+      <% end %>
+
+      <% if clinical_name == "Case3" %>
+        <ul id="sidebar" class="nav nav-stacked fixed"> <%= partial "clinical/coronary_TOC" %></ul>
+      <% end %>
+
+      <% if clinical_name == "Case4" %>
+        <ul id="sidebar" class="nav nav-stacked fixed"> <%= partial "clinical/pulmonary_TOC" %></ul>
+      <% end %>        
+    </nav>
+    
+    <!--Main Content -->
+    <div class="col-xs-10 col-sm-10 col-md-9 col-lg-9" id="manualContent">
+
+      <!-- ACTUAL CONTENT -->
+      <% if clinical_name == "Case1" %>
+        <div><%= partial "clinical/aortofemoral1_content" %></div>
+      <% end %>
+
+      <% if clinical_name == "Case2" %>
+        <div><%= partial "clinical/aortofemoral2_content" %></div>
+      <% end %>
+
+      <% if clinical_name == "Case3" %>
+        <div><%= partial "clinical/coronary_content" %></div>
+      <% end %>
+
+      <% if clinical_name == "Case4" %>
+        <div><%= partial "clinical/pulmonary_content" %></div>
+      <% end %>
+
+    </div>
+</div>    

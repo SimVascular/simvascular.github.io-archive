@@ -1,0 +1,160 @@
+<html>
+<head>
+<title>File 'GUI/sv-gui-common.tcl'</title>
+<link rel=stylesheet href="styles.css"
+ type="text/css">
+</head>
+<body >
+<h1>File 'GUI/sv-gui-common.tcl'</h1><hr class="navbar"><p class="navbar"><a href="index.htm" class="navbar">Home</a> | <a href="files.html" class="index-file">Files</a> | <a href="procs.html" class="index-procedure">Procedures</a> | <a href="namespaces.html" class="index-namespace">Namespaces</a> </p><hr class="navbar">
+<div class="file-header"><dl></dl></div><hr class="file"><ul class="proc-listing"><li class="proc-listing"><a href="f_GUI_sv-gui-common.tcl.html#pFindGetMethods" class="proc">FindGetMethods</a> <span class="arg-list">(obj)</span><li class="proc-listing"><a href="f_GUI_sv-gui-common.tcl.html#pFindSetMethods" class="proc">FindSetMethods</a> <span class="arg-list">(obj)</span><li class="proc-listing"><a href="f_GUI_sv-gui-common.tcl.html#pcmdExists" class="proc">cmdExists</a> <span class="arg-list">(cmd)</span><li class="proc-listing"><a href="f_GUI_sv-gui-common.tcl.html#pgdscAdotB" class="proc">gdscAdotB</a> <span class="arg-list">(a b result)</span><li class="proc-listing"><a href="f_GUI_sv-gui-common.tcl.html#pgdscAngleBetweenVectors" class="proc">gdscAngleBetweenVectors</a> <span class="arg-list">(in1 in2 return_angle)</span><li class="proc-listing"><a href="f_GUI_sv-gui-common.tcl.html#pgdscGetPointsFromNthPoly" class="proc">gdscGetPointsFromNthPoly</a> <span class="arg-list">(nth pd result)</span><li class="proc-listing"><a href="f_GUI_sv-gui-common.tcl.html#pgdscVectorMagnitude" class="proc">gdscVectorMagnitude</a> <span class="arg-list">(v)</span><li class="proc-listing"><a href="f_GUI_sv-gui-common.tcl.html#pgdscVectorNormalize" class="proc">gdscVectorNormalize</a> <span class="arg-list">(v)</span><li class="proc-listing"><a href="f_GUI_sv-gui-common.tcl.html#pgeom_createRatioMap" class="proc">geom_createRatioMap</a> <span class="arg-list">(inlet_mesh_face radmax result)</span><li class="proc-listing"><a href="f_GUI_sv-gui-common.tcl.html#pgeom_flatten" class="proc">geom_flatten</a> <span class="arg-list">(normal boolean inpd rotated_norm outpd)</span><li class="proc-listing"><a href="f_GUI_sv-gui-common.tcl.html#pgeom_mapWomersleyMap" class="proc">geom_mapWomersleyMap</a> <span class="arg-list">(terms time viscosity omega density radmax flow_rate inlet_mesh_face radiusMap outwardUnitNormal result)</span><li class="proc-listing"><a href="f_GUI_sv-gui-common.tcl.html#pmc_LoadImage" class="proc">mc_LoadImage</a> <span class="arg-list">()</span><li class="proc-listing"><a href="f_GUI_sv-gui-common.tcl.html#pmc_LoadImageDICOM" class="proc">mc_LoadImageDICOM</a> <span class="arg-list">(change_to_cm)</span><li class="proc-listing"><a href="f_GUI_sv-gui-common.tcl.html#pmc_LoadImageXML" class="proc">mc_LoadImageXML</a> <span class="arg-list">()</span><li class="proc-listing"><a href="f_GUI_sv-gui-common.tcl.html#pnateAFLB" class="proc">nateAFLB</a> <span class="arg-list">()</span><li class="proc-listing"><a href="f_GUI_sv-gui-common.tcl.html#pprintBuildID" class="proc">printBuildID</a> <span class="arg-list">()</span><li class="proc-listing"><a href="f_GUI_sv-gui-common.tcl.html#pprintExternals" class="proc">printExternals</a> <span class="arg-list">()</span><li class="proc-listing"><a href="f_GUI_sv-gui-common.tcl.html#protatePlaneIntoXYZ" class="proc">rotatePlaneIntoXYZ</a> <span class="arg-list">(input output)</span><li class="proc-listing"><a href="f_GUI_sv-gui-common.tcl.html#pseg_LoadImageMha" class="proc">seg_LoadImageMha</a> <span class="arg-list">()</span><li class="proc-listing"><a href="f_GUI_sv-gui-common.tcl.html#ptrimSolid" class="proc">trimSolid</a> <span class="arg-list">()</span><li class="proc-listing"><a href="f_GUI_sv-gui-common.tcl.html#pvis_img_VolImgBrwsr2" class="proc">vis_img_VolImgBrwsr2</a> <span class="arg-list">(vol basename)</span><li class="proc-listing"><a href="f_GUI_sv-gui-common.tcl.html#pvis_img_VtkVolImg" class="proc">vis_img_VtkVolImg</a> <span class="arg-list">(vtk_img totExt ren createdObjs)</span><li class="proc-listing"><a href="f_GUI_sv-gui-common.tcl.html#pvsclrCreateTrimBox" class="proc">vsclrCreateTrimBox</a> <span class="arg-list">(topLeft topRight botRight sizeofbox phaseplane)</span></ul><hr class="file"><a name="pFindGetMethods"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">FindGetMethods</span> <span class="arg-list">(obj)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Find the get methods for a given vtk object.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: obj
+</td><td class="argument-description">vtk object name
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: list of get methods
+</td></tr></table></p><a name="pFindSetMethods"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">FindSetMethods</span> <span class="arg-list">(obj)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Find the set methods for a given vtk object.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: obj
+</td><td class="argument-description">vtk object name
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: list of set methods
+</td></tr></table></p><a name="pcmdExists"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">cmdExists</span> <span class="arg-list">(cmd)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Check to see if the command exists.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: cmd
+</td><td class="argument-description">command name.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: 1 if true, 0 if false.
+</td></tr></table></p><a name="pgdscAdotB"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">gdscAdotB</span> <span class="arg-list">(a b result)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr2503"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: a
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr2504"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: b
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr2505"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: result
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr2506"></a>not documented</span>
+</td></tr></table></p><a name="pgdscAngleBetweenVectors"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">gdscAngleBetweenVectors</span> <span class="arg-list">(in1 in2 return_angle)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr2507"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: in1
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr2508"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: in2
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr2509"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: return_angle
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr2510"></a>not documented</span>
+</td></tr></table></p><a name="pgdscGetPointsFromNthPoly"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">gdscGetPointsFromNthPoly</span> <span class="arg-list">(nth pd result)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr2511"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: nth
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr2512"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: pd
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr2513"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: result
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr2514"></a>not documented</span>
+</td></tr></table></p><a name="pgdscVectorMagnitude"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">gdscVectorMagnitude</span> <span class="arg-list">(v)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr2515"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: v
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr2516"></a>not documented</span>
+</td></tr></table></p><a name="pgdscVectorNormalize"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">gdscVectorNormalize</span> <span class="arg-list">(v)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr2517"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: v
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr2518"></a>not documented</span>
+</td></tr></table></p><a name="pgeom_createRatioMap"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">geom_createRatioMap</span> <span class="arg-list">(inlet_mesh_face radmax result)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">This proc maps the scalars given on an input PolyData object to a destination PolyData object and returns a new PolyData. This routine is not general and makes numerous assumptions about the nature of each point set. See notes.</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Notes</span>: This code does a simple mapping of the Womersley analytic profile on to the points of the the output PolyData. This mapping assumes that the objects are similar in that if you send a ray from the center of each object the relationship between inner (r) and outer (R) radius is given by r_out = r_in * R_out / R_in for any given angle. We also scale the result scalars assuming they represent a a through plane flux so that the input and output PolyData's have the same through plane flux. This code requires that both PolyData's be in the z=0 plane. Each should consist of a single region. Iso-parametric interpolation functions are used to evaluate the scalar values and for calculating through plane flow rate. The absolute value of the ratio is the radius ratio, where positive values denote interior and negative values denote boundary nodes. This code would be much faster if it were rewritten in C.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: inlet_mesh_face
+</td><td class="argument-description">PolyData onto which to map the scalar data.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: radmax
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr2519"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: result
+</td><td class="argument-description">Name of new repository PolyData object to be created.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: status
+</td></tr></table></p><a name="pgeom_flatten"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">geom_flatten</span> <span class="arg-list">(normal boolean inpd rotated_norm outpd)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr2520"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: normal
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr2521"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: boolean
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr2522"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: inpd
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr2523"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: rotated_norm
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr2524"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: outpd
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr2525"></a>not documented</span>
+</td></tr></table></p><a name="pgeom_mapWomersleyMap"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">geom_mapWomersleyMap</span> <span class="arg-list">(terms time viscosity omega density radmax flow_rate inlet_mesh_face radiusMap outwardUnitNormal result)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr2526"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: terms
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr2527"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: time
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr2528"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: viscosity
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr2529"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: omega
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr2530"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: density
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr2531"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: radmax
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr2532"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: flow_rate
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr2533"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: inlet_mesh_face
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr2534"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: radiusMap
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr2535"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: outwardUnitNormal
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr2536"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: result
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr2537"></a>not documented</span>
+</td></tr></table></p><a name="pmc_LoadImage"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">mc_LoadImage</span> <span class="arg-list">()</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr2538"></a>not documented</span>
+</td></tr></table></p><a name="pmc_LoadImageDICOM"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">mc_LoadImageDICOM</span> <span class="arg-list">(change_to_cm)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr2539"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: change_to_cm
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr2540"></a>not documented</span>
+</td></tr></table></p><a name="pmc_LoadImageXML"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">mc_LoadImageXML</span> <span class="arg-list">()</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr2541"></a>not documented</span>
+</td></tr></table></p><a name="pnateAFLB"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">nateAFLB</span> <span class="arg-list">()</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr2542"></a>not documented</span>
+</td></tr></table></p><a name="pprintBuildID"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">printBuildID</span> <span class="arg-list">()</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr2543"></a>not documented</span>
+</td></tr></table></p><a name="pprintExternals"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">printExternals</span> <span class="arg-list">()</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr2544"></a>not documented</span>
+</td></tr></table></p><a name="protatePlaneIntoXYZ"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">rotatePlaneIntoXYZ</span> <span class="arg-list">(input output)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr2545"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: input
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr2546"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: output
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr2547"></a>not documented</span>
+</td></tr></table></p><a name="pseg_LoadImageMha"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">seg_LoadImageMha</span> <span class="arg-list">()</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr2548"></a>not documented</span>
+</td></tr></table></p><a name="ptrimSolid"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">trimSolid</span> <span class="arg-list">()</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr2549"></a>not documented</span>
+</td></tr></table></p><a name="pvis_img_VolImgBrwsr2"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">vis_img_VolImgBrwsr2</span> <span class="arg-list">(vol basename)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr2550"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: vol
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr2551"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: basename
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr2552"></a>not documented</span>
+</td></tr></table></p><a name="pvis_img_VtkVolImg"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">vis_img_VtkVolImg</span> <span class="arg-list">(vtk_img totExt ren createdObjs)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr2553"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: vtk_img
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr2554"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: totExt
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr2555"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: ren
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr2556"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: createdObjs
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr2557"></a>not documented</span>
+</td></tr></table></p><a name="pvsclrCreateTrimBox"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">vsclrCreateTrimBox</span> <span class="arg-list">(topLeft topRight botRight sizeofbox phaseplane)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr2558"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: topLeft
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr2559"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: topRight
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr2560"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: botRight
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr2561"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: sizeofbox
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr2562"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: phaseplane
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr2563"></a>not documented</span>
+</td></tr></table></p><hr class="navbar"><p class="navbar"><a href="index.htm" class="navbar">Home</a> | <a href="files.html" class="index-file">Files</a> | <a href="procs.html" class="index-procedure">Procedures</a> | <a href="namespaces.html" class="index-namespace">Namespaces</a> </p><hr class="navbar">
+<hr><p class="generated-by">Generated by <a href="http://www.purl.org/NET/akupries/soft/autodoc/index.htm" class="generated-by">AutoDoc 2.4</a> at 02/09/2015, invoked by <a href="mailto:danschi@danieles-macbook-air.local" class="generated-by">Unknown</a></p></body>
+</html>

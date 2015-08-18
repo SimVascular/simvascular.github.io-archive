@@ -1,0 +1,145 @@
+<html>
+<head>
+<title>File 'Core/calculate_rcr.tcl'</title>
+<link rel=stylesheet href="styles.css"
+ type="text/css">
+</head>
+<body >
+<h1>File 'Core/calculate_rcr.tcl'</h1><hr class="navbar"><p class="navbar"><a href="index.htm" class="navbar">Home</a> | <a href="files.html" class="index-file">Files</a> | <a href="procs.html" class="index-procedure">Procedures</a> | <a href="namespaces.html" class="index-namespace">Namespaces</a> </p><hr class="navbar">
+<div class="file-header"><dl><dt><span class="header-title">Depends on</span><dd><span class="header-value">math</span></dl></div><hr class="file"><ul class="proc-listing"><li class="proc-listing"><a href="f_Core_calculate_rcr.tcl.html#pRCR_TAC_optimize" class="proc">RCR_TAC_optimize</a> <span class="arg-list">(ratio targetSP targetDP targetMP period units flow_filename flip_flow_sign)</span><li class="proc-listing"><a href="f_Core_calculate_rcr.tcl.html#pRCR_branch_estimator" class="proc">RCR_branch_estimator</a> <span class="arg-list">(targetQ targetP TAC period ratio units flow_filename flip_flow_sign)</span><li class="proc-listing"><a href="f_Core_calculate_rcr.tcl.html#pRCR_branch_optimize" class="proc">RCR_branch_optimize</a> <span class="arg-list">(TAC targetQ targetSP targetDP targetMP period units flow_filename flip_flow_sign)</span><li class="proc-listing"><a href="f_Core_calculate_rcr.tcl.html#pRCR_branch_optimize_PP" class="proc">RCR_branch_optimize_PP</a> <span class="arg-list">(TAC targetQ targetPP targetMP period units flow_filename flip_flow_sign)</span><li class="proc-listing"><a href="f_Core_calculate_rcr.tcl.html#pRCR_calc_pressures" class="proc">RCR_calc_pressures</a> <span class="arg-list">(R C period ratio units flow_with_time scale_factor_q mean_q mean_p)</span><li class="proc-listing"><a href="f_Core_calculate_rcr.tcl.html#pRCR_create_multi_branch_rcrtdat" class="proc">RCR_create_multi_branch_rcrtdat</a> <span class="arg-list">(in_fn out_fn_excel out_fn)</span><li class="proc-listing"><a href="f_Core_calculate_rcr.tcl.html#pRCR_estimator" class="proc">RCR_estimator</a> <span class="arg-list">(R C period ratio units flow_filename scale_factor flip_flow_sign)</span><li class="proc-listing"><a href="f_Core_calculate_rcr.tcl.html#pRCR_read_flow_file" class="proc">RCR_read_flow_file</a> <span class="arg-list">(fn)</span><li class="proc-listing"><a href="f_Core_calculate_rcr.tcl.html#pRCR_stdout_to_fn" class="proc">RCR_stdout_to_fn</a> <span class="arg-list">(fn)</span><li class="proc-listing"><a href="f_Core_calculate_rcr.tcl.html#pRCR_utility_optimize_func" class="proc">RCR_utility_optimize_func</a> <span class="arg-list">(x)</span><li class="proc-listing"><a href="f_Core_calculate_rcr.tcl.html#pRCR_version" class="proc">RCR_version</a> <span class="arg-list">()</span></ul><hr class="file"><a name="pRCR_TAC_optimize"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">RCR_TAC_optimize</span> <span class="arg-list">(ratio targetSP targetDP targetMP period units flow_filename flip_flow_sign)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr960"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: ratio
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr961"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: targetSP
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr962"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: targetDP
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr963"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: targetMP
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr964"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: period
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr965"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: units
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr966"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: flow_filename
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr967"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: flip_flow_sign
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr968"></a>not documented</span>
+</td></tr></table></p><a name="pRCR_branch_estimator"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">RCR_branch_estimator</span> <span class="arg-list">(targetQ targetP TAC period ratio units flow_filename flip_flow_sign)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr969"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: targetQ
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr970"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: targetP
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr971"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: TAC
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr972"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: period
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr973"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: ratio
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr974"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: units
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr975"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: flow_filename
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr976"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: flip_flow_sign
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr977"></a>not documented</span>
+</td></tr></table></p><a name="pRCR_branch_optimize"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">RCR_branch_optimize</span> <span class="arg-list">(TAC targetQ targetSP targetDP targetMP period units flow_filename flip_flow_sign)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr978"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: TAC
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr979"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: targetQ
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr980"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: targetSP
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr981"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: targetDP
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr982"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: targetMP
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr983"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: period
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr984"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: units
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr985"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: flow_filename
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr986"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: flip_flow_sign
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr987"></a>not documented</span>
+</td></tr></table></p><a name="pRCR_branch_optimize_PP"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">RCR_branch_optimize_PP</span> <span class="arg-list">(TAC targetQ targetPP targetMP period units flow_filename flip_flow_sign)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr988"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: TAC
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr989"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: targetQ
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr990"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: targetPP
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr991"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: targetMP
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr992"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: period
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr993"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: units
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr994"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: flow_filename
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr995"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: flip_flow_sign
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr996"></a>not documented</span>
+</td></tr></table></p><a name="pRCR_calc_pressures"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">RCR_calc_pressures</span> <span class="arg-list">(R C period ratio units flow_with_time scale_factor_q mean_q mean_p)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr997"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: R
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr998"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: C
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr999"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: period
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1000"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: ratio
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1001"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: units
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1002"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: flow_with_time
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1003"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: scale_factor_q
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1004"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: mean_q
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1005"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: mean_p
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1006"></a>not documented</span>
+</td></tr></table></p><a name="pRCR_create_multi_branch_rcrtdat"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">RCR_create_multi_branch_rcrtdat</span> <span class="arg-list">(in_fn out_fn_excel out_fn)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1007"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: in_fn
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1008"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: out_fn_excel
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1009"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: out_fn
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1010"></a>not documented</span>
+</td></tr></table></p><a name="pRCR_estimator"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">RCR_estimator</span> <span class="arg-list">(R C period ratio units flow_filename scale_factor flip_flow_sign)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1011"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: R
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1012"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: C
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1013"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: period
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1014"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: ratio
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1015"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: units
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1016"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: flow_filename
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1017"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: scale_factor
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1018"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: flip_flow_sign
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1019"></a>not documented</span>
+</td></tr></table></p><a name="pRCR_read_flow_file"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">RCR_read_flow_file</span> <span class="arg-list">(fn)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1020"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: fn
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1021"></a>not documented</span>
+</td></tr></table></p><a name="pRCR_stdout_to_fn"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">RCR_stdout_to_fn</span> <span class="arg-list">(fn)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1022"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: fn
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1023"></a>not documented</span>
+</td></tr></table></p><a name="pRCR_utility_optimize_func"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">RCR_utility_optimize_func</span> <span class="arg-list">(x)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1024"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: x
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1025"></a>not documented</span>
+</td></tr></table></p><a name="pRCR_version"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">RCR_version</span> <span class="arg-list">()</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1026"></a>not documented</span>
+</td></tr></table></p><hr class="navbar"><p class="navbar"><a href="index.htm" class="navbar">Home</a> | <a href="files.html" class="index-file">Files</a> | <a href="procs.html" class="index-procedure">Procedures</a> | <a href="namespaces.html" class="index-namespace">Namespaces</a> </p><hr class="navbar">
+<hr><p class="generated-by">Generated by <a href="http://www.purl.org/NET/akupries/soft/autodoc/index.htm" class="generated-by">AutoDoc 2.4</a> at 02/09/2015, invoked by <a href="mailto:danschi@danieles-macbook-air.local" class="generated-by">Unknown</a></p></body>
+</html>

@@ -1,0 +1,12 @@
+<map id="initnabi" name="initnabi">
+<area shape="rect" id="node2" href="$blkdat_8h.html#ae303c54974fc06aed44b250ae924c6e5" title="lcblkb" alt="" coords="128,5,184,33"/>
+<area shape="rect" id="node3" href="$asbnabi-closedloop_8f.html#aeed5f0fff5b6867879be4111d16d0951" title="This routine computes and assembles the data corresponding to the boundary elements. " alt="" coords="122,57,190,85"/>
+<area shape="rect" id="node10" href="$asbnasc-closedloop_8f.html#a3348227959bd68198160485bee8dce29" title="This routine computes and assembles the data corresponding to the boundary elements. " alt="" coords="121,109,191,137"/>
+<area shape="rect" id="node11" href="$solver__subroutines_8f.html#a1c150293c76c042271ad405a1bb7c455" title="This routine computes and assembles data required for an Augmented Lagrangian Method. " alt="" coords="118,161,194,189"/>
+<area shape="rect" id="node4" href="$solver__subroutines_8f.html#a6a8816fabb1d7bf83300622a24b6cd02" title="This file contains functions for dealing with higher order shape functions at the element level..." alt="" coords="255,57,316,85"/>
+<area shape="rect" id="node5" href="$solver__subroutines_8f.html#a3785c66a7c905ccf5b80f40573d9ed25" title="This subroutine performs a vector gather/scatter operation for the nodal coordinates array..." alt="" coords="258,161,313,189"/>
+<area shape="rect" id="node7" href="$solver__subroutines_8f.html#a550cbe79ea991aacf5460de1e3d55537" title="Compute the higher order modes that lie on the boundary of the element. " alt="" coords="244,213,327,241"/>
+<area shape="rect" id="node8" href="$solver__subroutines_8f.html#a5d8a1edf435f834cb8910ee7116fc9f4" title="Returns the matrix of element shape functions with the higher order modes correctly negated at the cu..." alt="" coords="251,5,320,33"/>
+<area shape="rect" id="node9" href="$solver__subroutines_8f.html#a5506faed7039887f8b13bdf081f37ebb" title="This subroutine performs a vector gather/scatter operation. " alt="" coords="261,109,310,137"/>
+<area shape="rect" id="node6" href="$solver__subroutines_8f.html#a397fada3c9be3510f131e949fb0b76d2" title="This utility routine prints out the error and stops the program. " alt="" coords="377,135,426,163"/>
+</map>
