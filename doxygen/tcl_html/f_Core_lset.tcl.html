@@ -1,0 +1,230 @@
+<html>
+<head>
+<title>File 'Core/lset.tcl'</title>
+<link rel=stylesheet href="styles.css"
+ type="text/css">
+</head>
+<body >
+<h1>File 'Core/lset.tcl'</h1><hr class="navbar"><p class="navbar"><a href="index.htm" class="navbar">Home</a> | <a href="files.html" class="index-file">Files</a> | <a href="procs.html" class="index-procedure">Procedures</a> | <a href="namespaces.html" class="index-namespace">Namespaces</a> </p><hr class="navbar">
+<div class="file-header"><dl></dl></div><hr class="file"><ul class="proc-listing"><li class="proc-listing"><a href="f_Core_lset.tcl.html#pAreaMetric_3" class="proc">AreaMetric_3</a> <span class="arg-list">(gridDim truePgn approxPgn truePhi approxPhi)</span><li class="proc-listing"><a href="f_Core_lset.tcl.html#plset_cfgVConst" class="proc">lset_cfgVConst</a> <span class="arg-list">(core v)</span><li class="proc-listing"><a href="f_Core_lset.tcl.html#plset_cfgVExpDecay" class="proc">lset_cfgVExpDecay</a> <span class="arg-list">(core v kt expand stopV mgFactor 3d_curv)</span><li class="proc-listing"><a href="f_Core_lset.tcl.html#plset_cfgVPotential" class="proc">lset_cfgVPotential</a> <span class="arg-list">(core v klow kupp stopV pFactor 3d_curv)</span><li class="proc-listing"><a href="f_Core_lset.tcl.html#plset_cfgVSmooth" class="proc">lset_cfgVSmooth</a> <span class="arg-list">(core v klow kupp 3d_curv)</span><li class="proc-listing"><a href="f_Core_lset.tcl.html#plset_combine" class="proc">lset_combine</a> <span class="arg-list">(allGrids outPd)</span><li class="proc-listing"><a href="f_Core_lset.tcl.html#plset_configureV" class="proc">lset_configureV</a> <span class="arg-list">(v core)</span><li class="proc-listing"><a href="f_Core_lset.tcl.html#plset_for" class="proc">lset_for</a> <span class="arg-list">(core nsteps maxStep renList v w rebuildPhiFreq)</span><li class="proc-listing"><a href="f_Core_lset.tcl.html#plset_getK" class="proc">lset_getK</a> <span class="arg-list">(core)</span><li class="proc-listing"><a href="f_Core_lset.tcl.html#plset_getMinH" class="proc">lset_getMinH</a> <span class="arg-list">(core)</span><li class="proc-listing"><a href="f_Core_lset.tcl.html#plset_gridDims" class="proc">lset_gridDims</a> <span class="arg-list">(dom_pd h)</span><li class="proc-listing"><a href="f_Core_lset.tcl.html#plset_gridOrig" class="proc">lset_gridOrig</a> <span class="arg-list">(dom_pd)</span><li class="proc-listing"><a href="f_Core_lset.tcl.html#plset_gridType" class="proc">lset_gridType</a> <span class="arg-list">(core)</span><li class="proc-listing"><a href="f_Core_lset.tcl.html#plset_initCore" class="proc">lset_initCore</a> <span class="arg-list">(core initData img)</span><li class="proc-listing"><a href="f_Core_lset.tcl.html#plset_run" class="proc">lset_run</a> <span class="arg-list">(img pot initData kt klow kupp serialInit gridFactor initOnly sparseFlag isotropicFlag expandFlag convFlag timerFlag maxTSFlag maxTS writeIntermediate runVpot runVSmooth runVConst numVConst magGradFactor pFactor rens objPrefix verbose stopV rebuildPhiFreq ac acInterval 3d_curv segPd finalGrid)</span><li class="proc-listing"><a href="f_Core_lset.tcl.html#plset_runClear" class="proc">lset_runClear</a> <span class="arg-list">()</span><li class="proc-listing"><a href="f_Core_lset.tcl.html#plset_showV" class="proc">lset_showV</a> <span class="arg-list">(v core)</span><li class="proc-listing"><a href="f_Core_lset.tcl.html#plset_showVConst" class="proc">lset_showVConst</a> <span class="arg-list">(v)</span><li class="proc-listing"><a href="f_Core_lset.tcl.html#plset_step" class="proc">lset_step</a> <span class="arg-list">(core zls vel v w rebuildPhiFreq)</span></ul><hr class="file"><a name="pAreaMetric_3"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">AreaMetric_3</span> <span class="arg-list">(gridDim truePgn approxPgn truePhi approxPhi)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Calculates the goodness metric from two 3-D objects.</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Dangers</span>: This routine currently only works for SparseGrid.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Notes</span>: The equation for the goodness metric is: <br> <br> goodness = sqrt ( (Aintersect / Atrue) * (Aintersect / Aapprox) )
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: gridDim
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1163"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: truePgn
+</td><td class="argument-description">True 3D PolyData object.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: approxPgn
+</td><td class="argument-description">Approximate 3D PolyData object.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: truePhi
+</td><td class="argument-description">level set scalar function StructuredPts object.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: approxPhi
+</td><td class="argument-description">level set scalar function StructuredPts object.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: goodness metric between 0 and 1.
+</td></tr></table></p><a name="plset_cfgVConst"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">lset_cfgVConst</span> <span class="arg-list">(core v)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1164"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: core
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1165"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: v
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1166"></a>not documented</span>
+</td></tr></table></p><a name="plset_cfgVExpDecay"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">lset_cfgVExpDecay</span> <span class="arg-list">(core v kt expand stopV mgFactor 3d_curv)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1167"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: core
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1168"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: v
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1169"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: kt
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1170"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: expand
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1171"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: stopV
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1172"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: mgFactor
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1173"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: 3d_curv
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1174"></a>not documented</span>
+</td></tr></table></p><a name="plset_cfgVPotential"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">lset_cfgVPotential</span> <span class="arg-list">(core v klow kupp stopV pFactor 3d_curv)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1175"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: core
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1176"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: v
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1177"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: klow
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1178"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: kupp
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1179"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: stopV
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1180"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: pFactor
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1181"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: 3d_curv
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1182"></a>not documented</span>
+</td></tr></table></p><a name="plset_cfgVSmooth"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">lset_cfgVSmooth</span> <span class="arg-list">(core v klow kupp 3d_curv)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1183"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: core
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1184"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: v
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1185"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: klow
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1186"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: kupp
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1187"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: 3d_curv
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1188"></a>not documented</span>
+</td></tr></table></p><a name="plset_combine"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">lset_combine</span> <span class="arg-list">(allGrids outPd)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1189"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: allGrids
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1190"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: outPd
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1191"></a>not documented</span>
+</td></tr></table></p><a name="plset_configureV"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">lset_configureV</span> <span class="arg-list">(v core)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1192"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: v
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1193"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: core
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1194"></a>not documented</span>
+</td></tr></table></p><a name="plset_for"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">lset_for</span> <span class="arg-list">(core nsteps maxStep renList v w rebuildPhiFreq)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1195"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: core
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1196"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: nsteps
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1197"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: maxStep
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1198"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: renList
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1199"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: v
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1200"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: w
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1201"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: rebuildPhiFreq
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1202"></a>not documented</span>
+</td></tr></table></p><a name="plset_getK"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">lset_getK</span> <span class="arg-list">(core)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1203"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: core
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1204"></a>not documented</span>
+</td></tr></table></p><a name="plset_getMinH"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">lset_getMinH</span> <span class="arg-list">(core)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1205"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: core
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1206"></a>not documented</span>
+</td></tr></table></p><a name="plset_gridDims"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">lset_gridDims</span> <span class="arg-list">(dom_pd h)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1207"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: dom_pd
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1208"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: h
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1209"></a>not documented</span>
+</td></tr></table></p><a name="plset_gridOrig"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">lset_gridOrig</span> <span class="arg-list">(dom_pd)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1210"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: dom_pd
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1211"></a>not documented</span>
+</td></tr></table></p><a name="plset_gridType"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">lset_gridType</span> <span class="arg-list">(core)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1212"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: core
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1213"></a>not documented</span>
+</td></tr></table></p><a name="plset_initCore"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">lset_initCore</span> <span class="arg-list">(core initData img)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1214"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: core
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1215"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: initData
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1216"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: img
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1217"></a>not documented</span>
+</td></tr></table></p><a name="plset_run"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">lset_run</span> <span class="arg-list">(img pot initData kt klow kupp serialInit gridFactor initOnly sparseFlag isotropicFlag expandFlag convFlag timerFlag maxTSFlag maxTS writeIntermediate runVpot runVSmooth runVConst numVConst magGradFactor pFactor rens objPrefix verbose stopV rebuildPhiFreq ac acInterval 3d_curv segPd finalGrid)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">This is macro to run a levelset simulation to segment a 2-D contour from a slice of image data.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: img
+</td><td class="argument-description">image data (vtkImageData)
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: pot
+</td><td class="argument-description">potential well data
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: initData
+</td><td class="argument-description">intialization procedures
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: kt
+</td><td class="argument-description">curvature value used for vExpDecay function
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: klow
+</td><td class="argument-description">used by vPotential &amp; vSmooth
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: kupp
+</td><td class="argument-description">used by vPotential &amp; vSmooth
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: serialInit
+</td><td class="argument-description">(0/1) indicates whether we are running a set of segmentations in which we want to use the level set function as it was left by the previous item
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: gridFactor
+</td><td class="argument-description">grid spacing (h) based on min voxel size * gridFactor
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: initOnly
+</td><td class="argument-description">boolean which determines if you actually run simulation or just set up for it
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: sparseFlag
+</td><td class="argument-description">whether to use the sparse or dense grid
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: isotropicFlag
+</td><td class="argument-description">boolean to use a uniformly spaced grid in all dimensions
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: expandFlag
+</td><td class="argument-description">boolean used to determine if front in
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: convFlag
+</td><td class="argument-description">boolean determines if area/volume convergence is checked
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: timerFlag
+</td><td class="argument-description">$core SetTimers -flag $timerFlag
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: maxTSFlag
+</td><td class="argument-description">boolean determining whether to exist after a fixed number of steps
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: maxTS
+</td><td class="argument-description">maximum number of time steps to run
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: writeIntermediate
+</td><td class="argument-description">** probably output intermediate objects flag **
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: runVpot
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1218"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: runVSmooth
+</td><td class="argument-description">boolean to run vSmooth
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: runVConst
+</td><td class="argument-description">boolean to run VConst
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: numVConst
+</td><td class="argument-description">number of steps to run VConst
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: magGradFactor
+</td><td class="argument-description">magnitude of intensity gradient cut-off for vExpDecay
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: pFactor
+</td><td class="argument-description">potential well tolerance for vPotential
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: rens
+</td><td class="argument-description">render windows (set to {} for no graphics output)
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: objPrefix
+</td><td class="argument-description">all objects to be saved created in repository with this prefix
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: verbose
+</td><td class="argument-description">boolean to output solution results along the way
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: stopV
+</td><td class="argument-description">stop velocity
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: rebuildPhiFreq
+</td><td class="argument-description">frequency to rebuild Phi
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: ac
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1219"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: acInterval
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1220"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: 3d_curv
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1221"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: segPd
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1222"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: finalGrid
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1223"></a>not documented</span>
+</td></tr></table></p><a name="plset_runClear"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">lset_runClear</span> <span class="arg-list">()</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1224"></a>not documented</span>
+</td></tr></table></p><a name="plset_showV"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">lset_showV</span> <span class="arg-list">(v core)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1225"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: v
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1226"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: core
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1227"></a>not documented</span>
+</td></tr></table></p><a name="plset_showVConst"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">lset_showVConst</span> <span class="arg-list">(v)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1228"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: v
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1229"></a>not documented</span>
+</td></tr></table></p><a name="plset_step"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">lset_step</span> <span class="arg-list">(core zls vel v w rebuildPhiFreq)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1230"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: core
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1231"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: zls
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1232"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: vel
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1233"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: v
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1234"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: w
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1235"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: rebuildPhiFreq
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1236"></a>not documented</span>
+</td></tr></table></p><hr class="navbar"><p class="navbar"><a href="index.htm" class="navbar">Home</a> | <a href="files.html" class="index-file">Files</a> | <a href="procs.html" class="index-procedure">Procedures</a> | <a href="namespaces.html" class="index-namespace">Namespaces</a> </p><hr class="navbar">
+<hr><p class="generated-by">Generated by <a href="http://www.purl.org/NET/akupries/soft/autodoc/index.htm" class="generated-by">AutoDoc 2.4</a> at 02/09/2015, invoked by <a href="mailto:danschi@danieles-macbook-air.local" class="generated-by">Unknown</a></p></body>
+</html>

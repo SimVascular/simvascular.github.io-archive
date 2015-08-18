@@ -1,0 +1,26 @@
+<h3>Apple OS X</h3>
+
+<p>To install CMake on OS X visit <a href="http://www.cmake.org/"target="blank"> cmake.org</a> for details</p>
+
+<p>If you have Clang 6.0, you will also need to install MacPorts, which you can download at <a href="https://www.macports.org/"target="blank"> macports.org</a>
+<br></p>
+
+<p>The Xcode comman line tools need to be installed. This can done with this command:</p>
+<pre class="highlight plaintext"><code>xcode-select --install
+</code></pre>
+
+<h5>The following libraries and tools should be installed using MacPorts:</h5>
+
+<p>Build Tools:</p>
+<pre class="highlight plaintext"><code>sudo port install gcc46
+</code></pre>
+
+<p>For svSolver, svPre, and svPost (Optional):</p>
+<pre class="highlight plaintext"><code>sudo port install gfortran
+sudo port install mpich-gcc46
+</code></pre>
+
+<p>Plugin Libraries (Optional):</p>
+<pre class="highlight plaintext"><code>sudo port install glib2-devel
+sudo port install pkgconfig
+</code></pre>

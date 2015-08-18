@@ -1,0 +1,1683 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SimVascular Docs</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+
+    <link href="css/shop-item.css" rel="stylesheet" type="text/css" />
+
+    <link href="css/codestyle.css" rel="stylesheet" type="text/css" />    
+
+    <link rel="stylesheet" href="font-awesome-4.1.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
+
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                <i class="fa fa-bars" id="barIcon"></i>
+              </button>
+                <a class="navbar-brand" id="brandName" href="index.html">
+                  <img src="img/svlogo/svLogoSmallText.png" alt="...">
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">            
+                <ul class="nav navbar-nav">
+                  
+                  <!-- GETTING STARTED -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b><span class="fa fa-caret-square-o-right"></span> Getting Started</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsInstallation.html"><b><span class="fa fa-sign-in fa-rotate-90"></span> Installation</b></a></li>   
+                      <li role="presentation" class="divider"></li>                   
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsCompile.html"><b><span class="fa fa-file-text-o"></span> Compile Sources</b></a></li>  
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsCodeSnippets.html"><b><span class="fa fa-indent"></span> Code Snippets</b></a></li>                                  
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsQuickGuide.html"><b><span class="icon ion-ios7-bolt"></span> Quick Guide</b></a></li>           
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="comingSoon.html"><b>Doxygen Docs for C++</b></a></li>  
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="comingSoon.html"><b>Doxygen Docs for Tcl</b></a></li>  
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="comingSoon.html"><b>Doxygen Docs for Fortran</b></a></li>           
+                    </ul>
+                  </li>                  
+
+                  <!-- USER GUIDES -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b><span class="fa fa-user"></span> User Guides</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsImageGuide.html"><b><span class="icon ion-image"></span> Medical Images</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsModelGuide.html"><b><span class="icon ion-settings"></span> Modeling</b></a></li>
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsMeshing.html"><b><span class="icon ion-ios7-keypad"></span> Meshing</b></a></li>
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsFlowSolver.html"><b><span class="icon ion-play"></span> Simulation</b></a></li>
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsRefs.html"><b><span class="icon ion-document-text"></span> References</b></a></li>
+                    </ul>
+                  </li>
+
+                  <!-- CLINCAL CASES -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b><i class="fa fa-stethoscope"></i> Clinical Cases</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase1.html"><b><span class="fa fa-user-md"></span> Aortofemoral Normal (Case 1)</b></a></li>                      
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase2.html"><b><span class="fa fa-user-md"></span> Aortofemoral Normal (Case 2)</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase3.html"><b><span class="fa fa-user-md"></span> Coronary Normal (Case 3)</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase4.html"><b><span class="fa fa-user-md"></span> Healthy Pulmonary (Case 4)</b></a></li>
+                    </ul>
+                  </li>
+
+                  <!-- svCOMMUNITY -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b><i class="fa fa-users"></i> svCommunity</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/forums/viewforum.php?f=188"><b><span class="fa fa-users"></span> Public Forum</b></a></li>                                          
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/mailman/listinfo/simvascular-news"><b><span class="fa fa-sign-in"></span> Join News Mailing List</b></a></li>                      
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/pipermail/simvascular-news/"><b><span class="fa fa-pencil-square-o"></span> News Mailing List Archive</b></a></li>
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/mailman/listinfo/simvascular-users"><b><span class="fa fa-sign-in"></span> Join User Mailing List</b></a></li>                      
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="http://simvascular-users.40599.n7.nabble.com/"><b><span class="fa fa-pencil-square-o"></span> User Mailing List Archive</b></a></li>                      
+                    </ul>
+                  </li>
+
+                    <!-- <li><a href="docsQuickGuide.html" id="btnQuickGuide"><b><span class="icon ion-ios7-bolt"></span> Quick Guide</b></a></li>
+                    <li><a href="docsImageGuide.html" id="btnImageGuide"><b><span class="icon ion-image"></span> Medical Images</b></a></li>
+                    <li><a href="docsModelGuide.html" id="btnModelGuide"><b><span class="icon ion-settings"></span> Modeling</b></a></li> 
+                    
+                    <li><a href="docsMeshing.html" id="btnMeshing"><b><span class="icon ion-ios7-keypad"></span> Meshing</b></a></li>
+                    <li><a href="docsPresolver.html" id="btnPresolver"><b><span class="icon ion-log-in"></span> svPre</b></a></li>
+                    <li><a href="docsFlowSolver.html" id="btnFlowSolver"><b><span class="icon ion-play"></span> svSolver</b></a></li>
+                    <li><a href="docsRefs.html" id="btnRefs"><b><span class="icon ion-document-text"></span> References</b></a></li>
+                    <li><a href="clinicalCase1.html" id="btnRefs"><b>Case Studies</b></a></li> -->
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <!--Nav Bar -->
+<div class="row">
+    <div class="col-xs-1 col-sm-1 hidden-md hidden-lg">
+    </div>
+    <!-- ONE COLUMN OF SPACE -->
+    <nav class="hidden-xs hidden-sm col-md-2 col-lg-2 bs-docs-sidebar">
+
+
+
+
+
+        <ul id="sidebar" class="nav nav-stacked fixed manModelGuide"> <!--Nav Bar -->
+<p><h3>Modeling Guide</h3></p>
+<li><a href="#modelingIntro">Introduction</a></li>
+<li><a href="#modelingPathPlanning">Path Planning</a>
+  <ul class="nav nav-stacked">
+	<li><a href="#modelingCreatingPath">Creating a Path</a></li>
+	<li><a href="#modelingSmoothingPath">Smoothing a Path</a></li>
+	<li><a href="#modelingSavingLoadingPaths">Saving and Loading Paths</a></li>
+  </ul>                
+</li>
+<li><a href="#modelingSegmentation">Segmentation</a>
+  <ul class="nav nav-stacked">
+	<li><a href="#modelingUsingGroups">Using Groups</a></li>
+	<li><a href="#modelingVisualizingSegmentations">Visualizing <br>Segmentations</a></li>
+	<li><a href="#modelingThresholding">Using Thresholding <br>to Define a Countour</a></li>
+	<li><a href="#modelingLevelSet">Using Level Sets <br>to Define a Countour</a></li>
+	<li><a href="#modelingManual">Segmenting an Image <br>Manually</a></li>
+	<li><a href="#modelingAnalytic">Fitting an Analytic Shape <br>to the Image</a></li>
+	<li><a href="#modelingCopyingPastingContours">Copying and Pasting <br>using Contours</a></li>
+	<li><a href="#modelingModifyingContours">Modifying Contours</a></li>
+	<li><a href="#modelingAddingToGroup">Adding Contours to a Group</a></li>
+	<li><a href="#modelingDisplayingContours3D">Displaying Contours <br>in the 3D Window</a></li>
+	<li><a href="#modelingBatch">Creating and Modifying <br>Segmentations <br>in Batches</a></li>
+	<li><a href="#modelingPuttingTogether">Putting It All Together</a></li>
+	<li><a href="#modelingSavingLoadingGroups">Saving and Loading Groups</a></li>
+  </ul>                
+</li>
+<li><a href="#modelingSolidModeling">Creating a Solid Model <br>from 2-D Segmentation</a>
+  <ul class="nav nav-stacked">
+	<li><a href="#modelingCreatingModels">Using Groups of Segmentation <br>to Create Solid Models</a></li>
+	<li><a href="#modelingCreatingBranch">Creating a Branch Vessel</a></li>
+	<li><a href="#modelingJoining">Joining Vessels Together <br>to Create a Model</a></li>
+	<li><a href="#modelingBlending">Blending the Junction of <br>Two Vessels</a></li>
+  </ul>                
+</li>
+<li><a href="#modelingSolidModelingPolyData">Creating a Solid Model <br>with PolyData</a>
+  <ul class="nav nav-stacked">
+	<li><a href="#modelingCreatingModelsPolyData">Using Groups of Segmentation <br>to Create Solid Models</a></li>
+	<li><a href="#modelingPolyDataFaces">Creating and Naming <br>PolyData Model Faces</a></li>
+	<li><a href="#modelingEditingPolyData">Editing PolyData Models</a></li>
+	<li><a href="#modelingCenterlinesPolyData">Extracting Centerlines</a></li>
+  </ul>                
+</li>
+
+
+<h3>Download</h3>
+<a href="documentation/modeling/files/sample_data.zip">Sample Data</a>
+</ul>
+
+
+
+
+
+        
+    </nav>
+    
+    <!--Main Content -->
+    <div class="col-xs-10 col-sm-10 col-md-9 col-lg-9" id="manualContent">
+
+      <!-- ACTUAL CONTENT -->
+
+
+
+
+
+        <div class="manModelGuide"><section id="modelingIntro" class="group"><h1>Creating Geometric Models from Medical Imaging Data</h1>
+
+<p>Our eye is able to distinguish different objects within an image, but to the computer, the image is just a group of numbers to be displayed in a grid format.  It is not able to distinguish what parts of the image correspond to a specific object.  </p>
+
+<p>One way to describe an object within a computing environment is with geometric solid models. 
+SimVascular is one system that allows users to generate geometric models from medical imaging data. The first step is to segment the medical imaging data and identify what parts of the image describe the object of interest. While 3D segmentation methods are being developed, this document only details using SimVascular with the 2D segmentation method.  The information from the segmentations is then transformed into a solid model.</p>
+
+<p>The figure that follows describes the process in more detail.  For the segmentation step, paths along the vessels of interest need to be specified first (See <a href="#modelingPathPlanning">Path Planning</a>). 2D segmentations are then generated along each of the paths (See <a href="#modelingSegmentation">Segmentation</a>) These segmentations can then be lofted together to create a solid model. A separate solid model is created for each vessel, and these are all unioned together to create the final model. The last step is to blend the vessel junctions so that they are smoother (see <a href="#modelingCreatingSolidModel">Creating a Solid Model from 2-D Segmentations</a>).</p>
+
+<figure>
+  <img class="svImg svImgLg"  src="documentation/modeling/imgs/1.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+</section>
+<section id="modelingPathPlanning" class="group"><h2>Path Planning</h2>
+
+<p><a href="#modelingCreatingPath">Section: Creating a path</a> shows you how to generate a path. <a href="#modelingSmoothingPath">Section: Smoothing a path</a> shows you how to smooth a path.  Lastly, <a href="#modelingSavingLoadingPaths">Section Saving and loading paths</a>, will explain how to save your work, and then load it again after restarting SimVascular.</p>
+
+<p>Some tips to keep in mind as you are constructing paths.</p>
+
+<ol>
+<li><p>The paths you create determine where you will be able to perform segmentations.  Make sure your paths cover the entire distance of the vessel that you’re interested in modeling. In general, it is a good idea to make your paths as long as possible. It is much easier to make a path a little longer in both directions than to try to “add on” to a path later.</p></li>
+<li><p>The paths are also important in determining how individual vessels can be joined together.  It’s generally helpful if there is some overlap in the paths.  This will ensure that the inlet of the branch vessel will fit entirely inside of the main vessel.</p></li>
+<li><p>Lastly, it’s easier if the paths pass near the center of the vessel lumens.  This makes it easier for the segmentation part of the process.</p></li>
+</ol>
+
+<figure>
+  <img class="svImg svImgMd"  src="documentation/modeling/imgs/path_planning/1.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+</section>
+<section id="modelingCreatingPath" class="subgroup"><h3>Creating a Path</h3>
+
+<p>The goal of this exercise is to create a path for the abdominal aorta and the left common and external iliac.  As you will see, you need to create a path for each vessel of interest.</p>
+
+<p>To create vessel paths, click on the &ldquo;Paths&rdquo; tab in the Functional Toolbox (bottom right corner) window.  </p>
+
+<p>The path frame consists of an expandable list of all the paths currently in memory (which is initially blank, i.e. there are no entries under &ldquo;All Paths&rdquo;).  In addition, there are four basic notebook tabs (General, Manual, Automatic, and Smooth) which will be described below.  We will first describe creating a path, and then go over loading / saving paths to disk.  </p>
+
+<p>In <strong>SimVascular</strong>, a path is an ordered set of points defining a &ldquo;vessel.&rdquo;  Each path consists of four specific items:</p>
+
+<ol>
+<li><p>The “Path ID” field specifies an identification number (an integer) for the path.  For this example, enter the value “100” in the “Path ID.”</p></li>
+<li><p>The “Path Name” field associates a name with the path you are about to create.  The path name CANNOT have any spaces.  For this example, enter the name “aorta” in the “Path Name”.</p></li>
+<li><p>The “Num. Of Spline Pts” specifies the total number of points to include in the path. It’s important to choose an appropriate number of spline points since they determine the maximum number of 2D segmentations of the vessel.  If you only have 10 points in your path, then you will only be able to generate 10 segmentations along your vessel.  We typically use 100 for smaller vessels and 300 to 500 for larger vessels.  The default is 100 points. For this example, enter the value “300” in the “Num. of Spline Pts” field. </p></li>
+<li><p>A set of &ldquo;hand-picked&rdquo; points which will be picked semi-automatically or manually selected by the user.  </p></li>
+</ol>
+
+<p><font color="red"><strong>HELPFUL HINT:</strong> </font>  Once you define “Num of Spline Pts,” you cannot change this value for the path that you are creating; you can however change the “Path ID” and “Path Name&quot;</p>
+
+<p>After you have entered “100” for the Path ID, “aorta” for the Path Name, and “300” for Num. of Spline Pts, click on the &ldquo;Create New Path&rdquo; button.</p>
+
+<p>After you click the &ldquo;Create New Path&rdquo; button, you should see a &ldquo;+&rdquo; appear beside the text &ldquo;All Paths&rdquo;.  Click on the &ldquo;+&rdquo; will expand the list of all paths, and you should see something similar to the following window:</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/path_planning/creating_path/1.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>Additional functionality available under “Paths → General” tab: </p>
+
+<p>“Delete Selected Paths” button:  This allows the user to delete any unwanted vessel paths.  Select the desired path(s) to delete in the Paths treeview window in the top frame, then click this button.  This operation cannot be undone.  To select multiple paths in the treeview, use the shift key when selecting a range of paths and the “Ctrl” key to select paths one-by-one.</p>
+
+<p><font color="blue"><strong>GETTING AN ERROR:</strong></font> When you have multiple paths in the treeview window, if you forget to select the path that you want to delete and instead you have “All Paths” highlighted, you will get the error message, “Error: can’t read “mapping”: no such variable.”</p>
+
+<p>“Renumber Path” button:  This button enables the user to change the unique path ID for a selected path in the path treeview.  You may do this for example if you create multiple intermediate versions of a vessel path and decide to delete the unwanted paths and want to number your final paths sequentially.  You should renumber paths BEFORE doing segmentations.  Note that this is provided as a convenience for the user, but is not necessary for the software as the value of the integer path ID does not matter; it just needs to be unique.</p>
+
+<p>“Update Current” button:  When you enter new values for Path Name or Num. of Spline Pts in the entry widgets the value is NOT used by the software until you either explicitly press return when entering the new values or click on the “Update Current” button.</p>
+
+<p><font color="red"><strong>HELPFUL HINT:</strong> </font>  When you are changing the Path Name, make sure that you see the correct Path ID for the path that you are trying to change in the “Path ID:” widget. When you select a path in the treeview window, this gets updated automatically. </p>
+
+<p>“Update Spline” button: This button regenerates the spline associated with the points in the selected path in the path treeview window.  Note that the GUI typically automatically generates splines as paths are updated, but certain error conditions can cause splines not to be properly generated.  This button can be used to attempt to fix the problem of a missing spline.</p>
+
+<p>Under the “Paths” tab, click on the “Manual” tab:</p>
+
+<figure>
+  <img class="svImg svImgXl" src="documentation/modeling/imgs/path_planning/creating_path/2.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>There are five basic ways to select points to manually add to the path.  The technique you use will be a combination of preference and your specific application.  You can seamlessly switch between techniques, so using a combination for a particular path is common.  The major techniques consist of:</p>
+
+<ol>
+<li> Using a 3-D cursor (&ldquo;cross hair&rdquo;) to interactively select a point.<br></li>
+<li> Using the path planning scale bars and the &ldquo;cross hair&rdquo; to select a point.</li>
+<li> Using an image slice plane and pressing the &ldquo;t&rdquo; key.</li>
+<li> Using an interactive 3-D spline to select a path.</li>
+<li> Using an interactive 3-D spline with image reslices to select a path.</li>
+</ol>
+
+<p>As you will see below, to use the 3-D interactive splines requires that you use one of the first two techniques to select at least two points first.  </p>
+
+<p>Before we begin, you should familiarize yourself with the options found under the “Paths → Manual” Tab.</p>
+
+<p><strong>Display Options:</strong></p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/path_planning/creating_path/3.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>“Show Cursor”:  This toggles the display of the 3-D cursor (“cross-hair”) in the 3D display window.  Clicking on this option should result in a white crosshair to appear in a corner of your blue volumetric wireframe box. This cursor is controlled by the scrollbars in the “Paths → Manual” frame.   It can also be interactively moved by positioning the mouse cursor over the cross-hair and clicking on it.  The cross-hair will turn green while you interactively move it.  See “Attach Image Axis” and “Fix Axis” for additional functionality related to the 3-D cursor.</p>
+
+<p>“Show Piecewise Linear Path”:  This toggles the display of a piecewise linear path through the points in the current path.  Note that if the path has less than two points, nothing is displayed.</p>
+
+<p>“Show Points”:  This displays boxes at each point location.  The boxes can be interactively selected by pressing the “p” while the mouse cursor is over a given box in the 3D display window.  When the box is selected, it will blink briefly and then the point will be highlighted in the path treeview frame.</p>
+
+<p>“Show Spline”:  This toggles the display of a cubic spline through the points of the current path.  Note that if the path has less than two points, nothing is displayed.  If the path has more than two points and the spline still isn’t displayed, there may be a problem with the path.  Try selecting the “Path → General” tab, pressing the “Update Spline” button, and then toggle the display of the spline off and then back on.</p>
+
+<p>“Show All Paths (linear)”:  This displays all paths currently in memory and listed in the path viewframe using piecewise linear curves.</p>
+
+<p>“Show All Paths (splines)”:  This displays all paths currently in memory and listed in the path viewframe as splines.</p>
+
+<p><strong>Attaching an Image Axis:</strong></p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/path_planning/creating_path/4.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>“R”, “A”, “S”:  Toggling on a coordinate direction under the “Attach Image Axis” drop-down menu “connects” the path planning scale bars with the volume visualization primary slice planes.  This means that when you move one of the scale bars in the path planning window, the volume visualization scale bar is automatically updated.  This allows the user to turn on a slice plane, e.g. the axial slice (“S”), and then control the slice interactively using the 3-D cursor or the path planning scale bars.  This technique is used extensively when selecting points manually.  Many users find it easier to pick points in 3-D space using an image slice and the 3-D cursor in contrast to using a 3-D visualization display such as a point cloud or volume rendered image.  Note that you must manually turn on the image slice under the “Volume Properties” tab in the Display Options pane (i.e. click the checkbox), attaching the image axis will not have a visible effect in the 3-D Window even though the scale bars are being updated. </p>
+
+<p><font color="red"><strong>HELPFUL HINT:</strong> </font>  Don’t complete hide Display Options pane, otherwise the volume visualization scale bars in the Volume Properties tab can’t be automatically updated.  </p>
+
+<p><strong>Fixing an Axis:</strong></p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/path_planning/creating_path/5.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>“R”, “A”, “S”:  Interactively selecting points in 3-D space using a 2-D display (i.e. monitor) can be challenging.  When you select the 3-D cursor (see above) and interactively move inside of the window, the program has to “guess” what 3-D motion you want given a 2-D input (left/right and up/down mouse motion).  “Fixing” an axis means that motion is not permitted for the 3-D cursor when the user interactively selects it.  For example, if you toggle on (i.e. fix) the “R” axis, when you interactively move the 3-D cursor in the 3-D window using the mouse, the motion is “constrained” to only occur in the “A/P” and “S/I” directions.  If you are displaying the 2-D image slice at the time and trying to select a point found on the image slice, you will find fixing the “R” axis leads an intuitive motion of the 3-D cursor.  Note that you can still control the “R” direction in this example using the “L/R” scale bar in the “Path → Manual” frame.  Thus a user might position the “R” slice using the scale bar, select a point using the 3-D cursor, and repeat this process to select a series of points for a vessel.</p>
+
+<p>“in-plane only”:  This option under “Fix Axis” ONLY applies when the user is using the interactive spline with image reslices discussed below.  Selecting this function approximately bounds the 3-D cursor motion in the plane of the image reslice.  This typically leads to an “intuitive” motion when interactively repositioning points.</p>
+
+<p>NOTE:  If you are using the interactive spline and image reslice, all of the Fix Axis toggle options can affect your 3-D cursor motion.  You should probably de-select the “R” “A” “S” options above when fixing the image reslice in plane.    </p>
+
+<p><strong>Cursor Increment:</strong></p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/path_planning/creating_path/6.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>“one pixel”, ‘half pixel”, “other” (fraction of a pixel):  When you move the path scale bars or the 3-D cursor, by default the cursor moves in whole pixel increments (i.e. by “one pixel”).  This can lead to a “jerky” motion.  By clicking the “half pixel” button, the cursor will move in half-pixel increments, leading to a smoother motion of the cursor.  You can also move in fractions of a pixel for an even smoother motion by changing the value found in the “other:” entry widget and hit RETURN.  It is not recommended to change this value to be less than “0.1”.</p>
+
+<p>Now we are ready to start building a path! First, we need to decide where we should start the path. In general, it is better to make your path as long as possible, within reason. This is because it much easier to adjust an existing long path, than to try to “add on” to a path that is too short.</p>
+
+<p>Let’s pick a point in the supra-celiac aorta.  Remember that you can display the point cloud or use another visualization technique to re-familiarize yourself with the data.  If you haven’t done so already, display the white 3-D path planning cursor (“cross-hairs”) by using selecting “Show Cursor” from “Paths → Manual → Display Options”:</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/path_planning/creating_path/7.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>If you haven’t modified the location the values of the “Paths → Manual” scale bars, the 3-D cursor will appear in the lower left corner of the blue wireframe 3D box. You should now be able to click and “grab” the 3-D cursor in the 3-D graphics window.  Position the mouse pointer near the intersection of the three white lines making up the 3-D cross-hair.  You can then left mouse click on the cross-hair and drag the cursor around the 3-D window. </p>
+
+<p>In this example, we are going to use the axial image slice (“S/I”) to select a point in the supra-celiac aorta.  Turn on the axial slice under the “Volume Properties” tab in the Display Options pane (check the box next to “I”).  Now we will attach the path plan scale bar to the Volume Properties scale bar.  Select “Attach Image Axis” under “Paths → Manual” in the Functional Toolbox pane and check “S”.</p>
+
+<p>Now you will see that if you move the 3-D cursor in the 3-D Graphics Window, the 3-D cursor automatically updates the scale bar in the Volume Visualization window keeping the cursor “snapped” to the image slice.  Make sure your “Cursor Increment” set to “one pixel”, and then using the 3-D cursor or the path scale bars, select position:</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;L/R:  228   A/P: 13 S/I:    475</p>
+
+<p>Then click “Add Point to End of Path” button to add the point to the “aorta”. The point should appear under “aorta” in the path treeview window (shown highlighted in blue in the following picture).</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/path_planning/creating_path/8.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p><font color="red"><strong>HELPFUL HINT:</strong> </font>  It is generally a good practice to create paths that extend beyond where you may plan to create a model.  The reason for this is that the path is not explicitly included in the final geometric model, and you will see later that it is difficult to change a path AFTER you have started creating segmentations.</p>
+
+<p>Keep the “S” image axis attached, and zoom in and rotate the image so that you are looking at the inferior/superior plane head-on. You will be looking at a cross-section of the aorta. Move the I/S slider bar under the “Paths” tab in the Functional Toolbox pane from 475 to 450. Move your mouse cursor to the center of the aorta and hit “t” on your keyboard. A point corresponding to the spatial location should appear underneath the previous point that you picked (shown highlighted in blue in the following picture). Now you should have 2 points listed underneath the heading “aorta” in the treeview window:</p>
+
+<p><font color="red"><strong>HELPFUL HINT:</strong> </font>  If you accidently put a point in an undesired location and would like to delete a point, you can skip to later in this exercise to learn more about, “Deleting points in your path:”</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/path_planning/creating_path/9.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>Continue to move down the aorta inferiorly (from “S” to “I”) in increments of 25-50 using EITHER the slider bars associated with the “Volume Properties” tab in the Display Options pane OR the slider bars associated with the “Path → Manual” tab in the Functional Toolbox pane, adding points to your path by centering your mouse inside the aorta and typing “t” on your keyboard. If your S/I slider bar associated with the “Volume Properties” tab is not moving as you move down the path, then your “S” image axis is probably not attached (“Attach Image Axis → S”) and the points you choose will not necessarily be in the correct 3D location. </p>
+
+<p>When you reach the bifurcation (the aorta splits into the two iliac arteries), continue your path down the LEFT iliac artery:</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/path_planning/creating_path/10.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>Once you have finished building your path down as far as possible (you should be able to get to around slider position 6 before things get a harder to see – remember that you can change the window level in the 3D display window by clicking on the image slice and using your up/down and right/left arrow keys on the keyboard), visualize the current path by clicking on the “Display Options” drop-down menu under the “Paths” tab and check “Show Points” and “Show Spline”. The points you have chosen will appear as purple boxes, and the spline should show as a red line:</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/path_planning/creating_path/11.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>You can quickly see how well your path stays within the vessel by:</p>
+
+<ol>
+<li> Sliding through the “S/I” slider bar under the “Volume Properties” tab</li>
+</ol>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/path_planning/creating_path/12.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<ol>
+<li> Setting the “Threshold Range” min value to “110” and displaying the “point cloud” under “Visualization Options”</li>
+</ol>
+
+<figure>
+  <img class="svImg svImgXl" src="documentation/modeling/imgs/path_planning/creating_path/13.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p><font color="red"><strong>HELPFUL HINT:</strong> </font>  When creating your paths, the 3D point clouds are a helpful guide in selecting your points.  However, they are highly dependent on the threshold values, so the slice planes are a better way to check if your path is inside the vessels of interest.</p>
+
+<p>Here are some ways you can modify your path so that it is more true to the image data:</p>
+
+<p><strong>Deleting points in your path:</strong></p>
+
+<p>Select the pathpoint you want to delete by going to your 3D display window, placing your mouse arrow over the purple box representing the point you would like to delete, and typing “p” on your keyboard. Typing “p” when your mouse arrow is over a particular object “picks” that object. Anything in the window can be “picked” including the path, image slices, and the point cloud. You will know when something is selected when it becomes highlighted in yellow. You should also notice that when you have “picked” a pathpoint, that point’s coordinates will become highlighted in blue in your path treeview display. To delete the point, select the “Additional Options” drop-down menu under the “Path → Manual” tab and select “Delete currently selected point”. The pathpoint should disappear and your spline should regenerate based upon the points that are remaining.</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/path_planning/creating_path/14.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p><strong>Copying and pasting a point in your path:</strong></p>
+
+<p>First select the point that you would like to copy using the instructions described in the section above, “Deleting points in your path”. Once your point is highlighted, click on the “Additional Options” drop-down menu under the “Path → Manual” tab and select “Copy point”. Next, highlight the point where you would like the previously selected point to be copied to (by either “picking” it in the 3D display window or clicking on its coordinates in the path treeview display window). Again select the “Additional Options” drop-down menu and select either “Paste point above selection” or “Paste point below selection”. Your copied point should appear in the path treeview display window and your path spline should regenerate based upon the addition of the new pathpoint.</p>
+
+<p><strong>Interactively adjusting your path in three-space:</strong></p>
+
+<p>First, re-set your display options by turning OFF (“un-checking”) “Show Points” and “Show Spline” in the “Display Options” drop-down menu.</p>
+
+<p>Next, select the “spline” radiobutton for “Interactor” under the “Manual” tab. A yellow path with grey spheres should appear as a representation of your path. These spheres are “handles” that you can grab and move around in the 3D display window. In the “Interactor” widget, change “num handles” to 50 and hit RETURN. The number of grey spheres along your path should now be 50.</p>
+
+<p>Using point cloud or 2D image slice visualization techniques under the “Volume Properties” tab in the Display Options pane, modify your path by clicking on a grey sphere and dragging it to a desired location. You will know that you have “grabbed” the handle when it turns red. You will see the whole yellow path change along with your movements. Play around with this function, grabbing different handles and moving them around, until you are satisfied with the path you have created. You may need to “fly around” in the 3D display window to ensure that you are truly placing the handles where you think you are.</p>
+
+<p>Once you are happy with your path, click on the “Update Path” button in the “Interactor” widget. Your old path will now be replaced by the new path you just adjusted.</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/path_planning/creating_path/15.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p><font color="orange"><strong>WARNING:</strong></font> If you don’t click “Update Path” and then save the path, none of the handle adjustments will be saved! When you click “Update Path” you will notice that the numbers in the path treeview display will be updated.</p>
+</section>
+<section id="modelingSmoothingPath" class="subgroup"><h3>Smoothing a Path</h3>
+
+<p>If you made your path by moving around the grey handles, then the path will automatically be smoothed and you can skip this exercise. However, if you made your path by hand-selecting each point and then did not adjust the grey handles, or if your resultant path appears jagged, you may want to smooth your path.  <strong>SimVascular</strong> provides several parameters for smoothing the path.</p>
+
+<p>Start by re-setting your display options under the “Manual” tab by turning OFF (“un-checking”) “Show Points” and “Show Spline” in the “Display Options” drop-down menu and selecting the “none” radiobutton in the “Interactor” widget. Your 3D display window should now be cleared.</p>
+
+<p>Under the “Path” tab, click on the “Smooth” tab.  </p>
+
+<p>Under “Smoothing Options”, set the following parameters:</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;Subsample every 1 point<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Create/Replace Path ID: 101<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Keep Point if Threshold fails (select)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Use Fourier Smoothing (select)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Number of Modes: 15 </p>
+
+<p>Now click on the “Smooth Current Path” button. Go back to the “Manual” tab and select “Show Spline” in the “Display Options” drop-down menu. </p>
+
+<p><font color="red"><strong>HELPFUL HINT:</strong> </font> If you do not see a spline when you click on path “101” in the treeview window after selecting “Show Spline” that means that a spline was not created for the smoothed path (This is a bug in the software). To create a spline for your smoothed path first select path “101” in the review window. Under the “Manual” tab, across from “Interactor”, change “num handles to “20” by typing in “20” in the entry widget. Next to “Interactor:” click on the “spline” radio button. A yellow path with a couple transparent bubbles on it called “handles” will appear in the 3D window. You can generally move the handles but for now we will leave them as is and click the “Update Path” button next to the “handles” entry widget. Now check the “none” radio button next to “Interactor;” NOW if you select “Show Spline,” you should see a spline for path “101.”</p>
+
+<p>You should see a much smoother path that better represents the medial axis of the vessel. Furthermore, you will notice that this smoothed path is saved under a new ID number in your path treeview display window. You should now see “aorta   (ID: 101) (Number of Spline Pts: 300)”.  Note that smoothing occurs on the current working path.  (See the section on “Use Fourier Smoothing” below for an example of how to select the current working path.)  Depending on how many points you had in your original path, you may find that the smoothing may make the new path deviate from the vessel! This is why smoothing should be used with caution.</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/path_planning/smoothing_path/1.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>Let’s examine these parameters more closely.</p>
+
+<p>“Subsample every ____ points”: This parameter specifies which points will be used in the smoothing.  If you enter “5,” then only every 5th point will be used.</p>
+
+<p>“Create/Replace Path ID”: The resulting smoothed path will be saved under this ID number (integers only).  If you specify a path ID that has already been used, then that original path will be overwritten so BE CAREFUL!  In this example, our original path had a path ID of 100 and the smoothed path was written to a path ID of 101.</p>
+
+<p>“Use Fourier Smoothing”: Fourier smoothing generates a path using only a subset of the modes that describe your original path.  High modes correspond to very sharp changes in your path, while low modes describe the smoother parts of your path.  If you turn on the Fourier smoothing, you need to specify the “Number of Modes” to keep.  The fewer modes your path has, the smoother it will be.</p>
+
+<p>Try this exercise.  Go back to the “Smooth” tab under the “Paths” tab. If path “aorta (ID:100)” is not already selected, choose it by clicking on it in the path treeview display window. Type in the following options:</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;Subsample every 2 points<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Create/Replace Path ID: 102<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Keep Point if Threshold fails (select)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Use Fourier Smoothing (select)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Number of Modes: 5 </p>
+
+<p>Click on “Smooth Current Path”. You may need to go back to the “Manual” tab and toggle “Show Spline” under the “Display Options” drop-down menu off and on before you see your new path (ID: 102). What happened when you changed the number of Fourier modes to 5? You should see a very smooth line with few to no kinks. Does this ultra-smooth path still fit inside the boundaries of the vessel?</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/path_planning/smoothing_path/2.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p><font color="red"><strong>HELPFUL HINT:</strong> </font>   Smoothing occurs on whatever path is selected as the current working path.  Make sure you’ve selected the right Path ID for your current working path!</p>
+</section>
+<section id="modelingSavingLoadingPaths" class="subgroup"><h3>Saving and Loading Paths</h3>
+
+<p><strong>Saving Paths:</strong></p>
+
+<p>That path took a while to create and you would probably prefer not to have to re-do it, so make sure you SAVE your work as you go along!</p>
+
+<p>In the Menu Bar (top left), click on the “Save Paths” button.</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/path_planning/saving_loading_paths/1.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>The following window should appear:</p>
+
+<figure>
+  <img class="svImg svImgMd"  src="documentation/modeling/imgs/path_planning/saving_loading_paths/2.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>Make sure you are in the correct project directory. Enter the desired name for the file under “File name:” with the ending “.paths” and click on the “Save” button.  All the paths since opening <strong>SimVascular</strong> that you’ve created will be saved into this one file.  Note that if you choose a filename that already exists, the file will be replaced and the original file will be deleted.  If you select an existing filename, you will be prompted with a dialog box asking if you wish to cancel the save prior to proceeding.</p>
+
+<p><font color="orange"><strong>WARNING:</strong></font> To avoid overwriting your old paths, if you close and then restart <strong>SimVascular</strong>, be sure to load your paths file before you save a new path to this paths file.</p>
+
+<p><strong>Loading Paths:</strong></p>
+
+<p>If you need to read in a file containing path information, simply go to the File Options pane (top left), and click on the “Load Paths” button. Select the path file you would like to load, and click on the “Open” button.</p>
+
+<p>Paths are not automatically created with the .paths extension, so if you haven’t named your path with a “.paths” extension, you will need to look under “Files of Type → All Types” to load in a previously created path. Note that all paths currently in memory will be deleted and the only paths in memory after loading paths from a file will be those explicitly contained in the specified file. </p>
+</section>
+<section id="modelingSegmentation" class="group"><h2>Segmentation</h2>
+
+<p>Extensive research has been conducted in the field of image segmentation, and as a result, many different techniques have been proposed.  The goal of all these techniques is to identify objects or structures within an image in an automated fashion.  For our purposes, we want to find the vessel lumen.</p>
+
+<p>Currently, only 2D segmentation methods have been incorporated into <strong>SimVascular</strong>.  That means that the segmentations are performed in a plane.  So if we want to create a 3D model from our 3D imaging data, we generate a set of 2D segmentations along a given path (See <a href="#modelingPathPlanning">Path Planning</a>).  These 2D segmentations can be stitched together later to create a 3D model.</p>
+
+<p>We use groups to organize these 2D segmentations, and in <a href="#modelingUsingGroups">Section: Using Groups</a>, we will show you how to work with groups. In <a href="modelingVisualizingSegmentations">Section: Visualizing Segmentations</a>, you will learn about different ways to visualize data in the planes used for the 2D segmentations.  This will be important because ultimately, you, the user, must determine the acceptability of a given segmentation.  Look at the image below.  Is the segmentation, show in blue, good or bad?  You really can’t answer that question without more information about the object.  The semi-automated segmentation methods provided within <strong>SimVascular</strong> save you the work of generating the segmented contours, but you must decide if the segmentations are suitable for your purposes. </p>
+
+<figure>
+  <img class="svImg svImgSm"  src="documentation/modeling/imgs/segmentation/1.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>The following sections teach you about the different techniques available for producing a 2D contour.  One basic segmentation technique available in SimVascular is thresholding, which uses the image intensities to define a shape (<a href="#modelingThresholding">Using Thresholding to Define a Contour</a>).  The level set method uses both image intensity values and geometric constraints to generate a segmentation (<a href="#modelingLevelSet">Using Level Sets to Define a Contour</a>). You can draw the segmentation by hand (<a href="#modelingManual">Segmenting an Image Manually</a>), and in some cases, you may just want to approximate the object with an analytic shape, such as a circle or an ellipse (<a href="#modelingAnalytic">Fitting an Analytic Shape to the Image</a>).  Or you may have to copy and paste a shape (<a href="#modelingCopyingPastingContours"> Copying and Pasting Contours</a>). The last one teaches you how to modify the contour, if needed (<a href="#modelingModifyingContours">Modifying Contours</a>).</p>
+
+<p>In the end, you will be using a level-set technique to build the abdominal aorta, and you will be drawing segmentations by hand and then using fit-circle to build the branch vessels. Keep this in mind as you work through the exercises. </p>
+</section>
+<section id="modelingUsingGroups" class="subgroup"><h3>Using Groups</h3>
+
+<p>Groups are used to organize the 2D segmentations or contours that you create.  You want to have a different group for each vessel that you are creating.  In addition, you might only use a subset of the 2D contours for producing the solid model of the vessel, so for future reference, it’s helpful to save that subset of contours to a new group.</p>
+
+<p>In the Functional Toolbox pane (bottom right), click on the “2D Segmentation” tab. Under the “2D Segmentation” tab, you should see two more tabs: “General” and “Create Vessel”.</p>
+
+<p>Let’s start by creating a group:</p>
+
+<p>Under the “General” tab, type in <em>aorta</em> in the “Group Name:” field. Then click the button “Create New Group”. In the group treeview display window, a group with the name “aorta” should appear (highlighted in blue):</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/using_groups/1.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+</section>
+<section id="modelingVisualizingSegmentations" class="subgroup"><h3>Visualizing Segmentations</h3>
+
+<p><strong>3D Display Window:</strong></p>
+
+<p>The 3D display window provides certain visualization features that are helpful when generating the 2D segmentations. </p>
+
+<p>Since we are going to make a solid model of the aorta and iliac artery based on the path we created in the previous exercises, we will first select the most accurate of our paths as the working path. To do this, go to the “Create Vessel” tab under the “Solids” tab and click on the “Select Current Path” button. A new window will appear, asking you which path you would like to use to create this solid model. In our case, we will pick aorta (ID:101):</p>
+
+<p>GETTING AN ERROR: If you pick a path created under the “Smooth” tab that did not have a spline generated for it then you will the error message, “Error: can’t read “items(p)”:no such element in array.” You can refer back to, “Exercise 2.1.2:  Smoothing a path” to generate a spline for the path that you’d like to use to create the solid model.  </p>
+
+<figure>
+  <img class="svImg svImgXs"  src="documentation/modeling/imgs/segmentation/visualizing_segmentations/1.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>When the path has been selected by double-clicking, the “Select Path” window will disappear, and you will see the name of the path you have just selected beside the words “Current Path”:</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/visualizing_segmentations/2.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>In order to display the current path, go to “Display Options” at the bottom of your 3D display window, select “Branch Controls” and then click on “Show Path”:</p>
+
+<figure>
+  <img class="svImg svImgXl" src="documentation/modeling/imgs/segmentation/visualizing_segmentations/3.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>Now we will turn on the 2D plane which you will use for your segmentations.  We call this plane the “intensity probe”, and it is image data that is reconstructed perpendicular to your path.  In order to display the current path, go to “Display Options” at the bottom of your 3D display window, select “Branch Controls” and then click on “Intensity Probe”. You will see a 2D slice plane (outlined in green) appear in your 3D display window. You can move the probe along the path by using the slider bar next to “Current Position” in the “Create Vessel” tab:</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/visualizing_segmentations/4.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p><strong>2D Intensity and Potential Windows</strong>:</p>
+
+<p>In the taskbar below your 3D display window, click on “3-D Window” and select “Show 3-D &amp; 2-D Reslice”:</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/visualizing_segmentations/5.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>You should now notice that your bottom two display windows say “2-D Intensity” (left) and “2-D Potential” (right). You could’ve also gotten to these windows by clicking and dragging down the horizontal pane borders in between the 3D display window and the 2D display windows.</p>
+
+<p>The 2D display windows give you two additional ways to view the data as you perform the segmentations:</p>
+
+<ol>
+<li><p>The 2-D Reslice Intensity Window displays the intensities of the slice plane that is perpendicular to the path.  This is the same image as that displayed in the intensity probe. To display the image in this window, click on the “Display Options” drop-down menu in this 2D Intensity window and select “Show Window”.</p></li>
+<li><p>The 2-D Reslice Potential Window shows the magnitude of the image intensity gradients, again in the slice plane perpendicular to the path.  This means that large changes in intensity values, such as that at the edge of vessels, are very bright in this view, and locations with small changes in intensity values, such as in the vessel lumen, are dark, as shown below.  To display the image in this window, click on the “Display Options” drop-down menu in this 2D Intensity window and select “Show Window”:</p></li>
+</ol>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/visualizing_segmentations/6.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>To query the actual intensity value at a given pixel, select the “Display Options” drop-down menu in the “2-D Intensity” window and click on “Views → Parallel Projection”. The 2-D windows should disappear and then reappear.</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/visualizing_segmentations/7.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>Now, when you move the cursor over a pixel in the “2-D Intensity” window and click the left-mouse button, the value of pixel under the cursor (and the magnitude of the gradient at the given location) will appear as text in the graphics window:</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/visualizing_segmentations/8.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>You may need to resize the window to see the entire display at the bottom. </p>
+</section>
+<section id="modelingThresholding" class="subgroup"><h3>Using Thresholding to Define a Contour</h3>
+
+<p>This exercise assumes that you have loaded in the path that most accurately represents your vessel according to the exercises above. This path name should appear next to “Current Path” in the “Create Vessel” tab.</p>
+
+<p>Underneath the “2D Segmentation → Create Vessel” tabs, select the “Threshold” tab:</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/thresholding/1.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p><strong>Threshold Intensity:</strong></p>
+
+<p>To segment the image based on intensity, click on the “threshold intensity” radio button. For the purposes of this example, place your slider bar next to “Current Position” on “0”. Enter “90” in the field next to “Threshold Value”, and then click on the “Segment Current Position” button.</p>
+
+<p>To visualize the segmentation(s) you have just created, click on the “Display Options” drop-down menu in the 2-D Intensity window and select “Threshold → threshold”. One or more blue lines outlining your image data should appear:</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/thresholding/2.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p><strong>Selected Threshold:</strong></p>
+
+<p>If you have a number of enclosures displayed in your 2D Intensity window, you may be wondering how SimVascular knows which one is the one you want. The threshold contour that contains the specified center will be the one that is considered. Your current center should be set at “X: 0”, “Y: 0” next to the “Center:” widget under the “Threshold” tab. That should be the dead center of the 2D image. Therefore, your “selected threshold” will be the threshold contour that contains this centerpoint.  Changing this centerpoint will change the contour that is selected. To view the selected contour, go to the “Display Options” menu in the 2D Intensity window and select “Threshold → selected threshold contour”. The selected threshold will then be outlined by a heavier blue line:</p>
+
+<figure>
+  <img class="svImg svImgXl" src="documentation/modeling/imgs/segmentation/thresholding/3.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>If you want to change your center, it is helpful to visualize it in space. Select the “Display Options” menu in the 2D Intensity window and select “Threshold → initialization sphere”. A green sphere will appear where your current center is located. If you don’t see a sphere or your sphere is merely a faint outline, click your mouse arrow in the 2D Intensity window and type “r” on the keyboard. This resizes objects to be properly displayed:</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/thresholding/4.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>Play around with changing the Threshold Value to get what you think is a good representation of the vessel lumen. For example, start with a threshold of 60 and then try a threshold 70, 80…etc. so you can see how the blue contour changes if you change the threshold value. </p>
+</section>
+<section id="modelingLevelSet" class="subgroup"><h2>Using Level Sets to Define a Contour</h2>
+
+<p>Thresholding is very dependent on the user-specified parameters and does not always result in a closed contour. An alternate method that’s been implemented within <strong>SimVascular</strong> is the level set method. <strong>SimVascular</strong> utilizes a specialized level set method built specifically for 2D vascular modeling. These level sets use to intensity image data and geometric constraints to produce a smooth contour of the vascular wall in 2D cross sections. <strong>SimVascular</strong>&rsquo;s level set method is initialized with a seed and then performs segmentation in two stages.  Details of these stages are outlined below.</p>
+
+<p>Note for all settings.  Hitting <strong>enter</strong> while in any of the text boxes will start the levelset computation.</p>
+
+<h4>Seed Parameters</h4>
+
+<p>These parameters modify the location and size of the starting seed. These parameters are shown in two variants. On the left, the location and size are standardized, and will be the same across all images.  The settings on the right show the same fields but take into account the physical space of the data.  Updating either setting type will automaticaly update its counterpart.</p>
+
+<ul>
+<li><p><strong>Center</strong> controls the center of the seed using the center of the image as origin. Decreasing or increasing the <strong>X</strong> value will move the seed <strong>left</strong> or <strong>right</strong> respectively. Decreasing or increasing the <strong>Y</strong> value will move the seed <strong>up</strong> or <strong>down</strong>, respectively.</p></li>
+<li><p><strong>Radius</strong> controls the radius of the seed.  This is taken in the <strong>X</strong> direction.</p></li>
+</ul>
+
+<h4>Stage 1 Parameters</h4>
+
+<p>These parameters control the growth and stop criteria of the first stage levelset.  Stage 1 levelset is meant to arrive at a approximate solution to initialize stage 2. The result of the first stage is displayed in yellow.</p>
+
+<ul>
+<li><strong>Blur</strong> parameters control the image blur on the feature image and the advection image.  If your image has a lot of noise, increasing these values can improve accuracy. Increased image blur will decrease precision, however.</li>
+<li><strong>Kthr</strong> is the equilibrium curvature value of the level set. A higher value will result in less curvature smoothing.</li>
+</ul>
+
+<h5>Advanced Features</h5>
+
+<ul>
+<li><strong>Exponent Factor Rise and Fall</strong> affect the speed of of the level set when rising on an image gradient, or falling.  A ratio of 1:2 is reccomended.</li>
+<li><strong>Max Iterations</strong> specifies the maximum number of iterations that can be complete before levelset is halted.</li>
+<li><strong>Max Error</strong> specifies the maximum RMS error for the levelset stop criteria.</li>
+</ul>
+
+<h4>Stage 2 Parameters</h4>
+
+<p>Stage 2 level set is intended to provide a smooth, accurate contour based on the results of stage 1.</p>
+
+<ul>
+<li><strong>Blur</strong> parameters control the image blur on the feature image and the advection image. Similar to what discussed for stage 1, inceasing this value on images subject to a significant noise level may improve the accuracy of the resulting segmentation. Increased image blur will decrease percision, for this reason it is reccomended that blur settings be lower in stage 2 than in stage 1.</li>
+<li><strong>Kupp</strong> and <strong>Klow</strong> specifies the maximum tolerable curvature. Unlike stage 1, where there is a equilbrium curvature, stage 2 has a specific allowable range for curvature.  When the curvature is too low the level set will grow/shrink the front to obtain a allowable curvature. <font color="orange"><strong>WARNING:</strong></font> If Klow is set too high, it may result in overshoot.</li>
+</ul>
+
+<h5>Advanced Features</h5>
+
+<ul>
+<li><strong>Max Iterations</strong> specifies the maximum number of iterations that can be complete before levelset is halted.</li>
+<li><strong>Max Error</strong> specifies the maximum RMS error for the levelset stop criteria.</li>
+</ul>
+
+<h4>Display and Refresh Options</h4>
+
+<h5>Display</h5>
+
+<p>These radio buttons control what edge potential image is shown in the 2-D potential window.</p>
+
+<h5>Always Refresh</h5>
+
+<p>These check boxes force the segmentation to be re-computed every time the user modifies the level set parameters. If you modify parameters in stage 1 or seed, the final levelset will not be updated unless these are checked. Note: modifying a later change will automatically recompute the previous stages.</p>
+
+<h4>Smoothing and Batch Computation</h4>
+
+<ul>
+<li><strong>Fourier Smooth</strong> performs a Fourier-based smoothing of the resulting level set. </li>
+<li><strong>Batch Segmentation</strong> performs a batch set of segmentations using the current settings by inputting the batch settings in the text box and clicking &ldquo;Batch Segmentation&rdquo;.</li>
+</ul>
+
+<p><font color="red"><strong>HELPFUL HINT:</strong></font> Finding suitable level set parameters based on a few cross sections and then doing batch segmentation can dramatically speed up model building. After generating several segmentations in batch, it is good practice to quicly check through them paying attention to possibly unclosed and inaccuate segmentations.</p>
+</section>
+<section id="modelingManual" class="subgroup"><h3>Segmenting an Image Manually</h3>
+
+<p>Sometimes it is not possible to use automated techniques to segment an image. Other times, automatic techniques work, but yield poor contours. In these situations, you may need to segment the image manually.</p>
+
+<p>First clear the 2D display windows by de-selecting “evolution” and “initialization sphere” under “Level Set” in the “Display Options” menu. We will be keeping the segmentations we create under the “level set” heading, so keeping “Display Options → Level Set → segmentation” checked will allow us to see what we’ve done.</p>
+
+<p>Under the “Create Vessel” tab, choose the “Manual” tab. Select a position on the path for which you want to create a contour, and make sure “Parallel Projection” is turned on. Under “Create Contour As”: choose “Level Set”.</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/manual/1.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>Click on the 2D Intensity window to activate it (you may need to zoom in and out with your right mouse button to activate it).  </p>
+
+<p><font color="red"><strong>HELPFUL HINT:</strong> </font>  If you ever find yourself trying to do a manual segmentation and you are not seeing the contours that you are trying to create. Zoom in and out in the 2-D Intensity window to activate manual segmentation and try again. </p>
+
+<p>Place the cursor along the edge of the vessel (you don’t need to click any mouse buttons, just move the mouse) and type “a” on the keyboard. You’ve just defined the first point in your contour. Move the mouse cursor along the edge of the vessel just slightly to the right of the first position.  Type “a” on the keyboard to add this second point to your contour.  A red line should appear connecting the first and second points. Continue adding points around the edge of the contour by moving the cursor and typing the “a” key.  If you make a mistake, just press the “Shift” key and the “a” key simultaneously and this will remove the last point that you added to the contour:</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/manual/2.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>When you’ve finished drawing the outline of the contour, type “c” on the keyboard to indicate that you’re done and the first and last points should be joined.</p>
+
+<p><font color="orange"><strong>WARNING:</strong></font>  Do not try to make the last point on top of the first point; while the contour may look fine if you do this, it might actually overlap itself, which will cause problems in the future. Thus, right before hitting “c”, your contour should appear not quite closed.</p>
+
+<p>Typing “c” will create the final contour that you have just drawn, which will show up as a heavy red line in your 2D windows:</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/manual/3.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+</section>
+<section id="modelingAnalytic" class="subgroup"><h3>Fitting an Analytic Shape to the Image</h3>
+
+<p>If you want to create a segmentation where no data exists, you may want to create an analytic shape such as a circle or an ellipse.</p>
+
+<p>First start by clearing the 2D display windows by clicking on the “Window” drop-down menu on the taskbar below each window and selecting “Clear Window”. We will be keeping the segmentations we create under the “level set” heading, so keeping “Display Options → Level Set → segmentation” checked will allow us to see what we’ve done.</p>
+
+<p>Under the “Create Vessel” tab, select the “Analytic” tab. Make sure that the “Level Set” radio button is selected under “Create Contour As:”</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/analytic/1.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>Under the “Create Vessel” tab, place the “Current Position” slider bar to the path position where you would like to create your contour.</p>
+
+<p><strong>Create a Circle:</strong></p>
+
+<p>To make a circle, you will use the “Center” and “radius” fields under the “Circle Parameters”.  You can change these parameters and then click on the “Make Circle” button to see the contour that is created.  Can you find a combination that produces a good segmentation for this image?</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/analytic/2.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure> 
+
+<p>The “Center” determines the center of the circle.  The X=0, Y=0 position for the center corresponds to where the path intersects this imaging slice.  Changes to X and Y and the radius are in the same units as the imaging data.</p>
+
+<p><strong>Create an Ellipse:</strong></p>
+
+<p>To make an ellipse, you will use the “Center” X and Y fields, and the “a” and “b” fields under the “Ellipse Parameters”.  After you change the values for these fields, click on the “Make Ellipse” button to generate the contour.</p>
+
+<p>As with the circles, the “Center” determines the center of the ellipse.  The X=0, Y=0 position for the center corresponds to where the path intersects this imaging slice.  Changes to X and Y are in the units of the image data, mm in this case.</p>
+
+<p>“a” is the horizontal length of the ellipse, and “b” is the vertical length of the ellipse.  These quantities are in the same units as the imaging data, mm in this case. You can only generate ellipses along either the x- or y-axes. Can you find parameters that fit an ellipse to your imaging data?</p>
+
+<figure>
+  <img class="svImg svImgX"  src="documentation/modeling/imgs/segmentation/analytic/3.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure> 
+
+<p>You will notice that after you click on the “Make Ellipse” button, a number will be generated in the “perimeter” field. This number describes the circumference of the ellipse you have just created.</p>
+</section>
+<section id="modelingCopyingPastingContours" class="subgroup"><h3>Copying and Pasting Contours</h3>
+
+<p>Another option for creating contours is to copy and paste a contour from another location.  This allows you to extrude that shape and is useful, for instance, at the point where one vessel joins up with another vessel.</p>
+
+<figure>
+  <img class="svImg svImgMd"  src="documentation/modeling/imgs/segmentation/copying_pasting_contours/1.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>You can copy and paste any kind of contour you have created: threshold, level set, manual, or analytic.</p>
+
+<p>For this quick exercise, we will assume that you have just made an ellipse as shown in the previous section and that it has been created under the “Level Set” heading (See <a href="#modelingAnalytic">Section: Fitting an Analytic Shape to the Image</a>). Make sure you have “Display Options → Level Set → segmentation” checked in the 2D display windows.</p>
+
+<p>Under the “Create Vessel” tab, choose the “Smooth” tab. This tab contains many options to modify the segmentations you have created and will be described in more detail in the following section: <a href="#modelingModifyingContours">Modifying Contours</a>. Under “Level Set Additional Single Slice Manipulations”, you will find the buttons “Copy” and “Paste”. So, starting with the ellipse that we had from the previous exercise:</p>
+
+<p><font color="red"><strong>HELPFUL HINT:</strong> </font> Note the distinction between the “Level Set Additional Single Splice Manipulations” and the “Threshold Additional Single Splice Manipulations” headers. In <strong>SimVascular</strong>, there are two segmentation “buckets.” One bucket is the “level set” bucket that contains a “level set” segmentation and the other is the “threshold” bucket that contains a “threshold” bucket. You can create a manual or analytic segmentation and put it in either of these “buckets” by selecting either “level set” or “threshold” under “Create Contour As” when you are creating segmentation. When you copy, paste, or modify a segmentation under the “Smooth” tab you can copy, paste, or modify the segmentation in the “level set” bucket or the “threshold bucket.” You need to make sure that you are making these modifications under the correct header under the “Smooth” tab which are respectively, “Level Set Additional Single Splice Manipulations” and “Threshold Additional Single Splice Manipulations.” This tutorial works mostly in the “level set” bucket. </p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/copying_pasting_contours/2.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>Slide your “Current Position” bar to the position that contains the segmentation that you would like to copy. In our case this position is “0”. Click on the “Copy” button.</p>
+
+<p>Now slide your “Current Position” bar to the position of the slice where you would like to copy the segmentation into. In our case this is “10.” Now click on the “Paste” button. The ellipse that you created in the previous exercise should now show up as a red outline in your new path position. Does the ellipse that you made previously fit in the new path position?</p>
+</section>
+<section id="modelingModifyingContours" class="subgroup"><h3>Modifying Contours</h3>
+
+<p>Let’s say that you have created a segmentation using one of the aforementioned methods, and you are not quite happy with it. There are a number of things you can do to modify your contour to make it more true to the imaging data.</p>
+
+<p>For the purposes of this exercise, we will start by creating a level set contour and then manipulating it. Review <a href="#modelingLevelSet">Section: Using Level Sets to Define a Contour</a>, and create a level set contour at any position along your path. Make sure you have “Display Options → Level Set → segmentation” checked in the 2D display windows so that you can visualize the changes that we will make to this segmentation.</p>
+
+<p>Under the “Create Vessel” tab, choose the “Smooth” tab:</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/modifying_contours/1.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p><strong>Fourier Smoothing:</strong></p>
+
+<p>Under the heading “Level Set Additional Slice Manipulations”, enter a value of “4” in the field next to “Fourier Smooth:”.  Then click on the button labeled “Fourier smooth.”  This function works similar to the Fourier smoothing used in for path planning. A small number means that <strong>SimVascular</strong> will use fewer Fourier modes in the smoothing process, so a smoother contour will be produced:</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/modifying_contours/2.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p><strong>Scaling:</strong></p>
+
+<p>To make the contour larger or smaller, enter a scale factor into the field next to “Scale by:”, and click on the “Scale by” button.  </p>
+
+<p>Scaling operates on the current contour.  This means that if you apply a scale factor of 2 to the original contour and then apply another scale factor of 2, you will end up with a contour that is 4 times the size of the original contour. The following image shows the previously smoothed contour enlarged by a scale factor of 2:</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/modifying_contours/3.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>You can get back to the original segmentation by scaling by a factor of 0.5.</p>
+
+<p><strong>Translating:</strong></p>
+
+<p>You can move the contour to a different location by specifying “dX” and/or “dY” and then clicking on the “Translate by:” button.  The units are the same as the imaging data, mm in this case. </p>
+
+<p>The values for “dX” and “dY” are incremental!  This means that the movement occurs relative to the current position.  To see this, enter “5” in the field for “dX”, and click on the “Translate by:” button and note where the contour is.  Click on the “Translate by:” button again and notice that the contour has shifted another 5 units, so that total distance moved relative to the original position is 10 units.</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/modifying_contours/4.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>Positive values for “dX” shift the contour to the right while negative values shift the contour to the left. Positive values for “dY” shift the contour up while negative values shift the contour down.</p>
+
+<p>Shift your contour back to center by translating “-10” in the dX direction.</p>
+
+<p><strong>Fitting Circles:</strong></p>
+
+<p>Another way to smooth your contour is to fit a circle to the area of the current segmentation. This technique is especially useful when the vessel is quite small and hard to define or you need a circular outlet for a specific boundary condition that you are using in your flow simulation.</p>
+
+<p>Under the “Level Set Additional Single Slice Manipulations” heading, click on the “Fit Circle” button. Your contour should re-appear as a perfect circle:</p>
+
+<p><font color="orange"><strong>WARNING:</strong></font>  You cannot undo pasting or circle fitting. You should be sure that you want to fit a circle otherwise you will lose the segmentation that you are creating a circle for and you cannot retrieve it. You must generate the original segmentation again if you fit a circle and realize that the circle does not fit the vessel as you expected. </p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/modifying_contours/5.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+</section>
+<section id="modelingAddingToGroup" class="subgroup"><h3>Adding Contours to a Group</h3>
+
+<p>Once you have created a contour that you are satisfied with, you can “save” it by adding it to the group of 2D segmentations that will be used to build your solid model. This exercise will assume that you have created the group “aorta” as detailed in <a href="#modelingUsingGroups">Section: Using Groups</a>.</p>
+
+<p>Now, under the “Solids” tab, you should see the group “aorta” in your group treeview window. Under the “Create Vessel” tab, move your “Current Position” slider to “0”. Review <a href="#modelingLevelSet">Section: Using Level Sets to Define a Contour</a>, and create a level set contour at this position “0”. Modify the contour until it is satisfactory to you using the techniques described in the previous section <a href="#modelingModifyingContours">Modifying Contours</a>. Make sure you have “Display Options → Level Set → segmentation” checked in the 2D display windows so that you can visualize the segmentation.</p>
+
+<p>Under the “Level Set” tab, click on “Add Current Position to Group”. Under your group treeview window, the number “0” should appear, corresponding to the path position of the segmentation that was just added to the group (highlighted in blue):</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/adding_to_group/1.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>Let’s do another one. Move to position 10. You may already have a segmentation there from ]Section: Copying and Pasting Contours](#modelingCopyingPastingContours). We are going to overwrite it with a level set segmentation. Again, make and modify a level set contour until it represents the image data satisfactorily.</p>
+
+<p>When you are through, click on the “Add Current Position to Group” button, and the number “10” should now appear below the number “0” in your group treeview window (highlighted in blue):</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/adding_to_group/2.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>You may now have the idea that creating each segmentation one-by-one would be pretty tedious. In <a href="#modelingBatch">Section: Creating and Modifying Segmentations in Batches</a>, we will learn how to create and modify segmentations by the batch. But first, it is helpful to learn to display our 2D contours in our 3D display window.</p>
+</section>
+<section id="modelingDisplayingContours3D" class="subgroup"><h3>Displaying Contours in the 3D Display Window</h3>
+
+<p>This exercise assumes that you have added two segmentations to the group, as described in the previous exercise.</p>
+
+<p>To display your contours in 3D space, go to the taskbar underneath the 3D display window and click on the “Display Options” menu. Select “Branch Controls” and then check “Level Set Segmentation”:</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/displaying_contours_3D/1.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>As you move the “Current Position” Slider bar under the “Create Vessel” tab from position “0” to position “10”, you should see the segmentations that you’ve created appear in blue along the path in the 3D display window.</p>
+
+<p><font color="red"><strong>HELPFUL HINT:</strong> </font>  This shows ALL segmentations that you created and still appear in the 2-D windows. To see only the segmentations that you added to the group, click on the “Display group” button to the right of the group treeview window and select a color when prompted.</p>
+
+<p>Note that once a contour has been added to a group it can only be smoothed and edited in two ways:</p>
+
+<ol>
+<li>  If the contour is still displayed in the 2-D windows, you can smooth it and edit it as indicated previously in the tutorial. To update this on the group, you will need to delete the corresponding contour within the group and add the edited contour to the group. </li>
+<li> If you closed <strong>SimVascular</strong>, then all of the segmentations that you created will no longer appear in the 2D Windows. They will only be saved in the group (If you saved the group). To edit segmentations that are no longer in the 2D windows: Select the contour member that you would like to edit in the group treeview window. Using the “Manipulate” drop down menu to the right of the group treeview window, you can choose to “show spline.” The contour will be highlighted in yellow and you can click on the contour in the 3D window to edit the spline, similar to the way you edited the path spline previously in the tutorial.  This editing technique will be described more in depth later in the tutorial.</li>
+</ol>
+</section>
+<section id="modelingBatch" class="subgroup"><h3>Creating and Modifying Segmentations in Batches</h3>
+
+<p>Now that you know how to segment one position using level sets and can add it to a group, let’s try it with a whole series of positions.  There are multiple approaches for doing this.  </p>
+
+<p>Some users like to generate a level set segmentation for each point along the path, and then later in the process, select a subset of those for creating their geometric model.  There are fewer user decisions to be made upfront and you will have all the possible segmentations to use in constructing your model.  However, the process will take longer than other approaches. </p>
+
+<p>A second approach involves pre-selecting the locations for the segmentations, so that only a handful of locations get segmented.  This will be faster than generating all of the segmented contours at once.  However, it requires user knowledge about which locations are important for the modeling, and it can be especially tedious for vessels with large curvature and/or radius changes.  It may also require going back and segmenting other locations later in the process.</p>
+
+<p>In general, you should go with the first approach: Making more segmentations than you will need and then selecting a subset to define the vessel. However, in the following exercise, we will try to gain some intuition that makes batch level set segmentation possible and efficient. </p>
+
+<p>The first step to success is making sure that the initialization sphere fits within the lumen of the vessel for all the positions we’d like to segment in the batch. Now, using your “Current Position” slider bar under the “Create Vessel” tab, browse through the 2D images and see how far down you can go with the initialization sphere still completely within the vessel lumen. Perhaps you can go about a third of the way down? Maybe you need to change the “Center” of the sphere to help it stay inside the vessel? Next, let’s choose some level set parameters that we think may be successful for a number of segmentations. </p>
+
+<p>Once we’ve set the parameters, click on the “Batch” tab under the “Create Vessel” tab. Under “Level Set Batch Segmentation Controls” you will see the field labeled “batch list:”. For the purposes of this exercise, type in “20, 30, 40” and then click on “Batch Segmentation”. The program will open a new window, checking with you to see if you would like to attempt 3 segmentations. Click “Yes”.</p>
+
+<p>Three new segmentations should now appear as blue outlines at path positions 20, 30, and 40 in your 3D display window.You can add these new segmentations to your group “aorta” by clicking on the “Add All in List to Group” button, which is located underneath the “Level Set Batch Segmentation Controls” heading. The new segmentations should then appear in your group treeview display window under the group “aorta”.</p>
+
+<p>If you want to segment at a regular interval, you can use a different convention for batch segmentation. The notation for this type of batch list is start#-end# by #, where # is an integer number.</p>
+
+<p>For example, if you wanted to segment out every 5th position between position 0 and 300, you would enter 0-300 by 5.</p>
+
+<p>For the purposes of this example, type in “50-80 by 10” in the “batch list” field and click on the “Batch Segmentation” button. Again, the program will ask you if you want to attempt 4 segmentations. Click “Yes”.</p>
+
+<p>You will see 4 new segmentations appear along your path. How did these segmentations do at representing your model? Perhaps you want to go back and alter some of them using the methods we described in <a href="#modelingModifyingContours">Section: Modifying Contours</a>. Perhaps they look great, and you just want to Fourier Smooth them in a batch as we did before.</p>
+
+<p>Note that you can also “Fit Circles” to your contours (as described in <a href="#modelingModifyingContours">Section: Modifying Contours</a>) using a batch operation. WARNING: This will fit a circle to each one of the contours in the batch and this cannot be undone so be careful with fitting circles using a batch operation!</p>
+
+<p>When you are happy with your contours, you can add them to your group by clicking on the “Add All in List to Group” button.</p>
+
+<p>HELPFUL HINT: If you have some segmentations in the “level set” bucket and other segmentations in the “threshold” buckets, you need to do an “Add All in List to group both under the “Level Set Batch Segmentation Controls” AND the “Threshold Batch Segmentation Controls” headers.</p>
+
+<p>Here are some helpful hints for checking out your contours that you have created in batch mode:</p>
+
+<p>First, check to see that the contours are in the center of the “donut” in the potential window. An example of a contour that is in the center of the potential window “donut” is shown below:</p>
+
+<figure>
+  <img class="svImg svImgSm"  src="documentation/modeling/imgs/segmentation/batch/10.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>If the contour is not exactly in the center of the donut (like the example shown below), you can scale it using the methods we described in <a href="#modelingModifyingContours">Section: Modifying Contours</a>.</p>
+
+<figure>
+  <img class="svImg svImgSm"  src="documentation/modeling/imgs/segmentation/batch/11.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>Secondly, you want to check to make sure that the segmentation does not include a branch vessel, like the example shown below.  Although the level set method can segment these, including these in your final model will cause an artificial geometry know as a “lofting artifact.” You can fix these types of segmentations using the techniques described in <a href="#modelingCopyingPastingContours">Section: Copying and Pasting Contours</a>.</p>
+
+<figure>
+  <img class="svImg svImgSm"  src="documentation/modeling/imgs/segmentation/batch/12.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p><font color="red"><strong>HELPFUL HINT:</strong> </font>   You want the spacing between locations to be sufficient to capture the curvature and other changes in the vessel.  If the vessel is relatively straight, as is the case in this the abdominal aorta for this dataset, you can space the segmentations relatively far apart.</p>
+</section>
+<section id="modelingPuttingTogether" class="subgroup"><h3>Putting It All Together</h3>
+
+<p>Before we continue on to the next section, we will need accurate segmentations down the length of our aortic path.</p>
+
+<p>Use the level set method to make 2D segmentations of the vessel wall and combine this with the techniques described in <a href="#modelingModifyingContours">Section: Modifying Contours</a>. You may find it difficult to use only the level set method in the iliac branch vessel, so you may want to fit circles to create these contours.</p>
+
+<p>When you are finished, you can check out your segmentations by viewing them with the point cloud turned on:</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/putting_together/1.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+</section>
+<section id="modelingSavingLoadingGroups" class="subgroup"><h3>Saving and Loading Groups</h3>
+
+<p>You can save and load your groups by clicking on the “Save Groups” and “Load Groups” in the Menu Bar (top left).</p>
+
+<figure>
+  <img class="svImg svImgSm"  src="documentation/modeling/imgs/segmentation/saving_loading_groups/1.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>Find your “demo” project directory and click on it to highlight it in blue. Then in the entry widget enter “groups” to create a folder to store your groups in. All of your groups will be saved under this folder. Click “OK.” Your “groups” folder has now been created and contains the saved groups.  </p>
+
+<figure>
+  <img class="svImg svImgMd"  src="documentation/modeling/imgs/segmentation/saving_loading_groups/2.jpg"> 
+   <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p><font color="orange"><strong>WARNING:</strong></font> If you close <strong>SimVascular</strong> and then reopen it, the first thing you should do is to load your groups. If you don’t do this, and you make a new vessel, your old groups directory may be overwritten! </p>
+</section>
+<section id="modelingSolidModeling" class="group"><h2>Creating a Solid Model from 2-D Segmentations</h2>
+
+<p>In the previous section, it was shown how to create individual 2-D segmentations along a particular vessel path.  It is worthwhile to reinforce at this point the distinction between visualizing geometry and utilizing geometry for numerical simulation.  If you were to graphically display all the segmentations that you created in the previous exercise, your mind may “connect the dots” and create a 3-D mental image of the geometry.  However, we need to create a 3-D solid model that the computer can understand.</p>
+
+<p>Fortunately for us, an ordered relationship between some of the curves is known.  That is, for each path we have an ordered set of curves defining the geometry for the given vessel.  These sets are the groups that we have used to organize the segmentations. All of the segmentations are associated with one and only one vessel.  This motivates a two-stage process to create a solid model.  First, a “lofted” solid is created for each branch.  This results in a collection of solid branches.  Second, a boolean addition (union) is performed of the individual branches.  The result is then a single bounded solid region representing the blood flow domain.</p>
+
+<p>In this section we will explore these two steps.  In <a href="#modelingCreatingModels">Section: Using Groups of Segmentations to Create Solid Models</a>, a single branch is lofted from a set of curves.  In <a href="#modelingCreatingBranch">Section: Creating a Branch Vessel</a>, we will perform a boolean addition to create a single solid model. <a href="#modelingBlending">Section: Blending the Junction of Two Vessels</a> shows you how to smooth out the intersection between vessels.</p>
+</section>
+<section id="modelingCreatingModels" class="subgroup"><h3>Using Groups of Segmentations to Create Solid Models</h3>
+
+<p>This exercise will assume that you have completed <a href="#modelingPuttingTogether">Section: Putting It All Together</a> and that you have created segmentations down the aorta and common iliac artery that you can now “loft” together to form solid model.</p>
+
+<p>The first thing we will do is create a new group “aorta_test” that mimics your original group, “aorta”. We will do this so that we can manipulate (i.e., delete) contours in this group without affecting the original group. Review <a href="#modelingUsingGroups">Section: Using Groups</a>, <a href="#modelingAddingToGroup">Section: Adding Contours to a Group</a>, and <a href="#modelingBatch">Section: Creating and Modifying Segmentations in Batches</a> and create a group named “aorta_test” that contains all of the segmentations that are found in the group “aorta”.</p>
+
+<p>Then, under the “2D Segmentation” tab:</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/solid_modeling/creating_models/1.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>Highlight “aorta_test” in the group treeview display window. Next to the group treeview display window, click on the “Model Operations → Use Surface” button under “Operations” on the right hand side of the screen. After this button is pressed, you should see a “X” appear in the column “Use in Model” next to “aorta_test” in the group treeview window. This indicates that you would like to loft a 3D solid from the group “aorta_test”.</p>
+
+<p><font color="red"><strong>HELPFUL HINT:</strong> </font> You can only use Parasolid to generate a model if you have paid for a Parasolid license and have the licensed portion of the software. If you do, you can activate the Parasolid tab by going to the &ldquo;Work Menus&rdquo; selection in the upper left hand of your screen and selecting Parasolid. </p>
+
+<p>Under the “Model → Parasolid → Create Model” tab, click on the “Create Pre-Op Solid Model” button. A window will appear asking you to name your new model. Name your model &ldquo;NewModel&rdquo; and then click &ldquo;Enter&rdquo;. You may not give a blank name, a name containing &ldquo;.&rdquo;, or a name containing &ldquo;/&rdquo;. Another window will appear asking you if you would like to “Recreate all solids”. Click on the “Yes” button. Another window appears asking if you would like to “Create missing solids using defaults.” Click on the “Yes” button. </p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/solid_modeling/creating_models/2.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>A box will pop up informing you that it is renaming one of the surfaces so that you do not have two surfaces with the same name. Then, a red solid representing your vessel should appear.</p>
+
+<p>In addition, the name of the solid will appear underneath Parasolid in the dropdown list. The model should also have faces corresponding to the groups used to create the solid. Click on the model name to expand the list and see the faces.</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/solid_modeling/creating_models/2.5.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>The “num sample pts” under “Segmentation → Lofting Parameters” describes how many sample points around each segmentation are used to connect one contour to the adjacent contour. You can imagine that using fewer sample points creates a more smooth model, but one that may not adhere as well to the 2D segmentations. You are encouraged to play around with the option. Change the value in “num sample pts” and click on the “Create Pre-Op Solid Model” button to see how it affects the solid.</p>
+
+<p>Now, let’s examine the solid in more detail. Click your mouse in the 3D display window and click on the semi-transparent solid model. If you type “p” on the keyboard, the model should now become opaque yellow and easier to visualize. If you would like to change the opacity of the lofted solid (optional), “pick” the 3D solid, which turns it opaque and yellow, and go to the “Visualization” portion on the right hand side of the screen. Click “Color and Opacity → Change Selected Opacity” and choose a desired opacity. Use this same button and click &ldquo;Change Selected Color&rdquo; to change the color of the model. </p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/solid_modeling/creating_models/3.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>Whether or not you have decided to make your solid model opaque by changing its actor properties, zoom in and examine the features of your model. In our example model, we can see that we have a segmentation that creates a bump in the vessel, most likely because there is a branch coming off at that point.</p>
+
+<p>Let’s try to fix the model by deleting the segmentation and re-lofting it. First, hide your lofted model by going to the &ldquo;Model Visualization → Do Not Display Model&rdquo;. To delete the segmentation, navigate back to the “Segmentation → 2D Segmentation” tab.</p>
+
+<p>In the group treeview display window, highlight the group “aorta_test”. To the right of the treeview display window, under “Visualization”, click on the “Display Groups” button. A new window will open, asking you to select a color to display your group in. We have selected bright green:</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/solid_modeling/creating_models/4.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>Right away we can see which segmentation was problematic. Pick this segmentation by clicking inside the 3D display window, placing your mouse over the segmentation, and typing “p” on the keyboard. Two things should happen – the contour will be highlighted in yellow in the 3D display window, and the path point which it corresponds to will be highlighted in blue in the group treeview display window:</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/solid_modeling/creating_models/5.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>To delete this segmentation, simply click the “Delete Members” button located to the right of the group treeview display, under the heading “Member Operations”.</p>
+
+<p>If you clear the 3D display window by going to “Group Visualization → Do Not Display Group” and the re-display the group by clicking on the “Group Visualization → Display Groups” button, you should see that the segmentation that you just deleted is now missing. Its corresponding pathpoint should also be missing from your group treeview display window.</p>
+
+<p>We will now re-loft the model again. Click on the “aorta_test” group in the treeview window and then click on the “Use Groups” button under the “Solid Model Lofting” header that is to the right of the treeview window. Again you should see the word, “YES” next to the “aorta_test” group name in the treeview window. </p>
+
+<p><font color="red"><strong>HELPFUL HINT:</strong> </font> You will have to select the group for lofting by clicking the “Use Group” button and re-loft the model every time you make modifications to the group. </p>
+
+<p>Now, re-loft the model by clicking on the “Create Pre-Op Solid Model” button under the “Model → Parasolid → Create Model” tab. Did deleting the segmentation help? You can use the Display Options pane to turn on visualization options that will help you judge the fidelity of your solid model. For example, try turning on the “S/I” slider bar and running up and down the 3D solid. How well does it represent the imaging data? You can see that this is one time when it is useful to leave the lofted vessel in a semi-transparent state:</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/solid_modeling/creating_models/6.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p><strong>Changing the rendering resolution:</strong></p>
+
+<p>Next, we will learn about the difference between true lofting artifacts and visualization artifacts. Zoom in on the iliac branch and check for lofting artifacts. Click on the model and type “p” to select the model and turn it opaque. You might see something like following. Is this a lofting artifact?</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/solid_modeling/creating_models/7.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>The answer is no. The crease you see in the picture above results from the resolution of the rendering. This can easily be fixed by changing the maximum facet size.</p>
+
+<p>In the Functional Toolbox pane, click on the “Displays” tab and then click on the “General” tab. You will find a number of options that you can use to change the way things are displayed in your display windows. Next to “Facet Max Edge Size:”, you will see that the default is “1.0”. </p>
+
+<p>Type in “0.1” in the place of “1.0” and hit RETURN.</p>
+
+<p>With your solid model “picked” (opaque yellow), under visualization on the right hand side, click &ldquo;Model Operations → Copy Model&rdquo;. Give a name for your new visualized model. Now, every time a Parasolid object is displayed on screen, it will be created with facet sizes with a maximum of 0.1 units. This will display the model with smaller faces and give you a smoother looking surface. You should see that the creases have disappeared:</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/solid_modeling/creating_models/8.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p><strong>Fixing Segmentations that Cause Lofting Artifacts:</strong></p>
+
+<p>Now that you have an acceptable maximum facet size, take a close look at the model. You should be able to take care of lofting artifacts using the techniques demonstrated in <a href="#modelingCopyingPastingContours">Section: Copying and Pasting Contours</a> and <a href="#modelingModifyingContours">Section: Modifying Contours</a>.</p>
+
+<p>For the purposes of this exercise, it is suggested that when you modify contours or create new ones, you should add them both to the “aorta” and “aorta_test” group. Treat the “aorta” group as a running history of all available contours in case you need to draw from those again. Meanwhile, create your models from the “aorta_test” group and add and delete segmentations freely from this group.</p>
+
+<p>Here are a few suggestions for fixing common problems:</p>
+
+<ol>
+<li><p>Your segmentation includes a branch artery. As we saw above, it is easy to just go ahead and delete this segmentation and re-loft your model without it. However, sometimes it is necessary to add in a contour near that location to make the model more true to the imaging data. In these cases, consider copying and pasting a nearby contour (<a href="#modelingCopyingPastingContours">Section: Copying and Pasting Contours</a>) or hand drawing a contour in a manner that does NOT include the branching portion (<a href="#modelingManual">Section: Segmenting an Image Manually</a>). Drawing by hand will require a bit of artistic license.</p></li>
+<li><p>The solid model of your branch vessel seems “bumpy”. If you have created level set segmentations in the iliac branch of the vessel and then fit circles to these segmentations, you may find your model looking something like this:</p></li>
+</ol>
+
+<figure>
+  <img class="svImg svImgMd"  src="documentation/modeling/imgs/solid_modeling/creating_models/9.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>This is because the segmentations in this region are close together and not quite the same size. For small vessels, small differences in the level set segmentations can translate to big differences in area. Consider fixing this problem by either removing segmentations or copying and pasting a single contour down the length of the branch vessel. Copying and pasting a single contour is really only appropriate in the branch vessels, which are relatively far from the region of interest. This methodology may be justified using the shear stress autoregulation theory, which states that vessels will adjust their size to maintain relatively constant levels of shear stress. Thus, as long the flow remains constant along a given small segment of vessel, the vessel should remain about the same diameter for the given small segment. The exception, of course, is if the branch vessels have disease such as atherosclerosis or aneurysm. </p>
+
+<p>When you are happy with the solid model you have created, don’t forget to “Save Groups” in the File menu. Also save your model with &ldquo;File Input/Outpu → Save Model&rdquo;.</p>
+</section>
+<section id="modelingCreatingBranch" class="subgroup"><h3>Creating a Branch Vessel</h3>
+
+<p>To create a model of the entire human abdominal aorta, the aorta and its branch vessels will need to be joined together. For the purposes of this tutorial, we will focus on adding the right common and external iliac to the vessel that you just created, which includes the main trunk of the aorta and the left external iliac artery.</p>
+
+<p>It is not immediately obvious how best to create a branch vessel so that we end up with a desirable model, so the purpose of this exercise is to teach you some tricks that you may find useful. This exercise will also describe some of the common pitfalls in branch vessel creation.</p>
+
+<p>Follow the instructions in <a href="#modelingPathPlanning">Section: Path Planning</a> to create a path for the right iliac artery. Make sure that your path overlaps the path that we created for the aorta:</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/solid_modeling/creating_branch/1.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>When you have created your path, follow the instructions in <a href="#modelingSegmentation">Section: Segmentation</a> to create contours down this path. </p>
+
+<p>Here are some tips for creating the first few segmentations, which may be the most important in creating a branch vessel that is easily joined to another one. Start by lofting together the solid model that you created for the aorta and left iliac artery in <a href="#modelingCreatingModels">Section: Using Groups of Segmentations to Create Solid Models</a>.</p>
+
+<p>Then change to the path you’ve just created for the right iliac artery under the “2D Segmentation → Create Vessel” tabs, and create a new group called “right_iliac” for this branch vessel.</p>
+
+<p>Move the current position slider bar just above the bifurcation point. Segment this position using level set methods and Fourier smooth it. You may find that your segmentation looks something like this:</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/solid_modeling/creating_branch/2.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>What is wrong with this segmentation (shown in blue in the 3D display window)? You will notice that part of it is not enclosed in the solid model of the aorta that we generated. You can imagine that this will cause problems when we join the two vessels together because it will create a “ledge” that juts out of the aorta.</p>
+
+<p>You already know of a number of ways to fix this first segmentation so that it fits completely within the main aorta vessel we created earlier, but now we will demonstrate another one. Start by adding this segmentation to the group “right_iliac”. Now, highlight this segmentation in the group treeview display and click on the “Manipulate” drop-down menu in the sidebar to the right of the group treeview display. Select “Show Spline” and “Show Image”:</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/solid_modeling/creating_branch/3.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>A yellow segmentation should appear on top of your blue one. If you click on this ring and try to move it, you will see a number of grey spheres appear. These are handles that you can use to adjust the shape of the segmentation. Click on sphere with your left mouse button and drag it to see how the segmentation changes. If you click on a part of the yellow segmentation in between the grey spheres, it should turn green and you can then translate it within the plane. If you do not like the changes you have made to your segmentation, you can choose “Refresh Spline” (highlighted in blue) in the “Manipulate” drop-down menu to the right of the group treeview window.</p>
+
+<p>If you are happy with your new segmentation, choose “Replace Seg with Spline” in the “Manipulate” drop-down menu. </p>
+
+<p>Now let’s move on to the second segmentation in the bifurcation. It is only crucial that the first segmentation fit completely within the main trunk in order to prevent the ledge effect described earlier, so we can rest easy when we are sure that is the case.</p>
+
+<p>Move down a few slices, and segment this portion of the vessel using level set techniques and then Fourier Smooth it. You may end up with something like this:</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/solid_modeling/creating_branch/4.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>You’ll notice that the segmentation shown in the 3D display window above does not fall completely within the bounds of the main aorta solid model. This is okay – we will discover what effect this has on the overall model in just a bit. If you are happy with your segmentation, add it to your group.</p>
+
+<p>Continue segmenting down your vessel until you are clear past the bifurcation, adding your segmentations to the group “right_iliac” along the way. In order to properly represent the bifurcation, it is important to get a contour as close to the point where the vessel has split off completely as possible.</p>
+
+<p>Once you’ve cleared the bifurcation, we can start to see how you’re doing. Highlight all of the segmentations you have just made in the group treeview display window by holding down the “shift” key while clicking with your left mouse button. Click on the “Manipulate” drop-down menu to the right of the group treeview display and select “Align All Profiles”. After the profiles have been aligned, click on “Show Surface” in the “Manipulate” drop-down menu. A solid red surface made with your new segmentations should now appear. Click your mouse in the 3D display window and, while your mouse is over the semi-transparent solid model of the aorta, type “p” on the keyboard. The main branch of the aorta should now turn solid yellow: </p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/solid_modeling/creating_branch/5.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>Fly around in the 3D window and examine the junction. Because your first segmentation should be housed completely within the main branch of the aorta, you should not observe any sharp ledges where the first segmentation juts out of the aorta. Do you?</p>
+
+<p>What happens where your segmentations are partly inside and partly outside of the main branch of the aorta? Are there smooth transitions there?</p>
+
+<p>Perhaps you have constructed your branch vessel such that most of your segmentations were inside the main branch of the aorta until after the bifurcation, and the joined pieces look more like the following:</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/solid_modeling/creating_branch/6.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>This can work as well. However, you will notice that you may find a slight “bump” where the right iliac comes out of the aorta (shown with the green arrow in the picture above). This type of junction may not be quite as smooth as what is shown on the previous page. However, you will learn how to fix this in <a href="#modelingBlending">Section: Blending the Junction of Two Vessels</a>. </p>
+
+<p>For now, use the new skills you’ve learned in this exercise along with the techniques you learned in the previous section to complete contour creation down the length of the right iliac artery. As with the aorta branch, you may want to fit circles down where the right iliac becomes much smaller.</p>
+</section>
+<section id="modelingJoining" class="subgroup"><h3>Joining Vessels Together to Create a Model</h3>
+
+<p>Once you’ve finished creating the right iliac branch, you will find that it is quite easy to join it to the aorta and make a solid model.</p>
+
+<p>In the group treeview display window, select the groups that you would like to use to create a model and click on the “Use Groups” button under “Solid Model Lofting” to the right of the group treeview display window. Once you have chosen the groups you would like to include in your model (one for the aorta, one for the right iliac), they should have “X” written next to them in the “Use in Model” column of the group treeview display.</p>
+
+<figure>
+  <img class="svImg svImgXl" src="documentation/modeling/imgs/solid_modeling/joining/1.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>Under the “Model → Parasolid → Create Model” tab, click on the “Create Pre-Op Solid” button. Once again, give the model a name. After creating the model, it is possible to save by going to &ldquo;File Input/Output → Save Model&rdquo;. Choose a file location and the extension .xmt_txt should automatically be added designating it as a Parasolid model.</p>
+
+<figure>
+  <img class="svImg svImgXl" src="documentation/modeling/imgs/solid_modeling/joining/2.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>If you zoom into the bifurcation area of the model, you will find the seam where the two solids were united. You will learn how to smooth out this seam in the next section.You can once again change colors of specific regions by hovering over the solid with your mouse and pressing &ldquo;p&rdquo;. This will highlight the selected face in the list view. You can then change the color and opacity as before.</p>
+</section>
+<section id="modelingBlending" class="subgroup"><h3>Blending the Junction of Two Vessels</h3>
+
+<p>The idea behind blending two faces of a model together is similar to sweeping a clay sphere of a certain radius all along the seam to “fill in the cracks” and make it smoother. In order to blend your model, you will first have to know the names of the faces you will be blending.</p>
+
+<p>You should have two faces whose names start with “wall” followed by the group names. By clicking on these names in the list, they will highlight the respective wall in the 3-D window to insure that you are in fact blendign 
+For each of these “wall” faces, click on the “Change Color” button and choose a different color for them. This will ensure that the walls you are choosing to blend are what you think they are.</p>
+
+<p>In our case, the two walls we would like to blend are named “wall<em>aorta</em>test” and “wall<em>right</em>iliac”. Take note of these names. We have changed the surfaces to be pink and sky blue, respectively:</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/solid_modeling/blending/1.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>Now is also a good time to change the names of all the faces to be more descriptive. Change the name of the pink and sky blue surfaces to be “wall<em>aorta</em>test” and “wall<em>right</em>iliac,” if they do not already have those names. In the figure below, we have changed the color of the face that we will name “inflow<em>aorta</em>test” to yellow, “outflow<em>aorta</em>test” to green, and “outflow<em>right</em>iliac” to blue as shown below. To change the name of each face, click on the corresponding “Face Id”, type in the corresponding name in the “surf name:” field, and click the “Set Value” button. For future reference, the names of the faces are case sensitive so try to be consistent when capitalizing. We recommend that you use only lower case letters in your face names.</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/solid_modeling/blending/2.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>Next, navigate to the “Model → Parasolid → Blend Model” tab. Click your model in the list, and this designates that this model will be used for the blending operations.</p>
+
+<p>In the bottom frame of the “Blend Model” tab, you will find a field with three columns, labeled “face 1”, “face 2”, and radius. Type in the two names of the “wall” faces you would like to blend, and then type in “0.3” for the radius. At least one space must be separating each of these typed fields.</p>
+
+<p>When you are done, click on the “Blend Model” button. Your previous model will be cleared from the screen and your new blended model should now appear. Zoom in to the bifurcation area. You can highlight the blended surface by putting your mouse over it and typing “p” on the keyboard to turn it yellow:</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/solid_modeling/blending/3.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>You’ll see how blending the model created a surface that “smoothed over” the previous seam. What happens when you choose a different radius for blending?  Play around with different values for the radius, clicking undo, and then trying a new value.</p>
+
+<p>Note: If there is a case where the “blending sphere” radius is such that it intersects a wall twice (you have a very tight junction), the two walls will not blend. Try decreasing the radius in these cases.</p>
+
+<p>When you are satisfied with the level of blending you have chosen for your model, click on the “Save” button to save this model:</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/solid_modeling/blending/4.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+</section>
+<section id="modelingSolidModelingPolyData" class="group"><h2>Creating a Solid Model with PolyData</h2>
+
+<p>In the previous section, it was shown how to create a solid model using Parasolid software. The PolyData software combines the created set of groups differently than Parasolid, through an ordered Boolean Addition. Each group of segmentations respresents a vessel and these are placed in a ordered list. The first of these ordered groups of segmentations is lofted with the second and each subsequent group is lofted to this growing union until the model is complete.</p>
+
+<p><strong>Preparing for Modeling:</strong></p>
+
+<p>Before creating a solid from your groups, it is important to inspect the groups you have created. To view your groups, navigate to the 2D Segmentation tab, highlight the groups you wish to view and click Display Groups in the Visualization Menu to the right. A good set of groups:</p>
+
+<ol>
+<li><p>Has been created from smooth, overlapping paths: a jagged or bumpy path can lead to segmentations with greatly differing angles making it difficult to combine them in a Boolean Addition. A path that is too short may cause a gap resulting in some segmentations not being joined at all</p></li>
+<li><p>Has reasonably spaced segmentations: too many segmentations can result in a jagged solid or many ridges and could cause problems when attempting to mesh. There should be enough to get the general shape and curves of the vessel, with segmentations denser around curves and more spread out when the shape is essentially a straight cylinder.</p></li>
+<li><p>Has smooth transistions between groups: two vessels being joined should share a common space. The first segmentation on a branch vessel should be completely contained by the solid model to be created by the main vessel. For example, the first segmentation for right iliac should be contained completely by the aorta. If not, a ledge could be created, complicating future steps.</p></li>
+</ol>
+
+<p><font color="red"><strong>HELPFUL HINT:</strong> </font> <strong>Some Useful Keyboard Shortcuts:</strong></p>
+<pre class="highlight plaintext"><code>Hover the cursor over the Display Window and press the following:
+    w - view the model as a wire mesh
+    s - view the model as a solid
+    e - view the edges of the triangulated mesh on the solid model:
+Hover over the desired area and press:
+    p - to “pick” or select the model, highlighting it yellow for a better visualization
+    c - to “choose” and highlight a cell to be modified or deleted
+</code></pre>
+</section>
+<section id="modelingCreatingModelsPolyData" class="subgroup"><h3>Creating a PolyData Model from 2D Segmentations</h3>
+
+<p>This exercise will assume that you have completed <a href="#modelingPuttingTogether">Section: Putting It All Together</a> and have created segmentations down the aorta and common iliac artery that you can now use to create a solid model.</p>
+
+<p>Make sure the paths and groups you intend to model have been loaded.</p>
+
+<p>Navigate to the 2D Segmentation Tab and Display your groups.</p>
+
+<p>Navigate to the “Segmentation” tab in the functional toolbox. Under the Operations portion of the right hand side of the window, select the &ldquo;Model Operations → Use Surface&rdquo;. This will put an &ldquo;X&rdquo; in the portion of the list that says &ldquo;Use in Model&rdquo;. This will designate the surface as a surface to be used in the Boolean to create a full model.</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/polyData/creating_models/selectingOrderedGroups.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>Now navigate to the &ldquo;Model → PolyData → Create Model&rdquo; and click the button called &ldquo;Create Pre-Op Solid Model&rdquo;.
+A window will pop up asking what you would like to create a model. Name your model and click &ldquo;Enter&rdquo;. You may not give a blank name, a name containing &ldquo;.&rdquo;, or a name containing &ldquo;/&rdquo;.</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/polyData/creating_models/namingNewModel.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>Your completed model should look something like this:</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/polyData/creating_models/Boolean.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p><strong>Boolean Options:</strong></p>
+
+<p>Changing the parameters for the Boolean Union can drastically change the shape and smoothness of your model. To do this, navigate to the &ldquo;Segmentation → Lofting Parameters&rdquo; tab.</p>
+
+<ol>
+<li><p>The &ldquo;Sampling&rdquo; box under &ldquo;Circumferential Sampling Rules&rdquo; indicates the number of points that will be used to represent the circumference of each segmentation. The higher the number, the smoother the face of the model will be with respect to the circumference. The Default is 30 but more or less can be used depending on the size and complexity of the vessel. A smaller vessel needs less points around the circumference compared to a large vessel.</p></li>
+<li><p>The &ldquo;Number of Points Per Segment&rdquo; box under &ldquo;Longitdunial Sampling Rules&rdquo; sets the number of points to be used to create the segment between each segmentation. This creates points between two circumferential points created above. The points are joined to create a solid model. A higher number for this field would result in a smoother model but takes longer to render. The default is set at 6 but numbers upwards of 50 can be used with success for a smoother model.</p></li>
+<li><p>Linear Sample Along Length: When this is checked on, the amount of triangles created between each segmentation is uniform. When off, the number of triangles is proportional to the length between the segmentations. The default Factor: 10 should be sufficient for most modeling. </p></li>
+</ol>
+
+<p><strong>Saving and Viewing the created PolyData Model:</strong></p>
+
+<p>To save the model, click “File Input/Output → Save Model” on the top right, select the correct directory and save the model as “demo.vtp” ensuring it is a “.vtp” file.</p>
+
+<p><font color="red"><strong>HELPFUL HINT:</strong> </font> <strong>Boolean Solid:</strong>
+At the end of the Boolean operation, a window pop up will display the number of free edges and bad cells on the surfaces. Bad cells are denoted by triangles that have more than one neighbor which should not be possible if you have a valid 3D surface. If these numbers are not zero, please report this occurence to the SimVascular development team.  </p>
+
+<p>In addition, you should now be able to see the face names retained from your group segmentations. There should be wall and cap surfaces. If there are two caps for a surface, this means that after lofting, this surface had two holes. For a typical model, you should have one vessel like this and the rest should have one cap. If you have two caps, it may be the case that one of your vessels does not completely intersect into another vessel.</p>
+</section>
+<section id="modelingPolyDataFaces" class="subgroup"><h3>Creating and Naming PolyData Model Faces</h3>
+
+<p><strong>Extracting Faces:</strong></p>
+
+<p>Under &ldquo;Model → PolyData&rdquo; navigate to the “Face Manipulation” tab. </p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/polyData/faces/prenamedFaces.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>However,if you would like to have one wall surface, under “Boundary Extraction” set the angle of separation to around 50 degrees and click &ldquo;Extract Boundaries&rdquo;.</p>
+
+<p>A list of the model faces found will appear in the window to the right.</p>
+
+<p>If the number of faces listed does not match the number of faces expected, you must toggle the extraction angle to get the desired number. After extracting the faces, hover over a surface in the window and select &ldquo;p&rdquo;. Alternatively, select the face from the model in the list. Either of these methods will highlight your face in the 3D window. The key here is to make sure that the caps of your vessels are isolated from the other surfaces of your vessel. Once this is done, follow the direction below to &ldquo;Select and Combine Faces&rdquo;. </p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/polyData/faces/Selection.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p><strong>Naming Faces:</strong></p>
+
+<p>In order to rename a face, find the box called &ldquo;surf name: &rdquo; above the Object list.</p>
+<pre class="highlight plaintext"><code>    1. Pick the inflow face by hovering over it with the mouse and pressing “p” on the keyboard
+    2. Go to “surf name” box and type in “inflow_aorta”
+    3. Do the same with the outflow faces of the left iliac artery naming “outflow_left_iliac”
+    4. “pick” the face of the model (pick anywhere on model) and name this face “all_wall”
+</code></pre>
+
+<p>Naming the wall of the model:</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/polyData/faces/Naming.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p><strong>Combining and Deleting Faces:</strong></p>
+
+<p>If there are excess faces other than the ones named, and toggling the boundary extraction angle did not yield your desired results, attempt to highlight each to find the face it should be a part of. To further identify faces, select the Face ID, click “Color and Opacity → Change Selected Color” and select a color. The face should change to the selected color in the viewing window.      </p>
+<pre class="highlight plaintext"><code>    1. In the window highlight "all_wall" and any unamed faces. This can be easily done by holding "Shift" and clicking the first and last names or by holding "Ctrl" and clicking on the desired names.
+    2. Choose “Select and Combine Faces”
+3. The 
+    3. Click “Save Model” under "File Input/Output" to save model. You can rename this “demo_named” if want to keep the old vtp model
+    4. Now we only have boundaries where we want them (total of 4)
+</code></pre>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/polyData/faces/Combining.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>If necessary you can delete unwanted faces:</p>
+<pre class="highlight plaintext"><code>    Select and Delete Faces —&gt; Highlight faces in the window and click the button.
+</code></pre>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/polyData/faces/Deleting.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p><strong>Selecting and Remeshing Faces:</strong></p>
+
+<p>If you would like to improve the quality of the surfaces on your mesh prior to meshing, this is possible in both the PolyData tab and the Meshing tab. In order to remesh the surface in the PolyData tab, you must select a mesh edge size that will give a reasonable surface mesh, highlight the faces you would like to remesh and then select &ldquo;Select and Remesh Faces&rdquo;. This will take a while, as it must preserve the boundaries between surfaces, so be patient. </p>
+
+<p><strong>Filling Holes with Ids:</strong></p>
+
+<p>After deleting some faces of the model, it may be desirable to keep the current names of the other surfaces in the model. In this case, select &ldquo;Fill Holes with Ids&rdquo; and this will fill in the holes of the model. For each new surface created, a new id number will be assigned. It is possible to name these surfaces to your liking following the instructions above for &ldquo;Naming Faces&rdquo;.</p>
+</section>
+<section id="modelingEditingPolyData" class="subgroup"><h3>Editing a PolyData Model</h3>
+
+<p>In order to select and delete cells, make sure the model is being visualized as a full surface. This will insure that the cells are deleted from the actual model. </p>
+
+<p><strong>Deleting Cells:</strong></p>
+
+<p>If there is a unwanted bump or rough part of the model, specific cells can be selected and deleted and the hole created filled to create a smoother model. </p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/polyData/editing/selectingCells.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+<pre class="highlight plaintext"><code>    Navigate to “Model → PolyData” → “Delete Cells”
+    Press “e” while hovering over the model in the view window to view the edges of the triangulated surface
+    Select cells to be deleted by hovering over them and pressing “c”. 
+    Pressing “C” (Shift - c) will select multiple cells at the same time
+    “Delete Selected Cells” will delete these cells, making a hole in the model.
+    “Fill Holes” will fill in this hole with a triangulated mesh surface.
+    The goal is to create a new surface that is smoother than the section just deleted.
+</code></pre>
+
+<p><strong>Smoothing a PolyData Model (Global):</strong></p>
+
+<p>Navigate to &ldquo;Model → PolyData → Global Ops&rdquo;</p>
+
+<p>Selecting any of the following surface operators will edit the entire surface of the model</p>
+
+<p>Surface Operators summary:</p>
+<pre class="highlight plaintext"><code>    Smooth Poly Data Model: 
+            smooths the bumps and ridges of the model
+            Laplacian Smooth -&gt; Relax Factor -&gt; Choose between .01 and .05 
+
+
+    Butterfly Subdivision:
+            Divides the meshing triangles based on number placed in “Num Divisions”
+            For example, to divide each triangle in half: Num Divisions = 1
+            This creates a finer mesh made up of smaller triangles
+
+
+    Decimate Surface:
+            Based on target rate, removes certain triangles of the mesh while decreasing
+    error to give less triangles on the surface
+
+
+    WindowSync Smooth:
+            Smooths more than Laplacian smooth
+            still smooths caps of arteries
+
+    Densify:
+            divides triangles based on “Num Divisions”
+</code></pre>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/polyData/editing/globalSmoothing.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>    
+   
+
+<p><strong>Smoothing a PolyData Model (Local):</strong></p>
+
+<p>There are specialized operations to perform function only on specific portions of the model.</p>
+
+<p>Navigate to &ldquo;Model → PolyData → Local Ops&rdquo;. There are four ways to select regions of the model for localized operations. </p>
+<pre class="highlight plaintext"><code>1. Face Selection - Highlight faces in the list, and then click "Add Faces" to add the faces to the  "Local Parameters" window will be operated on. Only these faces will be operated on now when performing local operations.
+2. Blend - When faces are highlighted and then added to the "Local Parameters" window, a special region will be selected for operation. The boundary between the two faces will be found and the radius value corresponds to the size of a sphere to be selected from this boundary region to perform localized operations. 
+2. Sphere Region - With a model highlighted, select "Show Sphere Interactor". Move the sphere around and set a radius for the sphere. When the desired location is selected, click "Add Sphere Region". This will add a line to the "Local Parameters" window. 
+2. Cell Selection - First, a model must be displayed as a Full Model. Then, it is possible to select a cell with "c", or multiple with "C". After selecting cells, click "Add Cells" to add these cells to the "Local Parameters" window. 
+</code></pre>
+
+<p>Highlight the walls of the surface and click &ldquo;Add Faces&rdquo; under the &ldquo;Face Selection&rdquo; Tab. </p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/polyData/editing/selectingLocalRegions.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>    
+
+<p>This will add the following line to the Local Parameters window:</p>
+<pre class="highlight plaintext"><code>faces 1 2 ModelFaceID ActiveCells 1
+</code></pre>
+
+<p>These have the following meaning:</p>
+<pre class="highlight plaintext"><code>* faces - Use faces as local region selection
+* 1 2 - These are the ids of the faces the use for region selection
+* ModelFaceID (Do not change!) - This is the array to look for on the polydata for the face ids
+* ActiveCells (Do not change!) - This is the arrayname to give for region selection
+* 1 (Do not change!) - This designates that the output region selection array will be a cell data array
+</code></pre>
+
+<p>Now, when an operation is clicked (i.e Decimate, Laplacian Smooth), the information in the Local Parameters window is used to set the local regions. If you no longer want to use a region selection, the line should be deleted from this window!
+Local Surface Operators summary:</p>
+<pre class="highlight plaintext"><code>    Decimate Surface:
+            Based on target rate, removes certain triangles of the mesh while decreasing
+    error to give less triangles on the surface
+
+    Laplacian Smooth:
+            smooths the bumps and ridges of the model
+            Laplacian Smooth -&gt; Relax Factor -&gt; Choose between .01 and .05 
+
+Constrain Smooth:
+    Uses an alteration of laplacian smoothing. New surface becomes a 
+    minimization between the original surface and the laplacian smoothed
+    surface
+    Num Iters - Choose between 3 and 10
+    Constrain Factor - How much the smoothed surface should be 
+    pushed back to the original - Choose between 0 and 1.
+
+   Linear Suvdivision
+            Divides the meshing triangles based on number placed in “Num Divisions”
+            For example, to divide each triangle into four triangles: Num Divisions = 1
+            This creates a finer mesh made up of smaller triangles
+</code></pre>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/polyData/editing/localSmoothing.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>    
+
+<p><strong>Trimming a PolyData Model:</strong></p>
+
+<p>To trim a model, that is to cut a piece of it off that you don’t want:
+        Navigate to Model -&gt; PolyData -&gt; Trim</p>
+
+<p>Cut Surface:</p>
+<pre class="highlight plaintext"><code>Highlight the model you would like to trim in the box window.
+
+    Cut with plane -&gt; check on “Show Plane Interactor”
+    move the interactor to the desired position and click “Cut Above” or “Cut Below” 
+            This will cut either above or below the entire plane depending on its orientation shown by the arrows 
+
+    Cut with box -&gt; check on “Show Box Interactor”
+            expand the box in any direction by clicking and dragging the grey spheres that appear
+            rotate the box by clicking on a face of the box and dragging
+            “Cut With Box” -&gt; cuts all of the model contained inside the box
+
+    Save model: File Input/Output -&gt; click “Save Model”
+            name “demo_trimmed.vtp”, make sure it is in the right directory, click save
+</code></pre>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/polyData/editing/polydataTrim.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>    
+
+<p><br>
+<br>
+<br></p>
+</section>
+<section id="modelingCenterlinesPolyData" class="subgroup"><h3>Extracting Centerlines of a PolyData</h3>
+
+<p>Sometimes it is desirable to get the centerlines of your model. In order to do this, navigate to the &ldquo;Model → PolyData → Centerline Extraction&rdquo;</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/polyData/centerlines/addingFaces.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+<pre class="highlight plaintext"><code>    Highlight the desired model in the list and then click "Extract Centerlines"
+A window should pop up asking you to select the walls of your model. Highlight ALL of the walls of your model and then hit "Enter" on your keyboard
+Wait for a while as it can take some time to generate the centerlines
+When done, the centerlines will be visualized on the screen
+</code></pre>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/polyData/centerlines/visualizedCenterlines.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>Toggle the viewing of the centerlines and the voronoi diagram of the model. These can also be saved as polydatas and click the Save buttons to do this.</p>
+
+<p>In the end, it is also possible to convert these centerlines to SimVascular pathlines to alternatively use as guide lines for 2D segmentation. Click &ldquo;Convert Centerlines to Pathlines&rdquo; in order to do this. </p>
+
+<p><br>
+<br>
+<br></p>
+</section>
+</div>
+
+
+
+
+
+
+    </div>
+</div>    
+
+
+    <!-- /.container -->
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container-fluid text-center">
+          <ul class="nav navbar-nav">
+            <li><a>Copyright &copy; SV Development Team - 2014</a></li>                
+          </ul>
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    
+    <script src="js/jquery-1.11.0.js" type="text/javascript"></script><script src="js/bootstrap.min.js" type="text/javascript"></script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+      });
+      $('body').scrollspy({
+        target: '.bs-docs-sidebar',
+        offset: 40
+      });
+    </script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-55333921-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <script type="text/javascript"
+      src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+</body>
+
+</html>

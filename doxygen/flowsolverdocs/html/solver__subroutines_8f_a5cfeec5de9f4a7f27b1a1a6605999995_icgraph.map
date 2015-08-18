@@ -1,0 +1,7 @@
+<map id="initbctfromdat" name="initbctfromdat">
+<area shape="rect" id="node2" href="$solver__subroutines_8f.html#a33c732ebebad86700586c8261c848806" title="Initialize:time varying boundary condition. " alt="" coords="155,5,211,33"/>
+<area shape="rect" id="node3" href="$genini-coronary_8f.html#a16cf0fb2d7a7e3961640ab631ed89696" title="This routine reads the initial values in primitive form (density, velocity and temperature), satisfies the boundary conditions and converts them to Y&#45;variables. " alt="" coords="260,5,316,33"/>
+<area shape="rect" id="node4" href="$solver__subroutines_8f.html#a13211eaac8c2d63cd4cc2c2c8e26d459" title="This routine inputs the geometry and the boundary conditions. " alt="" coords="366,5,428,33"/>
+<area shape="rect" id="node5" href="$proces-varwall_8f.html#a193eda8eb1b52303714bf9ee7cb69e6e" title="This subroutine generates the problem data and calls the solution driver. " alt="" coords="477,5,539,33"/>
+<area shape="rect" id="node6" href="$main_8cxx.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="587,5,637,33"/>
+</map>

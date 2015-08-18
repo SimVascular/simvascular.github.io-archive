@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SimVascular Clinical Test Cases</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+
+    <link href="css/shop-item.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="font-awesome-4.1.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
+
+    <link rel="shortcut icon" href="img/favicon.ico">    
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                <i class="fa fa-bars" id="barIcon"></i>
+              </button>
+                <a class="navbar-brand" id="brandName" href="index.html">
+                  <img src="img/svlogo/svLogoSmallText.png" alt="...">
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">            
+                <ul class="nav navbar-nav">
+
+                  <!-- GETTING STARTED -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b><span class="fa fa-caret-square-o-right"></span> Getting Started</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsInstallation.html"><b><span class="fa fa-sign-in fa-rotate-90"></span> Installation</b></a></li>   
+                      <li role="presentation" class="divider"></li>                   
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsCompile.html"><b><span class="fa fa-file-text-o"></span> Compile Sources</b></a></li>  
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsCodeSnippets.html"><b><span class="fa fa-indent"></span> Code Snippets</b></a></li>                                  
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsQuickGuide.html"><b><span class="icon ion-ios7-bolt"></span> Quick Guide</b></a></li>           
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="comingSoon.html"><b>Doxygen Docs for C++</b></a></li>  
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="comingSoon.html"><b>Doxygen Docs for Tcl</b></a></li>  
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="comingSoon.html"><b>Doxygen Docs for Fortran</b></a></li>           
+                    </ul>
+                  </li>                  
+
+                  <!-- USER GUIDES -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b><span class="fa fa-user"></span> User Guides</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsImageGuide.html"><b><span class="icon ion-image"></span> Medical Images</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsModelGuide.html"><b><span class="icon ion-settings"></span> Modeling</b></a></li>
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsMeshing.html"><b><span class="icon ion-ios7-keypad"></span> Meshing</b></a></li>
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsFlowSolver.html"><b><span class="icon ion-play"></span> Simulation</b></a></li>
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsRefs.html"><b><span class="icon ion-document-text"></span> References</b></a></li>
+                    </ul>
+                  </li>
+
+                  <!-- CLINCAL CASES -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b><i class="fa fa-stethoscope"></i> Clinical Cases</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase1.html"><b><span class="fa fa-user-md"></span> Aortofemoral Normal (Case 1)</b></a></li>                      
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase2.html"><b><span class="fa fa-user-md"></span> Aortofemoral Normal (Case 2)</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase3.html"><b><span class="fa fa-user-md"></span> Coronary Normal (Case 3)</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase4.html"><b><span class="fa fa-user-md"></span> Healthy Pulmonary (Case 4)</b></a></li>
+                    </ul>
+                  </li>
+
+                  <!-- svCOMMUNITY -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b><i class="fa fa-users"></i> svCommunity</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/forums/viewforum.php?f=188"><b><span class="fa fa-users"></span> Public Forum</b></a></li>                                          
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/mailman/listinfo/simvascular-news"><b><span class="fa fa-sign-in"></span> Join News Mailing List</b></a></li>                      
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/pipermail/simvascular-news/"><b><span class="fa fa-pencil-square-o"></span> News Mailing List Archive</b></a></li>
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/mailman/listinfo/simvascular-users"><b><span class="fa fa-sign-in"></span> Join User Mailing List</b></a></li>                      
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="http://simvascular-users.40599.n7.nabble.com/"><b><span class="fa fa-pencil-square-o"></span> User Mailing List Archive</b></a></li>                      
+                    </ul>
+                  </li>
+
+                    <!-- <li><a href="clinicalCase1.html"><b>Aortofemoral Normal (Case 1)</b></a></li>
+                    <li><a href="clinicalCase2.html"><b>Aortofemoral Normal (Case 2)</b></a></li>
+                    <li><a href="clinicalCase3.html"><b>Coronary Normal (Case 3)</b></a></li>
+                    <li><a href="clinicalCase4.html"><b>Healthy Pulmonary (Case 4)</b></a></li>
+                    <li><a href="docsQuickGuide.html"><b>User Guides</b></a></li> -->
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <!--Nav Bar -->
+<div class="row">
+
+    <div class="col-xs-1 col-sm-1 hidden-md hidden-lg">
+    </div>
+
+    <!-- ONE COLUMN OF SPACE -->
+    <nav class="hidden-xs hidden-sm col-md-2 col-lg-2  bs-docs-sidebar">
+
+
+
+        <ul id="sidebar" class="nav nav-stacked fixed"> <!--Nav Bar -->
+<p><h3>Clinical Case 3</h3></p>
+<li><a href="#sec1">Clinical Significance</a></li>
+<li><a href="#sec2">Clinical Data</a></li>
+<li><a href="#sec3">Model Description</a></li>
+<li><a href="#sec4">Boundary Conditions</a></li>
+<li><a href="#sec5">Simulation and Results</a></li>
+
+</ul>
+
+    </nav>
+    
+    <!--Main Content -->
+    <div class="col-xs-10 col-sm-10 col-md-9 col-lg-9" id="manualContent">
+
+      <!-- ACTUAL CONTENT -->
+
+
+        <div><section id="sec1" class="group"><h1>Case 3 - Coronary Normal</h1>
+
+<h2>Clinical Significance</h2>
+
+<p>Coronary heart disease (CHD), also known as coronary artery disease is the leading cause of death in the U.S., causing about 25% of total deaths in the U.S. Coronary artery stenosis and occlusion is caused by plague build up, often fatty materials resulting in atherosclerosis, in the arteries supplying blood to heart muscle resulting in ischemia. Coronary Artery aneurysms are also caused by atherosclerosis or other disease; however coronary artery aneurysms are less common with incidence varying from 1.5-5%. The most common sites for coronary aneurysms, in order of highest to lowest frequency are the: (1) proximal Left anterior descending artery (LAD) and right coronary artery (RCA), (2) left main coronary artery (LMCA), (3) left circumflex artery (LCX), (4) and lastly the junction between the RCA and right posterior descending artery (RPD). Understanding blood flow may serve as the basis for understanding coronary artery disease and aneurysm formation and considering therapeutic options.</p>
+</section>
+<section id="sec2" class="group"><h2>Clinical Data</h2>
+
+<p>Patient-specific volumetric image data was obtained to create physiological models and blood flow simulations. The RAS coordinate system was assumed for the image data orientation. Voxel Spacing, voxel dimensions, and physical dimensions are provided in the Right-Left (R ), Anterior-Posterior (A), and Superior-Inferior (S) direction. The patient was 63 years old and female. Details of the image data are listed as below:</p>
+
+<p><strong>Volumetric image data details (CT)</strong>
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th></th>
+  <th>R</th>
+  <th>A</th>
+  <th>S</th>
+</tr>
+</thead>
+<tr>
+  <th>Voxel Spacing (mm)</th>
+  <td>0.3867</td>
+  <td>0.3867</td>
+  <td>0.5000</td>
+</tr>
+<tr>
+  <th>Voxel Dimensions</th>
+  <td>512</td>
+  <td>512</td>
+  <td>276</td>
+</tr>
+<tr>
+  <th>Physical Dimensions (mm)</th>
+  <td>198</td>
+  <td>198</td>
+  <td>138</td>
+</tr>
+</table></p>
+
+<p><strong>Coronal MIP image:</strong></p>
+
+<figure>
+  <img class="svImg svImgMd" src="clinical/coronary/imgs/mip.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+</section>
+<section id="sec3" class="group"><h2>Model Description</h2>
+
+<p>The normal coronary model includes the ascending aorta ostium and the left and right coronary arteries. Using Simvascular and the image data above, the geometrical models are generated by selecting centerline paths along the vessels, creating 2D segmentations along each of these paths, and then lofting the segmentations together to create a solid model.  A separate solid model was created for each vessel and Boolean addition was used to generate a single model representing the complete aortofemoral model. The vessel junctions were then blended to create a smoothed model.</p>
+
+<p><strong>Geometric model details</strong>
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th>Number of inlets</th>
+  <th>Number of outlets</th>
+  <th>Volume(cm<sup>3</sup>)</th>
+  <th>Surface Area(cm<sup>2</sup>)</th>
+  <th>Number of Vessel Paths</th>
+  <th>Number of 2-D Segmentations</th>
+</tr>
+</thead>
+<tr>
+  <td>1</td>
+  <td>25</td>
+  <td>64.629</td>
+  <td>159.507</td>
+  <td>30</td>
+  <td>341</td>
+</tr>
+</table></p>
+
+<p><strong>Physiological Assumption</strong>
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th>Blood Viscosity</th>
+  <th>Blood Density</th>
+</tr>
+</thead>
+<tr>
+  <td>0.04 g/cm•s<sup>2</sup></td>
+  <td>1.06 g/cm<sup>3</sup></td>
+</tr>
+</table></p>
+
+<p><strong>Vessel Paths:</strong></p>
+
+<figure>
+  <img class="svImg svImgMd" src="clinical/coronary/imgs/paths.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p><strong>Vessel Segmentations:</strong></p>
+
+<figure>
+  <img class="svImg svImgMd" src="clinical/coronary/imgs/segmentations.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p><strong>Vessel Geometric Model:</strong></p>
+
+<figure>
+  <img class="svImg svImgMd" src="clinical/coronary/imgs/model.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+</section>
+<section id="sec4" class="group"><h2>Boundary Conditions</h2>
+
+<h3>Inlet Boundary Conditions</h3>
+
+<p>A typical aortic waveform was prescribed to the inlet of the model. Since pulmonary blood flow is in series with the systemic blood flow it was assumed the amount of blood flow in the pulmonary circulation was approximately equal to that of the systemic circulation and the waveforms were similar. The inflow waveform used for the simulations was scaled to have a mean volumetric flow rate of 5 L/min and a period of 1 second (60 beats per minute).</p>
+
+<p><strong>Flow Waveform:</strong></p>
+
+<figure>
+  <img class="svImg svImgMd" src="clinical/coronary/imgs/inflow.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p><strong>Period and Cardiac Output:</strong>
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th>Period (s)</th>
+  <th>Cardiac Output (L/min)</th>
+  <th>Profile Type</th>
+</tr>
+</thead>
+<tr>
+  <td>1.0</td>
+  <td>5.0</td>
+  <td>Womersley</td>
+</tr>
+</table></p>
+
+<h3>Outlet Boundary Conditions</h3>
+
+<p>In order to represent the effects of vessels distal to the CFD model, a three-element Windkessel model can be applied at the aorta outlet. This model consists of proximal resistance (Rp), capacitance (C ), and distal resistance (Rd) representing the resistance of the proximal vessels, the capacitance of the proximal vessels, and the resistance of the distal vessels downstream.</p>
+
+<p><strong>Windkessel Model:</strong>
+<figure>
+  <img class="svImg svImgMd" src="clinical/coronary/imgs/windkessel.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure></p>
+
+<p>To define the parameters in the Windkessel model the mean flow to the aorta outlet was assumed to be 96% of the cardiac output. </p>
+
+<p><strong>RCR Values for the Aorta Outlet:</strong>
+<table class="table table-bordered">
+<tr><th>Face Name</th><th>R<sub>p</sub></th><th>C</th><th>R<sub>d</sub></th></tr>
+ <tr><td>aorta </td><td>105.3798 </td><td>0.001380 </td><td>1650.9508 </td></tr>
+ </table></p>
+
+<p>The coronary arteries were assumed to take 4% of the cardiac output with a split of 60% and 40% for the left and right coronary arteries respectively. Lumped parameter boundary conditions were applied at the coronary outlets using the coupled domain method. Coronary boundary condition parameters were tuned to match target flow splits and pressures. Target Pressures for both models were set based on typical pressures for healthy adults.</p>
+
+<p><strong>Coronary boundary condition parameter values in cgs</strong></p>
+
+<table class="table table-bordered">
+<tr><th>Face Name </th><th>dQinidT </th><th>dPinidT </th><th>q0 </th><th>q1 </th><th>q2 </th><th>p0 </th><th>p1 </th><th>p2 </th><th>b0 </th><th>b1 </th><th>b2 </th></tr>
+ <tr><td>LAD </td><td>0.00</td><td>100.0000000</td><td>992944.00</td><td>1416603.0</td><td>58881.7</td><td>1</td><td>1.8312</td><td>0.1899</td><td>0</td><td>1.67846</td><td>0</td></tr>
+ <tr><td>LAD_b1 </td><td>0.00</td><td>100.0000000</td><td>1162546.30</td><td>1658569.3</td><td>68939.1</td><td>1</td><td>1.8312</td><td>0.1899</td><td>0</td><td>1.67846</td><td>0</td></tr>
+ <tr><td>LAD_b2 </td><td>0.00</td><td>100.0000000</td><td>1185706.10</td><td>1691610.8</td><td>70312.5</td><td>1</td><td>1.8312</td><td>0.1899</td><td>0</td><td>1.67846</td><td>0</td></tr>
+ <tr><td>LAD_b3 </td><td>0.00</td><td>100.0000000</td><td>826069.50</td><td>1178528.1</td><td>48986.0</td><td>1</td><td>1.8312</td><td>0.1899</td><td>0</td><td>1.67846</td><td>0</td></tr>
+ <tr><td>LAD_b3_b1 </td><td>0.00</td><td>100.0000000</td><td>1517486.30</td><td>2164951.4</td><td>89987.1</td><td>1</td><td>1.8312</td><td>0.1899</td><td>0</td><td>1.67846</td><td>0</td></tr>
+ <tr><td>LAD_b4 </td><td>0.00</td><td>100.0000000</td><td>759878.00</td><td>1084094.8</td><td>45060.9</td><td>1</td><td>1.8312</td><td>0.1899</td><td>0</td><td>1.67846</td><td>0</td></tr>
+ <tr><td>LAD_b5 </td><td>0.00</td><td>100.0000000</td><td>738918.30</td><td>1054192.2</td><td>43817.9</td><td>1</td><td>1.8312</td><td>0.1899</td><td>0</td><td>1.67846</td><td>0</td></tr>
+ <tr><td>LAD_b6 </td><td>0.00</td><td>100.0000000</td><td>808233.90</td><td>1153082.6</td><td>47928.4</td><td>1</td><td>1.8312</td><td>0.1899</td><td>0</td><td>1.67846</td><td>0</td></tr>
+ <tr><td>LCX </td><td>0.00</td><td>100.0000000</td><td>1038845.90</td><td>1482089.7</td><td>61603.7</td><td>1</td><td>1.8312</td><td>0.1899</td><td>0</td><td>1.67846</td><td>0</td></tr>
+ <tr><td>LCX_b1 </td><td>0.00</td><td>100.0000000</td><td>1344891.40</td><td>1918715.6</td><td>79752.2</td><td>1</td><td>1.8312</td><td>0.1899</td><td>0</td><td>1.67846</td><td>0</td></tr>
+ <tr><td>LCX_b2 </td><td>0.00</td><td>100.0000000</td><td>1288722.30</td><td>1838580.8</td><td>76421.4</td><td>1</td><td>1.8312</td><td>0.1899</td><td>0</td><td>1.67846</td><td>0</td></tr>
+ <tr><td>LCX_b3 </td><td>0.00</td><td>100.0000000</td><td>1069381.80</td><td>1525654.4</td><td>63414.5</td><td>1</td><td>1.8312</td><td>0.1899</td><td>0</td><td>1.67846</td><td>0</td></tr>
+ <tr><td>LCX_b4 </td><td>0.00</td><td>100.0000000</td><td>986676.60</td><td>1407661.4</td><td>58510.0</td><td>1</td><td>1.8312</td><td>0.1899</td><td>0</td><td>1.67846</td><td>0</td></tr>
+ <tr><td>LCX_b4_b1 </td><td>0.00</td><td>100.0000000</td><td>1726743.90</td><td>2463492.9</td><td>102396.1</td><td>1</td><td>1.8312</td><td>0.1899</td><td>0</td><td>1.67846</td><td>0</td></tr>
+ <tr><td>LCX_b5 </td><td>0.00</td><td>100.0000000</td><td>1259845.60</td><td>1797383.3</td><td>74709.0</td><td>1</td><td>1.8312</td><td>0.1899</td><td>0</td><td>1.67846</td><td>0</td></tr>
+ <tr><td>LCX_b6 </td><td>0.00</td><td>100.0000000</td><td>1219871.10</td><td>1740352.8</td><td>72338.5</td><td>1</td><td>1.8312</td><td>0.1899</td><td>0</td><td>1.67846</td><td>0</td></tr>
+ <tr><td>LCX_b7 </td><td>0.00</td><td>100.0000000</td><td>1137720.30</td><td>1623150.8</td><td>67466.9</td><td>1</td><td>1.8312</td><td>0.1899</td><td>0</td><td>1.67846</td><td>0</td></tr>
+ <tr><td>RCA </td><td>0.00</td><td>100.0000000</td><td>610864.40</td><td>446299.9</td><td>30497.5</td><td>1</td><td>1.0406</td><td>0.1580</td><td>0</td><td>0.77164</td><td>0</td></tr>
+ <tr><td>RCA_b1 </td><td>0.00</td><td>100.0000000</td><td>721175.40</td><td>526893.5</td><td>36004.7</td><td>1</td><td>1.0406</td><td>0.1580</td><td>0</td><td>0.77164</td><td>0</td></tr>
+ <tr><td>RCA_b1_b1 </td><td>0.00</td><td>100.0000000</td><td>1219777.20</td><td>891173.9</td><td>60897.5</td><td>1</td><td>1.0406</td><td>0.1580</td><td>0</td><td>0.77164</td><td>0</td></tr>
+ <tr><td>RCA_b2 </td><td>0.00</td><td>100.0000000</td><td>849631.10</td><td>620743.8</td><td>42417.9</td><td>1</td><td>1.0406</td><td>0.1580</td><td>0</td><td>0.77164</td><td>0</td></tr>
+ <tr><td>RCA_b3 </td><td>0.00</td><td>100.0000000</td><td>362766.80</td><td>265038.8</td><td>18111.2</td><td>1</td><td>1.0406</td><td>0.1580</td><td>0</td><td>0.77164</td><td>0</td></tr>
+ <tr><td>RCA_b3_b1 </td><td>0.00</td><td>100.0000000</td><td>903602.80</td><td>660175.7</td><td>45112.5</td><td>1</td><td>1.0406</td><td>0.1580</td><td>0</td><td>0.77164</td><td>0</td></tr>
+ <tr><td>RCA_b4 </td><td>0.00</td><td>100.0000000</td><td>487599.30</td><td>356241.9</td><td>24343.4</td><td>1</td><td>1.0406</td><td>0.1580</td><td>0</td><td>0.77164</td><td>0</td></tr>
+</table>
+</section>
+<section id="sec5" class="group"><h2>Simulation &amp; Results</h2>
+
+<p>Conservation of mass and Navier-Stokes equations were solved using 3D finite element methods assuming rigid and non-slip walls. The number of time steps per cycle is 1000 with controlled residual. The simulation was run in cgs units for several cardiac cycles to allow the flow rate and pressure fields to stabilize. Simulation results were quantified for the last cardiac cycle. Paraview, an open-source scientific visualization application, was used to visualize the results. A volume rendering of velocity magnitude for three time points during the cardiac cycle can be seen.</p>
+
+<figure>
+  <img class="svImg svImgXl" src="clinical/coronary/imgs/vel.jpg"> 
+  <figcaption class="svCaption" >(a)Peak Systole; (b)End Systole; (\(c\))End Diastole</figcaption>
+</figure>
+
+<p>Surface distribution of time-averaged blood pressure (TABP), time-averaged wall shear stress (TAWSS) and oscillatory shear index (OSI) were also visualized and can be seen.</p>
+
+<figure>
+  <img class="svImg svImgXl" src="clinical/coronary/imgs/timeaverage.jpg"> 
+  <figcaption class="svCaption" >(a)TABP; (b)TAWSS; (\(c\))OSI</figcaption>
+</figure>
+
+<p><br>
+<br></p>
+</section>
+</div>
+
+
+    </div>
+</div>    
+
+
+    <!-- /.container -->
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container-fluid text-center">
+          <ul class="nav navbar-nav">
+            <li><a>Copyright &copy; SV Development Team - 2014</a></li>                
+          </ul>
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    
+    <script src="js/jquery-1.11.0.js" type="text/javascript"></script><script src="js/bootstrap.min.js" type="text/javascript"></script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+      });
+      $('body').scrollspy({
+        target: '.bs-docs-sidebar',
+        offset: 40
+      });
+    </script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-55333921-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <script type="text/javascript"
+      src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+</body>
+
+</html>

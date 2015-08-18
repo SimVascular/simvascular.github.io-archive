@@ -1,0 +1,1287 @@
+<html>
+<head>
+<title>File 'Core/sv.tcl'</title>
+<link rel=stylesheet href="styles.css"
+ type="text/css">
+</head>
+<body >
+<h1>File 'Core/sv.tcl'</h1><hr class="navbar"><p class="navbar"><a href="index.htm" class="navbar">Home</a> | <a href="files.html" class="index-file">Files</a> | <a href="procs.html" class="index-procedure">Procedures</a> | <a href="namespaces.html" class="index-namespace">Namespaces</a> </p><hr class="navbar">
+<div class="file-header"><dl><dt><span class="header-title">Depends on</span><dd><span class="header-value">md5</span></dl></div><hr class="file"><ul class="proc-listing"><li class="proc-listing"><a href="f_Core_sv.tcl.html#pAreaMetric_go" class="proc">AreaMetric_go</a> <span class="arg-list">(dim truePoly approxPoly truePhi approxPhi)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pAreaMetric_poly" class="proc">AreaMetric_poly</a> <span class="arg-list">(truePgn approxPgn truePhi approxPhi)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pListToTuple" class="proc">ListToTuple</a> <span class="arg-list">(list)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pRemoveFromList" class="proc">RemoveFromList</a> <span class="arg-list">(in item)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pTupleToList" class="proc">TupleToList</a> <span class="arg-list">(tuple)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pbctdat_checkFile" class="proc">bctdat_checkFile</a> <span class="arg-list">(bctdat_file)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pbctdat_combine" class="proc">bctdat_combine</a> <span class="arg-list">(inFiles outFile)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pbctdat_getNumNodes" class="proc">bctdat_getNumNodes</a> <span class="arg-list">(bctdat_file)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pcancelTail" class="proc">cancelTail</a> <span class="arg-list">(file var cmd)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pcleanList" class="proc">cleanList</a> <span class="arg-list">(list)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pfile_append" class="proc">file_append</a> <span class="arg-list">(inFiles outFile)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pfile_cat" class="proc">file_cat</a> <span class="arg-list">(inFiles outFile)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pfile_dos2unix" class="proc">file_dos2unix</a> <span class="arg-list">(inFile outFile)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pfile_find" class="proc">file_find</a> <span class="arg-list">(dir wildcard args)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pfindCmds" class="proc">findCmds</a> <span class="arg-list">(substr)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pgeom_applyTransformMatrix" class="proc">geom_applyTransformMatrix</a> <span class="arg-list">(src matrix dst)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pgeom_calcTransformMatrixToRAS" class="proc">geom_calcTransformMatrixToRAS</a> <span class="arg-list">(xyzPts rasPts rtnMatrix4x4)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pgeom_calcTransformMatrixToRASWithTol" class="proc">geom_calcTransformMatrixToRASWithTol</a> <span class="arg-list">(xyzPts rasPts diffTol dirTol rotVectTol debugOn rtnMatrix4x4)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pgeom_circle" class="proc">geom_circle</a> <span class="arg-list">(r x0 y0 dstName)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pgeom_closestPt" class="proc">geom_closestPt</a> <span class="arg-list">(polyObj desiredPt)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pgeom_createNormals" class="proc">geom_createNormals</a> <span class="arg-list">(srcPd dstName)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pgeom_ellipse" class="proc">geom_ellipse</a> <span class="arg-list">(a b x0 y0 dstName)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pgeom_getFeatureEdges" class="proc">geom_getFeatureEdges</a> <span class="arg-list">(srcPd dstName)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pgeom_getFreeEdges" class="proc">geom_getFreeEdges</a> <span class="arg-list">(srcPd dstName)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pgeom_getPts" class="proc">geom_getPts</a> <span class="arg-list">(pd rnodes)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pgeom_getSubsetOfPts" class="proc">geom_getSubsetOfPts</a> <span class="arg-list">(pd1 pd2 tol rnodes)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pgeom_mapVectors" class="proc">geom_mapVectors</a> <span class="arg-list">(velocityMap inlet_mesh_face result)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pgeom_mkLinesFromPts" class="proc">geom_mkLinesFromPts</a> <span class="arg-list">(ptList dstName closed)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pgeom_mkPtsPd" class="proc">geom_mkPtsPd</a> <span class="arg-list">(ptList dstName)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pgeom_openLinesFromPts" class="proc">geom_openLinesFromPts</a> <span class="arg-list">(ptList dstName)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pgeom_pdFromOrderedPts" class="proc">geom_pdFromOrderedPts</a> <span class="arg-list">(ptList dstName)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pgeom_polygonFromPts" class="proc">geom_polygonFromPts</a> <span class="arg-list">(pts dstName)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pgeom_scaleScalars" class="proc">geom_scaleScalars</a> <span class="arg-list">(src scaleFactor dst)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pgeom_scaleVectorComponents" class="proc">geom_scaleVectorComponents</a> <span class="arg-list">(src scaleFactor dst)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pgeom_triangulate" class="proc">geom_triangulate</a> <span class="arg-list">(input output)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pgroup_add" class="proc">group_add</a> <span class="arg-list">(name obj id)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pgroup_calcAreas" class="proc">group_calcAreas</a> <span class="arg-list">(grpname)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pgroup_create" class="proc">group_create</a> <span class="arg-list">(name)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pgroup_delete" class="proc">group_delete</a> <span class="arg-list">(name)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pgroup_details" class="proc">group_details</a> <span class="arg-list">(name args)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pgroup_exists" class="proc">group_exists</a> <span class="arg-list">(name)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pgroup_get" class="proc">group_get</a> <span class="arg-list">(name)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pgroup_iditems" class="proc">group_iditems</a> <span class="arg-list">(name id)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pgroup_idtaken" class="proc">group_idtaken</a> <span class="arg-list">(name id)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pgroup_itemid" class="proc">group_itemid</a> <span class="arg-list">(name obj)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pgroup_itemix" class="proc">group_itemix</a> <span class="arg-list">(name obj)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pgroup_names" class="proc">group_names</a> <span class="arg-list">()</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pgroup_readProfiles" class="proc">group_readProfiles</a> <span class="arg-list">(name filename)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pgroup_remove" class="proc">group_remove</a> <span class="arg-list">(name obj)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pgroup_renumber" class="proc">group_renumber</a> <span class="arg-list">(name incrby)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pgroup_restorePCMRISegs" class="proc">group_restorePCMRISegs</a> <span class="arg-list">(name)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pgroup_restorePreopSegs" class="proc">group_restorePreopSegs</a> <span class="arg-list">(name)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pgroup_saveProfiles" class="proc">group_saveProfiles</a> <span class="arg-list">(name filename)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pgroup_size" class="proc">group_size</a> <span class="arg-list">(name)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pgroup_summary" class="proc">group_summary</a> <span class="arg-list">(grpname)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pgroup_summary_all" class="proc">group_summary_all</a> <span class="arg-list">(args)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pgroup_writeVTK" class="proc">group_writeVTK</a> <span class="arg-list">(grpname imagename prefix)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#phtmlFilter" class="proc">htmlFilter</a> <span class="arg-list">(text)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pimg2_readSliceROI_5X" class="proc">img2_readSliceROI_5X</a> <span class="arg-list">(filename rtnImg roi)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pimg2_readSlice_5X" class="proc">img2_readSlice_5X</a> <span class="arg-list">(filename rtnImg)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pimg_GetVOI" class="proc">img_GetVOI</a> <span class="arg-list">(filePrefix voxelDims logicalDims startImgNum hdrSz subvol filePattern)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pimg_calcBaselineCorrectionEqn" class="proc">img_calcBaselineCorrectionEqn</a> <span class="arg-list">(region_list image_list order)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pimg_calcTransformMatrixToRAS" class="proc">img_calcTransformMatrixToRAS</a> <span class="arg-list">(imageFilename rtnMatrix4x4)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pimg_calculateStatistics" class="proc">img_calculateStatistics</a> <span class="arg-list">(img rtnAvg rtnDeviation rtnMin rtnMax)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pimg_contour" class="proc">img_contour</a> <span class="arg-list">(vtkImg val)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pimg_createMIP" class="proc">img_createMIP</a> <span class="arg-list">(files rtnImg)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pimg_createMIPfromVolume" class="proc">img_createMIPfromVolume</a> <span class="arg-list">(imgvol direction slices mipImg)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pimg_createOrientedPolyData" class="proc">img_createOrientedPolyData</a> <span class="arg-list">(fn rtnPD)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pimg_createSegVelPD" class="proc">img_createSegVelPD</a> <span class="arg-list">(velImageX velImageY velImageZ correctX correctY correctZ directions segmentationPolyData ignoreFactor zeroBoundFlag resultPolyData)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pimg_findObliqueCornersMinMaxRAS" class="proc">img_findObliqueCornersMinMaxRAS</a> <span class="arg-list">(filename)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pimg_findPCMRIorientation" class="proc">img_findPCMRIorientation</a> <span class="arg-list">(fn rtnxyz rtndirections)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pimg_getAllPassImages" class="proc">img_getAllPassImages</a> <span class="arg-list">(dirname passnum)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pimg_getCollapseImages" class="proc">img_getCollapseImages</a> <span class="arg-list">(dirname)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pimg_getNumPasses" class="proc">img_getNumPasses</a> <span class="arg-list">(dirname)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pimg_getPassImages" class="proc">img_getPassImages</a> <span class="arg-list">(dirname passnum)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pimg_getSliceAtPathPoint" class="proc">img_getSliceAtPathPoint</a> <span class="arg-list">(volumeImage path ptId ext rtnImg rtnPot)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pimg_guessRASmax" class="proc">img_guessRASmax</a> <span class="arg-list">(filename)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pimg_guessRASmin" class="proc">img_guessRASmin</a> <span class="arg-list">(filename)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pimg_guessVolParams" class="proc">img_guessVolParams</a> <span class="arg-list">(filename)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pimg_magGrad" class="proc">img_magGrad</a> <span class="arg-list">(img)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pimg_readDICOM" class="proc">img_readDICOM</a> <span class="arg-list">(dirname change_to_cm_flag rtnobj)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pimg_readDICOMwriteXML" class="proc">img_readDICOMwriteXML</a> <span class="arg-list">(dirname fn change_to_cm_flag)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pimg_readSliceROI_5X" class="proc">img_readSliceROI_5X</a> <span class="arg-list">(fn dims spacing hdrSz roi)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pimg_readSlice_5X" class="proc">img_readSlice_5X</a> <span class="arg-list">(fn dims spacing hdrSz)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pimg_sortPasses" class="proc">img_sortPasses</a> <span class="arg-list">(dirname)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pimg_writeXML" class="proc">img_writeXML</a> <span class="arg-list">(vimg fn)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pintersect_lset" class="proc">intersect_lset</a> <span class="arg-list">(truePhi approxPhi interPgn)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#plset2_cfgVExpDecay" class="proc">lset2_cfgVExpDecay</a> <span class="arg-list">(core v kt expand stopV calcDecayConstBy mgFactor potentialValueDecay)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#plset2_cfgVPotential" class="proc">lset2_cfgVPotential</a> <span class="arg-list">(core v klow kupp stopV calcPotConstBy pFactor potentialValuePotential)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#plset2_getMinH" class="proc">lset2_getMinH</a> <span class="arg-list">(core)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#plset2_gridType" class="proc">lset2_gridType</a> <span class="arg-list">(core)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#plset2_loop" class="proc">lset2_loop</a> <span class="arg-list">(core acInterval ac maxTS rebuildPhiFreq)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#plset2_main" class="proc">lset2_main</a> <span class="arg-list">(img pot gridType maxTS gridFactor stopV isotropicFlag rebuildPhiFreq goodnessCriteria acInterval r x y z kt calcDecayConstBy magGradFactor potentialValueDecay klow kupp calcPotConstBy pFactor potentialValuePotential rtnPd)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#plset2_showV" class="proc">lset2_showV</a> <span class="arg-list">(v core)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#plset2_showVConst" class="proc">lset2_showVConst</a> <span class="arg-list">(v)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pmath_addVectors" class="proc">math_addVectors</a> <span class="arg-list">(a b)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pmath_angleBtw3DVectors" class="proc">math_angleBtw3DVectors</a> <span class="arg-list">(vecA vecB)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pmath_areaTriangle" class="proc">math_areaTriangle</a> <span class="arg-list">(a b c)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pmath_circlePt" class="proc">math_circlePt</a> <span class="arg-list">(angleDeg radius)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pmath_cross" class="proc">math_cross</a> <span class="arg-list">(vecA vecB)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pmath_d2f" class="proc">math_d2f</a> <span class="arg-list">(in)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pmath_degToRad" class="proc">math_degToRad</a> <span class="arg-list">(deg)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pmath_distance" class="proc">math_distance</a> <span class="arg-list">(a b)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pmath_dot" class="proc">math_dot</a> <span class="arg-list">(vecA vecB)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pmath_findMaxPos" class="proc">math_findMaxPos</a> <span class="arg-list">(args)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pmath_isDouble" class="proc">math_isDouble</a> <span class="arg-list">(in)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pmath_isInt" class="proc">math_isInt</a> <span class="arg-list">(in)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pmath_linInterp1D" class="proc">math_linInterp1D</a> <span class="arg-list">(domA domB rangeA rangeB domTarget)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pmath_magnitude" class="proc">math_magnitude</a> <span class="arg-list">(vec)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pmath_minVec" class="proc">math_minVec</a> <span class="arg-list">(v)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pmath_normalize" class="proc">math_normalize</a> <span class="arg-list">(vec)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pmath_pi" class="proc">math_pi</a> <span class="arg-list">()</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pmath_radToDeg" class="proc">math_radToDeg</a> <span class="arg-list">(rad)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pmath_scaleVec" class="proc">math_scaleVec</a> <span class="arg-list">(v sc)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pmath_subVectors" class="proc">math_subVectors</a> <span class="arg-list">(a b)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pmath_translatePt" class="proc">math_translatePt</a> <span class="arg-list">(pt vec)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pmath_writeCirclePgn" class="proc">math_writeCirclePgn</a> <span class="arg-list">(radius ctrVec fn)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pmesh_checkForAdapt" class="proc">mesh_checkForAdapt</a> <span class="arg-list">(smsfile solidmodelfile)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pmesh_readMSS" class="proc">mesh_readMSS</a> <span class="arg-list">(filename resObj)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pmesh_writeInflowFaceVtk" class="proc">mesh_writeInflowFaceVtk</a> <span class="arg-list">(solidfile atrfile outfile)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#ppath_ApplyTransform" class="proc">path_ApplyTransform</a> <span class="arg-list">(tr pos nrm xhat)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#ppath_MakePolyData" class="proc">path_MakePolyData</a> <span class="arg-list">(path objName)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#ppath_calcLength" class="proc">path_calcLength</a> <span class="arg-list">(pathId string_of_ids)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#ppath_renumberPaths" class="proc">path_renumberPaths</a> <span class="arg-list">(maps)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#ppause" class="proc">pause</a> <span class="arg-list">()</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#ppost_cutAndClipResults" class="proc">post_cutAndClipResults</a> <span class="arg-list">(meshobj res_objs pcmri_file path_id cut_plane_nrm cut_plane_org sphere_center sphere_radius sliced_results_dir vol_flow_res_file save_repos_objs_flag integrate_surface_flag integrate_surface_tensorType mesh_scaled_by_factor)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#ppost_getSurfMesh" class="proc">post_getSurfMesh</a> <span class="arg-list">(mesh reposObj)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#ppost_sample" class="proc">post_sample</a> <span class="arg-list">(filenames dims scaleFactorBB)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#ppost_sampleToRawVolume" class="proc">post_sampleToRawVolume</a> <span class="arg-list">(fn dims origin spacing arrayname component outprefix)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#ppost_sampleToVolume" class="proc">post_sampleToVolume</a> <span class="arg-list">(fn dims origin spacing outfn)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pprintList" class="proc">printList</a> <span class="arg-list">(listIn)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pquit" class="proc">quit</a> <span class="arg-list">()</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#prepos_deleteList" class="proc">repos_deleteList</a> <span class="arg-list">(objList)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#prepos_delete_wrapper" class="proc">repos_delete_wrapper</a> <span class="arg-list">(args)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#prepos_getObjTok" class="proc">repos_getObjTok</a> <span class="arg-list">(name field)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#prepos_keyInUse" class="proc">repos_keyInUse</a> <span class="arg-list">(obj key)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#prepos_sorted" class="proc">repos_sorted</a> <span class="arg-list">(pat field)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#prepos_subList" class="proc">repos_subList</a> <span class="arg-list">(pat)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pshowArray" class="proc">showArray</a> <span class="arg-list">(arrayName)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pshowCmds" class="proc">showCmds</a> <span class="arg-list">(substr)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#psolid_instances" class="proc">solid_instances</a> <span class="arg-list">()</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#psolid_unionSet" class="proc">solid_unionSet</a> <span class="arg-list">(operands dstName)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pstring_parse" class="proc">string_parse</a> <span class="arg-list">(mystr min max)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#ptail" class="proc">tail</a> <span class="arg-list">(file rx delay var stats fid)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#ptrimInt" class="proc">trimInt</a> <span class="arg-list">(str)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#ptrimLeadZeros" class="proc">trimLeadZeros</a> <span class="arg-list">(str)</span><li class="proc-listing"><a href="f_Core_sv.tcl.html#pview_slice" class="proc">view_slice</a> <span class="arg-list">(fn)</span></ul><hr class="file"><a name="pAreaMetric_go"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">AreaMetric_go</span> <span class="arg-list">(dim truePoly approxPoly truePhi approxPhi)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Calculates the goodness metric from two PolyData objects. For dim=2, this routine uses <span class="xref-procs"><a href="f_Core_sv.tcl.html#pAreaMetric_poly" class="proc">AreaMetric_poly</a></span>. For dim=3, this routine uses <span class="xref-procs"><span class="error">AreaMetric_shapesPoly3d</span></span>.</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Dangers</span>: Requires Shapes kernel for 3-D.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: dim
+</td><td class="argument-description">spatial dimension.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: truePoly
+</td><td class="argument-description">PolyData object of dimension dim.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: approxPoly
+</td><td class="argument-description">PolyData object of dimension dim.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: truePhi
+</td><td class="argument-description">level set scalar function StructuredPts object.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: approxPhi
+</td><td class="argument-description">level set scalar function StructuredPts object.
+</td></tr></table></p><a name="pAreaMetric_poly"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">AreaMetric_poly</span> <span class="arg-list">(truePgn approxPgn truePhi approxPhi)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Calculates the goodness metric from two 2-D PolyData objects.</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Dangers</span>: This routine currently only works for SparseGrid.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Notes</span>: The equation for the goodness metric is: <br> <br> goodness = sqrt ( (Aintersect / Atrue) * (Aintersect / Aapprox) )
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: truePgn
+</td><td class="argument-description">True 2-D PolyData object.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: approxPgn
+</td><td class="argument-description">Approximate 2-D PolyData object.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: truePhi
+</td><td class="argument-description">level set scalar function StructuredPts object.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: approxPhi
+</td><td class="argument-description">level set scalar function StructuredPts object.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: goodness metric between 0 and 1.
+</td></tr></table></p><a name="pListToTuple"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">ListToTuple</span> <span class="arg-list">(list)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Converts a Tcl list into a comma-separated, parenthesis-enclosed tuple.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: list
+</td><td class="argument-description">Input list.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: Tuple.
+</td></tr></table></p><a name="pRemoveFromList"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">RemoveFromList</span> <span class="arg-list">(in item)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Remove the item from the list if it exists.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: in
+</td><td class="argument-description">Input list.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: item
+</td><td class="argument-description">Item to remove.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: List without item.
+</td></tr></table></p><a name="pTupleToList"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">TupleToList</span> <span class="arg-list">(tuple)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Converts a comma-separated, parenthesis-enclosed tuple into a Tcl list.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: tuple
+</td><td class="argument-description">Comma-separated, parathesis-enclosed tuple.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: List.
+</td></tr></table></p><a name="pbctdat_checkFile"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">bctdat_checkFile</span> <span class="arg-list">(bctdat_file)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Verifies the header by actually counting the number of nodal definitions found in the file.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: bctdat_file
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1406"></a>not documented</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: Causes an error if the number of nodes in the file does not match the number specified in the header.
+</td></tr></table></p><a name="pbctdat_combine"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">bctdat_combine</span> <span class="arg-list">(inFiles outFile)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">This procedure creates a new bct.dat file by appending all input bct.dat files. In addition, each line is terminated with only a linefeed. Any carriage return / linefeed sequence at the end of an input line of a text will be replaced with just a linefeed (unix-style text file). WARNING: This code does no sanity checks of the input WARNING: files whatsoever.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: inFiles
+</td><td class="argument-description">List of input text files.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: outFile
+</td><td class="argument-description">Output text file.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: status
+</td></tr></table></p><a name="pbctdat_getNumNodes"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">bctdat_getNumNodes</span> <span class="arg-list">(bctdat_file)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Return the number of nodes in a phasta bct.dat file.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: bctdat_file
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1407"></a>not documented</span>
+</td></tr></table></p><a name="pcancelTail"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">cancelTail</span> <span class="arg-list">(file var cmd)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1408"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: file
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1409"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: var (= {})
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1410"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: cmd (= {})
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1411"></a>not documented</span>
+</td></tr></table></p><a name="pcleanList"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">cleanList</span> <span class="arg-list">(list)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Removes all empty strings from a list.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: list
+</td><td class="argument-description">input list.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: List without empty strings.
+</td></tr></table></p><a name="pfile_append"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">file_append</span> <span class="arg-list">(inFiles outFile)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">This procedure creates a new output file by appending all of the input files.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: inFiles
+</td><td class="argument-description">List of input text files.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: outFile
+</td><td class="argument-description">Output text file.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: status
+</td></tr></table></p><a name="pfile_cat"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">file_cat</span> <span class="arg-list">(inFiles outFile)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">This procedure creates a new output file by appending all of the input files. In addition, each line is terminated with only a linefeed. Any carriage return / linefeed sequence at the end of an input line of a text will be replaced with just a linefeed (unix-style text file).</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: inFiles
+</td><td class="argument-description">List of input text files.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: outFile
+</td><td class="argument-description">Output text file.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: status
+</td></tr></table></p><a name="pfile_dos2unix"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">file_dos2unix</span> <span class="arg-list">(inFile outFile)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">This procedure removes the carriage return / linefeed sequence from the end of each line of a text in a text file and replaces it with just a linefeed (unix-style text file).</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: inFile
+</td><td class="argument-description">Input text file.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: outFile
+</td><td class="argument-description">Output text file.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: status
+</td></tr></table></p><a name="pfile_find"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">file_find</span> <span class="arg-list">(dir wildcard args)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">This procedure recursively searches for pattern and returns a tcl list of the files matching pattern.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: dir
+</td><td class="argument-description">starting directory
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: wildcard
+</td><td class="argument-description">pattern to match
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: args
+</td><td class="argument-description">optional return variable
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: status
+</td></tr></table></p><a name="pfindCmds"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">findCmds</span> <span class="arg-list">(substr)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">find commands starting with substr.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: substr
+</td><td class="argument-description">String to match.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: List of commands starting with substr.
+</td></tr></table></p><a name="pgeom_applyTransformMatrix"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">geom_applyTransformMatrix</span> <span class="arg-list">(src matrix dst)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">transform a src PolyData with a vtkMatrix4x4 matrix.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: src
+</td><td class="argument-description">input PolyData object.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: matrix
+</td><td class="argument-description">vtkMatrix4x4 transformation matrix.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: dst
+</td><td class="argument-description">output PolyData object.
+</td></tr></table></p><a name="pgeom_calcTransformMatrixToRAS"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">geom_calcTransformMatrixToRAS</span> <span class="arg-list">(xyzPts rasPts rtnMatrix4x4)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Joy Ku</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Calculates the transformations required to move a plane specified by 3 points in (XYZ) space into the appropriate location in 3-D (RAS) space. Hardcoded tolerances used!</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Notes</span>: Method is exact copy of img_calcTransformMatrixToRAS (CVS-1.36). Only inputs are changed.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: xyzPts
+</td><td class="argument-description">list of 3D points in XYZ space in the following order:
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: rasPts
+</td><td class="argument-description">list of 3D points in RAS space in the following order:
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: rtnMatrix4x4
+</td><td class="argument-description">vtkMatrix4x4 matrix to transform image into 3-D space.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: status
+</td></tr></table></p><a name="pgeom_calcTransformMatrixToRASWithTol"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">geom_calcTransformMatrixToRASWithTol</span> <span class="arg-list">(xyzPts rasPts diffTol dirTol rotVectTol debugOn rtnMatrix4x4)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Joy Ku</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Calculates the transformations required to move a plane specified by 3 points in (XYZ) space into the appropriate location in 3-D (RAS) space.</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Notes</span>: Method is exact copy of img_calcTransformMatrixToRAS (CVS-1.36). Only inputs are changed.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: xyzPts
+</td><td class="argument-description">list of 3D points in XYZ space in the following order:
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: rasPts
+</td><td class="argument-description">list of 3D points in RAS space in the following order:
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: diffTol
+</td><td class="argument-description">how much the final points can vary from the initial points.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: dirTol
+</td><td class="argument-description">tolerance used to determine parallel vectors.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: rotVectTol
+</td><td class="argument-description">tolerance used to determine A x B equals zero vector.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: debugOn
+</td><td class="argument-description">flag to output simple debugging information.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: rtnMatrix4x4
+</td><td class="argument-description">vtkMatrix4x4 matrix to transform image into 3-D space.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: status
+</td></tr></table></p><a name="pgeom_circle"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">geom_circle</span> <span class="arg-list">(r x0 y0 dstName)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Make a circular profile with the given radius. The profile will be in the xy plane.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: r
+</td><td class="argument-description">radius
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: x0
+</td><td class="argument-description">x-center of circle.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: y0
+</td><td class="argument-description">y-center of circle.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: dstName
+</td><td class="argument-description">Desired repository PolyData name.
+</td></tr></table></p><a name="pgeom_closestPt"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">geom_closestPt</span> <span class="arg-list">(polyObj desiredPt)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Searches a PolyData object for the closest point to pt.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: polyObj
+</td><td class="argument-description">PolyData object.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: desiredPt
+</td><td class="argument-description">Point to find closest point.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: Closest point found in PolyData to pt.
+</td></tr></table></p><a name="pgeom_createNormals"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">geom_createNormals</span> <span class="arg-list">(srcPd dstName)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Uses vtkPolyDataNormals to create normals for input pd.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: srcPd
+</td><td class="argument-description">Input PolyData object.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: dstName
+</td><td class="argument-description">Destination PolyData name.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: Returns a Tcl error if there is a problem.
+</td></tr></table></p><a name="pgeom_ellipse"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">geom_ellipse</span> <span class="arg-list">(a b x0 y0 dstName)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Make an ellipse. The profile will be in the xy plane. Major axis is horizontal.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: a
+</td><td class="argument-description">a.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: b
+</td><td class="argument-description">b.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: x0
+</td><td class="argument-description">x-center of ellipse.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: y0
+</td><td class="argument-description">y-center of ellipse.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: dstName
+</td><td class="argument-description">Desired repository PolyData name.
+</td></tr></table></p><a name="pgeom_getFeatureEdges"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">geom_getFeatureEdges</span> <span class="arg-list">(srcPd dstName)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Uses vtkFeatureEdges to extract the boundary edges of the given PolyData object. Returns a newly-constructed PolyData result.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: srcPd
+</td><td class="argument-description">Input PolyData object.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: dstName
+</td><td class="argument-description">Destination PolyData name.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: Returns a Tcl error if there is a problem.
+</td></tr></table></p><a name="pgeom_getFreeEdges"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">geom_getFreeEdges</span> <span class="arg-list">(srcPd dstName)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Uses vtkFeatureEdges to extract the boundary edges of the given PolyData object. Returns a newly-constructed PolyData result.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: srcPd
+</td><td class="argument-description">Input PolyData object.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: dstName
+</td><td class="argument-description">Destination PolyData name.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: Returns a Tcl error if there is a problem.
+</td></tr></table></p><a name="pgeom_getPts"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">geom_getPts</span> <span class="arg-list">(pd rnodes)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Simple proc to create a Tcl list containing the the points in a PolyData object.</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Notes</span>: This code should be rewritten in C.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: pd
+</td><td class="argument-description">Input PolyData object.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: rnodes
+</td><td class="argument-description">Returned Tcl list of points.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: status
+</td></tr></table></p><a name="pgeom_getSubsetOfPts"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">geom_getSubsetOfPts</span> <span class="arg-list">(pd1 pd2 tol rnodes)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">This routine creates a Tcl list of points contained in pd1 not found in pd2.</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Notes</span>: This routine is horribly slow for large data sets. This is due to a simplisitic implementation and the fact this code should be written in C.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: pd1
+</td><td class="argument-description">PolyData object (initial set of points).
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: pd2
+</td><td class="argument-description">PolyData object (exclude set of points).
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: tol
+</td><td class="argument-description">Tolerance. Points less than a distance of tol apart are assumed to be the same.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: rnodes
+</td><td class="argument-description">Tcl list of nodes in pd1 not contained in pd2.
+</td></tr></table></p><a name="pgeom_mapVectors"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">geom_mapVectors</span> <span class="arg-list">(velocityMap inlet_mesh_face result)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">This proc maps the vectors given on an input PolyData object to a destination PolyData object and returns a new PolyData. This routine is not general and makes numerous assumptions about the nature of each point set. See notes.</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Notes</span>: This code does a simple mapping of the vector data from the points of the input PolyData to the points of the the output PolyData. This mapping assumes that the objects are similar in that if you send a ray from the center of each object the relationship between inner (r) and outer (R) radius is given by r_out = r_in * R_out / R_in for any given angle. We also scale the result vectors assuming they represent a flux so that the input and output PolyData's have the same through plane flux. This code requires that both PolyData's be in the z=0 plane. Each should consist of a single region. Iso-parametric interpolation functions are used to evaluate the vector values and for calculating through plane flow rate. This code would be much faster if it were rewritten in C.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: velocityMap
+</td><td class="argument-description">Input PolyData with defined vector data.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: inlet_mesh_face
+</td><td class="argument-description">PolyData onto which to map the vector data.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: result
+</td><td class="argument-description">Name of new repository PolyData object to be created.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: status
+</td></tr></table></p><a name="pgeom_mkLinesFromPts"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">geom_mkLinesFromPts</span> <span class="arg-list">(ptList dstName closed)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Makes a repository PolyData object consisting of a set of lines defined by the given points.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: ptList
+</td><td class="argument-description">List of points.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: dstName
+</td><td class="argument-description">destination PolyData name.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: closed
+</td><td class="argument-description">0=open , 1=closed
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: Returns a Tcl error if there is a problem.
+</td></tr></table></p><a name="pgeom_mkPtsPd"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">geom_mkPtsPd</span> <span class="arg-list">(ptList dstName)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Makes a repository PolyData object consisting of the set of given points. The reason this is useful is because there are considerations related to vtk which should be hidden from the caller (i.e. that points define geometry, while vertices are the topological entity which can actually be rendered). The objects created by this proc can be used in conjunction with the vis_node* procs to visualize nodes.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: ptList
+</td><td class="argument-description">List of points.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: dstName
+</td><td class="argument-description">destination PolyData name.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: Returns a Tcl error if there is a problem.
+</td></tr></table></p><a name="pgeom_openLinesFromPts"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">geom_openLinesFromPts</span> <span class="arg-list">(ptList dstName)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Makes an open set of lines.</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Notes</span>: Thin wrapper proc that calls <span class="xref-procs"><a href="f_Core_sv.tcl.html#pgeom_mkLinesFromPts" class="proc">geom_mkLinesFromPts</a></span> with closed=0.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: ptList
+</td><td class="argument-description">List of points.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: dstName
+</td><td class="argument-description">destination PolyData name.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: Returns a Tcl error if there is a problem.
+</td></tr></table></p><a name="pgeom_pdFromOrderedPts"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">geom_pdFromOrderedPts</span> <span class="arg-list">(ptList dstName)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Makes a closed polygon.</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Notes</span>: Thin wrapper proc that calls <span class="xref-procs"><a href="f_Core_sv.tcl.html#pgeom_mkLinesFromPts" class="proc">geom_mkLinesFromPts</a></span> with closed=1.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: ptList
+</td><td class="argument-description">List of points.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: dstName
+</td><td class="argument-description">destination PolyData name.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: Returns a Tcl error if there is a problem.
+</td></tr></table></p><a name="pgeom_polygonFromPts"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">geom_polygonFromPts</span> <span class="arg-list">(pts dstName)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Creates a single vtk polygon from points.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: pts
+</td><td class="argument-description">Order set of points.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: dstName
+</td><td class="argument-description">PolyData result.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: status
+</td></tr></table></p><a name="pgeom_scaleScalars"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">geom_scaleScalars</span> <span class="arg-list">(src scaleFactor dst)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">This routine uniformly scales all of the scalars values on src (i.e. newScalar = scaleFactor*oldScalar) and creates a new object dst.</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Notes</span>: This routine should be rewritten in C.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: src
+</td><td class="argument-description">Source PolyData.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: scaleFactor
+</td><td class="argument-description">Multiplicitive factor.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: dst
+</td><td class="argument-description">New repository PolyData object to be created.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: status
+</td></tr></table></p><a name="pgeom_scaleVectorComponents"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">geom_scaleVectorComponents</span> <span class="arg-list">(src scaleFactor dst)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">This routine uniformly scales all 3 components of the vectors values on src (i.e. comp = scaleFactor*comp) and creates a new object dst.</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Notes</span>: This routine should be rewritten in C.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: src
+</td><td class="argument-description">Source PolyData.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: scaleFactor
+</td><td class="argument-description">Multiplicitive factor.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: dst
+</td><td class="argument-description">New repository PolyData object to be created.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: status
+</td></tr></table></p><a name="pgeom_triangulate"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">geom_triangulate</span> <span class="arg-list">(input output)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Triangulate the input polygon.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: input
+</td><td class="argument-description">PolyData to triangulate.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: output
+</td><td class="argument-description">Resulting PolyData object.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: status
+</td></tr></table></p><a name="pgroup_add"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">group_add</span> <span class="arg-list">(name obj id)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Add an object to a group.</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Notes</span>: The string $obj is stored in the group $name, and its position of insertion is governed by a &quot;-dictionary&quot; sort on $id. This means that numbers will be treated numerically (as opposed to the situation with &quot;-ascii&quot;) and characters are treated alphabetically (case-insensitive).<br> Different strings $obj can be stored in the same group with the same $id... this will just lead to equivalence between these items in the sorting process.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: name
+</td><td class="argument-description">group name.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: obj
+</td><td class="argument-description">object name.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: id
+</td><td class="argument-description">integer id to associate object with.
+</td></tr></table></p><a name="pgroup_calcAreas"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">group_calcAreas</span> <span class="arg-list">(grpname)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Calculates the area of each segmentation in a given group and output it to stdout.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: grpname
+</td><td class="argument-description">group name.
+</td></tr></table></p><a name="pgroup_create"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">group_create</span> <span class="arg-list">(name)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Create a group if it doesn't exist.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: name
+</td><td class="argument-description">Name of group to create.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: status (0 if group already existed, 1 if it was created).
+</td></tr></table></p><a name="pgroup_delete"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">group_delete</span> <span class="arg-list">(name)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Delete a group.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: name
+</td><td class="argument-description">Name of group to delete.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: status (0 if group didn't exist, 1 if it was deleted).
+</td></tr></table></p><a name="pgroup_details"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">group_details</span> <span class="arg-list">(name args)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">This dumps a pretty output on the details of the members of the group.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: name
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1412"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: args
+</td><td class="argument-description">file to be created containing information.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: status
+</td></tr></table></p><a name="pgroup_exists"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">group_exists</span> <span class="arg-list">(name)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Check to see if group exists.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: name
+</td><td class="argument-description">Name of group.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: Boolean (0 or 1).
+</td></tr></table></p><a name="pgroup_get"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">group_get</span> <span class="arg-list">(name)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Get the list of objects stored in the group.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: name
+</td><td class="argument-description">Group name.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: Returns the (inherently sorted) strings stored in the named group. Returns an empty string if the group doesn't exist.
+</td></tr></table></p><a name="pgroup_iditems"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">group_iditems</span> <span class="arg-list">(name id)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Return a string of ids with the name of the given id interspersed.</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Notes</span>: This routine confuses me quite a bit as it is not obvious how the output of this procedure would be useful (N.W.)
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: name
+</td><td class="argument-description">name of group.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: id
+</td><td class="argument-description">the id to insert the object name into the return string.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: A string of ids with the object name corresponding to id in place.
+</td></tr></table></p><a name="pgroup_idtaken"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">group_idtaken</span> <span class="arg-list">(name id)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Check to see if the id is taken in the given group.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: name
+</td><td class="argument-description">group name.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: id
+</td><td class="argument-description">id number.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: returns an empty string if the group doesn't exist, a 1 if the id is used and a 0 if it isn't.
+</td></tr></table></p><a name="pgroup_itemid"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">group_itemid</span> <span class="arg-list">(name obj)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Returns the id associated with the given obj.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: name
+</td><td class="argument-description">group name.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: obj
+</td><td class="argument-description">object you want the id for.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: id of the given object.
+</td></tr></table></p><a name="pgroup_itemix"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">group_itemix</span> <span class="arg-list">(name obj)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Returns the position of obj in group name.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: name
+</td><td class="argument-description">group name.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: obj
+</td><td class="argument-description">The object to locate in the group.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: Returns the position of obj in group name.
+</td></tr></table></p><a name="pgroup_names"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">group_names</span> <span class="arg-list">()</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Return the group names.</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: list of group names.
+</td></tr></table></p><a name="pgroup_readProfiles"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">group_readProfiles</span> <span class="arg-list">(name filename)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Routine to read a group of profiles from a file.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: name
+</td><td class="argument-description">group name to be created.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: filename
+</td><td class="argument-description">Input filename.
+</td></tr></table></p><a name="pgroup_remove"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">group_remove</span> <span class="arg-list">(name obj)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">remove an object from a group.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: name
+</td><td class="argument-description">group name.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: obj
+</td><td class="argument-description">object to remove.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: 0 if the group doesn't exist, 1 if the the object doesn't exist or was deleted.
+</td></tr></table></p><a name="pgroup_renumber"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">group_renumber</span> <span class="arg-list">(name incrby)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Renumbers all the members in the group by adding incrby to each original id number.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: name
+</td><td class="argument-description">group name.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: incrby
+</td><td class="argument-description">integer value each id should have added to it.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: returns an error if group doesn't exist.
+</td></tr></table></p><a name="pgroup_restorePCMRISegs"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">group_restorePCMRISegs</span> <span class="arg-list">(name)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Attempts to place the segmentations saved in a group back into the gui so they can be manipulated / viewed just as if they were created in the curent session.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: name
+</td><td class="argument-description">group name.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: returns an error if group doesn't exist.
+</td></tr></table></p><a name="pgroup_restorePreopSegs"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">group_restorePreopSegs</span> <span class="arg-list">(name)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Attempts to place the segmentations saved in a group back into the gui so they can be manipulated / viewed just as if they were created in the curent session.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: name
+</td><td class="argument-description">group name.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: returns an error if group doesn't exist.
+</td></tr></table></p><a name="pgroup_saveProfiles"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">group_saveProfiles</span> <span class="arg-list">(name filename)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Routine to save a group of profiles to a file.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: name
+</td><td class="argument-description">Group to be written to the file.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: filename
+</td><td class="argument-description">File to be created.
+</td></tr></table></p><a name="pgroup_size"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">group_size</span> <span class="arg-list">(name)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Return the size (length) of the group.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: name
+</td><td class="argument-description">group name.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: length of group (-1 if group doesn't exist).
+</td></tr></table></p><a name="pgroup_summary"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">group_summary</span> <span class="arg-list">(grpname)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Provide a summary of the group and output it to stdout.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: grpname
+</td><td class="argument-description">group name.
+</td></tr></table></p><a name="pgroup_summary_all"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">group_summary_all</span> <span class="arg-list">(args)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Provide a summary of all the groups and output it to stdout.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: args
+</td><td class="argument-description">optionally write out a file containing the summary info
+</td></tr></table></p><a name="pgroup_writeVTK"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">group_writeVTK</span> <span class="arg-list">(grpname imagename prefix)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Write segmentations to VTK polydata files.</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Notes</span>: If <span class="argument"><span class="proc">imagename</span></span> is blank, then only flat profiles are written.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: grpname
+</td><td class="argument-description">loaded group
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: imagename
+</td><td class="argument-description">used to transform to RAS, can be &quot;&quot;
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: prefix
+</td><td class="argument-description">prepended to all written files
+</td></tr></table></p><a name="phtmlFilter"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">htmlFilter</span> <span class="arg-list">(text)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1413"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: text
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1414"></a>not documented</span>
+</td></tr></table></p><a name="pimg2_readSliceROI_5X"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">img2_readSliceROI_5X</span> <span class="arg-list">(filename rtnImg roi)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Read in a slice of image data.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: filename
+</td><td class="argument-description">image filename.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: rtnImg
+</td><td class="argument-description">Repository ImageData object to create.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: roi
+</td><td class="argument-description">List (minX, maxX, minY, maxY)
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: status
+</td></tr></table></p><a name="pimg2_readSlice_5X"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">img2_readSlice_5X</span> <span class="arg-list">(filename rtnImg)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Read in a slice of image data.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: filename
+</td><td class="argument-description">image filename.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: rtnImg
+</td><td class="argument-description">Repository ImageData object to create.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: status
+</td></tr></table></p><a name="pimg_GetVOI"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">img_GetVOI</span> <span class="arg-list">(filePrefix voxelDims logicalDims startImgNum hdrSz subvol filePattern)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">read in a volume data set specifying a specific subvolume of interest.</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Notes</span>: Some of the key options specified to the vtkImageReader:<br> SetDataScalarTypeToShort<br> SetDataByteOrderToBigEndian<br>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: filePrefix
+</td><td class="argument-description">This is the value used in the SetFilePrefix method of the vtkImageReader.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: voxelDims
+</td><td class="argument-description">List of the dimensions of the voxels (x,y,z)
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: logicalDims
+</td><td class="argument-description">List of the extent of the data (i,j,k)
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: startImgNum
+</td><td class="argument-description">The number of the first image slice.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: hdrSz
+</td><td class="argument-description">Size of the image header.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: subvol
+</td><td class="argument-description">List of 6 values specifying the min,max in each direction.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: filePattern
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1415"></a>not documented</span>
+</td></tr></table></p><a name="pimg_calcBaselineCorrectionEqn"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">img_calcBaselineCorrectionEqn</span> <span class="arg-list">(region_list image_list order)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Calculate the baseline correction equation given a set of regions and a set of velocity images.</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Notes</span>: This code needs to be rewritten in C.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: region_list
+</td><td class="argument-description">A tcl list specifying a set of PolyData objects which define the regions to be used to calc the baseline correction equation.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: image_list
+</td><td class="argument-description">A tcl list of velocity images (StructuredPts) used to calc. baseline correction equation.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: order
+</td><td class="argument-description">Polynomial order (valid values are 0,1,2).
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: equation (error if there is a problem).
+</td></tr></table></p><a name="pimg_calcTransformMatrixToRAS"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">img_calcTransformMatrixToRAS</span> <span class="arg-list">(imageFilename rtnMatrix4x4)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Calculates the transformations required to move a single image slice read with <span class="xref-procs"><span class="error">img_readSlice</span></span> or <span class="xref-procs"><span class="error">img_readSliceROI</span></span> into the appropriate location in 3-D (RAS) space.</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Notes</span>: The image is never really read in, just its header.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: imageFilename
+</td><td class="argument-description">image file.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: rtnMatrix4x4
+</td><td class="argument-description">vtkMatrix4x4 matrix to transform image into 3-D space.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: status
+</td></tr></table></p><a name="pimg_calculateStatistics"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">img_calculateStatistics</span> <span class="arg-list">(img rtnAvg rtnDeviation rtnMin rtnMax)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">This code calculates the average value and standard deviation for the pixel values of an image (assuming a normal distribution).</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Notes</span>: This code really should be written in C, but I'm to lazy.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: img
+</td><td class="argument-description">Repository ImageData slice.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: rtnAvg
+</td><td class="argument-description">Returned average value.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: rtnDeviation
+</td><td class="argument-description">Returned standard deviation.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: rtnMin
+</td><td class="argument-description">Returned minimum value.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: rtnMax
+</td><td class="argument-description">Returned maximum value.
+</td></tr></table></p><a name="pimg_contour"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">img_contour</span> <span class="arg-list">(vtkImg val)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Threshold a vtkImageData object using the vtkContourFilter.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: vtkImg
+</td><td class="argument-description">vtkImageData object.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: val
+</td><td class="argument-description">Threshold value.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: vtkPolyData object of the result.
+</td></tr></table></p><a name="pimg_createMIP"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">img_createMIP</span> <span class="arg-list">(files rtnImg)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1418"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: files
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1419"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: rtnImg
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1420"></a>not documented</span>
+</td></tr></table></p><a name="pimg_createMIPfromVolume"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">img_createMIPfromVolume</span> <span class="arg-list">(imgvol direction slices mipImg)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1421"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: imgvol
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1422"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: direction
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1423"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: slices
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1424"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: mipImg
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1425"></a>not documented</span>
+</td></tr></table></p><a name="pimg_createOrientedPolyData"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">img_createOrientedPolyData</span> <span class="arg-list">(fn rtnPD)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">create a properly oriented (in 3-space) PolyData given a Genesis formatted image slice.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: fn
+</td><td class="argument-description">Genesis image slice filename.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: rtnPD
+</td><td class="argument-description">repository PolyData object to be created.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: status
+</td></tr></table></p><a name="pimg_createSegVelPD"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">img_createSegVelPD</span> <span class="arg-list">(velImageX velImageY velImageZ correctX correctY correctZ directions segmentationPolyData ignoreFactor zeroBoundFlag resultPolyData)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">This routine creates a PolyData object containing either through plane or 3-component velocity given in velocityImage(s). This is done as follows. First a point classification is performed on each voxel centroid (i.e. is the centroid inside of the segmentation). If it is, the location (x,y) of the centroid is added to a vtkPoints list. Associated with the given point is the corresponding velocities of the voxel containing the centroid. Optionally centroids within a given distance from the boundary can be ignored. In this case, you specify a non-negative value of of ignoreFactor (which is a multiplier of the grid spacing). If the distance of the centroid from the lumen wall (segmentation) is greater than ignoreFactor*spacing_in_x the point is included (otherwise it is ignored). Once we have the point set, we perform a delaunay triangulation of the points to generate a connectivity between nearby points. Note that this usually turns the domain into a convex hall (we do NOT constrain the resulting grid by the segmentation boundary). The resulting PolyData is returned. Note that the scalar is also set to the through plane component in addition to the z-direction of the velocity vector.</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Notes</span>: To do through-plane only set velImageX and velImageY to null strings.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: velImageX
+</td><td class="argument-description">Input velocity X image.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: velImageY
+</td><td class="argument-description">Input velocity Y image.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: velImageZ
+</td><td class="argument-description">Input velocity Z image.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: correctX
+</td><td class="argument-description">baseline correction equation for X direction (empty string or 0 == no correction).
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: correctY
+</td><td class="argument-description">baseline correction equation for Y direction (empty string or 0 == no correction).
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: correctZ
+</td><td class="argument-description">baseline correction equation for z direction (empty string or 0 == no correction).
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: directions
+</td><td class="argument-description">a tcl list of length three that contains multipliers of +1 or -1 to maintain or change the direction of each velocity comp. as appropriate
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: segmentationPolyData
+</td><td class="argument-description">Input segmentation boundary (PolyData).
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: ignoreFactor
+</td><td class="argument-description">Multiplictive constant (times * spacing_in_x).
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: zeroBoundFlag
+</td><td class="argument-description">whether or not to set velocities of boundary to 0 (1 == set velocities to zero).
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: resultPolyData
+</td><td class="argument-description">Resulting PolyData object.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: status
+</td></tr></table></p><a name="pimg_findObliqueCornersMinMaxRAS"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">img_findObliqueCornersMinMaxRAS</span> <span class="arg-list">(filename)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">This routine finds the min max corners in RAS coordinates of the volume data set starting with filename, assuming all of the image slices contained in the base directory name are part of the volume data set.</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Notes</span>: This routine assumes mr data.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: filename
+</td><td class="argument-description">first image file in volume sequence
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: status
+</td></tr></table></p><a name="pimg_findPCMRIorientation"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">img_findPCMRIorientation</span> <span class="arg-list">(fn rtnxyz rtndirections)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Code to find the mapping between x,y,z directions and the r,a,s directions for a slice of PCMRI data.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: fn
+</td><td class="argument-description">filename.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: rtnxyz
+</td><td class="argument-description">returned 3-component list of mapping.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: rtndirections
+</td><td class="argument-description">3-component list of directions corresponding that r/a/s are in the same or opposite direction of the coordinate axes
+</td></tr></table></p><a name="pimg_getAllPassImages"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">img_getAllPassImages</span> <span class="arg-list">(dirname passnum)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1426"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: dirname
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1427"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: passnum
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1428"></a>not documented</span>
+</td></tr></table></p><a name="pimg_getCollapseImages"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">img_getCollapseImages</span> <span class="arg-list">(dirname)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1429"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: dirname
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1430"></a>not documented</span>
+</td></tr></table></p><a name="pimg_getNumPasses"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">img_getNumPasses</span> <span class="arg-list">(dirname)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1431"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: dirname
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1432"></a>not documented</span>
+</td></tr></table></p><a name="pimg_getPassImages"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">img_getPassImages</span> <span class="arg-list">(dirname passnum)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1433"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: dirname
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1434"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: passnum
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1435"></a>not documented</span>
+</td></tr></table></p><a name="pimg_getSliceAtPathPoint"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">img_getSliceAtPathPoint</span> <span class="arg-list">(volumeImage path ptId ext rtnImg rtnPot)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">This is a convenience function that creates a vtkImageData slice of a volume data set based on a given pathPlan path and point id.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: volumeImage
+</td><td class="argument-description">a volume image (StructuredPts) object.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: path
+</td><td class="argument-description">A tcl list containing exactly one path in pathPlan format.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: ptId
+</td><td class="argument-description">A point id (index in the <span class="argument"><span class="argument-description">path</span></span> list).
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: ext
+</td><td class="argument-description">Extent.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: rtnImg
+</td><td class="argument-description">Name of StructuredPoints repository object object to create. It is the image intensity on the slice.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: rtnPot
+</td><td class="argument-description">Name of StructuredPoints repository object object to create. It is the magnitude of the intensity gradient for the given slice.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: status
+</td></tr></table></p><a name="pimg_guessRASmax"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">img_guessRASmax</span> <span class="arg-list">(filename)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">This routine finds the maximum in RAS coordinates of the volume data set starting with filename, assuming all of the image slices contained in the base directory name are part of the volume data set.</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Notes</span>: This routine assumes mr data.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: filename
+</td><td class="argument-description">first image file in volume sequence
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: status
+</td></tr></table></p><a name="pimg_guessRASmin"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">img_guessRASmin</span> <span class="arg-list">(filename)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">This routine finds the minimum in RAS coordinates of the volume data set starting with filename, assuming all of the image slices contained in the base directory name are part of the volume data set.</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Notes</span>: This routine assumes mr data.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: filename
+</td><td class="argument-description">first image file in volume sequence
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: status
+</td></tr></table></p><a name="pimg_guessVolParams"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">img_guessVolParams</span> <span class="arg-list">(filename)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">This routine guesses the appropriate parameters needed for a volume image data set. It starts by reading the voxel dimensions (x,y) and and the extent (x,y) from the image header for the given filename. To get the extent in the z direction, it assumes that all of the image files contained in the same directory are for that volume dataset. It then simple counts the number of image files in the base directory of filename. To calculate the physical voxel dimension in the z-direction, it reads the next sequentially numbered file and subtracts the z-coord of the top left hand corner.</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Notes</span>: This routine assumes mr data, and that the slices were acquired in in the &quot;usual&quot; way, i.e. xy-slices of data. It should be easy to modify this routine so that it detects the actual orientation of the acquired images and acts appropriately.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: filename
+</td><td class="argument-description">first image file in volume sequence
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: status
+</td></tr></table></p><a name="pimg_magGrad"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">img_magGrad</span> <span class="arg-list">(img)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Takes a repository imageData object and returns the magnitude of the gradient calculated using vtkImageGradientMagnitude.</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Dangers</span>: Always remember this routine takes a repository object but returns a vtk object!
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: img
+</td><td class="argument-description">repository ImageData object.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: vtkImageData object.
+</td></tr></table></p><a name="pimg_readDICOM"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">img_readDICOM</span> <span class="arg-list">(dirname change_to_cm_flag rtnobj)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1436"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: dirname
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1437"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: change_to_cm_flag
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1438"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: rtnobj
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1439"></a>not documented</span>
+</td></tr></table></p><a name="pimg_readDICOMwriteXML"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">img_readDICOMwriteXML</span> <span class="arg-list">(dirname fn change_to_cm_flag)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1440"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: dirname
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1441"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: fn
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1442"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: change_to_cm_flag
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1443"></a>not documented</span>
+</td></tr></table></p><a name="pimg_readSliceROI_5X"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">img_readSliceROI_5X</span> <span class="arg-list">(fn dims spacing hdrSz roi)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Read in a region of interest from a 2-D image file.</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Notes</span>: Some of the key options specified to the vtkImageReader:<br> SetDataScalarTypeToShort<br> SetDataByteOrderToBigEndian<br>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: fn
+</td><td class="argument-description">Image filename.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: dims
+</td><td class="argument-description">List of the extent of the data (i,j)
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: spacing
+</td><td class="argument-description">List of the dimensions of the voxels (x,y)
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: hdrSz
+</td><td class="argument-description">Size of the image header.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: roi
+</td><td class="argument-description">List (minX, maxX, minY, maxY)
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: Returns a vtkImageData object.
+</td></tr></table></p><a name="pimg_readSlice_5X"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">img_readSlice_5X</span> <span class="arg-list">(fn dims spacing hdrSz)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Read in a 2-D image file from disk.</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Notes</span>: Some of the key options specified to the vtkImageReader:<br> SetDataScalarTypeToShort<br> SetDataByteOrderToBigEndian<br>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: fn
+</td><td class="argument-description">Image filename.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: dims
+</td><td class="argument-description">List of the extent of the data (i,j)
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: spacing
+</td><td class="argument-description">List of the dimensions of the voxels (x,y)
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: hdrSz
+</td><td class="argument-description">Size of the image header.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: Returns a vtkImageData object.
+</td></tr></table></p><a name="pimg_sortPasses"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">img_sortPasses</span> <span class="arg-list">(dirname)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1444"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: dirname
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1445"></a>not documented</span>
+</td></tr></table></p><a name="pimg_writeXML"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">img_writeXML</span> <span class="arg-list">(vimg fn)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1446"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: vimg
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1447"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: fn
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1448"></a>not documented</span>
+</td></tr></table></p><a name="pintersect_lset"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">intersect_lset</span> <span class="arg-list">(truePhi approxPhi interPgn)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Calculate the intersection of two objects defined implicitly by level set functions. Routines to do boolean operations on objects represented by level set grids (see Sethian 99, pg. 278).</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Dangers</span>: This routine alters truePhi!!
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: truePhi
+</td><td class="argument-description">Levelset function representing object A.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: approxPhi
+</td><td class="argument-description">Levelset function representing object B.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: interPgn
+</td><td class="argument-description">PolyData intersection object returned.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: status
+</td></tr></table></p><a name="plset2_cfgVExpDecay"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">lset2_cfgVExpDecay</span> <span class="arg-list">(core v kt expand stopV calcDecayConstBy mgFactor potentialValueDecay)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1449"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: core
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1450"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: v
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1451"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: kt
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1452"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: expand
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1453"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: stopV
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1454"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: calcDecayConstBy
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1455"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: mgFactor
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1456"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: potentialValueDecay
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1457"></a>not documented</span>
+</td></tr></table></p><a name="plset2_cfgVPotential"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">lset2_cfgVPotential</span> <span class="arg-list">(core v klow kupp stopV calcPotConstBy pFactor potentialValuePotential)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1458"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: core
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1459"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: v
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1460"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: klow
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1461"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: kupp
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1462"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: stopV
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1463"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: calcPotConstBy
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1464"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: pFactor
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1465"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: potentialValuePotential
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1466"></a>not documented</span>
+</td></tr></table></p><a name="plset2_getMinH"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">lset2_getMinH</span> <span class="arg-list">(core)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1467"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: core
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1468"></a>not documented</span>
+</td></tr></table></p><a name="plset2_gridType"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">lset2_gridType</span> <span class="arg-list">(core)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1469"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: core
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1470"></a>not documented</span>
+</td></tr></table></p><a name="plset2_loop"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">lset2_loop</span> <span class="arg-list">(core acInterval ac maxTS rebuildPhiFreq)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1471"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: core
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1472"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: acInterval
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1473"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: ac
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1474"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: maxTS
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1475"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: rebuildPhiFreq
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1476"></a>not documented</span>
+</td></tr></table></p><a name="plset2_main"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">lset2_main</span> <span class="arg-list">(img pot gridType maxTS gridFactor stopV isotropicFlag rebuildPhiFreq goodnessCriteria acInterval r x y z kt calcDecayConstBy magGradFactor potentialValueDecay klow kupp calcPotConstBy pFactor potentialValuePotential rtnPd)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1477"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: img
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1478"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: pot
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1479"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: gridType
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1480"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: maxTS
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1481"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: gridFactor
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1482"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: stopV
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1483"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: isotropicFlag
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1484"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: rebuildPhiFreq
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1485"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: goodnessCriteria
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1486"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: acInterval
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1487"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: r
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1488"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: x
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1489"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: y
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1490"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: z
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1491"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: kt
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1492"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: calcDecayConstBy
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1493"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: magGradFactor
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1494"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: potentialValueDecay
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1495"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: klow
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1496"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: kupp
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1497"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: calcPotConstBy
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1498"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: pFactor
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1499"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: potentialValuePotential
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1500"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: rtnPd
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1501"></a>not documented</span>
+</td></tr></table></p><a name="plset2_showV"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">lset2_showV</span> <span class="arg-list">(v core)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1502"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: v
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1503"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: core
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1504"></a>not documented</span>
+</td></tr></table></p><a name="plset2_showVConst"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">lset2_showVConst</span> <span class="arg-list">(v)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1505"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: v
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1506"></a>not documented</span>
+</td></tr></table></p><a name="pmath_addVectors"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">math_addVectors</span> <span class="arg-list">(a b)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Add n-vectors.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: a
+</td><td class="argument-description">Input vector a.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: b
+</td><td class="argument-description">Input vector b.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: Resultant vector. Returns Tcl error if vectors are of different size.
+</td></tr></table></p><a name="pmath_angleBtw3DVectors"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">math_angleBtw3DVectors</span> <span class="arg-list">(vecA vecB)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Angle in radians between to 3-D vectors.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: vecA
+</td><td class="argument-description">Vector A.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: vecB
+</td><td class="argument-description">Vector B.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: Angle in radians.
+</td></tr></table></p><a name="pmath_areaTriangle"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">math_areaTriangle</span> <span class="arg-list">(a b c)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Calculate the area of a triangle in 3-D space.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: a
+</td><td class="argument-description">point a.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: b
+</td><td class="argument-description">point b.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: c
+</td><td class="argument-description">point c.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: Area of the triangle.
+</td></tr></table></p><a name="pmath_circlePt"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">math_circlePt</span> <span class="arg-list">(angleDeg radius)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Return a (x,y) point on a circle centered at the origin.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: angleDeg
+</td><td class="argument-description">Angle in degrees.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: radius
+</td><td class="argument-description">Radius.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: (x,y) point.
+</td></tr></table></p><a name="pmath_cross"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">math_cross</span> <span class="arg-list">(vecA vecB)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Cross product of two vectors.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: vecA
+</td><td class="argument-description">Vector A
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: vecB
+</td><td class="argument-description">Vector B
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: A X B. If vectors are not of length 3, null string returned.
+</td></tr></table></p><a name="pmath_d2f"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">math_d2f</span> <span class="arg-list">(in)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Returns a floating point version of a really small or really big double precision number.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: in
+</td><td class="argument-description">double precision number.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: float.
+</td></tr></table></p><a name="pmath_degToRad"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">math_degToRad</span> <span class="arg-list">(deg)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Convert degrees to radians.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: deg
+</td><td class="argument-description">Angle in degrees.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: Angle in radians.
+</td></tr></table></p><a name="pmath_distance"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">math_distance</span> <span class="arg-list">(a b)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Calculate distance between two 3-D points.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: a
+</td><td class="argument-description">Point a.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: b
+</td><td class="argument-description">Point b.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: Distance.
+</td></tr></table></p><a name="pmath_dot"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">math_dot</span> <span class="arg-list">(vecA vecB)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Dot product of a n-dimensional vector.</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Notes</span>: Blank string is returned if vectors are of different length.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: vecA
+</td><td class="argument-description">Vector A.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: vecB
+</td><td class="argument-description">Vector B.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: A . B
+</td></tr></table></p><a name="pmath_findMaxPos"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">math_findMaxPos</span> <span class="arg-list">(args)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Returns the index position of the maximum coordinate in a vector.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: args
+</td><td class="argument-description">vector (not as a list but rather arg1 arg2 arg3 ...)
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: index of maximum component position in vector.
+</td></tr></table></p><a name="pmath_isDouble"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">math_isDouble</span> <span class="arg-list">(in)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Check if the value is a floating point number.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: in
+</td><td class="argument-description">Input value.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: 1 if floating point number, 0 otherwise.
+</td></tr></table></p><a name="pmath_isInt"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">math_isInt</span> <span class="arg-list">(in)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Check if value is an integer.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: in
+</td><td class="argument-description">Input value.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: 1 if integer, 0 otherwise.
+</td></tr></table></p><a name="pmath_linInterp1D"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">math_linInterp1D</span> <span class="arg-list">(domA domB rangeA rangeB domTarget)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Linerar interpolation between two values.</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Notes</span>: No checking is done to make sure point is inside of domain.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: domA
+</td><td class="argument-description">domain of point A.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: domB
+</td><td class="argument-description">domain of point B.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: rangeA
+</td><td class="argument-description">range of point A.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: rangeB
+</td><td class="argument-description">range of point B.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: domTarget
+</td><td class="argument-description">domain of point of interest.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: Range of point of interest.
+</td></tr></table></p><a name="pmath_magnitude"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">math_magnitude</span> <span class="arg-list">(vec)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Magnitude of an n-vector.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: vec
+</td><td class="argument-description">Input vector.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: Magnitude.
+</td></tr></table></p><a name="pmath_minVec"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">math_minVec</span> <span class="arg-list">(v)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Returns the minimum component of the given vector.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: v
+</td><td class="argument-description">Input vector.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: Minimum component.
+</td></tr></table></p><a name="pmath_normalize"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">math_normalize</span> <span class="arg-list">(vec)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Normalize an n-vector.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: vec
+</td><td class="argument-description">Input vector.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: Normalized vector.
+</td></tr></table></p><a name="pmath_pi"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">math_pi</span> <span class="arg-list">()</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Return Pi.</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: Pi.
+</td></tr></table></p><a name="pmath_radToDeg"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">math_radToDeg</span> <span class="arg-list">(rad)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Convert radians to degrees.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: rad
+</td><td class="argument-description">Angle in radians.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: Angle in degrees.
+</td></tr></table></p><a name="pmath_scaleVec"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">math_scaleVec</span> <span class="arg-list">(v sc)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Scale a vector by a multiplicative factor.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: v
+</td><td class="argument-description">Vector.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: sc
+</td><td class="argument-description">Multiplicative scale factor.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: Scaled vector.
+</td></tr></table></p><a name="pmath_subVectors"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">math_subVectors</span> <span class="arg-list">(a b)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Subtract vector b from vector a.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: a
+</td><td class="argument-description">vector a.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: b
+</td><td class="argument-description">vector b.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: a - b.
+</td></tr></table></p><a name="pmath_translatePt"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">math_translatePt</span> <span class="arg-list">(pt vec)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Translate a 2-D point by vector.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: pt
+</td><td class="argument-description">Original point.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: vec
+</td><td class="argument-description">Translation vector.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: Translated point.
+</td></tr></table></p><a name="pmath_writeCirclePgn"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">math_writeCirclePgn</span> <span class="arg-list">(radius ctrVec fn)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Create a file with a circle centered at ctrVec. The file format is &quot;x y -1 -1 -1 -1&quot;.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: radius
+</td><td class="argument-description">Radius of circle.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: ctrVec
+</td><td class="argument-description">Center of circle.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: fn
+</td><td class="argument-description">Output filename.
+</td></tr></table></p><a name="pmesh_checkForAdapt"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">mesh_checkForAdapt</span> <span class="arg-list">(smsfile solidmodelfile)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Check that no elements have all nodes falling on exterior surface.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: smsfile
+</td><td class="argument-description">simmetrix mesh database
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: solidmodelfile
+</td><td class="argument-description">parasolid model
+</td></tr></table></p><a name="pmesh_readMSS"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">mesh_readMSS</span> <span class="arg-list">(filename resObj)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">This function processes a simmetrix style meshing script file.</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Notes</span>: resObj is not deleted, even if the script file specifies deleteModel and deleteMesh.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: filename
+</td><td class="argument-description">script filename.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: resObj
+</td><td class="argument-description">resulting repository MeshObject.
+</td></tr></table></p><a name="pmesh_writeInflowFaceVtk"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">mesh_writeInflowFaceVtk</span> <span class="arg-list">(solidfile atrfile outfile)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">This is a pure convience function which reads in a mesh and writes out a vtkPolyData file containing the nodes and and connectivity for the surface named &quot;inflow.&quot; This file is intended to be used by the boundary condition GUI.</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Notes</span>: There is no rotation of translation of the face done. If more then one face is named inflow, only the first will be written.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: solidfile
+</td><td class="argument-description">Filename for a Parasolid solid model which contains 1 face tagged with the name &quot;inflow&quot;.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: atrfile
+</td><td class="argument-description">Scorec meshing attribute file for the mesh to be read in.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: outfile
+</td><td class="argument-description">Filename of the vtkPolyData file to be written.
+</td></tr></table></p><a name="ppath_ApplyTransform"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">path_ApplyTransform</span> <span class="arg-list">(tr pos nrm xhat)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Create a transform for this path position (typically for reslicing the image volume).</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: tr
+</td><td class="argument-description">vtkTransform to update.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: pos
+</td><td class="argument-description">path position (point on plane).
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: nrm
+</td><td class="argument-description">normal.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: xhat
+</td><td class="argument-description">in plane tangent vector.
+</td></tr></table></p><a name="ppath_MakePolyData"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">path_MakePolyData</span> <span class="arg-list">(path objName)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Create a PolyData object for the given path.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: path
+</td><td class="argument-description">List of lists for a single path.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: objName
+</td><td class="argument-description">Output repository PolyData object name.
+</td></tr></table></p><a name="ppath_calcLength"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">path_calcLength</span> <span class="arg-list">(pathId string_of_ids)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Calculate the length of a path.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: pathId
+</td><td class="argument-description">integer path id.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: string_of_ids
+</td><td class="argument-description">string containing ids to calculate length of path from.
+</td></tr></table></p><a name="ppath_renumberPaths"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">path_renumberPaths</span> <span class="arg-list">(maps)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">This proc renumbers and eliminates unused paths from the global variable gPathPoints. The input is a tcl list of lists with the form: <br> { {oldnum1 newnum2} {oldnum1 newnum2} ..} <br> Any path that is not in the mapping array will be deleted. This proc is commonly used after you have subsampled / smoothed several paths and want to eliminate the the unsmoothed paths.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: maps
+</td><td class="argument-description">tcl list of lists with the form: { {oldnum1 newnum2} {oldnum1 newnum2} ..}
+</td></tr></table></p><a name="ppause"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">pause</span> <span class="arg-list">()</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Wait for the user to hit a key.</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: 1 if a key was hit, 0 otherwise.
+</td></tr></table></p><a name="ppost_cutAndClipResults"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">post_cutAndClipResults</span> <span class="arg-list">(meshobj res_objs pcmri_file path_id cut_plane_nrm cut_plane_org sphere_center sphere_radius sliced_results_dir vol_flow_res_file save_repos_objs_flag integrate_surface_flag integrate_surface_tensorType mesh_scaled_by_factor)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">My attempt at a swiss-army-knife proc to slice and dice finite element results to obtain interesting quantities such as volumetric flow. The most common use of this code will be to calculate volumetric flow through a single vessel located using a PCMRI slice and a path.</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Notes</span>: If you pass a null string into this routine for sphere_radius, it automatically creates a sphere with a diameter equivalent to the path probe with the current settings. This is generally a bad idea. If you specify a null string for the output directory, no slices are written but the surface flux (usually volumetric flow) is still calculated if the vector quantity is specified. You should specify EITHER a cut plane normal and a sphere center OR a pcmri filename and path_id. If you don't specify the cut plane normal and sphere center, it is calculated by the intersection of the path with the pcmri plane. In general it is not a good idea to cut the results model coplanar with a plane external model edge (i.e. outlet surface, inflow surface, etc.) If you want the volumetric flow or results on a model face, extract the information directly from the results file not via this routine. The mesh scaling factor is considered to be a scaling factor of the the image data. To calculate flow rate and create flat objects to be compared to PCMRI data, the finite element results are scaled by the inverse mesh scaling factor. This is also necessary to make the transformation from RAS space to a flat z=0 plane work correctly. All volumetric flows then are reported in the native length scale of the image data! For example, if you specify a mesh scaling of 0.1, this means that your image data is in mm and and your mesh is in cm. This code would return flat geometries in mm (the oriented profiles will also be in mm) and volumetric flow rates in mm^3/s.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: meshobj
+</td><td class="argument-description">mesh as a vtkUnstructuredGrid.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: res_objs
+</td><td class="argument-description">tcl list of the form ((timestep vector_results scalar_results) (...) ...). the results should be vtkFloatArrays. Either of the results type (vector or scalar) can be set to NULL strings if desired.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: pcmri_file
+</td><td class="argument-description">location to slice model (only reads header info)
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: path_id
+</td><td class="argument-description">pathid of the path (vessel) you want to intersect
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: cut_plane_nrm
+</td><td class="argument-description">normal of the implicit cutting plane. Can be NULL.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: cut_plane_org
+</td><td class="argument-description">origin of the implicit cutting plane. Can be NULL.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: sphere_center
+</td><td class="argument-description">you can explicitly specify the center of the vtkCutter. If you specify this point, the path_id and pcmri_file are ignored. It also requires you specify the cut plane normal (the origin is assumed to be at sphere_center).
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: sphere_radius
+</td><td class="argument-description">radius of sphere centered at intersection of path and pcmri plane used to prevent extraneous vessels being include in volumetric flow calcs.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: sliced_results_dir
+</td><td class="argument-description">If non-null string, the directory to write slices into.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: vol_flow_res_file
+</td><td class="argument-description">output file to write flux vs time (usually vol. flow vs time).
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: save_repos_objs_flag
+</td><td class="argument-description">this saves the resulting slices in the repository (currently using hardcoded names results/* and flat_results/*).
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: integrate_surface_flag
+</td><td class="argument-description">flag for the user to request that the surface flux be integrated.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: integrate_surface_tensorType
+</td><td class="argument-description">can be 0 (scalar) or 1 (vector).
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: mesh_scaled_by_factor
+</td><td class="argument-description">for those that insist on scaling the mesh to to different units than the image data, the path points get scaled by this factor. Use 0.1 for converting to cm.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: surface flux (usually volumetric flow) if vector results given
+</td></tr></table></p><a name="ppost_getSurfMesh"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">post_getSurfMesh</span> <span class="arg-list">(mesh reposObj)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Extract the exterior surface mesh.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: mesh
+</td><td class="argument-description">vtkUnstructuredMesh object.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: reposObj
+</td><td class="argument-description">return PolyData object.
+</td></tr></table></p><a name="ppost_sample"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">post_sample</span> <span class="arg-list">(filenames dims scaleFactorBB)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Wrapper function that calls post_sample* functions to write out structured data set version of results. This code automatically calculates the origin and spacing based on the bounding box, scale factor, and requested dimensions. This code currently only outputs the pressure and velocity fields for the RAW files.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: filenames
+</td><td class="argument-description">tcl list of vtkUnstructuredGrid (.vtu) input files.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: dims
+</td><td class="argument-description">tcl list of dimensions (x,y,z)
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: scaleFactorBB
+</td><td class="argument-description">this factor isotropically scales the bounding box so that the results can be completely contained inside the volume.
+</td></tr></table></p><a name="ppost_sampleToRawVolume"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">post_sampleToRawVolume</span> <span class="arg-list">(fn dims origin spacing arrayname component outprefix)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Load a vtkUnstructuredGrid file and sample to a fixed grid (vtkImageData) format and write out a UNC RAW formatted image file.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: fn
+</td><td class="argument-description">vtkUnstructuredGrid (.vtu) input file.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: dims
+</td><td class="argument-description">tcl list of dimensions (x,y,z)
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: origin
+</td><td class="argument-description">tcl list of lower left hand corner
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: spacing
+</td><td class="argument-description">tcl list of voxel dimensions
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: arrayname
+</td><td class="argument-description">pressure or velocity
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: component
+</td><td class="argument-description">0,1,2 (for vector components)
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: outprefix
+</td><td class="argument-description">output filenames (.mhd and .raw extensions added)
+</td></tr></table></p><a name="ppost_sampleToVolume"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">post_sampleToVolume</span> <span class="arg-list">(fn dims origin spacing outfn)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Load a vtkUnstructuredGrid file and sample to a fixed grid (vtkImageData) format and write out the XML formatted file.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: fn
+</td><td class="argument-description">vtkUnstructuredGrid (.vtu) input file.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: dims
+</td><td class="argument-description">tcl list of dimensions (x,y,z)
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: origin
+</td><td class="argument-description">tcl list of lower left hand corner
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: spacing
+</td><td class="argument-description">tcl list of voxel dimensions
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: outfn
+</td><td class="argument-description">output filename (.xml)
+</td></tr></table></p><a name="pprintList"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">printList</span> <span class="arg-list">(listIn)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Print a list to stdout (1 item per line).</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: listIn
+</td><td class="argument-description">List to output.
+</td></tr></table></p><a name="pquit"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">quit</span> <span class="arg-list">()</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Alias for &quot;exit.&quot;</span>
+</td></tr></table></p><a name="prepos_deleteList"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">repos_deleteList</span> <span class="arg-list">(objList)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Delete a list of objects in the repository.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: objList
+</td><td class="argument-description">list of objects to delete.
+</td></tr></table></p><a name="prepos_delete_wrapper"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">repos_delete_wrapper</span> <span class="arg-list">(args)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Wrapper to track properties of objects deleted.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: args
+</td><td class="argument-description">parameters passed to repos_delete cmd.
+</td></tr></table></p><a name="prepos_getObjTok"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">repos_getObjTok</span> <span class="arg-list">(name field)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Return the nth field of the objects name.</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Notes</span>: This routine assumes object names of the form &quot;/a/b/c/...&quot;
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: name
+</td><td class="argument-description">Repository name.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: field
+</td><td class="argument-description">The field number to return.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: The nth field of the object name.
+</td></tr></table></p><a name="prepos_keyInUse"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">repos_keyInUse</span> <span class="arg-list">(obj key)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Check and see if an object already has a key assigned.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: obj
+</td><td class="argument-description">Repository object name.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: key
+</td><td class="argument-description">Key to check for.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: Boolean result 0 or 1
+</td></tr></table></p><a name="prepos_sorted"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">repos_sorted</span> <span class="arg-list">(pat field)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Uses repos_subList to find all the objects matching the requested pattern, and then sorts based on the given field.</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Notes</span>: This routine assumes object names of the form &quot;/a/b/c/...&quot;
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: pat
+</td><td class="argument-description">Pattern to match.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: field
+</td><td class="argument-description">Object field to use as key to sort.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: Numerically sorted list of objects.
+</td></tr></table></p><a name="prepos_subList"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">repos_subList</span> <span class="arg-list">(pat)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Return a list of objects in the repository matching the the given pattern.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: pat
+</td><td class="argument-description">Pattern to match.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: A list of objects matching pattern.
+</td></tr></table></p><a name="pshowArray"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">showArray</span> <span class="arg-list">(arrayName)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Output an array to stdout (1 item per line).</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: arrayName
+</td><td class="argument-description">array to show.
+</td></tr></table></p><a name="pshowCmds"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">showCmds</span> <span class="arg-list">(substr)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Print commands starting with substr to stdout (1 per line).</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Notes</span>: This is a thin wrapper around <span class="xref-procs"><a href="f_Core_sv.tcl.html#pfindCmds" class="proc">findCmds</a></span> which takes the returned list and outputs it.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: substr
+</td><td class="argument-description">String to match.
+</td></tr></table></p><a name="psolid_instances"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">solid_instances</span> <span class="arg-list">()</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Return a list of solid models currently in the repository.</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: list of repository SolidModel objects.
+</td></tr></table></p><a name="psolid_unionSet"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">solid_unionSet</span> <span class="arg-list">(operands dstName)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Function which unions a lists of solids together to create dstName.</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Notes</span>: The solids must have all been created with the the same solid modeler.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: operands
+</td><td class="argument-description">list of SolidModel objects.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: dstName
+</td><td class="argument-description">resulting solid model name.
+</td></tr></table></p><a name="pstring_parse"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">string_parse</span> <span class="arg-list">(mystr min max)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Procedure to parse a human friendly specified list of integer ids into an explicit list. For example, a valid string to to process is: &quot;begin-end by 5, 1-3, 72 75, 103-101 by -1,25,27&quot; etc.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: mystr
+</td><td class="argument-description">String to parse.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: min
+</td><td class="argument-description">minimum allowable value.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: max
+</td><td class="argument-description">maximum allowable value.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: Explicit list (arranged numerically) identical to that specified in mystr.
+</td></tr></table></p><a name="ptail"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">tail</span> <span class="arg-list">(file rx delay var stats fid)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1507"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: file
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1508"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: rx (= .+)
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1509"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: delay (= 2000)
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1510"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: var (= {})
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1511"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: stats (= {})
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1512"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: fid (= {})
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1513"></a>not documented</span>
+</td></tr></table></p><a name="ptrimInt"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">trimInt</span> <span class="arg-list">(str)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Remove leading zeros from a string.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: str
+</td><td class="argument-description">string.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: String without zeros or 0.
+</td></tr></table></p><a name="ptrimLeadZeros"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">trimLeadZeros</span> <span class="arg-list">(str)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Ken Wang</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Remove leading zeros from a string.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: str
+</td><td class="argument-description">string.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: String without zeros or &quot;&quot;.
+</td></tr></table></p><a name="pview_slice"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">view_slice</span> <span class="arg-list">(fn)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1514"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: fn
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1515"></a>not documented</span>
+</td></tr></table></p><hr class="navbar"><p class="navbar"><a href="index.htm" class="navbar">Home</a> | <a href="files.html" class="index-file">Files</a> | <a href="procs.html" class="index-procedure">Procedures</a> | <a href="namespaces.html" class="index-namespace">Namespaces</a> </p><hr class="navbar">
+<hr><p class="generated-by">Generated by <a href="http://www.purl.org/NET/akupries/soft/autodoc/index.htm" class="generated-by">AutoDoc 2.4</a> at 02/09/2015, invoked by <a href="mailto:danschi@danieles-macbook-air.local" class="generated-by">Unknown</a></p></body>
+</html>

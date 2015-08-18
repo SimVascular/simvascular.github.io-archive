@@ -1,0 +1,169 @@
+/* line 4, /home/danschi/Documents/07_Software/22_SV_WSites/simvascular_sites/source/css/shop-item.css.scss */
+body {
+  position: relative; }
+
+/* line 8, /home/danschi/Documents/07_Software/22_SV_WSites/simvascular_sites/source/css/shop-item.css.scss */
+.thumbnail img {
+  width: 100%; }
+
+/* line 12, /home/danschi/Documents/07_Software/22_SV_WSites/simvascular_sites/source/css/shop-item.css.scss */
+.ratings {
+  padding-right: 10px;
+  padding-left: 10px;
+  color: #d17581; }
+
+/* line 18, /home/danschi/Documents/07_Software/22_SV_WSites/simvascular_sites/source/css/shop-item.css.scss */
+.thumbnail {
+  padding: 0; }
+
+/* line 22, /home/danschi/Documents/07_Software/22_SV_WSites/simvascular_sites/source/css/shop-item.css.scss */
+.thumbnail .caption-full {
+  padding: 9px;
+  color: #333; }
+
+/* line 27, /home/danschi/Documents/07_Software/22_SV_WSites/simvascular_sites/source/css/shop-item.css.scss */
+footer {
+  margin: 50px 0; }
+
+/* line 31, /home/danschi/Documents/07_Software/22_SV_WSites/simvascular_sites/source/css/shop-item.css.scss */
+.test {
+  height: 100px; }
+
+/* line 36, /home/danschi/Documents/07_Software/22_SV_WSites/simvascular_sites/source/css/shop-item.css.scss */
+.group {
+  padding-top: 50px;
+  padding-bottom: 0px; }
+
+/* line 40, /home/danschi/Documents/07_Software/22_SV_WSites/simvascular_sites/source/css/shop-item.css.scss */
+.subgroup {
+  padding-top: 50px;
+  padding-bottom: 0px; }
+
+/* line 45, /home/danschi/Documents/07_Software/22_SV_WSites/simvascular_sites/source/css/shop-item.css.scss */
+.bottom-buffer {
+  padding-bottom: 50px; }
+
+/* line 49, /home/danschi/Documents/07_Software/22_SV_WSites/simvascular_sites/source/css/shop-item.css.scss */
+#sidebar {
+  padding-top: 70px;
+  padding-bottom: 70px; }
+
+/* line 55, /home/danschi/Documents/07_Software/22_SV_WSites/simvascular_sites/source/css/shop-item.css.scss */
+.fixed {
+  position: fixed; }
+
+/* sidebar */
+/* line 60, /home/danschi/Documents/07_Software/22_SV_WSites/simvascular_sites/source/css/shop-item.css.scss */
+.bs-docs-sidebar {
+  padding-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+/* all links */
+/* line 67, /home/danschi/Documents/07_Software/22_SV_WSites/simvascular_sites/source/css/shop-item.css.scss */
+.bs-docs-sidebar .nav > li > a {
+  color: #999;
+  border-left: 2px solid transparent;
+  padding: 4px 20px;
+  font-size: 13px;
+  font-weight: 400; }
+
+/* nested links */
+/* line 76, /home/danschi/Documents/07_Software/22_SV_WSites/simvascular_sites/source/css/shop-item.css.scss */
+.bs-docs-sidebar .nav .nav > li > a {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 30px;
+  font-size: 12px; }
+
+/* active & hover links */
+/* line 86, /home/danschi/Documents/07_Software/22_SV_WSites/simvascular_sites/source/css/shop-item.css.scss */
+.bs-docs-sidebar .nav > .active > a,
+.bs-docs-sidebar .nav > li > a:hover,
+.bs-docs-sidebar .nav > li > a:focus {
+  color: #563d7c;
+  text-decoration: none;
+  background-color: transparent;
+  border-left-color: #563d7c; }
+
+/* all active links */
+/* line 95, /home/danschi/Documents/07_Software/22_SV_WSites/simvascular_sites/source/css/shop-item.css.scss */
+.bs-docs-sidebar .nav > .active > a,
+.bs-docs-sidebar .nav > .active:hover > a,
+.bs-docs-sidebar .nav > .active:focus > a {
+  font-weight: 700; }
+
+/* nested active links */
+/* line 101, /home/danschi/Documents/07_Software/22_SV_WSites/simvascular_sites/source/css/shop-item.css.scss */
+.bs-docs-sidebar .nav .nav > .active > a,
+.bs-docs-sidebar .nav .nav > .active:hover > a,
+.bs-docs-sidebar .nav .nav > .active:focus > a {
+  font-weight: 500; }
+
+/* hide inactive nested list */
+/* line 106, /home/danschi/Documents/07_Software/22_SV_WSites/simvascular_sites/source/css/shop-item.css.scss */
+.bs-docs-sidebar .nav ul.nav {
+  display: none; }
+
+/* show active nested list */
+/* line 110, /home/danschi/Documents/07_Software/22_SV_WSites/simvascular_sites/source/css/shop-item.css.scss */
+.bs-docs-sidebar .nav > .active > ul.nav {
+  display: block; }
+
+/* line 114, /home/danschi/Documents/07_Software/22_SV_WSites/simvascular_sites/source/css/shop-item.css.scss */
+#solverTable td {
+  text-align: center; }
+
+/* line 118, /home/danschi/Documents/07_Software/22_SV_WSites/simvascular_sites/source/css/shop-item.css.scss */
+#solverTable th {
+  text-align: center; }
+
+/* line 122, /home/danschi/Documents/07_Software/22_SV_WSites/simvascular_sites/source/css/shop-item.css.scss */
+#barIcon {
+  color: white; }
+
+/* IMAGE STYLE - SVGUIDE */
+/* line 127, /home/danschi/Documents/07_Software/22_SV_WSites/simvascular_sites/source/css/shop-item.css.scss */
+img.svImg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 5px; }
+
+/* CAPTION STYLE - SVGUIDE */
+/* line 136, /home/danschi/Documents/07_Software/22_SV_WSites/simvascular_sites/source/css/shop-item.css.scss */
+figcaption.svCaption {
+  text-align: center;
+  font-family: times;
+  font-style: italic;
+  font-size: smaller;
+  text-indent: 0;
+  margin-bottom: 20px; }
+
+/* IMAGE SIZE */
+/* line 146, /home/danschi/Documents/07_Software/22_SV_WSites/simvascular_sites/source/css/shop-item.css.scss */
+img.svImgXs {
+  width: 15%; }
+
+/* line 149, /home/danschi/Documents/07_Software/22_SV_WSites/simvascular_sites/source/css/shop-item.css.scss */
+img.svImgSm {
+  width: 25%; }
+
+/* line 152, /home/danschi/Documents/07_Software/22_SV_WSites/simvascular_sites/source/css/shop-item.css.scss */
+img.svImgMd {
+  width: 50%; }
+
+/* line 155, /home/danschi/Documents/07_Software/22_SV_WSites/simvascular_sites/source/css/shop-item.css.scss */
+img.svImgLg {
+  width: 75%; }
+
+/* line 158, /home/danschi/Documents/07_Software/22_SV_WSites/simvascular_sites/source/css/shop-item.css.scss */
+img.svImgXl {
+  width: 95%; }
+
+/* SCROLL PROPERTY FOR DOCS AND CLINICAL CASES*/
+/* line 163, /home/danschi/Documents/07_Software/22_SV_WSites/simvascular_sites/source/css/shop-item.css.scss */
+.bs-docs-sidebar > ul {
+  overflow-y: auto;
+  height: 100%; }

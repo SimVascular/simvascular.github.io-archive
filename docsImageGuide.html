@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SimVascular Docs</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+
+    <link href="css/shop-item.css" rel="stylesheet" type="text/css" />
+
+    <link href="css/codestyle.css" rel="stylesheet" type="text/css" />    
+
+    <link rel="stylesheet" href="font-awesome-4.1.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
+
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                <i class="fa fa-bars" id="barIcon"></i>
+              </button>
+                <a class="navbar-brand" id="brandName" href="index.html">
+                  <img src="img/svlogo/svLogoSmallText.png" alt="...">
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">            
+                <ul class="nav navbar-nav">
+                  
+                  <!-- GETTING STARTED -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b><span class="fa fa-caret-square-o-right"></span> Getting Started</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsInstallation.html"><b><span class="fa fa-sign-in fa-rotate-90"></span> Installation</b></a></li>   
+                      <li role="presentation" class="divider"></li>                   
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsCompile.html"><b><span class="fa fa-file-text-o"></span> Compile Sources</b></a></li>  
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsCodeSnippets.html"><b><span class="fa fa-indent"></span> Code Snippets</b></a></li>                                  
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsQuickGuide.html"><b><span class="icon ion-ios7-bolt"></span> Quick Guide</b></a></li>           
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="comingSoon.html"><b>Doxygen Docs for C++</b></a></li>  
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="comingSoon.html"><b>Doxygen Docs for Tcl</b></a></li>  
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="comingSoon.html"><b>Doxygen Docs for Fortran</b></a></li>           
+                    </ul>
+                  </li>                  
+
+                  <!-- USER GUIDES -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b><span class="fa fa-user"></span> User Guides</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsImageGuide.html"><b><span class="icon ion-image"></span> Medical Images</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsModelGuide.html"><b><span class="icon ion-settings"></span> Modeling</b></a></li>
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsMeshing.html"><b><span class="icon ion-ios7-keypad"></span> Meshing</b></a></li>
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsFlowSolver.html"><b><span class="icon ion-play"></span> Simulation</b></a></li>
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsRefs.html"><b><span class="icon ion-document-text"></span> References</b></a></li>
+                    </ul>
+                  </li>
+
+                  <!-- CLINCAL CASES -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b><i class="fa fa-stethoscope"></i> Clinical Cases</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase1.html"><b><span class="fa fa-user-md"></span> Aortofemoral Normal (Case 1)</b></a></li>                      
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase2.html"><b><span class="fa fa-user-md"></span> Aortofemoral Normal (Case 2)</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase3.html"><b><span class="fa fa-user-md"></span> Coronary Normal (Case 3)</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase4.html"><b><span class="fa fa-user-md"></span> Healthy Pulmonary (Case 4)</b></a></li>
+                    </ul>
+                  </li>
+
+                  <!-- svCOMMUNITY -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b><i class="fa fa-users"></i> svCommunity</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/forums/viewforum.php?f=188"><b><span class="fa fa-users"></span> Public Forum</b></a></li>                                          
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/mailman/listinfo/simvascular-news"><b><span class="fa fa-sign-in"></span> Join News Mailing List</b></a></li>                      
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/pipermail/simvascular-news/"><b><span class="fa fa-pencil-square-o"></span> News Mailing List Archive</b></a></li>
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/mailman/listinfo/simvascular-users"><b><span class="fa fa-sign-in"></span> Join User Mailing List</b></a></li>                      
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="http://simvascular-users.40599.n7.nabble.com/"><b><span class="fa fa-pencil-square-o"></span> User Mailing List Archive</b></a></li>                      
+                    </ul>
+                  </li>
+
+                    <!-- <li><a href="docsQuickGuide.html" id="btnQuickGuide"><b><span class="icon ion-ios7-bolt"></span> Quick Guide</b></a></li>
+                    <li><a href="docsImageGuide.html" id="btnImageGuide"><b><span class="icon ion-image"></span> Medical Images</b></a></li>
+                    <li><a href="docsModelGuide.html" id="btnModelGuide"><b><span class="icon ion-settings"></span> Modeling</b></a></li> 
+                    
+                    <li><a href="docsMeshing.html" id="btnMeshing"><b><span class="icon ion-ios7-keypad"></span> Meshing</b></a></li>
+                    <li><a href="docsPresolver.html" id="btnPresolver"><b><span class="icon ion-log-in"></span> svPre</b></a></li>
+                    <li><a href="docsFlowSolver.html" id="btnFlowSolver"><b><span class="icon ion-play"></span> svSolver</b></a></li>
+                    <li><a href="docsRefs.html" id="btnRefs"><b><span class="icon ion-document-text"></span> References</b></a></li>
+                    <li><a href="clinicalCase1.html" id="btnRefs"><b>Case Studies</b></a></li> -->
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <!--Nav Bar -->
+<div class="row">
+    <div class="col-xs-1 col-sm-1 hidden-md hidden-lg">
+    </div>
+    <!-- ONE COLUMN OF SPACE -->
+    <nav class="hidden-xs hidden-sm col-md-2 col-lg-2 bs-docs-sidebar">
+
+
+
+
+        <ul id="sidebar" class="nav nav-stacked fixed manImageGuide"> <!--Nav Bar -->
+<p><h3>Imaging Guide</h3></p>
+<li><a href="#imagingOverview">Overview</a></li>
+<li><a href="#imagingLoading">Loading Medical <br>Imaging Data</a></li>
+<li><a href="#imagingSlicePlanes">Viewing Image <br>Slice Planes</a></li>
+<li><a href="#imagingWindowLevel">Changing Window Level</a></li>
+<li><a href="#imagingPointClouds">Visualzing Point Clouds</a></li>
+<li><a href="#imagingVolumeRendering">Using Volume Rendering</a></li>
+<li><a href="#imagingMIP">MIPs</a></li>
+<li><a href="#imagingSubvolume">Resampling the <br>Volume Data</a></li>
+<li><a href="#imagingCombining">Combining Several <br>Visualization Techniques</a></li>
+  
+<h3>Download</h3>
+<a href="documentation/modeling/files/sample_data.zip">Sample Data</a>
+
+
+</ul>
+
+
+
+
+
+
+        
+    </nav>
+    
+    <!--Main Content -->
+    <div class="col-xs-10 col-sm-10 col-md-9 col-lg-9" id="manualContent">
+
+      <!-- ACTUAL CONTENT -->
+
+
+
+
+        <div class="manImageGuide"><section id="imagingOverview" class="group"><h1>Visualizing Medical Imaging Data</h1>
+
+<h2>Overview</h2>
+
+<p>Typically imaging data is a set of scalar values (e.g. integers ranging from 0 to 4096) defined on a structured 3D grid. Note that this data may be acquired in 2D slices and resampled in some fashion. The most common use for (diagnostic) medical imaging data is for visualization.  For example, a vascular surgeon may acquire image data on a patient suspected of having vascular disease.  Traditionally, most surgeons and radiologists look at sets of 2D slices of image data acquired in a 3D volume.  This requires the person to create a mental image of the patient’s 3D anatomy.</p>
+
+<p><strong>SimVascular</strong> has numerous ways to view and interact with medical imaging data.  The first is to visualize slices of image data parallel to the major coordinate axes.  See <a href="#imagingSlicePlanes">Viewing Image Slice Planes</a>. Note that this method is somewhat similar to the way some radiologists visualize data.</p>
+
+<p>A very common technique in viewing image data is to use “window leveling.”  Window leveling basically creates a non-linear color mapping function to help distinguish features in the image data.  See <a href="#imagingWindowLevel">Changing the Window Level</a>.</p>
+
+<p>Another common technique used for image visualization is thresholding.  Thresholding is technically an image segmentation technique.  It defines a region as inside or outside depending on a user-selected value (threshold).  <strong>SimVascular</strong> allows you to create a point cloud (set of small dots) with a dot being created for every voxel that meets user-defined criteria.  See <a href="#imagingPointClouds">Visualizing Point Clouds</a>.</p>
+
+<p>An additional technique gaining popularity is known as 3D volume rendering.  The user defines an opacity transfer function (which can be non-linear) and uses ray casting (or hardware acceleration) to render the 3D volume.  It should be noted that 3D volume rendering is the most computationally intensive method of visualizing imaging data and usually requires very high-end graphics cards for decent performance.  See <a href="#imagingVolumeRendering">Using Volume Rendering</a>.</p>
+
+<p>You may want to create a “flattened 3D image” similar to something you would get from an x-ray. See <a href="#imagingMIP">Creating a Maximum Intensity Projection (MIP)</a>.</p>
+
+<p>Dealing with the entire volume of data can be a computational challenge (particularly for computed tomography angiography, or CTA, data).  Often you may only be interested in viewing a sub-volume or sub-sampled part of the data.  Inside of SimVascular, all of the techniques discussed previously can be used on a sub-sampled/sub-volume of the dataset. See <a href="#imagingSubvolume">Resampling the Volume Data</a>.</p>
+
+<p>Most of the above techniques can be combined inside of SimVascular.  This will be especially useful when automated techniques do not work on your data set and you must manually generate information for the model construction or simulation.  See <a href="#imagingCombining">Combining Several Visualization Techniques</a>.</p>
+
+<p>The demo data that we will be using throughout the manual are magnetic resonance images of the aorta and the iliac bifurcation, shown below in blue.  You can also see parts of the kidney attached to the renal arteries, which branch off of the aorta.</p>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/imaging/imgs/1.jpg">
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+</section>
+<section id="imagingLoading" class="group"><h2>Loading Medical Imaging Data</h2>
+
+<p><strong>SimVascular</strong> allows you to load in your image data as VTI data. Once you have the new window open, in the Menu bar, select File → Load Image (VTI). Choose the file: sample_data/image<em>data/vti/sample\</em>data-cm.vti, and then click on “Open.” </p>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/imaging/imgs/loading/1.jpg">
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p><font color="red"><strong>HELPFUL HINT:</strong></font> Unfortunately, you cannot load in other image data into <strong>SimVascular</strong> once you have loaded in the first data set. You have to open another window. You can always close the current window you are working on as long as you have already saved any work that you have done during the given session.  You can also have multiple windows of SimVascular open at once.</p>
+
+<p>You can also load your image data as DICOM Data (CT or MRA). In Functional Toolbox, select the tab DICOM. Click on the “Browse” button for the “Image Data Directory:” Choose the folder sample_data/image_data/volume, and then click on OK. Click on the “Load Volumetric Image Data” button. This time the software will ask you, “Would you like to convert this volume from mm to cm?” Select “Yes.” Another window will ask, “Would you like to save this volume as a VTI file?” This allows you to convert DICOM data to VTI data. This may be useful in the future but for now select, “No.” </p>
+
+<p><font color="green"><strong>ALTERNATIVE:</strong></font>  You could also have typed in the file name for the first image in the data series (not the directory!) into the field for “Image Data Directory:” </p>
+</section>
+<section id="imagingSlicePlanes" class="group"><h2>Viewing Image Slice Planes</h2>
+
+<p>Once your data (VTI) has loaded, a blue box outline should now appear in the 3D window. </p>
+
+<figure>
+  <img class="svImg svImgLg"  src="documentation/imaging/imgs/slice_planes/1.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>A 3-button mouse is ideal for maneuvering about the 3D display window. Place your mouse within the 3D window. You should find that the:</p>
+<pre class="highlight plaintext"><code>Left Mouse Button: rotates the 3D volume
+Right Mouse Button: zooms the 3D volume
+Center Mouse Button (or ‘shift’ + left mouse button): translates the 3D volume
+</code></pre>
+
+<p><font color="red"><strong>HELPFUL HINT:</strong> </font>  If you ever get lost navigating through your data, press the “r” key to resize your data.</p>
+
+<p>You may only see a zoomed-in part of the blue outlined box. To zoom in/out and see the entire box, put your cursor in the 3D window, keep the right mouse button pressed down and move the mouse up/down until you see the entire box. </p>
+
+<p>To see your image data go to the “Volume Properties” tab under the Display Options toolbox and check the box next to the A/P slice. Then slide the A/P slider to position 24. You should now see the 24th slice of the Anterior/Posterior slicing data as shown below!</p>
+
+<figure>
+  <img class="svImg svImgXl" src="documentation/imaging/imgs/slice_planes/2.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>What you are seeing is the kidneys and part of the aorta.</p>
+
+<p>You can also turn on all the checkboxes labeled “L/R”, “P/A”, and “I/S”, and change the location of each plane by moving the scale bars.  “L/R” refers to left/right direction; “P/A” refers to posterior/anterior direction; “I/S” refers to inferior/superior direction.</p>
+
+<p>The volume dataset we are using for this demo is 512 x 64 x 512 voxels.  This explains why the L/R and I/S scale widget allows you to move between 0-511, while the P/A scale widget only allows you to go from 0-63.  These are indices.  The actual physical location (in mm, cm, etc.) is indicated by the numbers at the top for R, A, and S.</p>
+
+<p>Select the options exactly as they appear below (L/R: 159, A/P: 32, S/I: 231).  The corresponding physical location in space is indicated at the top of the window (R: -7.974, A: 1.290, S:  -4.899). You should see something similar to the image below in the 3D display window:</p>
+
+<figure>  
+  <img class="svImg svImgXl" src="documentation/imaging/imgs/slice_planes/3.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>Try changing the size of the viewing window, moving the sliders and turning on/off different combinations of the image planes.  </p>
+
+<p><font color="red"><strong>HELPFUL HINT:</strong></font> To make sliding to a specific position easier, you can enlarge Display Options toolbox to make the sliders longer. </p>
+</section>
+<section id="imagingWindowLevel" class="group"><h2>Changing the Window Level</h2>
+
+<p>Window leveling determines the mapping between your imaging data and the colors that are displayed.  Specifically, the “window” value actually defines the center of the color range, while the level defines the width of the “band” around the center.  For example, the default color map of “[0 255]” corresponds to values of window = 127.5 and level = 255 as seen in the following color lookup table:</p>
+
+<table class="table table-bordered">
+<tr>
+  <th>Scalar value</th>
+  <th>Color</th>
+</tr>
+<tr>
+  <td>0    (window – 0.5*level)</td>
+  <td>Black  (0)</td>
+</tr>
+<tr>
+  <td>127.5  (window)</td>
+  <td>Gray  (0.5)</td>
+</tr>
+<tr>
+  <td>255  (window + 0.5*level)</td>
+  <td>White  (1)</td>
+</tr>
+</table>
+
+<p>Graphically, this is what window leveling does:</p>
+
+<figure>
+  <img class="svImg svImgLg"  src="documentation/imaging/imgs/window_level/1.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>To see what effect the window leveling has on the data displayed, first turn off all of the visualization techniques from the previous exercises before continuing. Position the P/A scale to position 30.  Display (i.e. click the checkbox) the “P/A” image plane. Click on the radio button to switch the color map from “[0 255]” to “native [0.0 334.0] under “Select color map”. You should see an image similar to that below in your 3D display window.</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/imaging/imgs/window_level/2.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>The reason you don’t see much for the native range is because we are doing a simple linear mapping from black to white as seen in the following color lookup table:</p>
+
+<table class="table table-bordered">
+<tr>
+  <th>Intensity value</th>
+  <th>Color</th>
+</tr>
+<tr>
+  <td>0</td>
+  <td>Black  (0)</td>
+</tr>
+<tr>
+  <td>334.0</td>
+  <td>White  (1)</td>
+</tr>
+</table>
+
+<p>The useful range of the imaging data is much smaller than the total range (0 to 334) that is available.</p>
+
+<p>Now we are going to try a non-linear color mapping function.  Move the cursor (i.e. arrow pointer) into the 3D display window. By holding down the up-and-down arrow keys, you change the maximum displayed value (all values equal to or greater than this value are displayed as white).  By pressing the left or right arrow keys you change the minimum displayed value (all values equal or below this value are shown as black).  Can you get an image similar to that shown below?</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/imaging/imgs/window_level/3.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>Set the color map radio button back to “[0 255]”.</p>
+
+<p> </p>
+</section>
+<section id="imagingPointClouds" class="group"><h2>Visualizing Point Clouds</h2>
+
+<p>We can also use point clouds to visualize image data.  First, turn off all of the image planes in the view window (i.e. remove checks for “L/R”, “P/A”, and “I/S” planes) from the previous exercises.</p>
+
+<p>Click on the “point cloud” checkbox to threshold the image data under the “Volume Properties” tab.  The default minimum value for thresholding is 128 and the default maximum value for thresholding is 334.0. You should see something similar to the following image:</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/imaging/imgs/point_clouds/1.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>Now try two different minimum threshold values:  80 and 175.  To change the threshold value, enter the new value in the entry widget in the “Volume Properties” tab under “Threshold Range” and hit RETURN.  When you enter the value of 80, you should see something similar to (a) below.  Next, try a value of 175.  You should get something similar to (b) below.  Only the image intensity values that fall within the specified min and max range are displayed.</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/imaging/imgs/point_clouds/2.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>An additional useful technique when using thresholding is to apply a &ldquo;connectivity&rdquo; filter given a &ldquo;seed&rdquo; point and to discard pixels that are not simply connected to the &ldquo;seed&rdquo; voxel.</p>
+
+<p>First de-select “point cloud” under “Visualization options”. Move the scale bars in the &ldquo;Volume Properties&rdquo; window to select the point exactly as shown below (L/R: 258, A/P: 26, S/I: 351).  The corresponding physical location in space is indicated at the top of the window (R: -0.240, A: 0.090, S:  4.476). </p>
+
+<p>Now change the minimum value of the &ldquo;Threshold Range&rdquo; to 90. Click on the “use seed” drop-down menu and select the first option, “Seed by Volume Sliders” as shown below. Within the “use seed” widget should appear the physical location in space that was selected by your scale bars (-0.240 {0.090} 4.476). Then, click the &ldquo;use seed&rdquo; checkbox underneath “Threshold Range”, and turn on the point cloud again by checking &ldquo;point cloud&rdquo; under “Visualization Options”. You should see an image similar to that below. </p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/imaging/imgs/point_clouds/3.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>Note that if you did NOT use the &ldquo;connectivity&rdquo; filter and simply used a minimum threshold value of 90, you would get an image as shown below. All pixels above an intensity value of 90 are displayed, not only the pixels with intensity value above 90 that are connected to the seed voxel that was used above.</p>
+
+<figure>
+  <img class="svImg svImgXl" src="documentation/imaging/imgs/point_clouds/4.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p><font color="orange"><strong>WARNING:</strong></font>  You may have to deselect and then reselect &ldquo;point cloud&rdquo; if you change the value of &ldquo;use seed&rdquo; after you have already displayed a point cloud in order for the point cloud to update.</p>
+</section>
+<section id="imagingVolumeRendering" class="group"><h2>Using Volume Rendering</h2>
+
+<p>Another technique for viewing imaging data is 3-D volume rendering. Be sure to turn off all of the visualization techniques from the previous exercises before continuing (no point clouds, no imaging slices).</p>
+
+<p>In the Display Options pane (top right corner), click on the “Volume Rendering” tab.  You can manually set the transfer functions for volume rendering by clicking on the &ldquo;Manually set transfer functions&rdquo; checkbox. Three entry boxes (opacity fn, color fn, gradient fn) should then appear underneath “Manually set transfer functions”.</p>
+
+<p>The opacity transfer function should be a list of points with each point enclosed in brackets, such as:</p>
+
+<p>{0 0.0} {50 0.0} {128 0.25} {200 1.0} {255 1.0}</p>
+
+<p>This corresponds to the following piecewise linear opacity lookup table:</p>
+
+<table class="table table-bordered">
+<tr>
+  <th>Scalar intensity value</th>
+  <th>Opacity</th>
+</tr>
+<tr>
+  <td>0</td>
+  <td>0.0 (transparent)</td>
+</tr>
+<tr>
+  <td>50</td>
+  <td>0.0</td>
+</tr>
+<tr>
+  <td>128</td>
+  <td>0.25</td>
+</tr>
+<tr>
+  <td>200</td>
+  <td>1.0</td>
+</tr>
+<tr>
+  <td>255</td>
+  <td>1.0 (opaque)</td>
+</tr>
+</table>
+
+<p>The scalar intensity value is the same as the intensity values we previously used to set thresholds and look at point cloud data.</p>
+
+<p>Check on &ldquo;Turn on Volume Rendering.&rdquo;  Depending on your hardware and dataset, you may see the program run slower using this visualization technique. You should see something similar to the following image:</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/imaging/imgs/volume_rendering/1.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>Now we are going to try a different opacity and color transfer function.  In the “Volume Rendering” tab enter the following:</p>
+
+<p>opacity function:   {0 0} {70 0} {100 0.4} {350 1.0}
+color function:     {0 0 0 0} {80 0 1 0} {128 1 0 0} {5000 1 0 0}</p>
+
+<p>and press RETURN inside the entry widget.  You should see an image like that below:</p>
+
+<figure>
+  <img class="svImg svImgXl" src="documentation/imaging/imgs/volume_rendering/2.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>How did that work?  The color function corresponds to the following table, where each color component is specified as a value between 0 (turned off) to 1.0 (full intensity):</p>
+
+<table class="table table-bordered">
+  <tr>
+    <th rowspan="2">Scalar value</th>
+    <th colspan="3">Color</th>
+  </tr>
+  <tr>
+    <th>Red</th>
+    <th>Green</th>
+    <th>Blue</th>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>80</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>128</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>5000</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+</table>
+
+<p>Once you have finished this exercise, you should un-click the “Turn on Volume Rendering” checkbox to turn off volume rendering. Volume rendering techniques require a large amount of memory, and the program should run faster once this visualization option is turned off. </p>
+</section>
+<section id="imagingMIP" class="group"><h2>Creating a Maximum Intensity Projection (MIP)</h2>
+
+<p>To create a Maximum Intensity Projection (MIP), which may be thought of as a “flattened 3D image” or something similar to an “x-ray image”, select the &ldquo;MIP&rdquo; tab in the Display Options pane (top right corner).  Click on &ldquo;Coronal MIP&rdquo;, and a new “SimVascular Graphics Window” should appear as shown below (be sure to play with the window level by clicking inside the graphics window and using the up/down and left/right keyboard arrows). </p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/imaging/imgs/MIP/1.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>Click on the &ldquo;Do not display&rdquo; radio button to hide the window displaying the MIP.</p>
+
+<p><font color="red"><strong>HELPFUL HINT:</strong> </font>   You can change the &ldquo;Slice Range&rdquo; to use only some of the image slices when creating a MIP.</p>
+</section>
+<section id="imagingSubvolume" class="group"><h2>Resampling the Volume Data</h2>
+
+<p>In some cases, you may only want to interact with a subset of the volumetric data. Under the “Volume Properties” tab, turn off all visualization methods. Now select the &ldquo;Subvolume Properties&rdquo; tab in the Display Options pane (top right corner)</p>
+
+<p>Determining the Sub-Volume to Be Displayed</p>
+
+<p>By defining the size and center of a box, you determine what sub-volume of the data to show.  The size of the box is a function of both the voxel size (can be integer or floating number) and the box dimensions (integer values).  </p>
+
+<p>To begin with, set the values as follows: </p>
+
+<table class="table table-bordered">
+  <tr>
+    <th>Box dims</th>
+    <th>R</th>
+    <th>A</th>
+    <th>S</th>
+  </tr>
+  <tr>
+    <th>min</th>
+    <td>-50</td>
+    <td>-50</td>
+    <td>-100</td>
+  </tr>
+  <tr>
+    <th>max</th>
+    <td>50</td>
+    <td>50</td>
+    <td>100</td>
+  </tr>
+</table>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;Resample voxel size:  .078125</p>
+
+<p>There are 4 ways to set the center of the box:  using the “Volume Sliders” (controlled with image plane scale bars under the “Volume Properties” tab), the “Path Plan Cursor” (controlled with scale bars in the “Path Planner” tab, discussed in the next section), the “Path Point”, or the “Interactor”.  For this example, select the “Volume Slider” option.</p>
+
+<p>Now click on the “Volume Properties” tab and set the image plane scale bars to:</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;L/R:    275<br>
+&nbsp;&nbsp;&nbsp;&nbsp;P/A:    41<br>
+&nbsp;&nbsp;&nbsp;&nbsp;I/S:    193</p>
+
+<p>Once the scale bars have been set under the “Volume Properties” tab, go back to the “Subvolume Properties” tab.</p>
+
+<p>Click on the “Resample voxel size” checkbox.  A green outline of a box should appear in the 3D display window as shown in the following picture. This green box shows the bounding box of the sub-volume to be displayed.</p>
+
+<figure>
+  <img class="svImg svImgXl" src="documentation/imaging/imgs/subvolume/1.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>Now try to use the “box dims” entry widget and the image plane scale bars (in the “Volume Properties” tab) to make the box:</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;(a)  bigger<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(b)  shift to one corner of the blue outlined box   </p>
+
+<p><font color="red"><strong>HELPFUL HINT:</strong> </font>  Some of the changes occur automatically but others won’t take place until you hit the “Update display” button in the upper-right-hand corner.  Changes to the values of the image plane scale bars in the “Volume Image Browser” window won’t be observed until the “Update display” button is pressed.</p>
+
+<p>Enter a value of “0.234375” into the “resample voxel size” entry widget and hit RETURN.  <strong>Don’t forget to hit RETURN or else the new value doesn’t register with the system.</strong>  You are now resampling the volumetric data to a 0.234375 cm3 voxel volume from the original voxel data. This is 3 times larger than the original voxel size.  </p>
+
+<p>Visually, this displays the same sub-volume as using a “resample voxel size” of 0.078125 and increasing the box dims min and max value by 3 (R min:  -150, R max:  150, A min: -150, A max:  150, S min: -300, S max:  300).  The crucial difference is in the computational overhead.  The larger voxel size of 0.234375 cm3 has (1/3) 3 or 1/27th fewer voxels in the sub-volume than that with a voxel size of 0.078125 cm3 and consequently, a significantly lower computational overhead.  Techniques such as resampling are useful when you are interested in coarse representations of large anatomic features (e.g. the aorta).</p>
+
+<h3>Visualizing Data in the Sub-Volume</h3>
+
+<p>Reset the values as follows: </p>
+
+<table class="table table-bordered">
+  <tr>
+    <th>Box dims</th>
+    <th>R</th>
+    <th>A</th>
+    <th>S</th>
+  </tr>
+  <tr>
+    <th>min</th>
+    <td>-50</td>
+    <td>-50</td>
+    <td>-100</td>
+  </tr>
+  <tr>
+    <th>max</th>
+    <td>50</td>
+    <td>50</td>
+    <td>100</td>
+  </tr>
+</table>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;Resample voxel size:  .078125<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Volume Sliders checkbox:  selected</p>
+
+<p>In the “Volume Properties” tab, set the image plane scale bars to:</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;L/R:    275<br>
+&nbsp;&nbsp;&nbsp;&nbsp;P/A:    41<br>
+&nbsp;&nbsp;&nbsp;&nbsp;I/S:    193</p>
+
+<p>There are 3 different ways to visualize the data inside this sub-volume:  </p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;a) point cloud: uses the thresholding range information (see <a href="#imagingPointClouds">Visualizing Point Clouds</a>)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;b) isosurface<br>
+&nbsp;&nbsp;&nbsp;&nbsp;c) volume rendering (see <a href="#imagingVolumeRendering">Using Volume Rendering</a>)</p>
+
+<p>For this example, we will just look at the data as a point cloud and as an isosurface.</p>
+
+<p><strong>Visualizing Point Clouds:</strong> Under the “Threshold Range” area in the “Subvolume Properties” tab, set the values to min: 100, max: 334.  Click the “point cloud” checkbox under “Visualization Options”.  You should see something like the following figure.  Notice that we now have only displayed part of the volume (the aortic bifurcation, where the aorta divides into the right and left common iliac arteries).</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/imaging/imgs/subvolume/2.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>Now turn off the point cloud (deselect the “point cloud” checkbox).  </p>
+
+<p><strong>Visualizing Isocontours:</strong>  An additional technique, closely related to thresholding, is to display an isosurface of a user-defined value.  You can think of an isosurface as the 3D analog of a threshold. Click on the “isosurface” checkbox.  This will create an isosurface for the current sub-volume as shown below.</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/imaging/imgs/subvolume/3.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>When you are finished with this exercise, you should uncheck the “Resample voxel size” checkbox. The green subvolume should disappear.</p>
+</section>
+<section id="imagingCombining" class="group"><h2>Combining Several Visualization Ttechniques</h2>
+
+<p>We will try combining different visualization techniques previously discussed. One commonly used combination is the point cloud with an image slice.  This is very helpful when you are building geometric models.</p>
+
+<p>Under the “Volume Properties” tab in the Display Options pane (top right corner), set the threshold min value to 100, the max to 334, and click on the “point cloud” checkbox in the “Volume Properties” window.  In addition, turn on the “A/P” image slice.  Try changing the position of the A/P scale bar.  You should see something similar to that shown below.</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/imaging/imgs/combining/1.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p><br>
+<br></p>
+</section>
+
+
+
+
+  
+
+
+</div>
+
+
+
+
+
+
+
+    </div>
+</div>    
+
+
+    <!-- /.container -->
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container-fluid text-center">
+          <ul class="nav navbar-nav">
+            <li><a>Copyright &copy; SV Development Team - 2014</a></li>                
+          </ul>
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    
+    <script src="js/jquery-1.11.0.js" type="text/javascript"></script><script src="js/bootstrap.min.js" type="text/javascript"></script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+      });
+      $('body').scrollspy({
+        target: '.bs-docs-sidebar',
+        offset: 40
+      });
+    </script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-55333921-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <script type="text/javascript"
+      src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+</body>
+
+</html>
