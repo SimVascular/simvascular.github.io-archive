@@ -178,7 +178,7 @@ This section discusses the options available in the **solver.inp** file.
   <td>Print Error Indicators</td>
   <td>(False)</td>
   <td>False,True</td>
-  <td>Print time-accumulated errors of pressure and velocities to there averaged values in restart files. </td>
+  <td>Print time-accumulated errors of pressure and velocities to their averaged values in restart files. </td>
 </tr>
 <tr>
   <td>Number of Surfaces which Output Pressure and Flow</td>
