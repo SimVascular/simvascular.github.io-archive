@@ -2329,10 +2329,16 @@ blood</td>
   <td>Number of time steps between a new restart.<step>.<proc> is saved. This values decides how often the complete status of the model is saved to disk.</td>
 </tr>
 <tr>
-  <td>Print ybar</td>
+  <td>Print Average Solution</td>
   <td>(True)</td>
   <td>False,True</td>
-  <td>Print discretization error estimates in restart files. These errors can be used by the <b>svAdapt</b> application to refine the computational mesh increasing the accuracy of the resulting pressure/velocity distribution.</td>
+  <td>Print time-averaged pressure and velocities in restart files. These values can be used by the <b>svAdapt</b> application to refine the computational mesh increasing the accuracy of the resulting pressure/velocity distribution.</td>
+</tr>
+<tr>
+  <td>Print Error Indicators</td>
+  <td>(False)</td>
+  <td>False,True</td>
+  <td>Print time-accumulated errors of pressure and velocities to there averaged values in restart files. </td>
 </tr>
 <tr>
   <td>Number of Surfaces which Output Pressure and Flow</td>
