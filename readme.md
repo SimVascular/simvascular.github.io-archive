@@ -3,6 +3,8 @@
 Fist, you need to install the following components:
 
 ```
+$ sudo apt-get install ruby ruby-dev
+$ sudo apt-get install nodejs
 $ gem install bundler (may prompt for password for sudo access)
 $ bundle install (get dependencies)
 ```
