@@ -20,6 +20,10 @@ title: SimVascular Docs
         <ul id="sidebar" class="nav nav-stacked fixed manQuickGuide"> <%= partial "documentation/userguide_TOC" %></ul>
       <% end %>
 
+      <% if man_name == "QuickGuide3" %>
+        <ul id="sidebar" class="nav nav-stacked fixed manQuickGuide"> <%= partial "documentation/userguide3_TOC" %></ul>
+      <% end %>
+
       <% if man_name == "ImageGuide" %>
         <ul id="sidebar" class="nav nav-stacked fixed manImageGuide"> <%= partial "documentation/imaging_TOC" %></ul>
       <% end %>
@@ -65,6 +69,10 @@ title: SimVascular Docs
 
       <% if man_name == "QuickGuide" %>
         <div class="manQuickGuide"><%= partial "documentation/userguide_content" %></div>
+      <% end %>
+
+      <% if man_name == "QuickGuide3" %>
+        <div class="manQuickGuide"><%= partial "documentation/userguide3_content" %></div>
       <% end %>
 
       <% if man_name == "ImageGuide" %>
