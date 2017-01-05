@@ -7,7 +7,7 @@ With the two groups of contour segmentation (aorta and right_iliac), we are now 
 	Model Type: PolyData
 	Model Name: demo
 
-A new PolyData model "demo" is created under the data node "Models" in Data Manager. Double click the model data node "demo"and the tool SV Modeling shows up. The new model is empty ans has no contours. To loft and create an actual model :
+A new PolyData model "demo" is created under the data node "Models" in Data Manager. Double click the model data node "demo"and the tool "SV Modeling" shows up. The new model is empty so far. To loft and create the actual model:
 
 	Click the button "Create Model..."
 	Choose and use "aorta" and "right_iliac" in the dialog
@@ -32,7 +32,7 @@ All the faces of the model are listed under “Face List” tab. Double click a 
 Different colors can be assigned to those faces.
 
 	Double click the table cell in the column "C" in the table.
-     	Selecte a color for the corresponding face.
+	Selecte a color for the corresponding face.
 
 <figure>
   <img class="svImg svImgLg"  src="documentation/userguide3/imgs/modeling/facecolor.png"> 
@@ -43,4 +43,4 @@ Different colors can be assigned to those faces.
 
 	Click "Save SV Projects" on the tool bar
 
-The model will be saved to a file inside the project folder.
+The model will be saved to files inside the project folder.

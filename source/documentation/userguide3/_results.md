@@ -2,7 +2,7 @@
 
 Launch ParaView.
 
-	Open the file *steady.vtu* with ParaView.
+	Open the file "steady.vtp", "steady.vtu" with ParaView.
 	Click the button “Apply”
 
 <figure>

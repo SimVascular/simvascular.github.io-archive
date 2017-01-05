@@ -1,27 +1,28 @@
 ### Meshing Using TetGen
 
-	Tab: TetGen → Mesh Options
-	File: <project folder>/demo.vtp
-	Set maximum edge size for equilateral tetrahedron: 0.3
-	Click “Run Mesher (Internal)”
+With the solid model "demo" (or "demo2") ready, we are now able to create a mesh for this model using TetGen.
+
+	Right click the data node "Meshes" in the project "SVProject" in Data Manager
+	Click "Create Mesh" in the popup menu
+	Select Model: demo (or demo2)
+	Mesh Type: TetGen
+	Mesh Name: demomesh
+
+A new TetGen mesh "demomesh" is created under the data node "Meshes" in Data Manager. Double click the mesh data node "demomesh"and the tool "SV Meshing" shows up. The new model is empty so far. To create the actual mesh:
+
+	Click the button "Estimate" to provide estimated value for "Global Max Edge Size"
+	Use the default parameter values
+	Click the button "Run Mesher"
 
 <figure>
-  <img class="svImg svImgXl" src="documentation/userguide3/imgs/meshing/tetgen1.jpg"> 
+  <img class="svImg svImgXl"  src="documentation/userguide3/imgs/meshing/tetgenmesh.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-Now the mesh is created for the model as below.
+Now the mesh is created for the model as above.
 
-<figure>
-  <img class="svImg svImgXl" src="documentation/userguide3/imgs/meshing/tetgen2.jpg"> 
-  <figcaption class="svCaption" ></figcaption>
-</figure>
+<font color="red">**HELPFUL HINT:** </font> When the data in the project change, remember to save the project by:
 
-To output mesh data files (later used for simulation):
+	Click "Save SV Projects" on the tool bar
 
-	Click “Write Files”
-
-All mesh data files are in the folder *mesh-complete* under the project folder *demo*.
-
-<font color="red">**HELPFUL HINT:** </font>  You can check more details on [TetGen meshing in the Meshing Guide](docsMeshing.html#meshSec7).  
-
+The mesh will be saved to files inside the project folder.

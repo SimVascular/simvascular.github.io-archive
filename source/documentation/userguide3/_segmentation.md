@@ -7,7 +7,7 @@ Along the path we created, a group of contours of the aorta vessel wall can be d
 	Select Path: aorta
 	Group Name: use the path name by default
 
-A new group "aorta" is created under the data node "Segmentations" in Data Manager. Double click the group data node "aorta"and the tool SV 2D Segmentation shows up. The window layout of Display changes. The left top view shows image reslice in intensity; the left bottom view shows in gradient magnitude; the right 3D view shows image intensity on the probe plane (the red square) perpendicular to the path. The new group is empty ans has no contours. To add create and add a contour point:
+A new group "aorta" is created under the data node "Segmentations" in Data Manager. Double click the group data node "aorta"and the tool "SV 2D Segmentation" shows up. The window layout of Display changes. The left top view shows image reslice in intensity; the left bottom view shows in gradient magnitude; the right 3D view shows image intensity on the probe plane (the red square) perpendicular to the path. The new group is empty ans has no contours so far. To add create and add a contour point:
 
 	Toggle on "Convert to Spline"; Ctrl No. (12) is the number of control points you want the along contour line	
 	Click the button "LevelSet"; LevelSet parameter panel appears
@@ -40,6 +40,8 @@ A number of new contours are created (at reslice positions: 10, 40, 70, 100...) 
 To checkout the group quality for lofting:
 
 	Toggle on "Lofting Preview"
+
+A new data node "Lofted" for lofting face is created under this group in Data Manager
 
 <figure>
   <img class="svImg svImgXl"  src="documentation/userguide3/imgs/modeling/batchlofting.png"> 

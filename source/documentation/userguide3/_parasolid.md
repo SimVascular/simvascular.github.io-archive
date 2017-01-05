@@ -7,7 +7,7 @@ With the two groups of contour segmentation (aorta and right_iliac), we are now 
 	Model Type: OpenCASCADE (or Parasolid)
 	Model Name: demo2
 
-A new OpenCASCADE model "demo2" is created under the data node "Models" in Data Manager. Double click the model data node "demo2"and the tool SV Modeling shows up. The new model is empty ans has no contours. To loft and create an actual model :
+A new OpenCASCADE model "demo2" is created under the data node "Models" in Data Manager. Double click the model data node "demo2"and the tool "SV Modeling" shows up. The new model is empty so far. To loft and create the actual model:
 
 	Click the button "Create Model..."
 	Choose and use "aorta" and "right_iliac" in the dialog
@@ -32,3 +32,9 @@ To blend faces:
   <img class="svImg svImgLg"  src="documentation/userguide3/imgs/modeling/occtblending.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
+
+<font color="red">**HELPFUL HINT:** </font> When the data in the project change, remember to save the project by:
+
+	Click "Save SV Projects" on the tool bar
+
+The model will be saved to files inside the project folder.
