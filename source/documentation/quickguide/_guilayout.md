@@ -13,7 +13,7 @@ The window title shows the names and versions of major external packages used by
 
 ### Menubar
 
-The menubar contains menus to acces all functions and tools. The tools specially for cardiovascular modeling/simulation pipeline are listed on the top of Menu "Tools". To change tool settings, go to "Windows -> Preferences...". To switch between the preset GUI layouts (Perspectives), go to "Windows -> Open Perspective".
+The menubar contains menus to acces all functions and tools. The tools specially for cardiovascular modeling/simulation pipeline are listed on the top of Menu "Tools".
 
 <figure>
   <img class="svImg svImgMd"  src="documentation/quickguide/imgs/menus.png"> 
