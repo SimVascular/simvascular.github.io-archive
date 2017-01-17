@@ -1,20 +1,16 @@
-##Using Level Sets to Define a Contour
+###Using Level Sets to Define a Contour
 
 Thresholding is very dependent on the user-specified parameters and does not always result in a closed contour. An alternate method that’s been implemented within **SimVascular** is the level set method. **SimVascular** utilizes a specialized level set method built specifically for 2D vascular modeling. These level sets use to intensity image data and geometric constraints to produce a smooth contour of the vascular wall in 2D cross sections. **SimVascular**'s level set method is initialized with a seed and then performs segmentation in two stages.  Details of these stages are outlined below.
 
-Note for all settings.  Hitting **enter** while in any of the text boxes will start the levelset computation.
-
 ####Seed Parameters
 
-These parameters modify the location and size of the starting seed. These parameters are shown in two variants. On the left, the location and size are standardized, and will be the same across all images.  The settings on the right show the same fields but take into account the physical space of the data.  Updating either setting type will automaticaly update its counterpart.
+These parameters modify the size of the starting seed. The size is standardized, and will be the same across all images. The location of the seed is fixed at the image center (path point)T
 
-+ **Center** controls the center of the seed using the center of the image as origin. Decreasing or increasing the **X** value will move the seed **left** or **right** respectively. Decreasing or increasing the **Y** value will move the seed **up** or **down**, respectively.
-
-+ **Radius** controls the radius of the seed.  This is taken in the **X** direction.
++ **Radius** controls the radius of the seed. 
 
 #### Stage 1 Parameters
 
-These parameters control the growth and stop criteria of the first stage levelset.  Stage 1 levelset is meant to arrive at a approximate solution to initialize stage 2. The result of the first stage is displayed in yellow.
+These parameters control the growth and stop criteria of the first stage levelset.  Stage 1 levelset is meant to arrive at a approximate solution to initialize stage 2. 
 
 + **Blur** parameters control the image blur on the feature image and the advection image.  If your image has a lot of noise, increasing these values can improve accuracy. Increased image blur will decrease precision, however.
 + **Kthr** is the equilibrium curvature value of the level set. A higher value will result in less curvature smoothing.
@@ -37,21 +33,50 @@ Stage 2 level set is intended to provide a smooth, accurate contour based on the
 + **Max Iterations** specifies the maximum number of iterations that can be complete before levelset is halted.
 + **Max Error** specifies the maximum RMS error for the levelset stop criteria.
 
-#### Display and Refresh Options
 
-##### Display
+Now let's use the levelset method to create and add contours to the group.
 
-These radio buttons control what edge potential image is shown in the 2-D potential window.
+	Click the button "LevelSet"
+	A new panel shows inside the tool
 
-##### Always Refresh
+<figure>
+  <img class="svImg svImgSm"  src="documentation/modeling/imgs/segmentation/levelsetpanel.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
 
-These check boxes force the segmentation to be re-computed every time the user modifies the level set parameters. If you modify parameters in stage 1 or seed, the final levelset will not be updated unless these are checked. Note: modifying a later change will automatically recompute the previous stages.
+The new panel is to set parameters for the levelset.
 
-#### Smoothing and Batch Computation
+To create a contour using Levelset:
 
-+ **Fourier Smooth** performs a Fourier-based smoothing of the resulting level set. 
-+ **Batch Segmentation** performs a batch set of segmentations using the current settings by inputting the batch settings in the text box and clicking "Batch Segmentation".
+	Move the reslice position to 158
+	Use default levelset paramters
+	Toggle on the checkbox "Convert to Spline" in the threshold panel.
+	Ctrl No.: 12
+	Toggle off the checkbox "Batch Mode"
+	Click the button "LevelSet"
 
-<font color="red">**HELPFUL HINT:**</font> Finding suitable level set parameters based on a few cross sections and then doing batch segmentation can dramatically speed up model building. After generating several segmentations in batch, it is good practice to quicly check through them paying attention to possibly unclosed and inaccuate segmentations.
+<figure>
+  <img class="svImg svImgLg"  src="documentation/modeling/imgs/segmentation/levelset.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
 
+Now a new contour is created and added to the group.
+
+####Batch Segmentation
+
+<font color="red">**HELPFUL HINT:**</font> Finding suitable level set parameters based on a few cross sections and then doing batch segmentation can dramatically speed up model building.
+
+Now let's try  create contours in batch model using levelset.
+
+	Toggle on the checkbox "Convert to Spline" in the threshold panel.
+	Ctrl No.: 12
+	Toggle on the checkbox "Batch Mode", List: 180:30:600
+	Click the button "LevelSet"
+
+<figure>
+  <img class="svImg svImgLg"  src="documentation/modeling/imgs/segmentation/levelsetbatch.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+Three more contours are created for reslice positions: 180,210,240,270,300,330,...,600. After batch segmentation, it is good practice to quicly check through them paying attention to possibly unclosed and inaccuate segmentations.
 

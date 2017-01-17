@@ -1,6 +1,6 @@
 ## Path Planning ##
 
-[Section: Creating a path](#modelingCreatingPath) shows you how to generate a path. [Section: Smoothing a path](#modelingSmoothingPath) shows you how to smooth a path.  Lastly, [Section Saving and loading paths](#modelingSavingLoadingPaths), will explain how to save your work, and then load it again after restarting SimVascular.
+[Section: Creating a path](#modelingCreatingPath) shows you how to generate a path. [Section: Smoothing a path](#modelingSmoothingPath) shows you how to smooth a path.  Lastly, [Section Importing and Export Legacy Paths](#modelingImportingExportingPaths), will explain how to save your work, and then load it again after restarting SimVascular.
 
 Some tips to keep in mind as you are constructing paths.
 

@@ -7,7 +7,7 @@ To create a geometric model for a vessel, you need to first create a path, which
 	Path Name: aorta
 	Subdivision Type: choose "Image Spacing Based"
 
-A new path "aorta" is created under the data node "Paths" in Data Manager. Double click the data node "aorta"and the tool "SV Path Planning" shows up. The new path is empty ans has no points so far. To add a contro point:
+A new path "aorta" is created under the data node "Paths" in Data Manager. Double click the data node "aorta" and the tool "SV Path Planning" shows up. The new path is empty and has no points so far. To add a contro point:
 
 	Image Navigator: Axial slider: 475
 	Place the curson into the Axial 2D View in display
@@ -15,7 +15,7 @@ A new path "aorta" is created under the data node "Paths" in Data Manager. Doubl
 	Method 1: Click at the center of the vessel; Ctrl+A or click the button "Add Smart"
 	Method 2(interactive): Move the cursor to the center of the vessle; Shift+Left Click
 
-A control point is added for the path and should appear under the Control Point List. In a 2D view, the point is shown as a blue or red point, depending on if the point is selected. To interactively move the point:
+A control point is added for the path and should appear under the Control Point List. In Display, the point is shown as a blue or red point, depending on if the point is selected. To interactively move the point:
 
 	Move the cursor to the control point, it becomes red(selected) if not selected yet
 	Left press on the point and move 
@@ -45,13 +45,8 @@ Continue to move down the aorta inferiorly in the Axial 2D View in increments of
 
 <font color="red">**Delete a control point** </font> in the path
 
-	Method 1: select the one you want to remove in the Control Point List
+	Method 1: select the one you want to remove in the Control Point List and click the button "Delete"
 	Method 2(interactive): Move the cursor to the point you want to remove and Right Click
-
-<font color="red">**Undo/Redo:** </font> To restore the data to the previous state, apply Undo/Redo.
-
-	Undo: Ctrl+Z
-	Redo: Ctrl+Y
 
 Build your path down as far as possible (you should be able to get to around Axial slider position 10 before things get harder to see. 
 

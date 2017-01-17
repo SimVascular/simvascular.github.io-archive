@@ -31,3 +31,24 @@ To use an image for a project, the image needs to be added to the project.
 	Copy into Project? Choose Yes or No
 
 Then the image is added under the data node "Images". At the same, the image is shown in Display.
+
+If you add/remove data nodes, or change data of a data node inside a SV project, you need to save those changes to the underlying files.
+
+**To save SV projects:**
+
+	Method 1: Toolbar -> Save SV Projects
+	Method 2: Menu -> File -> Save Sv Projects
+
+You can close a project with exiting SimVascular. Make sure you save the project before closing it. After closing a project, it's removed from Data Manager.
+
+
+**To close a SV project:**
+
+	Right click the data node of a SV project in Data Manager
+	Click "Close SV Project" in the popup menu
+
+
+**Undo/Redo is implemented for data changes.** To restore the data to the previous state, apply Undo/Redo.
+
+	Undo: Ctrl+Z
+	Redo: Ctrl+Y

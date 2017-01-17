@@ -1,39 +1,113 @@
 ###Using Thresholding to Define a Contour
 
-This exercise assumes that you have loaded in the path that most accurately represents your vessel according to the exercises above. This path name should appear next to “Current Path” in the “Create Vessel” tab.
+Now let's use the threshold method to create and add contours to the group.
 
-Underneath the “2D Segmentation → Create Vessel” tabs, select the “Threshold” tab:
+	Click the button "Threshold"
+	Two new panels show inside the tool
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/thresholding/1.jpg"> 
+  <img class="svImg svImgSm"  src="documentation/modeling/imgs/segmentation/thresholdpanel.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-**Threshold Intensity:**
+The top new panel is to set a preset threshold value. The other new panel is for postprocessing and batch segmentation.
 
-To segment the image based on intensity, click on the “threshold intensity” radio button. For the purposes of this example, place your slider bar next to “Current Position” on “0”. Enter “90” in the field next to “Threshold Value”, and then click on the “Segment Current Position” button.
+To create a contour using Threshold (interactively):
 
-To visualize the segmentation(s) you have just created, click on the “Display Options” drop-down menu in the 2-D Intensity window and select “Threshold → threshold”. One or more blue lines outlining your image data should appear:
-
+	Make sure toggle off the checkbox "Preset"	
+	Click the button "Threshold" when the threshold panel already shows.
+	The button is highlighted in light blue, which means the method is activated for interaction.
+	Move the cursor to a 2D view window
+	Press and hold the left mouse button at the center of vessel
+	Move the cursor up/down. Up: decrease threshold value, down: increase threshold value.
+	Relsease the left mouse button when you feel the contour (in yellow) matches the vessel lumen best
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/thresholding/2.jpg"> 
+  <img class="svImg svImgLg"  src="documentation/modeling/imgs/segmentation/thresholdinteractive.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-**Selected Threshold:**
-
-If you have a number of enclosures displayed in your 2D Intensity window, you may be wondering how SimVascular knows which one is the one you want. The threshold contour that contains the specified center will be the one that is considered. Your current center should be set at “X: 0”, “Y: 0” next to the “Center:” widget under the “Threshold” tab. That should be the dead center of the 2D image. Therefore, your “selected threshold” will be the threshold contour that contains this centerpoint.  Changing this centerpoint will change the contour that is selected. To view the selected contour, go to the “Display Options” menu in the 2D Intensity window and select “Threshold → selected threshold contour”. The selected threshold will then be outlined by a heavier blue line:
+Notice when you move up/down, the slider "Preset" slider displays the threshold value used to create the contour. After releasing th mouse, the contour is finalized (in red) and added to the group. In this example, the preset value is 62.8. Under Contour List, the new contour is listed with the type and method used for it.
 
 <figure>
-  <img class="svImg svImgXl" src="documentation/modeling/imgs/segmentation/thresholding/3.jpg"> 
+  <img class="svImg svImgLg"  src="documentation/modeling/imgs/segmentation/thresholdinteractive2.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-If you want to change your center, it is helpful to visualize it in space. Select the “Display Options” menu in the 2D Intensity window and select “Threshold → initialization sphere”. A green sphere will appear where your current center is located. If you don’t see a sphere or your sphere is merely a faint outline, click your mouse arrow in the 2D Intensity window and type “r” on the keyboard. This resizes objects to be properly displayed:
+When this contour is finalized, two control points are created inside it for shifting and scaling the contour.
+
+To shift a contour (interactively):
+
+	Move the cursor to the central control point and it becomes red (activted)
+	Press and hold the left mouse button at the point
+	Move the mouse to shift the contour
+
+To scale a contour (interactively):
+
+	Move the cursor to the other control point (conncted to the central point by a short line)
+	Press and hold the left mouse button at the point
+	Move the mouse to scale the contour
+
+With the only two control points, we can't change the shape of the contour. Now we move the reslice position to 30 and create another contour using the same method as above. The only differences are:
+
+	Move the reslice position to 30	
+	Toggle on the checkbox "Convert to Spline" in the threshold panel.
+	Ctrl No.: 12
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/thresholding/4.jpg"> 
+  <img class="svImg svImgMd"  src="documentation/modeling/imgs/segmentation/thresholdinteractive3.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-Play around with changing the Threshold Value to get what you think is a good representation of the vessel lumen. For example, start with a threshold of 60 and then try a threshold 70, 80…etc. so you can see how the blue contour changes if you change the threshold value. 
+This time the finalized contour is converted a closed spline with 12 (Ctrl No.) control points along the contour, with two extra control points inside. Now you have severl ways to change the contour shape.
+
+To move a control point (interactively):
+
+	Move the cursor to a control point on the contour and it becomes red (activted)
+	Press and hold the left mouse button at the point
+	Move the cursor to adjust the point position on the reslice plane
+
+To delete a control point (interactively):
+
+	Move the cursor to a control point on the contour and it becomes red (activted)
+	Righ click
+
+To add a new control point (interactively):
+
+ 	Move the cursor to the contour line (but on any control points)
+	A green control point is created
+	Left click and the point is inserted into the contour.
+
+<figure>
+  <img class="svImg svImgSm"  src="documentation/modeling/imgs/segmentation/addcontrolpoint.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+We can also create a contour using a preset threshold value, without interaction.
+
+	Move the reslice position to 60	
+	Toggle on the checkbox "Preset" and set the value to 75, in the threshold panel.
+	Toggle on the checkbox "Convert to Spline" in the threshold panel.
+	Ctrl No.: 12
+	Click the button "Threshold"
+
+<figure>
+  <img class="svImg svImgLg"  src="documentation/modeling/imgs/segmentation/thresholdpreset.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+####Batch Segmentation
+
+Now let's try  create contours in batch model using a preset threshold value.
+
+	Toggle on the checkbox "Preset" and set the value to 75, in the threshold panel.
+	Toggle on the checkbox "Convert to Spline" in the threshold panel.
+	Ctrl No.: 12
+	Toggle on the checkbox "Batch Mode", List: 80,100,130
+	Click the button "Threshold"
+
+<figure>
+  <img class="svImg svImgLg"  src="documentation/modeling/imgs/segmentation/thresholdbatch.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+Three more contours are created for reslice positions: 80,100,130

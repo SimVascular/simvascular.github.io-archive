@@ -76,7 +76,7 @@ There are many parameters for flow solver, but only a few is required to set exp
 	Step Construction : 2 # standard two iterations, enough for constant  problems.
 
 <figure>
-  <img class="svImg svImgMd"  src="documentation/quickguide/imgs/solverparameters.png"> 
+  <img class="svImg svImgSm"  src="documentation/quickguide/imgs/solverparameters.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -88,7 +88,7 @@ There are many parameters for flow solver, but only a few is required to set exp
 There are two ways to run simulation. One is to export all files and run simulation at other computers or clusters. The other way is to create data files and run simulation in the job
 
 <figure>
-  <img class="svImg svImgMd"  src="documentation/quickguide/imgs/runjob.png"> 
+  <img class="svImg svImgSm"  src="documentation/quickguide/imgs/runjob.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -129,7 +129,7 @@ Convert and export the simulation result files to .vtp and .vtu files, which we 
 	Select a directory for exporting
 
 <figure>
-  <img class="svImg svImgMd"  src="documentation/quickguide/imgs/exportresults.png"> 
+  <img class="svImg svImgSm"  src="documentation/quickguide/imgs/exportresults.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
