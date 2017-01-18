@@ -47,6 +47,14 @@ To scale a contour (interactively):
 	Press and hold the left mouse button at the point
 	Move the mouse to scale the contour
 
+The contour may looks a little jagged, you can selecte the contoru from the list and click the button "Smooth" to get a smooher contour.
+
+ <figure>
+  <img class="svImg svImgMd"  src="documentation/modeling/imgs/segmentation/smoothedcontour.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+
 With the only two control points, we can't change the shape of the contour. Now we move the reslice position to 30 and create another contour using the same method as above. The only differences are:
 
 	Move the reslice position to 30	
@@ -97,7 +105,7 @@ We can also create a contour using a preset threshold value, without interaction
 
 ####Batch Segmentation
 
-Now let's try  create contours in batch model using a preset threshold value.
+Now let's try  create contours in batch model using a preset threshold value.This approach involves pre-selecting the locations for the segmentations, so that only a handful of locations get segmented. This will be faster than generating all of the segmented contours at once. However, it requires user knowledge about which locations are important for the modeling, and it can be especially tedious for vessels with large curvature and/or radius changes. It may also require going back and segmenting other locations later in the process.
 
 	Toggle on the checkbox "Preset" and set the value to 75, in the threshold panel.
 	Toggle on the checkbox "Convert to Spline" in the threshold panel.
@@ -110,4 +118,4 @@ Now let's try  create contours in batch model using a preset threshold value.
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-Three more contours are created for reslice positions: 80,100,130
+Three more contours are created for reslice positions: 80,100,130. 

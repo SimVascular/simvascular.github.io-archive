@@ -6,7 +6,7 @@ Thresholding is very dependent on the user-specified parameters and does not alw
 
 These parameters modify the size of the starting seed. The size is standardized, and will be the same across all images. The location of the seed is fixed at the image center (path point)T
 
-+ **Radius** controls the radius of the seed. 
++ **Radius** controls the radius of the seed (an initialization circle or sphere).  Making sure the radius within the lumen of the vessel.
 
 #### Stage 1 Parameters
 
@@ -64,9 +64,12 @@ Now a new contour is created and added to the group.
 
 ####Batch Segmentation
 
-<font color="red">**HELPFUL HINT:**</font> Finding suitable level set parameters based on a few cross sections and then doing batch segmentation can dramatically speed up model building.
+In general, you should go with the normal approach above: making more segmentations than you will need and then selecting a subset to define the vessel. However, in the following exercise, we will try to gain some intuition that makes batch level set segmentation possible and efficient.
 
-Now let's try  create contours in batch model using levelset.
+
+<font color="red">**HELPFUL HINT:**</font> Finding suitable level set parameters based on a few cross sections and then doing batch segmentation can dramatically speed up model building. Make sure the seed fits within the lumen of the vessel for all the positions we’d like to segment in the batch. 
+
+Now let's try  create contours in batch model using levelset. 
 
 	Toggle on the checkbox "Convert to Spline" in the threshold panel.
 	Ctrl No.: 12
@@ -80,3 +83,29 @@ Now let's try  create contours in batch model using levelset.
 
 Three more contours are created for reslice positions: 180,210,240,270,300,330,...,600. After batch segmentation, it is good practice to quicly check through them paying attention to possibly unclosed and inaccuate segmentations.
 
+Here are some helpful hints for checking out your contours that you have created in batch mode:
+
+First, check to see that the contours are in the center of the “donut” in the potential window. An example of a contour that is in the center of the potential window “donut” is shown below:
+
+<figure>
+  <img class="svImg svImgSm"  src="documentation/modeling/imgs/segmentation/batchexample1.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+If the contour is not exactly in the center of the donut (like the example shown below), you can scale it using the control point.
+
+<figure>
+  <img class="svImg svImgSm"  src="documentation/modeling/imgs/segmentation/batchexample2.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+Secondly, you want to check to make sure that the segmentation does not include a branch vessel, like the example shown below.  Although the level set method can segment these, including these in your final model will cause an artificial geometry know as a “lofting artifact.” 
+
+<!-- You can fix these types of segmentations using the techniques described in [Section: Copying and Pasting Contours](#modelingCopyingPastingContours). -->
+
+<figure>
+  <img class="svImg svImgSm"  src="documentation/modeling/imgs/segmentation/batchexample3.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<font color="red">**HELPFUL HINT:** </font>   You want the spacing between locations to be sufficient to capture the curvature and other changes in the vessel.  If the vessel is relatively straight, as is the case in this the abdominal aorta for this dataset, you can space the segmentations relatively far apart.

@@ -1,6 +1,6 @@
 ###Lofting Preview
 
-To check the quality of the contour group, which later will be lofted to create a 3D model, we can preview the lofted surface based on the group of contours.
+To check the quality of the contour group, which later will be lofted to create a 3D model, we can preview the lofted surface based on the group of contours. 
 
 	Toggle on the checkbox "Lofting Preview" 
 
@@ -10,6 +10,8 @@ To check the quality of the contour group, which later will be lofted to create 
 </figure>
 
 A new data node named "Lofted" for the lofted surface is added under the data node "aorta" for the group. As you add/remove/modify contours, the surface will be udpated automatically.
+
+<font color="red">**HELPFUL HINT:**</font> This step is especially important for discrete (PolyData) modelling later.If the lofted surface doesn't match the vessle you are modeling, you can change some paramters to improve it.
 
 There are several parameters you can change for lofting.
 

@@ -1,34 +1,66 @@
 ###Segmenting an Image Manually
 
-Sometimes it is not possible to use automated techniques to segment an image. Other times, automatic techniques work, but yield poor contours. In these situations, you may need to segment the image manually.
+Sometimes it is not possible to use automated techniques to segment an image. Other times, automatic techniques work, but yield poor contours. In these situations, you may need to segment the image manually. SimVascular provide several options: circle, ellipse, spline polygon, polygon.
 
-First clear the 2D display windows by de-selecting “evolution” and “initialization sphere” under “Level Set” in the “Display Options” menu. We will be keeping the segmentations we create under the “level set” heading, so keeping “Display Options → Level Set → segmentation” checked will allow us to see what we’ve done.
 
-Under the “Create Vessel” tab, choose the “Manual” tab. Select a position on the path for which you want to create a contour, and make sure “Parallel Projection” is turned on. Under “Create Contour As”: choose “Level Set”.
+####Circle
+
+To create a circle (interactively):
+
+	Click the button "Circle"
+	The button is highlighted in light blue, which means the method is activated for interaction.
+	Move the cursor to a 2D view window
+	Left click at the vessel center
+	Move the cusor away from the center.
+	A circle shows up. It keeps changing the radius as you move the cursor.
+	Left click again. The circle is placed.
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/manual/1.jpg"> 
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/circle.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-Click on the 2D Intensity window to activate it (you may need to zoom in and out with your right mouse button to activate it).  
+The circular coutour has only two control points, one is for shifting and the other is for changing radius.
 
-<font color="red">**HELPFUL HINT:** </font>  If you ever find yourself trying to do a manual segmentation and you are not seeing the contours that you are trying to create. Zoom in and out in the 2-D Intensity window to activate manual segmentation and try again. 
+####Ellipse
 
-Place the cursor along the edge of the vessel (you don’t need to click any mouse buttons, just move the mouse) and type “a” on the keyboard. You’ve just defined the first point in your contour. Move the mouse cursor along the edge of the vessel just slightly to the right of the first position.  Type “a” on the keyboard to add this second point to your contour.  A red line should appear connecting the first and second points. Continue adding points around the edge of the contour by moving the cursor and typing the “a” key.  If you make a mistake, just press the “Shift” key and the “a” key simultaneously and this will remove the last point that you added to the contour:
+To create a ellipse (interactively):
+
+	Click the button "Ellipse"
+	The button is highlighted in light blue, which means the method is activated for interaction.
+	Move the cursor to a 2D view window
+	Left click at the vessel center
+	Move the cusor away from the center.
+	An ellipse shows up as a circle initially. It keeps changing the radius as you move the cursor.
+	Left click again. The ellipse is placed.
+
+The elliptical coutour has four control points. The two points on the contour line are for adjusting the orientation and size of the major and minor axes.
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/manual/2.jpg"> 
+  <img class="svImg svImgMd"  src="documentation/modeling/imgs/segmentation/ellipse.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-When you’ve finished drawing the outline of the contour, type “c” on the keyboard to indicate that you’re done and the first and last points should be joined.
+####Spline Polygon
 
-<font color="orange">**WARNING:**</font>  Do not try to make the last point on top of the first point; while the contour may look fine if you do this, it might actually overlap itself, which will cause problems in the future. Thus, right before hitting “c”, your contour should appear not quite closed.
+A spline polyon is composed of multiple points and the adjacent points are connected by a closed spline.
 
-Typing “c” will create the final contour that you have just drawn, which will show up as a heavy red line in your 2D windows:
+To create a polygon with a spline (interactively):
+
+	Click the button "SplinePoly"
+	The button is highlighted in light blue, which means the method is activated for interaction.
+	Move the cursor to a 2D view window
+	Left click at the vessel edge and a control point is added.
+	Move the cusor clockwise or anticlockwise along the edget and left click; a second control point is added.
+	Repeat the step above before the last point.
+	Double click for the last point. The contour is completed and placed. 
+
+After the contour is finished. You can continue to modify it, by shifting, scaling, or moving/adding/deleting points.
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/manual/3.jpg"> 
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/splinepoly.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
+
+
+To create a normal polygon, use the same way as above. The only difference is that the adjacent points are connected by straight lines. 

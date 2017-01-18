@@ -3,7 +3,7 @@
 Another option for creating contours is to copy and paste a contour from another location.  This allows you to extrude that shape and is useful, for instance, at the point where one vessel joins up with another vessel.
 
 <figure>
-  <img class="svImg svImgMd"  src="documentation/modeling/imgs/segmentation/copying_pasting_contours/1.jpg"> 
+  <img class="svImg svImgMd"  src="documentation/modeling/imgs/segmentation/copypaste.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 

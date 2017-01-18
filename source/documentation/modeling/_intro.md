@@ -8,6 +8,6 @@ SimVascular is one system that allows users to generate geometric models from me
 The figure that follows describes the process in more detail.  For the segmentation step, paths along the vessels of interest need to be specified first (See [Path Planning](#modelingPathPlanning)). 2D segmentations are then generated along each of the paths (See [Segmentation](#modelingSegmentation)) These segmentations can then be lofted together to create a solid model. A separate solid model is created for each vessel, and these are all unioned together to create the final model. The last step is to blend the vessel junctions so that they are smoother (see [Creating a Solid Model from 2-D Segmentations](#modelingCreatingSolidModel)).
 
 <figure>
-  <img class="svImg svImgLg"  src="documentation/modeling/imgs/1.jpg"> 
+  <img class="svImg svImgLg"  src="documentation/modeling/imgs/modelingpipeline.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
