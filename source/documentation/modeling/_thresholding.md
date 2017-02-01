@@ -47,7 +47,7 @@ To scale a contour (interactively):
 	Press and hold the left mouse button at the point
 	Move the mouse to scale the contour
 
-The contour may looks a little jagged, you can selecte the contoru from the list and click the button "Smooth" to get a smooher contour.
+The contour may looks a little jagged, you can selecte the contour from the list and click the button "Smooth" to get a smooher contour.
 
  <figure>
   <img class="svImg svImgMd"  src="documentation/modeling/imgs/segmentation/smoothedcontour.png"> 

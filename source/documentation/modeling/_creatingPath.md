@@ -14,7 +14,7 @@ The goal of this exercise is to create a path for the abdominal aorta and the le
 	Right click the data node "Paths" in the SV project in Data Manager
 	Click "Create Path" in the popup menu
 	Path Name: aorta
-	Subdivision Type: "Image Spacing Based" (default)
+	Subdivision Type: "Spacing Based"
 	Click "OK"
 
 <figure>
@@ -40,11 +40,12 @@ Now a new data node “aorta” for the path is created under the data node “P
 
 **To add a contro point:**
 
+	Adding Mode: Smart
 	Move the cursor to Axial view in Display
 	Move the slice to position 475: by scrolling center mouse button or moving Axial slider (in Image Navigator) to 475
 	Right press and move to zoom in to enlarge the vessel cross secton
 	Method 1: Click at the center of the vessel; Ctrl+A or click the button "Add Smart"
-	Method 2(interactive): Move the cursor to the center of the vessle; Shift+Left Click
+	Method 2(interactive): Move the cursor to the center of the vessle; Ctrl + Left Click
 
 A control point is added for the path and should appear under the Control Point List. In Display, the point is shown as a blue or red point, depending on if the point is selected. 
 
@@ -80,28 +81,27 @@ Continue to move down the aorta inferiorly in the Axial 2D View in increments of
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
+**More Options to add a control point:**
 
-Normally SimVascular will insert a control control to the path in the right order, but sometimes a user may need to explicitly insert a control point in a specific location.
+Normally SimVascular will insert a control control to the path in the right order, but sometimes a user may need to explicitly insert a control point in a specific location. You can change the "Adding Mode".
 
-To insert a control point to the end of the path:
+	Smart: add the poing according to the distance to other points
+	Begining: add the poing to the beginning
+	End: add the poing to the end
+	Before: add the poing just before the selected point
+	After: add the poing just after the selected point
 
-	Click at the center of the vessel
-	Click the button "Add To End"
+You can also add a point by manually inputing coordiantes:
 
-To insert a control point to the  top of the path:
+	Click the button "Add Manually"
+	Input coordinates in the popup dialog using the suggested format
+	Click "OK"
 
-	Click at the center of the vessel
-	Click the button "Add To Top"
 
-To insert a control point above the selected(red) control point:
-
-	Click at the center of the vessel
-	Click the button "Insert Above"
-
-To Delete a control point in the path:
+**To Delete a control point:**
 
 	Method 1: select the one you want to remove in the Control Point List and click the button "Delete"
-	Method 2(interactive): Move the cursor to the point you want to remove and Right Click
+	Method 2(interactive): Move the cursor to the point you want to remove and Ctrl + Right Click
 
 
 After a complete path is created, you can check the quality by reslicing the image along the path.

@@ -12,8 +12,8 @@ A new path "aorta" is created under the data node "Paths" in Data Manager. Doubl
 	Image Navigator: Axial slider: 475
 	Place the curson into the Axial 2D View in display
 	Right press and move to zoom in
-	Method 1: Click at the center of the vessel; Ctrl+A or click the button "Add Smart"
-	Method 2(interactive): Move the cursor to the center of the vessle; Shift+Left Click
+	Method 1: Click at the center of the vessel; Ctrl+A or click the button "Add"
+	Method 2(interactive): Move the cursor to the center of the vessle; Ctrl + Left Click
 
 A control point is added for the path and should appear under the Control Point List. In Display, the point is shown as a blue or red point, depending on if the point is selected. To interactively move the point:
 
@@ -46,7 +46,7 @@ Continue to move down the aorta inferiorly in the Axial 2D View in increments of
 <font color="red">**Delete a control point** </font> in the path
 
 	Method 1: select the one you want to remove in the Control Point List and click the button "Delete"
-	Method 2(interactive): Move the cursor to the point you want to remove and Right Click
+	Method 2(interactive): Move the cursor to the point you want to remove and Ctrl + Right Click
 
 Build your path down as far as possible (you should be able to get to around Axial slider position 10 before things get harder to see. 
 
