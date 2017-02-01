@@ -15,5 +15,5 @@ The following sections teach you about the different techniques available for pr
 
 <!-- Or you may have to copy and paste a shape ([ Copying and Pasting Contours](#modelingCopyingPastingContours)).  -->
 
-In the end, you will be using a level-set technique to build the abdominal aorta, and you will be drawing segmentations (like circles, ellipses, etc.) by hand to build the branch vessels. Keep this in mind as you work through the exercises. 
+In the end, you will be using a level-set technique to build the abdominal aorta, and you will be drawing segmentations (like circles, ellipses, etc.) to build the branch vessels. Keep this in mind as you work through the exercises. 
 

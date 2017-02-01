@@ -1,4 +1,4 @@
-## Creating a Solid Model with PolyData ##
+## Solid Modeling (PolyData) ##
 
 In the Segmentation section, it was shown how to create individual 2-D segmentations along a particular vessel path. It is worthwhile to reinforce at this point the distinction between visualizing geometry and utilizing geometry for numerical simulation. If you were to graphically display all the segmentations that you created in the previous exercise, your mind may “connect the dots” and create a 3-D mental image of the geometry. However, we need to create a 3-D solid model that the computer can understand.
 

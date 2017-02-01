@@ -21,22 +21,26 @@ After the model is created, face informations are listed in a table in the tab "
 
 Select faces in the table:
 
-	Click: select a single face
-	Ctrl + Click: select/deselect the face without changing the previous selection
-	Shift + Click: select all the faces between two rows
+	Select a single face: Click on the row
+	Select multiple faces: Ctrl + Click
+	Select all the faces between two rows: Shift + Click
+	Deselect all the faces: Click on the empty ares of the table
 
 Select faces (interactively):
 
 	Move the curso to a face in 3D-view of Display
-	Press key "S" to only select this face
-	Press key "S" + Shift to select multiple faces
-	Press key "D" to deselect the face
+	Click once to make sure the window is active
+	Slect only this face: Press key "S"
+	Select multiple faces: Press key "S" + Shift
+	Deselect the face: Press key "D"
+	Deselect all faces: move the cursor outside of the surface, press "S"s
 
 **Combining and Deleting Faces:**
 
 	Select faces
 	To combine them to one face: Face Ops -> button "Combine"
 	To delete them: Face Opts -> button "Delete"
+	To delete them(interactively): Make sure the cursor is in the Dislay Window; press key "Delete"
 
 **Filling Holes with Ids:**
 
