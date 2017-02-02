@@ -1,22 +1,26 @@
 # Installation Instructions for Linux #
 
-4. Before installing SimVascular, you may need to install libxss, mpich2, or libgfortran. If you're on linux these may work:
+1. Unpack the installer (tar file).
+
+2. Before launching SimVascular, you may need to install a few extra packages. If you're on linux these may work:
 
 		sudo apt-get install libxss
-		sudo apt-get install mpich2
-		sudo apt-get install gfortran
+		sudo apt-get install libxmu-dev (for OpenCASCADE)
+		sudo apt-get install libxi-dev  (for OpenCASCADE)
 
-5. To use Meshim on linux copy your Meshsim license file into the simvascular directory and rename it meshsim-license.dat
+3. To use Meshim on linux copy your Meshsim license file into the simvascular directory and rename it meshsim-license.dat
 
-6. To add SimVascular to your path (this is very helpful with using svsolver), you will need to run the post-install script:
+4. To add SimVascular to your path , you will need to run the post-install script:
 
 		sudo bash setup-symlinks.sh
 
 	This script places symbolic links in /usr/local/bin to the simvascular executable scripts.
 	You may wish to edit the symbolic links.
 
-	Note that the solver can be run with mpiexec.
-	For example to run on two processors:
+5. SimVascular contains two different GUIs. To use the new GUI, please first create an empty text file your home folder, for example "~/.simvascular\_default_qt"
 
-		cd /folder/with/input
-		mpiexec -np 2 svsolver
+6. To lanuch SimVascular, open a terminal and run "simvascular". If it mentions missing some libs, according to the information, "sudo apt-get install [missing lib]"
+
+<br>
+<br>
+<br>

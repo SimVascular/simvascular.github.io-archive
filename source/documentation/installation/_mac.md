@@ -9,12 +9,19 @@
 	  <figcaption class="svCaption" ></figcaption>
 	</figure>
 
-3. Launch SimVascular through your Applications folder or using the Terminal (see step 5).
+3. SimVascular contains two different GUIs. To use the new GUI, please first create an empty text file your home folder:
+	
+		Open a terminal (found underneath Launchpad->Other).
+		Type “touch ~/.simvascular_default_qt”
 
-4. (Optional) To run svSolver from the GUI, you will need to install mpich through MacPorts. MacPorts is available at <a href="https://www.macports.org/"target="blank"> macports.org</a>:
+4. Launch SimVascular through your Applications folder or using the Terminal (see step 4).
 
-        sudo port install mpich-gcc46
+		A dialog may popup when launching, saying: “SimVascular” can’t be opened because it is from an unidentified developer.”.
+		Go to System Preferences -> Security & Privacy -> General, click “Open Anyway”.
+		If it doesn't work, turn on  "Anywhere" for "Allow apps downloaded from"; After SimVascular lauches, turn it back on to "Mac App Store and identified developers".
 
-5. (Optional) To install the SimvVascular command line tools run:
+5. (Optional) You can also launch SimVascular using the Terminal. To install the SimvVascular command line tools run:
 
 		sudo /Applications/SimVascular.app/Contents/Resources/setup-symlinks.sh
+
+
