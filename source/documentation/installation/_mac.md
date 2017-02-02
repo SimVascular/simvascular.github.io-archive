@@ -14,11 +14,11 @@
 		Open a terminal (found underneath Launchpad->Other).
 		Type “touch ~/.simvascular_default_qt”
 
-4. Launch SimVascular through your Applications folder or using the Terminal (see step 4).
+4. Launch SimVascular through your Applications folder or Launchpad.
 
 		A dialog may popup when launching, saying: “SimVascular” can’t be opened because it is from an unidentified developer.”.
 		Go to System Preferences -> Security & Privacy -> General, click “Open Anyway”.
-		If it doesn't work, turn on  "Anywhere" for "Allow apps downloaded from"; After SimVascular lauches, turn it back on to "Mac App Store and identified developers".
+		If it doesn't work, turn on  "Anywhere" for "Allow apps downloaded from"; After SimVascular launches, turn it back on to "Mac App Store and identified developers".
 
 5. (Optional) You can also launch SimVascular using the Terminal. To install the SimvVascular command line tools run:
 

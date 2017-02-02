@@ -30,10 +30,10 @@ At the end of the Boolean operation, the model is created. In addition, you shou
 
 To change face names, types, etc., refer to In [Face Operations for PolyData Model](#modelingPolyDataFaces)
 
-<font color="red">**HELPFUL HINT:** </font> The surface may look not very smooth. It's possibly not caused by the analytic model itself, but by the visualization. **It's required for you to make sure the model surface look right to for you.** To improve it:
+<font color="red">**HELPFUL HINT:** </font> The surface may look not very smooth. There is a difference between true lofting artifacts and visualization artifacts. Is this a lofting artifact? The answer is no. The crease you see results from the resolution of the rendering. This can easily be fixed by changing the maximum facet size.  **It's required for you to make sure the model surface look right to for you.** To improve it:
 
 	Click the button "Change Facet Size.."
-	Provide a smaller value for Max Edge Size
+	Provide a smaller value for Max Edge Size, like 0.1 or 0.2 for this case
 	Click "OK"
 
 You shall have a much nicer surface for the model.

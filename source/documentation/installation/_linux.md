@@ -19,7 +19,7 @@
 
 5. SimVascular contains two different GUIs. To use the new GUI, please first create an empty text file your home folder, for example "~/.simvascular\_default_qt"
 
-6. To lanuch SimVascular, open a terminal and run "simvascular". If it mentions missing some libs, according to the information, "sudo apt-get install [missing lib]"
+6. To lanuch SimVascular, open a terminal and run "simvascular". If it mentions missing some libs, according to the information, try "sudo apt-get install [missing lib]" to install them.
 
 <br>
 <br>
