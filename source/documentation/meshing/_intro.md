@@ -15,11 +15,11 @@ We will review several important concepts prior to discussing mesh generation:
 
 2.	There are multiple sources of geometric models.  The most common source of geometry in the device community is likely from commercial CAD packages (SDRC I-deas, SolidEdge, SolidWorks, Pro-E, etc.).  A second potential source of geometric models is digitized data (imaging data, etc.).  Finally, a less common (but increasingly important) source of data is the results of a previous simulation.   For example, if one simulated the deployment of a stent into a diseased artery, the results of this analysis (i.e. displacements) could be used for the initial geometry for a subsequent blood flow analysis around the deployed stent.
 
-3.	As will be shown using a beam example, a simple geometry allows for great flexibility in choice of element type (e.g. tetrahedral vs. hexahedral elements).  However, for many geometries of engineering interest, the complex geometry motivates the need for automatic mesh generation and often restricts the user to tetrahedral or possibly hex-dominate meshing.  Pure hexahedral mesh generation for complex geometries is an area of active research.  
+3.	As will be shown using a beam example, a simple geometry allows for great flexibility in choice of element type (e.g. tetrahedral vs. hexahedral elements).  However, for many geometries of engineering interest, the complex geometry motivates the need for automatic mesh generation and often restricts the user to tetrahedral or possibly hex-dominate meshing.  Pure hexahedral mesh generation for complex geometries is an area of active research.
 
-In this manual, a finite-octree based tetrahedral mesh generator is used.  The basic idea behind finite-octree methods is to decompose a complex geometry into simpler pieces and then mesh the individual pieces using a mesh generation technique (e.g. templates, Delaunay triangulation (see Figure 4.2), etc.). An example quadtree decomposition (the 2-D analog of finite-octree) is shown in Figure 4.3.  A structured (i.e. tensor-product) quadtree grid that completely fills the space occupied by the geometric model (i.e. bounding box) is initially created based on a user-defined mesh density.  Subdivision of the octants is then performed to reach a desired complexity of the geometry contained therein.  Restricting the “level difference” or gradation between adjacent octants is essential to preserve mesh quality.  After the geometry is decomposed, surface meshing is performed using projected 2-D Delaunay surface triangulation.  Templates are used to create the interior volume mesh (i.e. octants contained completely inside of the geometric model), and 3-D Delaunay triangulation is used in the boundary octants (i.e. octants containing part of the geometric model boundary) to finish the meshing process.
+In this manual, a finite-octree based tetrahedral mesh generator is used.  The basic idea behind finite-octree methods is to decompose a complex geometry into simpler pieces and then mesh the individual pieces using a mesh generation technique (e.g. templates, Delaunay triangulation (see Figure 1), etc.). An example quadtree decomposition (the 2-D analog of finite-octree) is shown in Figure 2.  A structured (i.e. tensor-product) quadtree grid that completely fills the space occupied by the geometric model (i.e. bounding box) is initially created based on a user-defined mesh density.  Subdivision of the octants is then performed to reach a desired complexity of the geometry contained therein.  Restricting the “level difference” or gradation between adjacent octants is essential to preserve mesh quality.  After the geometry is decomposed, surface meshing is performed using projected 2-D Delaunay surface triangulation.  Templates are used to create the interior volume mesh (i.e. octants contained completely inside of the geometric model), and 3-D Delaunay triangulation is used in the boundary octants (i.e. octants containing part of the geometric model boundary) to finish the meshing process.
 
-Finally, we note that there are several techniques to evaluate the quality of a given discretization.  For the exterior surface mesh, a visual inspection may provide useful information.  However, it is impractical to visualize the individual tetrahedral elements for large meshes, so geometric-based mesh quality indicators are used.  Specifically, three mesh quality indicators will be discussed (see Figure 4.4): 
+Finally, we note that there are several techniques to evaluate the quality of a given discretization.  For the exterior surface mesh, a visual inspection may provide useful information.  However, it is impractical to visualize the individual tetrahedral elements for large meshes, so geometric-based mesh quality indicators are used.  Specifically, three mesh quality indicators will be discussed (see Figure 3): 
 
 - Minimum solid angle
 - Radius ratio
@@ -30,52 +30,25 @@ In the present work, a combination of these quality indicators is used by an ite
 <figure>
 <img class="svImg svImgLg" src="documentation/meshing/img/Delaunay_Criterion.png">
   <figcaption class="svCaption" >
-    Delaunay criterion.  The Delaunay criterion states that no other point in the triangulation can fall within the circumscribing sphere (circle in 2-D) of the points defining a simplex in the triangulation.  Figure (a) shows a valid Delaunay triangulation of four points in $\mathbb{R}^2$ while (b) shows a non-Delaunay triangulation of the same four points.  In 2-D, the Delaunay criterion minimizes the maximum interior angle producing an optimal triangulation for a given set of points.
+    Figure 1. Delaunay criterion.  The Delaunay criterion states that no other point in the triangulation can fall within the circumscribing sphere (circle in 2-D) of the points defining a simplex in the triangulation.  Figure (a) shows a valid Delaunay triangulation of four points in $\mathbb{R}^2$ while (b) shows a non-Delaunay triangulation of the same four points.  In 2-D, the Delaunay criterion minimizes the maximum interior angle producing an optimal triangulation for a given set of points.
   </figcaption>
 </figure>
 
 <figure>
 <img class="svImg svImgLg" src="documentation/meshing/img/Quadtree.png">
   <figcaption class="svCaption" >
-    Quadtree decomposition.  The figure shows an example quadtree decomposition (directly analogous to octree decomposition in 3-D) that is used to divide the geometry into less complex individual pieces for automatic mesh generation.
+    Figure 2. Quadtree decomposition.  The figure shows an example quadtree decomposition (directly analogous to octree decomposition in 3-D) that is used to divide the geometry into less complex individual pieces for automatic mesh generation.
   </figcaption> 
 </figure>
 
 <figure>
 <img class="svImg svImgLg" src="documentation/meshing/img/Quality_Measures.png">
   <figcaption class="svCaption" >
-    Geometric mesh quality measures.  Shown are 2-D geometric mesh quality measures with direct analogies in 3-D. The radius ratio (a) is the ratio of the radius of the maximum inscribed circle (sphere in 3-D) over the radius of the circumscribed circle (sphere in 3-D).  The aspect ratio (b) is a ratio of the minimum height to the maximum base length. The maximum/minimum interior (dihedral in 3-D) angle is shown in (c). In this lab we will construct meshes automatically for two different geometries.  The first example is that of an idealized vessel (i.e. cylinder).  The second example will be an idealized stent, deployed in an idealized stenotic vessel with incomplete apposition.
+    Figure 3. Geometric mesh quality measures.  Shown are 2-D geometric mesh quality measures with direct analogies in 3-D. The radius ratio (a) is the ratio of the radius of the maximum inscribed circle (sphere in 3-D) over the radius of the circumscribed circle (sphere in 3-D).  The aspect ratio (b) is a ratio of the minimum height to the maximum base length. The maximum/minimum interior (dihedral in 3-D) angle is shown in (c). In this lab we will construct meshes automatically for two different geometries.  The first example is that of an idealized vessel (i.e. cylinder).  The second example will be an idealized stent, deployed in an idealized stenotic vessel with incomplete apposition.
   </figcaption> 
 </figure>
 
 ### SimVascular Meshers
 
-This document describes how to use the Meshing software for discrete and continuous solids. SimVascular meshing includes both open source and commercial options. The commercial mesher in SimVascular is MeshSim and provides boundary layer, mesh refinement, and isotropic/anisotropic adaptive meshing. MeshSim is a very powerful tool and can provide high quality meshes for irregular and complicated domains. The open source meshing includes the open source libraries of TetGen and the Vascular Modeling Tool Kit(VMTK). These tools are combined to provide boundary layer, mesh refinement, and isotropic adaptive meshing. 
+This document describes how to use the Meshing software for discrete and continuous solids. SimVascular meshing includes both open source and commercial options. The open source meshing includes the open source libraries of TetGen and the Vascular Modeling Tool Kit(VMTK). These tools are combined to provide boundary layer, mesh refinement, and isotropic adaptive meshing. The commercial mesher in SimVascular is MeshSim and provides boundary layer, mesh refinement, and isotropic/anisotropic adaptive meshing. MeshSim is a very powerful tool and can provide high quality meshes for irregular and complicated domains.
 
-The following describes the file formats used by the meshers in SimVascular:
-
-MeshSim:
-
-- .xmt_txt
-- .dsm
-
-TetGen:
-
-- .vtp
-- .vtk
-- .stl
-- .ply 
-
-### Using this Manual
-
-Discretizing a domain can be a tricky process and this document attempts to make this process more understandable and less daunting. This document will teach you the following things:
-
-1. Preparing and running a surface remeshing
-2. Preparing and running a volumetric mesh (with or without boundary layer and refinement)
-3. Preparing and running an adaptive mesh  
-
-Some conventions that will be helpful for you to know:
-
-1. Text in italics represents things that you type into the command window.
-2. Buttons, window names, and other labels in a window in the SimVascular program will be in quotes.
-3. Pull-down menu selections will be indicated with an arrow ->.
