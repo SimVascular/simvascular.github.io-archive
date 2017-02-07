@@ -36,4 +36,16 @@ Similarly to Example 1, to run the job
 	Staring Step Number: (leave it empty)
 	Click the button "Run Job"
 
+To export results:
+
+	Goto "Export Results"
+	Result Dir: select the running dir .../Simulations/steady\_rcr/8-procs_case
+	Start:  the initial restart file number (0)
+	Stop: the final restart file number (500)
+	Increment: the increment between restart files (20). 
+	Toggle on "Volume Mesh" and "Surface Mesh"
+	Toggle on "Last Step to restart.x.0"
+	Click the button "Export..."
+	Choose a directory for exporting
+
 In this example, a smaller time step size is used, because the effect of the time constant in RCR type BC needs to be considered. For more accurate numerical computation, the time step size should be much smaller than the time constant (=R*C=(121+1212)*0.000015=0.02). With the small step size, the number of time steps is also increased.

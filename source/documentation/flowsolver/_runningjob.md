@@ -323,7 +323,7 @@ indicator of the spatial uniformity of the residual.
 
 Once the analysis is done, you will see the collection of restart files corresponding to the different points in the time you decided to save. 
 
-Sometimes you want to continue the finished simulation. Just click the button "Run Job". Now the solver starts another 200-step simulation from time step 200.
+Sometimes you want to continue the finished simulation job. Make use the same number of processes as the previous one and just click the button "Run Job". Now the solver starts another 200-step simulation from time step 200.
 
 As the simulation is completed, we are now ready to look at the restart files containing the solution. We'll convert these files to generate the visualization files. We explain that process in the following section.
 

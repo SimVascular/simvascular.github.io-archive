@@ -12,7 +12,7 @@ SimVascular solvers(presolver, flowsolver, postsolver) are used as individual ex
 	External Postsolver: provide the full path and file name for postsolver if you want to use a specified one
 	
 <figure>
-  <img class="svImg svImgMd"  src="documentation/flowsolver/imgs/solverconfiguration.png"> 
+  <img class="svImg svImgLg"  src="documentation/flowsolver/imgs/solverconfiguration.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 

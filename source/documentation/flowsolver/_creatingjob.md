@@ -1,6 +1,6 @@
 ## Creating a Job for Simulation ###
 
-Let's try Example 1. The files for Example 1 can be found [here](documentation/flowsolver/files/examples.zip). Download and open the project. Now we assume you alread have the model and mesh for it.
+Let's try Example 1. The files for Example 1 can be found [here](documentation/flowsolver/files/example.zip). Download and open the project. Now we assume you alread have the model and mesh for it.
  
 **To create a simulation job (empty):**
 

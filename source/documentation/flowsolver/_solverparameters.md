@@ -44,3 +44,11 @@ Of course, you can imagine that in a real-world problem things are way more comp
 
 **Number of Timesteps between Restarts: 10** - This line tells the solver how often it should save solution files. In this problem, you are really calculating $200$ solutions to the problem at $200$ different time points, but in general you do not want to save a solution file for every single time step. Keep in mind that two consecutive solutions are only $\Delta t = 0.03$ seconds apart! In this line, we are asking the solver to save every other $20$ files. Therefore, the output files of the solver will look like this: restart.0.\*, restart.10.\*, restart.20.\*, restart.30.\*, ...., restart.190.\*, restart.200.\*
 
+<br>
+### Step Construction Block
+
+This line controls the non-linear iteration loop within the time step. The syntax of the line represents a two nonlinear iteration process for each time step. Each iteration tells the solver to make a solve and an update of the solution. 
+
+**WARNING**: Deciding on the adequate number of non-linear iterations for a problem is also a non-trivial problem. In principle, we need to iterate until the residual (i.e., the _error_) of our numerical solution is small enough. But doing many non-linear iterations on each time step is very costly. In general, for steady flow problems, 1 or 2 non-linear iterations are enough. For pulsatile problems, at least three non-linear iterations are needed. For deformable wall problems, 4 or more non-linear iterations are required. This parameter, together with the time step size $\Delta t$ and the quality of the spatial discretization given by the finite element mesh, will completely determine the performance of the linear solver of equations. The better chosen these parameters are, the faster and more accurately our simulation will run. We will talk more about this later.
+
+The set of instructions explained here constitute a very small sample of all the possible parameters the **svSolver** can take. A more detailed discussion can be found in [this section](#solverinp).

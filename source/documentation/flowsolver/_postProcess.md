@@ -1,4 +1,4 @@
-## Post-processing (svPost)
+## Post-processing
 
 ### Generating the *.vip and *.vtu files in SimVascular 
 
@@ -18,7 +18,7 @@ In order to generate the visualization files (*.vip) and (*.vtu) files:
 A new folder "steady-results" is created, which contains all the converted vtp and vtu files.
 
 <figure>
-  <img class="svImg svImgSm" src="documentation/flowsolver/imgs/convertingresults.png">
+  <img class="svImg svImgMd" src="documentation/flowsolver/imgs/convertingresults.png">
   <figcaption class="svCaption" >Creating VTU result files from <b>svSolver</b> restart files.</figcaption>
 </figure>
 

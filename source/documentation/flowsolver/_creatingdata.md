@@ -47,10 +47,12 @@ Roughly speaking, each of the four files is $1⁄4$ of the size of the original 
 restart.n.1 , restart.n.2 , restart.n.3 , restart.n.4 , ...
 ~~~
 
-<br>
-###**Exporting Input Files**
+If the solvers are not included with your SimVascualr, refer to [Solver Configuration](#solverconfiguration).
 
-In this step, solvers are not needed. It only outputs txt input files for presolver and flowsolver.
+<br>
+###Exporting Input Files
+
+In this step, solvers are not needed. It only outputs mesh and txt input files for presolver and flowsolver.
 
 	Click the button "Export Only Input Files..."
 	Select a directory for exporting.
@@ -58,6 +60,7 @@ In this step, solvers are not needed. It only outputs txt input files for presol
 A new folder "steady-files" is created, which includes the following files:
 
 	For presolver:	
+		mesh-complete (folder)
 		inflow.flow
 		steady.svpre
 	For flowsolver
@@ -65,7 +68,7 @@ A new folder "steady-files" is created, which includes the following files:
 		numstart.dat
 
 <br>
-###**Exporting Input and Data Files**
+###Exporting Input and Data Files
 
 It outputs mesh files and call presolver to produce data files for flowsolver.
 
@@ -96,7 +99,7 @@ bct.vtp is the vtp format file of bct.dat. It makes easy to check the veloctiy p
 You can upload those files to another computer of cluster where presolver or flowsolver are avaiable to continue simulation.
 
 <br>
-###**Creating Input and Data Files in Job**
+###Creating Input and Data Files in Job
 
 This step is similar to "Exporting Input and Data Files". The only difference is it directly creates files inside the job folder in the SV project
 

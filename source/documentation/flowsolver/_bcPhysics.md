@@ -98,6 +98,6 @@ $$
 \tau = \frac{2\,\mu\,v\_z^{max}}{r}
 $$
 
-For this example, the maximum velocity is $v\_z^{max} = 16.68$ cm/s and the wall shear stress is $\tau$ = $0.67$ dynes/cm$^2$.
+For this example, the maximum velocity is $v\_z^{max} = 15.92$ cm/s and the wall shear stress is $\tau$ = $0.64$ dynes/cm$^2$.
 
 

@@ -14,4 +14,8 @@ Irene Vignon-Clementel, Ph.D., Permanent Research Scientist, INRIA Paris Rocquen
 
 Kenneth Wang, M.D., Ph.D., Department of Radiology, Johns Hopkins School of Medicine
 
+Daniele E. Schiavazzi, Ph.D., Assistant Professor, Department of Applied and Computational Mathematics and Statistics, University of Notre Dame 
+
+Jameson Merkow, Ph.D., Computer Vision Laboratory, University of California, San Diego
+
 <br>
