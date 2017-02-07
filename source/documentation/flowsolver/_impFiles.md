@@ -1,4 +1,4 @@
-#### Format of Impedance boundary condition file
+### Format of Impedance boundary condition file
 
 Impedance boundary conditions are defined through the **Qhistor.dat** file where the flow rate time history at each face is specifiedd and the **impt.dat** files containing impedance data. These two files must be present in the folder with all others solver files when executing **svSolver**. 
 

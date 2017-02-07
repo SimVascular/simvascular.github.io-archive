@@ -8,4 +8,3 @@ The first example shown above is a cylinder with parabolic steady flow at the in
 
 **Example 4** - the cylinder with plug steady flow at the inlet, RCR at the outlet and deformable wall with variable wall properties.
 
-All the examples are included in [here](documentation/flowsolver/files/examples.zip). Example 1 _cylinder_ includes all the files from presolver to postprocessing; checkout readme.txt in the _cylinder_ for more details about the files. Example 2-3 only include the necessary files to start simulation from presolver.

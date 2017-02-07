@@ -1,5 +1,5 @@
 
-#### Format of RCR boundary condition file
+### Format of RCR boundary condition file
 
 RCR boundary conditions are defined through the **rcrt.dat** file using the following format:
 

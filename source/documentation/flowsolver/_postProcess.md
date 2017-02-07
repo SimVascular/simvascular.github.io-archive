@@ -5,46 +5,28 @@
 In order to generate the visualization files (*.vip) and (*.vtu) files:
 
 ~~~
-Tab: Simulations->Create VTU Files 
-Select a restart file in the running dir .../cylinder/4-procs_case for Input Files/Dir
-start:  the initial restart file number (0)
-stop: the final restart file number (200)
-increment: the increment between restart files (10). 
-Toggle on "Volume Mesh" and "Surface Mesh"
-Click the button "Convert Files Only"
+	Goto "Export Results"
+	Result Dir: select the running dir .../Simulations/steady/8-procs_case
+	Start:  the initial restart file number (0)
+	Stop: the final restart file number (200)
+	Increment: the increment between restart files (10). 
+	Toggle on "Volume Mesh" and "Surface Mesh"
+	Click the button "Export..."
+	Choose a directory for exporting
 ~~~
 
+A new folder "steady-results" is created, which contains all the converted vtp and vtu files.
+
 <figure>
-  <img class="svImg svImgLg" src="documentation/flowsolver/imgs/svpost_gui1.png">
+  <img class="svImg svImgSm" src="documentation/flowsolver/imgs/convertingresults.png">
   <figcaption class="svCaption" >Creating VTU result files from <b>svSolver</b> restart files.</figcaption>
 </figure>
 
-\*.vtp or \*.vtu files are generated in the project folder, containing the results for the whole finite element model using partitioned restart files as inputs.
-
 Other options are also provided:
 
-- **Single File**, this options combines all the results at different time steps into a single \*.vtp or \*.vtu file. 
+- **As Single File**, this options combines all the results at different time steps into a single \*.vtp or \*.vtu file. 
 - **Last Step to restart.x.0**, this options combines all the resart files of the last step (200) to a single restart file restart.200.0. which can be used to start a new simulation after renamed as restart.0.1.
-- **Sim Units**, enter **cm** as we used **GCS** units throughout this tutorial. 
-- **Use Wall Options**, toggle on to apply more options for postprocessing. 
-
-<figure>
-  <img class="svImg svImgLg" src="documentation/flowsolver/imgs/svpost_gui_wall.png">
-  <figcaption class="svCaption" >Wall Options</figcaption>
-</figure>
-
-- **Wall File**, this limit the data output only on the specified wall.
-- **Recalculate Wall Stresses**, this enables postprocessing to calculate the wall stress again.
-- **Apply Wall Deformation**, this enables the update wall coordinates for deformable wall.
-- **Viscosity**, this sets a new viscosity value for wall stress calculation.
-
-If Single File option is on when postprocessing, all\_results.vtp or all\_results.vtu will be produced. In this case, svPost can calculate pressure and flow rate for outlets. Just click "Calculate Flows Only".
-
-<figure>
-  <img class="svImg svImgLg" src="documentation/flowsolver/imgs/svpost_gui2.png">
-  <figcaption class="svCaption" >Calculate Pressure and Flow rate</figcaption>
-</figure>
-
+ 
 ### Visualizing the results in ParaView
 
 To visualize the time dependent results we use **ParaView**. 

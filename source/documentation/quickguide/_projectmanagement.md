@@ -21,7 +21,7 @@ A new project is created in Data Manager as below. It has no actual data so far.
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-To use an image for a project, the image needs to be added to the project. 
+**To use an image for a project, the image is required to be added to the project.**
 
 **To add a image to a project:**
 

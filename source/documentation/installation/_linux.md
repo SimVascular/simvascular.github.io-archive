@@ -1,5 +1,15 @@
 # Installation Instructions for Linux #
 
+<br>
+### Supported Versions ###
+	
+	Ubuntu 14 (tested)
+	Ubuntu 15
+	Ubuntu 16
+
+<br>
+### Installing SimVascular ###
+
 1. Unpack the installer (tar file).
 
 2. Before launching SimVascular, you may need to install a few extra packages. If you're on linux these may work:

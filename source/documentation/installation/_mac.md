@@ -1,5 +1,13 @@
 # Installation Instructions for Apple OS X #
 
+<br>
+### Supported Versions ###
+	
+	Mac OS X 10.10.x (tested)
+
+<br>
+### Installing SimVascular ###
+
 1. Launch the downloaded package and agree to the terms of service.
 
 2. Drag SimVascular into your Applications folder when this window opens.
