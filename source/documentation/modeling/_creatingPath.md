@@ -56,19 +56,14 @@ A control point is added for the path and should appear under the Control Point 
 
 <font color="red">**HELPFUL HINT:** </font>  Use the three 2D views at the same time to check if the contrl point is really located at the ceter of the vessel.
 
+<font color="red">**HELPFUL HINT:** </font>  The control points may look too large or small in 2D/3D-view windows. You can change the size, to do it:
+	
+	Select all the paths you want to change in Data Manager
+	Right Click and click "Point 2D Size" or "Point 3D Size"
+	Give new size in the popup dialog
+
 <figure>
   <img class="svImg svImgXl"  src="documentation/modeling/imgs/path_planning/addpoint.png"> 
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-To accurately locate the crosshair cross point, it's better to __set the crosshair gap size to 0__.
-
-	Menu: Window -> Preferences...
-	Choose: Editors -> Standard Multi Widget in the dialog
-	Set "Cross gap size" to 0
-  
-<figure>
-  <img class="svImg svImgMd"  src="documentation/modeling/imgs/path_planning/changegapsize.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 

@@ -47,6 +47,14 @@ To scale a contour (interactively):
 	Press and hold the left mouse button at the point
 	Move the mouse to scale the contour
 
+<font color="red">**HELPFUL HINT:** </font>  The control points may look too large or small in 2D/3D-view windows. You can change the size, to do it:
+	
+	Select all the contour groups you want to change in Data Manager
+	Right Click and click "Point 2D Size" or "Point 3D Size"
+	Give new size in the popup dialog
+
+
+
 The contour may looks a little jagged, you can selecte the contour from the list and click the button "Smooth" to get a smooher contour.
 
  <figure>

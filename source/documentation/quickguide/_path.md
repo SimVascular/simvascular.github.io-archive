@@ -25,17 +25,6 @@ A control point is added for the path and should appear under the Control Point 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-<font color="red">**Change crosshair size** </font> to 0 to locate the crosshair cross point easily.
-
-	Menu: Window -> Preferences...
-	Choose: Editors -> Standard Multi Widget in the dialog
-	Set "Cross gap size" to 0
-  
-<figure>
-  <img class="svImg svImgMd"  src="documentation/quickguide/imgs/changegapsize.png"> 
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
 Continue to move down the aorta inferiorly in the Axial 2D View in increments of 25-50 using the Axial slider in Image Navigator, similarly, add the center points to the path. When you reach the bifurcation (the aorta splits into the two iliac arteries), continue your path down the LEFT iliac artery. At the same you can see the path in the 3D View.
 
 <figure>
