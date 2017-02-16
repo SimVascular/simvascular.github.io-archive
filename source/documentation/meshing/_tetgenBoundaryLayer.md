@@ -23,6 +23,8 @@ We will now generate a boundary layer mesh from a solid model.
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
+<font color="red">**WARNNING:** </font> Fast Meshing is automatically disabled if using boundary layer meshing. 
+
 The mesh generated will have the boundary layer mesh on the specified region. Zooming in, you can see that the number of layers in the volumetric mesh is four. The boundary layer extends all the way down the length of the surface named wall, and each layer is 0.8 of the previous layer.
 
 It is important to note, once again, that you have generated a volumetric mesh. That is, the entire volume of the geometry has been filled with tetrahedral elements. Thus, the boundary layer meshing pattern that you see on the surface continues up the entire volume of the aorta. It is difficult to visualize thousands of elements at one time, so we only visualize this refinement on the exterior surface mesh.

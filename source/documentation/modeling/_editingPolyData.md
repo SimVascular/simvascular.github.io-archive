@@ -49,11 +49,11 @@ To select/delete cells on the surface (interactively)
 
         Remesh (global): 
                 Click the button "Estimate Size" or provide a proper value for "Target edge size"
-		Click the button "Remesh"
+                Click the button "Remesh"
 
         Decimation (global/local):
                 Based on target rate, removes certain triangles of the mesh while decreasing
-		error to give less triangles on the surface
+                error to give less triangles on the surface
 
         Butterfly Subdivision(BF Subdiv.)(global):
                 Divides the meshing triangles based on number placed in “Num Divisions”
@@ -73,10 +73,10 @@ To select/delete cells on the surface (interactively)
 
         Constrain Smooth (local):
                 Uses an alteration of laplacian smoothing. New surface becomes a minimization
-		between the original surface and the laplacian smoothed surface
-		Num Iters: choose between 3 and 10
-		Constrain Factor: choose between 0 and 1, deciding how much the smoothed surfac
-		should be pushed back to the original
+                between the original surface and the laplacian smoothed surface
+                Num Iters: choose between 3 and 10
+                Constrain Factor: choose between 0 and 1, deciding how much the smoothed surfac
+                should be pushed back to the original
 		
         Linear Subdivision (local):
                 Divides the meshing triangles based on number placed in “Num Divisions”

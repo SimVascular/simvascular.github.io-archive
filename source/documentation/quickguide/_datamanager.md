@@ -1,6 +1,6 @@
 ## Data Manager
 
-Data Manager is normally located on the left side of the main window. It lists and organize all the loaded data in a tree structure. After data is loaded from a file, a data node (representint the data) shows in Data Manager.
+Data Manager is normally located on the left side of the main window. It lists and organize all the loaded data in a tree structure. After data is loaded from a file, a data node (representing the data) shows in Data Manager.
 
 To open a file (loading data into Data Manager):
 

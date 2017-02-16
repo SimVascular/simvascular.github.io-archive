@@ -21,3 +21,10 @@ If you zoom in, you will be able to see the individual mesh elements.
 </figure>
 
 Now try to change the "Global Max Edge Size" value to generate a mesh with more elements. Note that as you specify lower global max edge size values, SimVasxcular will take longer to generate the mesh. The software might appear as not responding, but should still be working. 
+
+<font color="red">**HELPFUL HINT:** </font> There is an option for faster meshing, to use it:
+
+	Toggle on "Fast Meshing"
+
+It speeds up meshing with the same wall mesh, while cap mesh may not be desirable sometimes. Fast Meshing is automatically disabled if you turn on "Boundary Layer Meshing" or "Radius-Based Meshing".
+ 
