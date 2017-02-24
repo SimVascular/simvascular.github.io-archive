@@ -6,7 +6,7 @@ To generate an isotropic mesh, we either need to specify a desired number of ele
 	Click the button "Run Mesher"
 	Click "Yes" to continue	
 
-It may take a while fo meshing, which depends on the size of model and the estimated global max edge size. When your mesh has completed, the mesh shows in the 3D-view window of Display. To see the mesh easier, hide the model temporarily.
+It may take a while fo meshing, which depends on the size of model and the estimated global max edge size. When your mesh has completed, the mesh shows in the 3D-view window of Display and a dialog pops up to show some mesh info (like the number of points, elements, faces, etc.). To see the mesh easier, hide the model temporarily.
 
 <figure>
   <img class="svImg svImgXl" src="documentation/meshing/img/tetgen/tetgenisomesh.png">

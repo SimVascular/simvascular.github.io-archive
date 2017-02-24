@@ -18,16 +18,20 @@
 		sudo apt-get install libxmu-dev (for OpenCASCADE)
 		sudo apt-get install libxi-dev  (for OpenCASCADE)
 
-3. To use Meshim on linux copy your Meshsim license file into the simvascular directory and rename it meshsim-license.dat
+2. To use SimVascular Simulation tool, you need to install MPI:
 
-4. To add SimVascular to your path , you will need to run the post-install script:
+		sudo apt-get install libmpich2-dev
+
+4. To use Meshim on linux copy your Meshsim license file into the simvascular directory and rename it meshsim-license.dat
+
+5. To add SimVascular to your path , you will need to run the post-install script:
 
 		sudo bash setup-symlinks.sh
 
 	This script places symbolic links in /usr/local/bin to the simvascular executable scripts.
 	You may wish to edit the symbolic links.
 
-5. SimVascular contains two different GUIs. To use the new GUI, please first create an empty text file your home folder, for example "~/.simvascular\_default_qt"
+6. SimVascular contains two different GUIs. To use the new GUI, please first create an empty text file your home folder, for example "~/.simvascular\_default_qt"
 
 6. To lanuch SimVascular, open a terminal and run "simvascular". If it mentions missing some libs, according to the information, try "sudo apt-get install [missing lib]" to install them.
 

@@ -1,36 +1,58 @@
 ### Configurating Solvers ###
 
-SimVascular solvers(presolver, flowsolver, postsolver) are used as individual executable programs. They are called by SV Simulation tool to create data files, run simulation, and convert results to files in VTK formats. If those solvers are not included in your SimVascular package while you already have those solvers in your computer, we can tell SimVascular where to find them and how to use them.
+SimVascular solvers(presolver, flowsolver, postsolver) are used as individual executable programs. They are called by SV Simulation tool to create data files, run simulation, and convert results to files in VTK formats. Normally those solvers are included in SimVascular. In case your SimVascular doesn't include the solvers or can't find them, or you want to use different solvers, you need to explicitly tell SimVascular where to find or how to use them.
 
 	Goto Menu: Preferences -> SimVascular Simulation
-	Use MPI:  whether to use mpi to run flowsolver. It depends on if your flowsolver supports MPI. If you wan to use MPI, make sure it's installed.
-	MPIEXEC: mpiexec (by default). You may need to provide the full path and file name for the file if it's not added to system searching paths.
-	Use Solver Input Custom Template: whether to use a custom tempalte file for the table of "Solver Parameters". Only for advanced users
+	Use MPI:  whether to use mpi to run flowsolver. It depends on if your flowsolver supports MPI. By default, we assume using MPI.
+	MPIExec: (mpiexec, by default) It's opional. Specify the full path and file name for the mpiexec to use.
+	Use Solver Input Custom Template: whether to use a custom tempalte file for the table of "Solver Parameters". Only for advanced users.
 	Custom Tempalte: the full path and file name for your custom template file.
-	External Presolver: provide the full path and file name for presolver if you want to use a specified one
-	External Flowsolver: provide the full path and file name for flowsolver if you want to use a specified one
-	External Postsolver: provide the full path and file name for postsolver if you want to use a specified one
+	Presolver: Specify the full path and file name for the presolver to use.
+	Flowsolver: Specify the full path and file name for the flowsolver to use.
+	Postsolver: Specify the full path and file name for the postsolver to use.
 	
 <figure>
   <img class="svImg svImgLg"  src="documentation/flowsolver/imgs/solverconfiguration.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-
-#### MPI Installation ####
+#### Availability of Solvers and MPI####
 
 **Linux:**
+
+	Solvers are included in SimVascular. Simulation tool should be able to find them.
+	If it couldn't find them, configure them in terms to the instrcutions above.
+	Those solvers are located at [SimVascular_Home_Dir]/Bin/
+	Presolver: [SimVascular_Home_Dir]/Bin/svpre
+	Flowsolve: [SimVascular_Home_Dir]/Bin/svsolver
+	Postsolver: [SimVascular_Home_Dir]/Bin/svpost
+
+In case you can't run mpiexec when using flowsolver, please make sure mpi is installed.
+
+To install MPI:
 
 	sudo apt-get install libmpich2-dev
 
 **Mac OS X**
 
- 	Install MacPorts, which you can download at macports.org
-	sudo port install mpich-gcc46
+	Solvers and mpiexec are included in SimVascular. Simulation tool should be able to find them.
+	If it couldn't find them, configure them in terms to the instrcutions above.
+	Those solvers and mpiexec are located at /Applications/SimVascular.app/Contents/Resources/
+	MPIExec: /Applications/SimVascular.app/Contents/Resources/mpiexec 
+	Presolver: /Applications/SimVascular.app/Contents/Resources/svpre
+	Flowsolve: /Applications/SimVascular.app/Contents/Resources/svsolver
+	Postsolver: /Applications/SimVascular.app/Contents/Resources/svpost
 
 **Windows**
 
-	Install Microsoft MPI (MS-MPI)
+	There is a separate installer for svsolvers at simtk.org.
+	Download and install svsolver-xxxx.exe (including MPI installer)
+	Simulation tool should be able to find them. If it couldn't find them, configure them in terms to the instrcutions above.
+	The solvers are located at C:\Program Files (x86)\SimVascular\svSolver\Release\xxxxxxxxxx\
+	Presolver: C:\Program Files (x86)\SimVascular\svSolver\Release\xxxxxxxxxx\svpre-bin.exe
+	Flowsolver: C:\Program Files (x86)\SimVascular\svSolver\Release\xxxxxxxxxx\svsolver-msmpi-bin.exe
+	Postsolver: C:\Program Files (x86)\SimVascular\svSolver\Release\xxxxxxxxxx\svpost-bin.exe
+
 
 
 

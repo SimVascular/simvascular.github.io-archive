@@ -47,8 +47,6 @@ Roughly speaking, each of the four files is $1⁄4$ of the size of the original 
 restart.n.1 , restart.n.2 , restart.n.3 , restart.n.4 , ...
 ~~~
 
-If the solvers are not included with your SimVascualr, refer to [Solver Configuration](#solverconfiguration).
-
 <br>
 ###Exporting Input Files
 
@@ -76,7 +74,19 @@ It outputs mesh files and call presolver to produce data files for flowsolver.
 	Click the button "Export Input and Data Files..."
 	Select a directory for exporting.
 
-A new folder "steady-files" is created, which includes the following folder/files:
+A dialog pops up, indicating that it's processing data.
+
+<figure>
+  <img class="svImg scImgMd" src="documentation/flowsolver/imgs/abortdialog.png">
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+	Click "Ok" to let it continue in background (no way to terminate it afterwards).
+	Click "Abort" to terminate it.
+
+
+
+After the process is finished, a new folder "steady-files" is created, which includes the following folder/files:
 
 	For presolver:	
 		mesh-complete (folder)
