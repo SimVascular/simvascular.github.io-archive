@@ -31,7 +31,11 @@ In case you can't run mpiexec when using flowsolver, please make sure mpi is ins
 
 To install MPI:
 
+	For Ubuntu 14:
 	sudo apt-get install libmpich2-dev
+
+	For Ubuntu 16:
+	sudo apt-get install libmpich-dev
 
 **Mac OS X**
 

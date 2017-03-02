@@ -15,7 +15,7 @@
 
 2. SimVascular contains two different GUIs. To use the new GUI, please first create an empty text file in your user home folder, like
 
-		C:/Users/[user name]/simvascular\_default\_gui_qt.txt
+		C:/Users/[user name]/simvascular_default_gui_qt.txt
 
 3. To use SimVascular Simulation tool, it's required to install svSolvers. There is a separate installer for svSolvers at simtk.org
 
