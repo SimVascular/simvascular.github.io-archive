@@ -85,44 +85,37 @@ There are many parameters for flow solver, but only a few is required to set exp
 
 ###Running Simulation
 
-There are two ways to run simulation. One is to export all files and run simulation at other computers or clusters. The other way is to create data files and run simulation in the job
+To run simualtion:
+
+	Click the button "Create Data Files for Simulation"
+	Number of Processes: give the number of cores you need
+	Click the button "Run Simulation"
 
 <figure>
   <img class="svImg svImgSm"  src="documentation/quickguide/imgs/runjob.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-To export only input files (no data files):
-
-	Click the button "Export Only Input Files..."
-	Select a directory
-
-A folder "demojob-files" is created, which contains the exported input files.
-
-To export input and data files:
-
-	Choose Mesh: demomesh
-	Click the button "Export Input and Data Files..."
-	Select a directory
-
-A folder "demojob-files" is created, which contains the exported input and data files. You can upload those files to a computer cluster to run simualation.
-
-To run simulatio inside the project:
-
-	Click the button "Create Input and Data Files in Job"
-	Number of Processes: give the number of cores you need
-	Click the button "Run Job"
-
 After the simulation is completed, all the simulation result files restart.**.*\* are in the folder [proj_path]/Simulations/demojob.
 
 <font color="red">**HELPFUL HINT:** </font>  If you choose more than one processors, for example, 8 processors are used. **SimVascular** will create a new folder *8-procs\_case* in the folder [proj_path]/Simulations/demojob. All the simulation result files restart.\*.\* are in the folder 8-procs_\_case.
 
-###Export Results
+You can also export the required data files and upload to a computer cluster to run the simulation.
 
-Convert and export the simulation result files to .vtp and .vtu files, which we can use to show the results in ParaView.
+To export the files:
 
-	Click the button "..." to select simulatio result directory [proj_path]/Simulations/demojob/*8-procs_\_case*
-	Start: 500
+	Right click on the job node "demojob" in Data Manager
+	Click "Export Data Files"
+	Select a directory
+
+A folder "demojob-sim-files" is created, which contains the exported data files to run the simulation.
+
+###Convert Results
+
+To convert the simulation result files to .vtp and .vtu files, which we can use to show the results in ParaView.
+
+	Result Dir:  [proj_path]/Simulations/demojob/*8-procs_\_case* or Click the button "..." to select a directory
+	Start: 50
 	Stop: 500
 	Increment: 50
 	Click the button "Export..."

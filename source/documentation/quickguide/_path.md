@@ -5,7 +5,8 @@ To create a geometric model for a vessel, you need to first create a path, which
 	Right click the data node "Paths" in the project "SVProject" in Data Manager
 	Click "Create Path" in the popup menu
 	Path Name: aorta
-	Subdivision Type: choose "Image Spacing Based"
+	Subdivision Type: choose "Spacing Based"
+	The minimum image spacing is automatically filled for "Spacing"
 
 A new path "aorta" is created under the data node "Paths" in Data Manager. Double click the data node "aorta" and the tool "SV Path Planning" shows up. The new path is empty and has no points so far. To add a contro point:
 

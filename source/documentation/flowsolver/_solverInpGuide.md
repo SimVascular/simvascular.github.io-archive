@@ -244,13 +244,13 @@ This section discusses the options available in the **solver.inp** file.
   <td>Maximum Number of Iterations for svLS NS Solver</td>
   <td>(1)</td>
   <td>(integer)</td>
-  <td>Maximum number of iterations for the full Navier-Stokes solver</td>
+  <td>Maximum number of iterations for the full Navier-Stokes solver. Use 10 for pulsatible flow, or deformable wall casese</td>
 </tr>
 <tr>
   <td>Maximum Number of Iterations for svLS Momentum Loop</td>
   <td>(2)</td>
   <td>(integer)</td>
-  <td>Maximum number of iterations for the Momentum equation solver</td>
+  <td>Maximum number of iterations for the Momentum equation solver. Use 20 for deformable wall cases</td>
 </tr>
 <tr>
   <td>Maximum Number of Iterations for svLS Continuity Loop</td>
