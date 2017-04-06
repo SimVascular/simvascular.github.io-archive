@@ -70,9 +70,9 @@ To set BC for the outlets (outflow\_right\_iliac, outflow\_aorta):
 
 There are many parameters for flow solver, but only a few is required to set explicitly. Advanced paramters are optional.
 
-	Number of Timesteps: 500
+	Number of Timesteps: 100
 	Time Step Size: 0.0004
-	Number of Timesteps between Restarts: 50
+	Number of Timesteps between Restarts: 10
 	Step Construction : 2 # standard two iterations, enough for constant  problems.
 
 <figure>
@@ -100,7 +100,7 @@ After the simulation is completed, all the simulation result files restart.**.*\
 
 <font color="red">**HELPFUL HINT:** </font>  If you choose more than one processors, for example, 8 processors are used. **SimVascular** will create a new folder *8-procs\_case* in the folder [proj_path]/Simulations/demojob. All the simulation result files restart.\*.\* are in the folder 8-procs_\_case.
 
-You can also export the required data files and upload to a computer cluster to run the simulation.
+(Optional) You can also export the required data files and upload to a computer cluster to run the simulation.
 
 To export the files:
 
@@ -115,16 +115,16 @@ A folder "demojob-sim-files" is created, which contains the exported data files 
 To convert the simulation result files to .vtp and .vtu files, which we can use to show the results in ParaView.
 
 	Result Dir:  [proj_path]/Simulations/demojob/*8-procs_\_case* or Click the button "..." to select a directory
-	Start: 50
-	Stop: 500
-	Increment: 50
-	Click the button "Export..."
-	Select a directory for exporting
+	Start: 10
+	Stop: 100
+	Increment: 10
+	Click the button "Convert ..."
+	Select a directory for exporting (in this example: [proj_path]/Simulations/demojob/)
 
 <figure>
-  <img class="svImg svImgSm"  src="documentation/quickguide/imgs/exportresults.png"> 
+  <img class="svImg svImgSm"  src="documentation/quickguide/imgs/convertresults.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-Since it is a steady case, only the last time step is needed. A new folder "demojob-results" is created and contains the output files all\_results\_00500.vtp, all\_results\_00500.vtu, average_results.vtp.
+Since it is a steady case, only the last time step is needed. A new folder "demojob-converted-results" is created and contains the output files all\_results\_00010.vtp,..., all\_results\_00100.vtp, all\_results\_00010.vtu, ..., all\_results\_00100.vtu, average_results.vtp.
 

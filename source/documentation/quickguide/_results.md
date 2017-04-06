@@ -2,11 +2,11 @@
 
 Launch ParaView.
 
-	Open the file "steady.vtp", "steady.vtu" with ParaView.
+	Open the file "all_results_00100.vtu" with ParaView.
 	Click the button “Apply”
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/quickguide/imgs/result1.jpg"> 
+  <img class="svImg svImgXl"  src="documentation/quickguide/imgs/result1.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -16,12 +16,12 @@ To do this, we must calculate the scalar quantity representing the magnitude of 
 
 	Click the calculator tool button
 	Result Array Name: vel mag (cm/s)
-	Enter "mag(velocity_00500)" just above the calculator pane
+	Enter "mag(velocity)" just above the calculator pane
 	Click the button “Apply”
 	Representation: Volume
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/quickguide/imgs/result2.jpg"> 
+  <img class="svImg svImgXl"  src="documentation/quickguide/imgs/result2.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
