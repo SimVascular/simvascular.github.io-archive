@@ -35,9 +35,9 @@ For variable wall cases, the flowsolver needs much more iterations of step seque
 
 To create data files:
 
-	Go to "Create Data Files and Run Job"
+	Go to "Create Files and Run Job"
 	Choose Mesh: cylinder
-	Click the button "Create Input and Data Files in Job"
+	Click the button "Create Data Files for Simulation"
 
 Different from Example 3, the step also solves variable thickness or Young’s modulus, and assign them to the wall, instead of giving uniform thickness or Young’s modulus. varwallprop.vtp and displacment.vtp are created, which show the thickness and Young's modulus, and initial displacement, respectively:
 
@@ -52,4 +52,4 @@ Different from Example 3, the step also solves variable thickness or Young’s m
   <figcaption class="svCaption" >Initila Displacement in displacement.vtp </figcaption>
 </figure>
 
-Similarly to Example 3, run the job and export the results.
+Similarly to Example 3, run the job and convert the results.

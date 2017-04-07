@@ -43,8 +43,8 @@ Let's start setting inlet boundary condition.
 		Analytic Shape: parabolic
 		Point Number: 2
 		Fourier Modes: 1
-		Period: (provide value if the period in the flow rate file is different form the on from "Basic Parameters")
 		Click the tool button "..." to select the file "steady.flow" we just created as above
+		Period: (filled automatically based on the data from the file)
 		Click "OK"
 		
 	
@@ -52,6 +52,8 @@ Let's start setting inlet boundary condition.
   <img class="svImg svImgSm" src="documentation/flowsolver/imgs/inletbcdialog.png">
   <figcaption class="svCaption" ></figcaption>
 </figure>
+
+<font color="red">**Help Hints:** </font> Please make use you specify face types when you create the corresponding model;otherwise, the cap faces won't appear.
 
 - **Point Number**: This is the number of _temporal_ data points that you want to have in one cycle. This is not necessarily the number of time points in the \*.flow file. In this case, they match (2 in both cases), but this is because this is a very simple example using steady flow and two time points is all we need to characterize a constant flow. In general, your \*.flow file will have in the order of $20$ data points over the cardiac cycle (that’s about how many points you will be able to reconstruct using **PC-MRI**, for example), and your interpolated data from it will have on the order of $100$-$200$ points. Whatever is enough to have a smooth representation of the inflow wave mapping to velocity vectors at the inlet face.
 

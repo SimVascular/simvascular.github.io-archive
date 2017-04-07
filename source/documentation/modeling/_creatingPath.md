@@ -34,7 +34,7 @@ There are three options for Subdivision Type. Each option uses a different way t
 
 **Subdivision Number** (Ns): n=Ns-1; Npa=(n+1)*(Nc-1)+1 <br>
 
-**Image Spacing Based**: Assume s is the minimum spacing of the image; l is the distance between two adjacent control points. n= [l/s]-1; Npa=(n+1)*(Nc-1)+1
+**Spacing Based**: Assume s is the spacing; l is the distance between two adjacent control points. n= [l/s]-1; Npa=(n+1)*(Nc-1)+1
 
 Now a new data node “aorta” for the path is created under the data node “Paths” in Data Manager. Double click the data node “aorta" and the tool "SV Path Planning” automatically shows up. The new path is empty and has no control or path points so far. 
 

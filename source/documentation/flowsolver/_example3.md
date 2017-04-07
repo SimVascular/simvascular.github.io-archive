@@ -38,9 +38,9 @@ For deformable cases, the flowsolver needs more iterations of step sequence to d
 
 To create data files:
 
-	Go to "Create Data Files and Run Job"
+	Go to "Create Files and Run Job"
 	Choose Mesh: cylinder
-	Click the button "Create Input and Data Files in Job"
+	Click the button "Create Data Files for Simulation"
 
 Different from Example 2, the step also solves initial displacement, write the initial displacment to a vtp file "displacement.vtp" to review the solution, and finaly append it to restar.0.1 we just copied from restart.500.0 of Example 2.
 
@@ -49,4 +49,4 @@ Different from Example 2, the step also solves initial displacement, write the i
   <figcaption class="svCaption" >Initila Displacement from displacement.vtp </figcaption>
 </figure>
 
-Similarly to Example 2, run the job and export the results.
+Similarly to Example 2, run the job and convert the results.

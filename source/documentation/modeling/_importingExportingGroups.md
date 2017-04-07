@@ -1,14 +1,21 @@
-###Importing and Exporting Contour Groups in Legacy Formats  
+###Importing and Exporting Segmentations 
 
-**Importing Groups:**
+**Importing Segmentations:**
 
 	Right click the data node "Segmentations" in the SV project in Data Manager
-	Click "Load Legacy  Segmentations" in the popup menu
+	Click "Load Segmentations" in the popup menu
+	Select a contour group (.ctgr) file (2D segmentation) or a vtp file (3D segmentation as a closed surface))
+	Click the “Open” button.
+
+**Importing Legacy Segmentations:**
+
+	Right click the data node "Segmentations" in the SV project in Data Manager
+	Click "Import Legacy  Segmentations" in the popup menu
 	Select a directory you would like to load, and click the “Choose” button.
 
-**Exporting Groups:**
+**Exporting as Legacy Segmentations:**
 
 	Right click the data node "Segmentations" in the SV project in Data Manager
-	Click "Save Legacy  Segmentations" in the popup menu
+	Click "Export All as Legacy  Segmentations" in the popup menu
 	Select a directory you would like to save, and click the “Choose” button.
 

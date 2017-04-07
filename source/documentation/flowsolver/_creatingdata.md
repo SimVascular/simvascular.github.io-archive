@@ -1,6 +1,6 @@
-## Creating Input and Data Files
+## Creating Data Files for Simulation
 
-Before running simualtion, you need to create some extra required input and data files for presolver and flowsolver.
+Before running simualtion, you need to create some required data files for presolver and flowsolver.
 
 For Presolver:
 
@@ -48,45 +48,14 @@ restart.n.1 , restart.n.2 , restart.n.3 , restart.n.4 , ...
 ~~~
 
 <br>
-###Exporting Input Files
+###Creating Data Files 
 
-In this step, solvers are not needed. It only outputs mesh and txt input files for presolver and flowsolver.
-
-	Click the button "Export Only Input Files..."
-	Select a directory for exporting.
-
-A new folder "steady-files" is created, which includes the following files:
-
-	For presolver:	
-		mesh-complete (folder)
-		inflow.flow
-		steady.svpre
-	For flowsolver
-		solver.inp
-		numstart.dat
-
-<br>
-###Exporting Input and Data Files
-
-It outputs mesh files and call presolver to produce data files for flowsolver.
+This step creates files inside the job folder in the SV project
 
 	Choose Mesh: cylinder	
-	Click the button "Export Input and Data Files..."
-	Select a directory for exporting.
+	Click the button "Create Input and Data Files in Job"
 
-A dialog pops up, indicating that it's processing data.
-
-<figure>
-  <img class="svImg scImgMd" src="documentation/flowsolver/imgs/abortdialog.png">
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-	Click "Ok" to let it continue in background (no way to terminate it afterwards).
-	Click "Abort" to terminate it.
-
-
-
-After the process is finished, a new folder "steady-files" is created, which includes the following folder/files:
+A new directory using the job name "steady" is created under the folder "Simulations" and contains the following folder/files:
 
 	For presolver:	
 		mesh-complete (folder)
@@ -99,22 +68,17 @@ After the process is finished, a new folder "steady-files" is created, which inc
 		solver.inp
 		numstart.dat
 
-bct.vtp is the vtp format file of bct.dat. It makes easy to check the veloctiy profile in ParaView.
+###Exporting Data Files (optional)
 
-<figure>
-  <img class="svImg scImgMd" src="documentation/flowsolver/imgs/bctvtp.png">
-  <figcaption class="svCaption" >Visualizing the inlet velocity profile in Paraview</figcaption>
-</figure>
+If you want run the simualtion in a computer cluster. You need export those data files and upload them to the computer cluster.
 
-You can upload those files to another computer of cluster where presolver or flowsolver are avaiable to continue simulation.
+To export the files:
 
-<br>
-###Creating Input and Data Files in Job
+	Right click the job node "steady" in Data Manager
+	Click "Export Data Files"
+	Select a directory for exporting.
 
-This step is similar to "Exporting Input and Data Files". The only difference is it directly creates files inside the job folder in the SV project
+A new folder "steady-sim-files" is created, which includes the requied files by flowsolver
 
-	Choose Mesh: cylinder	
-	Click the button "Create Input and Data Files in Job"
 
-A new folder using the job name "steady" is created under the folder "Simulations"
 
