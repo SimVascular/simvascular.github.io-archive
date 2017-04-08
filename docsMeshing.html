@@ -42,29 +42,13 @@
                 <a class="navbar-brand" id="brandName" href="index.html">
                   <img src="img/svlogo/svLogoSmallText.png" alt="...">
                 </a>
+                <a class="navbar-brand page-scroll">            
+                3.0
+                </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">            
                 <ul class="nav navbar-nav">
-                  
-                  <!-- GETTING STARTED -->
-                  <li>
-                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
-                      <b><span class="fa fa-caret-square-o-right"></span> Getting Started</b>
-                    </a>
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsInstallation.html"><b><span class="fa fa-sign-in fa-rotate-90"></span> Installation</b></a></li>   
-                      <li role="presentation" class="divider"></li>                   
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsCompile.html"><b><span class="fa fa-file-text-o"></span> Compile Sources</b></a></li>  
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsCodeSnippets.html"><b><span class="fa fa-indent"></span> Code Snippets</b></a></li>                                  
-                      <li role="presentation" class="divider"></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsQuickGuide.html"><b><span class="icon ion-ios7-bolt"></span> Quick Guide</b></a></li>           
-                      <li role="presentation" class="divider"></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="comingSoon.html"><b>Doxygen Docs for C++</b></a></li>  
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="comingSoon.html"><b>Doxygen Docs for Tcl</b></a></li>  
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="comingSoon.html"><b>Doxygen Docs for Fortran</b></a></li>           
-                    </ul>
-                  </li>                  
 
                   <!-- USER GUIDES -->
                   <li>
@@ -72,29 +56,38 @@
                       <b><span class="fa fa-user"></span> User Guides</b>
                     </a>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsImageGuide.html"><b><span class="icon ion-image"></span> Medical Images</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsInstallation.html"><b><span class="fa fa-sign-in fa-rotate-90"></span> Installation</b></a></li>
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsQuickGuide.html"><b><span class="icon ion-ios7-bolt"></span> Quick Guide</b></a></li>
+                      <li role="presentation" class="divider"></li>
                       <li role="presentation"><a role="menuitem" tabindex="-1" href="docsModelGuide.html"><b><span class="icon ion-settings"></span> Modeling</b></a></li>
-                      <li role="presentation" class="divider"></li>
                       <li role="presentation"><a role="menuitem" tabindex="-1" href="docsMeshing.html"><b><span class="icon ion-ios7-keypad"></span> Meshing</b></a></li>
-                      <li role="presentation" class="divider"></li>
                       <li role="presentation"><a role="menuitem" tabindex="-1" href="docsFlowSolver.html"><b><span class="icon ion-play"></span> Simulation</b></a></li>
-                      <li role="presentation" class="divider"></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsRefs.html"><b><span class="icon ion-document-text"></span> References</b></a></li>
                     </ul>
                   </li>
-
+                  
                   <!-- CLINCAL CASES -->
                   <li>
                     <a href="#" id="dropdownMenu1" data-toggle="dropdown">
                       <b><i class="fa fa-stethoscope"></i> Clinical Cases</b>
                     </a>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase1.html"><b><span class="fa fa-user-md"></span> Aortofemoral Normal (Case 1)</b></a></li>                      
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase2.html"><b><span class="fa fa-user-md"></span> Aortofemoral Normal (Case 2)</b></a></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase3.html"><b><span class="fa fa-user-md"></span> Coronary Normal (Case 3)</b></a></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase4.html"><b><span class="fa fa-user-md"></span> Healthy Pulmonary (Case 4)</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase3.html"><b><span class="fa fa-user-md"></span> Coronary Normal</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase1.html"><b><span class="fa fa-user-md"></span> Aortofemoral Normal - 1</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase2.html"><b><span class="fa fa-user-md"></span> Aortofemoral Normal - 2</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase4.html"><b><span class="fa fa-user-md"></span> Healthy Pulmonary</b></a></li>
                     </ul>
                   </li>
+
+                  <!-- DEVELOPER GUIDES -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b><span class="fa fa-caret-square-o-right"></span> Developer Guides</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsCompile.html"><b><span class="fa fa-file-text-o"></span> Compile Source Code</b></a></li>
+                    </ul>
+                  </li>                  
 
                   <!-- svCOMMUNITY -->
                   <li>
@@ -105,15 +98,28 @@
                       <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/forums/viewforum.php?f=188"><b><span class="fa fa-users"></span> Public Forum</b></a></li>                                          
                       <li role="presentation" class="divider"></li>
                       <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/mailman/listinfo/simvascular-news"><b><span class="fa fa-sign-in"></span> Join News Mailing List</b></a></li>                      
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/pipermail/simvascular-news/"><b><span class="fa fa-pencil-square-o"></span> News Mailing List Archive</b></a></li>
-                      <li role="presentation" class="divider"></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/mailman/listinfo/simvascular-users"><b><span class="fa fa-sign-in"></span> Join User Mailing List</b></a></li>                      
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="http://simvascular-users.40599.n7.nabble.com/"><b><span class="fa fa-pencil-square-o"></span> User Mailing List Archive</b></a></li>                      
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/pipermail/simvascular-news/"><b><span class="fa fa-pencil-square-o"></span> News Mailing List Archive</b></a></li>                      
+                    </ul>
+                  </li>
+
+                  <!-- REFERENCES -->
+                  <li>
+                    <a href="docsRefs.html" id="dropdownMenu1" >
+                      <b><span class="icon ion-document-text"></span>References</b>
+                    </a>
+                  </li>  
+
+                  <!-- Archives -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b> Archives</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="archiveQuickGuideSV2.html"><b>SimVascular 2.0</b></a></li>
                     </ul>
                   </li>
 
                     <!-- <li><a href="docsQuickGuide.html" id="btnQuickGuide"><b><span class="icon ion-ios7-bolt"></span> Quick Guide</b></a></li>
-                    <li><a href="docsImageGuide.html" id="btnImageGuide"><b><span class="icon ion-image"></span> Medical Images</b></a></li>
                     <li><a href="docsModelGuide.html" id="btnModelGuide"><b><span class="icon ion-settings"></span> Modeling</b></a></li> 
                     
                     <li><a href="docsMeshing.html" id="btnMeshing"><b><span class="icon ion-ios7-keypad"></span> Meshing</b></a></li>
@@ -139,33 +145,27 @@
 
 
 
-
-
         <ul id="sidebar" class="nav nav-stacked fixed manMeshing">    <p><h3>Meshing Guide</h3></p>
-<li><a href="#meshSec1">Introduction</a></li>
-<li><a href="#meshSec2">MeshSim Meshing</a>
+<li><a href="#intro">Introduction</a></li>
+<li><a href="#tetgenoverview">TetGen Meshing</a>
   <ul class="nav nav-stacked">
-    <li><a href="#meshSec2">MeshSim Overview</a></li>
-	<li><a href="#meshSec3">Isotropic Meshing</a></li>
-	<li><a href="#meshSec4">Local Mesh Refinement</a></li>
-	<li><a href="#meshSec5">Boundary Layer Meshing</a></li>
-	<li><a href="#meshSec6">Spherical and Cylindrical <br>Refinement</a></li>
+    <li><a href="#tetgencreatemesh">Create Mesh</a></li>
+    <li><a href="#tetgeniso">Isotropic Meshing</a></li>
+    <li><a href="#tetgenboundarylayer">Boundary Layer Meshing</a></li>
+    <li><a href="#tetgetnradiusbased">Radius-Based Meshing</a></li>
+    <li><a href="#tetgenlocalmeshing">Local Mesh Size Application</a></li>
+    <li><a href="#tetgensphericalrefinement">Spherical Refinement</a></li>
+    <li><a href="#tetgenflags">Advanced Flags</a></li>
+    <li><a href="#tetgenadapt">Adaptive Meshing</a></li>
+    <li><a href="#loadingmesh">Unloading/Loading <br>Mesh Data</a></li>
+    <li><a href="#exportingmesh">Exporting Mesh</a></li>
+    <li><a href="#tetgenerrors">TetGen Errors</a></li>
   </ul>	
 </li>
-<li><a href="#meshSec7">TetGen Meshing</a>
-  <ul class="nav nav-stacked">
-    <li><a href="#meshSec7">TetGen Overview</a></li>
-	<li><a href="#meshSec8">Isotropic Meshing</a></li>
-	<li><a href="#meshSec9">Boundary Layer Meshing</a></li>
-	<li><a href="#meshSec10">Local Mesh Size Application</a></li>
-	<li><a href="#meshSec11">Spherical Refinement</a></li>
-	<li><a href="#meshSec12">Radius-Based Meshing</a></li>
-	<li><a href="#meshSec13">TetGen Errors</a></li>
-  </ul>	
-</li>
-<li><a href="#meshSec14">Inspecting Meshes</a></li>
-</ul>
+<li><a href="#inspectingmehses">Inspecting Meshes</a></li>
 
+<h3>Download</h3>
+<a href="https://simtk.org/frs/download_confirm.php/file/5113/DemoProject.zip?group_id=930">Demo Project</a></ul>
 
 
 
@@ -180,9 +180,7 @@
 
 
 
-
-
-        <div class="manMeshing">   <section id="meshSec1" class="group"><h2>Introduction</h2>
+        <div class="manMeshing">   <section id="intro" class="group"><h2>Introduction</h2>
 
 <h3>Mesh Generation</h3>
 
@@ -197,12 +195,12 @@
 <ol>
 <li><p>For the applications discussed herein, a geometric model representing each energy domain of interest (fluid, mechanical, thermal, etc.) must exist.  That is, if you are simulating the mechanical forces of a balloon expandable stent deployed in air, you need a geometric model representing at a minimum the stent geometry.  However, if you want to simulate flow around a stent deployed in a vessel, you need a geometric model of the flow lumen (i.e. flow domain) not of the stent itself.</p></li>
 <li><p>There are multiple sources of geometric models.  The most common source of geometry in the device community is likely from commercial CAD packages (SDRC I-deas, SolidEdge, SolidWorks, Pro-E, etc.).  A second potential source of geometric models is digitized data (imaging data, etc.).  Finally, a less common (but increasingly important) source of data is the results of a previous simulation.   For example, if one simulated the deployment of a stent into a diseased artery, the results of this analysis (i.e. displacements) could be used for the initial geometry for a subsequent blood flow analysis around the deployed stent.</p></li>
-<li><p>As will be shown using a beam example, a simple geometry allows for great flexibility in choice of element type (e.g. tetrahedral vs. hexahedral elements).  However, for many geometries of engineering interest, the complex geometry motivates the need for automatic mesh generation and often restricts the user to tetrahedral or possibly hex-dominate meshing.  Pure hexahedral mesh generation for complex geometries is an area of active research.  </p></li>
+<li><p>As will be shown using a beam example, a simple geometry allows for great flexibility in choice of element type (e.g. tetrahedral vs. hexahedral elements).  However, for many geometries of engineering interest, the complex geometry motivates the need for automatic mesh generation and often restricts the user to tetrahedral or possibly hex-dominate meshing.  Pure hexahedral mesh generation for complex geometries is an area of active research.</p></li>
 </ol>
 
-<p>In this manual, a finite-octree based tetrahedral mesh generator is used.  The basic idea behind finite-octree methods is to decompose a complex geometry into simpler pieces and then mesh the individual pieces using a mesh generation technique (e.g. templates, Delaunay triangulation (see Figure 4.2), etc.). An example quadtree decomposition (the 2-D analog of finite-octree) is shown in Figure 4.3.  A structured (i.e. tensor-product) quadtree grid that completely fills the space occupied by the geometric model (i.e. bounding box) is initially created based on a user-defined mesh density.  Subdivision of the octants is then performed to reach a desired complexity of the geometry contained therein.  Restricting the “level difference” or gradation between adjacent octants is essential to preserve mesh quality.  After the geometry is decomposed, surface meshing is performed using projected 2-D Delaunay surface triangulation.  Templates are used to create the interior volume mesh (i.e. octants contained completely inside of the geometric model), and 3-D Delaunay triangulation is used in the boundary octants (i.e. octants containing part of the geometric model boundary) to finish the meshing process.</p>
+<p>In this manual, a finite-octree based tetrahedral mesh generator is used.  The basic idea behind finite-octree methods is to decompose a complex geometry into simpler pieces and then mesh the individual pieces using a mesh generation technique (e.g. templates, Delaunay triangulation (see Figure 1), etc.). An example quadtree decomposition (the 2-D analog of finite-octree) is shown in Figure 2.  A structured (i.e. tensor-product) quadtree grid that completely fills the space occupied by the geometric model (i.e. bounding box) is initially created based on a user-defined mesh density.  Subdivision of the octants is then performed to reach a desired complexity of the geometry contained therein.  Restricting the “level difference” or gradation between adjacent octants is essential to preserve mesh quality.  After the geometry is decomposed, surface meshing is performed using projected 2-D Delaunay surface triangulation.  Templates are used to create the interior volume mesh (i.e. octants contained completely inside of the geometric model), and 3-D Delaunay triangulation is used in the boundary octants (i.e. octants containing part of the geometric model boundary) to finish the meshing process.</p>
 
-<p>Finally, we note that there are several techniques to evaluate the quality of a given discretization.  For the exterior surface mesh, a visual inspection may provide useful information.  However, it is impractical to visualize the individual tetrahedral elements for large meshes, so geometric-based mesh quality indicators are used.  Specifically, three mesh quality indicators will be discussed (see Figure 4.4): </p>
+<p>Finally, we note that there are several techniques to evaluate the quality of a given discretization.  For the exterior surface mesh, a visual inspection may provide useful information.  However, it is impractical to visualize the individual tetrahedral elements for large meshes, so geometric-based mesh quality indicators are used.  Specifically, three mesh quality indicators will be discussed (see Figure 3): </p>
 
 <ul>
 <li>Minimum solid angle</li>
@@ -215,582 +213,188 @@
 <figure>
 <img class="svImg svImgLg" src="documentation/meshing/img/Delaunay_Criterion.png">
   <figcaption class="svCaption" >
-    Delaunay criterion.  The Delaunay criterion states that no other point in the triangulation can fall within the circumscribing sphere (circle in 2-D) of the points defining a simplex in the triangulation.  Figure (a) shows a valid Delaunay triangulation of four points in $\mathbb{R}^2$ while (b) shows a non-Delaunay triangulation of the same four points.  In 2-D, the Delaunay criterion minimizes the maximum interior angle producing an optimal triangulation for a given set of points.
+    Figure 1. Delaunay criterion.  The Delaunay criterion states that no other point in the triangulation can fall within the circumscribing sphere (circle in 2-D) of the points defining a simplex in the triangulation.  Figure (a) shows a valid Delaunay triangulation of four points in $\mathbb{R}^2$ while (b) shows a non-Delaunay triangulation of the same four points.  In 2-D, the Delaunay criterion minimizes the maximum interior angle producing an optimal triangulation for a given set of points.
   </figcaption>
 </figure>
 
 <figure>
 <img class="svImg svImgLg" src="documentation/meshing/img/Quadtree.png">
   <figcaption class="svCaption" >
-    Quadtree decomposition.  The figure shows an example quadtree decomposition (directly analogous to octree decomposition in 3-D) that is used to divide the geometry into less complex individual pieces for automatic mesh generation.
+    Figure 2. Quadtree decomposition.  The figure shows an example quadtree decomposition (directly analogous to octree decomposition in 3-D) that is used to divide the geometry into less complex individual pieces for automatic mesh generation.
   </figcaption> 
 </figure>
 
 <figure>
 <img class="svImg svImgLg" src="documentation/meshing/img/Quality_Measures.png">
   <figcaption class="svCaption" >
-    Geometric mesh quality measures.  Shown are 2-D geometric mesh quality measures with direct analogies in 3-D. The radius ratio (a) is the ratio of the radius of the maximum inscribed circle (sphere in 3-D) over the radius of the circumscribed circle (sphere in 3-D).  The aspect ratio (b) is a ratio of the minimum height to the maximum base length. The maximum/minimum interior (dihedral in 3-D) angle is shown in &copy;. In this lab we will construct meshes automatically for two different geometries.  The first example is that of an idealized vessel (i.e. cylinder).  The second example will be an idealized stent, deployed in an idealized stenotic vessel with incomplete apposition.
+    Figure 3. Geometric mesh quality measures.  Shown are 2-D geometric mesh quality measures with direct analogies in 3-D. The radius ratio (a) is the ratio of the radius of the maximum inscribed circle (sphere in 3-D) over the radius of the circumscribed circle (sphere in 3-D).  The aspect ratio (b) is a ratio of the minimum height to the maximum base length. The maximum/minimum interior (dihedral in 3-D) angle is shown in &copy;. In this lab we will construct meshes automatically for two different geometries.  The first example is that of an idealized vessel (i.e. cylinder).  The second example will be an idealized stent, deployed in an idealized stenotic vessel with incomplete apposition.
   </figcaption> 
 </figure>
 
 <h3>SimVascular Meshers</h3>
 
-<p>This document describes how to use the Meshing software for discrete and continuous solids. SimVascular meshing includes both open source and commercial options. The commercial mesher in SimVascular is MeshSim and provides boundary layer, mesh refinement, and isotropic/anisotropic adaptive meshing. MeshSim is a very powerful tool and can provide high quality meshes for irregular and complicated domains. The open source meshing includes the open source libraries of TetGen and the Vascular Modeling Tool Kit(VMTK). These tools are combined to provide boundary layer, mesh refinement, and isotropic adaptive meshing. </p>
-
-<p>The following describes the file formats used by the meshers in SimVascular:</p>
-
-<p>MeshSim:</p>
-
-<ul>
-<li>.xmt_txt</li>
-<li>.dsm</li>
-</ul>
-
-<p>TetGen:</p>
-
-<ul>
-<li>.vtp</li>
-<li>.vtk</li>
-<li>.stl</li>
-<li>.ply </li>
-</ul>
-
-<h3>Using this Manual</h3>
-
-<p>Discretizing a domain can be a tricky process and this document attempts to make this process more understandable and less daunting. This document will teach you the following things:</p>
-
-<ol>
-<li>Preparing and running a surface remeshing</li>
-<li>Preparing and running a volumetric mesh (with or without boundary layer and refinement)</li>
-<li>Preparing and running an adaptive mesh<br></li>
-</ol>
-
-<p>Some conventions that will be helpful for you to know:</p>
-
-<ol>
-<li>Text in italics represents things that you type into the command window.</li>
-<li>Buttons, window names, and other labels in a window in the SimVascular program will be in quotes.</li>
-<li>Pull-down menu selections will be indicated with an arrow -&gt;.</li>
-</ol>
+<p>This document describes how to use the Meshing software for discrete and continuous solids. SimVascular meshing includes both open source and commercial options. The open source meshing includes the open source libraries of TetGen and the Vascular Modeling Tool Kit(VMTK). These tools are combined to provide boundary layer, mesh refinement, and isotropic adaptive meshing. The commercial mesher in SimVascular is MeshSim and provides boundary layer, mesh refinement, and isotropic/anisotropic adaptive meshing. MeshSim is a very powerful tool and can provide high quality meshes for irregular and complicated domains.</p>
 </section>
-<section id="meshSec2" class="group"><h2>MeshSim Meshing for Parasolid(.xmt_txt) or Discrete(.dsm) Solids</h2>
+<section id="tetgenoverview" class="group"><h2>TetGen Meshing</h2>
 
-<h3>About MeshSim</h3>
-
-<p>MeshSim is a component mesher used to create high quality meshes from CAD Models. Meshing capabilities include surface and volumetric meshing, boundary layer meshing, and local meshing refinement. MeshSim is a Licensed SimVascular package and must be purchased in order to be used with the Software.</p>
-
-<h3>MeshSim Interface</h3>
-
-<p>The MeshSim tab includes all of the operations to run a mesh with the commercial component MeshSim. The interface for MeshSim includes five tabs:</p>
-
-<figure>
-  <img class="svImg svImgLg" src="documentation/meshing/img/MeshSim_Tabs.png">
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<ol>
-<li>Mesh: This is for basic meshing parameters involving surface and volumetric meshing.</li>
-<li>Advanced Mesh Options: This is for advanced meshing techniques like local mesh refinement and boundary layer meshing.</li>
-<li>Adapt: This is for anisotropic and isotropic adaptive meshing.</li>
-<li>MeshSim Licenses: This is for checking and installing licenses in order to use the commerical package MeshSim.</li>
-<li>DiscreteModel: This is for creating a Discrete Model (.dsm), which MeshSim can then be used to mesh when using the Discrete Kernel.</li>
-</ol>
-
-<h3>Mesh Tab</h3>
-
-<p>The Mesh Options Tab has all the components to create a simple mesh.</p>
-
-<figure>
-  <img class="svImg svImgLg" src="documentation/meshing/img/MeshSim_MeshOptions.png"> 
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<p>Button or Widget Functionality:</p>
-
-<h4>Select Solid Model</h4>
-<pre class="highlight plaintext"><code>* Type: Change the Solid Model Kernel. MeshSim has the ability to mesh either a Parasolid model (.xmt_txt) or a Discrete Model (.dsm).
-* File: Load the solid model to be meshed. You can browse for the file and then the solid will be automatically loaded.
-</code></pre>
-
-<h4>Script File</h4>
-<pre class="highlight plaintext"><code>* Meshsim script file: Load or save a script file (.mss). If you have run a previous mesh with the same parameters, you can just load the script file from the run. The script file saves the meshing parameters specified. 
-</code></pre>
-
-<h4>Basic Options</h4>
-<pre class="highlight plaintext"><code>* Global max edge size: Specify a global max edge size. This edge size will be targeted for all elements and no element will have a size larger than the specified number. 
-* Type: Specify to use absolute or relative edge size
-    Absolute - is used to specify a number based on the dimensions of the model. 
-    Relative - is a number between 0 and 1. The actual mesh size will be calculated by multiplying the length of the largest edge of the coordinate-aligned bounding box of the entity by the given parameter.
-</code></pre>
-
-<h4>Load/Create Mesh</h4>
-<pre class="highlight plaintext"><code>* Run Mesher: Once all the meshing parameters are specified, run MeshSim within SimVascular.
-* Load Mesh: Load a previously created mesh for viewing in SimVascular.
-</code></pre>
-
-<h4>Write Files</h4>
-<pre class="highlight plaintext"><code>* mesh complete dir: Select the directory in which to place all the mesh files to be written from the mesh. These files are described in the Written Mesh Files of the documentation.
-</code></pre>
-
-<h3>Advanced Mesh Options Tab</h3>
-
-<p>The Advanced Mesh Options Tab has the componenets to create a more advanced mesh such as a boundary layer mesh or a mesh with local refinement.</p>
-
-<figure>
-  <img class="svImg svImgLg" src="documentation/meshing/img/MeshSim_AdvancedMeshOptions.png">
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<p>Button or Widget Functionality:</p>
-
-<h4>Meshing Specified by Face</h4>
-
-<p>To add local size meshing and boundary layer meshing, select a face in the 3D viewing window by holding the cursor over the object and pressing &ldquo;p&rdquo;. Then follow the steps below to add the features.</p>
-
-<h5>Local Size and Curvature</h5>
-<pre class="highlight plaintext"><code>* Type: Select the mesh edge size type and apply it to the selected part of the model. 
-    - Local Max Edge Size: Specify maximum edge size for selected part of the model. If this local edge size is coarser than the global edge size, the global edge size will be used. 
-    - Local Max Curvature Size: Specify maximum curvature size for selected part of the model. See **Curvature** section below for description.
-    - Local Min Curvature Size: Specify minimum curvature size for selected patt of the model. If this local curvature size is larger than the global curvature minimum, the global minimum curvature will be used.
-* Size Type: Select absolute or relative
-    - Absolute - is used to specify a number based on the dimensions of the model. 
-    - Relative - is a number between 0 and 1. The actual mesh size will be calculated by multiplying the length of the largest edge of the coordinate-aligned bounding box of the entity by the given parameter.
-* Size: Enter the desired global or local mesh edge size.
-* Add Face Meshing: Create the macro for setting a local or global edge size (can be viewed by expanding the Meshing Parameters pane at the bottom of the tab).
-</code></pre>
-
-<h5>Boundary Layer Meshing</h5>
-
-<p>There are found different types of boundary layer meshing and can be applied on selected parts of the model.</p>
-<pre class="highlight plaintext"><code>* Type: Select one of the options from the dropdown menu
-    - Geometric Growth of Layer Thickness: Apply a gradation factor based on initial layer thickness and number of desired layers. In the **Params:** box, specify the following.
-        - Params: |First Layer Height| |Total Height| 
-    - Relative Height Gradation (type 2): Prescribe the initial layer thickness and a gradation factor (i.e. to increase the next layer size by a factor of 2, apply a gradation factor of 0.5).
-        - Params: |First Layer Height| |Gradation Factor (0&lt;g&lt;1)|
-    - User Specified Heights: Specify the number of layers desired and apply a height for every individual layer. Each layer thickness is designated with the letter *t* and *n* is the number of layers.
-        - Params: |t&lt;sub&gt;0&lt;/sub&gt;| |t&lt;sub&gt;1&lt;/sub&gt;| ... |t&lt;sub&gt;n-1&lt;/sub&gt;|
-    - Relative Height Gradation (specify gradation factor): Apply only a gradation factor. The initial layer height will then be the global or local max edge size multiplied by the gradation factor (i.e. To have an initial layer half the size of the mesh size, apply a factor of 0.5).
-        - Params: |Gradation Factor(0&lt;g&lt;1)| 
-* Direction: Specify the direction of the boundary layer. Both will cause the boundary layer to grow in both directions from the original geometry. Negative will cause the boundary layer to go inward, and positive will cause the boundary layer to go outward.
-* num Layers: Specify the number of boundary layers. This needs to specified for every type of boundary layer meshing!
-* Size: Currently, this entry box does not have any effect. Any number placed in this box will have no effect.
-</code></pre>
-
-<h4>Global Size and Curvature</h4>
-
-<figure>
-  <img class="svImg svImgLg" src="documentation/meshing/img/MeshSim_AdvancedGlobalSize.png">
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-<pre class="highlight plaintext"><code>* Type:
-    - Global Max Edge Size: Specify maximum edge size for the entire model. 
-    - Global Max Curvature Size: Specify maximum curvature size for the entire model.
-    - Global Min Curvature Size: Specify minimum curvature size for the entire model.
-* Size Type: Select absolute or relative.
-    - Absolute - is used to specify a number based on the dimensions of the model. 
-    - Relative - is a number between 0 and 1. The actual mesh size will be calculated by multiplying the length of the largest edge of the coordinate-aligned bounding box of the entity by the given parameter.
-* Size: Specify a global max edge size.
-</code></pre>
-
-<h4>Spatial Options</h4>
-
-<figure>
-  <img class="svImg svImgLg" src="documentation/meshing/img/MeshSim_AdvancedSpatialOptions.png">
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<h5>Sphere Refinement</h5>
-<pre class="highlight plaintext"><code>* size: Specify the mesh edge size of the spherically selected area. Can be smaller or larger than the global mesh size.
-* radius: Specify the radius of the sphere bounding the elements to be refined.
-* center pt: Specify the center of the sphere bounding the elements to be refined.
-</code></pre>
-
-<h5>Cylinder Refinement</h5>
-<pre class="highlight plaintext"><code>* size: Specify the mesh edge size of the cylindrically selected area. Can be smaller or larger than the global mesh size.
-* radius: Specify the radius of the circular ends of the cylinder.
-* center pt: Specify the center of the cylinder. The center of the cylinder is located along the center line of the circular ends midway along the length of the cylinder.  
-* length: Specify the length of the cylinder. The center will be midway along this length.
-* normal: Specify the direction from the center the cylinder is to be extruded (i.e. Along the x axis would be 1.0 0.0 0.0).
-</code></pre>
-
-<h4>Mesh Control Options</h4>
-
-<figure>
-  <img class="svImg svImgLg" src="documentation/meshing/img/MeshSim_AdvancedMeshControlOptions.png">
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<h5>Surface Options</h5>
-<pre class="highlight plaintext"><code>* Generate Surface Mesh: Generate a surface mesh if this optiion is selected (Default ON). If this option is not selected, it will not do a surface remeshing before created a volumetric mesh.
-* Optimize Surface Mesh: Specify whether or not optimization is to be used (Default ON). Turning off optimization will result in a mesh that will not meet any specified shape metric for the mesh. 
-* Fix Surface Mesh: This currently has no functionality.
-* Constrain Surface: This also has no functionality currently.
-</code></pre>
-
-<h5>Volume Options</h5>
-<pre class="highlight plaintext"><code>* Generate Volume Mesh: Generate a volume mesh if this option is selected (Default ON). If this option is not selected, it will only do a surface remeshing.
-* Optimize Volume Mesh: Specify whether or not optimization is to be used (Default ON). 
-* Smooth Volume Mesh: Specify whether or not smoothing is to be used (Default ON). The number of smoothing operations to be performed is specified by the **Num. Optimization Passes**.
-</code></pre>
-
-<h4>Miscellaneous Options</h4>
-<pre class="highlight plaintext"><code>* Write Mesh Statistics: At the end of the meshing operations, display the meshing statistics in the terminal (Default OFF).
-</code></pre>
-
-<h4>Optimization Passes:</h4>
-<pre class="highlight plaintext"><code>* Specify the number of optimization passes that the mesher will take on the solid. Mesh optimization consists of two operations: Optimization - changes the mesh connectivity. Smoothing - moves vertices to an optimal location. The number of optimization passes refers to the number of smoothing operations to perform (if smoothing is turned on).
-</code></pre>
-
-<h4>Meshing Parameters</h4>
-
-<p>Displays the current macro for the specified meshing parameters. These parameters are written to the .mss script file when the mesh is run.</p>
-
-<h4>Curvature</h4>
-
-<p>Curvature refinement allows the mesh to be automatically refined to match the curvature of the entities in the geometric model. This allows MeshSim to automatically control the level of geometric approximation in the mesh. The value specified for curvature is a value relative to the element size. In the figure below, $<em>Curv Size</em>&gt;d/h$. The value specified should always be less than 0.5, and typical values are in the range of 0.01 to 0.4. A smaller value corresponds to more refinement. </p>
-
-<figure>
-  <img class="svImg svImgLg" src="documentation/meshing/img/MeshSim_Curvature.png"> 
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<h3>Adapt Tab</h3>
-
-<p>The Adapt Tab is used to create an adaptive mesh based on a current solution. There are two steps identified in the GUI. First, create the error file (ybar) from the solution. Then, based on this error, run the adaptor to create a mesh optimized for this solution.  </p>
-
-<figure>
-  <img class="svImg svImgLg" src="documentation/meshing/img/MeshSim_Adapt.png"> 
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<h4>Filenames</h4>
-<pre class="highlight plaintext"><code>* solid model file: Locate the file containing the Parasolid or Discrete Solid Model that was used to create the original mesh.
-* mesh file: Locate the original mesh file created by MeshSim.
-* adapted mesh file: Give a name for the adapted mesh to be saved.
-* projected solution file: Give a name for the initial solution file for a new simulation.
-* Solid Model Type: Specify whether to use Parasolid (.xmt_txt) or Discrete Solid (.dsm) for the adaptive meshing. This should be the same as when the original mesh was created.
-</code></pre>
-
-<h4>Create Error File</h4>
-<pre class="highlight plaintext"><code>* Input and Output Directory: Select the directories where all the solution(restart) files are located. This must also be the same location where the files are output.
-* Flow Solver File Format: Identify whether the solver files are binary or ASCII. Typically, the solver files are binary.
-* step number: Identify the desired output step number. For example, if you would like to start a new simulation with the new mesh from step 0, input the number 0 (make sure to name the restart file in 6 correspondingly).  
-* solution file: Specify the solution file that contains the ybar information. Typically, this is saved every (n)?? steps and the last step of the simulation.
-* error file: Specify the name of the ybar file to be written containing the error information.
-* Create Error File: Create the error file from the provided solution file and written with the given name.
-</code></pre>
-
-<h4>Options</h4>
-<pre class="highlight plaintext"><code>* Error Reduction Factor: Value multiplied by the average interpolation error in order to get a target uniform local error distribution. This should be a value between zero and one. A smaller factor will attempt to achieve a mesh with smaller error.
-* Global Min Edge Size: Specify a minimum target edge size. No edge size will be smaller than this size, even if the adaptor identifies that solution needs a edge length smaller than this.
-* Global Max Edge Size: Specify a maximum target edge size. No edge size will be larger than this size, even if the adaptor identifies that the solution does not require an edge length this small.
-</code></pre>
-
-<h4>Run Adaptor</h4>
-<pre class="highlight plaintext"><code>* Adapt: Run the mesh Adaptor. In the end, a new mesh and new restart file will be written. Visualize the information output from the Adaptor with the file **run_adaptor.log**.
-</code></pre>
-
-<h4>Adaptive Mesh</h4>
-
-<h3>MeshSim Licences Tab</h3>
-
-<p>This tab is used to install or remove license information for the use of MeshSim (Only for Microsoft Windows).</p>
-<pre class="highlight plaintext"><code>* Check License Keys: Check the status of the license currently.
-* Remove License Keys: Remove the current license for MeshSim.
-* Install License Keys: Install a license in order to use MeshSim for meshing.
-</code></pre>
-
-<h3>Discrete Model Tab</h3>
-
-<p>This tab is used to create a Discrete Solid Model from a a VTK. This Discrete Solid Model can then be meshed with MeshSim.</p>
-
-<figure>
-  <img class="svImg svImgLg" src="documentation/meshing/img/MeshSim_DiscreteModel.png"> 
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<h4>Model Faces</h4>
-<pre class="highlight plaintext"><code>* Display the current surface model regions. When a region is selected with "p" in the viewing window, the selected surface will be highlighted in the list window.
-</code></pre>
-
-<h4>Load vtkPolyData</h4>
-<pre class="highlight plaintext"><code>* Load: Browse and load a vtkPolyData surface
-* Show PolyData Surface: After loading a surface, display the surface in the 3D Viewing Window.
-</code></pre>
-
-<h4>Create Solid</h4>
-<pre class="highlight plaintext"><code>* angle (degrees): Define the angle of separation on which to define feature edges and separate regions. This angle defines the minimum angle between the normals of two adjacent cells. An angle larger than the specified angle will consider the two adjacent cells part of two separate regions.
-* Create: Create the new Discrete Solid Model (.dsm) from the specified vtk file.
-* Save: Save the newly created Discrete Solid Model.
-</code></pre>
+<p>TetGen is an open source mesh generation software developed by Hang Si through WIAS in Berlin. TetGen is a tetrahedral mesh generator that uses 3D Delaunay Triangulation.
+Learn more about <a href="http://wias-berlin.de/software/tetgen/">TetGen</a> here.</p>
 </section>
-<section id="meshSec3" class="group"><h2>Isotropic Meshing</h2>
+<section id="tetgencreatemesh" class="group"><h3>Creating a TetGen Mesh from a Solid Model</h3>
 
-<p>To generate an isotropic mesh, we either need to specify a desired number of elements or some property (e.g. maximum edge length for each element) of the mesh.  In our case, we will specify the maximum allowable edge length for a given element for the entire mesh. In the “Global Max Edge Size” field, type in the value of the max edge size desired. In this case, we an absolute mesh size of 0.1. Click on the “Run Mesher (Internal)” button. A pop-up window will ask you if you would like to continue; click “Yes”. Another Pop-up Window will ask, “Use currently selected meshing options? This will save/overwrite the meshing script file.” Click, “Yes.”</p>
+<p>This exercise will assume that you have created segmentations down the aorta and common iliac artery that you can now use to create a solid model.</p>
+
+<p><strong>To create a TetGen mesh (empty):</strong></p>
+<pre class="highlight plaintext"><code>Right click the data node "Meshes" in the SV project in Data Manager
+Click "Create Mesh" in the popup menu
+Select Model: demo
+Mesh Type: TetGen
+Mesh Name: (use model name by default)
+Click "OK"
+</code></pre>
 
 <figure>
-  <img class="svImg svImgXl" src="documentation/meshing/img/MeshSim_Iso_Generation.png">
+  <img class="svImg svImgSm"  src="documentation/meshing/img/tetgen/createemptymesh.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-<p>When your mesh has completed, a Mesh Statistics window will pop up. This tells you the number of nodes, elements, mesh edges, and meshes faces you have generated for your mesh. Click “OK”.</p>
-
 <figure>
-  <img class="svImg svImgXl" src="documentation/meshing/img/MeshSim_Mesh_Stats.png">
+  <img class="svImg svImgSm"  src="documentation/meshing/img/tetgen/createmeshdialog.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-<p>If the mesh is not displayed, clear the window by selecting &ldquo;Actor&quot;→&quot;Delete All Actors&rdquo;. Then click on the &ldquo;Display Options&rdquo; drop-down menu, and select &ldquo;Meshing&rdquo; → &ldquo;Exterior Surface Mesh&rdquo;. A gold wireframe representation of your model should appear, and if you zoom in, you will be able to see the individual mesh elements.</p>
+<p>Now a new data node “demo” for the mesh is created under the data node &ldquo;Meshes&rdquo; in Data Manager. Double click the data node “demo&quot; and the tool &ldquo;SV Meshing” automatically shows up. The new mesh is empty and has no data so far. </p>
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/meshing/img/MeshSim_Isotropic.png">
+  <img class="svImg svImgXl"  src="documentation/meshing/img/tetgen/emptymesh.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+</section>
+<section id="tetgeniso" class="group"><h2>Isotropic Meshing</h2>
+
+<p>To generate an isotropic mesh, we either need to specify a desired number of elements or some property (e.g. maximum edge length for each element) of the mesh.  In our case, we will specify the maximum allowable edge length for a given element for the entire mesh. We have the ability to specify our own mesh size or have SimVascular calculate a size for us. </p>
+<pre class="highlight plaintext"><code>Global Max Edge Size: click the button "Estimate" to let SimVascular to provide a value
+Click the button "Run Mesher"
+Click "Yes" to continue 
+</code></pre>
+
+<p>It may take a while fo meshing, which depends on the size of model and the estimated global max edge size. When your mesh has completed, the mesh shows in the 3D-view window of Display and a dialog pops up to show some mesh info (like the number of points, elements, faces, etc.). To see the mesh easier, hide the model temporarily.</p>
+
+<figure>
+  <img class="svImg svImgXl" src="documentation/meshing/img/tetgen/tetgenisomesh.png">
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>If you zoom in, you will be able to see the individual mesh elements.</p>
+
+<figure>
+  <img class="svImg svImgSm" src="documentation/meshing/img/tetgen/tetgenisomesh2.png">
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
 <p>Now try to change the &ldquo;Global Max Edge Size&rdquo; value to generate a mesh with more elements. Note that as you specify lower global max edge size values, SimVasxcular will take longer to generate the mesh. The software might appear as not responding, but should still be working. </p>
+
+<p><font color="red"><strong>HELPFUL HINT:</strong> </font> There is an option for faster meshing, to use it:</p>
+<pre class="highlight plaintext"><code>Toggle on "Fast Meshing"
+</code></pre>
+
+<p>It speeds up meshing with the same wall mesh, while cap mesh may not be desirable sometimes. Fast Meshing is automatically disabled if you turn on &ldquo;Boundary Layer Meshing&rdquo; or &ldquo;Radius-Based Meshing&rdquo;.</p>
 </section>
-<section id="meshSec4" class="group"><h2>Local Mesh Refinement</h2>
+<section id="tetgenboundarylayer" class="group"><h2>Boundary Layer Meshing</h2>
 
-<p>Often, a designer may have insight into locations of interest or regions of complex behavior and may want to locally increase the mesh density in those regions to improve the quality of the given finite element analysis results for a given number of nodes.  In this example, we will assume the ends of a model are areas of interest and want to locally increase the mesh density near these faces.  In SimVascular you can specify different mesh densities on a local geometric model face.  First, let’s review the solid model.</p>
+<p>When simulating blood flow, interesting phenomenon can occur near the vessel walls.  Under laminar flow, for example, boundary layers can form with large velocity and pressure gradients near the wall.  It is advantageous to have increased mesh density in the areas of high gradients.  If a preferential flow direction is known, you can often “elongate” elements in the direction of the flow without loss of accuracy to reduce computational costs. In the area of mesh generation applied to fluid flow, this is often referred to as boundary layer meshing. Let&rsquo;s explain a few parameters used in boundary layer meshing.</p>
+<pre class="highlight plaintext"><code>* Portion of Edge Size: the portion of the edge size to use as the size for the initial boundary layer (typically this is a value between zero and one.
+* Num Layers: the number of layers desired. Too many layers can cause self intersections on smaller vessels, so be careful.
+* Layer Decreasing Ratio: the amount of the size decrease between successive boundary layers. This gradation factor is multiplied by the previous layer to get the thickness of the new layer. In order to decrease the layers by a factor of 2, apply a decreasing ratio of 0.5. 
+</code></pre>
 
-<p>Go to the &ldquo;Model&rdquo; tab. Click on the &ldquo;File Input/Output&rdquo; drop-down menu and select &ldquo;Read model.&rdquo; Select the same model that you previously selected for meshing. You should now see your solid model in the 3D window. Click on the first FaceId and continue down the list by clicking on subsequent Face Ids. Look at the &ldquo;surf_name:&rdquo; entry for each Face Id to remind yourself of the names that you gave each face.  Once you have reviewed the model faces you can change the &ldquo;Solid Model Object:&rdquo; to &ldquo;None&rdquo; and return to the &ldquo;Meshing&rdquo; tab.</p>
-
-<p>We will now specify increased mesh density on the inflow and outflow faces.  Under the &ldquo;Meshing&rdquo; tab,</p>
-
-<p>First, we will specify the mesh density for the inflow face:</p>
-
-<ol>
-<li> Under the &ldquo;Global/Local Size and Curvature Mesh Parameters&rdquo; header make sure that the &ldquo;Size Type:&rdquo; is set as &ldquo;absolute&rdquo; and the &ldquo;Type:&rdquo; is set as &ldquo;Local Max Edge Size.&rdquo; </li>
-<li> Select the desired face in the 3D viewing window by pressing &ldquo;p&rdquo;. In this case, we use &ldquo;Inflow&rdquo;.</li>
-<li> Set the desired size n the &ldquo;Size&rdquo; entry box. In this case, we apply a local edge size 0f &ldquo;0.05&rdquo;. </li>
-<li> Click on the &ldquo;Add Face Meshing&rdquo; button. </li>
-</ol>
-
-<p>At the bottom of the &ldquo;Advanced Mesh Options&rdquo; tab check the &ldquo;Display currently selected meshing parameters&rdquo; box. The &ldquo;Current List of Specified Meshing Parameters&rdquo; should now appear. In this case, ours displays &ldquo;size inflow absolute 0.05&rdquo;. Note that you can edit the text in the &ldquo;Current List of Specified meshing Parameters&rdquo; box. This may be useful if you decide you don’t like the meshing you specified and want to delete the previous refinement text and generate a new one. You can also edit the refinement text directly on that box. </p>
+<p>We will now generate a boundary layer mesh from a solid model.</p>
+<pre class="highlight plaintext"><code>Make sure the model has correct types (wall,cap) assigned for all its faces
+Go to Advance Options
+Toggle on the checkbox "Boundary Layer Meshing"
+Portion of Edge Size: in this case, we use 0.5.
+Make sure Volume Meshing and Surface Meshing are on
+Number of Layers: in this case, we use 4 layers.
+Layer Decreasing Ratio: in this case, we would like each layer to be 0.6 of the previous layer. 
+Make sure Volume Meshing and Surface Meshing are on
+Click the button "Run Mesher"
+</code></pre>
 
 <figure>
-  <img class="svImg svImgXl" src="documentation/meshing/img/MeshSim_Local_Refinement_Options_1.png">
+  <img class="svImg svImgLg" src="documentation/meshing/img/tetgen/tetgenboundarylayer.png">
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-<p>We will now repeat this process for the outflow faces, specifying a different mesh density:</p>
+<p><font color="red"><strong>WARNNING:</strong> </font> Fast Meshing is automatically disabled if using boundary layer meshing. </p>
 
-<ol>
-<li> Under the &ldquo;local Size and Curvature Mesh Parameters&rdquo; change the face name to another face name by selecting it in the viewing window with &ldquo;p&rdquo;.</li>
-<li> Set the desired size for this face. </li>
-<li> Click on the &ldquo;Add Face Meshing&rdquo; button. </li>
-<li> The &ldquo;Meshing Parameters&rdquo; should now ALSO show the text &ldquo;R<em>ext</em>iliac absolute 0.5&rdquo; and &ldquo;L<em>ext</em>iliac 0.5&rdquo;.</li>
-</ol>
+<p>The mesh generated will have the boundary layer mesh on the specified region. Zooming in, you can see that the number of layers in the volumetric mesh is four. The boundary layer extends all the way down the length of the surface named wall, and each layer is 0.8 of the previous layer.</p>
+
+<p>It is important to note, once again, that you have generated a volumetric mesh. That is, the entire volume of the geometry has been filled with tetrahedral elements. Thus, the boundary layer meshing pattern that you see on the surface continues up the entire volume of the aorta. It is difficult to visualize thousands of elements at one time, so we only visualize this refinement on the exterior surface mesh.</p>
+</section>
+<section id="tetgetnradiusbased" class="group"><h2>Radius Based Meshing</h2>
+
+<p>When models contain surfaces of very different size scales, it is often desirable to scale the size of the mesh with the size of the vessel of the model. Radius-based mehsing will compute the centerlines and find the distance to these centerlines prior to meshing. These values will be normalized by the smallest value and then multiplied by the global max edge size given.</p>
+<pre class="highlight plaintext"><code>Toggle on the checkbox "Radius-Based Meshing".
+Click the button "Run Mesher".
+</code></pre>
+
+<p><font color="red"><strong>WARNNING:</strong> </font> Fast Meshing is automatically disabled if using radius based meshing. </p>
+
+<p>Note that a majority of our model has vessels of very similar size. In this case, a radius-based mesh does not do much; however, there are other models where this is a very desirable feature. The operation takes a bit long, so you can also try to change local meshing size introduced in the following section to reach the same goal. If you don&rsquo;t use this operation, remember to turn it off before runing mesher.</p>
+</section>
+<section id="tetgenlocalmeshing" class="group"><h2>Local Mesh Size Application</h2>
+
+<p>Often, a designer may have insight into locations of interest or regions of complex behavior and may want to locally increase the mesh density in those regions to improve the quality of the given finite element analysis results for a given number of nodes.  In this example, we will assume the ends of a model are areas of interest and want to locally increase the mesh density near these faces. In SimVascular you can specify different mesh densities on a local geometric model face. </p>
+
+<p>In this example, we are interested more in the flow in the right iliac of this model. we specify a mesh edge size of 0.1 on the right_iliac wall. We leave the global edge size unchanged.</p>
+<pre class="highlight plaintext"><code>Toggle off "Radius-Based Meshing"
+Go to "Local Size"
+All the faces are listed in the table.
+Set loca size 0.1 for wall\_right_iliac
+Or you can use table menu to set if there are many faces to set
+Click the button "Run Mesher"
+</code></pre>
 
 <figure>
-  <img class="svImg svImgXl" src="documentation/meshing/img/MeshSim_Local_Refinement_Options_2.png">
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<p>Now we will generate the mesh for the model that includes the refined mesh specifications:</p>
-
-<ol>
-<li> Go back to the &ldquo;Mesh Options&rdquo; tab.</li>
-<li> Make sure the model that you would like to mesh is selected as the “Solid model file:”</li>
-<li> Enter a desired &ldquo;Global Max Edge Size&rdquo;. We use &ldquo;0.2&rdquo; for this case.</li>
-<li> Press the &ldquo;Run Mesher (Internal)&rdquo; button.</li>
-<li> Click &ldquo;yes&rdquo; button when the &ldquo;Creating a mesh can take a long time. Continue Anyway?&rdquo; dialog box appears.</li>
-<li> Click &ldquo;yes&rdquo; button when the &ldquo;Use currently selected meshing options? This will save/overwrite the meshSim script file&rdquo; dialog box appears.</li>
-<li> When the meshing is finished, a dialog box appears with mesh statistics.  Once you have reviewed the meshing output, you can click on the &ldquo;OK&rdquo; button in the &ldquo;Mesh Statistics&rdquo; dialog box.</li>
-</ol>
-
-<p>It is important to note that you have generated a volumetric mesh.  That is, the entire volume of the cylinder geometry has been filled with tetrahedral elements.  It is difficult to visualize thousands of elements at one time, so often only the exterior surface mesh is visualized.  In the case of a pure tetrahedral mesh, the exterior surface mesh will consist of a set of triangles.  </p>
-
-<p>If you don’t already see the exterior surface mesh you just created, in the 3D window go to Display Options -&gt; Meshing and check &ldquo;Exterior Surface Mesh.&rdquo; 
-If you zoom in on the inflow face, you will see that the triangulation for that face is more refined than the rest of the vessel mesh as shown below: </p>
-
-<figure>
-  <img class="svImg svImgMd" src="documentation/meshing/img/MeshSim_LocalRefinement.png">
+  <img class="svImg svImgLg" src="documentation/meshing/img/tetgen/tetgenlocalmeshing.png">
   <figcaption class="svCaption" ></figcaption>
 </figure>
 </section>
-<section id="meshSec5" class="group"><h2>Boundary Layer Meshing</h2>
-
-<p>When simulating blood flow, interesting phenomenon can occur near the vessel walls.  Under laminar flow, for example, boundary layers can form with large velocity and pressure gradients near the wall.  It is advantageous to have increased mesh density in the areas of high gradients.  If a preferential flow direction is known, you can often “elongate” elements in the direction of the flow without loss of accuracy to reduce computational costs.  In the area of mesh generation applied to fluid flow, this is often referred to as boundary layer meshing.</p>
-
-<p>We will now generate a boundary layer mesh from the &ldquo;wall_aorta&rdquo; model:</p>
-
-<ol>
-<li> Set the desired mesh edge size in the &ldquo;Global Max Edge Size:&rdquo; entry widget on the Mesh Options Tab. In this case, we use &ldquo;0.4&rdquo;.<br></li>
-<li> Go to the &ldquo;Advanced Mesh Options&rdquo; tab.</li>
-<li> Under the &ldquo;Boundary Layer Meshing&rdquo; header make sure that the &ldquo;Type:&rdquo; is set to &ldquo;Relative Gradation (type 4)&rdquo; and the &ldquo;Growth Direction:&rdquo; is set to &ldquo;both.&rdquo;</li>
-<li> Go to the 3D viewing window and press &ldquo;p&rdquo; over the surface that you would like to apply the boundary layer to. This surface will be highlighted in the 3D viewing window and the Model Faces list.. </li>
-<li> Set the desired number of layers in the &ldquo;num Layers:&rdquo;. In this case, we use &ldquo;3&rdquo;. </li>
-<li> Set the gradation factor in the &ldquo;Params:&rdquo; entry widget. In this case, we use &ldquo;0.5&rdquo;<br></li>
-<li> Click on the &ldquo;Add Boundary Layer&rdquo; button. </li>
-<li> The “Current List of Specified Meshing Parameters” should now show the text for the desired boundary layer. Ours shows &ldquo;boundaryLayer wall_aorta 4 both 3 0.5&rdquo; underneath the two local refinement specifications from the previous section</li>
-<li> Add the same boundary layer to the other surfaces that comprise the aorta wall. In our case, the other surface is &ldquo;wall<em>R</em>ext_iliac&rdquo;.</li>
-</ol>
-
-<figure>
-  <img class="svImg svImgXl" src="documentation/meshing/img/MeshSim_BoundaryLayer_Options.png">
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<p>Now we will generate the mesh for the model that includes the boundary layer mesh options:</p>
-
-<ol>
-<li> Go back to the &ldquo;Mesh Options&rdquo; tab.</li>
-<li> Click on the &ldquo;Run Mesher (Internal)&rdquo; button.</li>
-<li> Click &ldquo;yes&rdquo; button when the &ldquo;Creating a mesh can take a long time. Continue Anyway?&rdquo; dialog box appears.</li>
-<li> Click &ldquo;yes&rdquo; button when the &ldquo;Use currently selected meshing options? This will save/overwrite the meshSim script file&rdquo; dialog box appears.</li>
-<li> When the meshing is finished, a dialog box appears with mesh statistics.  Once you have reviewed the meshing output, you can click on the &ldquo;OK&rdquo; button in the &ldquo;Mesh Statistics&rdquo; dialog box.</li>
-</ol>
-
-<p>The mesh generated will have the boundary layer mesh on the specified region. Zooming in, you can see that the number of layers in the volumetric mesh is three. This boundary layer extends all the way up the length of the aorta wall. </p>
-
-<figure>
-  <img class="svImg svImgMd" src="documentation/meshing/img/MeshSim_BoundaryLayer_Labelled.png">
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<p>It is important to note, once again, that you have generated a volumetric mesh.  That is, the entire volume of the geometry has been filled with tetrahedral elements. Thus, the boundary layer meshing pattern that you see on the outflow face (in the figure above) continues up the entire volume of the aorta. It is difficult to visualize thousands of elements at one time, so we only visualize this refinement on the exterior surface mesh.  </p>
-</section>
-<section id="meshSec6" class="group"><h2>Spherical Refinement</h2>
+<section id="tetgensphericalrefinement" class="group"><h2>Spherical Refinement</h2>
 
 <p>When simulating blood flow, interesting phenomenon can occur around the site of vessel bifurcations. It is advantageous to have increased mesh density at and around bifurcations. In this section we will refine the mesh at the abdominal aorta and common iliac artery bifurcation using sphere refinement:</p>
 
-<ol>
-<li> Go to the &ldquo;Advanced Mesh Options&rdquo; tab.</li>
-<li> Under the &ldquo;Sphere Refinement&rdquo; header, set the desired size to in the &ldquo;Size:&rdquo; entry widget. We use &ldquo;0.05&rdquo;</li>
-<li> Set the desired radius in the &ldquo;Radius&rdquo; entry widget. We used &ldquo;3.0&rdquo;. </li>
-<li> Under the Main Display Options box make sure you are in the &ldquo;Volume Properties&rdquo; tab</li>
-<li> Check the L/R, P/A, I/S slice plane boxes to turn on all slices (Make sure the image data set it loaded). </li>
-<li> Position the slices so that they intersect at a point in the center of the bifurcation as shown in the figure below. In this case, we set them to:
-
-<ul>
-<li>L/R: 275</li>
-<li>P/A: 42</li>
-<li>I/S: 192</li>
-</ul></li>
-<li> The pixel locations of the splice planes are shown above the scale bars. Under the &ldquo;Sphere Refinement&rdquo; header, set the desired center point. Our center point is &ldquo;1.088 3.290 -7.946&rdquo;, and we put this in the &ldquo;center pt&rdquo; entry widget. Make sure you leave a space between each value. </li>
-</ol>
+<p>We will now refine a region with a sphere from a model of an Aorta.</p>
+<pre class="highlight plaintext"><code>Clear local size for wall\_right_iliac in "Local Size"  
+Go to "Regional Refinement"
+Toggle on "Sphere" and an sphere appears in the 3D-view window.
+Move the sphere and change its size to make sure the bifurcation is include inside the sphere.
+Click the button "Add" to add this region to the table
+Provide a local size for it. Here we use 0.1
+Click the button "Run Mesher"   
+</code></pre>
 
 <figure>
-  <img class="svImg svImgXl" src="documentation/meshing/img/MeshSim_SRefinement_Options.png">
+  <img class="svImg svImgLg" src="documentation/meshing/img/tetgen/tetgensphericalmeshing.png">
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-<ol>
-<li> Click on the &ldquo;Add Sphere Refinement&rdquo; button. </li>
-<li> The &ldquo;Meshing Parameters&rdquo; should now show the sphere refinement macro. Ours is &ldquo;sphereRefinement 0.05 3.0 1.088 3.290 -7.946&rdquo;.</li>
-</ol>
+<p><font color="red"><strong>HELPFUL HINT:</strong> </font> 
+If you have multiple regions of interest for mesh refinement, you can move the sphere to another region, then add it to the table. If you want to adjust a sphere which is already added in the table, just select the sphere in the table. A red sphere will appear in its corresponding region in the 3D-view window. You can also set size or delete spheres from the table menu.</p>
 
-<p>Now we will generate the mesh for the model that includes the sphere refinement specification:</p>
+<p>You can combine boundary layer, spherical refinment and local size to create a full mesh again.</p>
 
-<ol>
-<li> Go back to the &ldquo;Mesh Options&rdquo; tab.</li>
-<li> Click on the &ldquo;Run Mesher (Internal)&rdquo; button.</li>
-<li> Click &ldquo;yes&rdquo; button when the &ldquo;Creating a mesh can take a long time. Continue Anyway?&rdquo; dialog box appears.</li>
-<li> Click &ldquo;yes&rdquo; button when the &ldquo;Use currently selected meshing options? This will save/overwrite the meshSim script file&rdquo; dialog box appears.</li>
-<li> This mesh may take a couple seconds longer than the previous ones. When the meshing is finished, a dialog box appears with mesh statistics.  Once you have reviewed the meshing output, you can click on the &ldquo;OK&rdquo; button in the &ldquo;Mesh Statistics&rdquo; dialog box.</li>
-</ol>
-
-<p>The mesh in the area around the bifurcation should now be refined as compared to the mesh for the rest of the vessel. </p>
-
-<figure>
-  <img class="svImg svImgMd" src="documentation/meshing/img/MeshSim_Sphere_Refinement.png">
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<h2>Cylindrical Refinement</h2>
-
-<p>In addition to the interesting phenomenon that may occur at the site of vessel bifurcations, we may be similarly interested in blood flow phenomenon at other sites of the model, such as the site of an aneurism. To refine the mesh of sites of interest along the vessel, we can use cylindrical refinement. Cylinder refinement is very similar to spherical refinement; however for cylinder refinement we will define a &ldquo;length&rdquo; and a &ldquo;normal&rdquo; direction in addition to radius and size. In this section we will refine the mesh near the outflow face of the left common iliac artery.</p>
-
-<figure>
-  <img class="svImg svImgXl" src="documentation/meshing/img/MeshSim_Cylinder_Refinement_Options.png">
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<ol>
-<li> Go to the &ldquo;Advanced Mesh Options&rdquo; tab</li>
-<li> Under the &ldquo;Cylinder Refinement&rdquo; header, set the desired mesh size. In this case we use &ldquo;0.05&rdquo; in the &ldquo;Size:&rdquo; entry widget</li>
-<li> Set the desired radius in the &ldquo;Radius:&rdquo; entry widget. We use &ldquo;3.0&rdquo;.<br></li>
-<li> Set the desired length in the &ldquo;Length&rdquo; entry widget. We use &ldquo;5.0&rdquo;. </li>
-<li> Set the normal to the desired direction. In this case, we use &ldquo;0.0 0.0 1.0&rdquo; . This defines the normal in the positive I/S direction.</li>
-<li> Under the Main Display Options box make sure you are in the &ldquo;Volume Properties&rdquo; tab</li>
-<li> Check the L/R, P/A, I/S slice plane boxes to turn on all slices. </li>
-<li> Position the slices so that they intersect at a point in near the desired face as shown in the figure below. You can also set the image plane scale bars to:
-
-<ul>
-<li>L/R: 263</li>
-<li>P/A: 38</li>
-<li>I/S: 242</li>
-</ul></li>
-<li><p>The pixel locations of the splice planes are shown above the scale bars. Under the &ldquo;Cylinder Refinement&rdquo; header, set the desired center point in the &ldquo;center pt.&rdquo; entry widget. In our case, these slice plane locations correspond to  &ldquo;0.151 2.490 -4.040&rdquo;  Make sure you leave a space between each value. </p></li>
-<li><p>Click on the &ldquo;Create Cylinder Refinement Macro&rdquo; button. </p></li>
-</ol>
-
-<p>The &ldquo;Current List of Specified Meshing Parameters&rdquo; should now show the macro for cylinder refinement. The text in our case is &ldquo;cylinderRefinement 0.05 3.0 5.0 0.151 2.490 -4.040 0.0 0.0 1.0&rdquo;.</p>
-
-<p>Now we will generate the mesh for the model that includes the cylinder refinement specification:</p>
-
-<ol>
-<li> Go back to the &ldquo;Mesh Options&rdquo; tab.</li>
-<li> Click on the &ldquo;Run Mesher (Internal)&rdquo; button.</li>
-<li> Click &ldquo;yes&rdquo; button when the &ldquo;Creating a mesh can take a long time. Continue Anyway?&rdquo; dialog box appears.</li>
-<li> Click &ldquo;yes&rdquo; button when the &ldquo;Use currently selected meshing options? This will save/overwrite the meshSim script file&rdquo; dialog box appears.</li>
-<li> This mesh may take a couple seconds longer than the previous ones. When the meshing is finished, a dialog box appears with mesh statistics.  Once you have reviewed the meshing output, you can click on the &ldquo;OK&rdquo; button in the &ldquo;Mesh Statistics&rdquo; dialog box.</li>
-</ol>
-
-<p>The mesh near the desired area should now be refined as desired as shown below:</p>
-
-<figure>
-  <img class="svImg svImgMd" src="documentation/meshing/img/MeshSim_Cylinder_Refinement.png">
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<p>You can now go back and do a full mesh combining local mesh refinement, a boundary layer, and spherical or cylindrical refinment. </p>
+<p><strong>When you are satisfied with the mesh, click the tool button  “Save SV Project ” to save the mesh.</strong></p>
 </section>
-<section id="meshSec7" class="group"><h2>TetGen Meshing for Discrete PolyDatas(.vtk,.vtp,.stl)</h2>
+<section id="tetgenflags" class="group"><h2>Advanced Flags</h2>
 
-<h3>About TetGen</h3>
-
-<p>TetGen is an open source mesh generation software developed by Hang Si through WIAS in Berlin. TetGen is a tetrahedral mesh generator that uses 3D Delaunay Triangulation.
-Learn more about <a href="http://wias-berlin.de/software/tetgen/">TetGen</a> here.</p>
-
-<h3>TetGen Interface</h3>
-
-<p>The TetGen tab includes all of the the operations to run an open source meshing using a discrete polydata. The interface for TetGen includes three tabs:</p>
+<p>TetGen provide more advanced flags to operate meshing. These flags apply ONLY to the volumetric meshing operation. </p>
 
 <figure>
-  <img class="svImg svImgLg" src="documentation/meshing/img/TetGen_Tabs.png">
+  <img class="svImg svImgSm" src="documentation/meshing/img/tetgen/tetgenflags.png">
   <figcaption class="svCaption" ></figcaption>
 </figure>
-
-<ol>
-<li>Mesh Options: This is for basic meshing parameters involving surface and volumetric meshing.</li>
-<li>Advanced Mesh Options: This is for advanced meshing techniques like spherical refinement and boundary layer meshing.</li>
-<li>Adapt: This is for isotropic adaptive meshing.</li>
-</ol>
-
-<h3>Mesh Options Tab</h3>
-
-<p>The Mesh Options Tab has all the components to create a simple mesh.</p>
-
-<figure>
-  <img class="svImg svImgLg" src="documentation/meshing/img/TetGen_Mesh_Options.png">
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<p>Button or Widget Functionality:</p>
-
-<h4>Select Solid Model</h4>
-<pre class="highlight plaintext"><code>* File: Load the solid model to be meshed. You can browse for the file and then the solid will be automatically loaded. Accepted file formats include .vtk(as a polydata),.vtp,.stl, and .ply.
-</code></pre>
-
-<h4>Script File</h4>
-<pre class="highlight plaintext"><code>* TetGen script file: Load or save a script file (.tgs). If you have run a previous mesh with the same parameters, you can just load the script file from the run. The script file saves the meshing parameters specified. 
-</code></pre>
-
-<h4>TetGen Flags</h4>
-<pre class="highlight plaintext"><code>* Specify the TetGen meshing parameters. These parameters apply ONLY to the volumetric meshing operation.
- - O: Specity the number of times to optomize the mesh. This moves nodes to reach a better quality mesh.
+<pre class="highlight plaintext"><code> - O: Specity the number of times to optomize the mesh. This moves nodes to reach a better quality mesh.
  - q: Specify a quality measure for the mesh. This number corresponds to the ratio between the radius of the circumsphere of an element and the maximum edge size (See below for figure). This number can be anywhere from 2.0 to 1.1, and a lower number corresponds to a higher quality element. A mesh with a quality ratio 1.0 is not attainable and the mesher will run infinitely.  
  - T: Apply a tolerance to check whether a point lies on the surface or not (Default is $10^{-8}$).
  - Y: Preserve the exact surface mesh. If this parameter is used without a surface remeshing, make sure a mesh size that corresponds to the surface mesh is applied.
@@ -799,257 +403,66 @@ Learn more about <a href="http://wias-berlin.de/software/tetgen/">TetGen</a> her
  - C: Check the consistency of the final mesh.
  - Q: Output nothing to the terminal except for errors.
  - V: Print out more detailed information from TetGen. This information is viewable in the terminal.
- - Specify other mesh tags: The full TetGen documentation indicates other possible mesh flags. This is where those can be specified. TetGen documentation can be found here: **FILL THIS IN** 
-</code></pre>
-
-<h4>Basic Options</h4>
-<pre class="highlight plaintext"><code>* Estimate Global Edge Size: Based on the areas of the surfaces on your solid, SimVascular will calculate a reasonable mesh edge size. This size is slightly smaller than what may be necessary, but start with this size and slowly increase the size for a larger mesh edge size. 
-* Set maximum edge size for equilateral triangle - Apply a mesh size. TetGen applies a maximum tetrahedron volume constraint. The value here is an edge size (a). The volume is then computed from this as a tetrahedron with equilateral sides. Volume of an equilateral tetrahedron: $V = (a^3)/(6*sqrt(2))$
-* Run Mesher: Once all the meshing parameters are specified, run TetGen within SimVascular.
-</code></pre>
-
-<h4>Write Files</h4>
-<pre class="highlight plaintext"><code>* mesh complete dir: Select the directory in which to place all the mesh files to be written from the mesh. These files are described in the Written Mesh Files of the documentation.
-</code></pre>
-
-<h3>Advanced Mesh Options Tab</h3>
-
-<p>The Advanced Mesh Options Tab has the componenets to create a more advanced mesh such as a boundary layer mesh or a mesh with spherical refinement.</p>
-
-<figure>
-  <img class="svImg svImgLg" src="documentation/meshing/img/TetGen_Advanced_Mesh_Options.png">
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<h4>Boundary Layer Meshing</h4>
-<pre class="highlight plaintext"><code>* Use Boundary Layer: In order to use a boundary layer, you must click "Select Boundary Layer Surfaces" and select all walls to be a part of the boundary layer. In addition, a boundary layer cannot be created without both the volume and surface mesh options selected in the Mesh Options Tab.
-* Portion of Edge Size: Specify the portion of the edge size in the Mesh Options Tab to use as the size for the initial boundary layer (typically this is a value between zero and one.
-* Num Layers: Input the number of layers desired. Too many layers can cause self intersections on smaller vessels, so be careful.
-* Layer Decreasing Ratio: Specify the amount the decrease the size between successive boundary layers. This gradation factor is multiplied by the previous layer to get the thickness of the new layer. In order to decrease the layers by a factor of 2, apply a decreasing ratio of 0.5. 
-</code></pre>
-
-<p><font color="red"><strong>HELPFUL HINT:</strong> </font> If you do not select all the walls for the boundary layer, your output mesh will only contain the domain of the wall that you selected.</p>
-
-<h4>Local Size</h4>
-<pre class="highlight plaintext"><code>* Select a Surface: In the 3-D Window, hover over a surface in which you would like to specify a local mesh edge size, and hit "p". After highlighting a surface enter a mesh edge size and hit "Add Local Mesh Size".
-* Size: Enter a value to specify the mesh edge size on a specific surface. 
-* Add Local Mesh Size: This will update the Meshing Parameters and add the local mesh size to the surface. You can specify a different mesh edge size to each surface of the model; however, make sure that it is not too drastic of a different between surfaces as you will be left with poor quality elements at the interface. If you do not specify a local mesh size for a surface, the global mesh edge size will be used for that surface. 
-</code></pre>
-
-<h4>Refinement</h4>
-<pre class="highlight plaintext"><code>* Sphere Refinement: In order to do spherical refinement, this box must be checked. When you check this box, the meshing solid and a sphere will appear. The sphere must be moved to set the spherical refinement! 
-* Sphere Radius: Apply a radius for the refining sphere. Enter a number into the box and hit ENTER. The sphere size will not update unless the ENTER button is pressed! (After setting the radius, make sure to adjust the refinement sphere to the correct location. The radius is set when the sphere is moved.
-* Refinement Factor: Specify the mesh edge within the desired spherical region. In this way, it is possible to specify a size larger or smaller than the edge size for the rest of the domain. 
-* Add Sphere Refinement: Once the sphere is set, select this button to update the Meshing Parameters and add the sphere refinement. You can add multiple sphere refinement regions; however, if spheres overlap, the mesh edge size in the latter sphere will be the edge size in the overlapping region. 
-</code></pre>
-
-<h4>Radius-Based Meshing</h4>
-<pre class="highlight plaintext"><code>&lt;font color="red"&gt;**IMPORTANT:** &lt;/font&gt; You must have only one wall surface on your model to use this feature!!
-* Use Centerline Radius: Select this check box to base your mesh edge size on the centerline radius. This will compute the centerlines and find the distance to these centerlines prior to meshing. These values will be normalized by the smallest value and then multiplied by the global max edge size given in the "Mesh Options" tab. 
-</code></pre>
-
-<h3>Adapt Tab</h3>
-
-<p>The Adapt Tab is used to create an adaptive mesh based on a current solution. There are two steps identified in the GUI. First, create the error file (ybar) from the solution. Then, based on this error, run the adaptor to create a mesh optimized for this solution.  </p>
-
-<figure>
-  <img class="svImg svImgLg" src="documentation/meshing/img/TetGen_Adapt.png">
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<h4>Filenames</h4>
-<pre class="highlight plaintext"><code>* surface mesh file: Locate the original surface mesh file created by TetGen (.vtp).
-* mesh file: Locate the original mesh file created by TetGen (.vtu).
-* adapted surface mesh file: Give a name for the surface of the adapted mesh to be saved.
-* adapted mesh file: Give a name for the adapted mesh to be saved.
-* projected solution file: Give a name for the initial solution file for a new simulation.
-</code></pre>
-
-<h4>Create Error File</h4>
-<pre class="highlight plaintext"><code>* Input and Output Directory: Select the directories where all the solution(restart) files are located. This must also be the same location where the files are output.
-* Flow Solver File Format: Identify whether the solver files are binary or ASCII. Typically, the solver files are binary.
-* step number: Identify the desired output step number. For example, if you would like to start a new simulation with the new mesh from step 0, input the number 0 (make sure to name the restart file in 6 correspondingly).  
-* solution file: Specify the solution file that contains the ybar information. Typically, this is saved every (n)?? steps and the last step of the simulation.
-* error file: Specify the name of the ybar file to be written containing the error information.
-* Create Error File: Create the error file from the provided solution file and written with the given name.
-</code></pre>
-
-<h4>Options</h4>
-<pre class="highlight plaintext"><code>* Error Reduction Factor: Value multiplied by the average interpolation error in order to get a target uniform local error distribution. This should be a value between zero and one. A smaller factor will attempt to achieve a mesh with smaller error.
-* Global Min Edge Size: Specify a minimum target edge size. No edge size will be smaller than this size, even if the adaptor identifies that solution needs a edge length smaller than this.
-* Global Max Edge Size: Specify a maximum target edge size. No edge size will be larger than this size, even if the adaptor identifies that the solution does not require an edge length this small.
-</code></pre>
-
-<h4>Run Adaptor</h4>
-<pre class="highlight plaintext"><code>* Adapt Mesh: Run the mesh Adaptor. In the end, a new mesh and new restart file will be written. Visualize the information output from the Adaptor with the file **run_adaptor.log**.
+ - Specify other mesh tags: The full TetGen documentation indicates other possible mesh flags. This is where those can be specified.
 </code></pre>
 </section>
-<section id="meshSec8" class="group"><h2>Isotropic Meshing</h2>
+<section id="tetgenadapt" class="group"><h2>Adaptive Meshing</h2>
 
-<p>To generate an isotropic mesh, we either need to specify a desired number of elements or some property (e.g. maximum edge length for each element) of the mesh.  In our case, we will specify the maximum allowable edge length for a given element for the entire mesh. We have the ability to specify our own mesh size or have SimVascular calculate a size for us. Click &ldquo;Estimate Global Edge Size&rdquo;. In this case, we get an absolute mesh size of &ldquo;0.108&rdquo;. Click on the “Run Mesher (Internal)” button. A pop-up window will ask you if you would like to continue; click “Yes”. Another Pop-up Window will ask, “Use currently selected meshing options? This will save/overwrite the meshing script file.” Click, “Yes.”</p>
+<p>Adaptive meshing is used to create an adaptive mesh based on a simulation result. </p>
 
 <figure>
-  <img class="svImg svImgXl" src="documentation/meshing/img/TetGen_Iso_Generation.png">
+  <img class="svImg svImgMd" src="documentation/meshing/img/tetgen/tetgenadapt.png">
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-<p>When your mesh has completed, a Mesh Statistics window will pop up. This tells you the number of nodes, elements, mesh edges, and meshes faces you have generated for your mesh. Click “OK”.</p>
-
-<figure>
-  <img class="svImg svImgXl" src="documentation/meshing/img/TetGen_Mesh_Stats.png">
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<p>If the mesh is not displayed, clear the window by selecting &ldquo;Actor&quot;→&quot;Delete All Actors&rdquo;. Then click on the &ldquo;Display Options&rdquo; drop-down menu, and select &ldquo;Meshing&rdquo; → &ldquo;Exterior Surface Mesh&rdquo;. A gold wireframe representation of your model should appear, and if you zoom in, you will be able to see the individual mesh elements.</p>
-
-<figure>
-  <img class="svImg svImgMd" src="documentation/meshing/img/TetGen_Isotropic.png">
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<p>Now try to change the &ldquo;edge size&rdquo; value to generate a mesh with more elements. Note that as you specify lower global max edge size values, SimVasxcular will take longer to generate the mesh. The software might appear as not responding, but should still be working. </p>
-</section>
-<section id="meshSec9" class="group"><h2>Boundary Layer Meshing</h2>
-
-<p>When simulating blood flow, interesting phenomenon can occur near the vessel walls.  Under laminar flow, for example, boundary layers can form with large velocity and pressure gradients near the wall.  It is advantageous to have increased mesh density in the areas of high gradients.  If a preferential flow direction is known, you can often “elongate” elements in the direction of the flow without loss of accuracy to reduce computational costs.  In the area of mesh generation applied to fluid flow, this is often referred to as boundary layer meshing.</p>
-
-<p>We will now generate a boundary layer mesh from a model of an Aorta.</p>
-
-<ol>
-<li> In the &ldquo;Mesh Options&rdquo; tab, load in the desired polydata that already has regions that have been named (One of these faces must be named wall!) The region named wall will be the one given a boundary layer. </li>
-<li> Set the desired mesh edge size in the &ldquo;Edge Size:&rdquo; entry widget on the Mesh Options Tab. In this case, we use &ldquo;0.15&rdquo;.<br></li>
-<li> Go to the &ldquo;Advanced Mesh Options&rdquo; tab under the &ldquo;TetGen&rdquo; tab, and click &ldquo;Select Boundary Layer Surfaces&rdquo;. Select and move to the right side all walls of the model.</li>
-<li> Set the desired size of the initial layer in the &ldquo;Portion of Edge Size&rdquo; entry box. In this case, we use 0.5. </li>
-<li> Set the desired number of Layers in the &ldquo;Num Layers&rdquo; entry box. In this case, we use 4 layers.</li>
-<li> Set the desired gradation factor in the &ldquo;Layer Decreasing Ratio&rdquo; entry box. In this case, we would like each layer to be 0.6 of the previous layer. </li>
-</ol>
-
-<figure>
-  <img class="svImg svImgXl" src="documentation/meshing/img/TetGen_Load_BoundaryLayer.png">
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<p>Now we will generate the mesh for the model that includes the boundary layer specifications:</p>
-
-<ol>
-<li> Go back to the &ldquo;Mesh Options&rdquo; tab.</li>
-<li> Click on the &ldquo;Run Mesher (Internal)&rdquo; button.</li>
-<li> Click &ldquo;yes&rdquo; button when the &ldquo;Creating a mesh can take a long time. Continue Anyway?&rdquo; dialog box appears.</li>
-<li> Click &ldquo;yes&rdquo; button when the &ldquo;Use currently selected meshing options? This will save/overwrite the meshSim script file&rdquo; dialog box appears.</li>
-<li> When the meshing is finished, a dialog box appears with mesh statistics.  Once you have reviewed the meshing output, you can click on the &ldquo;OK&rdquo; button in the &ldquo;Mesh Statistics&rdquo; dialog box.</li>
-</ol>
-
-<p>The mesh generated will have the boundary layer mesh on the specified region. Zooming in, you can see that the number of layers in the volumetric mesh is four. The boundary layer extends all the way down the length of the surface named wall, and each layer is 0.8 of the previous layer.</p>
-
-<figure>
-  <img class="svImg svImgXl" src="documentation/meshing/img/TetGen_BoundaryLayer.png">
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<p>It is important to note, once again, that you have generated a volumetric mesh.  That is, the entire volume of the geometry has been filled with tetrahedral elements. Thus, the boundary layer meshing pattern that you see on the outflow face (in the figure above) continues up the entire volume of the aorta. It is difficult to visualize thousands of elements at one time, so we only visualize this refinement on the exterior surface mesh.  </p>
-</section>
-<section id="meshSec10" class="group"><h2>Local Mesh Size Application</h2>
-
-<p>Often, a designer may have insight into locations of interest or regions of complex behavior and may want to locally increase the mesh density in those regions to improve the quality of the given finite element analysis results for a given number of nodes.  In this example, we will assume the ends of a model are areas of interest and want to locally increase the mesh density near these faces.  In SimVascular you can specify different mesh densities on a local geometric model face.  First, let’s review the solid model.</p>
-
-<p>Go to the &ldquo;Model&rdquo; tab. Click on the &ldquo;File Input/Output&rdquo; drop-down menu and select &ldquo;Read model.&rdquo; Select the same model that you previously selected for meshing. You should now see your solid model in the 3D window. Click on the first FaceId and continue down the list by clicking on subsequent Face Ids. Look at the &ldquo;surf_name:&rdquo; entry for each Face Id to remind yourself of the names that you gave each face.  Once you have reviewed the model faces you can change the &ldquo;Solid Model Object:&rdquo; to &ldquo;None&rdquo; and return to the &ldquo;Meshing&rdquo; tab.</p>
-<pre class="highlight plaintext"><code>* Select a Surface: In the 3-D Window, hover over a surface in which you would like to specify a local mesh edge size, and hit "p". After highlighting a surface enter a mesh edge size and hit "Add Local Mesh Size".
-* Size: Enter a value to specify the mesh edge size on a specific surface. 
-* Add Local Mesh Size: This will update the Meshing Parameters and add the local mesh size to the surface. You can specify a different mesh edge size to each surface of the model; however, make sure that it is not too drastic of a different between surfaces as you will be left with poor quality elements at the interface. If you do not specify a local mesh size for a surface, the global mesh edge size will be used for that surface. 
+<p>Use simulation result from one single time step:</p>
+<pre class="highlight plaintext"><code>Go to Adapt
+Options: Use One Step
+Result File(vtu): all_results.vtu, from a previous simulation. It is created as you convert previous simulation results when "As Single File" is on. 
+Step Number: Give a specifi time step number of the previous simulation
+Error Reduction Factor: (0~1)Value multiplied by the average interpolation error in order to get a target uniform local error distribution. This should be a value between zero and one. A smaller factor will attempt to achieve a mesh with smaller error.
+Global Min Edge Size: Specify a minimum target edge size. No edge size will be smaller than this size, even if the adaptor identifies that solution needs a edge length smaller than this.
+Global Max Edge Size: Specify a maximum target edge size. No edge size will be larger than this size, even if the adaptor identifies that the solution does not require an edge length this small.
+Click "Create Adapted Mesh"
+Provide a name for the adapted mesh
 </code></pre>
 
-<p>In this example, we are interested more in the flow in the right iliac of this model. we specify a mesh edge size of 0.17 on the aorta wall, and a mesh edge size of 0.1 on the right_iliac wall. We leave the global edge size at 0.15 for the remainder of the surfaces.</p>
-
-<figure>
-  <img class="svImg svImgXl" src="documentation/meshing/img/TetGen_Local_Refinement.png">
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<p>Now we will generate the mesh for the model that includes these local mesh sizes:</p>
-
-<ol>
-<li> Go back to the &ldquo;Mesh Options&rdquo; tab.</li>
-<li> Click on the &ldquo;Run Mesher (Internal)&rdquo; button.</li>
-<li> Click &ldquo;yes&rdquo; button when the &ldquo;Creating a mesh can take a long time. Continue Anyway?&rdquo; dialog box appears.</li>
-<li> Click &ldquo;yes&rdquo; button when the &ldquo;Use currently selected meshing options? This will save/overwrite the meshSim script file&rdquo; dialog box appears.</li>
-<li> When the meshing is finished, a dialog box appears with mesh statistics.  Once you have reviewed the meshing output, you can click on the &ldquo;OK&rdquo; button in the &ldquo;Mesh Statistics&rdquo; dialog box.</li>
-</ol>
-
-<figure>
-  <img class="svImg svImgXl" src="documentation/meshing/img/TetGen_Refinement_Mesh.png">
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-</section>
-<section id="meshSec11" class="group"><h2>Spherical Refinement</h2>
-
-<p>When simulating blood flow, interesting phenomenon can occur around the site of vessel bifurcations. It is advantageous to have increased mesh density at and around bifurcations. In this section we will refine the mesh at the abdominal aorta and common iliac artery bifurcation using sphere refinement:</p>
-
-<p>We will now refine a region with a sphere from a model of an Aorta.</p>
-
-<ol>
-<li> Set the desired mesh edge size in the &ldquo;edge size:&rdquo; entry widget on the Mesh Options Tab. In this case, we use &ldquo;0.3&rdquo;.<br></li>
-<li> Go to the &ldquo;Advanced Mesh Options&rdquo; tab under the &ldquo;TetGen&rdquo; tab, and select &ldquo;Sphere Refinement&rdquo;.</li>
-<li> Play around with the radius of the sphere in the &ldquo;Sphere Radius&rdquo; entry box. When you put in a new value for the radius, hit ENTER to apply the new size. Find a radius that works for your model. In our case, the sphere radius we use is &ldquo;3&rdquo;.</li>
-<li> Move the radius to the desired location. We place ours right at the base of the aorta where is branch into the two iliac arteries, as this is an area of more complicated flow. </li>
-<li> Enter a mesh size for the refined region into the &ldquo;Refinement Factor&rdquo; entry box. The refinement factor we used in this case is &ldquo;0.5&rdquo;. This means the elements in the refined region should be half the size of the rest of the elements.</li>
-<li> To add this spherical reginement region to the Meshing Paramters, select &ldquo;Add Sphere Refinement&rdquo;</li>
-</ol>
-
-<figure>
-  <img class="svImg svImgXl" src="documentation/meshing/img/TetGen_Load_Sphere_Refinement.png">
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<p>Now we will generate the mesh for the model that includes the refined mesh specifications:</p>
-
-<ol>
-<li> Go back to the &ldquo;Mesh Options&rdquo; tab.</li>
-<li> Click on the &ldquo;Run Mesher (Internal)&rdquo; button.</li>
-<li> Click &ldquo;yes&rdquo; button when the &ldquo;Creating a mesh can take a long time. Continue Anyway?&rdquo; dialog box appears.</li>
-<li> Click &ldquo;yes&rdquo; button when the &ldquo;Use currently selected meshing options? This will save/overwrite the meshSim script file&rdquo; dialog box appears.</li>
-<li> When the meshing is finished, a dialog box appears with mesh statistics.  Once you have reviewed the meshing output, you can click on the &ldquo;OK&rdquo; button in the &ldquo;Mesh Statistics&rdquo; dialog box.</li>
-</ol>
-
-<figure>
-  <img class="svImg svImgXl" src="documentation/meshing/img/TetGen_Sphere_Refinement.png">
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<p>You can now go back and do a full mesh combining a boundary layer and spherical refinment. </p>
-</section>
-<section id="meshSec12" class="group"><h2>Radius Based Meshing</h2>
-
-<p>When models contain surfaces of very different size scales, it is often desirable to scale the size of the mesh with the size of the vessel of the model. The following instructions describe how to apply a radius-based mesh:      </p>
-<pre class="highlight plaintext"><code>IMPORTANT: You must have only one wall surface on your model to use this feature!!
-* Use Centerline Radius: Select this check box to base your mesh edge size on the centerline radius. This will compute the centerlines and find the distance to these centerlines prior to meshing. These values will be normalized by the smallest value and then multiplied by the global max edge size given in the "Mesh Options" tab. 
+<p>Use simulation results from multiple time steps:</p>
+<pre class="highlight plaintext"><code>Go to Adapt
+Options: Use Multiple Steps
+Result File(vtu): all_results.vtu
+Start Step Number: 
+End Step Number:
+Step Increment:
+Click "Create Adapted Mesh"
+Provide a name for the adapted mesh
 </code></pre>
 
-<p>In this example, we leave the Global edge size at 0.15, but we used a redius-based mesh edge size. Note that we have editted our surfaces so that we have only one wall surface!! </p>
-
-<figure>
-  <img class="svImg svImgXl" src="documentation/meshing/img/TetGen_Set_Radius_Based_Mesh.png">
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<p>Now we will generate the mesh for the model that includes these local mesh sizes:</p>
-
-<ol>
-<li> Go back to the &ldquo;Mesh Options&rdquo; tab.</li>
-<li> Click on the &ldquo;Run Mesher (Internal)&rdquo; button.</li>
-<li> Click &ldquo;yes&rdquo; button when the &ldquo;Creating a mesh can take a long time. Continue Anyway?&rdquo; dialog box appears.</li>
-<li> Click &ldquo;yes&rdquo; button when the &ldquo;Use currently selected meshing options? This will save/overwrite the meshSim script file&rdquo; dialog box appears.</li>
-<li> When prompted, select the wall surface by pressing &ldquo;p&rdquo; in the 3-D window.</li>
-<li> When the meshing is finished, a dialog box appears with mesh statistics.  Once you have reviewed the meshing output, you can click on the &ldquo;OK&rdquo; button in the &ldquo;Mesh Statistics&rdquo; dialog box.</li>
-</ol>
-
-<figure>
-  <img class="svImg svImgXl" src="documentation/meshing/img/TetGen_Radius_Based_Mesh.png">
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<p>Note that a majority of our model has vessels of very similar size. In this case, a radius-based mesh does not do much; however, there are other models where this is a very desirable feature.</p>
+<p>In the end, a new adapted mesh is created under the &ldquo;Meshes&rdquo; in Data Manager. Also the new adapted solution is create in [proj-path]/Meshes with a name &ldquo;adapted-restart.[step number].1&rdquo;. You can use the adapted mesh and the adapted solution as IC file to create a new job to run simulation.</p>
 </section>
-<section id="meshSec13" class="group"><h2>TetGen Errors</h2>
+<section id="loadingmesh" class="group"><h2>Unloading/Loading Mesh Data</h2>
+
+<p>Sometimes a created mesh (especially volume mesh) occupies very large amount of computer memory. In this case, after you save the mesh, you can unload the mesh data from a mesh to save memory while the mesh node is still in Data Manager.</p>
+
+<p>With the same concern, when you open an existing SV project, mesh nodes are listed in Data Manager while the mesh data are not loaded for them.</p>
+
+<p>To unload or load mesh data:</p>
+<pre class="highlight plaintext"><code>Right click a mesh node in Data Manager
+Click "Load/Unload Surface Mesh" : load surface mesh if it has no mesh data; or unload both surface/volume mesh if it already has mesh data
+Click "Load/Unload Volume Mesh" : load both volume/surface mesh if it has no mesh data; or unload volume mesh if it already has volume mesh
+</code></pre>
+</section>
+<section id="exportingmesh" class="group"><h3>Exporting Mesh</h3>
+
+<p>To export a mesh to vtp/vtu files: a vtu file for the volume mesh, multiple vtp files for surface mesh, the whole wall surface, and individual faces:</p>
+<pre class="highlight plaintext"><code>Right click the mesh node "demo" in the SV project in Data Manager
+Click "Export Mesh-Complete" in the popup menu
+Select a directory and Click "Choose"
+</code></pre>
+
+<p>A new directory &ldquo;demo-mesh-complete&rdquo; is created and all the mesh files are saved to this folder.</p>
+</section>
+<section id="tetgenerrors" class="group"><h2>TetGen Errors</h2>
 
 <p>It may be the case where TetGen cannot mesh the given PolyData and it will crash. This could be for a number of reasons including an open surface or intersecting facets. 
 In most cases, TetGen is able to detect the error, and it outputs information about the event to the terminal. If you have built SimVascular from source, look for the error code in the output to the terminal.
@@ -1086,7 +499,7 @@ If you have not built from source, the best option is to try a smaller mesh edge
 
 <p>If the error code given is error code 2, please contact Hang Si at Hang.Si@wias-berlin.de. Otherwise, contact the SimVascular supporters or report a bug on the SimVascular website.</p>
 </section>
-<section id="meshSec14" class="group"><h3>Inspecting Meshes</h3>
+<section id="inspectingmehses" class="group"><h3>Inspecting Meshes</h3>
 
 <p>After creating a mesh in SimVascular, you can view the surface and make a visual inspection of the surface of the mesh. However, this is based purely on your idea of a &ldquo;quality&rdquo; mesh, and you can only see the surface of a volume mesh. In order to inspect a mesh more closely, we use open source software ParaView. ParaView contains filters to identify multiple quality measure such as volume and aspect ration. </p>
 
@@ -1125,8 +538,8 @@ If you have not built from source, the best option is to try a smaller mesh edge
 <br>
 <br></p>
 </section>
-</div>
 
+</div>
 
 
 
@@ -1139,7 +552,7 @@ If you have not built from source, the best option is to try a smaller mesh edge
     <nav class="navbar navbar-default navbar-fixed-bottom">
         <div class="container-fluid text-center">
           <ul class="nav navbar-nav">
-            <li><a>Copyright &copy; SV Development Team - 2014</a></li>                
+            <li><a>Copyright &copy; SimVascular Development Team - 2017</a></li>                
           </ul>
         </div>
         <!-- /.container -->

@@ -42,29 +42,13 @@
                 <a class="navbar-brand" id="brandName" href="index.html">
                   <img src="img/svlogo/svLogoSmallText.png" alt="...">
                 </a>
+                <a class="navbar-brand page-scroll">            
+                3.0
+                </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">            
                 <ul class="nav navbar-nav">
-                  
-                  <!-- GETTING STARTED -->
-                  <li>
-                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
-                      <b><span class="fa fa-caret-square-o-right"></span> Getting Started</b>
-                    </a>
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsInstallation.html"><b><span class="fa fa-sign-in fa-rotate-90"></span> Installation</b></a></li>   
-                      <li role="presentation" class="divider"></li>                   
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsCompile.html"><b><span class="fa fa-file-text-o"></span> Compile Sources</b></a></li>  
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsCodeSnippets.html"><b><span class="fa fa-indent"></span> Code Snippets</b></a></li>                                  
-                      <li role="presentation" class="divider"></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsQuickGuide.html"><b><span class="icon ion-ios7-bolt"></span> Quick Guide</b></a></li>           
-                      <li role="presentation" class="divider"></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="comingSoon.html"><b>Doxygen Docs for C++</b></a></li>  
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="comingSoon.html"><b>Doxygen Docs for Tcl</b></a></li>  
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="comingSoon.html"><b>Doxygen Docs for Fortran</b></a></li>           
-                    </ul>
-                  </li>                  
 
                   <!-- USER GUIDES -->
                   <li>
@@ -72,29 +56,38 @@
                       <b><span class="fa fa-user"></span> User Guides</b>
                     </a>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsImageGuide.html"><b><span class="icon ion-image"></span> Medical Images</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsInstallation.html"><b><span class="fa fa-sign-in fa-rotate-90"></span> Installation</b></a></li>
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsQuickGuide.html"><b><span class="icon ion-ios7-bolt"></span> Quick Guide</b></a></li>
+                      <li role="presentation" class="divider"></li>
                       <li role="presentation"><a role="menuitem" tabindex="-1" href="docsModelGuide.html"><b><span class="icon ion-settings"></span> Modeling</b></a></li>
-                      <li role="presentation" class="divider"></li>
                       <li role="presentation"><a role="menuitem" tabindex="-1" href="docsMeshing.html"><b><span class="icon ion-ios7-keypad"></span> Meshing</b></a></li>
-                      <li role="presentation" class="divider"></li>
                       <li role="presentation"><a role="menuitem" tabindex="-1" href="docsFlowSolver.html"><b><span class="icon ion-play"></span> Simulation</b></a></li>
-                      <li role="presentation" class="divider"></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsRefs.html"><b><span class="icon ion-document-text"></span> References</b></a></li>
                     </ul>
                   </li>
-
+                  
                   <!-- CLINCAL CASES -->
                   <li>
                     <a href="#" id="dropdownMenu1" data-toggle="dropdown">
                       <b><i class="fa fa-stethoscope"></i> Clinical Cases</b>
                     </a>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase1.html"><b><span class="fa fa-user-md"></span> Aortofemoral Normal (Case 1)</b></a></li>                      
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase2.html"><b><span class="fa fa-user-md"></span> Aortofemoral Normal (Case 2)</b></a></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase3.html"><b><span class="fa fa-user-md"></span> Coronary Normal (Case 3)</b></a></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase4.html"><b><span class="fa fa-user-md"></span> Healthy Pulmonary (Case 4)</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase3.html"><b><span class="fa fa-user-md"></span> Coronary Normal</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase1.html"><b><span class="fa fa-user-md"></span> Aortofemoral Normal - 1</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase2.html"><b><span class="fa fa-user-md"></span> Aortofemoral Normal - 2</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase4.html"><b><span class="fa fa-user-md"></span> Healthy Pulmonary</b></a></li>
                     </ul>
                   </li>
+
+                  <!-- DEVELOPER GUIDES -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b><span class="fa fa-caret-square-o-right"></span> Developer Guides</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsCompile.html"><b><span class="fa fa-file-text-o"></span> Compile Source Code</b></a></li>
+                    </ul>
+                  </li>                  
 
                   <!-- svCOMMUNITY -->
                   <li>
@@ -105,15 +98,28 @@
                       <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/forums/viewforum.php?f=188"><b><span class="fa fa-users"></span> Public Forum</b></a></li>                                          
                       <li role="presentation" class="divider"></li>
                       <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/mailman/listinfo/simvascular-news"><b><span class="fa fa-sign-in"></span> Join News Mailing List</b></a></li>                      
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/pipermail/simvascular-news/"><b><span class="fa fa-pencil-square-o"></span> News Mailing List Archive</b></a></li>
-                      <li role="presentation" class="divider"></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/mailman/listinfo/simvascular-users"><b><span class="fa fa-sign-in"></span> Join User Mailing List</b></a></li>                      
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="http://simvascular-users.40599.n7.nabble.com/"><b><span class="fa fa-pencil-square-o"></span> User Mailing List Archive</b></a></li>                      
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/pipermail/simvascular-news/"><b><span class="fa fa-pencil-square-o"></span> News Mailing List Archive</b></a></li>                      
+                    </ul>
+                  </li>
+
+                  <!-- REFERENCES -->
+                  <li>
+                    <a href="docsRefs.html" id="dropdownMenu1" >
+                      <b><span class="icon ion-document-text"></span>References</b>
+                    </a>
+                  </li>  
+
+                  <!-- Archives -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b> Archives</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="archiveQuickGuideSV2.html"><b>SimVascular 2.0</b></a></li>
                     </ul>
                   </li>
 
                     <!-- <li><a href="docsQuickGuide.html" id="btnQuickGuide"><b><span class="icon ion-ios7-bolt"></span> Quick Guide</b></a></li>
-                    <li><a href="docsImageGuide.html" id="btnImageGuide"><b><span class="icon ion-image"></span> Medical Images</b></a></li>
                     <li><a href="docsModelGuide.html" id="btnModelGuide"><b><span class="icon ion-settings"></span> Modeling</b></a></li> 
                     
                     <li><a href="docsMeshing.html" id="btnMeshing"><b><span class="icon ion-ios7-keypad"></span> Meshing</b></a></li>
@@ -142,8 +148,6 @@
 
 
 
-
-
         <ul id="sidebar" class="nav nav-stacked fixed manRefs">        <!--Nav Bar -->
  <p><h3>References</h3></p>
  <li><a href="#refSec1">Overview</a></li>
@@ -152,10 +156,10 @@
  <li><a href="#refSec4">Meshing</a></li>
  <li><a href="#refSec5">Validation</a></li>
  <li><a href="#refSec6">Clinical Applications</a></li>
+ <li><a href="#refSec7">Other Contributors</a></li>
   
 
 </ul>
-
         
     </nav>
     
@@ -163,8 +167,6 @@
     <div class="col-xs-10 col-sm-10 col-md-9 col-lg-9" id="manualContent">
 
       <!-- ACTUAL CONTENT -->
-
-
 
 
 
@@ -228,7 +230,7 @@
 
 <p>E.O. Kung, A.M. Kahn, J.C. Burns and A.L. Marsden, <strong>In-vitro validation of patient-specific hemodynamic simulations in coronary aneurysms caused by Kawasaki disease</strong>, <em>Cardiovascular Engineering and Technology</em>, 5(2):189-201, 2014. <a href="http://link.springer.com/article/10.1007/s13239-014-0184-8#page-1">Link</a></p>
 </section>
-    <section id="refSec6" class="group bottom-buffer"><h4>Clinical Applications</h4>
+    <section id="refSec6" class="group"><h4>Clinical Applications</h4>
 
 <p>D. Sengupta, A.M. Kahn, J.C. Burns, S. Sankaran, S. Shadden and A.L. Marsden, <strong>Image-based modeling of hemodynamics and coronary artery aneurysms caused by Kawasaki disease</strong>, <em>Biomechanics and Modeling in Mechanobiology</em>, 11(6):915-932, 2012. <a href="http://link.springer.com/article/10.1007/s10237-011-0361-8#page-1">Link</a></p>
 
@@ -244,8 +246,29 @@
 
 <p>J.P. Schmidt, S.L. Delp, M.A. Sherman, C.A. Taylor, V.S. Pande, R.B. Altman, <strong>The Simbios National Center: Systems Biology in Motion</strong>, <em>Proceedings of the IEEE, special issue on Computational System Biology</em>, 96(8):1266-1280, 2008. <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2811325/">Link</a></p>
 </section>
-</div>
+    <section id="refSec7" class="group bottom-buffer"><h4>Other Contributors</h4>
 
+<p>Charles A. Taylor, Ph.D., Founder, CTO, and Member of the Board of Directors, HeartFlow Inc.</p>
+
+<p>Mahdi Esmaily Moghadam, Ph.D., Postdoctoral Fellow, CTR, Stanford University</p>
+
+<p>C. Alberto Figueroa, Ph.D., Edward B. Diethrich Associate Professor of Surgery and Biomedical Engineering, University of Michigan</p>
+
+<p>Kenneth Jansen, Ph.D., Professor of Aerospace Engineering, University of Colorado, Boulder</p>
+
+<p>Weiguang Yang, Ph.D., Research Scientist, Pediatrics, Stanford University</p>
+
+<p>Irene Vignon-Clementel, Ph.D., Permanent Research Scientist, INRIA Paris Rocquencourt</p>
+
+<p>Kenneth Wang, M.D., Ph.D., Department of Radiology, Johns Hopkins School of Medicine</p>
+
+<p>Daniele E. Schiavazzi, Ph.D., Assistant Professor, Department of Applied and Computational Mathematics and Statistics, University of Notre Dame </p>
+
+<p>Jameson Merkow, Ph.D., Computer Vision Laboratory, University of California, San Diego</p>
+
+<p><br></p>
+</section>
+</div>
 
     </div>
 </div>    
@@ -255,7 +278,7 @@
     <nav class="navbar navbar-default navbar-fixed-bottom">
         <div class="container-fluid text-center">
           <ul class="nav navbar-nav">
-            <li><a>Copyright &copy; SV Development Team - 2014</a></li>                
+            <li><a>Copyright &copy; SimVascular Development Team - 2017</a></li>                
           </ul>
         </div>
         <!-- /.container -->

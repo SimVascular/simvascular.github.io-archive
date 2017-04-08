@@ -28,6 +28,17 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-97011175-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
 </head>
 
   <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -52,8 +63,12 @@
             </button>
 
             <a class="navbar-brand page-scroll" href="#page-top">            
-                <img src="img/svlogo/svLogoSmallText.png" alt="...">
+                <img src="img/svlogo/svLogoSmallText.png" alt="..." >
             </a>
+            <a class="navbar-brand page-scroll">            
+                3.0
+            </a>
+
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -66,9 +81,6 @@
                 <li>
                     <a class="page-scroll" href="#page-top">Home</a>
                 </li>
-                <li>
-                    <a class="page-scroll" href="#about">About</a>
-                </li>  
                 <li>
                     <a class="page-scroll" href="#gallery">Gallery</a>
                 </li>                
@@ -99,126 +111,62 @@
     <div class="intro-body">
         <div class="container content-section text-center">
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-9 top-buffer">
                     <img id="svLogoTitle" src="img/svlogo/svLogoTitle.png" alt="..." >                
                     <p class="intro-text top-buffer">The only fully opensource software package providing a complete pipeline from medical image data segmentation to patient specific blood flow simulation and analysis.</p>
-                    <!-- <img id="svPipeline" src="img/svpipeline.png" width="100%" height="100%" alt="..." >  -->
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div>
+                        <img id="svLogoTitle" src="img/logos/stanfordmedicine.png" style="float: left; margin-right: 45px; height:50px; width:150px;" alt="..." >
+                        <img id="svLogoTitle" src="img/logos/ucberkeley.png" style="float: left; margin-right: 0px; height:50px; width:150px;" alt="..." >
+                        <img id="svLogoTitle" src="img/logos/osmsc.png" style="float: left; margin-right: 35px; height:50px; width:150px;" alt="..." >
+                        <img id="svLogoTitle" src="img/logos/nsf.jpg" style="float: left; margin-left: 25px; margin-right: 35px; height:50px; width:50px;" alt="..." >                
+                        <img id="svLogoTitle" src="img/logos/simtk.png" style="float: left; height:45px; width:160px;" alt="..." >
+                        <br>
+                        <br>
+                        <br>
+                        <br>                        
+                        <br>
+                        <br>
+                        <br>
+                    </div>
                 </div>
+
+                        <!-- LOGOS AND TWITTER -->
+                <div class="col-lg-3 top-buffer text-center top-buffer">
+                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 top-buffer-small text-left">
+                    <a href="https://www.facebook.com/groups/835227759855853/"><img class="media-object" src="img/logos/fb.png" style="float: left; margin-right: 5px; height:35px;" alt="..."></a>
+                    <!-- 
+                    <img class="media-object" src="img/logos/gp.png" style="float: left; margin-right: 5px; height:35px;" alt="...">
+                    <img class="media-object" src="img/logos/linkedin.png" style="float: left; margin-right: 5px; height:35px;" alt="...">          
+                    -->
+                    <a href="https://www.youtube.com/channel/UCT61XgTRqpfb39Hyio9IqGQ"><img class="media-object" src="img/logos/ut.png" style="float: left; margin-right: 5px; height:35px;" alt=""></a>  
+                  </div>
+
+                  <!-- TWITTER TIMELINE -->
+                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-left top-buffer-small">
+                    <a class="twitter-timeline" href="https://twitter.com/simvascular" data-widget-id="514211820307886080">Tweets by @simvascular</a>        
+                  </div>
+
+                  <!-- FB/GP LIKE BUTTONS -->
+                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 top-buffer-small text-left bottom-buffer-small">
+                    <div class="g-plusone"></div>  
+                    <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>    
+                  </div>
+
+                </div>  
 
             </div>
         </div>
     </div>
 </header>
-
-<!-- About Section 1 -->
-<section id="about" class="container content-section text-left">
-    <div class="row">
-        <div class="col-lg-9">
-          <h2>About SimVascular</h2>
-          <!-- Description -->
-          <div class="media">
-            <a class="pull-left">
-              <img class="media-object" width="60" src="img/Img_About_Coro.png" alt="...">
-            </a>
-            <div class="media-body">
-              <h4 class="media-heading">Description</h4>
-              SimVascular is an open source software suite for cardiovascular simulation, providing a complete pipeline from medical image data to 3D model construction, meshing, and blood flow simulation.  SimVacular represents the state of the art in cardiovascular simulation, including advanced tools for physiologic boundary conditions, fluid structure interaction, and an accurate and efficient finite element Navier-Stokes solver.  SimVascular integrates custom code with best-in-class open source packages to support clinical and basic science research.
-            </div>
-          </div>
-          <!-- Origins -->
-          <div class="media">
-            <a class="pull-left">
-              <img class="media-object" width="55" src="img/Img_About_Femoral.png" alt="...">
-            </a>
-            <div class="media-body">
-              <h4 class="media-heading">Origins</h4>
-              SimVascular originated in the lab of Charles Taylor at Stanford University, and incorporates flow solver code from the PHASTA project (SCOREC at RPI). The SimVascular revitalization project now aims to provide the first truly open source package for cardiovascular simulation with enhanced functionality for clinical and basic science research. SimVascular is now developed and maintained by an active international group of researchers in academia and industry.
-            </div>
-          </div>
-          <!-- Purpose/Synopsis -->
-          <div class="media">
-            <a class="pull-left">
-              <img class="media-object" src="img/Img_About_CHD.png" alt="...">
-            </a>
-            <div class="media-body">
-              <h4 class="media-heading">Purpose</h4>
-              To provide a platform for patient-specific cardiovascular modeling and simulation that enables advances in cardiovascular disease through basic science and clinical research.
-            </div>
-          </div>
-          <!-- Audience -->
-          <div class="media">
-            <a class="pull-left">
-              <img class="media-object" src="img/Img_About_Pulm.png" alt="...">
-            </a>
-            <div class="media-body">
-              <h4 class="media-heading">Audience</h4>
-              Biomedical and clinical researchers interested in medical computing, cardiovascular hemodynamics and biomechanics, including medical image segmentation, patient specific model construction, blood flow simulations, vessel biomechanics, and finite element flow simulations.
-            </div>
-          </div>
-          <!-- Broader Uses -->
-          <div class="media">
-            <a class="pull-left">
-              <img class="media-object" src="img/Img_About_Aorta.png" alt="...">
-            </a>
-
-            <div class="media-body">
-              <h4 class="media-heading">Broader Uses</h4>
-              Beyond hemodynamics simulations, SimVascular has been used in simulations of medical devices, respiratory flows, and cardiac development.  SimVascular provides a full Navier-Stokes flow solver for complex geometries that can be flexibly applied across a wide range of problems in engineering and medicine.
-              <h4 class="media-heading top-buffer-md">Funding Sources</h4>
-              The SimVascular project is funded by the NSF SSI program under Program Officers Dan Katz (ACI) and Sumanta Acharya (CBET)
-            </div>
-                            
-          </div>
-
-          <h2 class="top-buffer">What's New?</h2>
-          
-          <!-- DESCRIPTION -->
-          <div class="media">
-            <a class="pull-left">
-              <img class="media-object" src="img/Img_About_Coro.png" alt="...">
-            </a>
-            <div class="media-body">
-              <h4 class="media-heading">New features in SimVascular 2.0</h4>
-              <ul>
-              <li>Replacement of all prior commercial components</li>
-              <li>Opensource meshing tools with adaption</li>
-              <li>Efficient linear solver customized for blood flow</li>
-              <li>Solid modeling Boolean operations</li>
-              <li>Multiscale modelling capabilities</li>
-              <li>Coronary boundary conditions</li>
-              <li>Improved image segmentation tools</li>
-              <li>Backflow stabilization</li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- LOGOS AND TWITTER -->
-        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-3 top-buffer text-left">
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 top-buffer-small text-left">
-            <a href="https://www.facebook.com/groups/835227759855853/"><img class="media-object" src="img/logos/fb.png" style="float: left; margin-right: 5px; height:35px;" alt="..."></a>
-            <!-- 
-            <img class="media-object" src="img/logos/gp.png" style="float: left; margin-right: 5px; height:35px;" alt="...">
-            <img class="media-object" src="img/logos/linkedin.png" style="float: left; margin-right: 5px; height:35px;" alt="...">          
-            -->
-            <a href="https://www.youtube.com/channel/UCT61XgTRqpfb39Hyio9IqGQ"><img class="media-object" src="img/logos/ut.png" style="float: left; margin-right: 5px; height:35px;" alt=""></a>  
-          </div>
-
-          <!-- TWITTER TIMELINE -->
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-left top-buffer-small">
-            <a class="twitter-timeline" href="https://twitter.com/simvascular" data-widget-id="514211820307886080">Tweets by @simvascular</a>        
-          </div>
-
-          <!-- FB/GP LIKE BUTTONS -->
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 top-buffer-small text-left bottom-buffer-small">
-            <div class="g-plusone"></div>  
-            <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>    
-          </div>
-
-        </div>        
-    </div>
-</section>
 
 <!-- Contact Section -->
 <section id="gallery" class="container content-section text-left">
@@ -437,35 +385,7 @@
       <h2>SimVascular Documentation</h2>
         <div class="row">
 
-          <!-- Getting Started -->                
-          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 top-buffer">
-            <!-- Description -->
-            <div class="media">
-              <!-- <a class="pull-left" href="#">
-                <img class="media-object" src="img/Img_About_Coro.png" alt="...">
-              </a> -->
-              <div class="centreDoc" style="height:100px;">
-                <img src="img/docs/header_img_08.png" alt="...">
-              </div><br>
-              <div class="media-body">
-                <h4 class="media-heading text-center">Getting Started</h4><br>
-                <h6 class="media-heading"><a href="docsInstallation.html">Installing SimVascular</a></h6>
-                Install SimVascular on your system.<br><br>
-                <h6 class="media-heading"><a href="docsCompile.html">Compile Sources</a></h6>
-                Compile SimVascular source code on your system.<br><br>
-                <h6 class="media-heading"><a href="docsCodeSnippets.html">Code snippets</a></h6>
-                Unleash the power of SimVascular with console scripts.<br><br>
-                <h6 class="media-heading"><a href="http://simvascular.ucsd.edu/CDash/">SimVascular CDash board</a></h6>
-                SimVascular automated software testing.<br><br>
-                <h6 class="media-heading"><a href="docsQuickGuide.html">Quick Guide</a></h6>
-                A quick intro on how to use the main functionalities in SimVascular.<br><br>
-                <h6 class="media-heading"><a>Doxygen Docs</a></h6>
-                Understand the SimVascular source code. Doxygen documentation for <a href="comingSoon.html">c++</a>, <a href="comingSoon.html">tcl</a> and <a href="comingSoon.html">fortran</a> code (documentation work in progress...).<br><br>
-              </div>
-            </div>            
-          </div>
-
-          <!-- Guide Description -->
+          <!-- User Guides -->
           <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 top-buffer"> 
             <!-- Description -->                       
             <div class="media">
@@ -476,23 +396,16 @@
                 <img src="img/docs/header_img_07.png" alt="...">
               </div><br>
               <div class="media-body">
-                <h4 class="media-heading text-center">User Guides</h4><br>
-                <h6 class="media-heading"><a href="docsImageGuide.html">Image Guide</a></h6>
-                How to manipulate clinical image data in SimVascular.<br><br>
-                <h6 class="media-heading"><a href="docsModelGuide.html">Model Building Guide</a></h6>
-                Walks you through how to build a cardiovascular model from image data.<br><br>
-                <h6 class="media-heading"><a href="docsMeshing.html">Meshing Guide</a></h6>
-                Basic and advanced meshing and model editing in SimVascular.<br><br>
-                <h6 class="media-heading"><a href="docsFlowSolver.html">Simulation Guide</a></h6>
-                Walks you through the process of generating hemodynamic result with simple examples.<br><br>
-                <h6 class="media-heading"><a href="https://www.youtube.com/channel/UCT61XgTRqpfb39Hyio9IqGQ">Youtube Tutorials</a></h6>
-                Follow our Youtube channel for video tutorials.<br><br>
-                <h6 class="media-heading"><a href="docsRefs.html">References</a></h6>
-                Articles in the literature relevant for the SimVascular project.<br><br>    
+                 <h4 class="media-heading text-center">User Guides</h4><br>
+		 <h6 class="media-heading text-center"><a href="docsInstallation.html">Installing SimVascular</a></h6><br>
+		 <h6 class="media-heading text-center"><a href="docsQuickGuide.html">Quick Guide</a></h6><br>
+		 <h6 class="media-heading text-center"><a href="docsModelGuide.html">Modeling Guide</a></h6><br>
+		 <h6 class="media-heading text-center"><a href="docsMeshing.html">Meshing Guide</a></h6><br>
+		 <h6 class="media-heading text-center"><a href="docsFlowSolver.html">Simulation Guide</a></h6>
               </div>
             </div>                  
           </div>
-                
+
           <!-- Clinical Test Cases -->                
           <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 top-buffer">
             <!-- Description -->
@@ -505,18 +418,32 @@
               </div><br>              
               <div class="media-body">
                 <h4 class="media-heading text-center">Clinical Case Studies</h4><br>
-                <h6 class="media-heading"><a href="clinicalCase1.html">Aortofemoral Normal - Case 1</a></h6>
-                From the supraceliac aorta to the femoral and profunda femoris artery bifurcation.<br><br>
-                <h6 class="media-heading"><a href="clinicalCase2.html">Aortofemoral Normal - Case 2</a></h6>
-                From the thoracic aorta to the femoral arteries.<br><br>
-                <h6 class="media-heading"><a href="clinicalCase3.html">Coronary Normal - Case 3</a></h6>
-                The ascending aorta ostium and the left and right coronary arteries.<br><br>
-                <h6 class="media-heading"><a href="clinicalCase4.html">Healthy Pulmonary - Case 4</a></h6>
-                From the main pulmonary artery to various levels of branching in the left and right pulmonary arteries.<br><br>
+                <h6 class="media-heading text-center"><a href="clinicalCase3.html">Coronary Normal</a></h6><br>
+                <h6 class="media-heading text-center"><a href="clinicalCase1.html">Aortofemoral Normal - 1</a></h6><br>
+                <h6 class="media-heading text-center"><a href="clinicalCase2.html">Aortofemoral Normal - 2</a></h6><br>
+                <h6 class="media-heading text-center"><a href="clinicalCase4.html">Healthy Pulmonary</a></h6>
               </div>
             </div>            
           </div>
 
+          <!-- Developer Guides -->                
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 top-buffer">
+            <!-- Description -->
+            <div class="media">
+              <!-- <a class="pull-left" href="#">
+                <img class="media-object" src="img/Img_About_Coro.png" alt="...">
+              </a> -->
+              <div class="centreDoc" style="height:100px;">
+                <img src="img/docs/header_img_08.png" alt="...">
+              </div><br>
+              <div class="media-body">
+                <h4 class="media-heading text-center">Developer Guides</h4><br>
+                <h6 class="media-heading text-center"><a href="docsCompile.html">Compile Sources</a></h6><br>
+                <h6 class="media-heading text-center"><a href="docsCodeSnippets.html">Code snippets</a></h6><br>
+              </div>
+            </div>            
+          </div>
+                
           <!-- SV Community -->                
           <!--<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 top-buffer">-->
             <!-- Description -->
@@ -599,10 +526,10 @@
                   <div class="thumbnail bioThumbs">
                     <img src="img/bio/amarsden.jpg" alt="...">
                     <div class="caption">
-                      <h4><a href="http://web.stanford.edu/~amarsden/MarsdenLab/Home.html">Alison Marsden</a></h4>
+                      <h4><a href="http://cbcl.stanford.edu">Alison Marsden</a></h4>
                       <a class="expander" href="#">Bio notes</a>
                       <div class="content BioPar">
-                        <p>Alison Marsden is an associate professor in the Mechanical and Aerospace  Engineering Department at the University of California San Diego. She graduated with a bachelor&rsquo;s degree in Mechanical Engineering from Princeton University in 1998, and a PhD in Mechanical Engineering from Stanford in 2005 working with Prof. Parviz Moin. She was a postdoctoral fellow at Stanford University in Bioengineering and Pediatric Cardiology from 2005-07 working with Charles Taylor and Jeffrey Feinstein.  She was the recipient of an American Heart Association postdoctoral fellowship, an AHA beginning grant in aid award, a Burroughs Wellcome Fund Career Award at the Scientific Interface, an NSF CAREER award, and is a member of an international Leducq Foundation Network of Excellence.  She has published over 60 peer reviewed journal papers, and her lab has received funding from the NSF, NIH, and several private foundations.  Her work focuses on the development of numerical methods for simulation of cardiovascular blood flow problems, medical device design, application of optimization to large-scale fluid mechanics simulations, and use of engineering tools to impact patient care in cardiovascular surgery and congenital heart disease.   </p>
+                        <p>Alison Marsden is an associate professor of Pediatrics (Cardiology) and of Bioengineering, by courtesy, of Mechanical Engineering at at Stanford University. She graduated with a bachelor&rsquo;s degree in Mechanical Engineering from Princeton University in 1998, and a PhD in Mechanical Engineering from Stanford in 2005 working with Prof. Parviz Moin. She was a postdoctoral fellow at Stanford University in Bioengineering and Pediatric Cardiology from 2005-07 working with Charles Taylor and Jeffrey Feinstein. She was the recipient of an American Heart Association postdoctoral fellowship, an AHA beginning grant in aid award, a Burroughs Wellcome Fund Career Award at the Scientific Interface, an NSF CAREER award, and is a member of an international Leducq Foundation Network of Excellence.  She has published over 60 peer reviewed journal papers, and her lab has received funding from the NSF, NIH, and several private foundations.  Her work focuses on the development of numerical methods for simulation of cardiovascular blood flow problems, medical device design, application of optimization to large-scale fluid mechanics simulations, and use of engineering tools to impact patient care in cardiovascular surgery and congenital heart disease.</p>
 
                       </div>
                     </div>
@@ -617,7 +544,7 @@
                       <h4><a href="http://shaddenlab.berkeley.edu/">Shawn Shadden</a></h4>
                       <a class="expander" href="#">Bio notes</a>
                       <div class="content BioPar">
-                        <p>Shawn Shadden is an Assistant Professor of Mechanical Engineering at the University of California, Berkeley. His research focuses on the advancement of theoretical and computational methods to quantify complex fluid flow. He received a BS in Aerospace Engineering from The University of Texas at Austin (2001), and PhD in Control and Dynamical Systems from the California Institute of Technology (2006).  From 2006-2009 he carried out an NSF Mathematical Sciences Postdoctoral Research Fellowship to translate his work in dynamical systems to research on cardiovascular biomechanics at Stanford University. From 2009-2013 he served as an Assistant Professor at the Illinois Institute of Technology in Chicago, IL, before joining the faculty at UC Berkeley.</p>
+                        <p>Shawn Shadden is an Associate Professor of Mechanical Engineering at the University of California, Berkeley. His research focuses on the advancement of theoretical and computational methods to quantify complex fluid flow. He received a BS in Aerospace Engineering from The University of Texas at Austin (2001), and PhD in Control and Dynamical Systems from the California Institute of Technology (2006).  From 2006-2009 he carried out an NSF Mathematical Sciences Postdoctoral Research Fellowship to translate his work in dynamical systems to research on cardiovascular biomechanics at Stanford University. From 2009-2013 he served as an Assistant Professor at the Illinois Institute of Technology in Chicago, IL, before joining the faculty at UC Berkeley.</p>
 
                       </div>
                     </div>
@@ -644,46 +571,18 @@
                 <!-- Team 5 -->
                 <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
                   <div class="thumbnail bioThumbs">
-                    <img src="img/bio/dschiavazzi.jpg" alt="...">
+                    <img src="img/bio/hlan.jpg" alt="...">
                     <div class="caption">
-                      <h4>Daniele Schiavazzi</h4>
+                      <h4>Hongzhi Lan</h4>
                       <a class="expander" href="#">Bio notes</a>
                       <div class="content BioPar">
-                        <p>Daniele Schiavazzi is a post-doctoral researcher at the University of California, San Diego. He graduated with honors from the University of Padova and pursued a Ph.D. degree in applied mathematics from the same University. He was awarded a visiting researcher appointment from the Uncertainty Quantification Lab at Stanford University during his Ph.D. and, more recently, an AHA post-doctoral fellowship. His main research interests are in numerical simulation and finite element analysis, forward uncertainty propagation using sparse multi-resolution representations, inverse Bayesian estimation and use of computational models to inform clinical decision making under uncertainty. He is a keen tennis player and cross-country ski enthusiast.</p>
+                        <p>Hongzhi Lan is a postdoctoral scholar in Pediatrics (Cardiology) and of Bioengineering at Stanford University. He received a bachelor degree(1999) in Mechanical Engineering from Tsinghua University, a master degree(2007) in Mechanical Engineering and a PhD(2013) in Biomedical Engineering from Tulane University.  His research experiences include modeling/simulation of indentation on alloys and piezoelectric materials, biotransport of nutrients between cells in the bone matrix, and leukocyte deformation/migration using viscoelastic models. His current research interests focus on flow solver for cardiovascular simulation, development of the open source project SimVascular, and simulation for cardiovascular diseases and surgery.</p>
 
                       </div>
                     </div>
                   </div>
                 </div>
                 <!-- Team 6 -->
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                  <div class="thumbnail bioThumbs">
-                    <img src="img/bio/jmerkow.jpg" alt="...">
-                    <div class="caption">
-                      <h4>Jameson Merkow</h4>
-                      <a class="expander" href="#">Bio notes</a>
-                      <div class="content BioPar">
-                        <p>Jameson Merkow is a PhD student in the Electrical and Computer Engineering Department and University of California, San Diego.  He graduated with a BSE in Computer Engineering at Tulane University in New Orleans, LA. Jameson has received prestigious awards such as the Distinguished Scholar Award, and Excellence in Mathematics for Outside Majors. Jameson continued his education at Carnegie Mellon University where he received an MS in Electrical and Computer Engineering with a concentration in machine learning and computer vision. He is currently a co-member of the Cardiovascular Biomechanics Computations Laboratory and Computer Vision Laboratory at UCSD. </p>
-
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Team 7 -->
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                  <div class="thumbnail bioThumbs">
-                    <img src="img/bio/hlan.jpg" alt="...">
-                    <div class="caption">
-                      <h4>Hongzhi Lan</h4>
-                      <a class="expander" href="#">Bio notes</a>
-                      <div class="content BioPar">
-                        <p>Hongzhi Lan is a postdoctoral scholar in the Mechanical and Aerospace Engineering Department at the University of California San Diego. He received a bachelor degree(1999) in Mechanical Engineering from Tsinghua University, a master degree(2007) in Mechanical Engineering and a PhD(2013) in Biomedical Engineering from Tulane University.  His research experiences include modeling/simulation of indentation on alloys and piezoelectric materials, biotransport of nutrients between cells in the bone matrix, and leukocyte deformation/migration using viscoelastic models. His current research interests focus on flow solver for cardiovascular simulation, development of the open source project SimVascular, and simulation for cardiovascular diseases and surgery.</p>
-
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Team 8 -->
                 <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
                   <div class="thumbnail bioThumbs">
                     <img src="img/bio/aupdegrove.jpg" alt="...">
@@ -697,24 +596,26 @@
                     </div>
                   </div>
                 </div>
+                <!-- Team 7 -->
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                  <div class="thumbnail bioThumbs">
+                    <img src="img/bio/gmaher.jpg" alt="...">
+                    <div class="caption">
+                      <h4>Gabriel Maher</h4>
+                      <a class="expander" href="#">Bio notes</a>
+                      <div class="content BioPar">
+                        <p>Gabriel Maher is a PhD student in  Computational and Mathematical Engineering at Stanford University. He received his MS degree in Aerospace from Delft University of Technology.</p>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Team 8 -->
+
               </div>
         </div>
     </div>
-    <div class="container top-buffer">
-      <div class="col-lg-12">
-        <h3>Other Contributors</h3>
-        <ul>
-          <li class="otherContrib">Charles A. Taylor, Ph.D., Founder, CTO, and Member of the Board of Directors, HeartFlow Inc.</li>
-          <li class="otherContrib">Mahdi Esmaily Moghadam, Ph.D., Postdoctoral Fellow, CTR, Stanford University</li>
-          <li class="otherContrib">C. Alberto Figueroa, Ph.D., Edward B. Diethrich Associate Professor of Surgery and Biomedical Engineering, University of Michigan</li>
-          <li class="otherContrib">Kenneth Jansen, Ph.D., Professor of Aerospace Engineering, University of Colorado, Boulder</li>
-          <li class="otherContrib">Weiguang Yang, Ph.D., Research Scientist, Pediatrics, Stanford University</li>
-          <li class="otherContrib">Irene Vignon-Clementel, Ph.D., Permanent Research Scientist, INRIA Paris Rocquencourt</li>
-          <li class="otherContrib">Kenneth Wang, M.D., Ph.D., Department of Radiology, Johns Hopkins School of Medicine</li>
-          
-        </ul>
-      </div>
-    </div>
+
 </section>
 
 <!-- Contact Section -->
@@ -726,12 +627,12 @@
 
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 
-<!--           <h6 class="media-heading"><a>News Mailing List</a></h6>
-          <h6 class="media-heading"><a href="https://simtk.org/mailman/listinfo/simvascular-news">Sign up</a> - <a href="https://simtk.org/pipermail/simvascular-news/">Archive</a></h6>
-          Announcements and latest news about SimVascular.<br><br> -->
-          <h6 class="media-heading"><a>Users Mailing List</a></h6>
+<!--           <h6 class="media-heading"><a>Users Mailing List</a></h6>
           <h6 class="media-heading"><a href="https://simtk.org/mailman/listinfo/simvascular-users">Sign up</a> - <a href="https://simtk.org/pipermail/simvascular-users/">Archive</a></h6>
-          Join SimVascular user mailing list for latest news and let us know what you think.<br><br>
+          Announcements and latest news about SimVascular.<br><br> -->
+          <h6 class="media-heading"><a>News Mailing List</a></h6>
+          <h6 class="media-heading"><a href="https://simtk.org/mailman/listinfo/simvascular-news">Sign up</a> - <a href="https://simtk.org/pipermail/simvascular-news/">Archive</a></h6>
+          Announcements and latest news about SimVascular.<br><br>
           <h6 class="media-heading"><a href="https://simtk.org/forums/viewforum.php?f=188">SimVascular Public Forum</a></h6>
           Interact with other SimVascular users.<br><br>
           
@@ -779,7 +680,7 @@
     <!-- Footer -->
     <footer>
         <div class="container text-center">
-            <h5>Copyright &copy; SV Development Team - 2014</h5>
+            <h5>Copyright &copy; SimVascular Development Team - 2017</h5>
         </div>
     </footer>
 
