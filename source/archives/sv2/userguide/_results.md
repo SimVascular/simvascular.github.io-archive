@@ -6,7 +6,7 @@ Launch ParaView.
 	Click the button “Apply”
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/userguide/imgs/results/1.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/userguide/imgs/results/1.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -21,7 +21,7 @@ To do this, we must calculate the scalar quantity representing the magnitude of 
 	Representation: Volume
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/userguide/imgs/results/2.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/userguide/imgs/results/2.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 

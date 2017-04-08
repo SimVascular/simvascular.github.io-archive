@@ -7,7 +7,7 @@ Along the path we created, a group of contours of the aorta vessel wall can be d
 	Click the button “Create New Group”
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/userguide/imgs/modeling/segmentation1.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/userguide/imgs/modeling/segmentation1.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -30,7 +30,7 @@ To visualize 2-D segmentations (contours):
 	Toggle on: Display Options → Level Set → segmentation
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/userguide/imgs/modeling/segmentation2.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/userguide/imgs/modeling/segmentation2.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -42,7 +42,7 @@ Now under the 3D Display  Window, there are two more 2D Display Windows showing 
 	Click the button “Add Current Segmentation to Group”
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/userguide/imgs/modeling/segmentation3.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/userguide/imgs/modeling/segmentation3.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -71,7 +71,7 @@ To show all the paths and the segmentations for the aorta and the right iliac ar
 	Click the button “Display Groups” and choose a color
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/userguide/imgs/modeling/segmentation4.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/userguide/imgs/modeling/segmentation4.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 

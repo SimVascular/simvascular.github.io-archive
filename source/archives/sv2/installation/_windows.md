@@ -54,7 +54,7 @@ search box) and then typing:*
 	net user administrator /active:yes
 
 <figure>
-  <img class="svImg svImgSm" src="documentation/installation/imgs/mpich.jpg">
+  <img class="svImg svImgSm" src="archives/sv2/installation/imgs/mpich.jpg">
   <figcaption class="svCaption" >Open Command Prompt in Administrator Mode</figcaption>
 </figure>
 

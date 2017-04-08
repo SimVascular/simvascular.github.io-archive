@@ -14,7 +14,7 @@ Wait a few seconds, Click the last "Start Trail" button to track the simulation 
 ~~~
 
 <figure>
-  <img class="svImg scImgLg" src="documentation/flowsolver/imgs/svsolver_gui.png">
+  <img class="svImg scImgLg" src="archives/sv2/flowsolver/imgs/svsolver_gui.png">
   <figcaption class="svCaption" >Running simulation through the GUI</figcaption>
 </figure>
 
@@ -349,7 +349,7 @@ Click "Run Simulation"
 ~~~
 
 <figure>
-  <img class="svImg scImgLg" src="documentation/flowsolver/imgs/restart_gui.png">
+  <img class="svImg scImgLg" src="archives/sv2/flowsolver/imgs/restart_gui.png">
   <figcaption class="svCaption" >Restart simulation through the GUI</figcaption>
 </figure>
 

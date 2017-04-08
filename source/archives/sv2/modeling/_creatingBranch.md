@@ -7,7 +7,7 @@ It is not immediately obvious how best to create a branch vessel so that we end 
 Follow the instructions in [Section: Path Planning](#modelingPathPlanning) to create a path for the right iliac artery. Make sure that your path overlaps the path that we created for the aorta:
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/solid_modeling/creating_branch/1.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/solid_modeling/creating_branch/1.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -20,7 +20,7 @@ Then change to the path you’ve just created for the right iliac artery under t
 Move the current position slider bar just above the bifurcation point. Segment this position using level set methods and Fourier smooth it. You may find that your segmentation looks something like this:
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/solid_modeling/creating_branch/2.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/solid_modeling/creating_branch/2.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -29,7 +29,7 @@ What is wrong with this segmentation (shown in blue in the 3D display window)? Y
 You already know of a number of ways to fix this first segmentation so that it fits completely within the main aorta vessel we created earlier, but now we will demonstrate another one. Start by adding this segmentation to the group “right_iliac”. Now, highlight this segmentation in the group treeview display and click on the “Manipulate” drop-down menu in the sidebar to the right of the group treeview display. Select “Show Spline” and “Show Image”:
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/solid_modeling/creating_branch/3.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/solid_modeling/creating_branch/3.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -42,7 +42,7 @@ Now let’s move on to the second segmentation in the bifurcation. It is only cr
 Move down a few slices, and segment this portion of the vessel using level set techniques and then Fourier Smooth it. You may end up with something like this:
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/solid_modeling/creating_branch/4.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/solid_modeling/creating_branch/4.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -53,7 +53,7 @@ Continue segmenting down your vessel until you are clear past the bifurcation, a
 Once you’ve cleared the bifurcation, we can start to see how you’re doing. Highlight all of the segmentations you have just made in the group treeview display window by holding down the “shift” key while clicking with your left mouse button. Click on the “Manipulate” drop-down menu to the right of the group treeview display and select “Align All Profiles”. After the profiles have been aligned, click on “Show Surface” in the “Manipulate” drop-down menu. A solid red surface made with your new segmentations should now appear. Click your mouse in the 3D display window and, while your mouse is over the semi-transparent solid model of the aorta, type “p” on the keyboard. The main branch of the aorta should now turn solid yellow: 
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/solid_modeling/creating_branch/5.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/solid_modeling/creating_branch/5.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -64,7 +64,7 @@ What happens where your segmentations are partly inside and partly outside of th
 Perhaps you have constructed your branch vessel such that most of your segmentations were inside the main branch of the aorta until after the bifurcation, and the joined pieces look more like the following:
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/solid_modeling/creating_branch/6.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/solid_modeling/creating_branch/6.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 

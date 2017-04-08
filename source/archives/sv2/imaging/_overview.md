@@ -21,7 +21,7 @@ Most of the above techniques can be combined inside of SimVascular.  This will b
 The demo data that we will be using throughout the manual are magnetic resonance images of the aorta and the iliac bifurcation, shown below in blue.  You can also see parts of the kidney attached to the renal arteries, which branch off of the aorta.
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/imaging/imgs/1.jpg">
+  <img class="svImg svImgMd" src="archives/sv2/imaging/imgs/1.jpg">
   <figcaption class="svCaption" ></figcaption>
 </figure>
 

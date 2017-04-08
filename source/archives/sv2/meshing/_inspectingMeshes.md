@@ -8,7 +8,7 @@ To visualize and inspect a mesh in paraview, follow the steps below:
 2) Using the dropdown menus, select Filters->Mesh Quality. 
 
 <figure>
-  <img class="svImg svImgLg" src="documentation/meshing/img/Mesh_Filters.png"> 
+  <img class="svImg svImgLg" src="archives/sv2/meshing/img/Mesh_Filters.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -19,14 +19,14 @@ To visualize and inspect a mesh in paraview, follow the steps below:
 5) To visualize the metric, select the Representation to be "Volume", and select the Array under Coloring to be "Quality".
 
 <figure>
-  <img class="svImg svImgLg" src="documentation/meshing/img/Mesh_Volume_Quality.png"> 
+  <img class="svImg svImgLg" src="archives/sv2/meshing/img/Mesh_Volume_Quality.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
 6) We can similarly do the same thing for many other metrics such as Minimum Dihedral Angle.
 
 <figure>
-  <img class="svImg svImgLg" src="documentation/meshing/img/Mesh_Dihedral_Quality.png"> 
+  <img class="svImg svImgLg" src="archives/sv2/meshing/img/Mesh_Dihedral_Quality.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 

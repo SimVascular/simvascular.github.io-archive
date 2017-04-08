@@ -5,14 +5,14 @@ We can also use point clouds to visualize image data.  First, turn off all of th
 Click on the “point cloud” checkbox to threshold the image data under the “Volume Properties” tab.  The default minimum value for thresholding is 128 and the default maximum value for thresholding is 334.0. You should see something similar to the following image:
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/imaging/imgs/point_clouds/1.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/imaging/imgs/point_clouds/1.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
 Now try two different minimum threshold values:  80 and 175.  To change the threshold value, enter the new value in the entry widget in the “Volume Properties” tab under “Threshold Range” and hit RETURN.  When you enter the value of 80, you should see something similar to (a) below.  Next, try a value of 175.  You should get something similar to (b) below.  Only the image intensity values that fall within the specified min and max range are displayed.
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/imaging/imgs/point_clouds/2.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/imaging/imgs/point_clouds/2.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -23,14 +23,14 @@ First de-select “point cloud” under “Visualization options”. Move the sc
 Now change the minimum value of the "Threshold Range" to 90. Click on the “use seed” drop-down menu and select the first option, “Seed by Volume Sliders” as shown below. Within the “use seed” widget should appear the physical location in space that was selected by your scale bars (-0.240 {0.090} 4.476). Then, click the "use seed" checkbox underneath “Threshold Range”, and turn on the point cloud again by checking "point cloud" under “Visualization Options”. You should see an image similar to that below. 
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/imaging/imgs/point_clouds/3.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/imaging/imgs/point_clouds/3.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
 Note that if you did NOT use the "connectivity" filter and simply used a minimum threshold value of 90, you would get an image as shown below. All pixels above an intensity value of 90 are displayed, not only the pixels with intensity value above 90 that are connected to the seed voxel that was used above.
 
 <figure>
-  <img class="svImg svImgXl" src="documentation/imaging/imgs/point_clouds/4.jpg"> 
+  <img class="svImg svImgXl" src="archives/sv2/imaging/imgs/point_clouds/4.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 

@@ -44,7 +44,7 @@ Nine constants need also to be defined for each coronary outlet, i.e., $q\_0$, $
 The physical meaning of these constants is related to the resistances and capacitances used to simulated each coronary outlet, as shown in the picture below:
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/flowsolver/imgs/CorBC.png">
+  <img class="svImg svImgMd" src="archives/sv2/flowsolver/imgs/CorBC.png">
   <figcaption class="svCaption" >Circuit visualization for coronary boundary condition</figcaption>
 </figure>
 

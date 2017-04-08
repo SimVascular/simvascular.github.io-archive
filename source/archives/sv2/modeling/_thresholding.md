@@ -5,7 +5,7 @@ This exercise assumes that you have loaded in the path that most accurately repr
 Underneath the “2D Segmentation → Create Vessel” tabs, select the “Threshold” tab:
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/thresholding/1.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/segmentation/thresholding/1.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -16,7 +16,7 @@ To segment the image based on intensity, click on the “threshold intensity” 
 To visualize the segmentation(s) you have just created, click on the “Display Options” drop-down menu in the 2-D Intensity window and select “Threshold → threshold”. One or more blue lines outlining your image data should appear:
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/thresholding/2.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/segmentation/thresholding/2.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -25,14 +25,14 @@ To visualize the segmentation(s) you have just created, click on the “Display 
 If you have a number of enclosures displayed in your 2D Intensity window, you may be wondering how SimVascular knows which one is the one you want. The threshold contour that contains the specified center will be the one that is considered. Your current center should be set at “X: 0”, “Y: 0” next to the “Center:” widget under the “Threshold” tab. That should be the dead center of the 2D image. Therefore, your “selected threshold” will be the threshold contour that contains this centerpoint.  Changing this centerpoint will change the contour that is selected. To view the selected contour, go to the “Display Options” menu in the 2D Intensity window and select “Threshold → selected threshold contour”. The selected threshold will then be outlined by a heavier blue line:
 
 <figure>
-  <img class="svImg svImgXl" src="documentation/modeling/imgs/segmentation/thresholding/3.jpg"> 
+  <img class="svImg svImgXl" src="archives/sv2/modeling/imgs/segmentation/thresholding/3.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
 If you want to change your center, it is helpful to visualize it in space. Select the “Display Options” menu in the 2D Intensity window and select “Threshold → initialization sphere”. A green sphere will appear where your current center is located. If you don’t see a sphere or your sphere is merely a faint outline, click your mouse arrow in the 2D Intensity window and type “r” on the keyboard. This resizes objects to be properly displayed:
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/thresholding/4.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/segmentation/thresholding/4.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 

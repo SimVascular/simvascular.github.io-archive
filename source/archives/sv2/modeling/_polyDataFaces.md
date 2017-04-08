@@ -5,7 +5,7 @@
 Under "Model → PolyData" navigate to the “Face Manipulation” tab. 
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/polyData/faces/prenamedFaces.png"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/polyData/faces/prenamedFaces.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -16,7 +16,7 @@ A list of the model faces found will appear in the window to the right.
 If the number of faces listed does not match the number of faces expected, you must toggle the extraction angle to get the desired number. After extracting the faces, hover over a surface in the window and select "p". Alternatively, select the face from the model in the list. Either of these methods will highlight your face in the 3D window. The key here is to make sure that the caps of your vessels are isolated from the other surfaces of your vessel. Once this is done, follow the direction below to "Select and Combine Faces". 
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/polyData/faces/Selection.png"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/polyData/faces/Selection.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -32,7 +32,7 @@ In order to rename a face, find the box called "surf name: " above the Object li
 Naming the wall of the model:
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/polyData/faces/Naming.png"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/polyData/faces/Naming.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -47,7 +47,7 @@ If there are excess faces other than the ones named, and toggling the boundary e
         4. Now we only have boundaries where we want them (total of 4)
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/polyData/faces/Combining.png"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/polyData/faces/Combining.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -56,7 +56,7 @@ If necessary you can delete unwanted faces:
         Select and Delete Faces —> Highlight faces in the window and click the button.
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/polyData/faces/Deleting.png"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/polyData/faces/Deleting.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 

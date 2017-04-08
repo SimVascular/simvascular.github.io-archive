@@ -42,7 +42,7 @@ The scalar intensity value is the same as the intensity values we previously use
 Check on "Turn on Volume Rendering."  Depending on your hardware and dataset, you may see the program run slower using this visualization technique. You should see something similar to the following image:
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/imaging/imgs/volume_rendering/1.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/imaging/imgs/volume_rendering/1.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -54,7 +54,7 @@ color function:		{0 0 0 0} {80 0 1 0} {128 1 0 0} {5000 1 0 0}
 and press RETURN inside the entry widget.  You should see an image like that below:
 
 <figure>
-  <img class="svImg svImgXl" src="documentation/imaging/imgs/volume_rendering/2.jpg"> 
+  <img class="svImg svImgXl" src="archives/sv2/imaging/imgs/volume_rendering/2.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 

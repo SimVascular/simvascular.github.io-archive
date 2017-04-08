@@ -15,7 +15,7 @@ Click the button "Convert Files Only"
 ~~~
 
 <figure>
-  <img class="svImg svImgLg" src="documentation/flowsolver/imgs/svpost_gui1.png">
+  <img class="svImg svImgLg" src="archives/sv2/flowsolver/imgs/svpost_gui1.png">
   <figcaption class="svCaption" >Creating VTU result files from <b>svSolver</b> restart files.</figcaption>
 </figure>
 
@@ -29,7 +29,7 @@ Other options are also provided:
 - **Use Wall Options**, toggle on to apply more options for postprocessing. 
 
 <figure>
-  <img class="svImg svImgLg" src="documentation/flowsolver/imgs/svpost_gui_wall.png">
+  <img class="svImg svImgLg" src="archives/sv2/flowsolver/imgs/svpost_gui_wall.png">
   <figcaption class="svCaption" >Wall Options</figcaption>
 </figure>
 
@@ -41,7 +41,7 @@ Other options are also provided:
 If Single File option is on when postprocessing, all\_results.vtp or all\_results.vtu will be produced. In this case, svPost can calculate pressure and flow rate for outlets. Just click "Calculate Flows Only".
 
 <figure>
-  <img class="svImg svImgLg" src="documentation/flowsolver/imgs/svpost_gui2.png">
+  <img class="svImg svImgLg" src="archives/sv2/flowsolver/imgs/svpost_gui2.png">
   <figcaption class="svCaption" >Calculate Pressure and Flow rate</figcaption>
 </figure>
 
@@ -58,13 +58,13 @@ To visualize the time dependent results we use **ParaView**.
 - At this point, you can interact with the model by rotating it using the rotation or translation buttons. Use the **Surface with Edges** option to visualize the finite element mesh.
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/flowsolver/imgs/para_showEdges.png">
+  <img class="svImg svImgMd" src="archives/sv2/flowsolver/imgs/para_showEdges.png">
   <figcaption class="svCaption" >By showing edges, the finite element mesh will become apparent</figcaption>
 </figure>
 
 
 <figure>
-  <img class="svImg svImgLg" src="documentation/flowsolver/imgs/para_CylMesh.png">
+  <img class="svImg svImgLg" src="archives/sv2/flowsolver/imgs/para_CylMesh.png">
   <figcaption class="svCaption" >Visualizing the cylinder mesh in Paraview</figcaption>
 </figure>
 
@@ -73,14 +73,14 @@ To visualize the time dependent results we use **ParaView**.
 - First you should increase your current result time from **0** to **20** (the last available time step). 
 
 <figure>
-  <img class="svImg svImgSm" src="documentation/flowsolver/imgs/para_time.png">
+  <img class="svImg svImgSm" src="archives/sv2/flowsolver/imgs/para_time.png">
   <figcaption class="svCaption" >Choosing the last time step results in Paraview</figcaption>
 </figure>
 
 - You should now see the available result quantities for your model, i.e., cellsNormals, GlobalElementID, GlobalNodeID, pressure, timeDeriv, traction, velocity, WSS. 
 
 <figure>
-  <img class="svImg svImgXs" src="documentation/flowsolver/imgs/para_Results.png">
+  <img class="svImg svImgXs" src="archives/sv2/flowsolver/imgs/para_Results.png">
   <figcaption class="svCaption" >Available model results</figcaption>
 </figure>
 
@@ -93,6 +93,6 @@ To visualize the time dependent results we use **ParaView**.
 You should now see the following contour plot. 
 
 <figure>
-  <img class="svImg svImgLg" src="documentation/flowsolver/imgs/para_ConvertTommHg.png">
+  <img class="svImg svImgLg" src="archives/sv2/flowsolver/imgs/para_ConvertTommHg.png">
   <figcaption class="svCaption" >Final contour of pressures in mmHg</figcaption>
 </figure>

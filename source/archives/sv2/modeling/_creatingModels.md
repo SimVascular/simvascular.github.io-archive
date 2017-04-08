@@ -7,7 +7,7 @@ The first thing we will do is create a new group “aorta\_test” that mimics y
 Then, under the “2D Segmentation” tab:
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/solid_modeling/creating_models/1.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/solid_modeling/creating_models/1.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -18,7 +18,7 @@ Highlight “aorta\_test” in the group treeview display window. Next to the gr
 Under the “Model → Parasolid → Create Model” tab, click on the “Create Pre-Op Solid Model” button. A window will appear asking you to name your new model. Name your model "NewModel" and then click "Enter". You may not give a blank name, a name containing ".", or a name containing "/". Another window will appear asking you if you would like to “Recreate all solids”. Click on the “Yes” button. Another window appears asking if you would like to “Create missing solids using defaults.” Click on the “Yes” button. 
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/solid_modeling/creating_models/2.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/solid_modeling/creating_models/2.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -27,7 +27,7 @@ A box will pop up informing you that it is renaming one of the surfaces so that 
 In addition, the name of the solid will appear underneath Parasolid in the dropdown list. The model should also have faces corresponding to the groups used to create the solid. Click on the model name to expand the list and see the faces.
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/solid_modeling/creating_models/2.5.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/solid_modeling/creating_models/2.5.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -36,7 +36,7 @@ The “num sample pts” under “Segmentation → Lofting Parameters” describ
 Now, let’s examine the solid in more detail. Click your mouse in the 3D display window and click on the semi-transparent solid model. If you type “p” on the keyboard, the model should now become opaque yellow and easier to visualize. If you would like to change the opacity of the lofted solid (optional), “pick” the 3D solid, which turns it opaque and yellow, and go to the “Visualization” portion on the right hand side of the screen. Click “Color and Opacity → Change Selected Opacity” and choose a desired opacity. Use this same button and click "Change Selected Color" to change the color of the model. 
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/solid_modeling/creating_models/3.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/solid_modeling/creating_models/3.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -47,14 +47,14 @@ Let’s try to fix the model by deleting the segmentation and re-lofting it. Fir
 In the group treeview display window, highlight the group “aorta_test”. To the right of the treeview display window, under “Visualization”, click on the “Display Groups” button. A new window will open, asking you to select a color to display your group in. We have selected bright green:
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/solid_modeling/creating_models/4.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/solid_modeling/creating_models/4.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
 Right away we can see which segmentation was problematic. Pick this segmentation by clicking inside the 3D display window, placing your mouse over the segmentation, and typing “p” on the keyboard. Two things should happen – the contour will be highlighted in yellow in the 3D display window, and the path point which it corresponds to will be highlighted in blue in the group treeview display window:
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/solid_modeling/creating_models/5.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/solid_modeling/creating_models/5.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -69,7 +69,7 @@ We will now re-loft the model again. Click on the “aorta\_test” group in the
 Now, re-loft the model by clicking on the “Create Pre-Op Solid Model” button under the “Model → Parasolid → Create Model” tab. Did deleting the segmentation help? You can use the Display Options pane to turn on visualization options that will help you judge the fidelity of your solid model. For example, try turning on the “S/I” slider bar and running up and down the 3D solid. How well does it represent the imaging data? You can see that this is one time when it is useful to leave the lofted vessel in a semi-transparent state:
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/solid_modeling/creating_models/6.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/solid_modeling/creating_models/6.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -78,7 +78,7 @@ Now, re-loft the model by clicking on the “Create Pre-Op Solid Model” button
 Next, we will learn about the difference between true lofting artifacts and visualization artifacts. Zoom in on the iliac branch and check for lofting artifacts. Click on the model and type “p” to select the model and turn it opaque. You might see something like following. Is this a lofting artifact?
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/solid_modeling/creating_models/7.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/solid_modeling/creating_models/7.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -91,7 +91,7 @@ Type in “0.1” in the place of “1.0” and hit RETURN.
 With your solid model “picked” (opaque yellow), under visualization on the right hand side, click "Model Operations → Copy Model". Give a name for your new visualized model. Now, every time a Parasolid object is displayed on screen, it will be created with facet sizes with a maximum of 0.1 units. This will display the model with smaller faces and give you a smoother looking surface. You should see that the creases have disappeared:
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/solid_modeling/creating_models/8.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/solid_modeling/creating_models/8.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -108,7 +108,7 @@ Here are a few suggestions for fixing common problems:
 2.	The solid model of your branch vessel seems “bumpy”. If you have created level set segmentations in the iliac branch of the vessel and then fit circles to these segmentations, you may find your model looking something like this:
 
 <figure>
-  <img class="svImg svImgMd"  src="documentation/modeling/imgs/solid_modeling/creating_models/9.jpg"> 
+  <img class="svImg svImgMd"  src="archives/sv2/modeling/imgs/solid_modeling/creating_models/9.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 

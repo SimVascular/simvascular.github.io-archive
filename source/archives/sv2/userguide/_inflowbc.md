@@ -24,7 +24,7 @@ Use the inflow file to create boundary condition file for the inlet.
 	Click “CREATE 3-D FLOW SOLVER BC FILE” 
 
 <figure>
-  <img class="svImg svImgLg"  src="documentation/userguide/imgs/simulation/inflowbc.jpg"> 
+  <img class="svImg svImgLg"  src="archives/sv2/userguide/imgs/simulation/inflowbc.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 

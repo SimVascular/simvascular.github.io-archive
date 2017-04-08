@@ -7,14 +7,14 @@ That path took a while to create and you would probably prefer not to have to re
 In the Menu Bar (top left), click on the “Save Paths” button.
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/path_planning/saving_loading_paths/1.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/path_planning/saving_loading_paths/1.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
 The following window should appear:
 
 <figure>
-  <img class="svImg svImgMd"  src="documentation/modeling/imgs/path_planning/saving_loading_paths/2.jpg"> 
+  <img class="svImg svImgMd"  src="archives/sv2/modeling/imgs/path_planning/saving_loading_paths/2.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 

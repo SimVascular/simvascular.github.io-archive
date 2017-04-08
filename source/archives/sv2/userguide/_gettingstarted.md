@@ -5,12 +5,12 @@
 When you first launch **SimVascular**, you will see the following windows:background window and startup window.
 
 <figure>
-  <img class="svImg svImgLg"  src="documentation/userguide/imgs/getting_started/1.jpg"> 
+  <img class="svImg svImgLg"  src="archives/sv2/userguide/imgs/getting_started/1.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
 <figure>
-  <img class="svImg svImgLg"  src="documentation/userguide/imgs/getting_started/2.jpg"> 
+  <img class="svImg svImgLg"  src="archives/sv2/userguide/imgs/getting_started/2.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -23,14 +23,14 @@ The Startup Window will automatically disappear once SimVascular has loaded. The
 Once **SimVascular** has loaded, you will see the following main window:
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/userguide/imgs/getting_started/3.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/userguide/imgs/getting_started/3.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
 **BOX A | Menu Bar:** The menu bar that is enclosed by box “A” (top left corner) includes some file options. These functions will be used to load/save files such as paths and groups that you have created in **SimVascular**. It also provides view control and you can show/hide tabs in BOX B and BOX D by toggling on/off in the Image Menus and Work Menus. 
 
 <figure>
-  <img class="svImg svImgMd"  src="documentation/userguide/imgs/getting_started/3_5.jpg"> 
+  <img class="svImg svImgMd"  src="archives/sv2/userguide/imgs/getting_started/3_5.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -52,6 +52,6 @@ It is recommended that the files that are created for each project are all saved
 	“Set default filenames using project directory name?” Select, “Yes.”
 
 <figure>
-  <img class="svImg svImgSm" src="documentation/userguide/imgs/getting_started/4.jpg"> 
+  <img class="svImg svImgSm" src="archives/sv2/userguide/imgs/getting_started/4.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>

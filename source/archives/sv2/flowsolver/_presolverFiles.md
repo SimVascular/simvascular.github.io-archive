@@ -3,7 +3,7 @@
 These prerequisite files for svPre are generate by the output from Meshing Module (Click _Write Files_ button in Mesh tab after meshing).
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/flowsolver/imgs/meshfiles.png">
+  <img class="svImg svImgMd" src="archives/sv2/flowsolver/imgs/meshfiles.png">
   <figcaption class="svCaption" >Folder structure and file created after clicking on <b>Write Files</b></figcaption>
 </figure>
 
@@ -38,14 +38,14 @@ The first line is a comment line that you don’t need to include, but it helps 
 **WARNING**: please note that flow coming **into** the model (forward flow) will have a negative sign, (like in the example considered here), whereas flow coming **out of** the model (backflow) will be positive. A good way to remember that is that in the case of forward flow, the vector that gives you the direction of the flow and the normal to the face of the model point in opposite directions, and therefore their dot product will be negative.
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/flowsolver/imgs/Fig_04.png">
+  <img class="svImg svImgMd" src="archives/sv2/flowsolver/imgs/Fig_04.png">
   <figcaption class="svCaption" >Cylinder with negative inflow</figcaption>
 </figure>
 
 On the other hand, in a situation of back flow,  the numerical value in the \*.flow file with be positive. 
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/flowsolver/imgs/Fig_05.png">
+  <img class="svImg svImgMd" src="archives/sv2/flowsolver/imgs/Fig_05.png">
   <figcaption class="svCaption" >Cylinder with positive inflow</figcaption>
 </figure>
 

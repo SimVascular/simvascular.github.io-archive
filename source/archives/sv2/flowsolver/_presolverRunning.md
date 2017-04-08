@@ -3,7 +3,7 @@
 To define the initial and boundary conditions of this problem, svPre need a script file (\*.svpre) file. We go to the _Simulations->Create 3-D Solver Files_ tab. In the “Create PreSolver script file” menu (see figure  below), make sure that the right \*.svpre file is loaded in the box (in this case, it should be cylinder.svpre . Click on the “**Load PreSolver scriptfile**” button. The following screen will appear:
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/flowsolver/imgs/svpre_gui.png">
+  <img class="svImg svImgMd" src="archives/sv2/flowsolver/imgs/svpre_gui.png">
   <figcaption class="svCaption" >Running <b>svPre</b> through the GUI</figcaption>
 </figure>
 

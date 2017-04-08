@@ -12,7 +12,7 @@ We will now refine a region with a sphere from a model of an Aorta.
 6.	To add this spherical reginement region to the Meshing Paramters, select "Add Sphere Refinement"
 
 <figure>
-  <img class="svImg svImgXl" src="documentation/meshing/img/TetGen_Load_Sphere_Refinement.png">
+  <img class="svImg svImgXl" src="archives/sv2/meshing/img/TetGen_Load_Sphere_Refinement.png">
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -25,7 +25,7 @@ Now we will generate the mesh for the model that includes the refined mesh speci
 5.	When the meshing is finished, a dialog box appears with mesh statistics.  Once you have reviewed the meshing output, you can click on the "OK" button in the "Mesh Statistics" dialog box.
 
 <figure>
-  <img class="svImg svImgXl" src="documentation/meshing/img/TetGen_Sphere_Refinement.png">
+  <img class="svImg svImgXl" src="archives/sv2/meshing/img/TetGen_Sphere_Refinement.png">
   <figcaption class="svCaption" ></figcaption>
 </figure>
 

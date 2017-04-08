@@ -6,14 +6,14 @@
 	Click “Run Mesher (Internal)”
 
 <figure>
-  <img class="svImg svImgXl" src="documentation/userguide/imgs/meshing/tetgen1.jpg"> 
+  <img class="svImg svImgXl" src="archives/sv2/userguide/imgs/meshing/tetgen1.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
 Now the mesh is created for the model as below.
 
 <figure>
-  <img class="svImg svImgXl" src="documentation/userguide/imgs/meshing/tetgen2.jpg"> 
+  <img class="svImg svImgXl" src="archives/sv2/userguide/imgs/meshing/tetgen2.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 

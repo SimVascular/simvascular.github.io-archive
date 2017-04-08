@@ -12,7 +12,7 @@ We will now generate a boundary layer mesh from a model of an Aorta.
 6. 	Set the desired gradation factor in the "Layer Decreasing Ratio" entry box. In this case, we would like each layer to be 0.6 of the previous layer. 
 
 <figure>
-  <img class="svImg svImgXl" src="documentation/meshing/img/TetGen_Load_BoundaryLayer.png">
+  <img class="svImg svImgXl" src="archives/sv2/meshing/img/TetGen_Load_BoundaryLayer.png">
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -27,7 +27,7 @@ Now we will generate the mesh for the model that includes the boundary layer spe
 The mesh generated will have the boundary layer mesh on the specified region. Zooming in, you can see that the number of layers in the volumetric mesh is four. The boundary layer extends all the way down the length of the surface named wall, and each layer is 0.8 of the previous layer.
 
 <figure>
-  <img class="svImg svImgXl" src="documentation/meshing/img/TetGen_BoundaryLayer.png">
+  <img class="svImg svImgXl" src="archives/sv2/meshing/img/TetGen_BoundaryLayer.png">
   <figcaption class="svCaption" ></figcaption>
 </figure>
 

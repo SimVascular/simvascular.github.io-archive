@@ -66,13 +66,13 @@ varwallprop\_write\_vtp<br>
 After running the script, varwallprop.vtp and displacment.vtp are create in the project folder, which shows the thickness and Young's modulus, and initial displacement, respectively:
 
 <figure>
-  <img class="svImg svImgLg" src="documentation/flowsolver/imgs/varwallprop_paraview.png">
+  <img class="svImg svImgLg" src="archives/sv2/flowsolver/imgs/varwallprop_paraview.png">
   <figcaption class="svCaption" >Variable Wall ThicknessInitila Calculated form svPre </figcaption>
 </figure>
 
 
 <figure>
-  <img class="svImg svImgLg" src="documentation/flowsolver/imgs/disp_varwall_paraview.png">
+  <img class="svImg svImgLg" src="archives/sv2/flowsolver/imgs/disp_varwall_paraview.png">
   <figcaption class="svCaption" >Initila Displacement Calculated form svPre </figcaption>
 </figure>
 

@@ -5,7 +5,7 @@ This exercise assumes that you have added two segmentations to the group, as des
 To display your contours in 3D space, go to the taskbar underneath the 3D display window and click on the “Display Options” menu. Select “Branch Controls” and then check “Level Set Segmentation”:
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/displaying_contours_3D/1.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/segmentation/displaying_contours_3D/1.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 

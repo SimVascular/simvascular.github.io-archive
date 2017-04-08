@@ -5,7 +5,7 @@ First we need to create a file called **bct.dat** (its vtp format file is also c
 In the **SimVascular** GUI window, go to the _Inflow BC_ subtab under _Simulations_. You will have to enter the following values in the various boxes/buttons of the GUI (see figure below):
 
 <figure>
-  <img class="svImg scImgLg" src="documentation/flowsolver/imgs/BCT_Creation.png">
+  <img class="svImg scImgLg" src="archives/sv2/flowsolver/imgs/BCT_Creation.png">
   <figcaption class="svCaption" >Creating a <b>bct.dat</b> file through the GUI</figcaption>
 </figure>
 
@@ -67,7 +67,7 @@ Each block of data has, for each of the $n\_p = 102$ spatial points, the followi
 A vtp file **bct.vtp** can be written using this option **Create Vtp** to graphically visualize the velocity distribution at the inlet surface with Paraview, as shown in the picture below.
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/flowsolver/imgs/BCT_Cration_VTP.png">
+  <img class="svImg svImgMd" src="archives/sv2/flowsolver/imgs/BCT_Cration_VTP.png">
   <figcaption class="svCaption" >Visualizing the inlet velocity profile in Paraview</figcaption>
 </figure>
 

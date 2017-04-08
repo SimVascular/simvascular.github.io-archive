@@ -3,7 +3,7 @@
 Another option for creating contours is to copy and paste a contour from another location.  This allows you to extrude that shape and is useful, for instance, at the point where one vessel joins up with another vessel.
 
 <figure>
-  <img class="svImg svImgMd"  src="documentation/modeling/imgs/segmentation/copying_pasting_contours/1.jpg"> 
+  <img class="svImg svImgMd"  src="archives/sv2/modeling/imgs/segmentation/copying_pasting_contours/1.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -16,7 +16,7 @@ Under the “Create Vessel” tab, choose the “Smooth” tab. This tab contain
 <font color="red">**HELPFUL HINT:** </font> Note the distinction between the “Level Set Additional Single Splice Manipulations” and the “Threshold Additional Single Splice Manipulations” headers. In **SimVascular**, there are two segmentation “buckets.” One bucket is the “level set” bucket that contains a “level set” segmentation and the other is the “threshold” bucket that contains a “threshold” bucket. You can create a manual or analytic segmentation and put it in either of these “buckets” by selecting either “level set” or “threshold” under “Create Contour As” when you are creating segmentation. When you copy, paste, or modify a segmentation under the “Smooth” tab you can copy, paste, or modify the segmentation in the “level set” bucket or the “threshold bucket.” You need to make sure that you are making these modifications under the correct header under the “Smooth” tab which are respectively, “Level Set Additional Single Splice Manipulations” and “Threshold Additional Single Splice Manipulations.” This tutorial works mostly in the “level set” bucket. 
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/copying_pasting_contours/2.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/segmentation/copying_pasting_contours/2.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 

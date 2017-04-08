@@ -7,7 +7,7 @@ In order to select and delete cells, make sure the model is being visualized as 
 If there is a unwanted bump or rough part of the model, specific cells can be selected and deleted and the hole created filled to create a smoother model. 
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/polyData/editing/selectingCells.png"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/polyData/editing/selectingCells.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -52,7 +52,7 @@ Surface Operators summary:
                         
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/polyData/editing/globalSmoothing.png"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/polyData/editing/globalSmoothing.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>    
    
@@ -70,7 +70,7 @@ Navigate to "Model → PolyData → Local Ops". There are four ways to select re
 Highlight the walls of the surface and click "Add Faces" under the "Face Selection" Tab. 
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/polyData/editing/selectingLocalRegions.png"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/polyData/editing/selectingLocalRegions.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>    
 
@@ -111,7 +111,7 @@ Local Surface Operators summary:
                 This creates a finer mesh made up of smaller triangles
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/polyData/editing/localSmoothing.png"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/polyData/editing/localSmoothing.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>    
 
@@ -136,7 +136,7 @@ Cut Surface:
         Save model: File Input/Output -> click “Save Model”
                 name “demo_trimmed.vtp”, make sure it is in the right directory, click save
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/polyData/editing/polydataTrim.png"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/polyData/editing/polydataTrim.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>    
 

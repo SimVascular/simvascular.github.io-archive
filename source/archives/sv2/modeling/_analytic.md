@@ -7,7 +7,7 @@ First start by clearing the 2D display windows by clicking on the “Window” d
 Under the “Create Vessel” tab, select the “Analytic” tab. Make sure that the “Level Set” radio button is selected under “Create Contour As:”
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/analytic/1.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/segmentation/analytic/1.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -18,7 +18,7 @@ Under the “Create Vessel” tab, place the “Current Position” slider bar t
 To make a circle, you will use the “Center” and “radius” fields under the “Circle Parameters”.  You can change these parameters and then click on the “Make Circle” button to see the contour that is created.  Can you find a combination that produces a good segmentation for this image?
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/analytic/2.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/segmentation/analytic/2.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure> 
 
@@ -33,7 +33,7 @@ As with the circles, the “Center” determines the center of the ellipse.  The
 “a” is the horizontal length of the ellipse, and “b” is the vertical length of the ellipse.  These quantities are in the same units as the imaging data, mm in this case. You can only generate ellipses along either the x- or y-axes. Can you find parameters that fit an ellipse to your imaging data?
 
 <figure>
-  <img class="svImg svImgX"  src="documentation/modeling/imgs/segmentation/analytic/3.jpg"> 
+  <img class="svImg svImgX"  src="archives/sv2/modeling/imgs/segmentation/analytic/3.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure> 
 

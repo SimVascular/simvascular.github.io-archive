@@ -3,14 +3,14 @@
 You can save and load your groups by clicking on the “Save Groups” and “Load Groups” in the Menu Bar (top left).
 
 <figure>
-  <img class="svImg svImgSm"  src="documentation/modeling/imgs/segmentation/saving_loading_groups/1.jpg"> 
+  <img class="svImg svImgSm"  src="archives/sv2/modeling/imgs/segmentation/saving_loading_groups/1.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
 Find your “demo” project directory and click on it to highlight it in blue. Then in the entry widget enter “groups” to create a folder to store your groups in. All of your groups will be saved under this folder. Click “OK.” Your “groups” folder has now been created and contains the saved groups.  
 
 <figure>
-  <img class="svImg svImgMd"  src="documentation/modeling/imgs/segmentation/saving_loading_groups/2.jpg"> 
+  <img class="svImg svImgMd"  src="archives/sv2/modeling/imgs/segmentation/saving_loading_groups/2.jpg"> 
    <figcaption class="svCaption" ></figcaption>
 </figure>
 

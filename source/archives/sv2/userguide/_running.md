@@ -12,7 +12,7 @@
 	Click “Run Simulation” 
 
 <figure>
-  <img class="svImg svImgLg"  src="documentation/userguide/imgs/simulation/running1.jpg"> 
+  <img class="svImg svImgLg"  src="archives/sv2/userguide/imgs/simulation/running1.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -22,7 +22,7 @@ Now SimVascular/Solver is running. To check the progress of simulation:
 	Go to the tab “Console”
 
 <figure>
-  <img class="svImg svImgLg"  src="documentation/userguide/imgs/simulation/running2.jpg"> 
+  <img class="svImg svImgLg"  src="archives/sv2/userguide/imgs/simulation/running2.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -42,7 +42,7 @@ Convert the simulation files to .vtu files, which we can use to show the results
 	Click “Convert Files Only”
 
 <figure>
-  <img class="svImg svImgLg"  src="documentation/userguide/imgs/simulation/convertingtovtu.jpg"> 
+  <img class="svImg svImgLg"  src="archives/sv2/userguide/imgs/simulation/convertingtovtu.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 

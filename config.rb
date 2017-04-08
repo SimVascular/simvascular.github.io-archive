@@ -18,6 +18,7 @@ set :markdown, :fenced_code_blocks => true, :smartypants => true, :tables => tru
 page "/", :layout => "frontpage"
 page "/docs*.html", :layout => "docs"
 page "/clinical*.html", :layout => "clinical"
+page "/archive*.html", :layout => "archive"
 page "/comingSoon*.html", :layout => "comingSoon"
 
 ###

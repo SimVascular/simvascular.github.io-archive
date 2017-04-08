@@ -24,7 +24,7 @@ Manually write presolver script file *demo.cvpre* in the text area:
 	Click “Run PreSolver” 
 
 <figure>
-  <img class="svImg svImgLg"  src="documentation/userguide/imgs/simulation/presolver.jpg"> 
+  <img class="svImg svImgLg"  src="archives/sv2/userguide/imgs/simulation/presolver.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 

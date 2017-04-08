@@ -7,7 +7,7 @@ Currently, only 2D segmentation methods have been incorporated into **SimVascula
 We use groups to organize these 2D segmentations, and in [Section: Using Groups](#modelingUsingGroups), we will show you how to work with groups. In [Section: Visualizing Segmentations](modelingVisualizingSegmentations), you will learn about different ways to visualize data in the planes used for the 2D segmentations.  This will be important because ultimately, you, the user, must determine the acceptability of a given segmentation.  Look at the image below.  Is the segmentation, show in blue, good or bad?  You really can’t answer that question without more information about the object.  The semi-automated segmentation methods provided within **SimVascular** save you the work of generating the segmented contours, but you must decide if the segmentations are suitable for your purposes. 
 
 <figure>
-  <img class="svImg svImgSm"  src="documentation/modeling/imgs/segmentation/1.jpg"> 
+  <img class="svImg svImgSm"  src="archives/sv2/modeling/imgs/segmentation/1.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 

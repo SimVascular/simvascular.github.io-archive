@@ -13,7 +13,7 @@ With the two groups of segmentation, we are now able to create a model for the a
 	Click “File Input/Output → Save Model” to the file demo.vtp
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/userguide/imgs/modeling/polydata1.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/userguide/imgs/modeling/polydata1.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -27,7 +27,7 @@ A model file *demo.vtp* is created in the projector folder.
 	Click the button “Extract Boundaries”
 
 <figure>
-  <img class="svImg svImgXl" src="documentation/userguide/imgs/modeling/polydata2.jpg"> 
+  <img class="svImg svImgXl" src="archives/sv2/userguide/imgs/modeling/polydata2.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -41,7 +41,7 @@ All the faces of the model are listed under “Face Id”. You can move the curs
 	Enter inflow_aorta for surf name, and click “Set Value”
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/userguide/imgs/modeling/polydata3.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/userguide/imgs/modeling/polydata3.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -51,6 +51,6 @@ Now the inlet face name is changed to *inflow_aorta* in the list. Similarly, we 
 	Save to the file demo.vtp
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/userguide/imgs/modeling/polydata4.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/userguide/imgs/modeling/polydata4.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>

@@ -11,7 +11,7 @@ Go to the "Model" tab. Click on the "File Input/Output" drop-down menu and selec
 In this example, we are interested more in the flow in the right iliac of this model. we specify a mesh edge size of 0.17 on the aorta wall, and a mesh edge size of 0.1 on the right_iliac wall. We leave the global edge size at 0.15 for the remainder of the surfaces.
 
 <figure>
-  <img class="svImg svImgXl" src="documentation/meshing/img/TetGen_Local_Refinement.png">
+  <img class="svImg svImgXl" src="archives/sv2/meshing/img/TetGen_Local_Refinement.png">
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -24,6 +24,6 @@ Now we will generate the mesh for the model that includes these local mesh sizes
 5.	When the meshing is finished, a dialog box appears with mesh statistics.  Once you have reviewed the meshing output, you can click on the "OK" button in the "Mesh Statistics" dialog box.
 
 <figure>
-  <img class="svImg svImgXl" src="documentation/meshing/img/TetGen_Refinement_Mesh.png">
+  <img class="svImg svImgXl" src="archives/sv2/meshing/img/TetGen_Refinement_Mesh.png">
   <figcaption class="svCaption" ></figcaption>
 </figure>

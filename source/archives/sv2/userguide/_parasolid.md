@@ -14,7 +14,7 @@ With the two groups of segmentation, we are now able to create a model for the a
 	Click “File Input/Output → Save Model” to the file demo.xmt_txt
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/userguide/imgs/modeling/parasolid1.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/userguide/imgs/modeling/parasolid1.jpg"> 
    <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -27,7 +27,7 @@ All the faces of the model are listed under “Face Id”. You can move the curs
 	Enter inflow_aorta for surf name, and click “Set Value”
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/userguide/imgs/modeling/parasolid3.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/userguide/imgs/modeling/parasolid3.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -37,7 +37,7 @@ Now the inlet face name is changed to *inflow\_aorta* in the list. Similarly, we
 	Save to the file demo.xmt_txt
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/userguide/imgs/modeling/parasolid4.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/userguide/imgs/modeling/parasolid4.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 

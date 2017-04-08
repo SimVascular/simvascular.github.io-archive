@@ -3,7 +3,7 @@
 Sometimes it is desirable to get the centerlines of your model. In order to do this, navigate to the "Model → PolyData → Centerline Extraction"
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/polyData/centerlines/addingFaces.png"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/polyData/centerlines/addingFaces.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -13,7 +13,7 @@ Sometimes it is desirable to get the centerlines of your model. In order to do t
 	When done, the centerlines will be visualized on the screen
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/polyData/centerlines/visualizedCenterlines.png"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/polyData/centerlines/visualizedCenterlines.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 

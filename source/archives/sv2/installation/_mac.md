@@ -5,7 +5,7 @@
 2. Drag SimVascular into your Applications folder when this window opens.
 
 	<figure>
-	  <img class="svImg svImgXl"  src="documentation/installation/imgs/macDrag.png"> 
+	  <img class="svImg svImgXl"  src="archives/sv2/installation/imgs/macDrag.png"> 
 	  <figcaption class="svCaption" ></figcaption>
 	</figure>
 

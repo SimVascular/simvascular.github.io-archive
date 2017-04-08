@@ -7,7 +7,7 @@ Boundary conditions are crucial to obtaining high quality cardiovascular simulat
 - Vessel wall elastic properties (if we are modeling the vessel walls as deformable).
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/flowsolver/imgs/Fig_15.png">
+  <img class="svImg svImgMd" src="archives/sv2/flowsolver/imgs/Fig_15.png">
   <figcaption class="svCaption" >Inflow, outflow and wall characterization in a simple cylindrical vessel</figcaption>
 </figure>
 
@@ -31,12 +31,12 @@ $$
 where $Z$ is the Inverse Fourier Transform of an impedance function that characterizes the downstream vasculature, $p$ is the weakly prescribed pressure, $Q$ is the flow rate passing through the face, and $T$ is the cardiac cycle.
 
 <figure>
-  <img class="svImg svImgLg" src="documentation/flowsolver/imgs/Fig_16.png">
+  <img class="svImg svImgLg" src="archives/sv2/flowsolver/imgs/Fig_16.png">
   <figcaption class="svCaption" >Cardiovascular model with various boundary conditions</figcaption>
 </figure>
 
 <figure>
-  <img class="svImg svImgLg" src="documentation/flowsolver/imgs/Fig_17.png">
+  <img class="svImg svImgLg" src="archives/sv2/flowsolver/imgs/Fig_17.png">
   <figcaption class="svCaption" >Frequency content of impedance from the literature for the left external iliac and a canine femoral artery</figcaption>
 </figure>
 
@@ -51,7 +51,7 @@ That is, a relationship between pressure and flow modes for different frequencie
 - **RCR lumped parameters condition**. In this boundary condition type, we use a _reduced-order_ model of the downstream vasculature, considering an electric circuit analog. In this theory, the behavior of the vasculature is represented by three parameters: a proximal resistance $R\_p$, a capacitance $C$, and a distal resistance $R\_d$.
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/flowsolver/imgs/Fig_18.png">
+  <img class="svImg svImgMd" src="archives/sv2/flowsolver/imgs/Fig_18.png">
   <figcaption class="svCaption" >Circuit representation of RCR block</figcaption>
 </figure>
 

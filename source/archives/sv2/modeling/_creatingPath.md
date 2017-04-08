@@ -23,7 +23,7 @@ After you have entered “100” for the Path ID, “aorta” for the Path Name,
 After you click the "Create New Path" button, you should see a "+" appear beside the text "All Paths".  Click on the "+" will expand the list of all paths, and you should see something similar to the following window:
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/path_planning/creating_path/1.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/path_planning/creating_path/1.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -44,7 +44,7 @@ Additional functionality available under “Paths → General” tab:
 Under the “Paths” tab, click on the “Manual” tab:
 
 <figure>
-  <img class="svImg svImgXl" src="documentation/modeling/imgs/path_planning/creating_path/2.jpg"> 
+  <img class="svImg svImgXl" src="archives/sv2/modeling/imgs/path_planning/creating_path/2.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -63,7 +63,7 @@ Before we begin, you should familiarize yourself with the options found under th
 **Display Options:**
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/path_planning/creating_path/3.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/path_planning/creating_path/3.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -82,7 +82,7 @@ Before we begin, you should familiarize yourself with the options found under th
 **Attaching an Image Axis:**
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/path_planning/creating_path/4.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/path_planning/creating_path/4.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -93,7 +93,7 @@ Before we begin, you should familiarize yourself with the options found under th
 **Fixing an Axis:**
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/path_planning/creating_path/5.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/path_planning/creating_path/5.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -106,7 +106,7 @@ NOTE:  If you are using the interactive spline and image reslice, all of the Fix
 **Cursor Increment:**
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/path_planning/creating_path/6.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/path_planning/creating_path/6.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -117,7 +117,7 @@ Now we are ready to start building a path! First, we need to decide where we sho
 Let’s pick a point in the supra-celiac aorta.  Remember that you can display the point cloud or use another visualization technique to re-familiarize yourself with the data.  If you haven’t done so already, display the white 3-D path planning cursor (“cross-hairs”) by using selecting “Show Cursor” from “Paths → Manual → Display Options”:
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/path_planning/creating_path/7.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/path_planning/creating_path/7.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -133,7 +133,7 @@ Now you will see that if you move the 3-D cursor in the 3-D Graphics Window, the
 Then click “Add Point to End of Path” button to add the point to the “aorta”. The point should appear under “aorta” in the path treeview window (shown highlighted in blue in the following picture).
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/path_planning/creating_path/8.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/path_planning/creating_path/8.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -144,7 +144,7 @@ Keep the “S” image axis attached, and zoom in and rotate the image so that y
 <font color="red">**HELPFUL HINT:** </font>  If you accidently put a point in an undesired location and would like to delete a point, you can skip to later in this exercise to learn more about, “Deleting points in your path:”
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/path_planning/creating_path/9.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/path_planning/creating_path/9.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -153,14 +153,14 @@ Continue to move down the aorta inferiorly (from “S” to “I”) in incremen
 When you reach the bifurcation (the aorta splits into the two iliac arteries), continue your path down the LEFT iliac artery:
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/path_planning/creating_path/10.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/path_planning/creating_path/10.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
 Once you have finished building your path down as far as possible (you should be able to get to around slider position 6 before things get a harder to see – remember that you can change the window level in the 3D display window by clicking on the image slice and using your up/down and right/left arrow keys on the keyboard), visualize the current path by clicking on the “Display Options” drop-down menu under the “Paths” tab and check “Show Points” and “Show Spline”. The points you have chosen will appear as purple boxes, and the spline should show as a red line:
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/path_planning/creating_path/11.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/path_planning/creating_path/11.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -169,14 +169,14 @@ You can quickly see how well your path stays within the vessel by:
 1.	Sliding through the “S/I” slider bar under the “Volume Properties” tab
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/path_planning/creating_path/12.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/path_planning/creating_path/12.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
 2.	Setting the “Threshold Range” min value to “110” and displaying the “point cloud” under “Visualization Options”
 
 <figure>
-  <img class="svImg svImgXl" src="documentation/modeling/imgs/path_planning/creating_path/13.jpg"> 
+  <img class="svImg svImgXl" src="archives/sv2/modeling/imgs/path_planning/creating_path/13.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -189,7 +189,7 @@ Here are some ways you can modify your path so that it is more true to the image
 Select the pathpoint you want to delete by going to your 3D display window, placing your mouse arrow over the purple box representing the point you would like to delete, and typing “p” on your keyboard. Typing “p” when your mouse arrow is over a particular object “picks” that object. Anything in the window can be “picked” including the path, image slices, and the point cloud. You will know when something is selected when it becomes highlighted in yellow. You should also notice that when you have “picked” a pathpoint, that point’s coordinates will become highlighted in blue in your path treeview display. To delete the point, select the “Additional Options” drop-down menu under the “Path → Manual” tab and select “Delete currently selected point”. The pathpoint should disappear and your spline should regenerate based upon the points that are remaining.
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/path_planning/creating_path/14.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/path_planning/creating_path/14.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -209,7 +209,7 @@ Using point cloud or 2D image slice visualization techniques under the “Volume
 Once you are happy with your path, click on the “Update Path” button in the “Interactor” widget. Your old path will now be replaced by the new path you just adjusted.
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/path_planning/creating_path/15.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/path_planning/creating_path/15.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 

@@ -33,21 +33,21 @@ Here are some helpful hints for checking out your contours that you have created
 First, check to see that the contours are in the center of the “donut” in the potential window. An example of a contour that is in the center of the potential window “donut” is shown below:
 
 <figure>
-  <img class="svImg svImgSm"  src="documentation/modeling/imgs/segmentation/batch/10.jpg"> 
+  <img class="svImg svImgSm"  src="archives/sv2/modeling/imgs/segmentation/batch/10.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
 If the contour is not exactly in the center of the donut (like the example shown below), you can scale it using the methods we described in [Section: Modifying Contours](#modelingModifyingContours).
 
 <figure>
-  <img class="svImg svImgSm"  src="documentation/modeling/imgs/segmentation/batch/11.jpg"> 
+  <img class="svImg svImgSm"  src="archives/sv2/modeling/imgs/segmentation/batch/11.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
 Secondly, you want to check to make sure that the segmentation does not include a branch vessel, like the example shown below.  Although the level set method can segment these, including these in your final model will cause an artificial geometry know as a “lofting artifact.” You can fix these types of segmentations using the techniques described in [Section: Copying and Pasting Contours](#modelingCopyingPastingContours).
 
 <figure>
-  <img class="svImg svImgSm"  src="documentation/modeling/imgs/segmentation/batch/12.jpg"> 
+  <img class="svImg svImgSm"  src="archives/sv2/modeling/imgs/segmentation/batch/12.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 

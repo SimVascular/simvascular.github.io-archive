@@ -109,7 +109,7 @@ This is the block that controls the Boundary Conditions and the other features s
 Let us illustrate this with a more complex problem with 4 outlets (see figure below)
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/flowsolver/imgs/FourOutlets.png">
+  <img class="svImg svImgMd" src="archives/sv2/flowsolver/imgs/FourOutlets.png">
   <figcaption class="svCaption" >Schematic representation of a model with four outlets</figcaption>
 </figure>
 

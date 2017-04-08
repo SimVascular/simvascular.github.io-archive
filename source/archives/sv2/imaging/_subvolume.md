@@ -44,7 +44,7 @@ Once the scale bars have been set under the “Volume Properties” tab, go back
 Click on the “Resample voxel size” checkbox.  A green outline of a box should appear in the 3D display window as shown in the following picture. This green box shows the bounding box of the sub-volume to be displayed.
 
 <figure>
-  <img class="svImg svImgXl" src="documentation/imaging/imgs/subvolume/1.jpg"> 
+  <img class="svImg svImgXl" src="archives/sv2/imaging/imgs/subvolume/1.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -104,7 +104,7 @@ For this example, we will just look at the data as a point cloud and as an isosu
 **Visualizing Point Clouds:** Under the “Threshold Range” area in the “Subvolume Properties” tab, set the values to min: 100, max: 334.  Click the “point cloud” checkbox under “Visualization Options”.  You should see something like the following figure.  Notice that we now have only displayed part of the volume (the aortic bifurcation, where the aorta divides into the right and left common iliac arteries).
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/imaging/imgs/subvolume/2.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/imaging/imgs/subvolume/2.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -113,7 +113,7 @@ Now turn off the point cloud (deselect the “point cloud” checkbox).
 **Visualizing Isocontours:**  An additional technique, closely related to thresholding, is to display an isosurface of a user-defined value.  You can think of an isosurface as the 3D analog of a threshold. Click on the “isosurface” checkbox.  This will create an isosurface for the current sub-volume as shown below.
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/imaging/imgs/subvolume/3.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/imaging/imgs/subvolume/3.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 

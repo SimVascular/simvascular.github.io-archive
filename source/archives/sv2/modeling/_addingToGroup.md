@@ -7,7 +7,7 @@ Now, under the “Solids” tab, you should see the group “aorta” in your gr
 Under the “Level Set” tab, click on “Add Current Position to Group”. Under your group treeview window, the number “0” should appear, corresponding to the path position of the segmentation that was just added to the group (highlighted in blue):
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/adding_to_group/1.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/segmentation/adding_to_group/1.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -16,7 +16,7 @@ Let’s do another one. Move to position 10. You may already have a segmentation
 When you are through, click on the “Add Current Position to Group” button, and the number “10” should now appear below the number “0” in your group treeview window (highlighted in blue):
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/adding_to_group/2.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/segmentation/adding_to_group/2.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 

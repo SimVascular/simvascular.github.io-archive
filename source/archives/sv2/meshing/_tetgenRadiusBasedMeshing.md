@@ -8,7 +8,7 @@ When models contain surfaces of very different size scales, it is often desirabl
 In this example, we leave the Global edge size at 0.15, but we used a redius-based mesh edge size. Note that we have editted our surfaces so that we have only one wall surface!! 
 
 <figure>
-  <img class="svImg svImgXl" src="documentation/meshing/img/TetGen_Set_Radius_Based_Mesh.png">
+  <img class="svImg svImgXl" src="archives/sv2/meshing/img/TetGen_Set_Radius_Based_Mesh.png">
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -22,7 +22,7 @@ Now we will generate the mesh for the model that includes these local mesh sizes
 6.	When the meshing is finished, a dialog box appears with mesh statistics.  Once you have reviewed the meshing output, you can click on the "OK" button in the "Mesh Statistics" dialog box.
 
 <figure>
-  <img class="svImg svImgXl" src="documentation/meshing/img/TetGen_Radius_Based_Mesh.png">
+  <img class="svImg svImgXl" src="archives/sv2/meshing/img/TetGen_Radius_Based_Mesh.png">
   <figcaption class="svCaption" ></figcaption>
 </figure>
 

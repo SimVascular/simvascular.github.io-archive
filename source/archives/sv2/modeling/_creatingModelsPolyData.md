@@ -9,7 +9,7 @@ Navigate to the 2D Segmentation Tab and Display your groups.
 Navigate to the “Segmentation” tab in the functional toolbox. Under the Operations portion of the right hand side of the window, select the "Model Operations → Use Surface". This will put an "X" in the portion of the list that says "Use in Model". This will designate the surface as a surface to be used in the Boolean to create a full model.
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/polyData/creating_models/selectingOrderedGroups.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/polyData/creating_models/selectingOrderedGroups.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -17,14 +17,14 @@ Now navigate to the "Model → PolyData → Create Model" and click the button c
 A window will pop up asking what you would like to create a model. Name your model and click "Enter". You may not give a blank name, a name containing ".", or a name containing "/".
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/polyData/creating_models/namingNewModel.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/polyData/creating_models/namingNewModel.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
 Your completed model should look something like this:
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/polyData/creating_models/Boolean.png"> 
+  <img class="svImg svImgXl"  src="archives/sv2/modeling/imgs/polyData/creating_models/Boolean.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 

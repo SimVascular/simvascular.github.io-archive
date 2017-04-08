@@ -5,7 +5,7 @@
 The following figure contains a schematic representation of the processes involved in running a simulation using SimVascular.
 
 <figure>
-  <img class="svImg svImgLg" src="documentation/flowsolver/imgs/Fig_01.png">
+  <img class="svImg svImgLg" src="archives/sv2/flowsolver/imgs/Fig_01.png">
   <figcaption class="svCaption" >Workflow for generating hemodynamic results of a cylindrical model starting from a stereolithography of its exterior surface</figcaption>
 </figure>
 

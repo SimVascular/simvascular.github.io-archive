@@ -66,7 +66,7 @@ append\_displacements<br>
 After running the script, displacment.vtp is create in the project folder, which shows the initial displacement:
 
 <figure>
-  <img class="svImg svImgLg" src="documentation/flowsolver/imgs/disp_paraview.png">
+  <img class="svImg svImgLg" src="archives/sv2/flowsolver/imgs/disp_paraview.png">
   <figcaption class="svCaption" >Initila Displacement Calculated form svPre </figcaption>
 </figure>
 

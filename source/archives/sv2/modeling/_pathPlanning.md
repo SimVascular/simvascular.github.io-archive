@@ -11,7 +11,7 @@ Some tips to keep in mind as you are constructing paths.
 3.	Lastly, it’s easier if the paths pass near the center of the vessel lumens.  This makes it easier for the segmentation part of the process.
 
 <figure>
-  <img class="svImg svImgMd"  src="documentation/modeling/imgs/path_planning/1.jpg"> 
+  <img class="svImg svImgMd"  src="archives/sv2/modeling/imgs/path_planning/1.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 

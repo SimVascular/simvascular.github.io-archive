@@ -24,14 +24,14 @@ Window leveling determines the mapping between your imaging data and the colors 
 Graphically, this is what window leveling does:
 
 <figure>
-  <img class="svImg svImgLg"  src="documentation/imaging/imgs/window_level/1.jpg"> 
+  <img class="svImg svImgLg"  src="archives/sv2/imaging/imgs/window_level/1.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
 To see what effect the window leveling has on the data displayed, first turn off all of the visualization techniques from the previous exercises before continuing. Position the P/A scale to position 30.  Display (i.e. click the checkbox) the “P/A” image plane. Click on the radio button to switch the color map from “[0 255]” to “native [0.0 334.0] under “Select color map”. You should see an image similar to that below in your 3D display window.
   
 <figure>
-  <img class="svImg svImgXl"  src="documentation/imaging/imgs/window_level/2.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/imaging/imgs/window_level/2.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -58,7 +58,7 @@ The useful range of the imaging data is much smaller than the total range (0 to 
 Now we are going to try a non-linear color mapping function.  Move the cursor (i.e. arrow pointer) into the 3D display window. By holding down the up-and-down arrow keys, you change the maximum displayed value (all values equal to or greater than this value are displayed as white).  By pressing the left or right arrow keys you change the minimum displayed value (all values equal or below this value are shown as black).  Can you get an image similar to that shown below?
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/imaging/imgs/window_level/3.jpg"> 
+  <img class="svImg svImgXl"  src="archives/sv2/imaging/imgs/window_level/3.jpg"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
