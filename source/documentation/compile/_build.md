@@ -7,13 +7,13 @@
   </p>
 		<p>
 		 <pre class="highlight plaintext">
-<code><img src="img/docs/compile/folder.png" height="20" width="20"alt="..."><font color="##0000FF"> SimVascularSrc</font>
+<code><img src="documentation/compile/imgs/folder.png" height="20" width="20"alt="..."><font color="##0000FF"> SimVascularSrc</font>
 --- CMakeLists.txt: <ul><em>Highest level CMake file that contains very little. Simply builds the Externals project and then the SimVascular project. Should be the entrance location for anyone familiarizing themselves with SimVascular.</em></ul>
---- <img src="img/docs/compile/folder.png" height="20" width="20"alt="..."><font color="##0000FF"> Externals</font>
+--- <img src="documentation/compile/imgs/folder.png" height="20" width="20"alt="..."><font color="##0000FF"> Externals</font>
 <ul>--- CMakeLists.txt: <ul><em>Main CMake file for Externals. Very involved and contains options to use different versions of the externals, to build or download certain externals, etc. Many of these options are not available using the highest level CMake file, so if fine tuning of the Externals is desired, this is the spot to be.</em></ul></ul>
---- <img src="img/docs/compile/folder.png" height="20" width="20"alt="..."><font color="##0000FF"> Code</font>
+--- <img src="documentation/compile/imgs/folder.png" height="20" width="20"alt="..."><font color="##0000FF"> Code</font>
 <ul>--- CMakeLists.txt: <ul><em>Main CMake file for SimVascular. Very involved and contains options for building/not building certain libraries, shared/static libraries, etc. Many of these options are also not available using the highest level CMake file, so if fine tuning of the SimVascular build is desirec, this is the spot to be.</em></ul></ul>
---- <img src="img/docs/compile/folder.png" height="20" width="20"alt="..."><font color="##0000FF"> Remaining Src</font></code></pre>
+--- <img src="documentation/compile/imgs/folder.png" height="20" width="20"alt="..."><font color="##0000FF"> Remaining Src</font></code></pre>
 		</p>
   <p>
    <h3 id="buildingItAll">Building it all</h3>
@@ -30,15 +30,15 @@ mkdir Build
 cd Build
 ccmake ..</code></pre>
      <p>Configure the project with 'c'. CMake will run and then error because it needs Qt. Point it to the location of the Qt5Config.cmake file:</p>
-     <pre class="highlight plaintext"><code><img src="img/docs/compile/cmake_command_find_qt.png" alt="..."></code></pre>
+     <pre class="highlight plaintext"><code><img src="documentation/compile/imgs/cmake_command_find_qt.png" alt="..."></code></pre>
      <p>Reconfigure the project with 'c' until you can generate make files with 'g'. </p>
      <p>If you have no errors, generate the make files with 'g'.</p>
      <p>Proceed to <a href="#buildEverything">building the project</a>.</p>
      <h4>CMake GUI</h4>
      <p>If you use the cmake GUI, start the GUI and point to the source directory and a new build directory. You can choose a non-existent build directory, cmake will generate it for you.</p>
-     <pre class="highlight plaintext"><code><img src="img/docs/compile/cmake_gui_setup.png" alt="..."></code></pre>
+     <pre class="highlight plaintext"><code><img src="documentation/compile/imgs/cmake_gui_setup.png" alt="..."></code></pre>
      <p>Configure the project with 'c'. Unless you want to specify custom compilers, use the default compilers. CMake will run and then error because it needs Qt. Point it to the location of the Qt5Config.cmake file:</p>
-     <pre class="highlight plaintext"><code><img src="img/docs/compile/cmake_gui_find_qt.png" alt="..."></code></pre>
+     <pre class="highlight plaintext"><code><img src="documentation/compile/imgs/cmake_gui_find_qt.png" alt="..."></code></pre>
      <p>Configure the project again and if Qt is found succesfully, Qt variables will show up in the GUI. Configure one more time, and then the 'Generate' button should be clickable. Generate the build files with Generate and exit the CMake GUI.</p>
      <p>Proceed to <a href="#buildEverything">building the project</a>.</p>
      <h4>Toplevel SimVascular Variables</h4>
