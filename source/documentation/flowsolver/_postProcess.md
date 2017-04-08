@@ -15,7 +15,7 @@ In order to generate the visualization files (*.vip) and (*.vtu) files:
 	Choose a directory for exporting
 ~~~
 
-A new folder "steady-results" is created, which contains all the converted vtp and vtu files.
+A new folder "steady-converted-results" is created, which contains all the converted vtp and vtu files.
 
 <figure>
   <img class="svImg svImgMd" src="documentation/flowsolver/imgs/convertingresults.png">
