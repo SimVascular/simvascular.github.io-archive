@@ -17,7 +17,7 @@
 		</p>
   <p>
    <h3 id="buildingItAll">Building it all</h3>
-   <p>This is the easiest and most basic way to build SimVascular. If using a supported operating system and compiler, this is likely to work.
+   <p>This is the easiest and most basic way to build SimVascular. If using a supported operating system and compiler, this is likely to work.</p>
      <p>Follow the setup instructions for <a href="#sysSetupMac">Mac</a>, <a href="#sysSetupLinux">Linux</a>, or <a href="#sysSetupWin">Windows</a>.</p>
      <p>Use git to clone the SimVascular source:</p>
      <pre class="highlight plaintext"><code>git clone https://github.com/SimVascular/SimVascular.git SimVascularSrc</code></pre>
@@ -48,7 +48,7 @@ $SV_PLATFORM_VERSION_DIR -> Platform version #
 $SV_COMPILER_DIR -> Compiler being used
 $SV_COMPILER_VERSION_DIR -> Compiler version #
 $SV_ARCH_DIR -> Architecture (x32, x64)
-$SV_BUILD_TYPE_DIR -> Compile type (Release, Debug, RelWithDebInfo, MinSizeRel</code></pre>
+$SV_BUILD_TYPE_DIR -> Compile type (Release, Debug, RelWithDebInfo, MinSizeRel)</code></pre>
      <p>Note that changing these variables will only change the versions of the pre-built binaries downloaded. They will not change your physical configuration settings! For example, to actually change the compiler being used, the CMAKE_CXX_COMPILER variable should be changed.</p>
 
      <h4 id="buildEverything">Build the project</h4>
