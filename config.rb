@@ -45,13 +45,18 @@ activate :syntax
 #  :which_fake_page => "Rendering a fake page with a local variable" }
 
 # DOCS
-["Installation", "Compile", "QuickGuide", "ModelGuide", "Meshing", "FlowSolver", "Refs", "CodeSnippets"].each do |name|
+["Installation", "QuickGuide", "ModelGuide", "Meshing", "FlowSolver", "Compile", "CodeSnippets", "Refs"].each do |name|
   proxy "/docs#{name}.html", "/docsTemplate.html", :locals => { :man_name => name }, :ignore => true
 end
 
 # CLINICAL TEST CASES
 ["Case1", "Case2", "Case3", "Case4"].each do |name|
   proxy "/clinical#{name}.html", "/clinicalTemplate.html", :locals => { :clinical_name => name }, :ignore => true
+end
+
+# ARCHIVES
+["InstallationSV2", "QuickGuideSV2", "ImageGuideSV2", "ModelGuideSV2", "MeshingSV2", "FlowSolverSV2", "CodeSnippetsSV2"].each do |name|
+  proxy "/archive#{name}.html", "/archiveTemplate.html", :locals => { :man_name => name }, :ignore => true
 end
 
 ###
