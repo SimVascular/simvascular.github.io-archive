@@ -1,4 +1,4 @@
-# Case 4 - Healthy Pulmonary #
+# Healthy Pulmonary #
 
 ##Clinical Significance 
 

@@ -12,27 +12,24 @@
 
 1. Unpack the installer (tar file).
 
-2. SimVascular contains two different GUIs. To launch SimVascular:
+2. To launch SimVascular:
 
 		Open a terminal
 		Go to SimVascular installation directory
-		Run "./simvascular -qt" (for new GUI)
-		Run "./simvascular" (for old GUI)
+		Run "./simvascular" 		Run "./simvascular" (for old GUI)
 
 3. Notice: it may mention missing some libs during launch, according to the information, try "sudo apt-get install [missing lib]" to install them. Most likely you need to run:
 
-		For new GUI:
 		sudo apt-get install libgstreamer0.10-0
 		sudo apt-get install libgstreamer-plugins-base0.10-dev
-
-		For old GUI:
-		sudo apt-get install tcllib tklib
-		sudo apt-get install tcl-dev tk-dev
 
 		Sometimes, you may need to:
 		sudo apt-get install libxss
 		sudo apt-get install libxmu-dev (for OpenCASCADE)
 		sudo apt-get install libxi-dev  (for OpenCASCADE)
+
+		sudo apt-get install tcllib tklib (for old GUI)
+		sudo apt-get install tcl-dev tk-dev (for old GUI)
 
 4. To use SimVascular Simulation tool, you need to install MPI:
 

@@ -17,12 +17,7 @@
 	  <figcaption class="svCaption" ></figcaption>
 	</figure>
 
-3. SimVascular contains two different GUIs. To use the new GUI, please first create an empty text file your home folder:
-	
-		Open a terminal (found underneath Launchpad->Other).
-		Type “touch ~/.simvascular_default_qt”
-
-4. Launch SimVascular through your Applications folder or Launchpad.
+3. Launch SimVascular through your Applications folder or Launchpad.
 
 		A dialog may popup when launching, saying: “SimVascular” can’t be opened because it is from an unidentified developer.”.
 		Go to System Preferences -> Security & Privacy -> General, click “Open Anyway”.
