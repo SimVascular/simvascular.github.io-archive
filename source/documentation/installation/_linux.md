@@ -16,7 +16,7 @@
 
 		Open a terminal
 		Go to SimVascular installation directory
-		Run "./simvascular" 		Run "./simvascular" (for old GUI)
+		Run "./simvascular" 
 
 3. Notice: it may mention missing some libs during launch, according to the information, try "sudo apt-get install [missing lib]" to install them. Most likely you need to run:
 
