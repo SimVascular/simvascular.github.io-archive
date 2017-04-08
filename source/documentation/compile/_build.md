@@ -51,8 +51,8 @@ $SV_ARCH_DIR -> Architecture (x32, x64)
 $SV_BUILD_TYPE_DIR -> Compile type (Release, Debug, RelWithDebInfo, MinSizeRel)</code></pre>
      <p>Note that changing these variables will only change the versions of the pre-built binaries downloaded. They will not change your physical configuration settings! For example, to actually change the compiler being used, the CMAKE_CXX_COMPILER variable should be changed.</p>
 
-     <h4 id="buildEverything">Build the project</h4>
-     <p>Navigate to the cmake build directory where you just generated the makefiles.</p>
+   <h4 id="buildEverything">Build the project</h4>
+   <p>Navigate to the cmake build directory where you just generated the makefiles.</p>
      <pre class="highlight plaintext"><code>cd /Users/username/Documents/Software/SimVascularSrc/Build
 make</code></pre>
      <p>If the build immediately errors, the system you are using is most likely not supported.</p>
