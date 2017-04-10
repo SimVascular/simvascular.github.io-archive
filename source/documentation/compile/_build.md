@@ -43,12 +43,12 @@ ccmake ..</code></pre>
      <p>Proceed to <a href="#buildEverything">building the project</a>.</p>
      <h4>Toplevel SimVascular Variables</h4>
      <p>Most likely, all these variables should be fine and they should not be changed. These variables indicate what version of the pre-built binaries to download from the simvascular server. You can navigate and see the available pre-buit binaries <a href="http://simvascular.stanford.edu/downloads/public/simvascular/externals">here</a>.The toplevel variables you can edit correspond to the directory structure.</p>
-     <pre class="highlight plaintext"><code>$SV_PLATFORM_DIR -> Platform being used (mac_osx, ubuntu, windows)
-$SV_PLATFORM_VERSION_DIR -> Platform version #
-$SV_COMPILER_DIR -> Compiler being used
-$SV_COMPILER_VERSION_DIR -> Compiler version #
-$SV_ARCH_DIR -> Architecture (x32, x64)
-$SV_BUILD_TYPE_DIR -> Compile type (Release, Debug, RelWithDebInfo, MinSizeRel)</code></pre>
+     <pre class="highlight plaintext"><code>$SV\_PLATFORM\_DIR -> Platform being used (mac\_osx, ubuntu, windows)
+$SV\_PLATFORM\_VERSION\_DIR -> Platform version #
+$SV\_COMPILER\_DIR -> Compiler being used
+$SV\_COMPILER\_VERSION\_DIR -> Compiler version #
+$SV\_ARCH\_DIR -> Architecture (x32, x64)
+$SV\_BUILD\_TYPE\_DIR -> Compile type (Release, Debug, RelWithDebInfo, MinSizeRel)</code></pre>
      <p>Note that changing these variables will only change the versions of the pre-built binaries downloaded. They will not change your physical configuration settings! For example, to actually change the compiler being used, the CMAKE_CXX_COMPILER variable should be changed.</p>
 
    <h4 id="buildEverything">Build the project</h4>
