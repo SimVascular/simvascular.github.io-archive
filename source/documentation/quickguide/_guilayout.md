@@ -34,3 +34,11 @@ There are three toolbars shown as below. They give quick access to various funct
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
+### Status Bar
+
+The status bar is a convenient location which provides some useful information about the data you are working on or the status/progress of some ongoing data operation, crosshair center coordiantes, memory usage, etc.
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/quickguide/imgs/statusbar.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>

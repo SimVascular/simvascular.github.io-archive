@@ -1,6 +1,6 @@
 ##Project Management
 
-To work on a modeling/simualtion case, it is recommended to create a SimVascular (SV) Project first. The project can organize, manage, save all the required data. 
+To work on a modeling/simualtion case, it is required to create a SimVascular (SV) Project first. The project can organize, manage, save all the required data. 
 
 **To create a project:**
 
@@ -20,17 +20,6 @@ A new project is created in Data Manager as below. It has no actual data so far.
   <img class="svImg svImgSm" src="documentation/quickguide/imgs/emptyproject.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
-
-**To use an image for a project, the image is required to be added to the project.**
-
-**To add a image to a project:**
-
-	Right click the data node "Images" in the project "SVProject" in Data Manager
-	Click "Add/Replace Image" in the popup menu
-	Choose an image and click "Open"
-	Copy into Project? Choose Yes or No
-
-Then the image is added under the data node "Images". At the same, the image is shown in Display.
 
 If you add/remove data nodes, or change data of a data node inside a SV project, you need to save those changes to the underlying files.
 
@@ -52,3 +41,19 @@ You can close a project with exiting SimVascular. Make sure you save the project
 
 	Undo: Ctrl+Z
 	Redo: Ctrl+Y
+
+###Add Image to Project
+
+**To use an image for a project, the image is required to be added to the project.**
+
+**To add a image to a project:**
+
+	Right click the data node "Images" in the project "SVProject" in Data Manager
+	Click "Add/Replace Image" in the popup menu
+	Choose an image and click "Open"
+	"Do you want to copy the image as vti into the project?" Choose Yes or No
+	If Yes, "Do you wanto scale the image (for unit conversion)?": for instance, 0.1 if from mm to cm.
+
+Then the image is added under the data node "Images". At the same time, the image is shown in Display. If you choose to copy the image to the project, the project is portable and you can transfer the project to another computer and continue working on it.
+
+<font color="red">**HELPFUL HINT:** </font> If you want to add a series of DICOM images to the project, just choose one of them, SimVascular will load all the images in the same folder.

@@ -6,6 +6,8 @@ To open a file (loading data into Data Manager):
 
 	Menu: File → Open File...
 
+<font color="red">**Attention:** </font> If you load a file by "Open File", the data is loaded into Data Manager but not into a SimVascular Project. Therefore, SimVascular's project management doen's apply to it. But you are still able to use various tools with the data.
+
 To show/hide data (in Display):
 
 	Toggle on/off the checkbox next to the corresponding data node in Data Manager

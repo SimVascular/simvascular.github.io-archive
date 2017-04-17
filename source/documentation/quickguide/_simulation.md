@@ -61,6 +61,8 @@ To set BC for the outlets (outflow\_right\_iliac, outflow\_aorta):
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
+<font color="red">**HELPFUL HINT:** </font> When a cap is selected, some geoetry info (area) about this cap is shown in the status bar on the bottom of the main window. 
+
 ###Wall Properties
 
 	Type: Rigid
@@ -100,15 +102,28 @@ After the simulation is completed, all the simulation result files restart.**.*\
 
 <font color="red">**HELPFUL HINT:** </font>  If you choose more than one processors, for example, 8 processors are used. **SimVascular** will create a new folder *8-procs\_case* in the folder [proj_path]/Simulations/demojob. All the simulation result files restart.\*.\* are in the folder 8-procs_\_case.
 
-(Optional) You can also export the required data files and upload to a computer cluster to run the simulation.
+####Runnning Simulation at Computer Clusters
+
+You can also export the required data files and upload to a computer cluster to run the simulation. 
 
 To export the files:
 
+	Make sure you have created data files for this job.
 	Right click on the job node "demojob" in Data Manager
 	Click "Export Data Files"
 	Select a directory
 
-A folder "demojob-sim-files" is created, which contains the exported data files to run the simulation.
+A folder "demojob-sim-files" is created, which contains the required files to run the simulation. 
+
+To run the simulation at the cluster:
+
+	Make sure SimVascular flow solver is available on the cluster.
+	Upload the folder "demojob-sim-files" to the cluster
+	Login the cluster
+	Go to the folder "demojob-sim-files"
+	Run "mpiexec -n [number of processes] [solver path]/svsolver" or you need create/submit a job file as required by the cluster to run the simulation
+
+During the simualtion, result files are saved at the folder "demojob-sim-files/[number of processes]]-procs_case/". You can download the files back to your computer and convert them to vtp/vtu files.
 
 ###Convert Results
 

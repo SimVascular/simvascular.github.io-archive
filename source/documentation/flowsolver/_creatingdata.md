@@ -53,7 +53,7 @@ restart.n.1 , restart.n.2 , restart.n.3 , restart.n.4 , ...
 This step creates files inside the job folder in the SV project
 
 	Choose Mesh: cylinder	
-	Click the button "Create Input and Data Files in Job"
+	Click the button "Create Data Files for Simulation"
 
 A new directory using the job name "steady" is created under the folder "Simulations" and contains the following folder/files:
 
@@ -67,18 +67,9 @@ A new directory using the job name "steady" is created under the folder "Simulat
 		bct.dat (and bct.vtp)
 		solver.inp
 		numstart.dat
+		rcrt.dat (if applicable)
+		cort.dat (if applicable)
 
-###Exporting Data Files (optional)
-
-If you want run the simualtion in a computer cluster. You need export those data files and upload them to the computer cluster.
-
-To export the files:
-
-	Right click the job node "steady" in Data Manager
-	Click "Export Data Files"
-	Select a directory for exporting.
-
-A new folder "steady-sim-files" is created, which includes the requied files by flowsolver
 
 
 

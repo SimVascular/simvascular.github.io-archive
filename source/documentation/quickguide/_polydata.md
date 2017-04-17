@@ -29,6 +29,8 @@ All the faces of the model are listed under “Face List” tab. Double click a 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
+<font color="red">**HELPFUL HINT:** </font> When a face is selected, some geoetry info (area) about this face is shown in the status bar on the bottom of the main window. 
+
 Different colors can be assigned to those faces.
 
 	Double click the table cell in the column "C" in the table.

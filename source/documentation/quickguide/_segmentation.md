@@ -29,6 +29,8 @@ To interactively modify the contour:
 Continue to move along the path in increments of about 5-25 using the “Reslice" slider until approximately 285, and define and add contours to the group. You may wish to additionally smooth certain contours, then selecte the contour and click the button "Smooth". Values between 6 and 10 for Fourier number are appropriate for this section of the aorta.
 If a contour is abnormal because the probe plane is at the vessel bifurcation region, just delete this contour and move down the path to get a better contour.
 
+<font color="red">**HELPFUL HINT:** </font> When a contour is selected, some geoetry info about this contour is shown in the status bar on the bottom of the main window. The info includes area, perimeter, and the center point coordinates.
+
 To speed up modeling, **SimVascular** can perform batch segmentations.  To perform batch segmentation:
 
 	Toggle on "Batch Mode"
