@@ -754,7 +754,7 @@ restart.0.1 =&gt; restart.0.1 , restart.0.2 , restart.0.3 , restart.0.4
 
 <p>This step creates files inside the job folder in the SV project</p>
 <pre class="highlight plaintext"><code>Choose Mesh: cylinder   
-Click the button "Create Input and Data Files in Job"
+Click the button "Create Data Files for Simulation"
 </code></pre>
 
 <p>A new directory using the job name &ldquo;steady&rdquo; is created under the folder &ldquo;Simulations&rdquo; and contains the following folder/files:</p>
@@ -768,19 +768,9 @@ For flowsolver
     bct.dat (and bct.vtp)
     solver.inp
     numstart.dat
+    rcrt.dat (if applicable)
+    cort.dat (if applicable)
 </code></pre>
-
-<h3>Exporting Data Files (optional)</h3>
-
-<p>If you want run the simualtion in a computer cluster. You need export those data files and upload them to the computer cluster.</p>
-
-<p>To export the files:</p>
-<pre class="highlight plaintext"><code>Right click the job node "steady" in Data Manager
-Click "Export Data Files"
-Select a directory for exporting.
-</code></pre>
-
-<p>A new folder &ldquo;steady-sim-files&rdquo; is created, which includes the requied files by flowsolver</p>
 </section>
     <section id="runningjob" class="subgroup"><h2>Running Simualtion Jobs</h2>
 
@@ -1117,6 +1107,29 @@ indicator of the spatial uniformity of the residual.</p></li>
 <p>Sometimes you want to continue the finished simulation job. Make use the same number of processes as the previous one and just click the button &ldquo;Run Job&rdquo;. Now the solver starts another 200-step simulation from time step 200.</p>
 
 <p>As the simulation is completed, we are now ready to look at the restart files containing the solution. We&rsquo;ll convert these files to generate the visualization files. We explain that process in the following section.</p>
+
+<h3>Running Simualtion Jobs at Clusters</h3>
+
+<p>You can also export the required data files and upload to a computer cluster to run the simulation. Make sure SimVascular flow solver is available in the cluster.</p>
+
+<p>To export the files:</p>
+<pre class="highlight plaintext"><code>Make sure you have created data files for this job. 
+Right click the job node "steady" in Data Manager
+Click "Export Data Files"
+Select a directory for exporting.
+</code></pre>
+
+<p>A new folder &ldquo;steady-sim-files&rdquo; is created, which includes the requied files by flowsolver</p>
+
+<p>To run the simulation at the cluster:</p>
+<pre class="highlight plaintext"><code>Make sure SimVascular flow solver is available on the cluster.
+Upload the folder "steady-sim-files" to the cluster
+Login the cluster
+Go to the folder "steady-sim-files"
+Run "mpiexec -n [number of processes] [solver path]/svsolver" or you need create/submit a job file as required by the cluster to run the simulation
+</code></pre>
+
+<p>During the simualtion, result files are saved at the folder &ldquo;steady-sim-files/[number of processes]]-procs_case/&rdquo;. You can download the files back to your computer and convert them to vtp/vtu files.</p>
 </section>
 
     <section id="postprocess" class="group"><h2>Post-processing</h2>

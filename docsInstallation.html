@@ -185,7 +185,14 @@ Window 7
 
 <ol>
 <li><p>Install SimVascular </p></li>
-<li><p>To use SimVascular Simulation tool, it&rsquo;s required to install svSolvers. There is a separate installer for svSolvers at simtk.org</p></li>
+<li><p>SimVascular still provides the old GUI. If you want to launch SimVascular with the old GUI:</p>
+<pre class="highlight plaintext"><code>Right click on the SimVascular icon on the desktop.
+Add "-tcl" to the very end of the "Target:" command line, for example:
+    "C:\Program Files\SimVascular\sv\yyyy-mm-dd\simvascular-bin.exe "Tcl/SimVascular_2.0/simvascular_startup.tcl -tcl"
+Or
+Copy the original icon and make such change so you have one icon for the new GUI and the other for the old GUI.
+</code></pre></li>
+<li><p>To access the full functions of SimVascular Simulation tool, it&rsquo;s required to install svSolvers. There is a separate installer for svSolvers at simtk.org</p></li>
 <li><p>For <strong>Windows 7</strong>, you may need to install a few extra package to use SimVascular.</p>
 <pre class="highlight plaintext"><code>NetFx20SP2_x86.exe
 </code></pre></li>
@@ -216,6 +223,11 @@ Window 7
 Go to System Preferences -&gt; Security &amp; Privacy -&gt; General, click “Open Anyway”.
 If it doesn't work, turn on  "Anywhere" for "Allow apps downloaded from"; After SimVascular launches, turn it back on to "Mac App Store and identified developers".
 </code></pre></li>
+<li><p>SimVascular still provides the old GUI. If you want to launch SimVascular with the old GUI by default:</p>
+<pre class="highlight plaintext"><code>Open a terminal.
+Run "touch ~/.simvascular_default_tcl" which creates an empty file.
+</code></pre></li>
+<li><p>To access the full functions of SimVascular Simulation tool, it&rsquo;s required to install svSolvers. There is a separate installer for svSolvers at simtk.org</p></li>
 <li><p>(Optional) You can also launch SimVascular using the Terminal. To install the SimvVascular command line tools run:</p>
 <pre class="highlight plaintext"><code>sudo /Applications/SimVascular.app/Contents/Resources/setup-symlinks.sh
 </code></pre></li>
@@ -236,7 +248,7 @@ Ubuntu 16 (tested)
 <h3>Installing SimVascular</h3>
 
 <ol>
-<li><p>Unpack the installer (tar file).</p></li>
+<li><p>Unpack the installer (zip/tar file).</p></li>
 <li><p>To launch SimVascular:</p>
 <pre class="highlight plaintext"><code>Open a terminal
 Go to SimVascular installation directory
@@ -250,7 +262,12 @@ Sometimes, you may need to:
 sudo apt-get install libxss
 sudo apt-get install libxmu-dev (for OpenCASCADE)
 sudo apt-get install libxi-dev  (for OpenCASCADE)
+</code></pre></li>
+<li><p>SimVascular still provides the old GUI. If you want to launch SimVascular with the old GUI by default:</p>
+<pre class="highlight plaintext"><code>Open a terminal.
+Run "touch ~/.simvascular_default_tcl" which creates an empty file.
 
+you may need to:
 sudo apt-get install tcllib tklib (for old GUI)
 sudo apt-get install tcl-dev tk-dev (for old GUI)
 </code></pre></li>

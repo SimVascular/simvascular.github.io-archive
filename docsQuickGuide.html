@@ -145,6 +145,7 @@
 <li><a href="#intro">Introduction</a></li>
 <li><a href="#guilayout">GUI Layout</a></li>
 <li><a href="#datamanager">Data Manager</a></li>
+<li><a href="#dicom">DICOM Images</a></li>
 <li><a href="#display">Display</a></li>
 <li><a href="#imagenavigator">Image Navigator</a></li>
 <li><a href="#volumerendering">Volume Rendering</a></li>
@@ -235,6 +236,15 @@ Switch between the preset GUI layouts (Perspectives): Menu -&gt; Windows -&gt; O
   <img class="svImg svImgXl"  src="documentation/quickguide/imgs/toolbars.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
+
+<h3>Status Bar</h3>
+
+<p>The status bar is a convenient location which provides some useful information about the data you are working on or the status/progress of some ongoing data operation, crosshair center coordiantes, memory usage, etc.</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/quickguide/imgs/statusbar.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
 </section>
 <section id="datamanager" class="group"><h2>Data Manager</h2>
 
@@ -243,6 +253,8 @@ Switch between the preset GUI layouts (Perspectives): Menu -&gt; Windows -&gt; O
 <p>To open a file (loading data into Data Manager):</p>
 <pre class="highlight plaintext"><code>Menu: File → Open File...
 </code></pre>
+
+<p><font color="red"><strong>Attention:</strong> </font> If you load a file by &ldquo;Open File&rdquo;, the data is loaded into Data Manager but not into a SimVascular Project. Therefore, SimVascular&rsquo;s project management doen&rsquo;s apply to it. But you are still able to use various tools with the data.</p>
 
 <p>To show/hide data (in Display):</p>
 <pre class="highlight plaintext"><code>Toggle on/off the checkbox next to the corresponding data node in Data Manager
@@ -274,6 +286,31 @@ Switch between the preset GUI layouts (Perspectives): Menu -&gt; Windows -&gt; O
 
 <p><strong>Texture Interpolation:</strong> Smoothes the image, so that no single pixels are visible anymore. <br>
 <strong>Colormap:</strong> Change the colormap for the image <br></p>
+</section>
+<section id="dicom" class="group"><h2>DICOM Images</h2>
+
+<p>SimVascular provides several ways to load dicom images.</p>
+
+<p>The simplest way is:</p>
+<pre class="highlight plaintext"><code>Menu: File → Open File...
+Select one of dicom image
+SimVascular automatically loads all the images from the same folder
+</code></pre>
+
+<p>The advanced way (providing more info) is to use the tool &ldquo;MITK DICOM Browser&rdquo; <img src="documentation/quickguide/imgs/dicom.png"></p>
+<pre class="highlight plaintext"><code>Toolbar: MITK DICOM Browser
+Go to tab: "Import"
+Click "Scan directory" and select the directory which inlucdes dicome images
+Some info is listed in the tables
+Select an item in one of the tables
+Click "Add to local storage" to add the selected one to the local storage
+Click "View" to add the selected on to Data Manager, which enable you to see the image in Display.
+</code></pre>
+
+<figure>
+  <img class="svImg svImgMd"  src="documentation/quickguide/imgs/dicomplugin.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
 </section>
 <section id="display" class="group"><h2>Display</h2>
 
@@ -389,7 +426,7 @@ Choose a preset or click the tab "Threshold" or "Bell" to create a custom transf
 
 <section id="projectmanagement" class="group"><h2>Project Management</h2>
 
-<p>To work on a modeling/simualtion case, it is recommended to create a SimVascular (SV) Project first. The project can organize, manage, save all the required data. </p>
+<p>To work on a modeling/simualtion case, it is required to create a SimVascular (SV) Project first. The project can organize, manage, save all the required data. </p>
 
 <p><strong>To create a project:</strong></p>
 <pre class="highlight plaintext"><code>Menu: File → Create SV Project...
@@ -410,17 +447,6 @@ Click the button “OK”
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-<p><strong>To use an image for a project, the image is required to be added to the project.</strong></p>
-
-<p><strong>To add a image to a project:</strong></p>
-<pre class="highlight plaintext"><code>Right click the data node "Images" in the project "SVProject" in Data Manager
-Click "Add/Replace Image" in the popup menu
-Choose an image and click "Open"
-Copy into Project? Choose Yes or No
-</code></pre>
-
-<p>Then the image is added under the data node &ldquo;Images&rdquo;. At the same, the image is shown in Display.</p>
-
 <p>If you add/remove data nodes, or change data of a data node inside a SV project, you need to save those changes to the underlying files.</p>
 
 <p><strong>To save SV projects:</strong></p>
@@ -439,6 +465,22 @@ Click "Close SV Project" in the popup menu
 <pre class="highlight plaintext"><code>Undo: Ctrl+Z
 Redo: Ctrl+Y
 </code></pre>
+
+<h3>Add Image to Project</h3>
+
+<p><strong>To use an image for a project, the image is required to be added to the project.</strong></p>
+
+<p><strong>To add a image to a project:</strong></p>
+<pre class="highlight plaintext"><code>Right click the data node "Images" in the project "SVProject" in Data Manager
+Click "Add/Replace Image" in the popup menu
+Choose an image and click "Open"
+"Do you want to copy the image as vti into the project?" Choose Yes or No
+If Yes, "Do you wanto scale the image (for unit conversion)?": for instance, 0.1 if from mm to cm.
+</code></pre>
+
+<p>Then the image is added under the data node &ldquo;Images&rdquo;. At the same time, the image is shown in Display. If you choose to copy the image to the project, the project is portable and you can transfer the project to another computer and continue working on it.</p>
+
+<p><font color="red"><strong>HELPFUL HINT:</strong> </font> If you want to add a series of DICOM images to the project, just choose one of them, SimVascular will load all the images in the same folder.</p>
 </section>
 
 <section id="modeling" class="group"><h2>Geometric Modeling</h2>
@@ -529,6 +571,8 @@ Left press on the point and move
 <p>Continue to move along the path in increments of about 5-25 using the “Reslice&quot; slider until approximately 285, and define and add contours to the group. You may wish to additionally smooth certain contours, then selecte the contour and click the button &ldquo;Smooth&rdquo;. Values between 6 and 10 for Fourier number are appropriate for this section of the aorta.
 If a contour is abnormal because the probe plane is at the vessel bifurcation region, just delete this contour and move down the path to get a better contour.</p>
 
+<p><font color="red"><strong>HELPFUL HINT:</strong> </font> When a contour is selected, some geoetry info about this contour is shown in the status bar on the bottom of the main window. The info includes area, perimeter, and the center point coordinates.</p>
+
 <p>To speed up modeling, <strong>SimVascular</strong> can perform batch segmentations.  To perform batch segmentation:</p>
 <pre class="highlight plaintext"><code>Toggle on "Batch Mode"
 Enter "10:30:600" in List.
@@ -586,6 +630,8 @@ Press key "S"
   <img class="svImg svImgLg"  src="documentation/quickguide/imgs/highlightface.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
+
+<p><font color="red"><strong>HELPFUL HINT:</strong> </font> When a face is selected, some geoetry info (area) about this face is shown in the status bar on the bottom of the main window. </p>
 
 <p>Different colors can be assigned to those faces.</p>
 <pre class="highlight plaintext"><code>Double click the table cell in the column "C" in the table.
@@ -768,6 +814,8 @@ Assign 16000
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
+<p><font color="red"><strong>HELPFUL HINT:</strong> </font> When a cap is selected, some geoetry info (area) about this cap is shown in the status bar on the bottom of the main window. </p>
+
 <h3>Wall Properties</h3>
 <pre class="highlight plaintext"><code>Type: Rigid
 </code></pre>
@@ -805,15 +853,28 @@ Click the button "Run Simulation"
 
 <p><font color="red"><strong>HELPFUL HINT:</strong> </font>  If you choose more than one processors, for example, 8 processors are used. <strong>SimVascular</strong> will create a new folder <em>8-procs_case</em> in the folder [proj<em>path]/Simulations/demojob. All the simulation result files restart.*.* are in the folder 8-procs</em>_case.</p>
 
-<p>(Optional) You can also export the required data files and upload to a computer cluster to run the simulation.</p>
+<h4>Runnning Simulation at Computer Clusters</h4>
+
+<p>You can also export the required data files and upload to a computer cluster to run the simulation. </p>
 
 <p>To export the files:</p>
-<pre class="highlight plaintext"><code>Right click on the job node "demojob" in Data Manager
+<pre class="highlight plaintext"><code>Make sure you have created data files for this job.
+Right click on the job node "demojob" in Data Manager
 Click "Export Data Files"
 Select a directory
 </code></pre>
 
-<p>A folder &ldquo;demojob-sim-files&rdquo; is created, which contains the exported data files to run the simulation.</p>
+<p>A folder &ldquo;demojob-sim-files&rdquo; is created, which contains the required files to run the simulation. </p>
+
+<p>To run the simulation at the cluster:</p>
+<pre class="highlight plaintext"><code>Make sure SimVascular flow solver is available on the cluster.
+Upload the folder "demojob-sim-files" to the cluster
+Login the cluster
+Go to the folder "demojob-sim-files"
+Run "mpiexec -n [number of processes] [solver path]/svsolver" or you need create/submit a job file as required by the cluster to run the simulation
+</code></pre>
+
+<p>During the simualtion, result files are saved at the folder &ldquo;demojob-sim-files/[number of processes]]-procs_case/&rdquo;. You can download the files back to your computer and convert them to vtp/vtu files.</p>
 
 <h3>Convert Results</h3>
 
