@@ -23,7 +23,14 @@
 		Go to System Preferences -> Security & Privacy -> General, click “Open Anyway”.
 		If it doesn't work, turn on  "Anywhere" for "Allow apps downloaded from"; After SimVascular launches, turn it back on to "Mac App Store and identified developers".
 
-5. (Optional) You can also launch SimVascular using the Terminal. To install the SimvVascular command line tools run:
+4. SimVascular still provides the old GUI. If you want to launch SimVascular with the old GUI by default:
+
+		Open a terminal.
+		Run "touch ~/.simvascular_default_tcl" which creates an empty file.
+
+5. To access the full functions of SimVascular Simulation tool, it's required to install svSolvers. There is a separate installer for svSolvers at simtk.org
+
+6. (Optional) You can also launch SimVascular using the Terminal. To install the SimvVascular command line tools run:
 
 		sudo /Applications/SimVascular.app/Contents/Resources/setup-symlinks.sh
 
