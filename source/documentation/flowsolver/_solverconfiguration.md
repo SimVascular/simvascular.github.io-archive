@@ -60,14 +60,22 @@ If solvers and mpiexec are installed separately:
 
 **Windows**
 
-	There is a separate installer for svsolvers at simtk.org.
-	Download and install svsolver-xxxx.exe (including MPI installer)
-	Simulation tool should be able to find them. If it couldn't find them, configure them in terms to the instrcutions above.
+There is a separate installer for svsolvers at simtk.org, which includes MPI installer.	Simulation tool should be able to find them. If it couldn't find them, configure them in terms to the instrcutions above.
+
+For the versions from 2017-04-09
+
+	The solvers are located at C:\Program Files\SimVascular\svSolver\yyyy-mm-dd\
+	Presolver: C:\Program Files\SimVascular\svSolver\yyyy-mm-dd\svpre-bin.exe
+	Flowsolver: C:\Program Files\SimVascular\svSolver\yyyy-mm-dd\svsolver-msmpi-bin.exe
+	Postsolver: C:\Program Files\SimVascular\svSolver\yyyy-mm-dd\svpost-bin.exe
+	Flowsolver (without mpi): C:\Program Files\SimVascular\svSolver\yyyy-mm-dd\svsolver-nompi-bin.exe
+
+For the versions before 2017-04-09
+
 	The solvers are located at C:\Program Files (x86)\SimVascular\svSolver\Release\xxxxxxxxxx\
 	Presolver: C:\Program Files (x86)\SimVascular\svSolver\Release\xxxxxxxxxx\svpre-bin.exe
 	Flowsolver: C:\Program Files (x86)\SimVascular\svSolver\Release\xxxxxxxxxx\svsolver-msmpi-bin.exe
 	Postsolver: C:\Program Files (x86)\SimVascular\svSolver\Release\xxxxxxxxxx\svpost-bin.exe
-
-
+	Flowsolver (without mpi): C:\Program Files (x86)\SimVascular\svSolver\Release\xxxxxxxxxx\svsolver-nompi-bin.exe
 
 

@@ -88,16 +88,16 @@ systems.
 </tr>
 </thead>
 <tr>
-  <td>Dynamic viscosity $\mu$ [M· L -1 · T -1 ]</td>
-  <td>0.04 poise [gr· cm -1 · s -1 ]</td>
-  <td>0.004 [gr· mm -1 · s -1 ]</td>
-  <td>0.004 [Pa· s -1 ]</td>
+  <td>Dynamic viscosity $\mu$ [M · L<sup>-1</sup> · T<sup>-1</sup>]</td>
+  <td>0.04 poise [gr · cm<sup>-1</sup> · s<sup>-1</sup>]</td>
+  <td>0.004 [gr · mm<sup>-1</sup> · s<sup>-1</sup>]</td>
+  <td>0.004 [Kg · m<sup>-1</sup>· s<sup>-1</sup>]</td>
 </tr>
 <tr>
-  <td>Blood density $\rho$ [M· L -3 ]</td>
-  <td>1.06 [gr· cm -3 ]</td>
-  <td>0.00106 [gr· mm -3 ] </td>
-  <td>1060 [Kg· m -3 ]</td>
+  <td>Blood density $\rho$ [M · L<sup>-3</sup>]</td>
+  <td>1.06 [gr · cm<sup>-3</sup>]</td>
+  <td>0.00106 [gr · mm<sup>-3</sup>] </td>
+  <td>1060 [Kg · m<sup>-3</sup>]</td>
 </tr>
 </table>
 

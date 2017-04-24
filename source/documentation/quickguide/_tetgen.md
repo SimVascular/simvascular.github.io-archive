@@ -14,6 +14,9 @@ A new TetGen mesh "demomesh" is created under the data node "Meshes" in Data Man
 	Use the default parameter values
 	Click the button "Run Mesher"
 
+<font color="red">**HELPFUL HINT:** </font> The estimated edge size is about half of the radius of the smallest cap in the model.
+
+
 <figure>
   <img class="svImg svImgXl"  src="documentation/quickguide/imgs/tetgenmesh.png"> 
   <figcaption class="svCaption" ></figcaption>
