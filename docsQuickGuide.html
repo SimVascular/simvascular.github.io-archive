@@ -154,6 +154,7 @@
   <ul class="nav nav-stacked">
 	<li><a href="#path">Creating a Path</a></li>
 	<li><a href="#segmentation">2D Segmentation</a></li>
+	<li><a href="#3dsegmentation">3D Segmentation</a></li>
 	<li><a href="#polydata">Creating a Model (with PolyData)</a></li>
 	<li><a href="#parasolid">Creating a Model (with <br> OpenCASCADE or Parasolid)</a></li>
   </ul>                
@@ -549,7 +550,7 @@ Select Path: aorta
 Group Name: use the path name by default
 </code></pre>
 
-<p>A new group &ldquo;aorta&rdquo; is created under the data node &ldquo;Segmentations&rdquo; in Data Manager. Double click the group data node &ldquo;aorta&quot;and the tool &quot;SV 2D Segmentation&rdquo; shows up. The window layout of Display changes. The left top view shows image reslice in intensity; the left bottom view shows in gradient magnitude; the right 3D view shows image intensity on the probe plane (the red square) perpendicular to the path. The new group is empty ans has no contours so far. To add create and add a contour point:</p>
+<p>A new group &ldquo;aorta&rdquo; is created under the data node &ldquo;Segmentations&rdquo; in Data Manager. Double click the group data node &ldquo;aorta&rdquo; and the tool &ldquo;SV 2D Segmentation&rdquo; shows up. The window layout of Display changes. The left top view shows image reslice in intensity; the left bottom view shows in gradient magnitude; the right 3D view shows image intensity on the probe plane (the red square) perpendicular to the path. The new group is empty ans has no contours so far. To add create and add a contour point:</p>
 <pre class="highlight plaintext"><code>Toggle on "Convert to Spline"; Ctrl No. (12) is the number of control points you want the along contour line    
 Click the button "LevelSet"; LevelSet parameter panel appears
 Use the default parameter values in the panel
@@ -599,6 +600,45 @@ Click the button "LevelSet"
 <p>The contour will be saved to a file inside the project folder.</p>
 
 <p>Similarly, we create a path and a group of contours for the right iliac artery.</p>
+</section>
+<section id="3dsegmentation" class="subgroup"><h3>3-D Segmentation</h3>
+
+<p>Beside 2D segmentation, you can also use 3D segmetation, which is faster and better to capture the geometry of vessels, especially for aneurysm, junction region. etc. First, let&rsquo;s create a 3D segmentation (empty).</p>
+<pre class="highlight plaintext"><code>Right click the data node "Segmentations" in the project "SVProject" in Data Manager
+Click "Create 3D Segmentation" in the popup menu
+Name: seg3d 
+</code></pre>
+
+<p>A new 3D segmentation &ldquo;seg3d&rdquo; is created under the data node &ldquo;Segmentations&rdquo; in Data Manager. Double click the 3D segmentation node &ldquo;seg3d&rdquo; and the tool &ldquo;SV 3D Segmentation&rdquo; shows up. The method used here is colliding fronts. You need place seed for using this method.</p>
+<pre class="highlight plaintext"><code>Place a starting seed: move image slices using Image Navigator; move the cursor to a proper location in the 3D window:  Shift + Left Click
+Place a end seed: similary, but use:  Ctrl + Left Click
+</code></pre>
+
+<p>To create a 3D segmentation:</p>
+<pre class="highlight plaintext"><code>Place a starting seed (in green) in the upper aorta
+Place a ending seed (in blue) in the bottom of left and right iliac artery, respectively. 
+Threshold Values: choose the lower vavalue as 65 and the upper value as the maximum
+Click the button "Segment"
+</code></pre>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/quickguide/imgs/3dsegmentation.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>A 3D segmentation with two branches is created and shown in Display. </p>
+
+<figure>
+  <img class="svImg svImgSm"  src="documentation/quickguide/imgs/3dsegmentation2.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>Later we can create a PolyData model using this segmentation and smooth it to get a nice surface.</p>
+
+<p>You can move or delete the seed and re-segment.</p>
+<pre class="highlight plaintext"><code>Move Seed: move the cursor to the seed, press the left mouse button and drag the seed.
+Delete seed: move the cursor to the seed, press key "Delete"
+</code></pre>
 </section>
 <section id="polydata" class="subgroup"><h3>Creating a Model (with PolyData)</h3>
 

@@ -149,12 +149,15 @@
  <p><h3>References</h3></p>
  <li><a href="#refSec1">Overview</a></li>
  <li><a href="#refSec2">Boundary Conditions</a></li>
- <li><a href="#refSec3">Linear Solver</a></li>            
- <li><a href="#refSec4">Meshing</a></li>
- <li><a href="#refSec5">Validation</a></li>
- <li><a href="#refSec6">Clinical Applications</a></li>
- <li><a href="#refSec7">Other Contributors</a></li>
-  
+ <li><a href="#refSec3">Linear Solver</a></li>
+ <li><a href="#FSI">Fluid Structure Interaction</a></li>
+ <li><a href="#refSec4">Modeling</a></li>
+ <li><a href="#refSec5">Meshing</a></li>
+ <li><a href="#refSec6">Validation</a></li>
+ <li><a href="#refSec7">Clinical Applications</a></li>
+ <li><a href="#UQ">Optimization and Uncertainty <br>Quantification</a></li>
+ <li><a href="#refSec8">Other Contributors</a></li>
+
 
 </ul>
         
@@ -175,6 +178,8 @@
 
 <p>Please acknowledge the relevant publications from the following list if you are using <strong>SimVascular</strong> results in papers, presentations, and other publications.</p>
 
+<p><br></p>
+
 <h4>SimVascular Review</h4>
 
 <p>A. Updegrove, N.M. Wilson, J. Merkow, H. Lan, A.L. Marsden and S.C. Shadden, <strong>SimVascular: An Open Source Pipeline for Cardiovascular Simulation</strong>, <em>Annals of Biomedical Engineering</em>, online, 2016. <a href="http://link.springer.com/article/10.1007/s10439-016-1762-8">Link</a></p>
@@ -182,6 +187,8 @@
 <h4>Finite Element Modeling Overview</h4>
 
 <p>C.A. Taylor, T.J.R. Hughes and C.K. Zarins, <strong>Finite element modeling of blood flow in arteries</strong>, <em>Computer Methods in Applied Mechanics and Engineering</em>, 158(1):155-196, 1998. <a href="http://www.sciencedirect.com/science/article/pii/S004578259880008X">Link</a></p>
+
+<p>Marsden, A.L., and Esmaily Moghadam, M., <strong>Multiscale Modeling of Cardiovascular Flows for Clinical Decision Support</strong>, (invited), <em>Applied Mechanics Reviews</em>,67:030804-1-11, 2015. <a href="http://appliedmechanicsreviews.asmedigitalcollection.asme.org/article.aspx?articleid=2174058">Link</a></p>
 
 <h4>Finite Element Solver Technology</h4>
 
@@ -216,18 +223,46 @@
     <section id="refSec3" class="group"><h4>Linear solver</h4>
 
 <p>M. Esmaily Moghadam, Y. Bazilevs and A.L. Marsden, <strong>A new preconditioning technique for implicitly coupled multidomain simulations with applications to hemodynamics</strong>, <em>Computational Mechanics</em>, 52(5):1141-1152, 2013. <a href="http://link.springer.com/article/10.1007/s00466-013-0868-1#page-1">Link</a></p>
+
+<p>M. Esmaily-Moghadam, Y. Bazilevs and A.L. Marsden., <strong>A bi-partitioned iterative algorithm for solving linear systems obtained from incompressible flow problems</strong>, <em>Computer Methods in Applied Mechanics and Engineering</em>, 286:40–62, 2015. <a href="http://www.sciencedirect.com/science/article/pii/S0045782514004666">Link</a></p>
 </section>
-    <section id="refSec4" class="group"><h4>Meshing</h4>
+    <section id="FSI" class="group"><h4>Fluid Structure Interaction</h4>
+
+<p>C.A. Figueroa, I.E. Vignon-Clementel, K.E. Jansen, T.J.R. Hughes and C.A. Taylor, <strong>A coupled momentum method for modeling blood flow in three-dimensional deformable arteries</strong>, <em>Computer Methods in Applied Mechanics and Engineering</em>, 195(41):5685-5706, 2006. <a href="http://www.sciencedirect.com/science/article/pii/S004578250500513X">Link</a></p>
+</section>
+    <section id="refSec4" class="group"><h4>Modeling</h4>
+
+<p>A. Updegrove, N. M. Wilson, and S. C. Shadden, <strong>Boolean and smoothing of discrete polygonal surfaces</strong>, <em>Advances in Engineering Software</em>, 95, 16-27, 2016. <a href="http://www.sciencedirect.com/science/article/pii/S0965997816300230">Link</a></p>
+</section>
+    <section id="refSec5" class="group"><h4>Meshing</h4>
 
 <p>O. Sahni, K.E. Jansen, M.S. Shephard, C.A. Taylor and M.W. Beall, <strong>Adaptive boundary layer meshing for viscous flow simulations</strong>, <em>Engineering with Computers</em>, 24(3):267-285, 2008. <a href="http://link.springer.com/article/10.1007/s00366-008-0095-0#page-1">Link</a></p>
 </section>
-    <section id="refSec5" class="group"><h4>Validation</h4>
+    <section id="refSec6" class="group"><h4>Validation</h4>
 
 <p>E.O. Kung, A.L. Les, C.A. Figueroa, F. Medina, K. Arcaute, R.B. Wicker, M.V. McConnell and C.A. Taylor, <strong>In vitro validation of finite element analysis of blood flow in deformable models</strong>, <em>Annals of Biomedical Engineering</em>, 39(7):1947-1960, 2011. <a href="http://link.springer.com/article/10.1007/s10439-011-0284-7">Link</a></p>
 
 <p>E.O. Kung, A.M. Kahn, J.C. Burns and A.L. Marsden, <strong>In-vitro validation of patient-specific hemodynamic simulations in coronary aneurysms caused by Kawasaki disease</strong>, <em>Cardiovascular Engineering and Technology</em>, 5(2):189-201, 2014. <a href="http://link.springer.com/article/10.1007/s13239-014-0184-8#page-1">Link</a></p>
 </section>
-    <section id="refSec6" class="group"><h4>Clinical Applications</h4>
+    <section id="refSec7" class="group"><h4>Clinical Applications</h4>
+
+<p>J. M. Oakes, S. C. Shadden, C. Grandmont, and I. E. Vignon-Clemental, <strong>Aerosol transport throughout inspiration and expiration in the pulmonary airways</strong>, <em>International Journal for Numerical Methods in Biomedical Engineering</em>, DOI: 10.1002/cnm.2847, 2017. <a href="http://onlinelibrary.wiley.com/doi/10.1002/cnm.2847/full">Link</a></p>
+
+<p>A. Arzani, A. M. Gambaruto, G. Chen, and S. C. Shadden, <strong>Wall shear stress exposure time: A Lagrangian measure of near-wall stagnation and concentration in cardiovascular flows</strong>, <em>Biomechanics and Modeling in Mechanobiology</em>, DOI: 10.1007/s10237-016-0853-7, 2017. <a href="https://link.springer.com/article/10.1007/s10237-016-0853-7">Link</a></p>
+
+<p>D. Mukherjee, and S. C. Shadden, <strong>Inertial particle dynamics in large artery flows – Implications for modeling arterial embolisms</strong>, <em>Journal of Biomechanics</em>, 52, 155-164, 2016. <a href="http://www.sciencedirect.com/science/article/pii/S0021929016313215">Link</a></p>
+
+<p>D. Mukherjee, N. Jani, K. Selvaganesan, C. L. Weng, and S. C. Shadden, <strong>Computational assessment of the relation between embolism source and embolus distribution to the circle of Willis for improved understanding of stroke etiology</strong>, <em>Journal of Biomechanical Engineering</em>, 138(8), 081008-1-13, 2016. <a href="http://biomechanical.asmedigitalcollection.asme.org/article.aspx?articleID=2531719">Link</a></p>
+
+<p>K. B. Hansen, and S. C. Shadden, <strong>A reduced-dimensional model for near-wall transport in cardiovascular flows</strong>, <em>Biomechanics and Modeling in Mechanobiology</em>, 15(3), 713-722, 2016. <a href="https://link.springer.com/article/10.1007/s10237-015-0719-4">Link</a></p>
+
+<p>A. Arzani, A. M. Gambaruto, G. Chen, and S. C. Shadden, <strong>Lagrangian wall shear stress structures and near wall transport in high Schmidt aneurysmal flows</strong>, <em>Journal of Fluid Mechanics</em>, 790, 158-172, 2016. <a href="https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/lagrangian-wall-shear-stress-structures-and-nearwall-transport-in-highschmidtnumber-aneurysmal-flows/0826EE0545D5E1FC47A3BBB5637E0C0B">Link</a></p>
+
+<p>D. Mukherjee, J. Padilla, and S. C. Shadden, <strong>Numerical investigation of fluid–particle interactions for embolic stroke</strong>, <em>Theoretical and Computational Fluid Dynamics</em>, 30(1), 23-39, 2016. <a href="https://link.springer.com/article/10.1007/s00162-015-0359-4">Link</a></p>
+
+<p>S. C. Shadden, and A. Arzani, <strong>Lagrangian postprocessing of computational hemodynamics</strong>, <em>Annals of Biomedical Engineering</em>, 43(1), 41-58, 2015. <a href="https://link.springer.com/article/10.1007%2Fs10439-014-1070-0">Link</a></p>
+
+<p>A. Arzani, A. S. Les, R. L. Dalman, and S. C. Shadden, <strong>Effect of exercise on patient specific abdominal aortic aneurysm flow topology and mixing</strong>, <em>International Journal for Numerical Methods in Biomedical Engineering</em>, 30(2), 280-295, 2014. <a href="http://onlinelibrary.wiley.com/doi/10.1002/cnm.2601/abstract">Link</a></p>
 
 <p>D. Sengupta, A.M. Kahn, J.C. Burns, S. Sankaran, S. Shadden and A.L. Marsden, <strong>Image-based modeling of hemodynamics and coronary artery aneurysms caused by Kawasaki disease</strong>, <em>Biomechanics and Modeling in Mechanobiology</em>, 11(6):915-932, 2012. <a href="http://link.springer.com/article/10.1007/s10237-011-0361-8#page-1">Link</a></p>
 
@@ -239,11 +274,27 @@
 
 <p>J. M. Oakes, A. L. Marsden, C. Grandmont, S. C. Shadden, C. Darquenne and I. E. Vignon-Clementel, <strong>Airflow and Particle Deposition Simulations in Health and Emphysema: From In Vivo to In Silico Animal Experiments</strong>, <em>Annals of Biomedical Engineering</em>, 42(4):899-914, 2014. <a href="http://link.springer.com/article/10.1007/s10439-013-0954-8#page-1">Link</a></p>
 
+<p>M. Esmaily-Moghadam, T-Y Hsia and A.L. Marsden, <strong>The Assisted Bidirectional Glenn: a novel surgical approach for first stage single ventricle heart palliation</strong>, <em>Journal of Thoracic and Cardiovascular Surgery</em>, 149(3):699-705, 2015. <a href="http://www.sciencedirect.com/science/article/pii/S0022522314015402">Link</a></p>
+
+<p>A. B. Ramachandra, A. M. Kahn and A. L. Marsden, <strong>Patient specific simulations reveal significant differences in mechanical stimuli in venous and arterial coronary grafts</strong>, <em>Journal of Cardiovascular Translational Research</em>, 9(4):279–290, 2016. <a href="https://link.springer.com/article/10.1007%2Fs12265-016-9706-0">Link</a></p>
+
+<p>D. Schiavazzi, E.O. Kung., A.L. Marsden, C. Baker, G. Pennati, T.-Y Hsia and A. Dorfman, <strong>Hemodynamic effects of left pulmonary artery stenosis following superior cavopulmonary connection: a patient-specific multiscale modeling study</strong>, <em>Journal of Thoracic and Cardiovascular Surgery</em>, 149(3):689–696.e3, 2015. <a href="http://www.sciencedirect.com/science/article/pii/S0022522314021849">Link</a></p>
+
 <h4>Simbios</h4>
 
 <p>J.P. Schmidt, S.L. Delp, M.A. Sherman, C.A. Taylor, V.S. Pande, R.B. Altman, <strong>The Simbios National Center: Systems Biology in Motion</strong>, <em>Proceedings of the IEEE, special issue on Computational System Biology</em>, 96(8):1266-1280, 2008. <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2811325/">Link</a></p>
 </section>
-    <section id="refSec7" class="group bottom-buffer"><h4>Other Contributors</h4>
+    <section id="UQ" class="group"><h4>Optimization and Uncertainty Quantification</h4>
+
+<p>D. E. Schiavazzi, G. Arbia, C. Baker, A.M. Hlavacek, T. Y. Hsia, A. L. Marsden and I. E. Vignon-Clementel, <strong>Uncertainty quantification in virtual surgery hemodynamics predictions for single ventricle palliation</strong>, <em>International Journal of Numerical Methods in Biomedical Engineering</em>, 32(3):e02737, 2016. <a href="http://onlinelibrary.wiley.com/doi/10.1002/cnm.2737/abstract;jsessionid=EA23F66BAD33FE10108F0F5AE8F2C636.f03t04">Link</a></p>
+
+<p>J. S. Tran, D. E. Schiavazzi, A. B. Ramachandra, A. M. Kahn and A. L. Marsden, <strong>Automated Tuning for Parameter Identification in Multiscale Coronary Simulations</strong>, <em>Computers and Fluids</em>, 142(5):128–138, 2017 <a href="http://www.sciencedirect.com/science/article/pii/S004579301630161X">Link</a></p>
+
+<p>D. E. Schiavazzi, A. Doostan, G. Iaccarino and A. L. Marsden, <strong>A Generalized Multi-resolution Expansion for Uncertainty Propagation with Application to Cardiovascular Modeling</strong>, <em>Computer Methods in Applied Mechanics and Engineering</em>, 314(1):196-221, 2017. <a href="http://www.sciencedirect.com/science/article/pii/S0045782516311951">Link</a></p>
+
+<p>A.L. Marsden, <strong>Optimization in cardiovascular modeling</strong>, <em>Annual Review of Fluid Mechanics</em>, 46:519-546, 2014. <a href="http://www.annualreviews.org/doi/abs/10.1146/annurev-fluid-010313-141341">Link</a></p>
+</section>
+    <section id="refSec8" class="group bottom-buffer"><h4>Other Contributors</h4>
 
 <p>Charles A. Taylor, Ph.D., Founder, CTO, and Member of the Board of Directors, HeartFlow Inc.</p>
 

@@ -164,10 +164,11 @@
 </li>
 <li><a href="#modelingSolidModelingPolyData">Solid Modeling (PolyData)</a>
   <ul class="nav nav-stacked">
-	<li><a href="#modelingCreatingModelsPolyData">Creating Solid Models</a></li>
+	<li><a href="#modelingCreatingModelsPolyData">Creating Models <br>from 2D Segmentations</a></li>
 	<li><a href="#modelingPolyDataFaces">Face Operations</a></li>
 	<li><a href="#modelingEditingPolyData">Global/Local Operations</a></li>
 	<li><a href="#modelingCenterlinesPolyData">Extracting Centerlines</a></li>
+	<li><a href="#modelingPolyData3DSeg">Create Models <br>from 3D Segmentations</a></li>
 	<li><a href="#modelingImportingExportingModels">Importing/Exporting Models</a></li>
   </ul>                
 </li>
@@ -836,16 +837,25 @@ Click the button "Paste".
 
 <p><font color="red"><strong>HELPFUL HINT:</strong></font> This step is especially important for discrete (PolyData) modelling later.If the lofted surface doesn&rsquo;t match the vessle you are modeling, you can change some paramters to improve it.</p>
 
-<p>There are several parameters you can change for lofting.</p>
-<pre class="highlight plaintext"><code>Click the button "Options..."
+<p>There are several methods parameters you can change for lofting, or you can just use the default settings.</p>
+<pre class="highlight plaintext"><code>Click the button "Lofting Parameters..."
 </code></pre>
 
-<p><figure>
+<p>The default method is NUBRS based.</p>
+
+<figure>
   <img class="svImg svImgSm"  src="documentation/modeling/imgs/segmentation/loftingdialog.png"> 
   <figcaption class="svCaption" ></figcaption>
-</figure></p>
+</figure>
 
-<p>Changing the parameters can drastically change the shape and smoothness of your model surface. </p>
+<p>In some cases you may want to use the spline based method:</p>
+
+<figure>
+  <img class="svImg svImgSm"  src="documentation/modeling/imgs/segmentation/loftingdialog_spline.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>Changing the parameters can drastically change the shape and smoothness of your model surface. For example, for the spline based method:</p>
 
 <ol>
 <li><p>The &ldquo;Sampling&rdquo;  indicates the number of points that will be used to represent the circumference of each segmentation. The higher the number, the smoother the face of the model will be with respect to the circumference. The Default is 60 but more or less can be used depending on the size and complexity of the vessel. A smaller vessel needs less points around the circumference compared to a large vessel.</p></li>
@@ -923,10 +933,12 @@ Select a directory you would like to save, and click the “Choose” button.
 <li><p>Has reasonably spaced segmentations: too many segmentations can result in a jagged solid or many ridges and could cause problems when attempting to mesh. There should be enough to get the general shape and curves of the vessel, with segmentations denser around curves and more spread out when the shape is essentially a straight cylinder.</p></li>
 <li><p>Has smooth transistions between groups: two vessels being joined should share a common space. The first segmentation on a branch vessel should be completely contained by the solid model to be created by the main vessel. For example, the first segmentation for right iliac should be contained completely by the aorta. If not, a ledge could be created, complicating future steps.</p></li>
 </ol>
-</section>
-<section id="modelingCreatingModelsPolyData" class="subgroup"><h3>Creating a PolyData Model from 2D/3D Segmentations</h3>
 
-<p>This exercise will assume that you have created segmentations down the aorta and common iliac artery that you can now use to create a solid model.</p>
+<p><strong>Besides 2D segmentations, SimVascular is also able to use 3D segmetnation or union 2D and 3D segmentations together to create a complete solid model.</strong></p>
+</section>
+<section id="modelingCreatingModelsPolyData" class="subgroup"><h3>Creating a PolyData Model from 2D Segmentations</h3>
+
+<p>This exercise will use 2D segmentations and assume that you have created segmentations down the aorta and common iliac artery that you can now use to create a solid model.</p>
 
 <p><strong>To create a PolyData model (empty):</strong></p>
 <pre class="highlight plaintext"><code>Right click the data node "Models" in the SV project in Data Manager
@@ -959,7 +971,7 @@ A dialog pops up, showing all avaiable groups
 Toggle on the checkboxs in the column "Use" for the groups you want
 You can also use the table menu to decide whether to use some groups 
 Number of Sampling Points: (optional for PolyData models)
-Advanced Lofting: (optional), if on, NURBS lofting will be used to create the model.
+Use Uniform Lofting Parameters (Optional): if no, SimVascular uses the parameters you selected for each group during segmentation; if yes, SimVascular uses the same paramters for all the gourps to create the model.
 Click "OK"
 </code></pre>
 
@@ -1205,7 +1217,7 @@ Click the button "Cut Above" or "Cut Below" to remove the unwanted part.
 
 <p>Sometimes it is desirable to get the centerlines of your model. In order to do this</p>
 <pre class="highlight plaintext"><code>Right click the model "demo" in Data Manager
-Click "Extract Paths" inthe popup menu
+Click "Extract Paths" in the popup menu
 </code></pre>
 
 <p>This operation takes some time, and it runs at the backend, so you can continue to do other things. After it&rsquo;s done, the centerlines &ldquo;demo_centerline_1&rdquo; and &ldquo;demo_centerline_2&rdquo; will created and show under the &ldquo;Paths&rdquo; in Data Manager.</p>
@@ -1214,6 +1226,61 @@ Click "Extract Paths" inthe popup menu
   <img class="svImg svImgXl"  src="documentation/modeling/imgs/polydata/extractcenterlines.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
+</section>
+<section id="modelingPolyData3DSeg" class="subgroup"><h3>Creating a PolyData Model from 3D Segmentations</h3>
+
+<p>This exercise will use 3D segmentation to create a solid model.</p>
+
+<p><strong>To create a PolyData model (empty):</strong></p>
+<pre class="highlight plaintext"><code>Right click the data node "Models" in the SV project in Data Manager
+Click "Create Model" in the popup menu
+Model Type: PolyData
+Model Name: model_from_3dseg
+Click "OK"
+</code></pre>
+
+<p>Now a new data node “model<em>from</em>3dseg” for the model is created under the data node &ldquo;Models&rdquo; in Data Manager. Double click the data node “model<em>from</em>3dseg&quot; and the tool &ldquo;SV Modeling” automatically shows up. The new model is empty and has no data so far. </p>
+
+<p><strong>Use 3D segmentation to create model:</strong></p>
+<pre class="highlight plaintext"><code>Click the button "Create Model..."
+A dialog pops up, showing all avaiable groups
+Toggle on the checkboxs in the column "Use" for the 3D segmentation you want
+Click "OK"
+</code></pre>
+
+<figure>
+  <img class="svImg svImgSm"  src="documentation/modeling/imgs/polydata/uniondialog_3dseg.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>After the model is created, you should now be able to see one face named as &quot;wall-seg3d&rdquo; created for the model. The model surface may be not very desirable and don&rsquo;t flat faces for the vesseld ends. So we&rsquo;ll continiu to process this model.</p>
+
+<p><strong>Smooth</strong></p>
+<pre class="highlight plaintext"><code>Global Ops -&gt; WS Smooth -&gt; Click the button "Smooth"
+Global Ops -&gt; Densify -&gt; Num Divisions: 1, Click the button "Subdivide"
+</code></pre>
+
+<p><strong>Trim and Fill</strong></p>
+<pre class="highlight plaintext"><code>Trim -&gt; use a plane or box to trim the vessle, try to make the cutting plane perpendicular to the vessel
+Global Ops -&gt;  Fill Holes w/o ID
+</code></pre>
+
+<p><strong>Extract Faces</strong></p>
+<pre class="highlight plaintext"><code>Face Ops -&gt; Extract -&gt; Click the button "Extract Faces"
+Remember to assign a type (wall or cap) for those faces
+</code></pre>
+
+<p><strong>Remesh</strong>
+If you show the model edges, the surface mesh may be too fine or not desirable to you. You can do remeshing:</p>
+<pre class="highlight plaintext"><code>Global Ops -&gt; Remesh -&gt; Click "Estimate Size" or prive a proper value, click the button "Remesh"
+</code></pre>
+
+<p><strong>Extract Centerlines</strong></p>
+
+<p>As now you have a nice model with faces extracted with type(wall/cap) info, you can extract paths (centerlines) for this model</p>
+<pre class="highlight plaintext"><code>Right click the model "model_from_3dseg" in Data Manager
+Click "Extract Paths" in the popup menu
+</code></pre>
 </section>
 <section id="modelingImportingExportingModels" class="subgroup"><h3>Importing and Exporting Models</h3>
 

@@ -1154,6 +1154,13 @@ Run "mpiexec -n [number of processes] [solver path]/svsolver" or you need create
   <figcaption class="svCaption" >Creating VTU result files from <b>svSolver</b> restart files.</figcaption>
 </figure>
 
+<p>After convering done, there are also four text files created in the exported folder if &ldquo;Calculate Flows&rdquo; is toggled on.</p>
+<pre class="highlight plaintext"><code>  all_results-flows.txt: flowrate for each face with time steps
+  all_results-pressures.txt: pressure for each face with time steps
+  all_results-averages.txt: the average, maximum, minimum values of presure, flowrate for each face
+  all_results-averages-from_cm-to-mmHg-L_per_min.txt: same info as all_results-averages.txt, but pressure is in mmHg, flowrate is L/min.
+</code></pre>
+
 <p>Other options are also provided:</p>
 
 <ul>
@@ -1392,7 +1399,7 @@ Click the button "Create Data Files for Simulation"
 </section>
     <section id="solverconfiguration" class="subgroup"><h3>Configurating Solvers (Optional)</h3>
 
-<p>SimVascular solvers(presolver, flowsolver, postsolver) are used as individual executable programs. They are called by SV Simulation tool to create data files, run simulation, and convert results to files in VTK formats. Normally those solvers are included in SimVascular or installed separately. In either way, SimVascular can automatically find those solvers. In case your SimVascular can&rsquo;t find them, or you want to use different solvers, you need to explicitly tell SimVascular where to find or how to use them.</p>
+<p>SimVascular solvers(presolver, flowsolver, postsolver) are used as individual executable programs. They are called by SV Simulation tool to create data files, run simulation, and convert results to files in VTK formats. Normally those solvers are installed separately. However, SimVascular can automatically find those solvers. In case your SimVascular can&rsquo;t find them, or you want to use different solvers, you need to explicitly tell SimVascular where to find or how to use them.</p>
 <pre class="highlight plaintext"><code>Goto Menu: Preferences -&gt; SimVascular Simulation
 Use MPI:  whether to use mpi to run flowsolver. It depends on if your flowsolver supports MPI. By default, we assume using MPI.
 MPIExec: (mpiexec, by default) It's opional. Specify the full path and file name for the mpiexec to use.
@@ -1408,20 +1415,12 @@ Postsolver: Specify the full path and file name for the postsolver to use.
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-<h4>Availability of Solvers and MPI</h4>
+<h4>Locations of Installed Solvers</h4>
 
 <p><strong>Linux:</strong></p>
-
-<p>If solvers are included in SimVascular:</p>
-<pre class="highlight plaintext"><code>Presolver: [SimVascular_Home_Dir]/bin/svpre
-Flowsolve: [SimVascular_Home_Dir]/bin/svsolver
-Postsolver: [SimVascular_Home_Dir]/bin/svpost
-</code></pre>
-
-<p>If solvers are installed separately:</p>
-<pre class="highlight plaintext"><code>Presolver: /usr/local/sv/svsolver/xxxxxxx/bin/svpre
-Flowsolve: /usr/local/sv/svsolver/xxxxxxx/bin/svsolver
-Postsolver: /usr/local/sv/svsolver/xxxxxxx/bin/svpost
+<pre class="highlight plaintext"><code>Presolver: /usr/local/sv/svsolver/yyyy-mm-dd/bin/svpre
+Flowsolve: /usr/local/sv/svsolver/yyyy-mm-dd/bin/svsolver
+Postsolver: /usr/local/sv/svsolver/yyyy-mm-dd/bin/svpost
 </code></pre>
 
 <p>In case you can&rsquo;t run mpiexec when using flowsolver, please make sure mpi is installed.</p>
@@ -1435,24 +1434,13 @@ sudo apt-get install libmpich-dev
 </code></pre>
 
 <p><strong>Mac OS X</strong></p>
-
-<p>If solvers and mpiexec are included in SimVascular:</p>
-<pre class="highlight plaintext"><code>MPIExec: /Applications/SimVascular.app/Contents/Resources/mpiexec 
-Presolver: /Applications/SimVascular.app/Contents/Resources/svpre
-Flowsolve: /Applications/SimVascular.app/Contents/Resources/svsolver
-Postsolver: /Applications/SimVascular.app/Contents/Resources/svpost
-</code></pre>
-
-<p>If solvers and mpiexec are installed separately:</p>
-<pre class="highlight plaintext"><code>MPIExec: /usr/local/sv/svsolver/xxxxxxx/bin/mpiexec
-Presolver: /usr/local/sv/svsolver/xxxxxxx/svpre
-Flowsolve: /usr/local/sv/svsolver/xxxxxxx/svsolver
-Postsolver: /usr/local/sv/svsolver/xxxxxxx/bin/svpost
+<pre class="highlight plaintext"><code>MPIExec: /usr/local/sv/svsolver/yyyy-mm-dd/bin/mpiexec
+Presolver: /usr/local/sv/svsolver/yyyy-mm-dd/svpre
+Flowsolve: /usr/local/sv/svsolver/yyyy-mm-dd/svsolver
+Postsolver: /usr/local/sv/svsolver/yyyy-mm-dd/bin/svpost
 </code></pre>
 
 <p><strong>Windows</strong></p>
-
-<p>There is a separate installer for svsolvers at simtk.org, which includes MPI installer. Simulation tool should be able to find them. If it couldn&rsquo;t find them, configure them in terms to the instrcutions above.</p>
 
 <p>For the versions from 2017-04-09</p>
 <pre class="highlight plaintext"><code>The solvers are located at C:\Program Files\SimVascular\svSolver\yyyy-mm-dd\

@@ -165,9 +165,12 @@
 <ol>
 <li><p>Go to  <a href="https://simtk.org/project/xml/downloads.xml?group_id=188" target="_blank">SimVascular download webpage</a>.</p></li>
 <li><p>Login to SimTk or create a new account (if you haven’t done so).</p></li>
-<li><p>Click “Download Links” and choose the latest installer for your operating system.</p></li>
+<li><p>Click “Download Links” and choose the latest <strong>SimVascular</strong> installer for your operating system.</p></li>
 <li><p>List your intended use for the software and agree to the license agreement.</p></li>
+<li><p>If you need to run simualtion, please also download and install <strong>svSolver</strong> from the same website as above.</p></li>
 </ol>
+
+<p>Notice: if your operating system/version is not listed in our supported versions, SimVascular may not run on it. However, feel free to try it!</p>
 </section>
 <section id="installationWindows" class="group"><h1>Installation Instructions for Windows</h1>
 
@@ -175,8 +178,6 @@
 
 <h3>Supported Versions</h3>
 <pre class="highlight plaintext"><code>Windows 10 (tested)
-Windows 8
-Window 7
 </code></pre>
 
 <p><br></p>
@@ -192,18 +193,24 @@ Add "-tcl" to the very end of the "Target:" command line, for example:
 Or
 Copy the original icon and make such change so you have one icon for the new GUI and the other for the old GUI.
 </code></pre></li>
-<li><p>To access the full functions of SimVascular Simulation tool, it&rsquo;s required to install svSolvers. There is a separate installer for svSolvers at simtk.org</p></li>
+<li><p>To run simulation, you need to install svSolver (<a href="https://simtk.org/project/xml/downloads.xml?group_id=188" target="_blank">download</a>).</p></li>
 <li><p>For <strong>Windows 7</strong>, you may need to install a few extra package to use SimVascular.</p>
 <pre class="highlight plaintext"><code>NetFx20SP2_x86.exe
 </code></pre></li>
 </ol>
+
+<p>Notice: </p>
+<pre class="highlight plaintext"><code>    svSolver is installed at C:\Program Files\SimVascular\svSolver\yyyy-mm-dd
+</code></pre>
 </section>
 <section id="installationMac" class="group"><h1>Installation Instructions for Apple OS X</h1>
 
 <p><br></p>
 
 <h3>Supported Versions</h3>
-<pre class="highlight plaintext"><code>Mac OS X 10.10.x (tested)
+<pre class="highlight plaintext"><code>Mac OS X 10.10 (tested)
+Mac OS X 10.11 (tested)
+Mac OS X 10.12 (tested)
 </code></pre>
 
 <p><br></p>
@@ -222,16 +229,21 @@ Copy the original icon and make such change so you have one icon for the new GUI
 <pre class="highlight plaintext"><code>A dialog may popup when launching, saying: “SimVascular” can’t be opened because it is from an unidentified developer.”.
 Go to System Preferences -&gt; Security &amp; Privacy -&gt; General, click “Open Anyway”.
 If it doesn't work, turn on  "Anywhere" for "Allow apps downloaded from"; After SimVascular launches, turn it back on to "Mac App Store and identified developers".
+If it doesn't work either, try turn off Fire wall temporarily.
 </code></pre></li>
 <li><p>SimVascular still provides the old GUI. If you want to launch SimVascular with the old GUI by default:</p>
 <pre class="highlight plaintext"><code>Open a terminal.
 Run "touch ~/.simvascular_default_tcl" which creates an empty file.
 </code></pre></li>
-<li><p>To access the full functions of SimVascular Simulation tool, it&rsquo;s required to install svSolvers. There is a separate installer for svSolvers at simtk.org</p></li>
+<li><p>To run simulation, you need to install svSolver (<a href="https://simtk.org/project/xml/downloads.xml?group_id=188" target="_blank">download</a>).</p></li>
 <li><p>(Optional) You can also launch SimVascular using the Terminal. To install the SimvVascular command line tools run:</p>
 <pre class="highlight plaintext"><code>sudo /Applications/SimVascular.app/Contents/Resources/setup-symlinks.sh
 </code></pre></li>
 </ol>
+
+<p>Notice: </p>
+<pre class="highlight plaintext"><code>    svSolver is installed at /usr/local/sv/svsolver/yyyy-mm-dd
+</code></pre>
 </section>
 <section id="installationLinux" class="group"><h1>Installation Instructions for Linux</h1>
 
@@ -239,7 +251,6 @@ Run "touch ~/.simvascular_default_tcl" which creates an empty file.
 
 <h3>Supported Versions</h3>
 <pre class="highlight plaintext"><code>Ubuntu 14 (tested)
-Ubuntu 15
 Ubuntu 16 (tested)
 </code></pre>
 
@@ -248,11 +259,10 @@ Ubuntu 16 (tested)
 <h3>Installing SimVascular</h3>
 
 <ol>
-<li><p>Unpack the installer (zip/tar file).</p></li>
+<li><p>Install the SimVascular deb package. Notice: for Ubuntu1 16, you need to install Ubuntu Software Center before installing the deb package!</p></li>
 <li><p>To launch SimVascular:</p>
-<pre class="highlight plaintext"><code>Open a terminal
-Go to SimVascular installation directory
-Run "./simvascular" 
+<pre class="highlight plaintext"><code>Go to Unity Dash, search for "SimVascular"
+Click the SimVascular icon.
 </code></pre></li>
 <li><p>Notice: it may mention missing some libs during launch, according to the information, try &ldquo;sudo apt-get install [missing lib]&rdquo; to install them. Most likely you need to run:</p>
 <pre class="highlight plaintext"><code>sudo apt-get install libgstreamer0.10-0
@@ -271,7 +281,7 @@ you may need to:
 sudo apt-get install tcllib tklib (for old GUI)
 sudo apt-get install tcl-dev tk-dev (for old GUI)
 </code></pre></li>
-<li><p>To use SimVascular Simulation tool, you need to install MPI:</p>
+<li><p>To run simulation, you need to install svSolver (<a href="https://simtk.org/project/xml/downloads.xml?group_id=188" target="_blank">download</a>), and MPI:</p>
 <pre class="highlight plaintext"><code>For Ubuntu 14:      
 sudo apt-get install libmpich2-dev
 
@@ -282,10 +292,13 @@ sudo apt-get install libmpich-dev
 <pre class="highlight plaintext"><code>sudo bash setup-symlinks.sh
 </code></pre>
 
-<p>This script places symbolic links in /usr/local/bin to the simvascular executable scripts.
-You may wish to edit the symbolic links.</p></li>
-<li><p>(Optional) To use Meshim (if applicable) on linux,  copy your Meshsim license file into the simvascular directory and rename it meshsim-license.dat</p></li>
+<p>This script places symbolic links in /usr/local/bin to the simvascular executable scripts. You may wish to edit the symbolic links.</p></li>
 </ol>
+
+<p>Notice: </p>
+<pre class="highlight plaintext"><code>    Simvascular is installed at /usr/local/sv/simvascular/yyyy-mm-dd
+    svSolver is installed at /usr/local/sv/svsolver/yyyy-mm-dd
+</code></pre>
 
 <p><br>
 <br>
