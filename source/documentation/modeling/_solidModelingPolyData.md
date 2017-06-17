@@ -16,3 +16,4 @@ Before creating a solid from your groups, it is important to inspect the groups 
 
 3. Has smooth transistions between groups: two vessels being joined should share a common space. The first segmentation on a branch vessel should be completely contained by the solid model to be created by the main vessel. For example, the first segmentation for right iliac should be contained completely by the aorta. If not, a ledge could be created, complicating future steps.
 
+**Besides 2D segmentations, SimVascular is also able to use 3D segmetnation or union 2D and 3D segmentations together to create a complete solid model.**

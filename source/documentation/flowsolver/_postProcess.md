@@ -22,6 +22,15 @@ A new folder "steady-converted-results" is created, which contains all the conve
   <figcaption class="svCaption" >Creating VTU result files from <b>svSolver</b> restart files.</figcaption>
 </figure>
 
+After convering done, there are also four text files created in the exported folder if "Calculate Flows" is toggled on.
+
+~~~
+  all_results-flows.txt: flowrate for each face with time steps
+  all_results-pressures.txt: pressure for each face with time steps
+  all_results-averages.txt: the average, maximum, minimum values of presure, flowrate for each face
+  all_results-averages-from_cm-to-mmHg-L_per_min.txt: same info as all_results-averages.txt, but pressure is in mmHg, flowrate is L/min.
+~~~
+
 Other options are also provided:
 
 - **As Single File**, this options combines all the results at different time steps into a single \*.vtp or \*.vtu file. 

@@ -1,6 +1,6 @@
-### Creating a PolyData Model from 2D/3D Segmentations ###
+### Creating a PolyData Model from 2D Segmentations ###
 
-This exercise will assume that you have created segmentations down the aorta and common iliac artery that you can now use to create a solid model.
+This exercise will use 2D segmentations and assume that you have created segmentations down the aorta and common iliac artery that you can now use to create a solid model.
  
 **To create a PolyData model (empty):**
 
@@ -34,7 +34,7 @@ Now a new data node “demo” for the model is created under the data node "Mod
 	Toggle on the checkboxs in the column "Use" for the groups you want
 	You can also use the table menu to decide whether to use some groups 
 	Number of Sampling Points: (optional for PolyData models)
-	Advanced Lofting: (optional), if on, NURBS lofting will be used to create the model.
+	Use Uniform Lofting Parameters (Optional): if no, SimVascular uses the parameters you selected for each group during segmentation; if yes, SimVascular uses the same paramters for all the gourps to create the model.
 	Click "OK"
 
 <figure>

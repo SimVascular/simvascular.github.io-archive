@@ -13,16 +13,26 @@ A new data node named "Lofted" for the lofted surface is added under the data no
 
 <font color="red">**HELPFUL HINT:**</font> This step is especially important for discrete (PolyData) modelling later.If the lofted surface doesn't match the vessle you are modeling, you can change some paramters to improve it.
 
-There are several parameters you can change for lofting.
+There are several methods parameters you can change for lofting, or you can just use the default settings.
 
-	Click the button "Options..."
+	Click the button "Lofting Parameters..."
 
- <figure>
+
+The default method is NUBRS based.
+
+<figure>
   <img class="svImg svImgSm"  src="documentation/modeling/imgs/segmentation/loftingdialog.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-Changing the parameters can drastically change the shape and smoothness of your model surface. 
+In some cases you may want to use the spline based method:
+
+<figure>
+  <img class="svImg svImgSm"  src="documentation/modeling/imgs/segmentation/loftingdialog_spline.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+Changing the parameters can drastically change the shape and smoothness of your model surface. For example, for the spline based method:
 
 1. The "Sampling"  indicates the number of points that will be used to represent the circumference of each segmentation. The higher the number, the smoother the face of the model will be with respect to the circumference. The Default is 60 but more or less can be used depending on the size and complexity of the vessel. A smaller vessel needs less points around the circumference compared to a large vessel.
 

@@ -51,9 +51,8 @@
 
 Notice: 
 
-		After installation:
-		Simvascular is installed at /usr/local/sv/simvascular/[yyyy-mm-dd]
-		svSolver is installed at /usr/local/sv/svsolver/[yyyy-mm-dd]
+		Simvascular is installed at /usr/local/sv/simvascular/yyyy-mm-dd
+		svSolver is installed at /usr/local/sv/svsolver/yyyy-mm-dd
 
 <br>
 <br>

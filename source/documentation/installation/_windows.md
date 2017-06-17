@@ -25,3 +25,6 @@
 
 		NetFx20SP2_x86.exe
 
+Notice: 
+
+		svSolver is installed at C:\Program Files\SimVascular\svSolver\yyyy-mm-dd

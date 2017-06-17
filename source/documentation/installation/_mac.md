@@ -37,4 +37,6 @@
 
 		sudo /Applications/SimVascular.app/Contents/Resources/setup-symlinks.sh
 
+Notice: 
 
+		svSolver is installed at /usr/local/sv/svsolver/yyyy-mm-dd
