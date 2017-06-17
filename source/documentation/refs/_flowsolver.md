@@ -2,6 +2,8 @@
 
 Please acknowledge the relevant publications from the following list if you are using **SimVascular** results in papers, presentations, and other publications.
 
+<br>
+
 #### SimVascular Review
 
 A. Updegrove, N.M. Wilson, J. Merkow, H. Lan, A.L. Marsden and S.C. Shadden, **SimVascular: An Open Source Pipeline for Cardiovascular Simulation**, _Annals of Biomedical Engineering_, online, 2016. [Link](http://link.springer.com/article/10.1007/s10439-016-1762-8)
@@ -9,6 +11,8 @@ A. Updegrove, N.M. Wilson, J. Merkow, H. Lan, A.L. Marsden and S.C. Shadden, **S
 #### Finite Element Modeling Overview
 
 C.A. Taylor, T.J.R. Hughes and C.K. Zarins, **Finite element modeling of blood flow in arteries**, _Computer Methods in Applied Mechanics and Engineering_, 158(1):155-196, 1998. [Link](http://www.sciencedirect.com/science/article/pii/S004578259880008X)
+
+Marsden, A.L., and Esmaily Moghadam, M., **Multiscale Modeling of Cardiovascular Flows for Clinical Decision Support**, (invited), _Applied Mechanics Reviews_,67:030804-1-11, 2015. [Link](http://appliedmechanicsreviews.asmedigitalcollection.asme.org/article.aspx?articleid=2174058)
 
 #### Finite Element Solver Technology
 

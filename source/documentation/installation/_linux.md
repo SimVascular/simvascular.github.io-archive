@@ -4,19 +4,17 @@
 ### Supported Versions ###
 	
 	Ubuntu 14 (tested)
-	Ubuntu 15
 	Ubuntu 16 (tested)
 
 <br>
 ### Installing SimVascular ###
 
-1. Unpack the installer (zip/tar file).
+1. Install the SimVascular deb package. Notice: for Ubuntu1 16, you need to install Ubuntu Software Center before installing the deb package!
 
 2. To launch SimVascular:
 
-		Open a terminal
-		Go to SimVascular installation directory
-		Run "./simvascular" 
+		Go to Unity Dash, search for "SimVascular"
+		Click the SimVascular icon.
 
 3. Notice: it may mention missing some libs during launch, according to the information, try "sudo apt-get install [missing lib]" to install them. Most likely you need to run:
 
@@ -37,7 +35,7 @@
 		sudo apt-get install tcllib tklib (for old GUI)
 		sudo apt-get install tcl-dev tk-dev (for old GUI)
 
-5. To use SimVascular Simulation tool, you need to install MPI:
+5. To run simulation, you need to install svSolver (<a href="https://simtk.org/project/xml/downloads.xml?group_id=188" target="_blank">download</a>), and MPI:
 
 		For Ubuntu 14:		
 		sudo apt-get install libmpich2-dev
@@ -48,11 +46,14 @@
 6. (Optional) To add SimVascular to your path , you will need to run the post-install script:
 
 		sudo bash setup-symlinks.sh
+		
+	This script places symbolic links in /usr/local/bin to the simvascular executable scripts. You may wish to edit the symbolic links.
 
-	This script places symbolic links in /usr/local/bin to the simvascular executable scripts.
-	You may wish to edit the symbolic links.
+Notice: 
 
-7. (Optional) To use Meshim (if applicable) on linux,  copy your Meshsim license file into the simvascular directory and rename it meshsim-license.dat
+		After installation:
+		Simvascular is installed at /usr/local/sv/simvascular/[yyyy-mm-dd]
+		svSolver is installed at /usr/local/sv/svsolver/[yyyy-mm-dd]
 
 <br>
 <br>

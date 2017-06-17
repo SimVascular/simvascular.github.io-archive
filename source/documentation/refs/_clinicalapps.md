@@ -28,6 +28,11 @@ A.S. Les, S.C. Shadden, C.A. Figueroa, J.M. Park, M.M. Tedesco, R.J. Herfkens, R
 
 J. M. Oakes, A. L. Marsden, C. Grandmont, S. C. Shadden, C. Darquenne and I. E. Vignon-Clementel, **Airflow and Particle Deposition Simulations in Health and Emphysema: From In Vivo to In Silico Animal Experiments**, _Annals of Biomedical Engineering_, 42(4):899-914, 2014. [Link](http://link.springer.com/article/10.1007/s10439-013-0954-8#page-1)
 
+M. Esmaily-Moghadam, T-Y Hsia and A.L. Marsden, **The Assisted Bidirectional Glenn: a novel surgical approach for first stage single ventricle heart palliation**, _Journal of Thoracic and Cardiovascular Surgery_, 149(3):699-705, 2015. [Link](http://www.sciencedirect.com/science/article/pii/S0022522314015402)
+
+A. B. Ramachandra, A. M. Kahn and A. L. Marsden, **Patient specific simulations reveal significant differences in mechanical stimuli in venous and arterial coronary grafts**, _Journal of Cardiovascular Translational Research_, 9(4):279–290, 2016. [Link](https://link.springer.com/article/10.1007%2Fs12265-016-9706-0)
+
+D. Schiavazzi, E.O. Kung., A.L. Marsden, C. Baker, G. Pennati, T.-Y Hsia and A. Dorfman, **Hemodynamic effects of left pulmonary artery stenosis following superior cavopulmonary connection: a patient-specific multiscale modeling study**, _Journal of Thoracic and Cardiovascular Surgery_, 149(3):689–696.e3, 2015. [Link](http://www.sciencedirect.com/science/article/pii/S0022522314021849)
 
 #### Simbios
 

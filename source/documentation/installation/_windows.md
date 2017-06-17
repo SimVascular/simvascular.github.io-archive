@@ -5,8 +5,6 @@
 ### Supported Versions ###
 	
 	Windows 10 (tested)
-	Windows 8
-	Window 7
 
 <br>
 ### Installing SimVascular ###
@@ -21,7 +19,7 @@
 		Or
 		Copy the original icon and make such change so you have one icon for the new GUI and the other for the old GUI.
 
-3. To access the full functions of SimVascular Simulation tool, it's required to install svSolvers. There is a separate installer for svSolvers at simtk.org
+3. To run simulation, you need to install svSolver (<a href="https://simtk.org/project/xml/downloads.xml?group_id=188" target="_blank">download</a>).
 
 4. For **Windows 7**, you may need to install a few extra package to use SimVascular.
 
