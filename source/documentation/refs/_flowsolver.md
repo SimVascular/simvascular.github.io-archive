@@ -6,6 +6,9 @@ Please acknowledge the relevant publications from the following list if you are 
 
 #### SimVascular Review
 
+H. Lan, A. Updegrove, N.M. Wilson, G.D. Maher, S.C. Shadden and A.L. Marsden, **A Re-Engineered Software Interface and Workflow for the Open-Source SimVascular Cardiovascular Modeling Package**, _Journal of Biomechanical Engineering_, online, 2018. [Link](http://biomechanical.asmedigitalcollection.asme.org/article.aspx?articleid=2666622)
+
+
 A. Updegrove, N.M. Wilson, J. Merkow, H. Lan, A.L. Marsden and S.C. Shadden, **SimVascular: An Open Source Pipeline for Cardiovascular Simulation**, _Annals of Biomedical Engineering_, online, 2016. [Link](http://link.springer.com/article/10.1007/s10439-016-1762-8)
 
 #### Finite Element Modeling Overview
@@ -21,6 +24,3 @@ C.H. Whiting and K.E. Jansen, **A stabilized finite element method for the incom
 #### Patient Specific Model Construction:  
 
 N. Wilson, K. Wang, R. Dutton and C. A. Taylor, **A Software Framework for Creating Patient Specific Geometric Models from Medical Imaging Data for Simulation Based Medical Planning of Vascular Surgery**, Lecture Notes in Computer Science, 2208:449-456, 2001. [Link](http://link.springer.com/chapter/10.1007/3-540-45468-3_54#page-1)
-
-
-
