@@ -20,7 +20,7 @@ page "/docs*.html", :layout => "docs"
 page "/clinical*.html", :layout => "clinical"
 page "/archive*.html", :layout => "archive"
 page "/comingSoon*.html", :layout => "comingSoon"
-
+page "/workshop*.html", :layout => "workshops"
 ###
 # Code highlighting
 ###
@@ -58,6 +58,11 @@ end
 # ARCHIVES
 ["InstallationSV2", "QuickGuideSV2", "ImageGuideSV2", "ModelGuideSV2", "MeshingSV2", "FlowSolverSV2", "CodeSnippetsSV2"].each do |name|
   proxy "/archive#{name}.html", "/archiveTemplate.html", :locals => { :man_name => name }, :ignore => true
+end
+
+# ARCHIVES
+["WCB"].each do |name|
+  proxy "/workshop#{name}.html", "/workshopTemplate.html", :locals => { :man_name => name }, :ignore => true
 end
 
 ###

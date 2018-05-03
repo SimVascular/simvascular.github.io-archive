@@ -1,0 +1,32 @@
+---
+title: SimVascular Workshops
+---
+<div class="row" style="margin-top:75px;">
+
+  <div class="col-xs-1 col-sm-1 hidden-md hidden-lg">
+  </div>
+
+  <div class="col-xs-10 col-sm-10 col-md-9 col-lg-9" id="manualContent">
+    <div class="row">
+      <ul style="list-style-type:none;">
+        <li>
+          <a href="workshopWCB.html">WCB 2018</a>
+        </li>
+        <li>
+          <a href="workshopWCB.html">SB3C 2017</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="row" id="manualContent">
+
+      <!-- ACTUAL CONTENT -->
+
+      <% if man_name == "WCB" %>
+        <div class="manWCB"><%= partial "workshops/wcb.md" %></div>
+        <img src="img/workshops/SimVascular_Flyer_dublin18.png" width=100%/>
+      <% end %>
+
+    </div>
+  </div>
+</div>
