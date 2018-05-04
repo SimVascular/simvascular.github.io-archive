@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SimVascular</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" /><link href="css/bootstrap-select.min.css" rel="stylesheet" type="text/css" /><link href="css/grayscale.css" rel="stylesheet" type="text/css" />
+
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="//vjs.zencdn.net/4.8/video-js.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+  <!-- FB STUFF -->
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                <i class="fa fa-bars"></i>
+            </button>
+
+            <a class="navbar-brand page-scroll" href="#page-top">
+                <img src="img/svlogo/svLogoSmallText.png" alt="..." >
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+            <ul class="nav navbar-nav">
+                <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                <li class="hidden">
+                    <a href="#page-top"></a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#page-top">Home</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#gallery">Gallery</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#download">Download</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#docs">Documentation</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#repository">Repository</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#team">Our Team</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#team">Workshops</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Intro Header -->
+<header class="intro">
+    <div class="intro-body">
+        <div class="container content-section text-center">
+            <div class="row">
+                <div class="col-lg-9 top-buffer">
+                    <img id="svLogoTitle" src="img/svlogo/svLogoTitle.png" alt="..." >                
+                    <p class="intro-text top-buffer">The only fully opensource software package providing a complete pipeline from medical image data segmentation to patient specific blood flow simulation and analysis.</p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div>
+                        <img id="svLogoTitle" src="img/logos/stanfordmedicine.png" style="float: left; margin-left: 25px; margin-right: 25px; height:50px; width:150px;" alt="..." >
+                        <img id="svLogoTitle" src="img/logos/ucberkeley.png" style="float: left; margin-right: 25px; height:50px; width:150px;" alt="..." >
+                        <img id="svLogoTitle" src="img/logos/osmsc.png" style="float: left; margin-right: 25px; height:50px; width:150px;" alt="..." >
+                        <img id="svLogoTitle" src="img/logos/nsf.jpg" style="float: left; margin-right: 25px; height:50px; width:50px;" alt="..." >                
+                        <img id="svLogoTitle" src="img/logos/simtk.png" style="float: left; height:45px; width:160px;" alt="..." >
+                    </div>
+                </div>
+
+                        <!-- LOGOS AND TWITTER -->
+                <div class="col-lg-3 top-buffer text-center top-buffer">
+                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 top-buffer-small text-left">
+                    <a href="https://www.facebook.com/groups/835227759855853/"><img class="media-object" src="img/logos/fb.png" style="float: left; margin-right: 5px; height:35px;" alt="..."></a>
+                    <!-- 
+                    <img class="media-object" src="img/logos/gp.png" style="float: left; margin-right: 5px; height:35px;" alt="...">
+                    <img class="media-object" src="img/logos/linkedin.png" style="float: left; margin-right: 5px; height:35px;" alt="...">          
+                    -->
+                    <a href="https://www.youtube.com/channel/UCT61XgTRqpfb39Hyio9IqGQ"><img class="media-object" src="img/logos/ut.png" style="float: left; margin-right: 5px; height:35px;" alt=""></a>  
+                  </div>
+
+                  <!-- TWITTER TIMELINE -->
+                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-left top-buffer-small">
+                    <a class="twitter-timeline" href="https://twitter.com/simvascular" data-widget-id="514211820307886080">Tweets by @simvascular</a>        
+                  </div>
+
+                  <!-- FB/GP LIKE BUTTONS -->
+                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 top-buffer-small text-left bottom-buffer-small">
+                    <div class="g-plusone"></div>  
+                    <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>    
+                  </div>
+
+                </div>  
+
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Contact Section -->
+<section id="gallery" class="container content-section text-left">
+  <div class="row">
+    <div class="col-lg-7 text-left top-buffer"> 
+      <h2>Gallery</h2>
+      <h4>Picture Gallery</h4>
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+
+          <div class="item active">         
+            <img src="img/gallery/Img_Gallery_01.png" alt="...">
+            <div class="carousel-caption">
+              <h5>Blood flow in CABG simulation</h5>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="img/gallery/Img_Gallery_02.png" alt="...">
+            <div class="carousel-caption">
+              <h5>Blood velocity distribution in CABG simulation</h5>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="img/gallery/Img_Gallery_03.png" alt="...">
+            <div class="carousel-caption">
+              <h5>Blood velocity in coronary aneurism</h5>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="img/gallery/Img_Gallery_04.png" alt="...">
+            <div class="carousel-caption">
+              <h5>hemi-Fontan cavopulmonary connection</h5>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+      </div>  
+    </div>
+
+
+    <div class="col-lg-5 text-left top-buffer">
+
+      <h4>Animation Gallery</h4>
+      <video loop id="div_video" class="video-js vjs-default-skin  align-centre" controls preload="none" 
+        poster="img/gallery/ani_CABG.png"
+        width="640" height="264"
+        data-setup="{}">  
+
+        <source src="img/gallery/ani_CABG.mp4" type="video/mp4">
+        <source src="img/gallery/ani_CABG.ogg" type="video/ogg">
+        <source src="img/gallery/ani_CABG.webm" type="video/webm">
+
+        <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+
+      </video>
+
+      <h6>Choose Video</h6>
+      <div class="col-xs-3 col-md-3 col-lg-3">
+        <a id="CABG"  class="thumbnail thumBlack">          
+          <img src="img/gallery/thumb_CABG.png" alt="...">
+        </a>
+      </div>
+      
+        <div class="col-xs-3 col-md-3 col-lg-3">
+          <a id="SHUNT" class="thumbnail thumBlack">
+            <img src="img/gallery/thumb_SHUNT.png" alt="...">
+          </a>
+        </div>
+        <div class="col-xs-3 col-md-3 col-lg-3">
+          <a id="YGRAFT" class="thumbnail thumBlack">
+            <img src="img/gallery/thumb_YGRAFT.png" alt="...">
+          </a>
+        </div>
+        <div class="col-xs-12 col-md-12 col-lg-12">
+          <h5><a href ="https://www.youtube.com/channel/UCT61XgTRqpfb39Hyio9IqGQ">Follow us on youtube...</a></h5>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- Download Section -->
+<section id="download" class="content-section text-center">
+
+  <!-- Download Instructions -->
+  <div class="row">
+    
+    <div class="col-lg-12">
+      <h2>Download SimVascular</h2>
+
+        <!-- Choose OS and RELEASE -->
+        <!-- <label for="OS" class="control-label"><h5>OS</h5></label>
+        <select class="selectpicker" id="OS" data-style="btn-primary">
+          <option>Windows</option>
+          <option>Linux</option>
+          <option>Mac OSX</option>
+        </select>
+
+        <label for="version" class="control-label"><h5>Release</h5></label>
+        <select class="selectpicker" id="version" data-style="btn-primary">
+          <option value="19">1.9</option>
+          <option value="20">2.0</option>
+          <option value="21">2.1</option>
+        </select>-->
+            
+      <div class="col-lg-12">
+        <h4><span class="glyphicon glyphicon-user"></span> Users: download installer packages</h4>
+        <div class="form-group">
+          <a href="https://simtk.org/project/xml/downloads.xml?group_id=188" class="btn btn-info" role="button">Download Installation Package</a>
+        </div>
+      </div>
+
+      <div class="col-lg-12 top-buffer">
+        <h4><span class="glyphicon glyphicon-cog"></span> Developers: visit our source code repository</h4>
+        <div class="form-group">
+         <a href="https://github.com/SimVascular/SimVascular" class="btn btn-info" role="button">Source Code Repository</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Licence -->
+  <div class="row">
+    
+    <!-- Column Space -->
+    <div class="col-xs-1 col-lg-3">
+    </div>
+
+    <!-- Description -->
+    <div class="col-xs-10 col-lg-6 top-buffer">
+      <div class="media">
+        <h4 class="media-heading centerTitleText"><a class="expander" href="#">License Terms</a></h4>
+          <div class="media-body">          
+          <div class="content BioPar justifiedText">
+            <h6 class="media-heading text-Left top-buffer">SimVascular components svModel, svMesh, svPre, and svPost are provided under the full BSD license subject to the terms below:</h6>
+            <p class="LegalStuff">
+              Copyright &copy; 1998-2007 Stanford University, Charles Taylor, Nathan Wilson, Ken Wang. See SimVascular Acknowledgements file for additional contributors to the source code.
+              <br>
+              <br>
+              Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+              <br>
+              <br>
+              The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+              <br>
+              <br>
+              THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+            </p>
+            <h6 class="media-heading text-Left">The SimVascular solver, including svSolver and svLS, is provided under a modified BSD-license subject to the permissions below:</h6>
+            <p class="LegalStuff">
+              This software is Copyright &copy; 2014 The Regents of the University of California. All Rights Reserved.
+              Permission to copy, modify, and distribute this software and its documentation for educational, research and non-profit purposes, without fee, and without a  written agreement is hereby granted, provided that the above copyright notice, this paragraph and the following three paragraphs appear in all copies.
+              <br>
+              <br>
+              Permission to make commercial use of this software may be obtained by contacting:
+              <br> 
+              <br>
+              Technology Transfer Office<br>
+              9500 Gilman Drive, Mail Code 0910<br>
+              University of California<br>
+              La Jolla, CA 92093-0910<br>
+              (858) 534-5815<br>
+              invent@ucsd.edu
+              <br>
+              <br>
+              This software program and documentation are copyrighted by The Regents of the University of California. The software program and documentation are supplied "as is", without any accompanying services from The Regents. The Regents does not warrant that the operation of the program will be uninterrupted or error-free. The end-user understands that the program was developed for research purposes and is advised not to rely exclusively on the program for any reason.
+              <br>
+              <br>
+              IN NO EVENT SHALL THE UNIVERSITY OF CALIFORNIA BE LIABLE TO ANY PARTY FOR DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, INCLUDING LOST PROFITS, ARISING OUT OF THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION, EVEN IF THE UNIVERSITY OF CALIFORNIA HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. THE  UNIVERSITY OF CALIFORNIA SPECIFICALLY DISCLAIMS ANY WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE SOFTWARE PROVIDED HEREUNDER IS ON AN "AS IS" BASIS, AND THE UNIVERSITY OF CALIFORNIA HAS NO OBLIGATIONS TO PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
+            </p>
+            <h6 class="media-heading text-Left">Licensing terms for external open source packages</h6>
+            <p class="LegalStuff">
+              ITK: <a href="http://www.itk.org/ITK/project/license.html">http://www.itk.org/ITK/project/license.html</a><br>
+              VTK: <a href="http://www.vtk.org/VTK/project/license.html">http://www.vtk.org/VTK/project/license.html</a><br> 
+              Tetgen: <a href="http://wias-berlin.de/software/tetgen/1.5/agpl-3.0-standalone.html">http://wias-berlin.de/software/tetgen/1.5/agpl-3.0-standalone.html</a><br>
+            </p>
+            <h6 class="media-heading text-Left">Commercial components</h6>
+            <p class="LegalStuff">
+              MeshSim users should contact simmetrix for licensing information. 
+            </p>
+            <h6 class="media-heading text-Left">Additional license information</h6>
+            <p class="LegalStuff">
+              Please see the additional license information contained in the SimVascular source code.
+            </p>
+          </div>          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Documentation Section -->
+<section id="docs" class="container content-section text-left">
+  <div class="row">
+    <div class="col-lg-12">
+      <h2>SimVascular Documentation</h2>
+        <div class="row">
+
+          <!-- User Guides -->
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 top-buffer"> 
+            <!-- Description -->                       
+            <div class="media">
+              <!-- <a class="pull-left" href="#">
+                <img class="media-object" src="img/Img_Docs_ModelBuild.png" alt="...">
+              </a> -->
+              <div class="centreDoc" style="height:100px;">
+                <img src="img/docs/header_img_07.png" alt="...">
+              </div><br>
+              <div class="media-body">
+                 <h4 class="media-heading text-center">User Guides</h4><br>
+		 <h6 class="media-heading text-center"><a href="docsInstallation.html">Installing SimVascular</a></h6><br>
+		 <h6 class="media-heading text-center"><a href="docsQuickGuide.html">Quick Guide</a></h6><br>
+		 <h6 class="media-heading text-center"><a href="docsModelGuide.html">Modeling Guide</a></h6><br>
+		 <h6 class="media-heading text-center"><a href="docsMeshing.html">Meshing Guide</a></h6><br>
+		 <h6 class="media-heading text-center"><a href="docsFlowSolver.html">Simulation Guide</a></h6>
+              </div>
+            </div>                  
+          </div>
+
+          <!-- Clinical Test Cases -->                
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 top-buffer">
+            <!-- Description -->
+            <div class="media">
+              <!-- <a class="pull-left" href="#">
+                <img class="media-object" src="img/Img_About_Coro.png" alt="...">
+              </a> -->
+              <div class="centreDoc" style="height:100px;">
+                <img src="img/docs/header_img_03.png" alt="...">
+              </div><br>              
+              <div class="media-body">
+                <h4 class="media-heading text-center">Clinical Case Studies</h4><br>
+                <h6 class="media-heading text-center"><a href="clinicalCase3.html">Coronary Normal</a></h6><br>
+                <h6 class="media-heading text-center"><a href="clinicalCase1.html">Aortofemoral Normal - 1</a></h6><br>
+                <h6 class="media-heading text-center"><a href="clinicalCase2.html">Aortofemoral Normal - 2</a></h6><br>
+                <h6 class="media-heading text-center"><a href="clinicalCase4.html">Healthy Pulmonary</a></h6>
+              </div>
+            </div>            
+          </div>
+
+          <!-- Developer Guides -->                
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 top-buffer">
+            <!-- Description -->
+            <div class="media">
+              <!-- <a class="pull-left" href="#">
+                <img class="media-object" src="img/Img_About_Coro.png" alt="...">
+              </a> -->
+              <div class="centreDoc" style="height:100px;">
+                <img src="img/docs/header_img_08.png" alt="...">
+              </div><br>
+              <div class="media-body">
+                <h4 class="media-heading text-center">Developer Guides</h4><br>
+                <h6 class="media-heading text-center"><a href="docsCompile.html">Compile Source Code</a></h6><br>
+              </div>
+            </div>            
+          </div>
+                
+          <!-- SV Community -->                
+          <!--<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 top-buffer">-->
+            <!-- Description -->
+            <!--<div class="media">-->
+              <!-- <a class="pull-left" href="#">
+                <img class="media-object" src="img/Img_About_Coro.png" alt="...">
+              </a> -->
+              <!--<div class="centreDoc" style="height:100px;">
+                <img src="img/docs/header_img_06.png" alt="...">
+              </div><br>   
+              <div class="media-body">
+                <h4 class="media-heading text-center">svCommunity</h4><br>
+                <h6 class="media-heading"><a href="https://simtk.org/forums/viewforum.php?f=188">SimVascular Public Forum</a></h6>
+                Interact with other SimVascular users.<br><br>
+                <h6 class="media-heading"><a>News Mailing List</a></h6>
+                <h6 class="media-heading"><a href="https://simtk.org/mailman/listinfo/simvascular-news">Sign up</a> - <a href="https://simtk.org/pipermail/simvascular-news/">Archive</a></h6>
+                Announcements and latest news about SimVascular.<br><br>
+                <h6 class="media-heading"><a>Users Mailing List</a></h6>
+                <h6 class="media-heading"><a href="https://simtk.org/mailman/listinfo/simvascular-users">Sign up</a> - <a href="http://simvascular-users.40599.n7.nabble.com/">Archive</a></h6>
+                Join the SimVascular user mailing list and let us know what you think.<br><br>
+                <h6 class="media-heading"><a href="https://simtk.org/tracker/?group_id=188">Suggest new features or report bugs</a></h6>
+                Help us to improve SimVascular.<br><br>  
+              </div>
+            </div>            
+          </div> -->
+
+        </div>
+      </div>
+    </div>
+</section>
+
+<!-- Repository Section -->
+<section id="repository" class="content-section">
+    <div class="container">
+      <div class="row  text-left">
+        <div class="col-lg-12">
+          <h2>Vascular Model Repository</h2>
+          <!-- Description -->
+          <div class="media">
+            <a class="pull-left" href="#">
+              <img class="media-object" src="img/repbanner3.png" alt="...">
+            </a>
+            <div class="media-body">
+              <h4 class="media-heading">What is it</h4>
+              The vascular model repository, a sister project of SimVascular, is a library of computational models of normal and diseased human cardiovascular and pulmonary anatomy and input and output boundary conditions for various physiologic states. These models can be used to simulate cardiovascular and pulmonary solid and fluid mechanics and will provide spatially and temporally-resolved benchmark solutions that can be used by academic, government and industry researchers to verify their computational methods. Most models in the repository were created with SimVascular. The SimVascular project provides an open source package for simulation to accompany the data provided in the model repository.   
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-lg-12 top-buffer">
+          <div href="#" class="thumbnail col-xs-4 col-sm-5 col-md-5 col-lg-5 thumBlackRepo">
+            <img class="media-object repoImgRight" src="img/vmr/image1.png" alt="...">  
+          </div>
+          <div href="#" class="thumbnail col-xs-4 col-sm-2 col-md-2 col-lg-2 thumBlackRepo">
+            <img class="media-object repoImgCenter" src="img/vmr/model1.png" alt="...">
+          </div>          
+          <div href="#" class="thumbnail col-xs-4 col-sm-5 col-md-5 col-lg-5 thumBlackRepo">
+            <img class="media-object repoImgLeft" src="img/vmr/result1.png" alt="...">
+          </div>                    
+        </div>
+      </div>
+      <div class="row text-center top-buffer">
+        <div class="col-lg-offset-4 col-lg-4">
+        <a href="http://www.vascularmodel.com/" role="button" class="btn btn-info btn-large">Visit the SV Model Repository</a>
+        </div>
+      </div>
+    </div>
+</section>
+
+<!-- Our Team Section -->
+<section id="team" class="content-section text-left">
+        <div class="container">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <h2>Our Team</h2>
+              <div class="row">
+
+                <!-- Team 1 -->
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                  <div class="thumbnail bioThumbs">
+                    <img src="img/bio/amarsden.jpg" alt="...">
+                    <div class="caption">
+                      <h4><a href="http://cbcl.stanford.edu">Alison Marsden</a></h4>
+                      <a class="expander" href="#">Bio notes</a>
+                      <div class="content BioPar">
+                        <p>Alison Marsden is an associate professor of Pediatrics (Cardiology) and of Bioengineering, by courtesy, of Mechanical Engineering at at Stanford University. She graduated with a bachelor&rsquo;s degree in Mechanical Engineering from Princeton University in 1998, and a PhD in Mechanical Engineering from Stanford in 2005 working with Prof. Parviz Moin. She was a postdoctoral fellow at Stanford University in Bioengineering and Pediatric Cardiology from 2005-07 working with Charles Taylor and Jeffrey Feinstein. She was the recipient of an American Heart Association postdoctoral fellowship, an AHA beginning grant in aid award, a Burroughs Wellcome Fund Career Award at the Scientific Interface, an NSF CAREER award, and is a member of an international Leducq Foundation Network of Excellence.  She has published over 60 peer reviewed journal papers, and her lab has received funding from the NSF, NIH, and several private foundations.  Her work focuses on the development of numerical methods for simulation of cardiovascular blood flow problems, medical device design, application of optimization to large-scale fluid mechanics simulations, and use of engineering tools to impact patient care in cardiovascular surgery and congenital heart disease.</p>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Team 2 -->
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                  <div class="thumbnail bioThumbs">
+                    <img src="img/bio/sshadden.jpg" alt="...">
+                    <div class="caption">
+                      <h4><a href="http://shaddenlab.berkeley.edu/">Shawn Shadden</a></h4>
+                      <a class="expander" href="#">Bio notes</a>
+                      <div class="content BioPar">
+                        <p>Shawn Shadden is an Associate Professor of Mechanical Engineering at the University of California, Berkeley. His research focuses on the advancement of theoretical and computational methods to quantify complex fluid flow. He received a BS in Aerospace Engineering from The University of Texas at Austin (2001), and PhD in Control and Dynamical Systems from the California Institute of Technology (2006).  From 2006-2009 he carried out an NSF Mathematical Sciences Postdoctoral Research Fellowship to translate his work in dynamical systems to research on cardiovascular biomechanics at Stanford University. From 2009-2013 he served as an Assistant Professor at the Illinois Institute of Technology in Chicago, IL, before joining the faculty at UC Berkeley.</p>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Team 3 -->
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                  <div class="thumbnail bioThumbs">
+                    <img src="img/bio/nwilson.png" alt="...">
+                    <div class="caption">
+                      <h4><a href="http://www.vascularmodel.com/">Nathan Wilson</a></h4>
+                      <a class="expander" href="#">Bio notes</a>
+                      <div class="content BioPar">
+                        <p>Dr. Nathan Wilson has started two medical-related software companies, served as a Principal Investigator on two SBIR research grants, co-authored over thirty peer-reviewed journal and conference publications, and teaches introductory classes in entrepreneurship, business plan development, and technology and science commercialization at UCLA. Nathan has a PhD in Mechanical Engineering from Stanford University and an MBA from UCLA Anderson.</p>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <!-- Team 5 -->
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                  <div class="thumbnail bioThumbs">
+                    <img src="img/bio/akaiser.jpg" alt="...">
+                    <div class="caption">
+                      <h4>Alexander kaiser</h4>
+                      <a class="expander" href="#">Bio notes</a>
+                      <div class="content BioPar">
+                        <p>Alexander D. Kaiser is a postdoctoral scholar in the department of Cardiothoracic Surgery at Stanford School of Medicine. He completed his PhD in mathematics at the Courant Institute of Mathematical Sciences, New York University, where his research focused on modeling and simulation of the mitral valve. Currently, he is interested in building tools and developing methods for cardiac modeling, and using them to investigate surgical procedures. </p>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                  <div class="thumbnail bioThumbs">
+                    <img src="img/bio/hlan.jpg" alt="...">
+                    <div class="caption">
+                      <h4>Hongzhi Lan</h4>
+                      <a class="expander" href="#">Bio notes</a>
+                      <div class="content BioPar">
+                        <p>Hongzhi Lan is a postdoctoral scholar in Pediatrics (Cardiology) and of Bioengineering at Stanford University. He received a bachelor degree(1999) in Mechanical Engineering from Tsinghua University, a master degree(2007) in Mechanical Engineering and a PhD(2013) in Biomedical Engineering from Tulane University.  His research experiences include modeling/simulation of indentation on alloys and piezoelectric materials, biotransport of nutrients between cells in the bone matrix, and leukocyte deformation/migration using viscoelastic models. His current research interests focus on flow solver for cardiovascular simulation, development of the open source project SimVascular, and simulation for cardiovascular diseases and surgery.</p>
+
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
+                <!-- Team 6 -->
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                  <div class="thumbnail bioThumbs">
+                    <img src="img/bio/aupdegrove.jpg" alt="...">
+                    <div class="caption">
+                      <h4>Adam Updegrove</h4>
+                      <a class="expander" href="#">Bio notes</a>
+                      <div class="content BioPar">
+                        <p>Adam Updegrove is a PhD student in the department of Mechanical Engineering at the University of California, Berkeley. He graduated with a BS in Mechanical Engineering at Rensselaer Polytechnic Institute in Troy, NY.  At RPI, Adam received prestigious awards such as the Founder’s Award of Excellence and the Living W. Houston Citizenship Award. Adam was awarded the National Science Foundation Graduate Research Fellowship to help promote scientific innovation and teaching. Amongst other things, Adam loves playing soccer and volunteering in the Community.</p>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Team 7 -->
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                  <div class="thumbnail bioThumbs">
+                    <img src="img/bio/gmaher.jpg" alt="...">
+                    <div class="caption">
+                      <h4>Gabriel Maher</h4>
+                      <a class="expander" href="#">Bio notes</a>
+                      <div class="content BioPar">
+                        <p>Gabriel Maher is a PhD student in  Computational and Mathematical Engineering at Stanford University. He received his MS degree in Aerospace from Delft University of Technology.</p>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Team 8 -->
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                  <div class="thumbnail bioThumbs">
+                    <img src="img/bio/fkong.png" alt="...">
+                    <div class="caption">
+                      <h4>Fanwei Kong</h4>
+                      <a class="expander" href="#">Bio notes</a>
+                      <div class="content BioPar">
+                        <p>Fanwei Kong is a PhD student majoring in Mechanical Engineering at the University of California, Berkeley. She graduated from Georgia Tech with a BS degree in biomedical engineering. </p>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="content-section text-center">
+    <div class="container">
+      <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+        <h2>Contact us</h2>
+        <h4>We are very interested in your feedback and comments.</h4>
+
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+
+<!--           <h6 class="media-heading"><a>Users Mailing List</a></h6>
+          <h6 class="media-heading"><a href="https://simtk.org/mailman/listinfo/simvascular-users">Sign up</a> - <a href="https://simtk.org/pipermail/simvascular-users/">Archive</a></h6>
+          Announcements and latest news about SimVascular.<br><br> -->
+          <h6 class="media-heading"><a>News Mailing List</a></h6>
+          <h6 class="media-heading"><a href="https://simtk.org/mailman/listinfo/simvascular-news">Sign up</a> - <a href="https://simtk.org/pipermail/simvascular-news/">Archive</a></h6>
+          Announcements and latest news about SimVascular.<br><br>
+          <h6 class="media-heading"><a href="https://simtk.org/forums/viewforum.php?f=188">SimVascular Public Forum</a></h6>
+          Interact with other SimVascular users.<br><br>
+          
+          <!-- CONTANT FORM - OLD
+          <form id="contact-us" class="form-horizontal" role="form" method="post" action="php/sendMail.php">
+            <div class="form-group has-feedback">
+              <label for="visitorName" class="col-sm-2 control-label">Name</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control requiredField" name="visitorName" id="visitorName" placeholder="Name">
+              </div>
+            </div>
+            <div class="form-group has-feedback">
+              <label for="visitorMail" class="col-sm-2 control-label">Email</label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control requiredField" name="visitorMail" id="visitorMail" placeholder="Email">
+              </div>
+            </div>
+            <div class="form-group has-feedback">
+              <textarea class="form-control requiredField" rows="5" name="visitorMessage" placeholder="Leave us a comment or contact us for consulting and customizations of SimVascular..."></textarea>
+            </div>
+            <div class="form-group">
+              <div class="col-lg-12">
+                <button type="submit" name="go" class="btn btn-primary btn-block btn-lg">Send Comment</button>
+              </div>
+            </div>
+          </form>
+          -->
+         
+        </div>
+        <!-- OTHER BUTTONS -->
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+
+          <h6 class="media-heading"><a href="https://simtk.org/tracker/?group_id=188">Suggest new features or report bugs</a></h6>
+          Help us to improve SimVascular.<br><br>  
+          <h6 class="media-heading"><a href="http://benefunder.org/causes/186/alison-marsden">Make a Donation</a></h6>
+          Support our Research.<br><br>  
+                      
+        </div>
+      </div>
+    </div>
+</section>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <h5>Copyright &copy; SimVascular Development Team - 2017</h5>
+        </div>
+    </footer>
+
+    <script src="js/jquery-1.11.0.js" type="text/javascript"></script><script src="js/bootstrap.min.js" type="text/javascript"></script><script src="js/bootstrap-select.min.js" type="text/javascript"></script><script src="js/jquery.easing.min.js" type="text/javascript"></script><script src="js/grayscale.js" type="text/javascript"></script><script src="js/simple-expand.min.js" type="text/javascript"></script><script src="js/svVideo.js" type="text/javascript"></script>
+
+    <script src="//vjs.zencdn.net/4.8/video.js"></script>
+
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-55333921-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+    <script>
+
+      !function(d,s,id){
+        var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+        if(!d.getElementById(id)){
+          js=d.createElement(s);
+          js.id=id;
+          js.src=p+"://platform.twitter.com/widgets.js";
+          fjs.parentNode.insertBefore(js,fjs);
+        }
+      }(document,"script","twitter-wjs");
+
+
+      $(document).ready(function() {
+        // Select Peeker
+        $('.selectpicker').selectpicker({
+          size: 8
+        });    
+        // Content Expansion
+        $('.expander').simpleexpand();  
+        // Form Submission
+        $('form#contact-us').submit(function() {
+          $('form#contact-us .error').remove();
+          $('form#contact-us span').remove();
+          $('div#resDiv').remove();
+          
+          var hasError = false;          
+          $('.requiredField').each(function() {
+            $(this).parent().removeClass('has-error');
+            if($.trim($(this).val()) == '') {
+              var labelText = $(this).prev('label').text();
+              $(this).parent().addClass('has-error');
+              $(this).parent().append('<span class="glyphicon glyphicon-remove form-control-feedback"></span>');
+              hasError = true;
+            } else if($(this).hasClass('email')) {
+              var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+              if(!emailReg.test($.trim($(this).val()))) {
+                var labelText = $(this).prev('label').text();
+                $(this).parent().append('<span class="error">Sorry! You\'ve entered an invalid '+labelText+'.</span>');
+                $(this).addClass('inputError');
+                hasError = true;
+              }
+            }else{
+              $(this).parent().addClass('has-success');
+              $(this).parent().append('<span class="glyphicon glyphicon-ok form-control-feedback"></span>');
+            }
+        });
+        // if content OK
+        if(!hasError) {
+          var formInput = $(this).serialize();
+          $.post($(this).attr('action'),formInput, function(data,status){
+            console.log(data);
+            $('form#contact-us').after('<div id="resDiv" class="alert alert-success" role="alert"><p>Mail Sent!</p></div>');
+          });
+        }else{
+          $('form#contact-us').after('<div id="resDiv" class="alert alert-danger" role="alert"><p>Please Review Your Data</p></div>');
+        }
+        return false; 
+      });
+    });
+  </script>
+  </body>
+</html>

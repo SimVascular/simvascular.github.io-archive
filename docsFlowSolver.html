@@ -1,0 +1,2730 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SimVascular Docs</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+
+    <link href="css/shop-item.css" rel="stylesheet" type="text/css" />
+
+    <link href="css/codestyle.css" rel="stylesheet" type="text/css" />    
+
+    <link rel="stylesheet" href="font-awesome-4.1.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
+
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                <i class="fa fa-bars" id="barIcon"></i>
+              </button>
+                <a class="navbar-brand" id="brandName" href="index.html">
+                  <img src="img/svlogo/svLogoSmallText.png" alt="...">
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">            
+                <ul class="nav navbar-nav">
+
+                  <!-- USER GUIDES -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b><span class="fa fa-user"></span> User Guides</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsInstallation.html"><b><span class="fa fa-sign-in fa-rotate-90"></span> Installation</b></a></li>
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsQuickGuide.html"><b><span class="icon ion-ios7-bolt"></span> Quick Guide</b></a></li>
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsModelGuide.html"><b><span class="icon ion-settings"></span> Modeling</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsMeshing.html"><b><span class="icon ion-ios7-keypad"></span> Meshing</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsFlowSolver.html"><b><span class="icon ion-play"></span> Simulation</b></a></li>
+                    </ul>
+                  </li>
+                  
+                  <!-- CLINCAL CASES -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b><i class="fa fa-stethoscope"></i> Clinical Cases</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase3.html"><b><span class="fa fa-user-md"></span> Coronary Normal</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase1.html"><b><span class="fa fa-user-md"></span> Aortofemoral Normal - 1</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase2.html"><b><span class="fa fa-user-md"></span> Aortofemoral Normal - 2</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase4.html"><b><span class="fa fa-user-md"></span> Healthy Pulmonary</b></a></li>
+                    </ul>
+                  </li>
+
+                  <!-- DEVELOPER GUIDES -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b><span class="fa fa-caret-square-o-right"></span> Developer Guides</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsCompile.html"><b><span class="fa fa-file-text-o"></span> Compile Source Code</b></a></li>
+                    </ul>
+                  </li>                  
+
+                  <!-- svCOMMUNITY -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b><i class="fa fa-users"></i> svCommunity</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/forums/viewforum.php?f=188"><b><span class="fa fa-users"></span> Public Forum</b></a></li>                                          
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/mailman/listinfo/simvascular-news"><b><span class="fa fa-sign-in"></span> Join News Mailing List</b></a></li>                      
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/pipermail/simvascular-news/"><b><span class="fa fa-pencil-square-o"></span> News Mailing List Archive</b></a></li>                      
+                    </ul>
+                  </li>
+
+                  <!-- REFERENCES -->
+                  <li>
+                    <a href="docsRefs.html" id="dropdownMenu1" >
+                      <b><span class="icon ion-document-text"></span>References</b>
+                    </a>
+                  </li>  
+
+                  <!-- Archives -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b> Archives</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="archiveQuickGuideSV2.html"><b>SimVascular 2.0</b></a></li>
+                    </ul>
+                  </li>
+
+                    <!-- <li><a href="docsQuickGuide.html" id="btnQuickGuide"><b><span class="icon ion-ios7-bolt"></span> Quick Guide</b></a></li>
+                    <li><a href="docsModelGuide.html" id="btnModelGuide"><b><span class="icon ion-settings"></span> Modeling</b></a></li> 
+                    
+                    <li><a href="docsMeshing.html" id="btnMeshing"><b><span class="icon ion-ios7-keypad"></span> Meshing</b></a></li>
+                    <li><a href="docsPresolver.html" id="btnPresolver"><b><span class="icon ion-log-in"></span> svPre</b></a></li>
+                    <li><a href="docsFlowSolver.html" id="btnFlowSolver"><b><span class="icon ion-play"></span> svSolver</b></a></li>
+                    <li><a href="docsRefs.html" id="btnRefs"><b><span class="icon ion-document-text"></span> References</b></a></li>
+                    <li><a href="clinicalCase1.html" id="btnRefs"><b>Case Studies</b></a></li> -->
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <!--Nav Bar -->
+<div class="row">
+    <div class="col-xs-1 col-sm-1 hidden-md hidden-lg">
+    </div>
+    <!-- ONE COLUMN OF SPACE -->
+    <nav class="hidden-xs hidden-sm col-md-2 col-lg-2 bs-docs-sidebar">
+
+
+
+
+
+        <ul id="sidebar" class="nav nav-stacked fixed manFlowSolver">     <!--Nav Bar -->
+    <h3>Simulation Guide</h3>
+    <li><a href="#intro">Introduction</a></li>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#bcphysics">Boundary Conditions</a></li>
+    <li><a href="#creatingjob">Creating Job</a></li>
+    <li><a href="#basic">Basic Parameters</a></li>
+    <li><a href="#inflowbc">Inflow BC</a></li>
+    <li><a href="#outletbc">Outlet BC</a></li>
+    <li><a href="#wallproperties">Wall Properties</a></li>
+    <li><a href="#solverparameters">Solver Parameters</a></li>
+    <li><a href="#creatingdata">Creating Data Files</a></li>
+    <li><a href="#runningjob">Running Job</a></li>
+    <li><a href="#postprocess">Postprocessing</a></li>
+    <li><a href="#examples">Examples</a>
+      <ul class="nav nav-stacked">
+        <li><a href="#example2">Example 2</a></li>
+        <li><a href="#example3">Example 3</a></li>
+        <li><a href="#example4">Example 4</a></li>
+      </ul>  
+    </li>
+    <li><a href="#appendix">Appendix</a>
+      <ul class="nav nav-stacked">
+        <li><a href="#solverconfiguration">Configurating Solvers</a></li>
+        <li><a href="#presolvercommands">svPre Commands</a></li>
+        <li><a href="#bctfile">BCT File</a></li>
+        <li><a href="#solverinp">solver.inp Guide</a></li>
+        <li><a href="#impbcfile">Impedance BC Files</a></li>
+        <li><a href="#rcrtfile">RCR BC File</a></li>
+        <li><a href="#cortfile">COR BC File</a></li>
+      </ul>  
+    </li>
+    
+    <h3>Download</h3>
+    <a href="https://simtk.org/frs/download_confirm.php/file/5114/CylinderProject.zip?group_id=930">Cylinder Example Project</a>
+  
+
+
+</ul>
+
+
+        
+    </nav>
+    
+    <!--Main Content -->
+    <div class="col-xs-10 col-sm-10 col-md-9 col-lg-9" id="manualContent">
+
+      <!-- ACTUAL CONTENT -->
+
+
+
+
+
+        <div class="manFlowSolver">    <section id="intro" class="group"><h2>Introduction</h2>
+
+<p><strong>SV Simulation</strong> tool can solve the three-dimensional incompressible Navier-Stokes equations in an arbitrary domain, generally a vascular model reconstructed from image data. This is a complex subject with extensive underlying theory, and therefore this document will focus mainly on the practical aspects of simulation and analysis. </p>
+
+<p><strong>Notice</strong>: To get full functions from the Simulation tool, it uses three solvers: <strong>Presolver (svPre), Flowsolver (svSolver), Postsolver (svPost)</strong>. Normally, SimVascular already includes the solvers and can find them automatically. User don&rsquo;t need to set up the solvers. However, in case SimVascular can&rsquo;t find them while users are using the Simulation tool, refer to <a href="#solverconfiguration">Solver Configuration</a>.</p>
+
+<p>The <strong>svSolver</strong> evolved from the academic finite element code PHASTA (Parallel, Hierarchical, Adaptive, Stabilized, Transient Analysis), developed mainly at RPI (Rensselaer Polytechnic Institute, Troy, NY) by Professor Kenneth Jansen. This code was in turned inspired by the Stabilized Finite Element theory developed by Professor Thomas J.R. Hughes during his Stanford years.</p>
+
+<p>Building on the original PHASTA code, there have been a number of important additions and modifications. Professor Charles Taylor’s group at Stanford University developed key additions in the areas of Boundary Conditions and Fluid-Solid Interaction (FSI) coupling. These additions are crucial to represent with a high level of realism the way blood flows in arteries, since this flow is highly dependent on the characteristics of the vascular trees that are downstream of our three-dimensional model, and the compliance of the three-dimensional vascular tree.</p>
+
+<h3>What&rsquo;s New?</h3>
+
+<p>Building on the above features, the Marsden lab at Stanford has added additional key functionality enabling efficient and stable solutions with models of the circulatory physiology:</p>
+
+<ul>
+<li><p><a href="/docsRefs.html#refSec2"><strong>Backflow stabilization.</strong></a> This problem usually arises in large vessels that are exposed to backflow in 3D and 2D flow simulations. This phenomenon may be a cause of divergence of the numerical scheme due to bulk reversal of the flow through an outlet, localized areas of flow reversal or use of a boundary 0D circulation model. </p></li>
+<li><p>Custom and efficient <a href="/docsRefs.html#refSec3"><strong>linear solver.</strong></a> Accurate simulation of blood flow in vessels require the repeated solution of linear systems of equations with millions of unknowns. Moreover, use of closed-loop boundary models significantly increases the degree of coupling between boundary degrees of freedoms. The <strong>svLS</strong> linear solver is designed to efficiently handle large cardiovascular simulations with arbitrary boundary conditions and reduce solution times. </p></li>
+<li><p>Multiscale Coupling for <a href="/docsRefs.html#refSec2"><strong>closed loop boundary conditions.</strong></a>  Coupling a three-dimensional finite element solver with a 0D lumped circulation model drastically improves the possibility of realistically simulate patient-specific hemodynamics and phisiology.</p></li>
+</ul>
+
+<h3>About this guide</h3>
+
+<p>This document will teach you:</p>
+
+<ol>
+<li>setting initial conditions and boundary conditions</li>
+<li>setting mechanical properties for vessel walls (if deformable)</li>
+<li>setting parameters for flowsolver</li>
+<li>running the flow solver</li>
+<li>converting and analyzing the simualtion results </li>
+</ol>
+
+<p>In addition, this tutorial will show you a number of good practices that are important to observe during the simulation process. We will do this considering very simple geometry (a straight cylinder) to illustrate different points in a simple way.</p>
+
+<h3>Theory and Implementation</h3>
+
+<p>The theory and implementation details are not covered in this document. For more information about those details, please refer to our <a href="/docsRefs.html">publications page</a>.</p>
+</section>
+    <section id="overview" class="group"><h2>Overview</h2>
+
+<h3>Process Flow of SimVascular Simulation</h3>
+
+<p>The following figure contains a schematic representation of the processes involved in running a simulation using SimVascular.</p>
+
+<figure>
+  <img class="svImg svImgLg" src="documentation/flowsolver/imgs/simulation_flowchart.png">
+  <figcaption class="svCaption" >Workflow for generating hemodynamic results of a cylindrical model starting from a stereolithography of its exterior surface</figcaption>
+</figure>
+
+<p>We start off with the files coming from the <a href="/docsMeshing.html">meshing</a> of the analysis: these files contain nodal and connectivity information for the finite element mesh, located in the the folder <em>mesh-complete/mesh-surfaces/</em>.</p>
+
+<p><strong>svPre</strong> is the preprocessor for <strong>svSolver</strong>. The input data files to svPre contain a complete description of the discrete model: nodal coordinates, element connectivity, element adjacency information and connectivity of boundary nodes and elements. The <strong>svPre</strong> program can be called either from the command line (in terminal) or the Simulation tool (in GUI). The input data files for <strong>svPresolver</strong> are created from the meshe. They are organized as shown in the example below.</p>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/flowsolver/imgs/meshfiles.png">
+  <figcaption class="svCaption" >Folder structure and file created after clicking on <b>Write Files</b></figcaption>
+</figure>
+
+<p>These files are:</p>
+
+<p>in the <strong>mesh-complete/</strong> folder: </p>
+
+<ul>
+<li><strong>mesh-complete.mesh.vtu</strong>, vtu file containing the solid mesh generated with TetGen.</li>
+<li><strong>mesh-complete.exterior.vtp</strong>, vtp file containig all the exterior elements of the mesh generated with TetGen.</li>
+<li><strong>walls_combined.vtp</strong>, vtp file containing all surface elements assigned to the wall, possibily combined from various surfaces. </li>
+</ul>
+
+<p>in the <strong>mesh-complete/mesh-surfaces/</strong> folder:</p>
+
+<ul>
+<li><strong>inflow.vtp</strong>, vtp file containing the meshed inlet surface.</li>
+<li><strong>outlet.vtp</strong>, vtp file containing the meshed outlet surface.</li>
+<li><strong>wall.vtp</strong>, vtp file containing the meshed wall surface.</li>
+</ul>
+
+<p>SimVascular runs <strong>Presolver(svPre)</strong> using the *.svpre_ file. The *.svpre file contains the set of instructions that define the boundary conditions, initial conditions, and geometrical configuration of our problem. The output of <strong>svPre</strong> is a set of files (<strong>bct.dat, geombc.dat.1, restart.0.1, numstart.dat</strong>) that are ready to be processed by <strong>svSolver</strong> to run a blood flow analysis. Running svSolver also need <strong>solver.inp</strong>, which provide further info for flowsolver.</p>
+
+<p>Once the analysis is finished, the solver outputs files that characterize the finite element solution over a defined time period, typically several cardiac cycles. These files are taken by <strong>svPost</strong> to generate visualization files (typically *.vtu and *.vtp files) that are used to post-process and analyze the desired hemodynamic results. </p>
+
+<h3>Units in Simulation</h3>
+
+<p><strong>svSolver</strong>, just like many other Finite Element Programs, does not enforce a consistent set of physical units in the analysis, but it is up to the analyst to make sure that input data are dimensionally consistent.</p>
+
+<p>To have a consistent set of units, users are advised to either work in CGS, MGS, or SI units; see the following table. </p>
+
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th>Quantity</th>
+  <th>CGS Unit</th>
+  <th>MGS Unit</th>
+  <th>SI Unit</th>
+</tr>
+</thead>
+<tr>
+  <td>Length</td>
+  <td>cm</td>
+  <td>mm</td>
+  <td>m</td>
+</tr>
+<tr>
+  <td>Mass</td>
+  <td>gr</td>
+  <td>gr</td>
+  <td>Kg</td>
+</tr>
+<tr>
+  <td>Time</td>
+  <td>s</td>
+  <td>s</td>
+  <td>s</td>
+</tr>
+</table>
+
+<h3>Useful constants in Simulation</h3>
+
+<p>The following table gathers several important physical constants of blood given in different unit
+systems.</p>
+
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th>Property</th>
+  <th>CGS Unit</th>
+  <th>MGS Unit</th>
+  <th>SI Unit</th>
+</tr>
+</thead>
+<tr>
+  <td>Dynamic viscosity $\mu$ [M · L<sup>-1</sup> · T<sup>-1</sup>]</td>
+  <td>0.04 poise [gr · cm<sup>-1</sup> · s<sup>-1</sup>]</td>
+  <td>0.004 [gr · mm<sup>-1</sup> · s<sup>-1</sup>]</td>
+  <td>0.004 [Kg · m<sup>-1</sup>· s<sup>-1</sup>]</td>
+</tr>
+<tr>
+  <td>Blood density $\rho$ [M · L<sup>-3</sup>]</td>
+  <td>1.06 [gr · cm<sup>-3</sup>]</td>
+  <td>0.00106 [gr · mm<sup>-3</sup>] </td>
+  <td>1060 [Kg · m<sup>-3</sup>]</td>
+</tr>
+</table>
+</section>
+    <section id="bcphysics" class="group"><h2>Boundary Condition Specification: the Physical Side of the Problem</h2>
+
+<p>Boundary conditions are crucial to obtaining high quality cardiovascular simulation results. It is essential that boundary conditions accurately capture the physiology of vascular networks outside of the 3D domain of the model. <strong>SimVascular</strong> provides several different options for boundary condition assignment at inlets and outlets that are described in this section. Typically, we begin with some physiologic information about our problem, for instance:</p>
+
+<ul>
+<li>Flow rate info coming from <strong>MRI</strong> or <strong>ultrasound</strong> measurements.</li>
+<li>Pressure values in the model obtained with a <strong>catheter</strong> transducer or a pressure cuff.</li>
+<li>Vessel wall elastic properties (if we are modeling the vessel walls as deformable).</li>
+</ul>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/flowsolver/imgs/Fig_15.png">
+  <figcaption class="svCaption" >Inflow, outflow and wall characterization in a simple cylindrical vessel</figcaption>
+</figure>
+
+<p>From a conceptual standpoint, no matter how geometrically complex a vascular model is (we’ll refer to this as $\Omega$), its boundaries can be classified into three groups (see figure above):</p>
+
+<ul>
+<li>An <strong>inflow</strong> boundary $\Gamma_g$. This is the set of face(s) of the model where we will prescribe a flow wave as obtained from a clinical measurement.</li>
+<li>A vessel <strong>wall</strong> boundary $\Gamma_s$. This boundary represents the interface between the fluid domain and the vessel wall. In the physical world, this boundary is lined by a layer of endothelial cells, the treatment of which can be complex. Many blood flow simulations have traditionally used a <strong>rigid wall assumption</strong>. Under these circumstances, a zero velocity condition is applied on these surfaces. <strong>SimVascular</strong> also offers options for fluid structure interaction as discussed below.</li>
+<li>An <strong>outflow</strong> boundary $\Gamma_h$. On this boundary, we will typically prescribe a pressure value that is uniform over the face (i.e. spatially not temporally constant) in a <strong>weak manner</strong>. A <strong>weakly applied</strong> pressure means that we are not prescribing nodal values of pressure at the nodes of the outlet face as Dirichlet boundary conditions. Instead, we apply this pressure by enforcing that the integral of the pressure field on that face must be a certain value.</li>
+</ul>
+
+<p>These boundaries have an absolutely critical impact on the numerical simulation results. The SimVascular package contains several options for boundary condition assignment. All of these use a weakly prescribed pressure formulation, with the purpose of accounting for effects of the downstream vasculature on the vascular model (see figure below). These boundary conditions include:</p>
+
+<ul>
+<li><p><strong>Resistance Boundary condition</strong>. Here, the condition prescribed on the face is a relationship between flow and pressure of the form 
+$p = p_0 + R\,Q$, where $R$ is the resistance parameter that characterizes the downstream vasculature, $p$ is the weakly prescribed pressure, $Q$ is the flow rate passing through the face and $p_0$ is a “flag” that sets the boundary as a “weakly-prescribed pressure boundary”. This flag has a “zero” numerical value, so the total value of the pressure on that face is simply given by $R\,Q$.</p></li>
+<li><p><strong>Impedance Boundary condition</strong>. Here, the condition prescribed on the face is a relationship of the form:</p></li>
+</ul>
+
+<p>$$
+p(t)=p_0 + \frac{1}{T}\,\int_{t-T}^{t} Z(t−\tau) \, Q(\tau) \, d\tau
+$$</p>
+
+<p>where $Z$ is the Inverse Fourier Transform of an impedance function that characterizes the downstream vasculature, $p$ is the weakly prescribed pressure, $Q$ is the flow rate passing through the face, and $T$ is the cardiac cycle.</p>
+
+<figure>
+  <img class="svImg svImgLg" src="documentation/flowsolver/imgs/Fig_16.png">
+  <figcaption class="svCaption" >Cardiovascular model with various boundary conditions</figcaption>
+</figure>
+
+<figure>
+  <img class="svImg svImgLg" src="documentation/flowsolver/imgs/Fig_17.png">
+  <figcaption class="svCaption" >Frequency content of impedance from the literature for the left external iliac and a canine femoral artery</figcaption>
+</figure>
+
+<p>The mathematical definition of an impedance function is:</p>
+
+<p>$$
+Z(\omega)=P(\omega)\,Q(\omega),\,\omega=0,1,2,\dots
+$$</p>
+
+<p>That is, a relationship between pressure and flow modes for different frequencies. The figure above shows the typical shape of these impedances as a function of  the frequency in the human iliac artery under rest and exercise conditions. Getting a good characterization of these impedance functions is once again critical to accurately represent the way blood flows in our computational domain.</p>
+
+<ul>
+<li><strong>RCR lumped parameters condition</strong>. In this boundary condition type, we use a <em>reduced-order</em> model of the downstream vasculature, considering an electric circuit analog. In this theory, the behavior of the vasculature is represented by three parameters: a proximal resistance $R_p$, a capacitance $C$, and a distal resistance $R_d$.</li>
+</ul>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/flowsolver/imgs/Fig_18.png">
+  <figcaption class="svCaption" >Circuit representation of RCR block</figcaption>
+</figure>
+
+<ul>
+<li><p><strong>Coronary boundary conditions</strong>. These conditions simulate what happens at the coronary outlets. The implementation in the <strong>svSolver</strong> follows the derivations in <a href="/docsRefs.html#refSec2">this paper</a>.</p></li>
+<li><p><strong>Closed-loop boundary circulation model</strong>. The capability of coupling a 3D finite element model with a lumped parameter model is built into the <strong>svSolver</strong>. Documentation on this feature will be available with later releases of the code. </p></li>
+</ul>
+
+<h3>Boundary conditions considered in Example 1</h3>
+
+<p>Before we move on, let us recap the type of <em>physical problem</em> (<strong>Example 1</strong>) we are solving: the geometry used in this problem consists of an idealized blood vessel, represented by a cylindrical segment with a radius $r=2$ cm and length $L=30$ cm. We prescribe an idealized constant inlet volumetric flow rate $Q$ of $100$ cc/sec to a parabolic profile at the inlet face of the model ($\Gamma_g$). The dynamic viscosity $\mu$ and density $\rho$ of the blood are 0.04 poise and 1.06 gr/cm$^3$, respectively. The lateral surface of the vessel ($\Gamma_{s}$) is considered to be rigid (therefore, we will apply a zero-velocity condition there). For the outlet boundary ($\Gamma_h$), a spatially-constant pressure boundary condition is weakly enforced via a resistance $R$. 
+In this problem, we will consider a resistance of $R = 1333.0$ dynes·s/cm$^5$. </p>
+
+<p>This resistance will give a (weakly-applied) pressure at the outlet face of</p>
+
+<p>$$
+p=p_0 + R\,Q = 0.0 + 1333.0 \cdot 100.0=133300.00 \approx 100\,\text{mmHg}
+$$</p>
+
+<p>(recall that $1.0$ mmHg = $1333.2$ dyn/cm$^2$). For steady flow in a long tube with a circular cross  section, the flow will develop a flow profile known as the <em>Poiseuille</em> flow profile assuming the flow remains laminar. The flow will remain laminar in a circular tube assuming that the non-dimensional parameter given by the <em>Reynolds</em> number $Re$ is $Re &lt; 2100$.</p>
+
+<p>The definition of the Reynolds number is given by:</p>
+
+<p>$$
+Re = \frac{\rho\,D\,V}{\mu}
+$$</p>
+
+<p>where $V$ is a representative velocity of the flow, $D$ is a characteristic dimension of the vessel where the flow is happening (in this case, the diameter), and $\mu$ and $\rho$ are the dynamic viscosity and density, respectively.</p>
+
+<p>For this problem, the Reynolds number is about $884$, so it is well within the laminar flow regime. For a fully developed flow, the axisymmetric profile is parabolic and is given by: </p>
+
+<p>$$
+v_z(a) = v_z^{max}\left[1-\left(\frac{a}{r}\right)^2\right]
+$$</p>
+
+<p>where $v_z^{max}$ is the maximum velocity at the center of the vessel, a is the radial coordinate from center of the vessel $0\le a \le r$ . The expression for maximum velocity is given by:</p>
+
+<p>$$
+v_z^{max} = 2\frac{Q}{\pi\,r^2}
+$$</p>
+
+<p>where $Q$ is the volumetric flow rate. The wall shear stress $\tau$, is given by</p>
+
+<p>$$
+\tau = \frac{2\,\mu\,v_z^{max}}{r}
+$$</p>
+
+<p>For this example, the maximum velocity is $v_z^{max} = 15.92$ cm/s and the wall shear stress is $\tau$ = $0.64$ dynes/cm$^2$.</p>
+</section>
+    <section id="creatingjob" class="group"><h2>Creating a Job for Simulation</h2>
+
+<p>Let&rsquo;s try Example 1. The files for Example 1 can be found from the link on the left &ldquo;Cylinder Example&rdquo;. Download and open the project. Now we assume you alread have the model and mesh for it.</p>
+
+<p><strong>To create a simulation job (empty):</strong></p>
+<pre class="highlight plaintext"><code>Right click the data node "Simulations" in the SV project in Data Manager
+Click "Create Simulation Job" in the popup menu
+Select Model: cylinder
+Job Name: steady
+Click "OK"
+</code></pre>
+
+<figure>
+  <img class="svImg svImgSm"  src="documentation/flowsolver/imgs/createemptyjob.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<figure>
+  <img class="svImg svImgSm"  src="documentation/flowsolver/imgs/createjobdialog.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>Now a new data node “steady” for the job is created under the data node &ldquo;Simulations&rdquo; in Data Manager. Double click the data node “steady&quot; and the tool &ldquo;SV Simulation” automatically shows up. The new job is empty and has not create input and data files yet. </p>
+</section>
+    <section id="basic" class="group"><h2>Basic Parameters</h2>
+
+<p>Basic paramters include fluid material properties, and initial conditions, which are some basic infor to be used for Presolver and Flowsolver. Here we use the defult values (in CSG units). Initial pressure is &ldquo;0&rdquo;. Initial velocities (vx, vy, vz) is &ldquo;0 0 0&rdquo;.</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/flowsolver/imgs/basic.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+</section>
+    <section id="inflowbc" class="subgroup"><h2>Inlet Boundary Condition Specification</h2>
+
+<p>Let&rsquo;s first create a simple file to provide inlet flow rates before seting inlet boundary condition. Your problem may have more that one inflow wave form file. In this case, we only have a single flow file (called steady.flow). We put the file in a subfolder &ldquo;flow-files&rdquo; under the project folder in the disk.</p>
+
+<p>The format of the <strong>steady.flow</strong> file is as follows:</p>
+<pre class="highlight plaintext"><code># Time (sec) Flow (cc/sec)
+0 -100.0
+1 -100.0
+</code></pre>
+
+<p>The first line is a comment line that you don’t need to include, but it helps to remember what units you used in the analysis. Then, two columns of numbers follow. The first column contains time values, and the second column flow values.</p>
+
+<p><strong>WARNING</strong>: please note that flow coming <strong>into</strong> the model (forward flow) will have a negative sign, (like in the example considered here), whereas flow coming <strong>out of</strong> the model (backflow) will be positive. A good way to remember that is that in the case of forward flow, the vector that gives you the direction of the flow and the normal to the face of the model point in opposite directions, and therefore their dot product will be negative.</p>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/flowsolver/imgs/negativeflow.png">
+  <figcaption class="svCaption" >Cylinder with negative inflow</figcaption>
+</figure>
+
+<p>On the other hand, in a situation of back flow,  the numerical value in the *.flow file with be positive. </p>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/flowsolver/imgs/positiveflow.png">
+  <figcaption class="svCaption" >Cylinder with positive inflow</figcaption>
+</figure>
+
+<p>In this problem, since we are running a steady case, our physical time goes from 0.0 to 1.0 seconds, and the flow is constant with a value of 100.0 cc/sec.</p>
+
+<p><strong>HINT</strong>: it is very important that you are absolutely sure about the physical dimensions of your model: every unit (length, time, flow, density, etc.) in your analysis must be dimensionally consistent. You can easily check the size of your model in <a href="http://www.paraview.org/">Paraview</a> before importing it into <strong>SimVascular</strong>.</p>
+
+<p>In this case, our cylinder has a radius $r=2.0$ cm and length $L=30$ cm.</p>
+
+<p>Let&rsquo;s start setting inlet boundary condition.</p>
+<pre class="highlight plaintext"><code>Go to "Inlet and Outlet BCs"
+All the faces of type "cap" are already listed in the table
+Double click the row for the face "inflow"
+A dialog pops up and also the face is highlighted in the 3D-view window.
+In the dialog:
+    BC Type: Prescribed Velocities
+    Analytic Shape: parabolic
+    Point Number: 2
+    Fourier Modes: 1
+    Click the tool button "..." to select the file "steady.flow" we just created as above
+    Period: (filled automatically based on the data from the file)
+    Click "OK"
+</code></pre>
+
+<figure>
+  <img class="svImg svImgSm" src="documentation/flowsolver/imgs/inletbcdialog.png">
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p><font color="red"><strong>Help Hints:</strong> </font> Please make use you specify face types when you create the corresponding model;otherwise, the cap faces won&rsquo;t appear.</p>
+
+<ul>
+<li><p><strong>Point Number</strong>: This is the number of <em>temporal</em> data points that you want to have in one cycle. This is not necessarily the number of time points in the *.flow file. In this case, they match (2 in both cases), but this is because this is a very simple example using steady flow and two time points is all we need to characterize a constant flow. In general, your *.flow file will have in the order of $20$ data points over the cardiac cycle (that’s about how many points you will be able to reconstruct using <strong>PC-MRI</strong>, for example), and your interpolated data from it will have on the order of $100$-$200$ points. Whatever is enough to have a smooth representation of the inflow wave mapping to velocity vectors at the inlet face.</p></li>
+<li><p><strong>Fourier Modes</strong>: Fourier smoothing allows to smooth your inlet flow curve and to make sure that you have a periodic function in the specified interval. </p></li>
+</ul>
+
+<p><strong>WARNING</strong>: Be careful with this! <strong>SimVascular</strong> is doing a Fourier Series approximation of the data that you provide in the *.flow file. Since in this case, our data is constant flow, we only need one Fourier mode to capture this appropriately. For pulsatile flow problems, we will need more Fourier Modes to accurately represent the *.flow data (usually, $10$ Fourier modes is enough for a pulsatile problem).</p>
+
+<figure>
+  <img class="svImg svImgLg" src="documentation/flowsolver/imgs/inflowbc.png">
+  <figcaption class="svCaption" > </figcaption>
+</figure>
+</section>
+    <section id="outletbc" class="subgroup"><h2>Outlet Boundary Condition Specification</h2>
+
+<p>We are making the face <strong>outlet</strong> into a <strong>weakly-pressure</strong> face. This is mathematically expressed by the expressions we saw before:</p>
+
+<p>$$
+p = p_0 + R\,Q
+$$</p>
+
+<p>$$
+p(t)=p_0 + \frac{1}{T}\,\int_{t-T}^{t} Z(t−\tau) \, Q(\tau) \, d\tau
+$$</p>
+
+<p>This expression sets $p_0 = 0$ for the face <strong>outlet</strong>. The total pressure set on that face will be the result of the flow-pressure operator considered (i.e., resistance, impedance, RCR, Coronary etc.).</p>
+
+<p>Let&rsquo;s start setting outlet boundary condition.</p>
+<pre class="highlight plaintext"><code>Double click the row for the face "outlet"
+A dialog pops up and also the face is highlighted in the 3D-view window.
+In the dialog:
+    BC Type: Resistance
+    Resistance: 1333 (resistance value)
+    Distal Pressure: (0 by default)
+    Click "OK"
+</code></pre>
+
+<figure>
+  <img class="svImg svImgSm" src="documentation/flowsolver/imgs/outletbcdialog.png">
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p><font color="red"><strong>Help Hints:</strong> </font> Please make use you specify face types when you create the corresponding model;otherwise, the cap faces won&rsquo;t appear.</p>
+
+<h3>Advanced Options for splitting BC</h3>
+
+<p>In many clinical cases, we would like to split a total resistance or capacitance among a group of outlets, instead of explicitly assigning resistance or capacitance for each individual outlet.</p>
+
+<p>To use this feature, first set up the group of outlets with initial zero resistance or capacitance.</p>
+
+<p>For resistance BC:</p>
+<pre class="highlight plaintext"><code>Select a group of outlets, right click
+Click "Set BC"
+BC Type: Resistance
+Resistance: 0
+Click "OK"
+</code></pre>
+
+<p>For RCR BC:</p>
+<pre class="highlight plaintext"><code>Select a group of outlets, right click
+Click "Set BC"
+BC Type: RCR
+Rp, C, Rd: 0 0 0
+Click "OK"
+</code></pre>
+
+<p>For Coronary BC:</p>
+<pre class="highlight plaintext"><code>Select a group of outlets, right click
+Click "Set BC"
+BC Type: Coronary BC
+Rp, Ca, Ra-micro,Cim, RV: 0 0 0 0 0
+Pim (from file): Click the button "..." to select file for Pim
+Pim Period: filled automatically using the data from the file. You can change the period, SimVascular will automatically scale the time from the file
+Pim Scaling: use this value to scale presure values from the file
+Click "OK"
+</code></pre>
+
+<p>After you set up the group, let&rsquo;s split the total resistance or capacitance.</p>
+
+<p>To split total resistance:</p>
+<pre class="highlight plaintext"><code>Select the group of outlets, right click
+Click "Split Resistance"
+Total Resistance: total resistance for the group of outlets
+Murray's Law Coefficient: (2~3), 2 in general, 2.6 for coronary arteries, 2.3 for pulmonary arteries
+Ratio of resistance for each outlet:
+Rp:Rd (for RCR BC):
+Ra:Ra-micro:Rv (for Coronary BC):
+Click "OK"
+</code></pre>
+
+<p>To split total capacitance:</p>
+<pre class="highlight plaintext"><code>Select the group of outlets, right click
+Click "Split Capacitance"
+Total Capacitance: total capacitance for the group of outlets
+Ratio of capacitance for each outlet:
+Ca:Cim (for Coronary BC):
+Click "OK"
+</code></pre>
+</section>
+    <section id="wallproperties" class="subgroup"><h2>Wall Property Specification</h2>
+
+<p>In Example 1, the wall is rigid and set no-slip boundary condition. </p>
+<pre class="highlight plaintext"><code>Go to "Wall Properties"
+Type: Rigid
+</code></pre>
+
+<p>SimVascular also have options like &ldquo;Deformable(Constance)&rdquo; and &ldquo;Deformable(Variable&rdquo;. We will explain them in Example 3 and 4.</p>
+</section>
+    <section id="solverparameters" class="subgroup"><h2>Solver Parameters</h2>
+
+<p>There are many parameters for flow solver, but only a few is required to set explicitly. Advanced paramters are optional. To check out the meannin of all the parameters, refer to <a href="/docsFlowSolver.html#solverinp">appendix</a>.</p>
+<pre class="highlight plaintext"><code>Number of Timesteps: 200
+Time Step Size: 0.03
+Number of Timesteps between Restarts: 10
+Step Construction : 2 # standard two iterations, enough for constant  problems.
+</code></pre>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/flowsolver/imgs/solverparameters.png">
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<h3>Time Step Parameters Block</h3>
+
+<p><strong>Number of Timesteps: 200</strong> and <strong>Time Step Size: 0.03</strong> - These two lines control the amount of physical time that you run your problem for. In this case,</p>
+
+<p>$$
+\text{Total physical time} = \text{N. time steps} \times \text{Time Step Size} = T = N \times \Delta t = 200 \times 0.03 = 6.0\,\text{sec}
+$$</p>
+
+<p>Note that this doesn&rsquo;t match the <strong>period</strong> options we specified before. In this case, like we mentioned before, it does not really make sense to talk about a <em>cardiac cycle</em> (this is a steady flow), but if we wanted to run this analysis for <em>six</em> cardiac cycles, we would have to run the problem for $6.0$ seconds of physical time. If we kept our choice of time step size the same ( $\Delta t = 0.03$ sec), we will need a total number of time steps of $N = 200$.</p>
+
+<p><strong>WARNING</strong>: Note that this $N$ is the total number of time steps you need in your numerical simulation to model a certain physical time, given a prescribed $\Delta t$. </p>
+
+<p><strong>WARNING</strong>: Now the question is: how do you come up with a reasonable value for $\Delta t$? There is not a straightforward answer for this. $\Delta t$ is the parameter that controls your <strong>temporal discretization</strong>, which is something that works in a similar fashion to the <strong>spatial discretization</strong> given by your mesh: the finer, the more accurate the results, but also the bigger the size of the problem and the time to solve it! We don’t want to get into a lot of theoretical details now, so we will just provide you with a reasonable <strong>recipe</strong> to evaluate this parameter. The <strong>recipe</strong> to estimate a reasonable $\Delta t$ is based on a dimensionless parameter called the <strong>CFL</strong> number. The CFL number relates the velocities happening in the fluid domain ($v$), a temporal discretization parameter ($\Delta t$), and a mesh discretization parameter (i.e. mesh size) ($h$) as follows:</p>
+
+<p>$$
+\text{CFL} = \frac{v\,\Delta t}{h}
+$$</p>
+
+<p>We want this <strong>CFL</strong> number to be around $1.0$. This will mean that, for the velocities present in our fluid domain, the temporal and spatial discretizations are <em>balanced</em>. In our problem, it can be shown that the average expected velocity is about $v = 16.7$ cm/s; the spatial discretization parameter or finite element size is $h = 0.5$. Therefore, if we shoot for a CFL number close to one, we have:</p>
+
+<p>$$
+\Delta t = \frac{h}{v} = \frac{0.5}{16.7} = 0.03
+$$</p>
+
+<p>Of course, you can imagine that in a real-world problem things are way more complicated to evaluate: it will be much harder to estimate where your model will have the largest velocities, what the mesh element size will be there, etc. The time step size $\Delta t$ is a parameter that will have a very important impact on the performance of the linear solver of equations. The smaller you make it, the <em>easier</em> you will be for the solver to find a solution, but the longer it will take you to reach a certain point in time.</p>
+
+<p><br></p>
+
+<h3>Output Control Block</h3>
+
+<p><strong>Number of Timesteps between Restarts: 10</strong> - This line tells the solver how often it should save solution files. In this problem, you are really calculating $200$ solutions to the problem at $200$ different time points, but in general you do not want to save a solution file for every single time step. Keep in mind that two consecutive solutions are only $\Delta t = 0.03$ seconds apart! In this line, we are asking the solver to save every other $20$ files. Therefore, the output files of the solver will look like this: restart.0.*, restart.10.*, restart.20.*, restart.30.*, &hellip;., restart.190.*, restart.200.*</p>
+
+<p><br></p>
+
+<h3>Step Construction Block</h3>
+
+<p>This line controls the non-linear iteration loop within the time step. The syntax of the line represents a two nonlinear iteration process for each time step. Each iteration tells the solver to make a solve and an update of the solution. </p>
+
+<p><strong>WARNING</strong>: Deciding on the adequate number of non-linear iterations for a problem is also a non-trivial problem. In principle, we need to iterate until the residual (i.e., the <em>error</em>) of our numerical solution is small enough. But doing many non-linear iterations on each time step is very costly. In general, for steady flow problems, 1 or 2 non-linear iterations are enough. For pulsatile problems, at least three non-linear iterations are needed. For deformable wall problems, 4 or more non-linear iterations are required. This parameter, together with the time step size $\Delta t$ and the quality of the spatial discretization given by the finite element mesh, will completely determine the performance of the linear solver of equations. The better chosen these parameters are, the faster and more accurately our simulation will run. We will talk more about this later.</p>
+
+<p>The set of instructions explained here constitute a very small sample of all the possible parameters the <strong>svSolver</strong> can take. A more detailed discussion can be found in <a href="#solverinp">this section</a>.</p>
+</section>
+    <section id="creatingdata" class="subgroup"><h2>Creating Data Files for Simulation</h2>
+
+<p>Before running simualtion, you need to create some required data files for presolver and flowsolver.</p>
+
+<p>For Presolver:</p>
+
+<ul>
+<li><strong>.svpre</strong>: script input file</li>
+</ul>
+
+<p>For Flowsolver:</p>
+
+<ul>
+<li><strong>geombc.dat.1</strong>: containing mesh info and boundary conditions specified in the problem, created by presolver</li>
+<li><strong>restart.0.1</strong>: containing initial conditions for our problem, , created by presolver</li>
+<li><strong>numstart.dat</strong>: contains a numberr <strong>0</strong>. This number is used by the solver to identify the restart file that should be used as initial condition.</li>
+<li><strong>bct.dat</strong>: containing time-dependent velocity vectors at the inflow face of the model according to a prescribed flow wave coming from a *.flow file. See <a href="#bctfile">this section</a>.</li>
+<li><strong>solver.inp</strong>: providing further info for flowsolver, specifying parameters such as time step size, number of time steps, number of nonlinear iterations, boundary condition control, etc. A detailed description is  presented in <a href="#solverinp">this section</a>.</li>
+</ul>
+
+<p>These five files are the bare minimum we need to run an analysis. However, if we want to perform more complicated simulations, involving more complex boundary conditions, we will need more input files.</p>
+
+<p><strong>Impedance Boundary Condition simulations:</strong></p>
+
+<p>In addition to the five standard files (geombc.dat.1, restart.0.1, numstart.dat, bct.dat, solver.inp), we will need to provide impedance functions in the time domain for each impedance outlet, as well as a history of flow rates for each outlet. We will have therefore two additional ascii files: <strong>impt.dat</strong> (containing the impedance functions for each of the outlets), and <strong>Qhistor.dat</strong> (containing the flow rate history). A detailed description is <a href="#impbcfile">here</a>.</p>
+
+<p><strong>RCR Boundary Condition simulations:</strong></p>
+
+<p>In addition to the five standard files (geombc.dat.1, restart.0.1, numstart.dat, bct.dat, solver.inp), we will need to provide the RCR parameters in a ascii file that will set the relationship between flow and pressure on each outflow face. This is done by defining a file named <strong>rcrt.dat</strong> containing such parameters. A detailed description is <a href="#rcrtfile">here</a>.</p>
+
+<p><strong>Coronary Boundary Condition simulations:</strong></p>
+
+<p>In addition to the five standard files (geombc.dat.1, restart.0.1, numstart.dat, bct.dat, solver.inp), we will need to provide the coronary model parameters in a ascii file that will set the relationship between flow and pressure on each outflow face. This is done by defining a file named <strong>cort.dat</strong> containing such parameters. A detailed description is <a href="#cortfile">here</a>.</p>
+
+<p><strong>Closed-loop boundary conditions:</strong></p>
+
+<p>This will required an executable that implements a lumped parameter network model for the patient circulation. This will be covered in a later version of this tutorial. Stay tuned!</p>
+
+<p><br>
+<strong>HINT</strong>: In both files geombc.data.1 and restart.0.1, the number “.1” refers to the <strong>partition number</strong> of the file. Remember <strong>svSolver</strong> has the ability of running a problem <em>in parallel</em> (i.e., using multiple processors or computing cores), using MPI (message-passing interface). When we run a job using multiple processors, the first thing that happens is the “splitting” of these two files into as many processors we are going to use in our analysis, so the calculations can be performed faster. For example, if we use $4$ processors later in svSolver, these files will be split as follows:</p>
+<pre class="highlight plaintext"><code>geombc.dat.1 =&gt; geombc.dat.1 , geombc.dat.2 , geombc.dat.3 , geombc.dat.4
+
+restart.0.1 =&gt; restart.0.1 , restart.0.2 , restart.0.3 , restart.0.4
+</code></pre>
+
+<p>Roughly speaking, each of the four files is $1⁄4$ of the size of the original un-split file. For a generic time step <strong>n</strong>, the solution will be given by the following files:</p>
+<pre class="highlight plaintext"><code>restart.n.1 , restart.n.2 , restart.n.3 , restart.n.4 , ...
+</code></pre>
+
+<p><br></p>
+
+<h3>Creating Data Files</h3>
+
+<p>This step creates files inside the job folder in the SV project</p>
+<pre class="highlight plaintext"><code>Choose Mesh: cylinder   
+Click the button "Create Data Files for Simulation"
+</code></pre>
+
+<p>A new directory using the job name &ldquo;steady&rdquo; is created under the folder &ldquo;Simulations&rdquo; and contains the following folder/files:</p>
+<pre class="highlight plaintext"><code>For presolver:  
+    mesh-complete (folder)
+    inflow.flow
+    steady.svpre
+For flowsolver
+    geombc.dat.1
+    restart.0.1
+    bct.dat (and bct.vtp)
+    solver.inp
+    numstart.dat
+    rcrt.dat (if applicable)
+    cort.dat (if applicable)
+</code></pre>
+</section>
+    <section id="runningjob" class="subgroup"><h2>Running Simualtion Jobs</h2>
+
+<p>Before running simualtion, you may need to click the button &ldquo;Import Extra Files into Job&rdquo; to add extra file into the simualtion job. In this example, we don&rsquo;t need importint extra files</p>
+
+<p><strong>To run a simulation job:</strong></p>
+<pre class="highlight plaintext"><code>Number of Processes: 8 (select the maximum number in your case)
+Starting Step Number: (be default, use 0 or the last time step from previous simulation)
+Click the button  "Run Job"
+</code></pre>
+
+<p>This will launch a eight-processor job in your computer. Therefore, the input file are split as follows: </p>
+<pre class="highlight plaintext"><code>geombc.dat.1 =&gt; geombc.dat.1, geombc.dat.2, ..., geombc.dat.8
+restart.0.1 =&gt; restart.0.1, restart.0.2, ..., restart.0.8
+</code></pre>
+
+<p>At the same time, the solver copies all these files to a newly created folder called <strong>8-procs_case/</strong> under the project folder, and this is where all the output files of the analysis will be written to. In general, if you launch a <strong>n</strong> processor job, all the files will be copied to a <strong>n-procs_case/</strong> folder.</p>
+
+<p>During the job running, the progress of simualtion is shown at &ldquo;Job Status&rdquo; and the status bar at the the bottom of the main window:</p>
+
+<figure>
+  <img class="svImg scImgMd" src="documentation/flowsolver/imgs/simulationstatus.png">
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>It shows the name of th running job, the percentage completed, and more info: [current time step] [time used(s)] [nonlinear residual] [logarithm of the redisual change] &hellip;</p>
+
+<p>During the job running, you can terminate it before it finishes. To stop the simulation:</p>
+<pre class="highlight plaintext"><code>Right click the job data node "steady" at Data Manager
+Click "Stop Simulation" in the popup menu   
+</code></pre>
+
+<p>After the simulation is finished. A dialog pops up to inform that the job is done. You can click the button &ldquo;Show Details&hellip;&rdquo; to get more info about the simulation progress. You can also check the simulation progress by open the file &ldquo;histor.dat&rdquo; in the folder &ldquo;8-procs_case&rdquo;. It contains containing details that allows to evaluate how well your numerical simulation is doing. Here’s a brief description of what each of those columns means.</p>
+
+<table class='table borderless' id="solverTable">
+<thead>
+<tr>
+  <th>a</th>
+  <th>b</th>
+  <th>c</th>
+  <th>d</th>
+  <th>e</th>  
+  <th>f</th>  
+  <th>g</th>  
+  <th>h</th>  
+</tr>
+</thead>
+<tr>
+<td> 1 </td>
+<td> 1.30E+001 </td>
+<td> 1.16E-002 </td>
+<td> (0) </td>
+<td> 2.10E+002 </td>
+<td> 2.62E+028 </td>
+<td> &lt; -10474 1 | 15 &gt; </td>
+<td> [199-190] </td>
+</tr>
+
+<tr>
+<td> 1 </td>
+<td> 2.50E+001 </td>
+<td> 7.35E-003 </td>
+<td> (-1) </td>
+<td> 2.93E-001 </td>
+<td> 5.15E+000 </td>
+<td> &lt; -3237 1 | 13&gt; </td>
+<td> [117-200] </td>
+</tr>
+
+<tr>
+<td> 2 </td>
+<td> 2.80E+001 </td>
+<td> 5.13E-001 </td>
+<td> (-16) </td>
+<td> 1.75E-001 </td>
+<td> 1.69E-001 </td>
+<td> &lt; -1357 1 | 5&gt; </td>
+<td> [63-1] </td>
+</tr>
+
+<tr>
+<td> 2 </td>
+<td> 3.00E+001 </td>
+<td> 2.05E-002 </td>
+<td> (-2) </td>
+<td> 8.07E-002 </td>
+<td> 2.67E-002 </td>
+<td> &lt; -3286 1 | 11&gt; </td>
+<td> [21-13] </td>
+</tr>
+
+<tr>
+<td> 3 </td>
+<td> 3.20E+001 </td>
+<td> 1.20E-001 </td>
+<td> (-10) </td>
+<td> 8.75E-002 </td>
+<td> 2.44E-002 </td>
+<td> &lt; -2342 1 | 7&gt; </td>
+<td> [36-1] </td>
+</tr>
+
+<tr>
+<td> 3 </td>
+<td> 3.40E+001 </td>
+<td> 5.18E-003 </td>
+<td> (-3) </td>
+<td> 2.13E-002 </td>
+<td> 3.59E-003 </td>
+<td> &lt; -3277 1 | 10&gt; </td>
+<td> [6-6] </td>
+</tr>
+
+<tr>
+<td> 4 </td>
+<td> 3.60E+001 </td>
+<td> 2.14E-002 </td>
+<td> (-2) </td>
+<td> 5.57E-002 </td>
+<td> 6.13E-003 </td>
+<td> &lt; -3146 1 | 9&gt; </td>
+<td> [24-2] </td>
+</tr>
+
+<tr>
+<td> 4 </td>
+<td> 3.80E+001 </td>
+<td> 2.18E-003 </td>
+<td> (-7) </td>
+<td> 7.33E-003 </td>
+<td> 3.15E-004 </td>
+<td> &lt; -3233 1 | 11&gt; </td>
+<td> [9-5] </td>
+</tr>
+
+<tr>
+<td> 5 </td>
+<td> 4.00E+001 </td>
+<td> 1.52E-002 </td>
+<td> (-1) </td>
+<td> 4.22E-002 </td>
+<td> 3.45E-004 </td>
+<td> &lt; -3141 1 | 10&gt; </td>
+<td> [27-3] </td>
+</tr>
+
+<tr>
+<td> 5 </td>
+<td> 4.20E+001 </td>
+<td> 1.11E-003 </td>
+<td> (-10) </td>
+<td> 3.57E-003 </td>
+<td> 1.24E-004 </td>
+<td> &lt; -3237 1 | 12&gt; </td>
+<td> [7-5] </td>
+</tr>
+
+<tr>
+<td> 6 </td>
+<td> 4.40E+001 </td>
+<td> 1.24E-002 </td>
+<td> (0) </td>
+<td> 3.31E-002 </td>
+<td> 3.16E-004 </td>
+<td> &lt; -3024 1 | 10&gt; </td>
+<td> [16-2] </td>
+</tr>
+
+<tr>
+<td> 6 </td>
+<td> 4.60E+001 </td>
+<td> 1.01E-003 </td>
+<td> (-10) </td>
+<td> 3.98E-003 </td>
+<td> 3.30E-005 </td>
+<td> &lt; -3220 1 | 11&gt; </td>
+<td> [6-5] </td>
+</tr>
+
+<tr>
+<td> 7 </td>
+<td> 4.80E+001 </td>
+<td> 1.05E-002 </td>
+<td> (0) </td>
+<td> 2.70E-002 </td>
+<td> 1.87E-004 </td>
+<td> &lt; -3019 1 | 10&gt; </td>
+<td> [8-2] </td>
+</tr>
+
+<tr>
+<td> 7 </td>
+<td> 5.00E+001 </td>
+<td> 8.74E-004 </td>
+<td> (-11) </td>
+<td> 3.50E-003 </td>
+<td> 4.35E-005 </td>
+<td> &lt; -2993 1 | 11&gt; </td>
+<td> [5-5] </td>
+</tr>
+
+<tr>
+<td> 8 </td>
+<td> 5.20E+001 </td>
+<td> 9.09E-003 </td>
+<td> (-1) </td>
+<td> 2.25E-002 </td>
+<td> 1.16E-004 </td>
+<td> &lt; -2993 1 | 10&gt; </td>
+<td> [8-2] </td>
+</tr>
+
+<tr>
+<td> 8 </td>
+<td> 5.30E+001 </td>
+<td> 7.42E-004 </td>
+<td> (-11) </td>
+<td> 2.92E-003 </td>
+<td> 5.63E-005 </td>
+<td> &lt; -2871 1 | 12&gt; </td>
+<td> [5-5] </td>
+</tr>
+
+<tr>
+<td> 9 </td>
+<td> 5.50E+001 </td>
+<td> 7.95E-003 </td>
+<td> (-1) </td>
+<td> 1.89E-002 </td>
+<td> 8.19E-005 </td>
+<td> &lt; -2876 1 | 10&gt; </td>
+<td> [7-2] </td>
+</tr>
+
+<tr>
+<td> 9 </td>
+<td> 5.70E+001 </td>
+<td> 6.58E-004 </td>
+<td> (-12) </td>
+<td> 2.47E-003 </td>
+<td> 7.07E-005 </td>
+<td> &lt; -2850 1 | 12&gt; </td>
+<td> [7-5] </td>
+</tr>
+
+<tr>
+<td> 10 </td>
+<td> 5.90E+001 </td>
+<td> 6.99E-003 </td>
+<td> (-2) </td>
+<td> 1.65E-002 </td>
+<td> 8.52E-005 </td>
+<td> &lt; -2871 1 | 10&gt; </td>
+<td> [11-3] </td>
+</tr>
+
+<tr>
+<td> 10 </td>
+<td> 6.10E+001 </td>
+<td> 4.26E-004 </td>
+<td> (-14) </td>
+<td> 1.39E-003 </td>
+<td> 3.55E-005 </td>
+<td> &lt; -6284 2 | 11&gt; </td>
+<td> [7-5] </td>
+</tr>
+
+<tr>
+<td> 11 </td>
+<td> 6.30E+001 </td>
+<td> 6.17E-003 </td>
+<td> (-2) </td>
+<td> 1.42E-002 </td>
+<td> 5.24E-005 </td>
+<td> &lt; -2845 1 | 10&gt; </td>
+<td> [6-3] </td>
+</tr>
+
+<tr>
+<td> 11 </td>
+<td> 6.50E+001 </td>
+<td> 3.86E-004 </td>
+<td> (-14) </td>
+<td> 1.28E-003 </td>
+<td> 3.41E-005 </td>
+<td> &lt; -6284 2 | 11&gt; </td>
+<td> [8-5] </td>
+</tr>
+
+<tr>
+<td> 12 </td>
+<td> 6.70E+001 </td>
+<td> 5.45E-003 </td>
+<td> (-3) </td>
+<td> 1.23E-002 </td>
+<td> 4.06E-005 </td>
+<td> &lt; -2728 1 | 10&gt; </td>
+<td> [7-3] </td>
+</tr>
+
+<tr>
+<td> 12 </td>
+<td> 6.90E+001 </td>
+<td> 3.48E-004 </td>
+<td> (-15) </td>
+<td> 1.18E-003 </td>
+<td> 3.95E-005 </td>
+<td> &lt; -6284 2 | 11&gt; </td>
+<td> [9-6] </td>
+</tr>
+</table>
+
+<ul>
+<li><p><strong>a: Time step number</strong> - We see that each time step number appears twice: this is because we are considering two non-linear iterations. This column will go from 1 to the total number of time steps in our problem (in this case, 100). </p></li>
+<li><p><strong>b: CPU time in seconds</strong> - This is counted since you launched the analysis.</p></li>
+<li><p><strong>c: Measure of the nonlinear residual</strong> - This gives you and idea of how accurate your solution is. Note that for each time step, the second entry is smaller than the first entry. This is a good sign that shows that the nonlinear iteration loop of the solver is doing a good job in improving the solution. You should always aim to a nonlinear residual at the end of the time step of at most $1\times10^{-3}$.</p></li>
+<li><p><strong>d: Logarithm of the residual change</strong> - This provides you a very good way of quickly evaluating how well the solution is doing. If this number is very small and negative, then it is a good sign. An entry with the value &ldquo;-10&rdquo; means that you have reduced the residual by an order of magnitude from the beginning of the analysis, a -20, by <strong>2 orders of magnitude</strong>, and so on. </p></li>
+<li><p><strong>e: Entropy norm of the residual for the velocity field (max $\Delta u/ u$)</strong></p></li>
+<li><p><strong>f: entropy norm of the residual for the pressure field (max $\Delta p/ p$)</strong></p></li>
+<li><p><strong>g: &gt; a – b | c&gt;</strong></p></li>
+<li><p>a: block where the maximum residual happens (each block has 255 elements by default).</p></li>
+<li><p>b: node in the block with the maximum error.</p></li>
+<li><p>c: logarithmic measure of the ratio between the maximum residusl and the average residual: want this number to be as small as possible: it will be an
+indicator of the spatial uniformity of the residual.</p></li>
+<li><p><strong>h: [a-b]</strong> </p></li>
+<li><p>a: number of Krylov vectors used in the pre-conditioner solver. </p></li>
+<li><p>b: number of Krylov vectors used in the GMRES solver.</p></li>
+</ul>
+
+<p><strong>NOTE</strong> - these numbers are zero when using the default <strong>svLS</strong>.</p>
+
+<p>Once the analysis is done, you will see the collection of restart files corresponding to the different points in the time you decided to save. </p>
+
+<p>Sometimes you want to continue the finished simulation job. Make use the same number of processes as the previous one and just click the button &ldquo;Run Job&rdquo;. Now the solver starts another 200-step simulation from time step 200.</p>
+
+<p>As the simulation is completed, we are now ready to look at the restart files containing the solution. We&rsquo;ll convert these files to generate the visualization files. We explain that process in the following section.</p>
+
+<h3>Running Simualtion Jobs at Clusters</h3>
+
+<p>You can also export the required data files and upload to a computer cluster to run the simulation. Make sure SimVascular flow solver is available in the cluster.</p>
+
+<p>To export the files:</p>
+<pre class="highlight plaintext"><code>Make sure you have created data files for this job. 
+Right click the job node "steady" in Data Manager
+Click "Export Data Files"
+Select a directory for exporting.
+</code></pre>
+
+<p>A new folder &ldquo;steady-sim-files&rdquo; is created, which includes the requied files by flowsolver</p>
+
+<p>To run the simulation at the cluster:</p>
+<pre class="highlight plaintext"><code>Make sure SimVascular flow solver is available on the cluster.
+Upload the folder "steady-sim-files" to the cluster
+Login the cluster
+Go to the folder "steady-sim-files"
+Run "mpiexec -n [number of processes] [solver path]/svsolver" or you need create/submit a job file as required by the cluster to run the simulation
+</code></pre>
+
+<p>During the simualtion, result files are saved at the folder &ldquo;steady-sim-files/[number of processes]]-procs_case/&rdquo;. You can download the files back to your computer and convert them to vtp/vtu files.</p>
+</section>
+
+    <section id="postprocess" class="group"><h2>Post-processing</h2>
+
+<h3>Generating the *.vip and *.vtu files in SimVascular</h3>
+
+<p>In order to generate the visualization files (<em>.vip) and (</em>.vtu) files:</p>
+<pre class="highlight plaintext"><code>    Goto "Export Results"
+    Result Dir: select the running dir .../Simulations/steady/8-procs_case
+    Start:  the initial restart file number (0)
+    Stop: the final restart file number (200)
+    Increment: the increment between restart files (10). 
+    Toggle on "Volume Mesh" and "Surface Mesh"
+    Click the button "Export..."
+    Choose a directory for exporting
+</code></pre>
+
+<p>A new folder &ldquo;steady-converted-results&rdquo; is created, which contains all the converted vtp and vtu files.</p>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/flowsolver/imgs/convertingresults.png">
+  <figcaption class="svCaption" >Creating VTU result files from <b>svSolver</b> restart files.</figcaption>
+</figure>
+
+<p>After convering done, there are also four text files created in the exported folder if &ldquo;Calculate Flows&rdquo; is toggled on.</p>
+<pre class="highlight plaintext"><code>  all_results-flows.txt: flowrate for each face with time steps
+  all_results-pressures.txt: pressure for each face with time steps
+  all_results-averages.txt: the average, maximum, minimum values of presure, flowrate for each face
+  all_results-averages-from_cm-to-mmHg-L_per_min.txt: same info as all_results-averages.txt, but pressure is in mmHg, flowrate is L/min.
+</code></pre>
+
+<p>Other options are also provided:</p>
+
+<ul>
+<li><strong>As Single File</strong>, this options combines all the results at different time steps into a single *.vtp or *.vtu file. </li>
+<li><strong>Last Step to restart.x.0</strong>, this options combines all the resart files of the last step (200) to a single restart file restart.200.0. which can be used to start a new simulation after renamed as restart.0.1.</li>
+</ul>
+
+<h3>Visualizing the results in ParaView</h3>
+
+<p>To visualize the time dependent results we use <strong>ParaView</strong>. </p>
+
+<ul>
+<li><p>Launch <strong>Paraview</strong>.</p></li>
+<li><p>Select <em>File-&gt;Open&hellip;</em>. The <em>Open File</em> dialog should appear. Go to the project folder , select the entry <strong>all_results..vtu</strong> and click <strong>OK</strong>.</p></li>
+<li><p>Under <em>Properties</em> click <strong>Apply</strong>. The solid model will show up on the screen.</p></li>
+<li><p>At this point, you can interact with the model by rotating it using the rotation or translation buttons. Use the <strong>Surface with Edges</strong> option to visualize the finite element mesh.</p></li>
+</ul>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/flowsolver/imgs/para_showEdges.png">
+  <figcaption class="svCaption" >By showing edges, the finite element mesh will become apparent</figcaption>
+</figure>
+
+<figure>
+  <img class="svImg svImgLg" src="documentation/flowsolver/imgs/para_CylMesh.png">
+  <figcaption class="svCaption" >Visualizing the cylinder mesh in Paraview</figcaption>
+</figure>
+
+<h3>Visualizing Pressure Results</h3>
+
+<ul>
+<li>First you should increase your current result time from <strong>0</strong> to <strong>20</strong> (the last available time step). </li>
+</ul>
+
+<figure>
+  <img class="svImg svImgSm" src="documentation/flowsolver/imgs/para_time.png">
+  <figcaption class="svCaption" >Choosing the last time step results in Paraview</figcaption>
+</figure>
+
+<ul>
+<li>You should now see the available result quantities for your model, i.e., cellsNormals, GlobalElementID, GlobalNodeID, pressure, timeDeriv, traction, velocity, WSS. </li>
+</ul>
+
+<figure>
+  <img class="svImg svImgXs" src="documentation/flowsolver/imgs/para_Results.png">
+  <figcaption class="svCaption" >Available model results</figcaption>
+</figure>
+
+<ul>
+<li><p>Go to <em>Properties-Coloring</em> click on <strong>Show</strong> and <strong>Rescale</strong>. The default color map of the model is showing the pressure results in dynes/cm$^{2}$. Let’s transform the pressure scale to mmHg (1 mmHg = 1333.2 dyn/cm$^{2}$). To do this, use the <strong>calculator</strong> filter.</p></li>
+<li><p>Add a calculator filter, choose pressure in the <em>scalars</em> drop-down list and divide <em>pressure</em> by the conversion factor 1333.2.</p></li>
+<li><p>Enter a meaningful name in the “Results Array Name” box (for example, Pressure in mmHg)</p></li>
+</ul>
+
+<p>You should now see the following contour plot. </p>
+
+<figure>
+  <img class="svImg svImgLg" src="documentation/flowsolver/imgs/para_ConvertTommHg.png">
+  <figcaption class="svCaption" >Final contour of pressures in mmHg</figcaption>
+</figure>
+</section>
+    <section id="examples" class="group"><h2>Examples</h2>
+
+<p>The first example shown above is a cylinder with parabolic steady flow at the inlet and resistance at the outlet. We continue to use the cylinder in the following examples to explore plug flow, RCR, deformable wall, variable wall properties.</p>
+
+<p><strong>Example 2</strong> - the cylinder with plug steady flow at the inlet and RCR at the outlet.</p>
+
+<p><strong>Example 3</strong> - the cylinder with plug steady flow at the inlet, RCR at the outlet and deformable wall with uniform wall properties.</p>
+
+<p><strong>Example 4</strong> - the cylinder with plug steady flow at the inlet, RCR at the outlet and deformable wall with variable wall properties.</p>
+</section>
+    <section id="example2" class="subgroup"><h3>Example 2</h3>
+
+<p>This example shows how to simulate a cylinder with plug steady flow at the inlet and RCR at the outlet.</p>
+
+<p>Let create a new job by copying/pasting the job of Example 1.</p>
+<pre class="highlight plaintext"><code>Right click the data node "steady" in Data Manager
+Click "Copy"
+Right click the data ndoe "Simulations" in Data Manager
+Click "Paste"
+A new data node "steady_copy" is created.
+Rename it as "steady_rcr"
+</code></pre>
+
+<p>Let modify some BCs and parameters.</p>
+<pre class="highlight plaintext"><code>Go to "Inlet and Outlet BCs"
+Double click the row of "inflow", Analytic Type: plug
+Double click the row of "outlet", BC Type: RCR, Rp,C,Rd: 121 0.000015 1212
+</code></pre>
+
+<figure>
+  <img class="svImg scImgMd" src="documentation/flowsolver/imgs/outletrcr.png">
+  <figcaption class="svCaption" > </figcaption>
+</figure>
+<pre class="highlight plaintext"><code>Go to "Solver Parameters"
+Number of Timesteps: 500
+Time Step Size: 0.001
+Number of Timesteps between Restarts: 20
+</code></pre>
+
+<p>Similarly to Example 1, to run the job</p>
+<pre class="highlight plaintext"><code>Go to "Create Files and Run Job"
+Choose Mesh: cylinder
+Click the button "Create Data Files for Simulation"
+Number of Processes: 8
+Staring Step Number: (leave it empty)
+Click the button "Run Job"
+</code></pre>
+
+<p>To export results:</p>
+<pre class="highlight plaintext"><code>Goto "Convert Results"
+Result Dir: select the running dir .../Simulations/steady\_rcr/8-procs_case
+Start:  the initial restart file number (0)
+Stop: the final restart file number (500)
+Increment: the increment between restart files (20). 
+Toggle on "Volume Mesh" and "Surface Mesh"
+Toggle on "Last Step to restart.x.0"
+Click the button "Convert ..."
+Choose a directory for exporting
+</code></pre>
+
+<p>In this example, a smaller time step size is used, because the effect of the time constant in RCR type BC needs to be considered. For more accurate numerical computation, the time step size should be much smaller than the time constant (=R<em>C=(121+1212)</em>0.000015=0.02). With the small step size, the number of time steps is also increased.</p>
+</section>
+    <section id="example3" class="subgroup"><h3>Example 3</h3>
+
+<p>This example shows how to simulate a cylinder with plug steady flow at the inlet, RCR at the outlet and deformable wall with uniform wall properties. The most robust way to simulate a deformable wall case is to first simulate a rigid wall case with the same boundary conditions. For this example, Example 2 is the rigid case we need to run. After the simulation of Example 2 is complete and exported, the restart files for the last step is reduced to a single file, which would be restart.500.0. </p>
+
+<p>Let create a new job by copying/pasting the job of Example 2.</p>
+<pre class="highlight plaintext"><code>Right click the data node "steady_rcr" in Data Manager
+Click "Copy"
+Right click the data ndoe "Simulations" in Data Manager
+Click "Paste"
+A new data node "steady_rcr_copy" is created.
+Rename it as "steady_rcr_deformable"
+</code></pre>
+
+<p>Let modify some IC, BCs and parameters.</p>
+<pre class="highlight plaintext"><code>Go to "Basic Parameters"
+Double click "IC File" and a dialog pops up
+Select the file "restart.500.0" exported from Example 2
+
+Go to "Wall Properties"
+Type: Deformable(Constant)
+Thickness: 0.2
+Elastic Modulus: 4000000
+Poisson Ratio: 0.5
+Shear Constant: 0.833333
+Density: 1.0
+Pressure: 133300 (initial pressure, estimated form the simulation result of the rigid case Example 2)
+</code></pre>
+
+<figure>
+  <img class="svImg scImgMd" src="documentation/flowsolver/imgs/walldeformable.png">
+  <figcaption class="svCaption" > </figcaption>
+</figure>
+<pre class="highlight plaintext"><code>Go to "Solver Parameters"
+Step Construction: 4
+</code></pre>
+
+<p>For deformable cases, the flowsolver needs more iterations of step sequence to derive accurate solution.</p>
+
+<p>To create data files:</p>
+<pre class="highlight plaintext"><code>Go to "Create Files and Run Job"
+Choose Mesh: cylinder
+Click the button "Create Data Files for Simulation"
+</code></pre>
+
+<p>Different from Example 2, the step also solves initial displacement, write the initial displacment to a vtp file &ldquo;displacement.vtp&rdquo; to review the solution, and finaly append it to restar.0.1 we just copied from restart.500.0 of Example 2.</p>
+
+<figure>
+  <img class="svImg svImgLg" src="documentation/flowsolver/imgs/disp_paraview.png">
+  <figcaption class="svCaption" >Initila Displacement from displacement.vtp </figcaption>
+</figure>
+
+<p>Similarly to Example 2, run the job and convert the results.</p>
+</section>
+    <section id="example4" class="subgroup"><h3>Example 4</h3>
+
+<p>This example shows how to simulate a cylinder with plug steady flow at the inlet, RCR at the outlet and deformable wall with variable wall properties. Similar to Example 3, we use the simulation result of Example 2 as the initial point.</p>
+
+<p>Let create a new job by copying/pasting the job of Example 3.</p>
+<pre class="highlight plaintext"><code>Right click the data node "steady_rcr_deformable" in Data Manager
+Click "Copy"
+Right click the data ndoe "Simulations" in Data Manager
+Click "Paste"
+A new data node "steady_rcr_deformable" is created.
+Rename it as "steady_rcr_variable"
+</code></pre>
+
+<p>Let modify wall properties.</p>
+<pre class="highlight plaintext"><code>Go to "Wall Properties"
+Type: Deformable(Variable)
+Poisson Ratio: 0.5
+Shear Constant: 0.833333
+Density: 1.0
+Pressure: 133300 (initial pressure, estimated form the simulation result of the rigid case Example 2)
+wall: E. Modulus: 4000000
+inflow: Thickness: 0.2
+outlet: Thickness: 0.1
+</code></pre>
+
+<figure>
+  <img class="svImg scImgMd" src="documentation/flowsolver/imgs/wallvariable.png">
+  <figcaption class="svCaption" > </figcaption>
+</figure>
+<pre class="highlight plaintext"><code>Go to "Solver Parameters"
+Step Construction: 10
+</code></pre>
+
+<p>For variable wall cases, the flowsolver needs much more iterations of step sequence to get accurate solution.</p>
+
+<p>To create data files:</p>
+<pre class="highlight plaintext"><code>Go to "Create Files and Run Job"
+Choose Mesh: cylinder
+Click the button "Create Data Files for Simulation"
+</code></pre>
+
+<p>Different from Example 3, the step also solves variable thickness or Young’s modulus, and assign them to the wall, instead of giving uniform thickness or Young’s modulus. varwallprop.vtp and displacment.vtp are created, which show the thickness and Young&rsquo;s modulus, and initial displacement, respectively:</p>
+
+<figure>
+  <img class="svImg svImgLg" src="documentation/flowsolver/imgs/varwallprop_paraview.png">
+  <figcaption class="svCaption" >Variable Wall Thickness in varwallprop.vtp </figcaption>
+</figure>
+
+<figure>
+  <img class="svImg svImgLg" src="documentation/flowsolver/imgs/disp_varwall_paraview.png">
+  <figcaption class="svCaption" >Initila Displacement in displacement.vtp </figcaption>
+</figure>
+
+<p>Similarly to Example 3, run the job and convert the results.</p>
+</section>
+
+    <section id="appendix" class="group"><h2>Appendix</h2>
+
+<p>In this section, more details are provided for solver configuration, presolver commands, solver.inp and other files for running various simulations. </p>
+</section>
+    <section id="solverconfiguration" class="subgroup"><h3>Configurating Solvers (Optional)</h3>
+
+<p>SimVascular solvers(presolver, flowsolver, postsolver) are used as individual executable programs. They are called by SV Simulation tool to create data files, run simulation, and convert results to files in VTK formats. Normally those solvers are installed separately. However, SimVascular can automatically find those solvers. In case your SimVascular can&rsquo;t find them, or you want to use different solvers, you need to explicitly tell SimVascular where to find or how to use them.</p>
+<pre class="highlight plaintext"><code>Goto Menu: Preferences -&gt; SimVascular Simulation
+Use MPI:  whether to use mpi to run flowsolver. It depends on if your flowsolver supports MPI. By default, we assume using MPI.
+MPIExec: (mpiexec, by default) It's opional. Specify the full path and file name for the mpiexec to use.
+Use Solver Input Custom Template: whether to use a custom tempalte file for the table of "Solver Parameters". Only for advanced users.
+Custom Tempalte: the full path and file name for your custom template file.
+Presolver: Specify the full path and file name for the presolver to use.
+Flowsolver: Specify the full path and file name for the flowsolver to use.
+Postsolver: Specify the full path and file name for the postsolver to use.
+</code></pre>
+
+<figure>
+  <img class="svImg svImgMd"  src="documentation/flowsolver/imgs/solverconfiguration.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<h4>Locations of Installed Solvers</h4>
+
+<p><strong>Linux:</strong></p>
+<pre class="highlight plaintext"><code>Presolver: /usr/local/sv/svsolver/yyyy-mm-dd/bin/svpre
+Flowsolve: /usr/local/sv/svsolver/yyyy-mm-dd/bin/svsolver
+Postsolver: /usr/local/sv/svsolver/yyyy-mm-dd/bin/svpost
+</code></pre>
+
+<p>In case you can&rsquo;t run mpiexec when using flowsolver, please make sure mpi is installed.</p>
+
+<p>To install MPI:</p>
+<pre class="highlight plaintext"><code>For Ubuntu 14:
+sudo apt-get install libmpich2-dev
+
+For Ubuntu 16:
+sudo apt-get install libmpich-dev
+</code></pre>
+
+<p><strong>Mac OS X</strong></p>
+<pre class="highlight plaintext"><code>MPIExec: /usr/local/sv/svsolver/yyyy-mm-dd/bin/mpiexec
+Presolver: /usr/local/sv/svsolver/yyyy-mm-dd/svpre
+Flowsolve: /usr/local/sv/svsolver/yyyy-mm-dd/svsolver
+Postsolver: /usr/local/sv/svsolver/yyyy-mm-dd/bin/svpost
+</code></pre>
+
+<p><strong>Windows</strong></p>
+
+<p>For the versions from 2017-04-09</p>
+<pre class="highlight plaintext"><code>The solvers are located at C:\Program Files\SimVascular\svSolver\yyyy-mm-dd\
+Presolver: C:\Program Files\SimVascular\svSolver\yyyy-mm-dd\svpre-bin.exe
+Flowsolver: C:\Program Files\SimVascular\svSolver\yyyy-mm-dd\svsolver-msmpi-bin.exe
+Postsolver: C:\Program Files\SimVascular\svSolver\yyyy-mm-dd\svpost-bin.exe
+Flowsolver (without mpi): C:\Program Files\SimVascular\svSolver\yyyy-mm-dd\svsolver-nompi-bin.exe
+</code></pre>
+
+<p>For the versions before 2017-04-09</p>
+<pre class="highlight plaintext"><code>The solvers are located at C:\Program Files (x86)\SimVascular\svSolver\Release\xxxxxxxxxx\
+Presolver: C:\Program Files (x86)\SimVascular\svSolver\Release\xxxxxxxxxx\svpre-bin.exe
+Flowsolver: C:\Program Files (x86)\SimVascular\svSolver\Release\xxxxxxxxxx\svsolver-msmpi-bin.exe
+Postsolver: C:\Program Files (x86)\SimVascular\svSolver\Release\xxxxxxxxxx\svpost-bin.exe
+Flowsolver (without mpi): C:\Program Files (x86)\SimVascular\svSolver\Release\xxxxxxxxxx\svsolver-nompi-bin.exe
+</code></pre>
+</section>
+    <section id="presolvercommands" class="subgroup"><h3>svPre Commands</h3>
+
+<p>This section lists the available <strong>svPre</strong> commands, the associated parameters and what they do. </p>
+
+<h4>Read Mesh info</h4>
+
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th>svPre Command</th>
+  <th>Argument Format</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tr>
+  <td>mesh_and_adjncy_vtu</td>
+  <td>(file name)</td>
+  <td>Read node coordinates,element connectivities and adjacencies from the give vtu file</td>
+</tr>
+</table>
+
+<h4>Assign IDs to Surfaces</h4>
+
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th>svPre Command</th>
+  <th>Argument Format</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tr>
+  <td>set_surface_id_vtp</td>
+  <td>(file name) (integer)</td>
+  <td>Set a ID for the element faces provided by the given vtp file. Mostly used to tag exterior surfaces for Boundary Condition attributes, and also to compute tractions at the boundary</td>
+</tr>
+</table>
+
+<h4>Set Boundary Conditions for Walls, Inlets, Outlets</h4>
+
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th>svPre Command</th>
+  <th>Argument Format</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tr>
+  <td>noslip_vtp</td>
+  <td>(file name)</td>
+  <td>Noslip condition will be applied on the nodes provided by the given vtp file</td>
+</tr>
+<tr>
+  <td>prescribed_velocities_vtp</td>
+  <td>(file name)</td>
+  <td>Same as &ldquo;noslip_vtp&rdquo;</td>
+</tr>
+<tr>
+  <td>zero_pressure_vtp</td>
+  <td>(file name)</td>
+  <td>Zero pressure boundary condition will be appied on the element faces provided by the given vtp file</td>
+</tr>
+<tr>
+  <td>pressure_vtp</td>
+  <td>(file name) (double)</td>
+  <td>Prescribed pressure boundary condition will be appied on the element faces provided by the given vtp file</td>
+</tr>
+</table>
+
+<h4>Creat BCT file for Inlet</h4>
+
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th>svPre Command</th>
+  <th>Argument Format</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tr>
+  <td>fluid_density</td>
+  <td>(double)</td>
+  <td>Set the fluid density to the given value</td>
+</tr>
+<tr>
+  <td>fluid_viscosity</td>
+  <td>(double)</td>
+  <td>Set the fluid viscosity to the given value</td>
+</tr>
+<tr>
+  <td>bct_analytical_shape</td>
+  <td>(parabolic, plug, womersley)</td>
+  <td>Indicate the velocity profile for the inlet</td>
+</tr>
+<tr>
+  <td>bct_period</td>
+  <td>(double)</td>
+  <td>Set the period to the given value</td>
+</tr>
+<tr>
+  <td>bct_point_number</td>
+  <td>(integer)</td>
+  <td>Set the number of points in one period</td>
+</tr>
+<tr>
+  <td>bct_fourier_mode_number</td>
+  <td>(integer)</td>
+  <td>Set the mode number for Fourier smoothing of inlet flow</td>
+</tr>
+<tr>
+  <td>bct_flip</td>
+  <td></td>
+  <td>Flip the flow direction at the inlet</td>
+</tr>
+<tr>
+  <td>bct_create</td>
+  <td>(vtp file name) (flow file name) </td>
+  <td>Calculate the velocity for the specified inlet with the given flow file</td>
+</tr>
+<tr>
+  <td>bct_merge_on</td>
+  <td></td>
+  <td>Merge all bct files to one single file if there are multiple inlets. Use before write_bct_dat and write_bct_vtp</td>
+</tr>
+<tr>
+  <td>bct_write_dat</td>
+  <td></td>
+  <td>Write calculated BCT data to bct.dat</td>
+</tr>
+<tr>
+  <td>bct_write_vtp</td>
+  <td></td>
+  <td>Write calculated BCT data to bct.vtp</td>
+</tr>
+</table>
+
+<h4>Initial Conditions</h4>
+
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th>svPre Command</th>
+  <th>Argument Format</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tr>
+  <td>initial_pressure</td>
+  <td>(double)</td>
+  <td>Set the initial pressure as the given value in the model if not read from other files. The default is $p_0$ = $0$</td>
+</tr>
+<tr>
+  <td>initial_velocity</td>
+  <td>(double) (double) (double)</td>
+  <td>Set the initial velocity as the given values in the model if not read from other files. The default is $v_0 = 0.001,\,0.001,\,0.001$</td>
+</tr>
+</table>
+
+<h4>Write simulation files</h4>
+
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th>svPre Command</th>
+  <th>Argument Format</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tr>
+  <td>write_restart</td>
+  <td>(file name)</td>
+  <td>Write the specified file (restart.0.1 if a file name not provided) for svSolver. It contains initial conditions:pressure, velocity (and displacement, time derivative of solution if applicable). </td>
+</tr>
+<tr>
+  <td>write_geombc</td>
+  <td>(file name)</td>
+  <td>Write the specified file (geombc.dat.1 if a file name not provided) for svSolver. It contains the info of geometry, boundary conditions and material properties. </td>
+</tr>
+<tr>
+  <td>write_numstart</td>
+  <td>(integer)</td>
+  <td>Write numstart.dat with the specified time step number (0 if a number not provided) for svSolver. </td>
+</tr>
+</table>
+
+<h4>Read variable values from non-vtk files</h4>
+
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th>svPre Command</th>
+  <th>Argument Format</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tr>
+  <td>read_restart_solution</td>
+  <td>(restart file name)</td>
+  <td>Read a previously computed restart solution (velocity  and pressure fields). This could be used in deformable wall simulations</td>
+</tr>
+<tr>
+  <td>read_restart_displacements</td>
+  <td>(restart file name)</td>
+  <td>Read a previously computed restart solution (displacement field). This is used in deformable wall simulations</td>
+</tr>
+<tr>
+  <td>read_restart_accelerations</td>
+  <td>(restart file name)</td>
+  <td>Read a previously computed restart solution (acceleration field)</td>
+</tr>
+<tr>
+  <td>read_restart_varwallprop</td>
+  <td>(restart file name)</td>
+  <td>Read a previously computed restart solution (variable wall properties)</td>
+</tr>
+<tr>
+  <td>read_geombc_varwallprop</td>
+  <td>(geombc file name)</td>
+  <td>Read a previously computed geombc file (variable wall properties)</td>
+</tr>
+</table>
+
+<h4>Read variable values from vtk files</h4>
+
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th>svPre Command</th>
+  <th>Argument Format</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tr>
+  <td>read_all_variables_vtu</td>
+  <td>(file name)</td>
+  <td>Read the values for all variables: pressure, velocity (and displacement, time derivative of solution, wall property for variable wall, if available) from the given vtu file.</td>
+</tr>
+<tr>
+  <td>read_pressure_velocity_vtu</td>
+  <td>(file name)</td>
+  <td>Read the values for pressure and velocity from the given vtu file.</td>
+</tr>
+<tr>
+  <td>read_pressure_vtu</td>
+  <td>(file name) (variable name in vtu)</td>
+  <td>Read the values for pressure from the given vtu file using an optional variable name.</td>
+</tr>
+<tr>
+  <td>read_velocity_vtu</td>
+  <td>(file name) (variable name in vtu)</td>
+  <td>Read the values for velocity from the given vtu file using an optional variable name.</td>
+</tr>
+<tr>
+  <td>read_displacements_vtu</td>
+  <td>(file name) (variable name in vtu)</td>
+  <td>Read the values for displacements from the given vtu file using an optional variable name.</td>
+</tr>
+<tr>
+  <td>read_accelerations_vtu</td>
+  <td>(file name) (variable name in vtu)</td>
+  <td>Read the values for time derivative of solution from the given vtu file using an optional variable name.</td>
+</tr>
+<tr>
+  <td>read_varwallprop_vtu</td>
+  <td>(file name) (variable name in vtu)</td>
+  <td>Read the values for variable wall properties from the given vtu file using an optional variable name.</td>
+</tr>
+</table>
+
+<h4>Deformable walls with uniform thickness and elastic modulus</h4>
+
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th>svPre Command</th>
+  <th>Argument Format</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tr>
+  <td>deformable_wall_vtp_simple</td>
+  <td>(file name)</td>
+  <td>Set the face specified by the given vtp file as deformable wall</td>
+</tr>
+<tr>
+  <td>fix_free_edge_nodes_vtp</td>
+  <td>(file name)</td>
+  <td>Fix the free edges of the face specified by the given vtp file with a zero-displacement condition</td>
+</tr>
+<tr>
+  <td>deformable_create_mesh_vtp</td>
+  <td>(file name)</td>
+  <td>Generate a new finite element mesh with the nodes and elements on the face specified by the given vtp file (filename), with the purpose of solving the solid mechanics finite element problem of the pressurization of that surface with the fluid’s internal pressure</td>
+</tr>
+<tr>
+  <td>deformable_wall_vtp</td>
+  <td>(file name)</td>
+  <td>For convenience, the command is the combination of the above three commands: deformable_wall_vtp_simple, fix_free_edge_nodes_vtp and deformable_create_mesh_vtp.
+</tr>
+<tr>
+  <td>deformable_thickness</td>
+  <td>(double)</td>
+  <td>Set the thickness of the vessel wall to the given value, assumed uniform.</td>
+</tr>
+<tr>
+  <td>deformable_E</td>
+  <td>(double)</td>
+  <td>Set the elastic modulus  of the vessel wall to the given value, assumed uniform</td>
+</tr>
+<tr>
+  <td>deformable_nu</td>
+  <td>(double)</td>
+  <td>Set the Poisson’s ratio  of the vessel wall to the given value, assumed uniform.</td>
+</tr>
+<tr>
+  <td>deformable_kcons</td>
+  <td>(double)</td>
+  <td>Set the Shear correction factor of the vessel wall to the given value, assumed uniform.</td>
+</tr>
+<tr>
+  <td>deformable_pressure</td>
+  <td>(double)</td>
+  <td>Pressure used to load the vessel wall structure. This pressure should be representative of pressure of the internal fluid. The result of this pressurization is a “loaded” vessel wall in equilibrium with the internal
+blood</td>
+</tr>
+<tr>
+  <td>deformable_direct_solve_displacements</td>
+  <td>(none)</td>
+  <td>Use the direct, sparse solver for the initial displacements of the CMM-FSI method (deformable wall model)</td>
+</tr>
+<tr>
+  <td>deformable_solve_displacements</td>
+  <td>(none)</td>
+  <td>Use the iterative solver for the initial displacements of the CMM-FSI method (deformable wall model)</td>
+</tr>
+<tr>
+  <td>wall_displacements_write_vtp</td>
+  <td>(file name)</td>
+  <td>Write the displacment to the specified vtp file (displacement.vtp if a file name not provided) for review.</td>
+</tr>
+<tr>
+  <td>append_displacements</td>
+  <td>(file name)</td>
+  <td>Append the displacement field to the specified existing file (restart.0.1 if a file name not provided). <b> This command does not need a posterior “write_restart” command.</b></td>
+</tr>
+</table>
+
+<h4>Deformable walls with variable thickness and elastic modulus</h4>
+
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th>svPre Command</th>
+  <th>Argument Format</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tr>
+  <td>set_surface_thickness_vtp</td>
+  <td>(file name) (double)</td>
+  <td>Set the thickness of the face specified by the given vtp file (file name) to a prescribed value. This can be used to assign the thickness to various outlet surfaces and then interpolate the wall thickness from these values using the Laplace_Thickness command.</td>
+</tr>
+<tr>
+  <td>solve_varwall_thickness</td>
+  <td>(none)</td>
+  <td>Solve the Laplace problem and determines a variable thinkness distribution in the wall.</td>
+</tr>
+<tr>
+  <td>set_surface_E_vtp</td>
+  <td>(file name) (double)</td>
+  <td>Set the elastic modulus of the face specified by the given vtp file(file name) to a prescribed value. This can be used to assign the elastic modulus to various outlet surfaces and then interpolate the wall elastic modulus from these values using the Laplace_Evw command.</td>
+</tr>
+<tr>
+  <td>solve_varwall_E</td>
+  <td>(none)</td>
+  <td>Solve the Laplace problem and determines a variable elastic modulus distribution in the wall.</td>
+</tr>
+<tr>
+  <td>set_surface_initial_E_vtp</td>
+  <td>(file name) (double)</td>
+  <td>Set the initial elastic modulus of the face specified by the given vtp file (file name) to a prescribed value for posterior transient Laplace solving (command Transient_Laplace_Evw).</td>
+</tr>
+<tr>
+  <td>solve_transient_varwall_E</td>
+  <td>(none)</td>
+  <td>Solve the Transient Laplace problem and determines a variable elastic modulus distribution in the wall.</td>
+</tr>
+<tr>
+  <td>varwallprop_write_vtp</td>
+  <td>(file name)</td>
+  <td>Write the variable thickness and elastic modulus to the specified vtp file</td>
+</tr>
+<tr>
+  <td>deformable_solve_varwall_displacements</td>
+  <td>(none)</td>
+  <td>Use the iterative solver for the initial displacements of the CMM-FSI method (deformable wall model) with variable wall properties</td>
+</tr>
+<tr>
+  <td>append_varwallprop</td>
+  <td>(file name)</td>
+  <td>Append the variable wall thickness and elastic modulus to the specified file (geombc.dat.1 if a file name not provided)</td>
+</table>
+</section>
+    <section id="bctfile" class="subgroup"><h3>Format of BCT file</h3>
+
+<p>Inlet prescribed velocity profile is defined through the <strong>bct.dat</strong> file using the following format:</p>
+<pre class="highlight plaintext"><code>np nl
+x1 y1 z1 nl nn
+vx1  vy1  vz1  t1
+ .    .    .    .
+ .    .    .    .
+ .    .    .    .
+vxnl vynl vznl tnl
+ .    .    .    .
+ .    .    .    .
+ .    .    .    .
+xnp  ynp  znp   nl
+
+vx1 vy1 vz1 t1
+ .   .   .   .
+ .   .   .   .
+ .   .   .   .
+</code></pre>
+
+<p>The file defines the inflow boundary condition both spatially and in time. The spatial definition is obtained through $n_p$ point-wise velocity input blocks. In this case, $n_p = 102$, this is the total number of nodes on the <strong>inflow.vtp</strong> face. The temporal definition is given by $n_l$ input lines of the values at a certain position for $n_l$ time points, $t_1$ to $t_{n_l}$. In this case, $n_l = 2$ points (this is the value we entered in the <em>num pts in period</em> box. </p>
+
+<p>Each block of data has, for each of the $n_p = 102$ spatial points, the following info:</p>
+
+<ul>
+<li><p>The coordinates of the point: $x_1$ $x_2$ $x_3$ and the number of time points $n_l$.</p></li>
+<li><p>The list of velocity vectors $v_x$ $v_y$ $v_z$ at time t.</p></li>
+</ul>
+
+<p>A vtp file <strong>bct.vtp</strong> can be written using this option <strong>Create Vtp</strong> to graphically visualize the velocity distribution at the inlet surface with Paraview, as shown in the picture below.</p>
+</section>
+    <section id="solverinp" class="subgroup"><h3>Solver.inp File Guide</h3>
+
+<p>This section discusses the options available in the <strong>solver.inp</strong> file. </p>
+
+<h4>Input Control</h4>
+
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th>Command</th>
+  <th>Default</th>
+  <th>Possible Values</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tr>
+  <td>Default Input File</td>
+  <td> </td>
+  <td>File name with relative or absolute path</td>
+  <td>Most parameters are already assigned default values by hard-coding for cardiovascular simulation as shown in the following tables. Only a very small number of parameters must be set up in solver.inp. If the user needs different default values for a few parameters, the new values can also be assigned for them in solver.inp. But if the user needs different default values for many parameters, a default input file can be created and the new default values are put in this file. Users can use the file <b>default.inp</b> under SimVascular home(installation) folder as a reference to create solver.inp or a custom default input file.</td>
+</tr>
+</table>
+
+<h4>BCT Control</h4>
+
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th>Command</th>
+  <th>Default</th>
+  <th>Possible Values</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tr>
+  <td>Time Varying Boundary Conditions From File</td>
+  <td>(True)</td>
+  <td>True,False</td>
+  <td>If the <b>bct.dat</b> file was created containg prescribed velocity at the inlet (this will be the case for most simulations), this option should be set to <b>True</b>.</td>
+</tr>
+<tr>
+  <td>BCT File Type</td>
+  <td>(DAT) </td>
+  <td>DAT,VTP</td>
+  <td>This entry tells the solver to read inflwo boundary conditions from <b>bct.dat</b> or <b>bct.vtp</b>.</td>
+</tr>
+<tr>
+  <td>Number of BCT Files</td>
+  <td>(1) </td>
+  <td>(integer)</td>
+  <td>This entry tells the solver how many bct files need to be read. If there is only one, name it as bct.dat (or bct.vtp); if there are multiple, name them as bct1.dat, bct2.dat&hellip;(or bct1.vtp, bct2.vtp&hellip;)</td>
+</tr>
+<tr>
+  <td>BCT Matching Type</td>
+  <td>(Global Node ID) </td>
+  <td>Global Node ID,Coordinates</td>
+  <td>This entry tells the solver to match bct nodes by global node id or coordinates.</td>
+</tr>
+<tr>
+  <td>BCT Time Scale Factor</td>
+  <td>(1.0)</td>
+  <td>(double)</td>
+  <td>Defines an amplification factor for the velocity data contained in the <b>bct.dat</b> file. It allows scaling the time history given in the <b>bct.dat</b> file by the factor specified in this line. For example, if your original bct.dat has a period of $0.8$ seconds, and if you wanted to simulate a problem with the same inflow wave shape, but with a period of $0.4$ seconds, you would have to enter a BCT Time Scale Factor of 0.5 in this line. <b>For most cases</b>, it should be 1.0.</td>
+</tr>
+</table>
+
+<h4>Solution Control</h4>
+
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th>Command</th>
+  <th>Default</th>
+  <th>Possible Values</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tr>
+  <td>Equation of State</td>
+  <td>(Incompressible)</td>
+  <td>Incompressible, Compressible</td>
+  <td>This entry tells the solver to solve the <b>INCOMPRESSIBLE</b> or <b>COMPRESSIBLE</b> Navier-Stokes equations.</td>
+</tr>
+<tr>
+  <td>Viscous Control</td>
+  <td>(Viscous)</td>
+  <td>Viscous</td>
+  <td>This entry activates the viscous terms in the Navier-Stokes equations. A value different from the default will neglect the contribution of the viscosity and solver the inviscid Navier-Stokes equations.</td>
+</tr>
+<tr>
+  <td>Number of Timesteps</td>
+  <td>NO DEFAULT</td>
+  <td>(integer)</td>
+  <td>Total number of timesteps in the simulation</td>
+</tr>
+<tr>
+  <td>Time Step Size</td>
+  <td>NO DEFAULT</td>
+  <td>(double)</td>
+  <td>Time size of each step</td>
+</tr>
+</table>
+
+<h4>Material Properties</h4>
+
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th>Command</th>
+  <th>Default</th>
+  <th>Possible Values</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tr>
+  <td>Viscosity</td>
+  <td>NO DEFAULT</td>
+  <td>(double)</td>
+  <td>Fluid viscosity</td>
+</tr>
+<tr>
+  <td>Density</td>
+  <td>NO DEFAULT</td>
+  <td>(double)</td>
+  <td>Fluid density</td>
+</tr>
+</table>
+
+<h4>Body Forces</h4>
+
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th>Command</th>
+  <th>Default</th>
+  <th>Possible Values</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tr>
+  <td>Body Force Option</td>
+  <td>(None)</td>
+  <td>(Vector,User e3source.f)</td>
+  <td>The vector option applies a constant body force. A user-defined body force can also be specified through the e3source.f Fortran subroutine</td>
+</tr>
+<tr>
+  <td>Body Force</td>
+  <td>(0.0 0.0 0.0)</td>
+  <td>(double double double)</td>
+  <td>The vector valued constant body force</td>
+</tr>
+</table>
+
+<h4>Output Control</h4>
+
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th>Command</th>
+  <th>Default</th>
+  <th>Possible Values</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tr>
+  <td>Number of timesteps between restarts</td>
+  <td>NO DEFAULT</td>
+  <td>(integer)</td>
+  <td>Number of time steps between a new restart.<step>.<proc> is saved. This values decides how often the complete status of the model is saved to disk.</td>
+</tr>
+<tr>
+  <td>Print Average Solution</td>
+  <td>(True)</td>
+  <td>False,True</td>
+  <td>Print time-averaged pressure and velocities in restart files. These values can be used by the <b>svAdapt</b> application to refine the computational mesh increasing the accuracy of the resulting pressure/velocity distribution.</td>
+</tr>
+<tr>
+  <td>Print Error Indicators</td>
+  <td>(False)</td>
+  <td>False,True</td>
+  <td>Print time-accumulated errors of pressure and velocities to their averaged values in restart files. </td>
+</tr>
+<tr>
+  <td>Number of Surfaces which Output Pressure and Flow</td>
+  <td>(0)</td>
+  <td>(integer)</td>
+  <td>Total number of surfaces where average pressure and total flow rate need to be integrated. The results will be written in the simulation folder to the files PressHist.dat and FlowHist.dat</td>
+</tr>
+<tr>
+  <td>List of Output Surfaces</td>
+  <td>NO DEFAULT</td>
+  <td>(space separated integer list)</td>
+  <td>List of ID for surfaces where average pressure and total flow rate need to be integrated</td>
+</tr>
+<tr>
+  <td>Number of Force Surfaces</td>
+  <td>(0)</td>
+  <td>(integer)</td>
+  <td>This line specifies the number of surfaces where we are going to collect tractions (i.e., wall shear stress) in our model. Tractions are collected as a ‘post-processing’ step after the velocity and pressure fields are obtained.</td>
+</tr>
+<tr>
+  <td>Surface ID&rsquo;s for Force Calculation</td>
+  <td>NO DEFAULT</td>
+  <td>(space separated integer list)</td>
+  <td>List of ID for surfaces tagged for Force Calculation (i.e., shear stress calculation).</td>
+</tr>
+<tr>
+  <td>Force Calculation Method</td>
+  <td>(Velocity Based)</td>
+  <td>Velocity Based,Residual Based</td>
+  <td>Specify a method for surface force calculation (i.e., traction, shear stress).</td>
+</tr>
+<tr>
+  <td>Apply Wall Deformation</td>
+  <td>(False)</td>
+  <td>True,False</td>
+  <td>Decide whether to udpate wall coordinates for deformable wall during wall stress calculation</td>
+</tr>
+</table>
+
+<h4>Linear Solver Options</h4>
+
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th>Command</th>
+  <th>Default</th>
+  <th>Possible Values</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tr>
+  <td>Solver Type</td>
+  <td>(svLS)</td>
+  <td>svLS</td>
+  <td>sv linear solver selected by default</td>
+</tr>
+<tr>
+  <td>svLS Type</td>
+  <td>(NS)</td>
+  <td>CG,GMRES,NS</td>
+  <td>Type selected for svLS. For deformable wall cases, GMRES is recommended to improve computing performance.</tr>
+<tr>
+  <td>Maximum Number of Iterations for svLS NS Solver</td>
+  <td>(1)</td>
+  <td>(integer)</td>
+  <td>Maximum number of iterations for the full Navier-Stokes solver. Use 10 for pulsatible flow, or deformable wall casese</td>
+</tr>
+<tr>
+  <td>Maximum Number of Iterations for svLS Momentum Loop</td>
+  <td>(2)</td>
+  <td>(integer)</td>
+  <td>Maximum number of iterations for the Momentum equation solver. Use 20 for deformable wall cases</td>
+</tr>
+<tr>
+  <td>Maximum Number of Iterations for svLS Continuity Loop</td>
+  <td>(400)</td>
+  <td>(integer)</td>
+  <td>Maximum number of iterations for the continuity equation solver</td>
+</tr>
+<tr>
+  <td>Number of Solves per Left-hand-side Formation</td>
+  <td>(1)</td>
+  <td>(integer)</td>
+  <td>It tells the solver how often the left-hand-side of the system of equations should be updated in the non-linear iteration loop. 1 is a good value, we recommend you to use it.</td>
+</tr>
+</table>
+
+<p><strong>WARNING:</strong> For simulations of deformable vessels these defaults may need to be changed to 10,20,400, respectvely. </p>
+
+<h4>Discretization Control</h4>
+
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th>Command</th>
+  <th>Default</th>
+  <th>Possible Values</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tr>
+  <td>Time Integration Rule</td>
+  <td>(Second Order)</td>
+  <td>First Order,Second Order</td>
+  <td>This option allows the user to select the parameters in the generalized $\alpha$ time integration method for systems of first order ordinary differential equations in time. Setting a first order scheme is equivalent to adopt a backward (or implicit) Euler scheme. If the user selects a second order scheme then the value of the generalized alpha parameters are determined as $\alpha_m = \frac{1}{2}\frac{3-\rho_{\infty}}{1+\rho_{\infty}}$, $\alpha_f = \frac{1}{1+\rho_{\infty}}$, and $\gamma = \frac{1}{2} + \alpha_m - \alpha_f$</td>
+</tr>
+<tr>
+  <td>Time Integration Rho Infinity</td>
+  <td>(0.5)</td>
+  <td>(double in [0,1])</td>
+  <td>Value of $\rho_{\infty}$ for the generalized $\alpha$ method. It sets the parameter that controls the amount of user-defined numerical dissipation. This parameter takes values in the range (0,1). The value 0 corresponds to maximal numerical dissipation, where the under-resolved frequencies are annihilated within one time step. The value 1 implies no numerical  dissipation: all the frequencies present in the simulation are maintained through the time steps. These can be dangerous if the temporal and spatial discretizations are not adequate.</td>
+</tr>
+<tr>
+  <td>Flow Advection Form</td>
+  <td>(Convective)</td>
+  <td>Convective,Conservative</td>
+  <td>It sets the solver to use the advective or conservative form of the Navier-Stokes equations.</td>
+</tr>
+<tr>
+  <td>Quadrature Rule on Interior</td>
+  <td>(2)</td>
+  <td>1,2,3,4</td>
+  <td>This option sets the integration order for elements that do not contain boundary faces. Orders 1,2,3,4 correspond to 1,4,16,29 integration points, respectively.</td>
+</tr>
+<tr>
+  <td>Quadrature Rule on Boundary</td>
+  <td>(3)</td>
+  <td>1,2,3,4</td>
+  <td>This option sets the integration order for boundary elements. Orders 1,2,3,4 correspond to 1,3,6,12 integration points, respectively.</td>
+</tr>
+<tr>
+  <td>Number of Elements Per Block</td>
+  <td>(255)</td>
+  <td>(integer)</td>
+  <td>To improve the efficiency, the elements belonging to each processor are stored in separate groups. The size of these groups can be set by the user through this option</td>
+</tr>
+</table>
+
+<h4>Cardiovascular Modelling Parameters</h4>
+
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th>Command</th>
+  <th>Default</th>
+  <th>Possible Values</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tr>
+  <td>Number of Coupled Surfaces</td>
+  <td>(0)</td>
+  <td>(integer)</td>
+  <td>Total number of boundary surfaces with flow-pressure coupling</td>
+</tr>
+<tr>
+  <td>Pressure Coupling</td>
+  <td>(Implicit)</td>
+  <td>None,Explicit,Implicit,P-Implicit</td>
+  <td>This line sets the implicit implementation of the <b>Coupled-Multidomain Method</b> in the code.</td>
+</tr>
+<tr>
+  <td>Number of Resistance Surfaces</td>
+  <td>(0)</td>
+  <td>(integer)</td>
+  <td>Total number of surfaces with assigned resistance boundary condition</td>
+</tr>
+<tr>
+  <td>List of Resistance Surfaces</td>
+  <td>NO DEFAULT</td>
+  <td>(space separated integer list)</td>
+  <td>List of IDs (same ID defined in the model.svpre file) of surfaces with resistance boundary condition applied</td>
+</tr>
+<tr>
+  <td>Resistance Values</td>
+  <td>NO DEFAULT</td>
+  <td>(space separated double list)</td>
+  <td>Resistance values for the previously specified list of faces IDs</td>
+</tr>
+<tr>
+  <td>Number of Impedance Surfaces</td>
+  <td>(0)</td>
+  <td>(integer)</td>
+  <td>Total number of faces with impedance boundary condition</td>
+</tr>
+<tr>
+  <td>List of Impedance Surfaces</td>
+  <td>NO DEFAULT</td>
+  <td>(space-separated integer list)</td>
+  <td>List of IDs (same ID defined in the model.svpre file) of surfaces with impedance boundary condition applied</td>
+</tr>
+<tr>
+  <td>Impedance From File</td>
+  <td>(False)</td>
+  <td>False,True</td>
+  <td>Must be set to True to read the impedance information from file</td>
+</tr>
+<tr>
+  <td>Number of RCR Surfaces</td>
+  <td>(0)</td>
+  <td>(integer)</td>
+  <td>Total number of faces with boundary RCR blocks</td>
+</tr>
+<tr>
+  <td>List of RCR Surfaces</td>
+  <td>NO DEFAULT</td>
+  <td>(space-separated integer list)</td>
+  <td>List of IDs (same ID defined in the model.svpre file) of surfaces with boundary RCR block applied</td>
+</tr>
+<tr>
+  <td>RCR Values From File</td>
+  <td>(False)</td>
+  <td>False,True</td>
+  <td>Must be set to True to read the impedance information from file</td>
+</tr>
+<tr>
+  <td>Number of COR Surfaces</td>
+  <td>(0)</td>
+  <td>(integer)</td>
+  <td>Total number of faces with coronary boundary conditions</td>
+</tr>
+<tr>
+  <td>List of COR Surfaces</td>
+  <td>NO DEFAULT</td>
+  <td>(space-separated integer list)</td>
+  <td>List of IDs (same ID defined in the model.svpre file) of surfaces with applied coronary boundary condition</td>
+</tr>
+<tr>
+  <td>COR Values From File</td>
+  <td>(False)</td>
+  <td>False,True</td>
+  <td>Must be set to True to read the impedance information from file</td>
+</tr>
+</table>
+
+<h4>Backflow Control</h4>
+
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th>Command</th>
+  <th>Default</th>
+  <th>Possible Values</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tr>
+  <td>Backflow Stabilization Coefficient</td>
+  <td>(0.2)</td>
+  <td>(double in [0,1])</td>
+  <td>Backflow stabilization coefficient. For the definition of these coefficient, see the [following publications](docsRefs.html#refSec2)</td>
+</tr>
+<tr>
+  <td>Number of Surfaces which zero out in-plane tractions</td>
+  <td>(0)</td>
+  <td>(integer)</td>
+  <td>Number of surfaces with prescribed zero in-plane tractions.</td>
+</tr>
+<tr>
+  <td>List of Surfaces which zero out in-plane tractions</td>
+  <td>NO DEFAULT</td>
+  <td>(space-separated integer list)</td>
+  <td>List of surfaces which zero out in-plane tractions. This list should adopt the same numbering strategy defined in the svPre input file</td>
+</tr>
+<tr>
+  <td>Lagrange Multipliers</td>
+  <td>(False)</td>
+  <td>False,True</td>
+  <td>Activate/deactivate Lagrange multipliers</td>
+</tr>
+<tr>
+  <td>Number of Constrained Surfaces</td>
+  <td>(0)</td>
+  <td>(integer)</td>
+  <td>Total number of face with applied Lagrange multiplier constraints</td>
+</tr>
+<tr>
+  <td>List of Constrained Surfaces</td>
+  <td>NO DEFAULT</td>
+  <td>(space-separated integer list)</td>
+  <td>List of surfaces with applied Lagrange multipliers. This list should adopt the same numbering strategy defined in the svPre input file</td>
+</tr>
+<tr>
+  <td>Constrained Surface Information From File</td>
+  <td>(False)</td>
+  <td>False,True</td>
+  <td>This flag needs to be set to true if a file is available with the information on how to set Lagrange multipliers at selected outlets</td>
+</tr>
+</table>
+
+<h4>Closed Loop Boundary Conditions</h4>
+
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th>Command</th>
+  <th>Default</th>
+  <th>Possible Values</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tr>
+  <td>Find the GenBC Inside the Running Directory</td>
+  <td>(True)</td>
+  <td>False,True</td>
+  <td>Look for a GenBC executable inside the current simulation folder. This executable implements a 0D lumped circulation model providing the boundary conditions to the 3D Finite Element solver</td>
+</tr>
+<tr>
+  <td>Number of Timesteps for GenBC Initialization</td>
+  <td>(0)</td>
+  <td>(integer)</td>
+  <td>This defines the number of steps to be performed before activation the the closed-loop boundary conditions. For timesteps smaller than this value, the GenBC application will provide fixed boundary pressures at each outlet equal to the initial values provided by the user.</td>
+</tr>
+<tr>
+  <td>Number of Dirichlet Surfaces</td>
+  <td>(0)</td>
+  <td>(integer)</td>
+  <td>This is the total number of surfaces where the 3D model exchanges Pressure information with the 0D lumped parameter network model. For details the reader should read [this publication](docsRefs.html#refSec2)</td>
+</tr>
+<tr>
+  <td>List of Dirichlet Surfaces</td>
+  <td>NO DEFAULT</td>
+  <td>(space-separated integer list)</td>
+  <td>This is the list of surface IDs where the 3D model exchanges pressure information with the 0D lumped parameter network model</td>
+</tr>
+<tr>
+  <td>Number of Neumann Surfaces</td>
+  <td>(0)</td>
+  <td>(integer)</td>
+  <td>This is the total number of surfaces where the 3D model exchanges flow rate information with the 0D lumped parameter network model. For details the reader should read [this publication](docsRefs.html#refSec2)</td>
+</tr>
+<tr>
+  <td>List of Neumann Surfaces</td>
+  <td>NO DEFAULT</td>
+  <td>(space-separated integer list)</td>
+  <td>This is the list of surface IDs where the 3D model exchanges flow rate information with the 0D lumped parameter network model</td>
+</tr>
+</table>
+
+<h4>Non-linear Iteration Control</h4>
+
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th>Command</th>
+  <th>Default</th>
+  <th>Possible Values</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tr>
+  <td>Residual Control</td>
+  <td>(True)</td>
+  <td>False,True</td>
+  <td>Activates the possibility of adjusting the number of iterations based on the value of the residual norm at the current iteration</td>
+</tr>
+<tr>
+  <td>Residual Criteria</td>
+  <td>(0.01)</td>
+  <td>(double)</td>
+  <td>Lower bound on the residual norm that triggers convergence. In other words, if the residual norm is lower than this value the solver will consider the current time step converged and continue to the next step</td>
+</tr>
+<tr>
+  <td>Minimum Required Iterations</td>
+  <td>(3)</td>
+  <td>(integer)</td>
+  <td>This are the number of iterations that are performed independently on the value of the residual norm in the current time step</td>
+</tr>
+<tr>
+  <td>Step Construction</td>
+  <td>(0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1)</td>
+  <td>(Sequence of 0 and 1)</td>
+  <td>Non linear iteration sequence. It controls the non-linear iteration loop within the time step . The Navier-Stokes equations constitute a no-linear system of partial differential equations. Like any non-linear system, in order to find a solution for a given time step, we must undergo an iteration process to obtain a solution that reduces the residual (i.e., the error) as we iterate more and more. The 0 tells the solver to make a solve, the 1 to make an update of the solution. For example, a ten iterations solution is specified as default as a sequence of solve/update operations</td>
+</tr>
+</table>
+
+<h4>Deformable Wall Simulations</h4>
+
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th>Command</th>
+  <th>Default</th>
+  <th>Possible Values</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tr>
+  <td>Deformable Wall</td>
+  <td>(False)</td>
+  <td>False,True</td>
+  <td>Activates/deactivates the deformability of vessel walls using the coupled-momentum method **LINK**</td>
+</tr>
+<tr>
+  <td>Number of Wall Properties per Node</td>
+  <td>(10)</td>
+  <td>10,21</td>
+  <td>Defines the material model for the vessel wall. Option &ldquo;10&rdquo; (default option) means that an isotropic material model needs to be used. Option &ldquo;21&rdquo; means that an orthotropic material model needs to be used</td>
+</tr>
+<tr>
+  <td>Density of Vessel Wall</td>
+  <td>NO DEFAULT</td>
+  <td>(double)</td>
+  <td>Mass density of the vessel wall material</td>
+</tr>
+<tr>
+  <td>Thickness of Vessel Wall</td>
+  <td>NO DEFAULT</td>
+  <td>(double)</td>
+  <td>Uniform thinkness of the vessel wall material</td>
+</tr>
+<tr>
+  <td>Young Mod of Vessel Wall</td>
+  <td>NO DEFAULT</td>
+  <td>(double)</td>
+  <td>Uniform elastic modulus for the vessel walls</td>
+</tr>
+<tr>
+  <td>Poisson Ratio of Vessel Wall</td>
+  <td>(0.5)</td>
+  <td>(double in [0.0,0.5])</td>
+  <td>Uniform Poisson ratio for the vessel walls</td>
+</tr>
+<tr>
+  <td>Shear Constant of Vessel Wall</td>
+  <td>NO DEFAULT</td>
+  <td>(double)</td>
+  <td>Uniform Shear constant for the vessel walls</td>
+</tr>
+<tr>
+  <td>Wall Mass Matrix for LHS</td>
+  <td>(True)</td>
+  <td>False,True</td>
+  <td>Assembles the contribution of the wall mass matrix in the global LHS matrix</td>
+</tr>
+<tr>
+  <td>Wall Stiffness Matrix for LHS</td>
+  <td>(True)</td>
+  <td>False,True</td>
+  <td>Assembles the contribution of the wall stiffness matrix in the global LHS matrix</td>
+</tr>
+<tr>
+  <td>Variable Wall Thickness and Young Mod</td>
+  <td>(False)</td>
+  <td>False,True</td>
+  <td>Activates/deactivates the possibility of specifying a variable thickness/elastic modulus for the vessel wall material</td>
+</tr>
+</table>
+
+<h4>Task Control</h4>
+
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th>Command</th>
+  <th>Default</th>
+  <th>Possible Values</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tr>
+  <td>Solver Task</td>
+  <td>(Full Simulation)</td>
+  <td>Full Simulation,Only Partition</td>
+  <td>Decide whether to do full simulation or just partition restart.01 and geombc.dat.1</td>
+</tr>
+</table>
+
+<p><br>
+<br></p>
+</section>
+    <section id="impbcfile" class="subgroup"><h3>Format of Impedance boundary condition file</h3>
+
+<p>Impedance boundary conditions are defined through the <strong>Qhistor.dat</strong> file where the flow rate time history at each face is specifiedd and the <strong>impt.dat</strong> files containing impedance data. These two files must be present in the folder with all others solver files when executing <strong>svSolver</strong>. </p>
+
+<p>The <strong>Qhistor.dat</strong> file has the following format:</p>
+<pre class="highlight plaintext"><code>totTS
+Q0,0 Q0,1 ... Q0,n
+Q1,0 Q1,1 ... Q1,n
+...
+...
+QtotTS,0 QtotTS,1 ... QtotTS,n
+</code></pre>
+
+<p>where <strong>n</strong> denotes the total number of faces with impedance boundary condition applied and <strong>totTS</strong> the total number of time steps. </p>
+
+<p>The <strong>impt.dat</strong> file has the following format:</p>
+<pre class="highlight plaintext"><code>nptsImpmax
+numDataImp,1
+t0 impVal0
+...
+t_numDataImp impVal_numDataImp
+...
+...
+numDataImp,n
+t0 impVal0
+...
+t_numDataImp impVal_numDataImp
+</code></pre>
+
+<p>where <strong>nptsImpmax</strong> is the maximum number of time steps defined on all the boundary faces with impedance boundary condition. 
+There are <strong>n</strong> blocks in the file, each defining impedance data for each face. Every block is defined by two columns, the first denoting time and the second impedance values. </p>
+</section>
+    <section id="rcrtfile" class="subgroup"><h3>Format of RCR boundary condition file</h3>
+
+<p>RCR boundary conditions are defined through the <strong>rcrt.dat</strong> file using the following format:</p>
+<pre class="highlight plaintext"><code>nptsRCRmax
+numDataRCR_1
+Rp_1
+C_1
+Rd_1
+time_1_1 Pdist_1_1
+... 
+... 
+time_1_numDataRCR Pdist_1_numDataRCR
+...
+...
+numDataRCR_i
+Rp_i
+C_i
+Rd_i
+time_i_1 Pdist_i_1
+... 
+... 
+time_i_numDataRCR Pdist_i_numDataRCR
+</code></pre>
+
+<p>The first quantity <strong>nptsRCRmax</strong> defines the maximum number of time points for the curves defined at each outlet.
+This quantity is followed by one block for each outlet, containing <strong>numDataRCR_i</strong>, i.e., the number of time point for RCR outlet i.
+The three values <strong>Rp_i</strong>, <strong>C_i</strong>, <strong>Rd_i</strong> are defined for the proximal resistance, compliance and distal vessel resistance, respectively.
+A time series follows, defining the evolution in time of the reference pressure at the distal end of the RCR block.</p>
+</section>
+    <section id="cortfile" class="subgroup"><h3>Format of COR boundary condition file</h3>
+
+<p>Coronary boundary conditions are defined through the <strong>cort.dat</strong> file using the following format</p>
+<pre class="highlight plaintext"><code>nptsCORmax
+numDataCOR_1
+q0_1
+q1_1
+q2_1
+p0_1
+p1_1
+p2_1
+b0_1(=0)
+b1_1
+b2_1(=0)
+time_1_1 Plv_1_1 (/Prv_1_1)
+... 
+... 
+time_1_numDataCOR Plv_1_numDataCOR
+...
+...
+...
+numDataCOR_i
+q0_i
+q1_i
+q2_i
+p0_i
+p1_i
+p2_i
+b0_i(=0)
+b1_i
+b2_i(=0)
+time_i_1 Plv_i_1 (/Prv_i_1)
+... 
+... 
+time_i_numDataCOR Plv_i_numDataCOR
+</code></pre>
+
+<p>The first quantity <strong>nptsCORmax</strong> defines the maximum number of time points for the curves defined at each outlet defining the ventricular pressures.
+This quantity is followed by one block for each outlet, containing <strong>numDataCOR_i</strong>, i.e., the number of time point for Coronary outlet i.
+Nine constants need also to be defined for each coronary outlet, i.e., $q_0$, $q_1$, $q_2$, $p_0$, $p_1$, $p_2$, $b_0$, $b_1$, $b_2$.
+The physical meaning of these constants is related to the resistances and capacitances used to simulated each coronary outlet, as shown in the picture below:</p>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/flowsolver/imgs/CorBC.png">
+  <figcaption class="svCaption" >Circuit visualization for coronary boundary condition</figcaption>
+</figure>
+
+<p>The following expressions are used in <a href="/docsRefs.html#refSec2">this paper</a>.</p>
+
+<p>$$
+p_0 = 1,\quad
+p_1 = R_{a-micro}C_a + (R_v + R_{v-micro})(C_a + C_{im}),\quad
+p_2 = C_{a}\,C_{im}\,R_{a-micro}(R_v + R_{v-micro}).
+$$</p>
+
+<p>$$
+q_0 = R_{a} + R_{a-micro} + R_{v} + R_{v-micro},\quad
+q_1 = R_{a}C_{a}(R_{a-micro} + R_{v} + R_{v-micro}) + C_{im}(R_{a} + R_{a-micro})(R_{v} + R_{v-micro}).
+$$</p>
+
+<p>$$
+q_2 = C_{a}C_{im}R_{a}R_{a-micro}(R_v + R_{v-micro}),\quad
+b_0 = 0,\quad
+b_1 = C_{im}(R_v + R_{v-micro}),\quad
+b_2 = 0.
+$$</p>
+
+<p><br>
+<br></p>
+</section>
+  
+
+
+</div>
+
+
+
+    </div>
+</div>    
+
+
+    <!-- /.container -->
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container-fluid text-center">
+          <ul class="nav navbar-nav">
+            <li><a>Copyright &copy; SimVascular Development Team - 2017</a></li>                
+          </ul>
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    
+    <script src="js/jquery-1.11.0.js" type="text/javascript"></script><script src="js/bootstrap.min.js" type="text/javascript"></script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+      });
+      $('body').scrollspy({
+        target: '.bs-docs-sidebar',
+        offset: 40
+      });
+    </script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-55333921-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <script type="text/javascript"
+      src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+</body>
+
+</html>
