@@ -1,1 +1,1 @@
-Alex Kaiser
+Alexander D. Kaiser is a postdoctoral scholar in the department of Cardiothoracic Surgery at Stanford School of Medicine. He completed his PhD in mathematics at the Courant Institute of Mathematical Sciences, New York University, where his research focused on modeling and simulation of the mitral valve. Currently, he is interested in building tools and developing methods for cardiac modeling, and using them to investigate surgical procedures. 
