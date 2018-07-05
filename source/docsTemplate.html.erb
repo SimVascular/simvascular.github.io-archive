@@ -28,6 +28,10 @@ title: SimVascular Docs
         <ul id="sidebar" class="nav nav-stacked fixed manFlowSolver"> <%= partial "documentation/flowsolver_TOC" %></ul>
       <% end %>
 
+      <% if man_name == "svFSI" %>
+        <ul id="sidebar" class="nav nav-stacked fixed mansvFSI"> <%= partial "documentation/fsi_tutorial_TOC" %></ul>
+      <% end %>
+
       <% if man_name == "Compile" %>
         <ul id="sidebar" class="nav nav-stacked fixed manSource"> <%= partial "documentation/compile_TOC" %></ul>
       <% end %>
@@ -35,9 +39,9 @@ title: SimVascular Docs
       <% if man_name == "Refs" %>
         <ul id="sidebar" class="nav nav-stacked fixed manRefs">       <%= partial "documentation/refs_TOC" %></ul>
       <% end %>
-        
+
     </nav>
-    
+
     <!--Main Content -->
     <div class="col-xs-10 col-sm-10 col-md-9 col-lg-9" id="manualContent">
 
@@ -63,6 +67,10 @@ title: SimVascular Docs
         <div class="manFlowSolver"><%= partial "documentation/flowsolver_content" %></div>
       <% end %>
 
+      <% if man_name == "svFSI" %>
+        <div class="mansvFSI"><%= partial "documentation/fsi_tutorial_content" %></div>
+      <% end %>
+
       <% if man_name == "Compile" %>
         <div class="manCompile"><%= partial "documentation/compile_content" %></div>
       <% end %>
@@ -72,4 +80,4 @@ title: SimVascular Docs
       <% end %>
 
     </div>
-</div>    
+</div>
