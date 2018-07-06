@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SimVascular Docs</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+
+    <link href="css/shop-item.css" rel="stylesheet" type="text/css" />
+
+    <link href="css/codestyle.css" rel="stylesheet" type="text/css" />    
+
+    <link rel="stylesheet" href="font-awesome-4.1.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
+
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                <i class="fa fa-bars" id="barIcon"></i>
+              </button>
+                <a class="navbar-brand" id="brandName" href="index.html">
+                  <img src="img/svlogo/svLogoSmallText.png" alt="...">
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">            
+                <ul class="nav navbar-nav">
+
+                  <!-- USER GUIDES -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b><span class="fa fa-user"></span> User Guides</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsInstallation.html"><b><span class="fa fa-sign-in fa-rotate-90"></span> Installation</b></a></li>
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsQuickGuide.html"><b><span class="icon ion-ios7-bolt"></span> Quick Guide</b></a></li>
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsModelGuide.html"><b><span class="icon ion-settings"></span> Modeling</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsMeshing.html"><b><span class="icon ion-ios7-keypad"></span> Meshing</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsFlowSolver.html"><b><span class="icon ion-play"></span> Simulation</b></a></li>
+                    </ul>
+                  </li>
+                  
+                  <!-- CLINCAL CASES -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b><i class="fa fa-stethoscope"></i> Clinical Cases</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase3.html"><b><span class="fa fa-user-md"></span> Coronary Normal</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase1.html"><b><span class="fa fa-user-md"></span> Aortofemoral Normal - 1</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase2.html"><b><span class="fa fa-user-md"></span> Aortofemoral Normal - 2</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase4.html"><b><span class="fa fa-user-md"></span> Healthy Pulmonary</b></a></li>
+                    </ul>
+                  </li>
+
+                  <!-- DEVELOPER GUIDES -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b><span class="fa fa-caret-square-o-right"></span> Developer Guides</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsCompile.html"><b><span class="fa fa-file-text-o"></span> Compile Source Code</b></a></li>
+                    </ul>
+                  </li>                  
+
+                  <!-- svCOMMUNITY -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b><i class="fa fa-users"></i> svCommunity</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/forums/viewforum.php?f=188"><b><span class="fa fa-users"></span> Public Forum</b></a></li>                                          
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/mailman/listinfo/simvascular-news"><b><span class="fa fa-sign-in"></span> Join News Mailing List</b></a></li>                      
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/pipermail/simvascular-news/"><b><span class="fa fa-pencil-square-o"></span> News Mailing List Archive</b></a></li>                      
+                    </ul>
+                  </li>
+
+                  <!-- REFERENCES -->
+                  <li>
+                    <a href="docsRefs.html" id="dropdownMenu1" >
+                      <b><span class="icon ion-document-text"></span>References</b>
+                    </a>
+                  </li>  
+
+                  <!-- Archives -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b> Archives</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="archiveQuickGuideSV2.html"><b>SimVascular 2.0</b></a></li>
+                    </ul>
+                  </li>
+
+                    <!-- <li><a href="docsQuickGuide.html" id="btnQuickGuide"><b><span class="icon ion-ios7-bolt"></span> Quick Guide</b></a></li>
+                    <li><a href="docsModelGuide.html" id="btnModelGuide"><b><span class="icon ion-settings"></span> Modeling</b></a></li> 
+                    
+                    <li><a href="docsMeshing.html" id="btnMeshing"><b><span class="icon ion-ios7-keypad"></span> Meshing</b></a></li>
+                    <li><a href="docsPresolver.html" id="btnPresolver"><b><span class="icon ion-log-in"></span> svPre</b></a></li>
+                    <li><a href="docsFlowSolver.html" id="btnFlowSolver"><b><span class="icon ion-play"></span> svSolver</b></a></li>
+                    <li><a href="docsRefs.html" id="btnRefs"><b><span class="icon ion-document-text"></span> References</b></a></li>
+                    <li><a href="clinicalCase1.html" id="btnRefs"><b>Case Studies</b></a></li> -->
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <!--Nav Bar -->
+<div class="row">
+    <div class="col-xs-1 col-sm-1 hidden-md hidden-lg">
+    </div>
+    <!-- ONE COLUMN OF SPACE -->
+    <nav class="hidden-xs hidden-sm col-md-2 col-lg-2 bs-docs-sidebar">
+
+
+
+
+
+
+        <ul id="sidebar" class="nav nav-stacked fixed mansvFSI"> <!--Nav Bar -->
+<p><h3>svFSI Tutorial</h3></p>
+<li><a href="#intro">Introduction</a></li>
+<li><a href="#wall_mesh">Creating FSI meshes</a></li>
+<li><a href="#svFSI_simulation">Setting up an svFSI <br> simulation</a></li>
+<li><a href="#sim_results">Example simulation results</a></li>
+<li><a href="#app_source_build">Appendix: Building svFSI from source</a></li>
+<li><a href="#app_meshmixer">Appendix: Making wall mesh with <br> Meshmixer</a>
+  <ul class="nav nav-stacked">
+    <li><a href="#app_fluid_geometry">Creating the fluid geometry</a></li>
+    <li><a href="#app_solid_geometry">Creating the solid geometry</a></li>
+    <li><a href="#app_solid_mesh">Creating the solid mesh</a></li>
+    <li><a href="#app_fluid_mesh">Creating the fluid mesh</a></li>
+  </ul>
+</li>
+<li><a href="#app_restart_after_remesh">Appendix: Restart after remesh</a></li>
+<li><a href="#app_app_prescribed_wall_motion">Appendix: Prescribed wall motion</a></li>
+</ul>
+
+
+
+    </nav>
+
+    <!--Main Content -->
+    <div class="col-xs-10 col-sm-10 col-md-9 col-lg-9" id="manualContent">
+
+      <!-- ACTUAL CONTENT -->
+
+
+
+
+
+
+        <div class="mansvFSI"><section id="intro" class="group"><h2>Overview / Introduction</h2>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/svFSI/fsi_tutorial/imgs/Picture1.png">
+  <figcaption class="svCaption" >Fluid and structure mesh are first created separately, and then used in MUPFES to perform Fluid-Structure-Interaction simulations with Arbitrary Lagrangian–Eulerian (ALE) coordinates.</figcaption>
+</figure>
+
+<p>Cardiovascular applications that involve significant deformation are difficult to simulate and model. Some examples include vascular simulations where the wall dilates to more than 10% of the vessel diameter, cardiac simulations where the heart wall displaces as it contracts and expands, or coronary simulations where the coronary vessels displace with the motion of the heart.</p>
+
+<p>One way to computationally model situations like these is to use a fluid-structure interaction (FSI) solver. In FSI, separate domains are defined for the fluid part and solid parts of the computational geometry. The respective equations governing fluid flow (typically Navier-Stokes) are solved in the fluid domain, while the equations governing solid mechanics are solved in the solid domain. The two domains then interact through their <em>interface</em> where the solution variables (displacements, velocities, pressures, stresses) are required to match. This interface acts as a coupled boundary condition for both domains, as the solution of one domain will affect the solution in the other, and vice-versa.</p>
+
+<p>SimVascular utilizes Arbitrary Lagrangian Eularian (ALE) coordinates to perform FSI. As the name implies, this method is a combination of the Eularian and Lagrangian descriptions of motion that is particularly well suited for FSI problems. In the Eularian description, the computational mesh stays fixed and the motion is characterized as velocities flowing past the grid nodes. The Eularian description is typical for most fluid dynamics problems without FSI. While in the Lagrangian description, the mesh nodes move exactly with the motion of the fluid or solid and thus are often characterized as <em>moving domain</em> problems. Lagrangian problems are also often described in terms of the <em>reference</em> configuration (the initial computational geometry before any motion) and the <em>current</em> configuration (the current state of the geometry and mesh nodes). ALE combines these descriptions into a formulation that is convenient for describing FSI problems, where the mesh motion does not exactly match with the fluid motion, but instead a <em>mesh velocity</em> term is added to the convective term in the Navier-Stokes equations. More information can be found in the literature.</p>
+
+<p>SimVascular provides an ALE-FSI solver in svFSI that has many features that make it convenient for modeling cardiovascular flows. First, svFSI is able to directly read in mesh formats that SimVascular outputs and use them directly in simulations. Second, svFSI provides capabilities to apply inflow and outflow boundary conditions that are common in cardiovascular modeling. These boundary conditions include specifying the flow rate at an inlet face with either a flat or parabolic profile, Neumann pressure boundary conditions, and outlet resistance boundary conditions that relate the flow and pressure.</p>
+</section>
+<section id="wall_mesh" class="group"><h2>Creating the mesh for ALE simulations</h2>
+
+<p>To run an FSI simulation we need a mesh for both the structural domain and the fluid domain. These two meshes must have their interface nodes coincide exactly in order to satisfy the interficial conditions that result from conservation of mass and momentum. The coincident nodes of the fluid mesh are mapped onto the corresponding nodes on the structural mesh and the solution of velocity, displacement, pressure, etc. are treated as equal in the structural and fluid domains.</p>
+
+<p>The fluid domain geometry for patient-specific anatomies are generated using the usual SimVascular modeling pipeline. The Modeling Guide describes this process in more detail: http://simvascular.github.io/docsModelGuide.html. To create the geometry for the structural domain, we will make use of the boundary layer meshing feature in the Meshing module. Normally, the boundary layer meshing feature creates a thin layer of elements on the exterior of your fluid mesh to improve the accuracy of computations near the wall. Conceptually, this is very similar to how a boundary layer forms in fluid mechanics. Velocity gradients are usually high near the walls, so a fine mesh resolution is usually required to resolve this accurately.</p>
+
+<p>The usual case for boundary layer meshing involves extruding this thin layer of elements <em>inwards</em>, starting from the walls and going into the direction of the vessel centers. To make a wall mesh, we will instead use the boundary layer meshing feature to extrude elements <em>outwards</em> to effectively make a new mesh with a specified thickness that surrounds our fluid domain. This new mesh will form the geometry of our structural domain.</p>
+
+<p>Before we use the boundary layer meshing to extrude outwards, it is extremely important that we thoroughly smooth our model. The outward extrusion of elements has the potential to cause some elements to extrude into each other and overlap, which will cause the extrusion to fail. This is especially true at bifurcations, where the extruded elements from the two daughter branches could easily run into each other near the junction if not properly smoothed. We will therefore make thorough use of the local smoothing tools in the Models module before meshing. Below is an example of a bifurcation that would normally occur after lofting segmentations together without smoothing. If we try to extrude a boundary layer mesh from this, the elements at the sharp corner will intersect with each other and cause it to fail.</p>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/svFSI/fsi_tutorial/imgs/sharp_bifurcation.png">
+  <figcaption class="svCaption" >Sharp bifurcation that will cause problems with wall mesh extrusion.</figcaption>
+</figure>
+
+<p>After creating your model from the Segmentations, you should see a list of all the surfaces in your model in the &ldquo;Face List&rdquo; section. The first thing we should do is remesh the entire surface to aid in the surface smoothing. Click on the &ldquo;Global Ops&rdquo; menu to the right of the &ldquo;Face List&rdquo;, then click on the &ldquo;Remesh&rdquo; option to open up the remeshing tool. Click &ldquo;Estimate Size&rdquo; to choose an appropriate size for your model, then hit &ldquo;Remesh&rdquo; beneath the selected size. This should remesh the surface with triangles that should all be approximately the same size.</p>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/svFSI/fsi_tutorial/imgs/global_remeshing.png">
+  <figcaption class="svCaption" >Remeshing in the Global Ops tab.</figcaption>
+</figure>
+
+<p>Now that we have remeshed our entire outer surface, we can start to smooth the walls. We only want to smooth the walls and leave the caps alone, so we will make use of the smoothing tools in the &ldquo;Local Ops&rdquo; tab. Use Ctrl + click to select all the &ldquo;wall&rdquo; surfaces in your model from the Face List, then click &ldquo;Local Ops&rdquo; to reveal the list of local operations. We will make use of the &ldquo;Decimation&rdquo; and &ldquo;Cstr. Smooth&rdquo; tools to perform our smoothing. Decimation will smooth the outer surface of the model by reducing the amount of surface triangles, while Cstr. Smooth will attempt to fillet over any sharp angles in the model while retaining the overall volume. Using these tools in tandem will iteratively smooth the model.</p>
+
+<p>Before starting, check to confirm that all of the wall surfaces are selected in the Face List and none of the caps are selected. Now click the &ldquo;Decimation&rdquo; to open the Decimation menu, then click &ldquo;Decimate Local&rdquo; to decimate using the default settings.</p>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/svFSI/fsi_tutorial/imgs/deimation_pic.png">
+  <figcaption class="svCaption" >Local decimation.</figcaption>
+</figure>
+
+<p>Now, click &ldquo;Cstr. Local&rdquo; to open up the constrained smoothing menu, then click &ldquo;Smooth Local&rdquo; to perform smoothing with the default settings. You should notice your model is a little smoother at the junctions.</p>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/svFSI/fsi_tutorial/imgs/constrained_smooth_pic.png">
+  <figcaption class="svCaption" >Local constrained smoothing.</figcaption>
+</figure>
+
+<p>Repeat this cycle of Decimation and Constrained Smoothing several times to achieve a smoothed model. We recommend at least 10 repetitions of decimation and constrained smoothing. Repeated use of the Decimation feature will sometimes cause the surface of your model to lose so many triangles that the surface loses many of its key geometrical features. It is thus recommended to do a global remeshing every 5 decimations to ensure adequate surface accuracy. Once you are done smoothing, your bifurcations should be sufficiently smoothed and look something like this.</p>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/svFSI/fsi_tutorial/imgs/smooth_bifurcation.png">
+  <figcaption class="svCaption" >Smooth bifurcation.</figcaption>
+</figure>
+
+<p>Now that we have a smoothed model, we can open the &ldquo;Meshes&rdquo; module. Right-click on &ldquo;Meshes&rdquo; in the SV Data Manager and click &ldquo;Create Mesh&rdquo;. A new window will pop up asking you which model you would like to mesh, which meshing package to use, and the mesh name. Select the model you just smoothed in the previous step, select TetGen for the meshing package, and choose a name. You may leave the name section blank and SV will use the same name as your model. Once you have made these selections, the &ldquo;SV Meshing&rdquo; window should open and look like the image below.</p>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/svFSI/fsi_tutorial/imgs/meshing_window.png">
+  <figcaption class="svCaption" >SV Meshing.</figcaption>
+</figure>
+
+<p>We must first select an appropriate Global Max Edge Size for our model. This edge size will determine the thickness of our wall mesh. We will remesh the volume of the fluid and solid domains later, so select the edge size to be <em>double</em> what your desired thickness is. We select this to be double to cut down the meshing time. If you are not sure how to select the thickness of your model, choosing a thickness that is 10% of the mean radius in your model is a reasonable assumption used throughout the literature. Below the edge size selection, you should see a box to select boundary layer meshing. First, click the checkbox next to &ldquo;Boundary Layer Meshing&rdquo; to turn it on. Below this, you should notice three spaces to select parameters of the boundary layer meshing. Since we are producing this boundary layer for the wall mesh, we can use the same settings for these. &ldquo;Portion Edge Size&rdquo; determine the overall thickness of our boundary layer mesh, as a fraction of the Global Max Edge Size selected above. Since we selected a Global Max Edge Size to be double our desired thickness, we want this parameter to be 0.5. Next, you will have to choose the &ldquo;Number of Layers&rdquo; in your boundary layer mesh. Increasing this number will increase the accuracy of your structural domain calculations but also increase the number of elements and thus increase your cost. A reasonable number for this parameter is 2. Last, we must select the &ldquo;Layer Decreasing Ratio&rdquo;, which is a parameter that allows subsequent layers to be a smaller size than the one before it. Since this parameter does not matter too much for creating a wall mesh, we can select this to be 1.0 to make it so all our layers are the same size.</p>
+
+<p>Below these parameter are three checkboxes. The &ldquo;Extrude Boundary Layer Inward from Wall&rdquo; checkbox will extrude the boundary layer mesh inwards if selected. Since we want to extrude the boundary layer mesh <em>outwards</em>, we will uncheck this box. The next box is a setting for &ldquo;Use Constant Boundary Layer Thickness&rdquo;, which will attempt to make the entire boundary layer the same thickness if selected. We recommend leaving this box unchecked so the boundary layer mesh can adaptively change thickness in areas of tricky geometry. The last checkbox, &ldquo;Convert Boundary Layer to New Region/Domain&rdquo;, is very important. We want to check this so that we will have a way to separate the fluid and structural domains later. Once you have set all of these settings, you boundary layer meshing box should look like this:</p>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/svFSI/fsi_tutorial/imgs/BL_meshing_settings.png">
+  <figcaption class="svCaption" >Boundary layer meshing settings.</figcaption>
+</figure>
+
+<p>Now, you are ready to run the mesher. Click &ldquo;Run Mesher&rdquo; near the top right of the &ldquo;SV Meshing&rdquo; window to run the mesher. If the meshing was successful, you should see a window pop up to inform you of the statistics of your mesh. If the meshing was unsuccessful, it is likely that your model may need to be smoothed more to avoid intersecting elements. Once you are successful in producing this boundary layer mesh, right-click it from the SV Data Manager, and click &ldquo;Export Mesh-Complete&rdquo; and choose a location to send the mesh.</p>
+
+<p>If the number of elements is larger or smaller than you would like, feel free to adjust the global max edge size accordingly, making sure to adjust the boundary layer mesh settings to ensure you maintain the same wall mesh thickness. The &ldquo;right&rdquo; number of elements will depend on your geometry, but generally getting somewhere between 100,000 and 500,00 total elements will have decent accuracy for a reasonable cost. If you have access to a large parallel computing cluster where you can run the simulation in parallel with around 100 processors, we recommend about 1 million elements.</p>
+
+<p>Navigating to the location where you saved the mesh-compelte, you should see that SimVascular has produced two folders. One folder contains the mesh for the fluid part (i.e. domain-1) and the other folder contains the mesh for the structural part of your domain (i.e. domain-2). These two folders are the inputs that are needed in the next step, which is setting up the simulation. We need to do one extra step in this phase before launching the svFSI plugin. If you go into the mesh-complete folder for the fluid domain, you should notice that there is a file called &ldquo;walls<em>combined.vtp&rdquo;. We will need to copy this file into the &ldquo;mesh-surfaces&rdquo; folder. Now go into the &ldquo;mesh-surfaces&rdquo; folder, and you should notice that there are many &ldquo;wall&quot;faces. We need to move these out of this folder. Select all of the &quot;wall&rdquo; faces, EXCEPT for &ldquo;walls</em>combined.vtp&rdquo; and move them to the parent folder. The walls<em>combined file will contain all the information from the other walls, but combined into 1 file to make assigning boundary conditions easier. In the end, your mesh-surfaces folder should contain .vtp files for each of the caps and the walls</em>combined.vtp. An example with an aorta model is shown below:</p>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/svFSI/fsi_tutorial/imgs/fluid_mesh_surfaces.png">
+  <figcaption class="svCaption" >mesh-surfaces folder for the fluid domain.</figcaption>
+</figure>
+
+<p>Now exit from this folder, and enter the mesh-complete folder for the structural domain (i.e. domain-2). Inside this folder, you should notice two walls<em>combined (region</em>0 and region<em>1). We will need to copy both of these into the mesh-surfaces folder. The region</em>0 file is the .vtp which designates the interface between the solid and fluid domains, while region<em>1 is the outer wall. Navigate into the mesh-surfaces folder, and like we did in the fluid domain, remove all wall files EXCEPT for the two walls</em>combined files that we just put in here. Once you are done, your mesh-surfaces folder for the structural domain should look like below, where there is a surface for each cap in the model and the two walls_combined.</p>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/svFSI/fsi_tutorial/imgs/solid_mesh_surfaces.png">
+  <figcaption class="svCaption" >mesh-surfaces folder for the solid domain.</figcaption>
+</figure>
+</section>
+<section id="svFSI_simulation" class="group"><h2>Basic GUI plugin use</h2>
+
+<p>The plugin provides a GUI with which to create input files for your svFSI simulation using SimVascular. In this section, we will describe how to set up a fluid-structure interaction simulation of flow in a thick-walled blood vessel. For simplicity in presentation, we assume that the vessel has only one inlet and outlet. Before setting up a fluid-structure interaction job, one should have a mesh for the fluid domain and a mesh for the annulus (artery wall) domain as described above. We have provided you with an example meshes for the fluid domain of a cylinder and the solid domain of the cylinder.</p>
+
+<p>Initiate a job by pressing “New Job.” Click the job in the SV Data Manager, and ensure that it appears in the plugin window. The “Domains” panel allows one to add meshes to the simulation for the different physical domains. Click “Add Mesh-Complete” and select the fluid mesh. You should see three faces appear, one for in the inlet, outlet and fluid-solid interface. Ensure that the button for “fluid” is selected.</p>
+
+<figure>
+  <img class="svImg svImgLg" src="documentation/svFSI/fsi_tutorial/imgs/domains_panel.png">
+  <figcaption class="svCaption" >The domains panel.</figcaption>
+</figure>
+
+<p>Click “Add Mesh-Complete” and select the solid mesh. You should see four faces appear, one for in the solid inlet and outlet outlet (through which we expect no flow), one for the fluid-solid interface, at which the fluid and solid domains will be coupled, and one for the outer annulus wall, which the the edge of the physical domain of our problem. Ensure that the button for “solid” is selected.</p>
+
+<p>The next panel “Physics,” which allows one to select the appropriate differential equations for your problem. Select “FSI” for a coupled fluid-structure interaction simulation and click the right arrow. This will also add “Mesh Motion,” based on the ALE method, to the domains. In the list of added equations, click “FSI” to set fluid-structure parameters. Suppose for now that we are working in CGS units. Set fluid density to 1.06 g/cm$^{3}$, viscosity to 0.04 g/(cm s), solid density to 1.06 g/cm$^{3}$, Set the elastic modulus to a nominal value of $7e7$ dynes/cm$^{2}$ (See <span>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4009743/</span>). We expect the artery wall to be nearly incompressible, and set the Poisson ratio to 0.49. Finally, select a “nHK” for a neo-Hookean solid.</p>
+
+<figure>
+  <img class="svImg svImgLg" src="documentation/svFSI/fsi_tutorial/imgs/physics_panel.png">
+  <figcaption class="svCaption" >The physics panel.</figcaption>
+</figure>
+
+<p>The mesh update equation determines the mesh dynamics in the ALE method. The parameter in the physics tab for this equation is the Poisson’s ratio, which should be set in the interval (0,.5), not too close to the boundary. A good default is .3.</p>
+
+<p>The next tab is “output.” Select a quantity such as “WSS” for wall sheer stress, and click the right arrow to add it to variables that are output. Generally, for each piece of physics, there is a separate list of output variables. In the ALE method, since mesh motion is considered a separate domain and it has its own set of outputs.</p>
+
+<p>The next tab is “boundary conditions.” Select “add,” which brings up a boundary condition menu. From there, select the type of boundary condition and other parameters accordingly. Set the lumen inlet to be a constant value Dirichlet condition of -10 cm$^{3}$/s. Select “impose flux” and a parabolic profile. Set the lumen outlet to be a constant value Neumann condition with value zero, corresponding to zero applied traction at the outlet. Set the annulus inlet and outlet to be zero Dirichlet boundary conditions, corresponding to zero displacement, which will hold them in place through the simulation. Set the annulus outer wall to a zero Neumann condition, which specifies no applied traction on the outer boundary of the physical domain.</p>
+
+<figure>
+  <img class="svImg svImgLg" src="documentation/svFSI/fsi_tutorial/imgs/dirichlet_bc.png">
+  <figcaption class="svCaption" >Setting a Dirichlet boundary condition.</figcaption>
+</figure>
+
+<p>To couple the fluid and solid at their interface, set a Dirichlet boundary condition on “interface_solid.” Under options, select “projection” and pick the face “interface_fluid.” Do not apply a separate boundary condition for “interface_fluid,” as the coupling will handle the updates. (Note that one must click Dirichlet or Neumann to get the projection box to appear. Such a condition is not added to the input file.)</p>
+
+<figure>
+  <img class="svImg svImgLg" src="documentation/svFSI/fsi_tutorial/imgs/projection_bc.png">
+  <figcaption class="svCaption" >Setting a projection boundary condition at the fluid/solid interface.</figcaption>
+</figure>
+
+<p>For the mesh equation, set zero Dirichlet conditions on the lumen inlet and outlet. Do not set boundary conditions for the other faces.</p>
+
+<p>The advanced tab options are described here, but changes are not needed for basic simulations. The button “coupled” allows the user to specify a lumped parameter network for model inlets and outlets. This requires compiling a separate executable and is beyond the scope of this tutorial. Tolerance controls when the nonlinear Newton’s iteration terminates. Residual dB reduction terminates also terminates the nonlinear Newton’s iteration, in this case when the residual decreases sufficiently from iteration to iteration. Min iterations and max iterations determines the range of nonlinear iterations allowed. Backflow stabilization sets the value of the coefficient that reduces the so-called “open-boundary instability.” This is required to be in (0,1), but is best left at the default value of .3.</p>
+
+<p>A number of linear solver parameters are available; the default should suffice for now. Finally, there is “Remesher.” If this is off, then the ALE solver will not re-mesh the domains, regardless of mesh distortion. If this value is set to “TetGen,” then the ALE solver will re-mesh automatically when it decides it is necessary. Set the max edge sizes to be the same as your previous mesh spacings for each domain. Use default values for the remaining parameters.</p>
+
+<p>The “Simulation Parameters” panel allows specification of general parameters for the solver. First, set the desired time step and number of steps. The value of the time step depends on your desired resolution in time and the maximum stable time step for your problem, which is determined by the spatial resolution of the mesh, underlying physics and choice of spatial discretization. The option “start from a previous simulation” allows restarting from a previous simulation. This is useful if there was a problem, or one simply wants to run the simulation for longer without re-running the first set of time steps. Under “Save simulation results,” the value start determines the first time step that is output. Increment determines how often output files are saved. Set this to one to output every time step, or to a larger value to only save a subset of the steps.</p>
+
+<figure>
+  <img class="svImg svImgLg" src="documentation/svFSI/fsi_tutorial/imgs/simulation_panel.png">
+  <figcaption class="svCaption" >The simulation panel.</figcaption>
+</figure>
+
+<p>Finally, on the “Run Simulation” panel, click “Create Input File” to create the necessary files to run your simulation. If you wish to run with more than one processor, increase the slider accordingly. Finally, click “Run” to run your simulation.</p>
+
+<p>SVFSI will create a directory called n-procs, where n is the number of MPI tasks for the simulation. This directory will contain .vtu files that with values of all requested fields, as well as a log file called history.dat and averages of various quantities over time.</p>
+</section>
+<section id="sim_results" class="group"><h2>Example simulation results</h2>
+
+<p>In this section, we show some example simulation results using the provided cylinder model. We will simply inflate the cylinder using a ramp for the pressure with a resistance outlet. Because the velocities and pressures in the domain are usually initialized to zero, it can be a good idea to slowly ramp up the pressure to avoid any sudden jump conditions that could produce oscillations. We apply a resistance boundary condition at the outlet to ensure a physiologic amount of flow. Below shows the inlet pressure vs. time, showing that we will ramp up slowly from 0 pressure to 80 mmHg over the course of a second.</p>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/svFSI/fsi_tutorial/imgs/ramp_pressure.png">
+  <figcaption class="svCaption" >Ramp pressure.</figcaption>
+</figure>
+
+<p>For reference, this simulation was run on a parallel cluster using 48 processors. Overall the simulation took about 10 hours to complete 1000 timesteps. The figure below shows the resulting displacement distribution. The wall has a thickness of approximately 0.016 cm, and we selected a physiologic Young&rsquo;s modulus of about 1 MPa. The figure below shows the resulting displacement distribution across the cylinder.</p>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/svFSI/fsi_tutorial/imgs/cylinder_displacements.png">
+  <figcaption class="svCaption" >Cylinder displacements.</figcaption>
+</figure>
+</section>
+<section id="app_source_build" class="group"><p>In this appendix section, we discuss how to build svFSI from source.</p>
+
+<h2>Building svFSI from source</h2>
+
+<p>The source code for svFSI includes a build system in cmake. To build from source, one needs compilers for c,c++, fortran, an MPI compiler and runtime, and the lapack and blas libraries. LAPACK and BLAS must be installed in a standard location, which cmake will find automatically. For example, on OSX to install using the package manager brew (see <span>https://brew.sh/</span>) one might run</p>
+<pre class="highlight plaintext"><code>    brew install gfortran openmpi lapack 
+</code></pre>
+
+<p>or, on ubuntu, to install using apt-get run</p>
+<pre class="highlight plaintext"><code>   sudo apt-get install gcc gfortran openmpi libblas-dev liblapack-dev
+</code></pre>
+
+<p>We recommend letting cmake find the default compilers for easy of building.</p>
+
+<p>To build the svFSI solver, download the source code from</p>
+<pre class="highlight plaintext"><code>    https://github.com/alexkaiser/svSolver/tree/svFSI
+</code></pre>
+
+<p>to a directory of your choosing. Make sure you are on the branch svFSI to include the solver. (Note that this repo is currently does not contain the FSI solver, but will be updated shortly.) Change into wherever this was downloaded.</p>
+<pre class="highlight plaintext"><code>    cd svSolver
+</code></pre>
+
+<p>Make a build directory and go there.</p>
+<pre class="highlight plaintext"><code>    mkdir svSolver\_build &amp;&amp; cd svSolver\_build 
+</code></pre>
+
+<p>Initiate the cmake terminal interface to generate makefiles.</p>
+<pre class="highlight plaintext"><code>    ccmake ../svSolver 
+</code></pre>
+
+<p>This will automatically search for compilers. Follow instructions if necessary. Push “c” for configure repeatedly until cmake presents the option “g” for generate. Hit “g” to create makefiles and exit. Run make:</p>
+<pre class="highlight plaintext"><code>    make 
+</code></pre>
+
+<p>This will place the solver in a directory called svSolver-build/svFSI.</p>
+
+<ul>
+<li>SimVasvular source</li>
+</ul>
+
+<p>SimVasvular source, if there is any difficulty.</p>
+<pre class="highlight plaintext"><code>https://github.com/gmaher/SimVascular/tree/project\_manager\_update
+</code></pre>
+
+<ul>
+<li>Plugin installation</li>
+</ul>
+
+<p>To build the svFSI plugin, download the source code from</p>
+<pre class="highlight plaintext"><code>    https://github.com/SimVascular/SimVascular-Plugin-MUPFES
+</code></pre>
+
+<p>to a directory of your choosing. (Note that this repo is currently private) The plugin source code should not be in your SimVascular directory tree. Change into wherever this was downloaded.</p>
+<pre class="highlight plaintext"><code>    cd SimVascular-Plugin-MUPFES
+</code></pre>
+
+<p>Make a build directory and go there.</p>
+<pre class="highlight plaintext"><code>    mkdir build &amp;&amp; cd build 
+</code></pre>
+
+<p>Initiate the cmake terminal interface to generate makefiles.</p>
+<pre class="highlight plaintext"><code>    ccmake .. 
+</code></pre>
+
+<p>This will automatically search for compilers. Follow instructions if necessary. Push “c” for configure repeatedly until cmake presents the option “g” for generate. Hit “g” to create makefiles and exit. Run make:</p>
+<pre class="highlight plaintext"><code>    make 
+</code></pre>
+
+<p>This will build the plugin. If passed, there should be a directory</p>
+<pre class="highlight plaintext"><code>   SimVascular-Plugin-MUPFES/build/lib/plugins
+</code></pre>
+
+<p>Add that to the environment variable</p>
+<pre class="highlight plaintext"><code>   SV_PLUGIN_PATH
+</code></pre>
+
+<p>for example</p>
+<pre class="highlight plaintext"><code>   export SV_PLUGIN_PATH=$SV_PLUGIN_PATH:~/SimVascular-Plugin-MUPFES/build/lib/plugins
+</code></pre>
+
+<p>That directory should contain a library file, a “.dylib” on mac. It should follow the naming convention</p>
+<pre class="highlight plaintext"><code>   libNAME.extension 
+</code></pre>
+
+<p>For example,</p>
+<pre class="highlight plaintext"><code>   liborg_sv_gui_qt_mupfes.dylib
+</code></pre>
+
+<p>Strip the “lib” prefix and the file extension, then add it to the variable</p>
+<pre class="highlight plaintext"><code>    SV_CUSTOM_PLUGINS 
+</code></pre>
+
+<p>as in</p>
+<pre class="highlight plaintext"><code>   export SV_CUSTOM_PLUGINS=$SV_CUSTOM_PLUGINS:org_sv_gui_qt_mupfes
+</code></pre>
+
+<p>SimVascular will look for these variables in the current environment, and assuming that everything has passed, load the plugin without any additional information. It is a good idea to use the same compilers for anything you build, which cmake will do be default if also building SimVascular from source. These instructions are generic for SimVascular plugin, and work for plugins other that the svFSI plugin.\</p>
+</section>
+<section id="app_meshmixer" class="group"><p>In this appendix section, we discuss an alternative method for producing a wall mesh using the software Meshmixer. For users with highly complex geometrical models with a large number of bifurcations, this method provides a higher degree of flexibility and robustness, at the cost of a higher number of steps and higher complexity.</p>
+
+<h2>Creating the mesh for ALE simulations using Meshmixer</h2>
+
+<p>To run an FSI simulation we need a mesh for both the structural domain and the fluid domain. These two meshes must have their interficial nodes coincide exactly in order to satisfy the interficial conditions that result from conservation of mass and momentum. The coincident nodes of the fluid mesh are mapped onto the corresponding nodes on the structural mesh and the solution of velocity, displacement, pressure, etc. are treated as equal in the structural and fluid domains.</p>
+
+<p>We will now go through the procedure to create such a mesh step by step.</p>
+
+<ol>
+<li>Create the geometry for the fluid domain</li>
+<li>Create the geometry for the structural domain</li>
+<li>Create the mesh for the structural domain</li>
+<li>Create the mesh for the fluid domain</li>
+</ol>
+
+<p>We will use both SimVascular and Meshmixer, which is a freely available software from https://www.meshmixer.com.
+Meshmixer is a versatile tool that is useful for preparing meshes.
+We will cover a subset of features in Meshmixer that is convenient for preparing meshes for FSI simulations, but more detailed documentation can be found at https://www.mmmanual.com.</p>
+</section>
+<section id="app_fluid_geometry" class="group"><h2>Creating the geometry for the fluid domain</h2>
+
+<p>For most cardiovascular modeling applications, the geometry of the fluid domain is generated by segmenting blood vessels out of medical image data. This process is described on the main SimVascular documentation: TODO: LINK. We now want delete all the caps off the model. Once you have done that, export it by right-clicking the model from the left-hand menu and selecting &ldquo;Export as Solid Model&rdquo;. When SimVascular prompts you for a name and location for the exported model, make sure to add an .stl extension to make sure the exported model is in .stl format. We will perform the next step in Meshmixer, and Meshmixer only takes in .stl format surfaces.</p>
+
+<figure>
+  <img class="svImg svImgLg" src="documentation/svFSI/fsi_tutorial/imgs/SV_Export_as_stl1.png">
+  <figcaption class="svCaption" >Exporting the fluid geometry from SimVascular as an .stl for Meshmixer.</figcaption>
+</figure>
+</section>
+<section id="app_solid_geometry" class="group"><h2>Creating the solid model for the structural domain</h2>
+
+<p>In this step, we will import the fluid geometry into Meshmixer and utilize Meshmixer&rsquo;s &ldquo;Extrude&rdquo; feature to create the wall geometry on top of the fluid. The resulting structural geometry resembles a &ldquo;shell&rdquo; that surrounds the fluid domain. We will also be using many of the geometry altering features within Meshmixer to smooth the structural geometry. Extrusions in Meshmixer often create intersecting elements and rough patches of geometry that are not suitable for meshing. These must be cleaned up in Meshmixer before meshing in SimVascular.</p>
+
+<ol>
+<li>Import the .stl file for the fluid domain into Meshmixer</li>
+</ol>
+
+<p>When you open Meshmixer, you should see a button called &ldquo;Import&rdquo; that appears near the middle of the screen with a plus sign (+). Click this and select the fluid domain .stl that you created in the last step. After importing, you should see your fluid domain model appear in the main window as shown below.</p>
+
+<figure>
+  <img class="svImg svImgLg" src="documentation/svFSI/fsi_tutorial/imgs/opening_meshmixer.png">
+  <figcaption class="svCaption" >Opening Meshmixer and importing a fluid model.</figcaption>
+</figure>
+
+<p>At this point, we are going to want to smooth all bifurcations and sharp angles in the fluid model. If we do not do this, extruding out the elements in these sections will cause the extruded elements to run into each other and intersect, which will cause problems when attempting to mesh. Ideally, we would like to turn all these sharp corners into rounded filets, as if you rolled a ball of clay into the sharp corners.</p>
+
+<p>We will cover three main ways to smooth a model in Meshmixer: sculpting, local remeshing, and local smoothing. These all work well for smoothing a model, and your usage of them will depend on your personal preference and what works best with the models you are working with. We will first cover each of these tools in detail to discuss how to use them, then we will outline a general procedure that uses these tools that can be applied to most bifurcations. But keep in mind that a different combination of these tools might work better for you and your models.</p>
+
+<p>A couple notes to keep in mind before modifying the geometry of your fluid geometry. If you do not like a particular change that you just applied, you can undo it using Cntrl + Z. You can adjust the center of rotation of the camera by hovering your cursor over a part of your model and hitting C. This is useful when working on specific parts of the model, and the camera rotation center is way off. Also be sure to not modify the geometry around the caps as much as possible. The cap geometry must be maintained in order to get a proper wall mesh around them.</p>
+
+<p>a. Sculpting in Meshmixer</p>
+
+<figure>
+  <img class="svImg svImgLg" src="documentation/svFSI/fsi_tutorial/imgs/sculpting_figure.png">
+  <figcaption class="svCaption" >Using the sculpting tool in Meshmixer.</figcaption>
+</figure>
+
+<p>Sculpting is the most dynamic of the smoothing tools we will cover in this tutorial, and provides immediate feedback on the reshaped geometry. It allows users to point at a particular region of their geometry, and remodels it according to the currently selected sculpting brush. This is usually very convenient to do some quick touch ups to a small region that you noticed looks off. To activate the sculpting tool, selecting the &ldquo;Sculpt&rdquo; button from the left-hand menu, which has a chisel icon. You should see the sculpting options menu appear on the left hand side of the screen, which in the left most figure above. At the top you should see a slider that goes between &ldquo;Volume&rdquo; and &ldquo;Surface&rdquo;, which you should switch to &ldquo;Surface&rdquo; for this tutorial. After selecting &ldquo;Surface&rdquo; and moving your cursor over your geometry, you should notice a circle appear where your cursor is, and the circle should hug the surface of your geometry. If you left-click, the sculpting tool will remodel your geometry inside the circle according to your selected brush and parameters.</p>
+
+<p>Below that is a button for  &ldquo;Brushes&rdquo;, which allows you to select the sculpting shape that you would like to apply. You are of course free to experiment with the other brushes, but we have found the &ldquo;BubbleSmooth&rdquo; brush to work the best for smoothing sharp junctions in cardiovascular models. Below in the Properties window, you should see sliders for &ldquo;Strength&rdquo; and &ldquo;Size&rdquo;, two important parameters. Strength will determine how aggressively the sculpting tool will remodel your geometry, with higher numbers meaning more aggressive. When using the tool for the first time, we recommend using a low value of Strength, like 10, to see how it works. The Size parameter sets the radius of the sculpting circle. For smoothing the area between bifurcations, we recommend setting the Size such that the diameter of the sculpting circule is roughly the size of the space of the bifurcation.</p>
+
+<p>b. Local remeshing in Meshmixer</p>
+
+<figure>
+  <img class="svImg svImgLg" src="documentation/svFSI/fsi_tutorial/imgs/using_remeshing.png">
+  <figcaption class="svCaption" >Using the remeshing tool in Meshmixer.</figcaption>
+</figure>
+
+<p>Local remeshing will reconfigure the triangle elements in a given region such that the triangles are all have roughly equal size, shape, and aspect ratio.These triangles will generally be higher quality than the initial discretization that comes out of SimVascular, especially at the bifurcations.To remesh a region, we first have to &ldquo;Select&rdquo; it. Click on the &ldquo;Select&rdquo; button from the left hand menu, which should change your cursor into a selection tool that you can left-click on your model to start selecting regions. Before we do, it is useful to change the select type and size to be convenient for your model. The &ldquo;Sphere Brush&rdquo; will allow you to select all the cells inside a sphere, while the &ldquo;Unwrap Brush&rdquo; will select cells in a flat circule that hugs your surface. The &ldquo;Size&rdquo; parameter changes the size of the sphere or unwrap brush and should be set to a value that is convenient for the region you are remeshing. Once you have selected a brush and size, left-click on the regions in your model you want to remesh, like all the elements around a bifurcation, for example. After all the elements have been selected, hit R on your keyboard to initiate remeshing.Alternatively, you can click the &ldquo;Remesh&rdquo; button that appears from the &ldquo;Edit&hellip;&rdquo; menu after you have selected a region.</p>
+
+<p>For larger sized regions, it might a few seconds to a few minutes to remesh. After the initial remeshing is complete, the remeshing properties menu should appear on the left hand side of the screen that will allow you to select various properties. Two convenient properties to set are the remeshing type, and the density/edge size. The first drop down menu in the remeshing properties menu allows you to select the remeshing type, of which &ldquo;Adaptive Density&rdquo; and &ldquo;Target Edge Length&rdquo; are common selections. Setting the mode to &ldquo;Adaptive Density&rdquo; will cause the remeshing edge size to be selected adaptively based on local geometrical features. The amount of elements triangles packed into the remeshing can be adjusted by adjusting the &ldquo;Density&rdquo; slider, which higher densities resulting in a higher number of elements. More elements typically results in a more faithful representation of your geometry, at an added cost of requiring more memory. Setting the mode to &ldquo;Target Edge Length&rdquo; will allow users to adjust the number of elements based on the maximum Edge Length slider. Smaller edge lengths will result in more elements.</p>
+
+<p>Once you get a remesh you are satisfied with, click the &ldquo;Accept&rdquo; button at the bottom of the remeshing properties. This will commit your remesh to the model and take you back to the selection tool with your current region still selected.</p>
+
+<p>c. Local Smoothing in Meshmixer</p>
+
+<figure>
+  <img class="svImg svImgLg" src="documentation/svFSI/fsi_tutorial/imgs/using_smoothing.png">
+  <figcaption class="svCaption" >Using the smoothing tool in Meshmixer.</figcaption>
+</figure>
+
+<p>Local smoothing will attempt to smooth over any rough bumps or sharp corners automatically. This is usually useful to perform after remeshing a region to make sure the resulting remesh is smooth. Smoothing is achieved via the &ldquo;Select&rdquo; tool, just like remeshing. After selecting the region, press Ctrl + F to smooth the region. Alternatively, you can click &ldquo;Deform&hellip;&rdquo; then &ldquo;Smooth&rdquo; from the Select menu.</p>
+
+<p>After the initial smoothing is complete, the smoothing properties menu will appear. Most of the time, the default settings for the smooth will provide adequate smoothing, though you are of course free to experiment and explore.</p>
+
+<ol>
+<li>Extrude the fluid domain</li>
+</ol>
+
+<p>After the fluid domain surface has been sufficiently smoothed at all sharp corners and bifurcations, we are now ready to extrude out the wall surface.</p>
+
+<p>a. Select all (e.g. by choosing select and then hit Ctrl+a / Cmd+a)
+   b. Choose Edit &gt; Extrude</p>
+
+<p><figure>
+      <img class="svImg svImgLg" src="documentation/svFSI/fsi_tutorial/imgs/MM_fig_Extrude1.png">
+   </figure></p>
+
+<p>c. Choose your offset and the offset direction &ldquo;normal&rdquo;. This will extrude the wall in normal direction by your given offset. The offset will correspond to the thickness of the vessel wall. Typically, the thickness of the vessel wall is determined by the size of the vessels you are modeling. This information can often be found in the literature, but in the absense of such data, setting the thickness to 10\% of the mean vessel diameter is a reasonable first approximation. If you prefer to have a variable thickness along the vessel, simply restrict your selection to the region you want to extrude by a given thickness. If you like the offset, hit &ldquo;Accept&rdquo;.</p>
+
+<p><figure>
+      <img class="svImg svImgLg" src="documentation/svFSI/fsi_tutorial/imgs/MM_fig_Extrude2.png">
+   </figure></p>
+
+<p>d. If you do a plane cut of your model now it should look something like this:</p>
+
+<p><figure>
+      <img class="svImg svImgLg" src="documentation/svFSI/fsi_tutorial/imgs/MM_fig_Extrude_Planecut1.png">
+   </figure></p>
+
+<p>In green you can see the surface of the fluid, and in purple the extruded surface.</p>
+
+<ol>
+<li>Clean up the extruded surface</li>
+</ol>
+
+<p>Even though we cleaned up the surface prior to extrusion, the extrusion will undoubtedly produce more intersecting, small, and poor quality elements. Use the sculpting, remeshing, and smoothing tools like we did earlier to clean up the model at the sharp corners and bifurcations again. One note when using the remeshing and smoothing tools: since there will be an interior fluid mesh along with the exterior surface mesh, it is important to select both when using the &ldquo;Select&rdquo; tool. In this scenario, it is often best to use the &ldquo;Sphere Brush&rdquo; when using the &ldquo;Select&rdquo; tool to get all the interior elements as well.</p>
+
+<p>We will now outline a general recipe for extruding a fluid geometry to produce a structural geometry using the tools we just described. This is not the only way to do this, and if your geometry contains many complex features you will probably have to iterate several times to get an adequate structural geometry that can be used for FSI simulations.</p>
+
+<ul>
+<li>After loading in the .stl for the fluid geometry, smooth the geometry at all the bifurcations by:
+
+<ul>
+<li>Use the &ldquo;Sphere Brush&rdquo; in the Select tool with a large enough size to select the entire region around a bifurcation.</li>
+<li>Press &ldquo;R&rdquo; to remesh the region, select an appropriate edge size that captures the geometry well, then Accept.</li>
+<li>While the region is still selected, Smooth it using Ctrl + F.</li>
+<li>Use the &ldquo;Sculpt&rdquo; tool to further clean up the bifurcation to make it as smooth as possible.</li>
+<li>Repeat for all other bifurcations.</li>
+</ul></li>
+<li>Extrude your model. Press Ctrl + A and extrude to use a uniform thickness or select individual parts of your model and extrude seperately for variable thickness.</li>
+<li>Smooth the post-extruded bifurcations using the same procedure as before.
+
+<ul>
+<li>Use the &ldquo;Sphere Brush&rdquo; in the Select tool with a large enough size to select the entire region around a bifurcation.</li>
+<li>Press &ldquo;R&rdquo; to remesh the region, select an appropriate edge size that captures the geometry well, then Accept.</li>
+<li>While the region is still selected, Smooth it using Ctrl + F.</li>
+<li>Use the &ldquo;Sculpt&rdquo; tool to further clean up the bifurcation to make it as smooth as possible.</li>
+<li>Repeat for all other bifurcations.</li>
+</ul></li>
+</ul>
+
+<p>Below is an example of how a bifurcation looks before and after applying the above smoothing procedure. This example did not require much manual sculpting. But some bifurcations that produce sharp corners might require additional sculpting to ensure a smooth surface.</p>
+
+<figure>
+  <img class="svImg svImgLg" src="documentation/svFSI/fsi_tutorial/imgs/model_treatment_process.png">
+  <figcaption class="svCaption" >Smoothing bifurcations.</figcaption>
+</figure>
+
+<p>The solid model for the structural domain is finished. Export it as an stl file.</p>
+
+<figure>
+  <img class="svImg svImgLg" src="documentation/svFSI/fsi_tutorial/imgs/SV_Export_as_stl1.png">
+</figure>
+</section>
+<section id="app_solid_mesh" class="group"><h2>Create the solid domain mesh</h2>
+
+<p>Similar to the way we create the mesh for the fluid domain in SimVascular (see: http://simvascular.github.io/docsMeshing.html) we can now create the mesh for the solid domain.</p>
+
+<ol>
+<li>Import the .stl of the structural domain geometry into SimVascular</li>
+</ol>
+
+<p>Right-click on the &ldquo;Models&rdquo; button and choose &ldquo;Import solid Model&rdquo;, then select the .stl model you just exported from Meshmixer:</p>
+
+<figure>
+  <img class="svImg svImgLg" src="documentation/svFSI/fsi_tutorial/imgs/importing_solid_into_SV.png">
+  <figcaption class="svCaption" >Importing .stl model into SimVascular.</figcaption>
+</figure>
+
+<ol>
+<li>Extract faces, rename them if wanted</li>
+</ol>
+
+<p>Extracting faces allows users to reference specific parts of the exterior of the model for applying boundary conditions. It is important to have separate faces that represent each of the inlet and outlet faces, the inner wall, and the outer wall.</p>
+
+<p>To extract faces from your .stl, double-click on your newly imported model in the “Models” section of the left-hand menu to bring up the SV Modeling window. Then, click “Face Ops” and “Extract”. This should reveal a dialogue box asking for a “Sep. Angle”, which is a parameter that determines how aggressively to search for faces. SimVascular will check the direction of the outward facing normals in each element of the surface, and if it finds the difference in the angle between two normals to be greater than the threshold, it will assign them different faces. We recommend a value of 70 for the Sep. Angle. After extracting faces, you should see a list of “noname” faces appear on the “Face List”. Ideally, you should have a face for each of the inlets and outlets and the inner wall and outer wall, for a total of (number of inlets and outlet) + 2. If you click a noname face from the list, it will highlight in yellow on your 3D model, and the surface area of the face will be displayed in the bottom left corner of the SimVascular Window.</p>
+
+<p>Now is a good time to click each face on the list so you can confirm its location on the model, then rename it appropriately for your convenience. An example naming convention could be to call the inner wall “wall_inner”, the outer wall “wall_outer”, and all of the inlets and outlets as “perimeter_X”, where X is the name of the particular vessel.</p>
+
+<p>This step can be difficult as Meshmixer often produces poor quality triangles that do not extract correctly in SimVascular. You will sometimes see many more faces in the Face List than you expected. If some or all faces are not correctly detected (number of faces is not correct or not correctly distinguished between faces) you can try to use a different separation angle and/or use the merge tool in SimVascular, or improve the affected areas in meshmixer, e.g. by smoothing, sculpting or remeshing them.</p>
+
+<p>This situation most likely happens due to poor quality triangles being produced on the wall surfaces from either the extrusion or remeshing. This can be addressed with the surface treatment tools within SimVascular. Use Ctrl + click to select all the surfaces in your structural model EXCEPT for the perimeter surfaces that surround your caps. Then, under the &ldquo;Face Ops&rdquo; tab, click the &ldquo;Combine&rdquo; button to combine all of these faces into one. This will allow us to apply surface treatment on all of the walls and poor triangles. We now follow the usual procedure for smoothing surfaces. Now, click &ldquo;Local Ops&rdquo;, then &ldquo;Decimation&rdquo;, then click &ldquo;Decimate Local&rdquo; to decimate some triangles on that surface. Thenm click &ldquo;Cstr. Smooth&rdquo;, then &ldquo;Smooth Local&rdquo; to smooth the wall surfaces. This will hopefully eliminate all of the poor quality triangles. We now need to re-extract the inner and outer wall surfaces into separate faces. Go back to &ldquo;Face Ops&rdquo; then &ldquo;Extract&rdquo;. Select an extraction angle (70 degrees is usually good) and click &ldquo;Extract Faces&rdquo;. Hopefully now when you do this, you should see a much smaller list of faces. If the number of faces equals the number of inlets and outlets + 2, then you are in great shape.</p>
+
+<p>You will want separate faces for each of the inlets and outlet perimeters, as well as a separate face for the inner wall and a separate face for the outer wall. This is so that we can apply boundary conditions on all of these faces. Clicking on each face in your Face List should highlight their locations in your structural model in yellow. Do this for each face to confirm their location and to confirm that all faces are accounted for.</p>
+
+<figure>
+  <img class="svImg svImgLg" src="documentation/svFSI/fsi_tutorial/imgs/extracting_faces.png">
+  <figcaption class="svCaption" >Extracting faces in SimVascular.</figcaption>
+</figure>
+
+<ol>
+<li>Create the structural mesh</li>
+</ol>
+
+<p>Right-click on “Meshes” in the Data Manager Window and select “Create mesh”, then choose the structural domain model. If you double click on the newly created mesh item, the “mesh interactor” should open up. If the surface mesh of your structural model from Meshmixer was of a good spatial resolution, and quality, you may want to toggle off the option “Surface remeshing” (this will also speed up the meshing step, especially for larger models).</p>
+
+<figure>
+  <img class="svImg svImgLg" src="documentation/svFSI/fsi_tutorial/imgs/creating_structural_mesh.png">
+  <figcaption class="svCaption" >Creating volumetric solid mesh.</figcaption>
+</figure>
+
+<ol>
+<li>Run the mesher</li>
+</ol>
+
+<p>This will create your solid domain mesh. Export the mesh by selecting “Export Mesh-Complete”. This will save a folder in the location of your choice that has all the mesh information. Inside this folder you will find a file called “mesh-complete.mesh.vtu” that contain the full volumetric mesh information of your model. You should also notice a folder called “mesh-surfaces” that has separate .vtp files for each of the extracted faces. Both the mesh-complete.mesh.vtu and all the .vtp mesh-surfaces are viewable in the free software Paraview.</p>
+</section>
+<section id="app_fluid_mesh" class="group"><h2>Create the fluid domain mesh</h2>
+
+<p>When making the mesh for the fluid domain, we need to ensure that the nodes at the interface between the structural and fluid domains coincide. We will thus use the surface mesh of the inner wall of the solid domain that we just created in the previous step. You will find it in the exported mesh in the subdirectory “mesh-surfaces” of your exported solid mesh. If you used the suggested naming convention from the previous step, this inner wall will be named “wall_inner”.</p>
+
+<ol>
+<li><p>Import the interfacial mesh of the solid domain by right-clicking &ldquo;Models&rdquo; in the SV Data Manager, then click &ldquo;Import Solid Model&rdquo;. Select the surface representing the interface between the structural and fluid domains (i.e. the &ldquo;inner wall&rdquo; of your structural domain mesh). Rename it as you wish.</p></li>
+<li><p>Extract the face of the solid domain interface. You should get a single face which shows the entire wall. Rename it to something convenient like “wall_lumen”.</p></li>
+<li><p>Fill holes with ID&rsquo;s.</p></li>
+</ol>
+
+<p>We now need to fill the inlet and outlet holes and name them so we can apply boundary conditions. Under the “SV Modeling” window, click the “Face Ops” button, then click the newly revealed “Fill Holes w. IDs”. This should place “noname” faces at each inlet and outlet of your fluid domain. Rename them to something convenient to remember, such as by the name of the vessel they are representing.</p>
+
+<ol>
+<li>Remesh the inlets and outlets</li>
+</ol>
+
+<p>Filling the inlet and outlet holes produced geometry on those surfaces, but it does not have a mesh appropriate for computational modeling. We thus need to remesh them. Make sure you are under the “Face Ops” tab by clicking “Face Ops” on the right side of the screen. Clicking the blue “Remesh” button should reveal the Remeshing dialogue, which asks you to select an appropriate size of the elements. The element size you select should reflect the kind of accuracy and cost you would like to use in the FSI simulation. A good starting point is to use the same size that you used for the structural domain solid mesh, though they do not have to be equal. Remesh each of the inlet and outlet faces but DO NOT remesh the wall interface. This will ensure that the nodes still coincide with the structural domain nodes after this remeshing.</p>
+
+<figure>
+  <img class="svImg svImgLg" src="documentation/svFSI/fsi_tutorial/imgs/remesh_caps.png">
+  <figcaption class="svCaption" >Remeshing inlet and outlets of fluid domain.</figcaption>
+</figure>
+
+<ol>
+<li>Create the fluid domain mesh.</li>
+</ol>
+
+<p>In the SimVascular DataManager right0click “Meshes” and create a new mesh from the fluid model. This time you HAVE to toggle off the option “Surface mesh”. This is important, because it will keep the surface nodes exactly where they are. This way the nodes on the fluid interface will coincide with the nodes on structural interface. Choose your refinement to be consistent with the size of the elements you chose for the wall and caps, then run the mesher. Once it finishes, right-click your fluid mesh and click &ldquo;Export Mesh-Complete&rdquo;. You are done!</p>
+
+<figure>
+  <img class="svImg svImgLg" src="documentation/svFSI/fsi_tutorial/imgs/meshing_final_pic.png">
+  <figcaption class="svCaption" >Creating fluid domain mesh.</figcaption>
+</figure>
+</section>
+<section id="app_restart_after_remesh" class="group"><h2>Restarting a simulation after re-meshing</h2>
+
+<p>If a simulation is to be restarted after re-meshing has occurred, the new mesh must be added to the input file. SVFSI will create a directory called n-procs, where n is the number of MPI tasks for the simulation, and we will refer to this as the run directory.</p>
+
+<ol>
+<li><p>In the run directory, find the stFile_n.bin. Make a symbolic link:</p>
+<pre class="highlight plaintext"><code>    ln -s stFile_n.bin stFile_last.bin
+</code></pre>
+
+<p>Note that if the previous job completed smoothly, this file may
+already exist and no link is required to be made.</p></li>
+<li><p>If remeshing has occurred, the run directory will contain a hidden
+directory called “.remesh_tmp.dir”, which contains new mesh files
+that should be named according according to their initial name and
+the timestep of the last remesh. For example, lumen_21.vtu.</p></li>
+<li><p>Change the input.mfs file to set a restarted simulation and for the
+new mesh names.</p>
+
+<ol>
+<li> Set Continue previous simulation: 1</li>
+<li> All new paths and names for mesh files should be updated,
+including paths. For example, change
+to 120-procs/.remesh_tmp.dir/lumen_21.vtu.</li>
+<li> Set Check IEN order: F.</li>
+<li> Update the final time if desired.</li>
+</ol></li>
+<li><p>Run the simulation again.</p></li>
+</ol>
+</section>
+<section id="app_prescribed_wall_motion" class="group"><h2>Simulations with prescribed wall motion</h2>
+
+<p>In this section, we discuss how to set up a simulation with prescribed wall motion. For example, one may wish to extract the motion of the walls of the ventricle from scans, then reconstruct the flow fields by solving the Navier Stokes equations. This is accomplished by computing a displacement field for the prescribed motion of the mesh. This is typically done for a small subset of the total times, and displacements between the specified times are prescribed by using a piecewise linear interpolant.</p>
+
+<p>For the wall motion file, the file format is as follows. First, specify the dimension of the problem (three), the number of times at which to specify the displacements, and the number of vertices in the moving wall mesh. Then specify the times at which the displacements occur. Next, for each vertex, specify its index and then the prescribed displacements for each time. Note that in the case of multiple moving faces, these numbers may not start at one for any given face, as indexing is global. If a vertex is on an edge between two faces, it should have the same index and displacement fields, specified redundantly in both files.</p>
+<pre class="highlight plaintext"><code>    Dimension n_times m_vertices
+    t_1
+    t_2
+    ...
+    t_n
+    vertex_1_index
+    displacement_1_vertex_1
+    displacement_2_vertex_1
+    ...
+    displacement_n_vertex_1
+    vertex_2_index 
+    displacement_1_vertex_2
+    displacement_2_vertex_2
+    ...
+    displacement_n_vertex_2
+    ... 
+</code></pre>
+
+<p>For example,</p>
+<pre class="highlight plaintext"><code>    3   21   14907
+    0.000000
+    3.800E-2
+    7.600E-2
+    1.140E-1
+    1.520E-1
+    1.900E-1
+    2.280E-1
+    2.660E-1
+    3.040E-1
+    3.419E-1
+    3.800E-1
+    4.180E-1
+    4.560E-1
+    4.940E-1
+    5.320E-1
+    5.699E-1
+    6.080E-1
+    6.460E-1
+    6.839E-1
+    7.220E-1
+    7.600E-1
+    1
+    0.000000   0.000000   0.000000   
+    2.800E-1   -8.99E-2   -1.00E-2   
+    8.799E-1   -2.09E-1   -8.10E-1   
+    1.339999   -1.59E-1   -1.43000   
+    1.509999   7.000E-2   -1.59000   
+    1.310000   3.100E-1   -1.52000   
+    1.069999   5.100E-1   -1.41000   
+    1.009999   6.000E-1   -1.28000   
+    9.699E-1   3.600E-1   -1.10000   
+    1.049999   -1.09E-1   -8.80E-1   
+    1.169999   -6.69E-1   -7.60E-1   
+    1.169999   -1.17999   -7.90E-1   
+    1.129999   -1.31999   -9.69E-1   
+    1.049999   -1.25999   -1.34000   
+    1.000000   -9.39E-1   -1.64000   
+    9.899E-1   -4.29E-1   -1.96000   
+    1.000000   3.000E-2   -2.15000   
+    9.299E-1   3.600E-1   -1.90000   
+    6.599E-1   4.200E-1   -1.14000   
+    1.999E-1   1.500E-1   -3.50E-1   
+    0.000000   0.000000   0.000000   
+    2
+    0.000000   0.000000   0.000000   
+    2.700E-1   -8.99E-2   0.000000   
+    8.500E-1   -1.99E-1   -6.80E-1   
+    1.280000   -1.59E-1   -1.16999   
+    1.430000   5.000E-2   -1.28000   
+    1.230000   2.599E-1   -1.19999   
+    1.010000   4.499E-1   -1.09000   
+    9.500E-1   5.099E-1   -9.69E-1   
+    9.100E-1   2.400E-1   -8.19E-1   
+    1.000000   -2.59E-1   -6.70E-1   
+    1.120000   -8.29E-1   -5.69E-1   
+    1.130000   -1.31999   -5.89E-1   
+    1.090000   -1.44999   -7.50E-1   
+    1.000000   -1.36000   -1.06999   
+    9.400E-1   -1.00999   -1.31000   
+    9.300E-1   -4.69E-1   -1.56999   
+    9.500E-1   0.000000   -1.72999   
+    8.900E-1   3.299E-1   -1.53999   
+    6.200E-1   3.999E-1   -9.39E-1   
+    1.900E-1   1.399E-1   -2.90E-1   
+    0.000000   0.000000   0.000000  
+    ... 
+</code></pre>
+
+<p>Note that in this example, we wish the mesh motion to be periodic in time, and thus the final displacement is zero.</p>
+
+<p>To set up the input file, set the equation to be FSI, even though there is not necessarily a structure, to use the ALE meshes rather than static meshes. For the moving wall, add the motion file when specifying the wall boundary condition, and turn on the option “Impose on state variable integral.”</p>
+<pre class="highlight plaintext"><code>    Add BC: moving_wall {
+      Type: Dirichlet 
+      Time dependence: General
+      Temporal and spatial values file path: wall_motion.dat
+      Profile: Flat
+      Zero out perimeter: 1
+      Impose flux: 0
+      #---------------- Add this line to the moving boundary face -----------
+      Impose on state variable integral: 1
+    }
+</code></pre>
+
+<p>It is recommended to include remeshing if the wall motion is such that the domain undergoes large changes. For example, set</p>
+<pre class="highlight plaintext"><code>    Remesher: Tetgen {
+      Max edge size: lumen { val: 3.0 }
+      Min dihedral angle: 10.0
+      Max radius ratio: 1.1
+      Remesh frequency: 100
+      Frequency for copying data: 1  
+    }
+</code></pre>
+
+<p>The max edge size should be consistent with the original mesh size.</p>
+
+<p>Under the mesh equation, we similarly add the motion file.</p>
+<pre class="highlight plaintext"><code>    Add equation: mesh {
+       Coupled: 1
+       Min iterations: 1
+       Max iterations: 8
+       Tolerance: 1e-3
+       Residual dB reduction: -20
+       Poisson ratio: 0
+       Output: Spatial {
+          Displacement: t
+       }
+
+       #---------- Add the BC for the moving_wall to the mesh equation as well ------
+       Add BC: moving_wall {
+          Type: Dirichlet 
+          Time dependence: General
+          Temporal and spatial values file path: wall_motion.dat
+          Profile: Flat
+          Zero out perimeter: 1
+          Impose flux: 0
+          #---------------- Add this line to the moving boundary face -----------
+          Impose on state variable integral: 1
+       }
+</code></pre>
+</section>
+</div>
+
+
+
+    </div>
+</div>
+
+
+    <!-- /.container -->
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container-fluid text-center">
+          <ul class="nav navbar-nav">
+            <li><a>Copyright &copy; SimVascular Development Team - 2017</a></li>                
+          </ul>
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    
+    <script src="js/jquery-1.11.0.js" type="text/javascript"></script><script src="js/bootstrap.min.js" type="text/javascript"></script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+      });
+      $('body').scrollspy({
+        target: '.bs-docs-sidebar',
+        offset: 40
+      });
+    </script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-55333921-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <script type="text/javascript"
+      src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+</body>
+
+</html>
