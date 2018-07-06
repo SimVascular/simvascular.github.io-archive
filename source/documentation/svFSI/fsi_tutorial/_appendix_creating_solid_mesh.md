@@ -7,7 +7,7 @@ Similar to the way we create the mesh for the fluid domain in SimVascular (see: 
 Right-click on the "Models" button and choose "Import solid Model", then select the .stl model you just exported from Meshmixer:
 
 <figure>
-  <img class="svImg svImgLg" src="documentation/svFSI/fsi_tutorial/imgs/importing_solid_into_SV.png">
+  <img class="svImg svImgMd" src="documentation/svFSI/fsi_tutorial/imgs/importing_solid_into_SV.png">
   <figcaption class="svCaption" >Importing .stl model into SimVascular.</figcaption>
 </figure>
 

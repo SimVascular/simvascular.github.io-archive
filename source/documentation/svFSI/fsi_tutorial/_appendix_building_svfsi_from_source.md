@@ -4,7 +4,7 @@ In this appendix section, we discuss how to build svFSI from source.
 
 The source code for svFSI includes a build system in cmake. To build from source, one needs compilers for c,c++, fortran, an MPI compiler and runtime, and the lapack and blas libraries. LAPACK and BLAS must be installed in a standard location, which cmake will find automatically. For example, on OSX to install using the package manager brew (see <span>https://brew.sh/</span>) one might run
 
-        brew install gfortran openmpi lapack 
+        brew install gfortran openmpi lapack
 
 or, on ubuntu, to install using apt-get run
 
@@ -22,15 +22,15 @@ to a directory of your choosing. Make sure you are on the branch svFSI to includ
 
 Make a build directory and go there.
 
-        mkdir svSolver\_build && cd svSolver\_build 
+        mkdir svSolver\_build && cd svSolver\_build
 
 Initiate the cmake terminal interface to generate makefiles.
 
-        ccmake ../svSolver 
+        ccmake ../svSolver
 
 This will automatically search for compilers. Follow instructions if necessary. Push “c” for configure repeatedly until cmake presents the option “g” for generate. Hit “g” to create makefiles and exit. Run make:
 
-        make 
+        make
 
 This will place the solver in a directory called svSolver-build/svFSI.
 
@@ -52,15 +52,15 @@ to a directory of your choosing. (Note that this repo is currently private) The 
 
 Make a build directory and go there.
 
-        mkdir build && cd build 
+        mkdir build && cd build
 
 Initiate the cmake terminal interface to generate makefiles.
 
-        ccmake .. 
+        ccmake ..
 
 This will automatically search for compilers. Follow instructions if necessary. Push “c” for configure repeatedly until cmake presents the option “g” for generate. Hit “g” to create makefiles and exit. Run make:
 
-        make 
+        make
 
 This will build the plugin. If passed, there should be a directory
 
@@ -76,7 +76,7 @@ for example
 
 That directory should contain a library file, a “.dylib” on mac. It should follow the naming convention
 
-       libNAME.extension 
+       libNAME.extension
 
 For example,
 
@@ -84,7 +84,7 @@ For example,
 
 Strip the “lib” prefix and the file extension, then add it to the variable
 
-        SV_CUSTOM_PLUGINS 
+        SV_CUSTOM_PLUGINS
 
 as in
 
