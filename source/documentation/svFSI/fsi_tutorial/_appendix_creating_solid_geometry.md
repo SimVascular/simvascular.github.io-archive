@@ -15,7 +15,7 @@ At this point, we are going to want to smooth all bifurcations and sharp angles 
 
 We will cover three main ways to smooth a model in Meshmixer: sculpting, local remeshing, and local smoothing. These all work well for smoothing a model, and your usage of them will depend on your personal preference and what works best with the models you are working with. We will first cover each of these tools in detail to discuss how to use them, then we will outline a general procedure that uses these tools that can be applied to most bifurcations. But keep in mind that a different combination of these tools might work better for you and your models.
 
-A couple notes to keep in mind before modifying the geometry of your fluid geometry. If you do not like a particular change that you just applied, you can undo it using Cntrl + Z. You can adjust the center of rotation of the camera by hovering your cursor over a part of your model and hitting C. This is useful when working on specific parts of the model, and the camera rotation center is way off. Also be sure to not modify the geometry around the caps as much as possible. The cap geometry must be maintained in order to get a proper wall mesh around them.
+A couple notes to keep in mind before modifying the geometry of your fluid geometry. If you do not like a particular change that you just applied, you can undo it using Ctrl + Z. You can adjust the center of rotation of the camera by hovering your cursor over a part of your model and hitting C. This is useful when working on specific parts of the model, and the camera rotation center is way off. Also be sure to not modify the geometry around the caps as much as possible. The cap geometry must be maintained in order to get a proper wall mesh around them.
 
 a. Sculpting in Meshmixer
 
@@ -35,7 +35,7 @@ b. Local remeshing in Meshmixer
   <figcaption class="svCaption" >Using the remeshing tool in Meshmixer.</figcaption>
 </figure>
 
-Local remeshing will reconfigure the triangle elements in a given region such that the triangles are all have roughly equal size, shape, and aspect ratio.These triangles will generally be higher quality than the initial discretization that comes out of SimVascular, especially at the bifurcations.To remesh a region, we first have to "Select" it. Click on the "Select" button from the left hand menu, which should change your cursor into a selection tool that you can left-click on your model to start selecting regions. Before we do, it is useful to change the select type and size to be convenient for your model. The "Sphere Brush" will allow you to select all the cells inside a sphere, while the "Unwrap Brush" will select cells in a flat circule that hugs your surface. The "Size" parameter changes the size of the sphere or unwrap brush and should be set to a value that is convenient for the region you are remeshing. Once you have selected a brush and size, left-click on the regions in your model you want to remesh, like all the elements around a bifurcation, for example. After all the elements have been selected, hit R on your keyboard to initiate remeshing.Alternatively, you can click the "Remesh" button that appears from the "Edit..." menu after you have selected a region.
+Local remeshing will reconfigure the triangle elements in a given region such that the triangles are all have roughly equal size, shape, and aspect ratio.These triangles will generally be higher quality than the initial discretization that comes out of SimVascular, especially at the bifurcations.To remesh a region, we first have to "Select" it. Click on the "Select" button from the left hand menu, which should change your cursor into a selection tool that you can left-click on your model to start selecting regions. Before we do, it is useful to change the select type and size to be convenient for your model. The "Sphere Brush" will allow you to select all the cells inside a sphere, while the "Unwrap Brush" will select cells in a flat circule that hugs your surface. The "Size" parameter changes the size of the sphere or unwrap brush and should be set to a value that is convenient for the region you are remeshing. Once you have selected a brush and size, left-click on the regions in your model you want to remesh, like all the elements around a bifurcation, for example. After all the elements have been selected, hit R on your keyboard to initiate remeshing. Alternatively, you can click the "Remesh" button that appears from the "Edit..." menu after you have selected a region.
 
 For larger sized regions, it might a few seconds to a few minutes to remesh. After the initial remeshing is complete, the remeshing properties menu should appear on the left hand side of the screen that will allow you to select various properties. Two convenient properties to set are the remeshing type, and the density/edge size. The first drop down menu in the remeshing properties menu allows you to select the remeshing type, of which "Adaptive Density" and "Target Edge Length" are common selections. Setting the mode to "Adaptive Density" will cause the remeshing edge size to be selected adaptively based on local geometrical features. The amount of elements triangles packed into the remeshing can be adjusted by adjusting the "Density" slider, which higher densities resulting in a higher number of elements. More elements typically results in a more faithful representation of your geometry, at an added cost of requiring more memory. Setting the mode to "Target Edge Length" will allow users to adjust the number of elements based on the maximum Edge Length slider. Smaller edge lengths will result in more elements.
 
@@ -44,7 +44,7 @@ Once you get a remesh you are satisfied with, click the ``Accept'' button at the
 c. Local Smoothing in Meshmixer
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/svFSI/fsi_tutorial/imgs/using_smoothing.png">
+  <img class="svImg svImgLg" src="documentation/svFSI/fsi_tutorial/imgs/using_smoothing.png">
   <figcaption class="svCaption" >Using the smoothing tool in Meshmixer.</figcaption>
 </figure>
 
@@ -100,12 +100,12 @@ We will now outline a general recipe for extruding a fluid geometry to produce a
 Below is an example of how a bifurcation looks before and after applying the above smoothing procedure. This example did not require much manual sculpting. But some bifurcations that produce sharp corners might require additional sculpting to ensure a smooth surface.
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/svFSI/fsi_tutorial/imgs/model_treatment_process.png">
+  <img class="svImg svImgLg" src="documentation/svFSI/fsi_tutorial/imgs/model_treatment_process.png">
   <figcaption class="svCaption" >Smoothing bifurcations.</figcaption>
 </figure>
 
 The solid model for the structural domain is finished. Export it as an stl file.
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/svFSI/fsi_tutorial/imgs/SV_Export_as_stl1.png">
+  <img class="svImg svImgSm" src="documentation/svFSI/fsi_tutorial/imgs/SV_Export_as_stl1.png">
 </figure>

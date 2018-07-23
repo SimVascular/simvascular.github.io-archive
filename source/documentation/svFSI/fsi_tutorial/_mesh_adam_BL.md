@@ -9,7 +9,7 @@ The usual case for boundary layer meshing involves extruding this thin layer of 
 Before we use the boundary layer meshing to extrude outwards, it is extremely important that we thoroughly smooth our model. The outward extrusion of elements has the potential to cause some elements to extrude into each other and overlap, which will cause the extrusion to fail. This is especially true at bifurcations, where the extruded elements from the two daughter branches could easily run into each other near the junction if not properly smoothed. We will therefore make thorough use of the local smoothing tools in the Models module before meshing. Below is an example of a bifurcation that would normally occur after lofting segmentations together without smoothing. If we try to extrude a boundary layer mesh from this, the elements at the sharp corner will intersect with each other and cause it to fail.
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/svFSI/fsi_tutorial/imgs/sharp_bifurcation.png">
+  <img class="svImg svImgSm" src="documentation/svFSI/fsi_tutorial/imgs/sharp_bifurcation.png">
   <figcaption class="svCaption" >Sharp bifurcation that will cause problems with wall mesh extrusion.</figcaption>
 </figure>
 
@@ -25,21 +25,21 @@ Now that we have remeshed our entire outer surface, we can start to smooth the w
 Before starting, check to confirm that all of the wall surfaces are selected in the Face List and none of the caps are selected. Now click the "Decimation" to open the Decimation menu, then click "Decimate Local" to decimate using the default settings.
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/svFSI/fsi_tutorial/imgs/deimation_pic.png">
+  <img class="svImg svImgSm" src="documentation/svFSI/fsi_tutorial/imgs/deimation_pic.png">
   <figcaption class="svCaption" >Local decimation.</figcaption>
 </figure>
 
 Now, click "Cstr. Local" to open up the constrained smoothing menu, then click "Smooth Local" to perform smoothing with the default settings. You should notice your model is a little smoother at the junctions.
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/svFSI/fsi_tutorial/imgs/constrained_smooth_pic.png">
+  <img class="svImg svImgSm" src="documentation/svFSI/fsi_tutorial/imgs/constrained_smooth_pic.png">
   <figcaption class="svCaption" >Local constrained smoothing.</figcaption>
 </figure>
 
 Repeat this cycle of Decimation and Constrained Smoothing several times to achieve a smoothed model. We recommend at least 10 repetitions of decimation and constrained smoothing. Repeated use of the Decimation feature will sometimes cause the surface of your model to lose so many triangles that the surface loses many of its key geometrical features. It is thus recommended to do a global remeshing every 5 decimations to ensure adequate surface accuracy. Once you are done smoothing, your bifurcations should be sufficiently smoothed and look something like this.
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/svFSI/fsi_tutorial/imgs/smooth_bifurcation.png">
+  <img class="svImg svImgSm" src="documentation/svFSI/fsi_tutorial/imgs/smooth_bifurcation.png">
   <figcaption class="svCaption" >Smooth bifurcation.</figcaption>
 </figure>
 
@@ -55,7 +55,7 @@ We must first select an appropriate Global Max Edge Size for our model. This edg
 Below these parameter are three checkboxes. The "Extrude Boundary Layer Inward from Wall" checkbox will extrude the boundary layer mesh inwards if selected. Since we want to extrude the boundary layer mesh *outwards*, we will uncheck this box. The next box is a setting for "Use Constant Boundary Layer Thickness", which will attempt to make the entire boundary layer the same thickness if selected. We recommend leaving this box unchecked so the boundary layer mesh can adaptively change thickness in areas of tricky geometry. The last checkbox, "Convert Boundary Layer to New Region/Domain", is very important. We want to check this so that we will have a way to separate the fluid and structural domains later. Once you have set all of these settings, you boundary layer meshing box should look like this:
 
 <figure>
-  <img class="svImg svImgLg" src="documentation/svFSI/fsi_tutorial/imgs/BL_meshing_settings.png">
+  <img class="svImg svImgMd" src="documentation/svFSI/fsi_tutorial/imgs/BL_meshing_settings.png">
   <figcaption class="svCaption" >Boundary layer meshing settings.</figcaption>
 </figure>
 
@@ -66,13 +66,13 @@ If the number of elements is larger or smaller than you would like, feel free to
 Navigating to the location where you saved the mesh-compelte, you should see that SimVascular has produced two folders. One folder contains the mesh for the fluid part (i.e. domain-1) and the other folder contains the mesh for the structural part of your domain (i.e. domain-2). These two folders are the inputs that are needed in the next step, which is setting up the simulation. We need to do one extra step in this phase before launching the svFSI plugin. If you go into the mesh-complete folder for the fluid domain, you should notice that there is a file called "walls_combined.vtp". We will need to copy this file into the "mesh-surfaces" folder. Now go into the "mesh-surfaces" folder, and you should notice that there are many "wall"faces. We need to move these out of this folder. Select all of the "wall" faces, EXCEPT for "walls_combined.vtp" and move them to the parent folder. The walls_combined file will contain all the information from the other walls, but combined into 1 file to make assigning boundary conditions easier. In the end, your mesh-surfaces folder should contain .vtp files for each of the caps and the walls_combined.vtp. An example with an aorta model is shown below:
 
 <figure>
-  <img class="svImg svImgLg" src="documentation/svFSI/fsi_tutorial/imgs/fluid_mesh_surfaces.png">
+  <img class="svImg svImgMd" src="documentation/svFSI/fsi_tutorial/imgs/fluid_mesh_surfaces.png">
   <figcaption class="svCaption" >mesh-surfaces folder for the fluid domain.</figcaption>
 </figure>
 
 Now exit from this folder, and enter the mesh-complete folder for the structural domain (i.e. domain-2). Inside this folder, you should notice two walls_combined (region_0 and region_1). We will need to copy both of these into the mesh-surfaces folder. The region_0 file is the .vtp which designates the interface between the solid and fluid domains, while region_1 is the outer wall. Navigate into the mesh-surfaces folder, and like we did in the fluid domain, remove all wall files EXCEPT for the two walls_combined files that we just put in here. Once you are done, your mesh-surfaces folder for the structural domain should look like below, where there is a surface for each cap in the model and the two walls_combined.
 
 <figure>
-  <img class="svImg svImgLg" src="documentation/svFSI/fsi_tutorial/imgs/solid_mesh_surfaces.png">
+  <img class="svImg svImgMd" src="documentation/svFSI/fsi_tutorial/imgs/solid_mesh_surfaces.png">
   <figcaption class="svCaption" >mesh-surfaces folder for the solid domain.</figcaption>
 </figure>

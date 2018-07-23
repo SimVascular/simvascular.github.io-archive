@@ -21,9 +21,10 @@ Filling the inlet and outlet holes produced geometry on those surfaces, but it d
 
 5. Create the fluid domain mesh.
 
-In the SimVascular DataManager right0click “Meshes” and create a new mesh from the fluid model. This time you HAVE to toggle off the option “Surface mesh”. This is important, because it will keep the surface nodes exactly where they are. This way the nodes on the fluid interface will coincide with the nodes on structural interface. Choose your refinement to be consistent with the size of the elements you chose for the wall and caps, then run the mesher. Once it finishes, right-click your fluid mesh and click "Export Mesh-Complete". You are done!
+In the SimVascular DataManager right click “Meshes” and create a new mesh from the fluid model. This time, it is REQUIRED to toggle off the option “Surface mesh”. This is important, because it will keep the surface nodes exactly where they are. This way the nodes on the fluid interface will coincide with the nodes on structural interface. Choose your refinement to be consistent with the size of the elements you chose for the wall and caps, then run the mesher. Once it finishes, right-click your fluid mesh and click "Export Mesh-Complete". You are done!
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/svFSI/fsi_tutorial/imgs/meshing_final_pic.png">
+  <img class="svImg svImgLg" src="documentation/svFSI/fsi_tutorial/imgs/meshing_final_pic.png">
   <figcaption class="svCaption" >Creating fluid domain mesh.</figcaption>
 </figure>
+

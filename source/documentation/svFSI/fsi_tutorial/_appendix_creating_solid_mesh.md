@@ -7,7 +7,7 @@ Similar to the way we create the mesh for the fluid domain in SimVascular (see: 
 Right-click on the "Models" button and choose "Import solid Model", then select the .stl model you just exported from Meshmixer:
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/svFSI/fsi_tutorial/imgs/importing_solid_into_SV.png">
+  <img class="svImg svImgLg" src="documentation/svFSI/fsi_tutorial/imgs/importing_solid_into_SV.png">
   <figcaption class="svCaption" >Importing .stl model into SimVascular.</figcaption>
 </figure>
 
@@ -15,7 +15,7 @@ Right-click on the "Models" button and choose "Import solid Model", then select 
 
 Extracting faces allows users to reference specific parts of the exterior of the model for applying boundary conditions. It is important to have separate faces that represent each of the inlet and outlet faces, the inner wall, and the outer wall.
 
-To extract faces from your .stl, double-click on your newly imported model in the “Models” section of the left-hand menu to bring up the SV Modeling window. Then, click “Face Ops” and “Extract”. This should reveal a dialogue box asking for a “Sep. Angle”, which is a parameter that determines how aggressively to search for faces. SimVascular will check the direction of the outward facing normals in each element of the surface, and if it finds the difference in the angle between two normals to be greater than the threshold, it will assign them different faces. We recommend a value of 70 for the Sep. Angle. After extracting faces, you should see a list of “noname” faces appear on the “Face List”. Ideally, you should have a face for each of the inlets and outlets and the inner wall and outer wall, for a total of (number of inlets and outlet) + 2. If you click a noname face from the list, it will highlight in yellow on your 3D model, and the surface area of the face will be displayed in the bottom left corner of the SimVascular Window.
+To extract faces from your .stl, double-click on your newly imported model in the “Models” section of the left-hand menu to bring up the SV Modeling window. Then, click “Face Ops” and “Extract”. This should reveal a dialogue box asking for a “Sep. Angle”, which is a parameter that determines how aggressively to search for faces. SimVascular will check the direction of the outward facing normals in each element of the surface, and if it finds the difference in the angle between two normals to be greater than the threshold, it will assign them different faces. We recommend a value of 70 for the Sep. Angle., but this depends on the geometry of your model. After extracting faces, you should see a list of “noname” faces appear on the “Face List”. Ideally, you should have a face for each of the inlets and outlets and the inner wall and outer wall, for a total of (number of inlets and outlet) + 2. If you click a noname face from the list, it will highlight in yellow on your 3D model, and the surface area of the face will be displayed in the bottom left corner of the SimVascular Window.
 
 Now is a good time to click each face on the list so you can confirm its location on the model, then rename it appropriately for your convenience. An example naming convention could be to call the inner wall “wall\_inner”, the outer wall “wall\_outer”, and all of the inlets and outlets as “perimeter\_X”, where X is the name of the particular vessel.
 
