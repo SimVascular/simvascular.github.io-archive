@@ -18,7 +18,7 @@ There are several methods parameters you can change for lofting, or you can just
 	Click the button "Lofting Parameters..."
 
 
-The default method is NUBRS based.
+The default method is NURBS based.
 
 <figure>
   <img class="svImg svImgSm"  src="documentation/modeling/imgs/segmentation/loftingdialog.png"> 
@@ -60,7 +60,7 @@ Lofting preview can also provides a good way to check the quality of the junctio
 
 Here, for better visualiztion, change the color of the lofted surface of aorta to blue, change the opacity of the image to about 0.6.
 
-Now let's check the first contour of right\_iliac. You may find that the firt segmentation of right\_iliac looks something like this:
+Now let's check the first contour of right\_iliac. You may find that the first segmentation of right\_iliac looks something like this:
 
 <figure>
   <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/checkledge.png"> 

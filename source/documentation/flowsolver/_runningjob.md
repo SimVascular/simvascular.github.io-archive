@@ -15,8 +15,6 @@ geombc.dat.1 => geombc.dat.1, geombc.dat.2, ..., geombc.dat.8
 restart.0.1 => restart.0.1, restart.0.2, ..., restart.0.8
 ~~~
 
-At the same time, the solver copies all these files to a newly created folder called **8-procs_case/** under the project folder, and this is where all the output files of the analysis will be written to. In general, if you launch a **n** processor job, all the files will be copied to a **n-procs_case/** folder.
-
 During the job running, the progress of simualtion is shown at "Job Status" and the status bar at the the bottom of the main window:
 
 <figure>
@@ -31,7 +29,7 @@ During the job running, you can terminate it before it finishes. To stop the sim
 	Right click the job data node "steady" at Data Manager
 	Click "Stop Simulation" in the popup menu	
 
-After the simulation is finished. A dialog pops up to inform that the job is done. You can click the button "Show Details..." to get more info about the simulation progress. You can also check the simulation progress by open the file "histor.dat" in the folder "8-procs_case". It contains containing details that allows to evaluate how well your numerical simulation is doing. Here’s a brief description of what each of those columns means.
+After the simulation is finished. A dialog pops up to inform that the job is done. You can click the button "Show Details..." to get more info about the simulation progress. You can also check the simulation progress by open the file "histor.dat" in the folder "steady". It contains containing details that allows to evaluate how well your numerical simulation is doing. Here’s a brief description of what each of those columns means.
 
 <table class='table borderless' id="solverTable">
 <thead>

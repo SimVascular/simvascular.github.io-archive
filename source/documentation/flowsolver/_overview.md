@@ -12,7 +12,7 @@ The following figure contains a schematic representation of the processes involv
 We start off with the files coming from the [meshing](docsMeshing.html) of the analysis: these files contain nodal and connectivity information for the finite element mesh, located in the the folder _mesh-complete/mesh-surfaces/_.
 
 
-**svPre** is the preprocessor for **svSolver**. The input data files to svPre contain a complete description of the discrete model: nodal coordinates, element connectivity, element adjacency information and connectivity of boundary nodes and elements. The **svPre** program can be called either from the command line (in terminal) or the Simulation tool (in GUI). The input data files for **svPresolver** are created from the meshe. They are organized as shown in the example below.
+**svPre** is the preprocessor for **svSolver**. The input data files to svPre contain a complete description of the discrete model: nodal coordinates, element connectivity, element adjacency information and connectivity of boundary nodes and elements. The **svPre** program can be called either from the command line (in terminal) or the Simulation tool (in GUI). The input data files for **svPresolver** are created from the mesh. They are organized as shown in the example below.
 
 <figure>
   <img class="svImg svImgMd" src="documentation/flowsolver/imgs/meshfiles.png">

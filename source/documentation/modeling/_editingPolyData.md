@@ -9,7 +9,7 @@ Before apply local operations, make sure you only select the faces, regions, cel
 To select a region (using a sphere interactively)
 	
 	Local Ops -> toggle on the checkbox "Show Sphere"
-	An sphere shows in the 3D view window of Display
+	A sphere shows in the 3D view window of Display
 	Move the cursor to the sphere
 	Left press and move to change the location of the sphere
 	Right press and move to change the size of the sphere
@@ -45,7 +45,7 @@ To select/delete cells on the surface (interactively)
                 Fill all holes for the model without extracting faces. Only a full model surface is obtained.
 
         Sel Lg Connected (global): 
-                Select largest connected surface area on the model and combine them to onw full model surface, remove the rest area.
+                Select largest connected surface area on the model and combine them to one full model surface, remove the rest area.
 
         Remesh (global): 
                 Click the button "Estimate Size" or provide a proper value for "Target edge size"

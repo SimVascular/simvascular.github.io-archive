@@ -47,7 +47,7 @@ After double-clicking the segmentation we can now start placing seed points. We 
 
 Now that we have a good view of the Aorta, we can place the starting seed point. Starting seed points can be placed
 by ctrl+left-clicking in the 3d view, for windows and linux, and cmd+clicking for mac. So place a starting seed point
-on the part of the image with a bright intensity in the aorta, it should looke like this:
+on the part of the image with a bright intensity in the aorta, it should look like this:
 
 <figure>
   <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/3dseg/6_ctrl_click.png">
@@ -55,7 +55,7 @@ on the part of the image with a bright intensity in the aorta, it should looke l
 </figure>
 
 Now we will navigate our view to the bottom of the image to get a good view of the external illiacs. Position your
-  axial, sagittal and coronal views at 91, 36 and 57 and respectively. It should looke lik this
+  axial, sagittal and coronal views at 91, 36 and 57 and respectively. It should look like this
 
 <figure>
   <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/3dseg/7_bottomview.png">

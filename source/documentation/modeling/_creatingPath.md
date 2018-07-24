@@ -38,7 +38,7 @@ There are three options for Subdivision Type. Each option uses a different way t
 
 Now a new data node “aorta” for the path is created under the data node “Paths” in Data Manager. Double click the data node “aorta" and the tool "SV Path Planning” automatically shows up. The new path is empty and has no control or path points so far. 
 
-**To add a contro point:**
+**To add a control point:**
 
 	Adding Mode: Smart
 	Move the cursor to Axial view in Display
@@ -78,13 +78,13 @@ Continue to move down the aorta inferiorly in the Axial 2D View in increments of
 
 **More Options to add a control point:**
 
-Normally SimVascular will insert a control control to the path in the right order, but sometimes a user may need to explicitly insert a control point in a specific location. You can change the "Adding Mode".
+Normally SimVascular will insert a control to the path in the right order, but sometimes a user may need to explicitly insert a control point in a specific location. You can change the "Adding Mode".
 
-	Smart: add the poing according to the distance to other points
-	Begining: add the poing to the beginning
-	End: add the poing to the end
-	Before: add the poing just before the selected point
-	After: add the poing just after the selected point
+	Smart: add the point according to the distance to other points
+	Begining: add the point to the beginning
+	End: add the point to the end
+	Before: add the point just before the selected point
+	After: add the point just after the selected point
 
 You can also add a point by manually inputing coordiantes:
 

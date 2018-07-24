@@ -61,7 +61,7 @@ To set BC for the outlets (outflow\_right\_iliac, outflow\_aorta):
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-<font color="red">**HELPFUL HINT:** </font> When a cap is selected, some geoetry info (area) about this cap is shown in the status bar on the bottom of the main window. 
+<font color="red">**HELPFUL HINT:** </font> When a cap is selected, some geometry info (area) about this cap is shown in the status bar on the bottom of the main window. 
 
 ###Wall Properties
 

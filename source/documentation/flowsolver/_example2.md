@@ -39,7 +39,7 @@ Similarly to Example 1, to run the job
 To export results:
 
 	Goto "Convert Results"
-	Result Dir: select the running dir .../Simulations/steady\_rcr/8-procs_case
+	Result Dir: select the running dir .../Simulations/steady\_rcr/
 	Start:  the initial restart file number (0)
 	Stop: the final restart file number (500)
 	Increment: the increment between restart files (20). 

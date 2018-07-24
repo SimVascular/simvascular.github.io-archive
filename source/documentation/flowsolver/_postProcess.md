@@ -5,13 +5,13 @@
 In order to generate the visualization files (*.vip) and (*.vtu) files:
 
 ~~~
-	Goto "Export Results"
-	Result Dir: select the running dir .../Simulations/steady/8-procs_case
+	Go to "Convert Results"
+	Result Dir: select the running dir .../Simulations/steady/
 	Start:  the initial restart file number (0)
 	Stop: the final restart file number (200)
 	Increment: the increment between restart files (10). 
 	Toggle on "Volume Mesh" and "Surface Mesh"
-	Click the button "Export..."
+	Click the button "Convert..."
 	Choose a directory for exporting
 ~~~
 
@@ -22,7 +22,7 @@ A new folder "steady-converted-results" is created, which contains all the conve
   <figcaption class="svCaption" >Creating VTU result files from <b>svSolver</b> restart files.</figcaption>
 </figure>
 
-After convering done, there are also four text files created in the exported folder if "Calculate Flows" is toggled on.
+After converting is done, there are also four text files created in the exported folder if "Calculate Flows" is toggled on.
 
 ~~~
   all_results-flows.txt: flowrate for each face with time steps

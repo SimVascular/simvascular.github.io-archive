@@ -7,7 +7,7 @@ In this example, we are interested more in the flow in the right iliac of this m
 	Toggle off "Radius-Based Meshing"
 	Go to "Local Size"
 	All the faces are listed in the table.
-	Set loca size 0.1 for wall\_right_iliac
+	Set local size 0.1 for wall\_right_iliac
 	Or you can use table menu to set if there are many faces to set
 	Click the button "Run Mesher"
 	

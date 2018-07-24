@@ -25,7 +25,7 @@ These parameters control the growth and stop criteria of the first stage levelse
 
 Stage 2 level set is intended to provide a smooth, accurate contour based on the results of stage 1.
 
-+ **Blur** parameters control the image blur on the feature image and the advection image. Similar to what discussed for stage 1, inceasing this value on images subject to a significant noise level may improve the accuracy of the resulting segmentation. Increased image blur will decrease percision, for this reason it is reccomended that blur settings be lower in stage 2 than in stage 1.
++ **Blur** parameters control the image blur on the feature image and the advection image. Similar to what discussed for stage 1, inceasing this value on images subject to a significant noise level may improve the accuracy of the resulting segmentation. Increased image blur will decrease precision, for this reason it is recommended that blur settings be lower in stage 2 than in stage 1.
 + **Kupp** and **Klow** specifies the maximum tolerable curvature. Unlike stage 1, where there is a equilbrium curvature, stage 2 has a specific allowable range for curvature.  When the curvature is too low the level set will grow/shrink the front to obtain a allowable curvature. <font color="orange">**WARNING:**</font> If Klow is set too high, it may result in overshoot.
 
 ##### Advanced Features
@@ -69,7 +69,7 @@ In general, you should go with the normal approach above: making more segmentati
 
 <font color="red">**HELPFUL HINT:**</font> Finding suitable level set parameters based on a few cross sections and then doing batch segmentation can dramatically speed up model building. Make sure the seed fits within the lumen of the vessel for all the positions we’d like to segment in the batch. 
 
-Now let's try  create contours in batch model using levelset. 
+Now let's try to create contours in batch model using levelset. 
 
 	Toggle on the checkbox "Convert to Spline" in the threshold panel.
 	Ctrl No.: 12

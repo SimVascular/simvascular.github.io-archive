@@ -20,5 +20,5 @@ Let's try Example 1. The files for Example 1 can be found from the link on the l
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-Now a new data node “steady” for the job is created under the data node "Simulations" in Data Manager. Double click the data node “steady" and the tool "SV Simulation” automatically shows up. The new job is empty and has not create input and data files yet. 
+Now a new data node “steady” for the job is created under the data node "Simulations" in Data Manager. Double click the data node “steady" and the tool "SV Simulation” automatically shows up. The new job is empty and has not created input and data files yet. 
 

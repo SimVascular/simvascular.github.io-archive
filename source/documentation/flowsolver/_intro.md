@@ -3,7 +3,7 @@
 
 **SV Simulation** tool can solve the three-dimensional incompressible Navier-Stokes equations in an arbitrary domain, generally a vascular model reconstructed from image data. This is a complex subject with extensive underlying theory, and therefore this document will focus mainly on the practical aspects of simulation and analysis. 
 
-**Notice**: To get full functions from the Simulation tool, it uses three solvers: **Presolver (svPre), Flowsolver (svSolver), Postsolver (svPost)**. Normally, SimVascular already includes the solvers and can find them automatically. User don't need to set up the solvers. However, in case SimVascular can't find them while users are using the Simulation tool, refer to [Solver Configuration](#solverconfiguration).
+**Notice**: To get full functions from the Simulation tool, it uses three solvers: **Presolver (svPre), Flowsolver (svSolver), Postsolver (svPost)**. Normally, SimVascular already includes the solvers and can find them automatically. Users don't need to set up the solvers. However, in case SimVascular can't find them while users are using the Simulation tool, refer to [Solver Configuration](#solverconfiguration).
 
 The **svSolver** evolved from the academic finite element code PHASTA (Parallel, Hierarchical, Adaptive, Stabilized, Transient Analysis), developed mainly at RPI (Rensselaer Polytechnic Institute, Troy, NY) by Professor Kenneth Jansen. This code was in turned inspired by the Stabilized Finite Element theory developed by Professor Thomas J.R. Hughes during his Stanford years.
 

@@ -1,6 +1,6 @@
 ###Creating a Model (with PolyData)
 
-With the two groups of contour segmentation (aorta and right_iliac), we are now able to create a model for the aorta with two branch vessels using PolyData.
+With the two groups of contour segmentation (aorta and right\_iliac), we are now able to create a model for the aorta with two branch vessels using PolyData.
 
 	Right click the data node "Models" in the project "SVProject" in Data Manager
 	Click "Create Model" in the popup menu
@@ -34,7 +34,8 @@ All the faces of the model are listed under “Face List” tab. Double click a 
 Different colors can be assigned to those faces.
 
 	Double click the table cell in the column "C" in the table.
-	Selecte a color for the corresponding face.
+	Select:wq
+ a color for the corresponding face.
 
 <figure>
   <img class="svImg svImgLg"  src="documentation/quickguide/imgs/facecolor.png"> 

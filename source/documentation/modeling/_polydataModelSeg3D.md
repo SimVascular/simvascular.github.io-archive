@@ -25,7 +25,7 @@ Now a new data node “model_from_3dseg” for the model is created under the da
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-After the model is created, you should now be able to see one face named as "wall-seg3d" created for the model. The model surface may be not very desirable and don't flat faces for the vesseld ends. So we'll continiu to process this model.
+After the model is created, you should now be able to see one face named as "wall-seg3d" created for the model. The model surface may be not very desirable and not have flat faces for the vessel ends. So we'll continue to process this model.
 
 **Smooth**
 

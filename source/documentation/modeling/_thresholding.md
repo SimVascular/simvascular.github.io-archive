@@ -26,7 +26,7 @@ To create a contour using Threshold (interactively):
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-Notice when you move up/down, the slider "Preset" slider displays the threshold value used to create the contour. After releasing th mouse, the contour is finalized (in red) and added to the group. In this example, the preset value is 62.8. Under Contour List, the new contour is listed with the type and method used for it.
+Notice when you move up/down, the slider "Preset" slider displays the threshold value used to create the contour. After releasing the mouse, the contour is finalized (in red) and added to the group. In this example, the preset value is 62.8. Under Contour List, the new contour is listed with the type and method used for it.
 
 <figure>
   <img class="svImg svImgLg"  src="documentation/modeling/imgs/segmentation/thresholdinteractive2.png"> 
@@ -43,7 +43,7 @@ To shift a contour (interactively):
 
 To scale a contour (interactively):
 
-	Move the cursor to the other control point (conncted to the central point by a short line)
+	Move the cursor to the other control point (connected to the central point by a short line)
 	Press and hold the left mouse button at the point
 	Move the mouse to scale the contour
 
@@ -55,7 +55,7 @@ To scale a contour (interactively):
 
 
 
-The contour may looks a little jagged, you can selecte the contour from the list and click the button "Smooth" to get a smooher contour.
+The contour may look a little jagged, you can select the contour from the list and click the button "Smooth" to get a smoother contour.
 
  <figure>
   <img class="svImg svImgMd"  src="documentation/modeling/imgs/segmentation/smoothedcontour.png"> 
@@ -74,22 +74,22 @@ With the only two control points, we can't change the shape of the contour. Now 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-This time the finalized contour is converted a closed spline with 12 (Ctrl No.) control points along the contour, with two extra control points inside. Now you have severl ways to change the contour shape.
+This time the finalized contour is converted a closed spline with 12 (Ctrl No.) control points along the contour, with two extra control points inside. Now you have several ways to change the contour shape.
 
 To move a control point (interactively):
 
-	Move the cursor to a control point on the contour and it becomes red (activted)
+	Move the cursor to a control point on the contour and it becomes red (activated)
 	Press and hold the left mouse button at the point
 	Move the cursor to adjust the point position on the reslice plane
 
 To delete a control point (interactively):
 
-	Move the cursor to a control point on the contour and it becomes red (activted)
-	Righ click
+	Move the cursor to a control point on the contour and it becomes red (activated)
+	Right click
 
 To add a new control point (interactively):
 
- 	Move the cursor to the contour line (but on any control points)
+ 	Move the cursor to the contour line (but not on any control points)
 	A green control point is created
 	Left click and the point is inserted into the contour.
 

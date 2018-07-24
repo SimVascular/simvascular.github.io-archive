@@ -11,7 +11,7 @@ To create a circle (interactively):
 	The button is highlighted in light blue, which means the method is activated for interaction.
 	Move the cursor to a 2D view window
 	Left click at the vessel center
-	Move the cusor away from the center.
+	Move the cursor away from the center.
 	A circle shows up. It keeps changing the radius as you move the cursor.
 	Left click again. The circle is placed.
 

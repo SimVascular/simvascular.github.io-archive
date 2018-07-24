@@ -1,6 +1,6 @@
 ## Solver Parameters
 
-There are many parameters for flow solver, but only a few is required to set explicitly. Advanced paramters are optional. To check out the meannin of all the parameters, refer to [appendix](docsFlowSolver.html#solverinp).
+There are many parameters for flow solver, but you are only required to set explicitly a few of them. Advanced paramters are optional. To check out the meaning of all the parameters, refer to [appendix](docsFlowSolver.html#solverinp).
 
 	Number of Timesteps: 200
 	Time Step Size: 0.03
@@ -42,7 +42,7 @@ Of course, you can imagine that in a real-world problem things are way more comp
 <br>
 ### Output Control Block
 
-**Number of Timesteps between Restarts: 10** - This line tells the solver how often it should save solution files. In this problem, you are really calculating $200$ solutions to the problem at $200$ different time points, but in general you do not want to save a solution file for every single time step. Keep in mind that two consecutive solutions are only $\Delta t = 0.03$ seconds apart! In this line, we are asking the solver to save every other $20$ files. Therefore, the output files of the solver will look like this: restart.0.\*, restart.10.\*, restart.20.\*, restart.30.\*, ...., restart.190.\*, restart.200.\*
+**Number of Timesteps between Restarts: 10** - This line tells the solver how often it should save solution files. In this problem, you are really calculating $200$ solutions to the problem at $200$ different time points, but in general you do not want to save a solution file for every single time step. Keep in mind that two consecutive solutions are only $\Delta t = 0.03$ seconds apart! In this line, we are asking the solver to save one in every $10$ files. Therefore, the output files of the solver will look like this: restart.0.\*, restart.10.\*, restart.20.\*, restart.30.\*, ...., restart.190.\*, restart.200.\*
 
 <br>
 ### Step Construction Block

@@ -73,7 +73,7 @@ To union 2D/3D segmentations:
 
 Right click the model "demo" in Data Manager, the menu pops up with more options for the model.
 
-	Show/Hide Edges: show/hid edges on the model surface
+	Show/Hide Edges: show/hide edges on the model surface
 	Show Full/Faces: show the model as one full surface or a set of faces
 	Surface Representation: show the model surface with points, wireframe or surface
 

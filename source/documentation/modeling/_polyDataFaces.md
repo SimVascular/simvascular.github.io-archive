@@ -24,11 +24,11 @@ Select faces in the table:
 	Select a single face: Click on the row
 	Select multiple faces: Ctrl + Click
 	Select all the faces between two rows: Shift + Click
-	Deselect all the faces: Click on the empty ares of the table
+	Deselect all the faces: Click on the empty areas of the table
 
 Select faces (interactively):
 
-	Move the curso to a face in 3D-view of Display
+	Move the cursor to a face in 3D-view of Display
 	Click once to make sure the window is active
 	Slect only this face: Press key "S"
 	Select multiple faces: Press key "S" + Shift

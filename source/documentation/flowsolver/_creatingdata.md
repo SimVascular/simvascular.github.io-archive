@@ -10,7 +10,7 @@ For Flowsolver:
 
 - **geombc.dat.1**: containing mesh info and boundary conditions specified in the problem, created by presolver
 - **restart.0.1**: containing initial conditions for our problem, , created by presolver
-- **numstart.dat**: contains a numberr **0**. This number is used by the solver to identify the restart file that should be used as initial condition.
+- **numstart.dat**: contains a number **0**. This number is used by the solver to identify the restart file that should be used as initial condition.
 - **bct.dat**: containing time-dependent velocity vectors at the inflow face of the model according to a prescribed flow wave coming from a \*.flow file. See [this section](#bctfile).
 - **solver.inp**: providing further info for flowsolver, specifying parameters such as time step size, number of time steps, number of nonlinear iterations, boundary condition control, etc. A detailed description is  presented in [this section](#solverinp).
 

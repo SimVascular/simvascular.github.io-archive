@@ -70,7 +70,7 @@ Graphically, this is what window leveling does:
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-By changing thw window and level values, you can change the brightness and contrast of the image.
+By changing the window and level values, you can change the brightness and contrast of the image.
 
 	Change window value: move the vertical slider or modify the value in the first text field
 	Change level value: change the length of the slider or modify the value in the second text field

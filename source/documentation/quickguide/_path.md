@@ -8,7 +8,7 @@ To create a geometric model for a vessel, you need to first create a path, which
 	Subdivision Type: choose "Spacing Based"
 	The minimum image spacing is automatically filled for "Spacing"
 
-A new path "aorta" is created under the data node "Paths" in Data Manager. Double click the data node "aorta" and the tool "SV Path Planning" shows up. The new path is empty and has no points so far. To add a contro point:
+A new path "aorta" is created under the data node "Paths" in Data Manager. Double click the data node "aorta" and the tool "SV Path Planning" shows up. The new path is empty and has no points so far. To add a control point:
 
 	Image Navigator: Axial slider: 475
 	Place the curson into the Axial 2D View in display

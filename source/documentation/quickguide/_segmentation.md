@@ -9,9 +9,9 @@ Along the path we created, a group of contours of the aorta vessel wall can be d
 
 A new group "aorta" is created under the data node "Segmentations" in Data Manager. Double click the group data node "aorta" and the tool "SV 2D Segmentation" shows up. The window layout of Display changes. The left top view shows image reslice in intensity; the left bottom view shows in gradient magnitude; the right 3D view shows image intensity on the probe plane (the red square) perpendicular to the path. The new group is empty ans has no contours so far. To add create and add a contour point:
 
-	Toggle on "Convert to Spline"; Ctrl No. (12) is the number of control points you want the along contour line	
 	Click the button "LevelSet"; LevelSet parameter panel appears
 	Use the default parameter values in the panel
+	Toggle on "Convert to Spline"; Ctrl No. (12) is the number of control points you want the along contour line	
 	Click the button "LevelSet" again
 
 A contour is created/added for the group and should appear under the Contour List. In Display, the countour is shown in red with 12 green control points on the contour line. Two more control points are inside the contour, one for shifting and the other for scaling.
@@ -26,7 +26,7 @@ To interactively modify the contour:
 	Move the cursor to a control point, it becomes red(selected)
 	Left press on the point and move 
 
-Continue to move along the path in increments of about 5-25 using the “Reslice" slider until approximately 285, and define and add contours to the group. You may wish to additionally smooth certain contours, then selecte the contour and click the button "Smooth". Values between 6 and 10 for Fourier number are appropriate for this section of the aorta.
+Continue to move along the path in increments of about 5-25 using the “Reslice" slider until approximately 285, and define and add contours to the group. You may wish to additionally smooth certain contours, then select the contour and click the button "Smooth". Values between 6 and 10 for Fourier number are appropriate for this section of the aorta.
 If a contour is abnormal because the probe plane is at the vessel bifurcation region, just delete this contour and move down the path to get a better contour.
 
 <font color="red">**HELPFUL HINT:** </font> When a contour is selected, some geoetry info about this contour is shown in the status bar on the bottom of the main window. The info includes area, perimeter, and the center point coordinates.
@@ -57,7 +57,7 @@ A new data node "Lofted" for lofting face is created under this group in Data Ma
 The contour will be saved to a file inside the project folder.
 
 
-Similarly, we create a path and a group of contours for the right iliac artery.
+Similarly, we create a path and a group of contours for the right iliac artery. Make sure the path is connected to aorta path (first node is between last two nodes of aorta path)
 
 
 

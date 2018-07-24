@@ -28,7 +28,7 @@ Let’s examine these parameters more closely.
 
 “Fourier Mode Number”: Fourier smoothing generates a path using only a subset of the modes that describe your original path.  High modes correspond to very sharp changes in your path, while low modes describe the smoother parts of your path. The fewer modes your path has, the smoother it will be.
 
-Try this exercise useing the following options:
+Try this exercise using the following options:
 
 	Subsample: 2
 	Based on: Control Points

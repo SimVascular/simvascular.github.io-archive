@@ -52,7 +52,7 @@ You can close a project with exiting SimVascular. Make sure you save the project
 	Click "Add/Replace Image" in the popup menu
 	Choose an image and click "Open"
 	"Do you want to copy the image as vti into the project?" Choose Yes or No
-	If Yes, "Do you wanto scale the image (for unit conversion)?": for instance, 0.1 if from mm to cm.
+	If Yes, "Do you want to scale the image (for unit conversion)?": for instance, 0.1 if from mm to cm.
 
 Then the image is added under the data node "Images". At the same time, the image is shown in Display. If you choose to copy the image to the project, the project is portable and you can transfer the project to another computer and continue working on it.
 
