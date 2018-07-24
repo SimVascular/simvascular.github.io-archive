@@ -267,7 +267,7 @@ Click "OK"
 
 <p>Now a new data node “aorta” for the path is created under the data node “Paths” in Data Manager. Double click the data node “aorta&quot; and the tool &ldquo;SV Path Planning” automatically shows up. The new path is empty and has no control or path points so far. </p>
 
-<p><strong>To add a contro point:</strong></p>
+<p><strong>To add a control point:</strong></p>
 <pre class="highlight plaintext"><code>Adding Mode: Smart
 Move the cursor to Axial view in Display
 Move the slice to position 475: by scrolling center mouse button or moving Axial slider (in Image Navigator) to 475
@@ -307,12 +307,12 @@ Give new size in the popup dialog
 
 <p><strong>More Options to add a control point:</strong></p>
 
-<p>Normally SimVascular will insert a control control to the path in the right order, but sometimes a user may need to explicitly insert a control point in a specific location. You can change the &quot;Adding Mode&rdquo;.</p>
-<pre class="highlight plaintext"><code>Smart: add the poing according to the distance to other points
-Begining: add the poing to the beginning
-End: add the poing to the end
-Before: add the poing just before the selected point
-After: add the poing just after the selected point
+<p>Normally SimVascular will insert a control to the path in the right order, but sometimes a user may need to explicitly insert a control point in a specific location. You can change the &quot;Adding Mode&rdquo;.</p>
+<pre class="highlight plaintext"><code>Smart: add the point according to the distance to other points
+Begining: add the point to the beginning
+End: add the point to the end
+Before: add the point just before the selected point
+After: add the point just after the selected point
 </code></pre>
 
 <p>You can also add a point by manually inputing coordiantes:</p>
@@ -390,7 +390,7 @@ Click the button "OK
 
 <p>“Fourier Mode Number”: Fourier smoothing generates a path using only a subset of the modes that describe your original path.  High modes correspond to very sharp changes in your path, while low modes describe the smoother parts of your path. The fewer modes your path has, the smoother it will be.</p>
 
-<p>Try this exercise useing the following options:</p>
+<p>Try this exercise using the following options:</p>
 <pre class="highlight plaintext"><code>Subsample: 2
 Based on: Control Points
 Fourier Mode Number: 5
@@ -507,7 +507,7 @@ Relsease the left mouse button when you feel the contour (in yellow) matches the
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-<p>Notice when you move up/down, the slider &ldquo;Preset&rdquo; slider displays the threshold value used to create the contour. After releasing th mouse, the contour is finalized (in red) and added to the group. In this example, the preset value is 62.8. Under Contour List, the new contour is listed with the type and method used for it.</p>
+<p>Notice when you move up/down, the slider &ldquo;Preset&rdquo; slider displays the threshold value used to create the contour. After releasing the mouse, the contour is finalized (in red) and added to the group. In this example, the preset value is 62.8. Under Contour List, the new contour is listed with the type and method used for it.</p>
 
 <figure>
   <img class="svImg svImgLg"  src="documentation/modeling/imgs/segmentation/thresholdinteractive2.png"> 
@@ -523,7 +523,7 @@ Move the mouse to shift the contour
 </code></pre>
 
 <p>To scale a contour (interactively):</p>
-<pre class="highlight plaintext"><code>Move the cursor to the other control point (conncted to the central point by a short line)
+<pre class="highlight plaintext"><code>Move the cursor to the other control point (connected to the central point by a short line)
 Press and hold the left mouse button at the point
 Move the mouse to scale the contour
 </code></pre>
@@ -534,7 +534,7 @@ Right Click and click "Point 2D Size" or "Point 3D Size"
 Give new size in the popup dialog
 </code></pre>
 
-<p>The contour may looks a little jagged, you can selecte the contour from the list and click the button &ldquo;Smooth&rdquo; to get a smooher contour.</p>
+<p>The contour may look a little jagged, you can select the contour from the list and click the button &ldquo;Smooth&rdquo; to get a smoother contour.</p>
 
 <p><figure>
   <img class="svImg svImgMd"  src="documentation/modeling/imgs/segmentation/smoothedcontour.png"> 
@@ -552,21 +552,21 @@ Ctrl No.: 12
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-<p>This time the finalized contour is converted a closed spline with 12 (Ctrl No.) control points along the contour, with two extra control points inside. Now you have severl ways to change the contour shape.</p>
+<p>This time the finalized contour is converted a closed spline with 12 (Ctrl No.) control points along the contour, with two extra control points inside. Now you have several ways to change the contour shape.</p>
 
 <p>To move a control point (interactively):</p>
-<pre class="highlight plaintext"><code>Move the cursor to a control point on the contour and it becomes red (activted)
+<pre class="highlight plaintext"><code>Move the cursor to a control point on the contour and it becomes red (activated)
 Press and hold the left mouse button at the point
 Move the cursor to adjust the point position on the reslice plane
 </code></pre>
 
 <p>To delete a control point (interactively):</p>
-<pre class="highlight plaintext"><code>Move the cursor to a control point on the contour and it becomes red (activted)
-Righ click
+<pre class="highlight plaintext"><code>Move the cursor to a control point on the contour and it becomes red (activated)
+Right click
 </code></pre>
 
 <p>To add a new control point (interactively):</p>
-<pre class="highlight plaintext"><code>Move the cursor to the contour line (but on any control points)
+<pre class="highlight plaintext"><code>Move the cursor to the contour line (but not on any control points)
 A green control point is created
 Left click and the point is inserted into the contour.
 </code></pre>
@@ -640,7 +640,7 @@ Click the button "Threshold"
 <p>Stage 2 level set is intended to provide a smooth, accurate contour based on the results of stage 1.</p>
 
 <ul>
-<li><strong>Blur</strong> parameters control the image blur on the feature image and the advection image. Similar to what discussed for stage 1, inceasing this value on images subject to a significant noise level may improve the accuracy of the resulting segmentation. Increased image blur will decrease percision, for this reason it is reccomended that blur settings be lower in stage 2 than in stage 1.</li>
+<li><strong>Blur</strong> parameters control the image blur on the feature image and the advection image. Similar to what discussed for stage 1, inceasing this value on images subject to a significant noise level may improve the accuracy of the resulting segmentation. Increased image blur will decrease precision, for this reason it is recommended that blur settings be lower in stage 2 than in stage 1.</li>
 <li><strong>Kupp</strong> and <strong>Klow</strong> specifies the maximum tolerable curvature. Unlike stage 1, where there is a equilbrium curvature, stage 2 has a specific allowable range for curvature.  When the curvature is too low the level set will grow/shrink the front to obtain a allowable curvature. <font color="orange"><strong>WARNING:</strong></font> If Klow is set too high, it may result in overshoot.</li>
 </ul>
 
@@ -685,7 +685,7 @@ Click the button "LevelSet"
 
 <p><font color="red"><strong>HELPFUL HINT:</strong></font> Finding suitable level set parameters based on a few cross sections and then doing batch segmentation can dramatically speed up model building. Make sure the seed fits within the lumen of the vessel for all the positions we’d like to segment in the batch. </p>
 
-<p>Now let&rsquo;s try  create contours in batch model using levelset. </p>
+<p>Now let&rsquo;s try to create contours in batch model using levelset. </p>
 <pre class="highlight plaintext"><code>Toggle on the checkbox "Convert to Spline" in the threshold panel.
 Ctrl No.: 12
 Toggle on the checkbox "Batch Mode", List: 180:30:600
@@ -737,7 +737,7 @@ Click the button "LevelSet"
 The button is highlighted in light blue, which means the method is activated for interaction.
 Move the cursor to a 2D view window
 Left click at the vessel center
-Move the cusor away from the center.
+Move the cursor away from the center.
 A circle shows up. It keeps changing the radius as you move the cursor.
 Left click again. The circle is placed.
 </code></pre>
@@ -858,7 +858,7 @@ the segmentation you should see it appear in the segmentations tab.</p>
 
 <p>Now that we have a good view of the Aorta, we can place the starting seed point. Starting seed points can be placed
 by ctrl+left-clicking in the 3d view, for windows and linux, and cmd+clicking for mac. So place a starting seed point
-on the part of the image with a bright intensity in the aorta, it should looke like this:</p>
+on the part of the image with a bright intensity in the aorta, it should look like this:</p>
 
 <figure>
   <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/3dseg/6_ctrl_click.png">
@@ -866,7 +866,7 @@ on the part of the image with a bright intensity in the aorta, it should looke l
 </figure>
 
 <p>Now we will navigate our view to the bottom of the image to get a good view of the external illiacs. Position your
-  axial, sagittal and coronal views at 91, 36 and 57 and respectively. It should looke lik this</p>
+  axial, sagittal and coronal views at 91, 36 and 57 and respectively. It should look like this</p>
 
 <figure>
   <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/3dseg/7_bottomview.png">
@@ -933,7 +933,7 @@ Click the button "Paste".
 <pre class="highlight plaintext"><code>Click the button "Lofting Parameters..."
 </code></pre>
 
-<p>The default method is NUBRS based.</p>
+<p>The default method is NURBS based.</p>
 
 <figure>
   <img class="svImg svImgSm"  src="documentation/modeling/imgs/segmentation/loftingdialog.png"> 
@@ -976,7 +976,7 @@ Here are a few suggestions for fixing common problems:</p>
 
 <p>Here, for better visualiztion, change the color of the lofted surface of aorta to blue, change the opacity of the image to about 0.6.</p>
 
-<p>Now let&rsquo;s check the first contour of right_iliac. You may find that the firt segmentation of right_iliac looks something like this:</p>
+<p>Now let&rsquo;s check the first contour of right_iliac. You may find that the first segmentation of right_iliac looks something like this:</p>
 
 <figure>
   <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/checkledge.png"> 
@@ -1100,7 +1100,7 @@ Choose those that you would like to union
 <p><strong>More options availale in Data Manager for visualization</strong></p>
 
 <p>Right click the model &ldquo;demo&rdquo; in Data Manager, the menu pops up with more options for the model.</p>
-<pre class="highlight plaintext"><code>Show/Hide Edges: show/hid edges on the model surface
+<pre class="highlight plaintext"><code>Show/Hide Edges: show/hide edges on the model surface
 Show Full/Faces: show the model as one full surface or a set of faces
 Surface Representation: show the model surface with points, wireframe or surface
 </code></pre>
@@ -1143,11 +1143,11 @@ Click the table header like "Name", "Type", etc to sort the table
 <pre class="highlight plaintext"><code>Select a single face: Click on the row
 Select multiple faces: Ctrl + Click
 Select all the faces between two rows: Shift + Click
-Deselect all the faces: Click on the empty ares of the table
+Deselect all the faces: Click on the empty areas of the table
 </code></pre>
 
 <p>Select faces (interactively):</p>
-<pre class="highlight plaintext"><code>Move the curso to a face in 3D-view of Display
+<pre class="highlight plaintext"><code>Move the cursor to a face in 3D-view of Display
 Click once to make sure the window is active
 Slect only this face: Press key "S"
 Select multiple faces: Press key "S" + Shift
@@ -1202,7 +1202,7 @@ Click the button "Extract Faces"
 
 <p>To select a region (using a sphere interactively)</p>
 <pre class="highlight plaintext"><code>Local Ops -&gt; toggle on the checkbox "Show Sphere"
-An sphere shows in the 3D view window of Display
+A sphere shows in the 3D view window of Display
 Move the cursor to the sphere
 Left press and move to change the location of the sphere
 Right press and move to change the size of the sphere
@@ -1238,7 +1238,7 @@ Delete selected cells: press key "Delete"
             Fill all holes for the model without extracting faces. Only a full model surface is obtained.
 
     Sel Lg Connected (global): 
-            Select largest connected surface area on the model and combine them to onw full model surface, remove the rest area.
+            Select largest connected surface area on the model and combine them to one full model surface, remove the rest area.
 
     Remesh (global): 
             Click the button "Estimate Size" or provide a proper value for "Target edge size"
@@ -1345,7 +1345,7 @@ Click "OK"
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-<p>After the model is created, you should now be able to see one face named as &quot;wall-seg3d&rdquo; created for the model. The model surface may be not very desirable and don&rsquo;t flat faces for the vesseld ends. So we&rsquo;ll continiu to process this model.</p>
+<p>After the model is created, you should now be able to see one face named as &quot;wall-seg3d&rdquo; created for the model. The model surface may be not very desirable and not have flat faces for the vessel ends. So we&rsquo;ll continue to process this model.</p>
 
 <p><strong>Smooth</strong></p>
 <pre class="highlight plaintext"><code>Global Ops -&gt; WS Smooth -&gt; Click the button "Smooth"
