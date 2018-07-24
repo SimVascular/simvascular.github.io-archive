@@ -202,7 +202,7 @@
 
 <p><strong>SV Simulation</strong> tool can solve the three-dimensional incompressible Navier-Stokes equations in an arbitrary domain, generally a vascular model reconstructed from image data. This is a complex subject with extensive underlying theory, and therefore this document will focus mainly on the practical aspects of simulation and analysis. </p>
 
-<p><strong>Notice</strong>: To get full functions from the Simulation tool, it uses three solvers: <strong>Presolver (svPre), Flowsolver (svSolver), Postsolver (svPost)</strong>. Normally, SimVascular already includes the solvers and can find them automatically. Users don&rsquo;t need to set up the solvers. However, in case SimVascular can&rsquo;t find them while users are using the Simulation tool, refer to <a href="#solverconfiguration">Solver Configuration</a>.</p>
+<p><strong>Notice</strong>: To get full functions from the Simulation tool, it uses three solvers: <strong>Presolver (svPre), Flowsolver (svSolver), Postsolver (svPost)</strong>. Normally, SimVascular already includes the solvers and can find them automatically. User don&rsquo;t need to set up the solvers. However, in case SimVascular can&rsquo;t find them while users are using the Simulation tool, refer to <a href="#solverconfiguration">Solver Configuration</a>.</p>
 
 <p>The <strong>svSolver</strong> evolved from the academic finite element code PHASTA (Parallel, Hierarchical, Adaptive, Stabilized, Transient Analysis), developed mainly at RPI (Rensselaer Polytechnic Institute, Troy, NY) by Professor Kenneth Jansen. This code was in turned inspired by the Stabilized Finite Element theory developed by Professor Thomas J.R. Hughes during his Stanford years.</p>
 
@@ -249,7 +249,7 @@
 
 <p>We start off with the files coming from the <a href="/docsMeshing.html">meshing</a> of the analysis: these files contain nodal and connectivity information for the finite element mesh, located in the the folder <em>mesh-complete/mesh-surfaces/</em>.</p>
 
-<p><strong>svPre</strong> is the preprocessor for <strong>svSolver</strong>. The input data files to svPre contain a complete description of the discrete model: nodal coordinates, element connectivity, element adjacency information and connectivity of boundary nodes and elements. The <strong>svPre</strong> program can be called either from the command line (in terminal) or the Simulation tool (in GUI). The input data files for <strong>svPresolver</strong> are created from the mesh. They are organized as shown in the example below.</p>
+<p><strong>svPre</strong> is the preprocessor for <strong>svSolver</strong>. The input data files to svPre contain a complete description of the discrete model: nodal coordinates, element connectivity, element adjacency information and connectivity of boundary nodes and elements. The <strong>svPre</strong> program can be called either from the command line (in terminal) or the Simulation tool (in GUI). The input data files for <strong>svPresolver</strong> are created from the meshe. They are organized as shown in the example below.</p>
 
 <figure>
   <img class="svImg svImgMd" src="documentation/flowsolver/imgs/meshfiles.png">
@@ -473,11 +473,11 @@ Click "OK"
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-<p>Now a new data node “steady” for the job is created under the data node &ldquo;Simulations&rdquo; in Data Manager. Double click the data node “steady&quot; and the tool &ldquo;SV Simulation” automatically shows up. The new job is empty and has not created input and data files yet. </p>
+<p>Now a new data node “steady” for the job is created under the data node &ldquo;Simulations&rdquo; in Data Manager. Double click the data node “steady&quot; and the tool &ldquo;SV Simulation” automatically shows up. The new job is empty and has not create input and data files yet. </p>
 </section>
     <section id="basic" class="group"><h2>Basic Parameters</h2>
 
-<p>Basic parameters include fluid material properties, and initial conditions, which are some basic infor to be used for Presolver and Flowsolver. Here we use the defult values (in CSG units). Initial pressure is &ldquo;0&rdquo;. Initial velocities (vx, vy, vz) is &ldquo;0 0 0&rdquo;.</p>
+<p>Basic paramters include fluid material properties, and initial conditions, which are some basic infor to be used for Presolver and Flowsolver. Here we use the defult values (in CSG units). Initial pressure is &ldquo;0&rdquo;. Initial velocities (vx, vy, vz) is &ldquo;0 0 0&rdquo;.</p>
 
 <figure>
   <img class="svImg svImgXl"  src="documentation/flowsolver/imgs/basic.png"> 
@@ -643,11 +643,11 @@ Click "OK"
 Type: Rigid
 </code></pre>
 
-<p>SimVascular also has options like &ldquo;Deformable(Constance)&rdquo; and &ldquo;Deformable(Variable)&rdquo;. We will explain them in Examples 3 and 4.</p>
+<p>SimVascular also have options like &ldquo;Deformable(Constance)&rdquo; and &ldquo;Deformable(Variable&rdquo;. We will explain them in Example 3 and 4.</p>
 </section>
     <section id="solverparameters" class="subgroup"><h2>Solver Parameters</h2>
 
-<p>There are many parameters for flow solver, but you are only required to set explicitly a few of them. Advanced paramters are optional. To check out the meaning of all the parameters, refer to <a href="/docsFlowSolver.html#solverinp">appendix</a>.</p>
+<p>There are many parameters for flow solver, but only a few is required to set explicitly. Advanced paramters are optional. To check out the meannin of all the parameters, refer to <a href="/docsFlowSolver.html#solverinp">appendix</a>.</p>
 <pre class="highlight plaintext"><code>Number of Timesteps: 200
 Time Step Size: 0.03
 Number of Timesteps between Restarts: 10
@@ -689,7 +689,7 @@ $$</p>
 
 <h3>Output Control Block</h3>
 
-<p><strong>Number of Timesteps between Restarts: 10</strong> - This line tells the solver how often it should save solution files. In this problem, you are really calculating $200$ solutions to the problem at $200$ different time points, but in general you do not want to save a solution file for every single time step. Keep in mind that two consecutive solutions are only $\Delta t = 0.03$ seconds apart! In this line, we are asking the solver to save one in every $10$ files. Therefore, the output files of the solver will look like this: restart.0.*, restart.10.*, restart.20.*, restart.30.*, &hellip;., restart.190.*, restart.200.*</p>
+<p><strong>Number of Timesteps between Restarts: 10</strong> - This line tells the solver how often it should save solution files. In this problem, you are really calculating $200$ solutions to the problem at $200$ different time points, but in general you do not want to save a solution file for every single time step. Keep in mind that two consecutive solutions are only $\Delta t = 0.03$ seconds apart! In this line, we are asking the solver to save every other $20$ files. Therefore, the output files of the solver will look like this: restart.0.*, restart.10.*, restart.20.*, restart.30.*, &hellip;., restart.190.*, restart.200.*</p>
 
 <p><br></p>
 
@@ -716,7 +716,7 @@ $$</p>
 <ul>
 <li><strong>geombc.dat.1</strong>: containing mesh info and boundary conditions specified in the problem, created by presolver</li>
 <li><strong>restart.0.1</strong>: containing initial conditions for our problem, , created by presolver</li>
-<li><strong>numstart.dat</strong>: contains a number <strong>0</strong>. This number is used by the solver to identify the restart file that should be used as initial condition.</li>
+<li><strong>numstart.dat</strong>: contains a numberr <strong>0</strong>. This number is used by the solver to identify the restart file that should be used as initial condition.</li>
 <li><strong>bct.dat</strong>: containing time-dependent velocity vectors at the inflow face of the model according to a prescribed flow wave coming from a *.flow file. See <a href="#bctfile">this section</a>.</li>
 <li><strong>solver.inp</strong>: providing further info for flowsolver, specifying parameters such as time step size, number of time steps, number of nonlinear iterations, boundary condition control, etc. A detailed description is  presented in <a href="#solverinp">this section</a>.</li>
 </ul>
@@ -789,6 +789,8 @@ Click the button  "Run Job"
 restart.0.1 =&gt; restart.0.1, restart.0.2, ..., restart.0.8
 </code></pre>
 
+<p>At the same time, the solver copies all these files to a newly created folder called <strong>8-procs_case/</strong> under the project folder, and this is where all the output files of the analysis will be written to. In general, if you launch a <strong>n</strong> processor job, all the files will be copied to a <strong>n-procs_case/</strong> folder.</p>
+
 <p>During the job running, the progress of simualtion is shown at &ldquo;Job Status&rdquo; and the status bar at the the bottom of the main window:</p>
 
 <figure>
@@ -803,7 +805,7 @@ restart.0.1 =&gt; restart.0.1, restart.0.2, ..., restart.0.8
 Click "Stop Simulation" in the popup menu   
 </code></pre>
 
-<p>After the simulation is finished. A dialog pops up to inform that the job is done. You can click the button &ldquo;Show Details&hellip;&rdquo; to get more info about the simulation progress. You can also check the simulation progress by open the file &ldquo;histor.dat&rdquo; in the folder &ldquo;steady&rdquo;. It contains containing details that allows to evaluate how well your numerical simulation is doing. Here’s a brief description of what each of those columns means.</p>
+<p>After the simulation is finished. A dialog pops up to inform that the job is done. You can click the button &ldquo;Show Details&hellip;&rdquo; to get more info about the simulation progress. You can also check the simulation progress by open the file &ldquo;histor.dat&rdquo; in the folder &ldquo;8-procs_case&rdquo;. It contains containing details that allows to evaluate how well your numerical simulation is doing. Here’s a brief description of what each of those columns means.</p>
 
 <table class='table borderless' id="solverTable">
 <thead>
@@ -1137,13 +1139,13 @@ Run "mpiexec -n [number of processes] [solver path]/svsolver" or you need create
 <h3>Generating the *.vip and *.vtu files in SimVascular</h3>
 
 <p>In order to generate the visualization files (<em>.vip) and (</em>.vtu) files:</p>
-<pre class="highlight plaintext"><code>    Go to "Convert Results"
-    Result Dir: select the running dir .../Simulations/steady/
+<pre class="highlight plaintext"><code>    Goto "Export Results"
+    Result Dir: select the running dir .../Simulations/steady/8-procs_case
     Start:  the initial restart file number (0)
     Stop: the final restart file number (200)
     Increment: the increment between restart files (10). 
     Toggle on "Volume Mesh" and "Surface Mesh"
-    Click the button "Convert..."
+    Click the button "Export..."
     Choose a directory for exporting
 </code></pre>
 
@@ -1154,7 +1156,7 @@ Run "mpiexec -n [number of processes] [solver path]/svsolver" or you need create
   <figcaption class="svCaption" >Creating VTU result files from <b>svSolver</b> restart files.</figcaption>
 </figure>
 
-<p>After converting is done, there are also four text files created in the exported folder if &ldquo;Calculate Flows&rdquo; is toggled on.</p>
+<p>After convering done, there are also four text files created in the exported folder if &ldquo;Calculate Flows&rdquo; is toggled on.</p>
 <pre class="highlight plaintext"><code>  all_results-flows.txt: flowrate for each face with time steps
   all_results-pressures.txt: pressure for each face with time steps
   all_results-averages.txt: the average, maximum, minimum values of presure, flowrate for each face
@@ -1272,7 +1274,7 @@ Click the button "Run Job"
 
 <p>To export results:</p>
 <pre class="highlight plaintext"><code>Goto "Convert Results"
-Result Dir: select the running dir .../Simulations/steady\_rcr/
+Result Dir: select the running dir .../Simulations/steady\_rcr/8-procs_case
 Start:  the initial restart file number (0)
 Stop: the final restart file number (500)
 Increment: the increment between restart files (20). 
