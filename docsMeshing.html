@@ -60,7 +60,8 @@
                       <li role="presentation"><a role="menuitem" tabindex="-1" href="docsModelGuide.html"><b><span class="icon ion-settings"></span> Modeling</b></a></li>
                       <li role="presentation"><a role="menuitem" tabindex="-1" href="docsMeshing.html"><b><span class="icon ion-ios7-keypad"></span> Meshing</b></a></li>
                       <li role="presentation"><a role="menuitem" tabindex="-1" href="docsFlowSolver.html"><b><span class="icon ion-play"></span> Simulation</b></a></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docssvFSI.html"><b><span class="icon ion-play"></span> svFSI</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docssvFSI.html"><b><span class="icon ion-plus-round"></span> svFSI</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsGenBC.html"><b><span class="icon ion-refresh"></span> GenBC</b></a></li>
                     </ul>
                   </li>
 
@@ -164,6 +165,7 @@
 
 <h3>Download</h3>
 <a href="https://simtk.org/frs/download_confirm.php/file/5113/DemoProject.zip?group_id=930">Demo Project</a></ul>
+
 
 
 
@@ -351,7 +353,7 @@ Click the button "Run Mesher".
 <pre class="highlight plaintext"><code>Toggle off "Radius-Based Meshing"
 Go to "Local Size"
 All the faces are listed in the table.
-Set loca size 0.1 for wall\_right_iliac
+Set local size 0.1 for wall\_right_iliac
 Or you can use table menu to set if there are many faces to set
 Click the button "Run Mesher"
 </code></pre>
@@ -420,7 +422,7 @@ If you have multiple regions of interest for mesh refinement, you can move the s
 <pre class="highlight plaintext"><code>Go to Adapt
 Options: Use One Step
 Result File(vtu): all_results.vtu, from a previous simulation. It is created as you convert previous simulation results when "As Single File" is on. 
-Step Number: Give a specifi time step number of the previous simulation
+Step Number: Give a specific time step number of the previous simulation
 Error Reduction Factor: (0~1)Value multiplied by the average interpolation error in order to get a target uniform local error distribution. This should be a value between zero and one. A smaller factor will attempt to achieve a mesh with smaller error.
 Global Min Edge Size: Specify a minimum target edge size. No edge size will be smaller than this size, even if the adaptor identifies that solution needs a edge length smaller than this.
 Global Max Edge Size: Specify a maximum target edge size. No edge size will be larger than this size, even if the adaptor identifies that the solution does not require an edge length this small.
@@ -541,6 +543,7 @@ If you have not built from source, the best option is to try a smaller mesh edge
 </section>
 
 </div>
+
 
 
 

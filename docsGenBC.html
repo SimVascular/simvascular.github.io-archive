@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SimVascular Docs</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+
+    <link href="css/shop-item.css" rel="stylesheet" type="text/css" />
+
+    <link href="css/codestyle.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="font-awesome-4.1.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
+
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                <i class="fa fa-bars" id="barIcon"></i>
+              </button>
+                <a class="navbar-brand" id="brandName" href="index.html">
+                  <img src="img/svlogo/svLogoSmallText.png" alt="...">
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+
+                  <!-- USER GUIDES -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b><span class="fa fa-user"></span> User Guides</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsInstallation.html"><b><span class="fa fa-sign-in fa-rotate-90"></span> Installation</b></a></li>
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsQuickGuide.html"><b><span class="icon ion-ios7-bolt"></span> Quick Guide</b></a></li>
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsModelGuide.html"><b><span class="icon ion-settings"></span> Modeling</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsMeshing.html"><b><span class="icon ion-ios7-keypad"></span> Meshing</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsFlowSolver.html"><b><span class="icon ion-play"></span> Simulation</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docssvFSI.html"><b><span class="icon ion-plus-round"></span> svFSI</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsGenBC.html"><b><span class="icon ion-refresh"></span> GenBC</b></a></li>
+                    </ul>
+                  </li>
+
+                  <!-- CLINCAL CASES -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b><i class="fa fa-stethoscope"></i> Clinical Cases</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase3.html"><b><span class="fa fa-user-md"></span> Coronary Normal</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase1.html"><b><span class="fa fa-user-md"></span> Aortofemoral Normal - 1</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase2.html"><b><span class="fa fa-user-md"></span> Aortofemoral Normal - 2</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase4.html"><b><span class="fa fa-user-md"></span> Healthy Pulmonary</b></a></li>
+                    </ul>
+                  </li>
+
+                  <!-- DEVELOPER GUIDES -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b><span class="fa fa-caret-square-o-right"></span> Developer Guides</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsCompile.html"><b><span class="fa fa-file-text-o"></span> Compile Source Code</b></a></li>
+                    </ul>
+                  </li>
+
+                  <!-- svCOMMUNITY -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b><i class="fa fa-users"></i> svCommunity</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/forums/viewforum.php?f=188"><b><span class="fa fa-users"></span> Public Forum</b></a></li>
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/mailman/listinfo/simvascular-news"><b><span class="fa fa-sign-in"></span> Join News Mailing List</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/pipermail/simvascular-news/"><b><span class="fa fa-pencil-square-o"></span> News Mailing List Archive</b></a></li>
+                    </ul>
+                  </li>
+
+                  <!-- REFERENCES -->
+                  <li>
+                    <a href="docsRefs.html" id="dropdownMenu1" >
+                      <b><span class="icon ion-document-text"></span>References</b>
+                    </a>
+                  </li>
+
+                  <!-- Archives -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b> Archives</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="archiveQuickGuideSV2.html"><b>SimVascular 2.0</b></a></li>
+                    </ul>
+                  </li>
+
+                    <!-- <li><a href="docsQuickGuide.html" id="btnQuickGuide"><b><span class="icon ion-ios7-bolt"></span> Quick Guide</b></a></li>
+                    <li><a href="docsModelGuide.html" id="btnModelGuide"><b><span class="icon ion-settings"></span> Modeling</b></a></li>
+
+                    <li><a href="docsMeshing.html" id="btnMeshing"><b><span class="icon ion-ios7-keypad"></span> Meshing</b></a></li>
+                    <li><a href="docsPresolver.html" id="btnPresolver"><b><span class="icon ion-log-in"></span> svPre</b></a></li>
+                    <li><a href="docsFlowSolver.html" id="btnFlowSolver"><b><span class="icon ion-play"></span> svSolver</b></a></li>
+                    <li><a href="docsRefs.html" id="btnRefs"><b><span class="icon ion-document-text"></span> References</b></a></li>
+                    <li><a href="clinicalCase1.html" id="btnRefs"><b>Case Studies</b></a></li> -->
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <!--Nav Bar -->
+<div class="row">
+    <div class="col-xs-1 col-sm-1 hidden-md hidden-lg">
+    </div>
+    <!-- ONE COLUMN OF SPACE -->
+    <nav class="hidden-xs hidden-sm col-md-2 col-lg-2 bs-docs-sidebar">
+
+
+
+
+
+
+
+        <ul id="sidebar" class="nav nav-stacked fixed manGenBC"> <!--Nav Bar -->
+<p><h3>GenBC Tutorial</h3></p>
+<li><a href="#intro">Introduction</a></li>
+<li><a href="#sv_prep">Preparing SV files for <br> GenBC Simulations</a></li>
+<li><a href="#genbc_setup">Setting up GenBC</a></li>
+<li><a href="#final_steps">Compiling GenBC and <br> Running Simulation</a></li>
+<li><a href="https://simtk.org/frs/download_confirm.php/latestzip/2031/GenBCTutorialExampleFiles-latest.zip?group_id=188">Example project and files</a></li>
+</ul>
+
+
+
+    </nav>
+
+    <!--Main Content -->
+    <div class="col-xs-10 col-sm-10 col-md-9 col-lg-9" id="manualContent">
+
+      <!-- ACTUAL CONTENT -->
+
+
+
+
+
+
+
+        <div class="manGenBC"><section id="intro" class="group"><h2>Introduction</h2>
+
+<p>This tutorial is for users who wish to use the GenBC framework for setting inlet and outlet boundary conditions in computational fluid dynamics simulations in SimVascular. It will cover all of the settings and parameters that need to be specified. We will follow a simple example of a cylinder with a prescribed Dirichlet inflow and RCR outflow, which should cover the basics needed to extend the framework to most situations. Additional notes will be included to explain any additional steps needed to extend the framework for more complex models. If you have any questions or if anything is unclear, please do not hesitate to contact us through the public forums!</p>
+
+<h2>What is GenBC?</h2>
+
+<p>Short for “General Boundary Conditions”, GenBC offers users a framework to customize the inflow and outflow boundary conditions of their SimVascular model beyond the built-on boundary conditions (i.e. prescribed inflow, resistance outflow, RCR Windkessel, and open-loop Coronary). It allows users to craft an arbitrary lumped parameter network (LPN) layout to suit their application. Some common examples include a lumped parameter heart model that models contraction of the heart chambers to use as an inlet boundary condition, sophisticated models of the downstream circulation for various areas of the body such as the legs and upper body, or a closed-loop formulation where all outflow of the SimVascular model returns back to the inflow after passing through the veins, heart, and pulmonary arteries!</p>
+
+<p>The current implementation of GenBC is in the Fortran programming language. Users will first have to derive the governing ordinary differential equations for their lumped parameter layout of choice, and implement these equations in Fortran source code. As such, some programming experience with Fortran is recommended, especially if the user wants to use complex and sophisticated lumped parameter layouts. Once the equations and parameters have been implemented in the Fortran code, the code must be compiled to produce a GenBC executable program. This program will then interact with the SimVascular flowsolver during execution to provide the appropriate boundary conditions.</p>
+
+<p>We are currently working on a graphical user interface which will allow users to easily specify a lumped parameter layout using an interactive plugin. This should greatly simplify the user experience and allow for more rapid iteration on different lumped parameter layouts for cardiovascular simulation.</p>
+
+<h2>Cylinder RCR example</h2>
+
+<p>For this tutorial, we will use a simple example of a cylinder with a prescribed inflow and RCR boundary conditions. While these simple boundary conditions can be accomplished using the built-in features in SimVascular, we felt that they provide a good test case that provides a gentle introduction to all the details that goes into implementing a GenBC simulation. A graphical representation of our test case is illustrated in the figure below. You may also find the accompanying SimVascular project and GenBC source files in a link on the left hand side toolbar.</p>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/genbc/imgs/rcr_cylinder.jpeg">
+  <figcaption class="svCaption" >Cylinder with sinusoidal inflow and RCR outflow.</figcaption>
+</figure>
+</section>
+<section id="sv_prep" class="group"><h2>Preparing SimVascular solver files to interact with GenBC</h2>
+
+<p>We will assume at this point that you will have already built the geometry of your model and meshed it using the model construction pipeline in SimVascular. This tutorial will start right at the “Simulations” module. Create a new Simulation job by right-clicking the “Simulations” item in the Data Manager, then click “Create New Simulation Job”. Select the appropriate Model from the drop down menu and give it a name.</p>
+
+<p>Navigate through the various tabs to set your simulation parameters. We will skip over the majority of these settings in this tutorial to keep it focused on GenBC, but you can find detailed explanations about the Simulations module in the main documentation. </p>
+
+<p>We now focus our attention to the “Inlet and Outlet Bcs” tab. In this tab, you should see a list of all the caps of your model. The main task we want to accomplish here is to tag our caps as either a Dirichlet (i.e. flow) or Neumann (i.e. pressure). For caps where we want to specify flow, double-click the empty box in the “BC Type” column and select “Prescribed Velocities” from the drop-down menu. Now, double-click the name of the Dirichlet outlet to open up a new window with additional parameters.</p>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/genbc/imgs/velocities_window.png">
+  <figcaption class="svCaption" >Prescribed inflow settings window.</figcaption>
+</figure>
+
+<p>Here, we need to specify an analytic shape of the velocity profile (usually parabolic or plug), and a “template” .flow file (can just be a steady flow file. We have provided one as part of this tutorial). Even though the GenBC framework will compute the flows that will ultimately be applied on your model, SimVascular still needs to have some information about the desired velocity profile in the form of a bct.dat file. During execution, SimVascular will normalize the velocity profile on your Dirichlet inlets to have a flow of 1.0, then multiply the velocity profile by the flow that is computed in GenBC. Dirichlet flow caps are normally associated with caps directly connected to an inductor, or at caps where the user wants to directly specify a flow waveform that is either measured or adapted from literature. For the cylinder example, we want to specify the “inlet” face as a Dirichlet boundary condition. Set the BC Type to Prescribed Velocities, and set the Analytic Shape to parabolic. For the Flow rate entry, select the “template_flow.flow” file that we have also provided.</p>
+
+<p>For outlets where we want to specify a Neumann/pressure boundary condition, select “Resistance” for the BC Type and assign it a value of 0. These settings are merely a placeholder and will be updated shortly. Neumann-type boundary conditions are typically used for caps that interface directly with either a capacitor or a resistor. For our cylinder case, specify the “outlet” face as a Resistance boundary condition and set its Value to zero. When you are done, the Inlet and Outlet Bcs tab should look like this:</p>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/genbc/imgs/inlet_and_outlet_bcs.png">
+  <figcaption class="svCaption" >Inlet and outlet conditions.</figcaption>
+</figure>
+
+<p>After setting the wall properties and solver parameters, we need to create the data files for the simulation. Go to the “Create Files and Run Simulation” tab, select the appropriate mesh fro the drop down menu, and click “Create Data Files for Simulation”. If this step completes successfully, then navigate to your project directory using the file explorer on your machine. Inside the Simulations folder, you should see a folder corresponding to the simulation job you just created. Inside that folder should be various files and folders:</p>
+<pre class="highlight plaintext"><code>1. mesh-complete – Contains mesh information and discretization in VTK format files
+2. bct.dat and bct.vtp – Contains velocity profile information on your Dirichet caps
+3. .svpre file – Pre-solver script which instructs SimVascular how to prepare the simulation files
+         from your mesh. Contains the ID numbers for mesh surfaces (used later)
+4. geombc.dat.1 – Simulation file that contains geometry information
+5. inlet.flow - .flow file which has the template flow information at your inlet face(s)
+6. numstart.dat – Dummy file which tells the solver on which timestep to start on
+7. restart.0.1 – Contains initial conditions for pressure and velocity in your simulations
+8. solver.inp – Solver settings file
+</code></pre>
+
+<p>We will need to make some slight modifications to the solver.inp file to facilitate the use of GenBC. Open solver.inp with your favorite text editor, and scroll down to the section right below “Step Construction”. You should see a list of three commands that all have to do with Resistance boundary conditions:</p>
+<pre class="highlight plaintext"><code>Number of Resistance Surfaces: 1
+List of Resistance Surfaces: 3
+Resistance Values: 0
+</code></pre>
+
+<p>Recall that we specified Resistances surfaces as placeholders for our Neumann surfaces. We can thus delete these from the solver.inp.</p>
+
+<p>We next need to add commands to the solver.inp to instruct SimVascular to look for GenBC and to properly look for all the surfaces. First, add the following commands to your solver.inp right under the Step Construction:</p>
+<pre class="highlight plaintext"><code>Find the GenBC Inside the Running Directory: True
+Number of Timesteps for GenBC Initialization: 0
+</code></pre>
+
+<p>These commands will tell SimVascular to look for a GenBC file to specify boundary conditions. Next, we need to include a block of commands to specify the Dirichlet surfaces:</p>
+<pre class="highlight plaintext"><code>Number of Dirichlet Surfaces: 1
+List of Dirichlet Surfaces: 2
+</code></pre>
+
+<p>The first command, “Number of Dirichlet Surfaces”, specifies the total number of caps in your model where we want to supply a Dirichlet boundary condition from GenBC. The next command, “List of Dirichlet Surfaces”, is a list of all the surface IDs where a Dirichlet surface will be applied. The surface ID numbers are automatically generated by SimVascular when creating the simulation files. In this cylinder case, the inlet is tagged with an ID number of 2, so we put 2 in the list. </p>
+
+<p>You can check the ID numbers for your surfaces by opening the .svpre file mentioned earlier in a text editor. Inside the .svpre file you should see commands named “set<em>surface</em>id_vtp”, followed by a path to a mesh surface, followed by a number. Our cylinder example produced the following ID numbers in the .svpre file:</p>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/genbc/imgs/surface_ids.png">
+  <figcaption class="svCaption" >Surface IDs in .svpre file.</figcaption>
+</figure>
+
+<p>Here, you can see that the exterior of our mesh is tagged with ID 1, the inlet is tagged with ID 2, and the outlet is tagged with ID 3. This confirms our selection of “2” in the List of Dirichlet Surfaces.</p>
+
+<p>If you have more than one surface that needs to be included in the List of Dirichlet Surfaces, separate their ID numbers with a space like so:</p>
+<pre class="highlight plaintext"><code>List of Dirichlet Surfaces: 2 4 5 6
+</code></pre>
+
+<p>We now have to add a similar block for our Neumann surfaces:</p>
+<pre class="highlight plaintext"><code>Number of Neumann Surfaces: 1    
+List of Neumann Surfaces: 3 
+</code></pre>
+
+<p>Since our outlet has ID 3, we use that number in the List of Neumann Surfaces. Like before, if you have multiple Neumann surfaces you can specify their IDs numbers in the list separated by spaces.</p>
+
+<p>Finally, we need to make one more small adjustment. You should see a command called “Number of Coupled Surfaces” in the solver.inp. Change this number to the total number of Dirichlet AND Neumann surfaces in your model. This is to indicate that these surfaces are coupled in the sense that the flow and pressure have the potential to be coupled in the GenBC formulation. For this example, the number of coupled surfaces is 2 because we have 1 Dirichlet surface and 1 Neumann surface.</p>
+
+<p>That is it for the edits to the solver.inp. After making these changes, you should have the following lines of code in your solver.inp:</p>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/genbc/imgs/solver_lines.png">
+  <figcaption class="svCaption" >Configured solver.inp for GenBC simulation of an RCR cylinder.</figcaption>
+</figure>
+</section>
+<section id="genbc_setup" class="group"><h2>Setting up the GenBC</h2>
+
+<p>Now that the solver files are out of the way, now it is time to implement the boundary condition equations into GenBC. In our included files, you should see a folder called “GenBC_files”. Inside this you should find three Fortran source files: GenBC.f, Modules.f, and USER.f. You should also see Makefile to assist you in compiling.</p>
+
+<p>All of the implementation will be done in USER.f. Open this file with a text editor. We will proceed down this code and explain it in blocks. The first block that the user can change is the “unit conversion” block:</p>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/genbc/imgs/unit_conversion_block.png">
+  <figcaption class="svCaption" >Unit conversion block of GenBC.</figcaption>
+</figure>
+
+<p>In this block, you can specify conversion factors between pressure and flow in the GenBC code, and pressure and flow in the SimVascular flowsolver. In general, SimVascular models and flowsolvers use the CGS unit system (centimeters-grams-seconds). The units for pressure and flow in this system are dyne/cm^2 and cm^3/s, respectively. In the GenBC framework, it is often convenient to work with “clinical” units of pressure (i.e. mmHg). The conversion factor between mmHg and dyne/cm^2 is 1334 (dyne/cm^2) / mmHg, hence the value of 1.334D3 for the pConv variable. The clinical unit for flow is mL/s, which is equivalent to cm^3/s, so we leave the qConv variable at 1.0. If you want to develop your LPN model using CGS units for the parameter values, then you can change both Conv variables to 1.0. Note that the system you will choose to work with will affect the values of the parameters in your LPN network, and the values for the initial conditions in your LPN network as will be described below.</p>
+
+<p>The pCorr and qCorr variables are seldom used and can be left as .FALSE.
+The next block is the inputs block:</p>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/genbc/imgs/inputs_block.png">
+  <figcaption class="svCaption" >Inputs block of GenBC.</figcaption>
+</figure>
+
+<p>In this block, you must specify the number of Dirichlet and Neumann surfaces that match you specified earlier in your solver.inp. Next, you need to specify the number of unknowns. This is the total number of state variables that you will solve for in your boundary condition model. In this case, we have just a simple model with 2 unknowns for our 2 caps, so we set this number to 2. But more sophisticated models will often involve solving for more unknowns than there are caps. This is common for heart model LPNs, where the volumes, pressures, and flows need to be computed as state variables for each chamber of the heart. But these “internal variables” do not necessarily get applied as boundary conditions to the 3D model.</p>
+
+<p>The next parameter is the number of sub time steps used in time-integrating the system of ordinary differential equations to the next time step. Because the boundary condition model is often significantly cheaper than computational fluid dynamics, we can afford to iterate the boundary condition model at a much smaller time step size. This parameter specifies how many timesteps will be used to integrate the boundary condition model IN BETWEEN time steps of the 3D model. 100 is a good number here and you will likely never have to change this.</p>
+
+<p>Nxprint specifies the number of extra information you would like to output. This will be further explained later, but for now we can leave this as 3.</p>
+
+<p>The next block is the initial conditions block:</p>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/genbc/imgs/IC_block.png">
+  <figcaption class="svCaption" >Initial conditions block of GenBC.</figcaption>
+</figure>
+
+<p>Because the boundary condition model is comprised of a system of ordinary differential equations, we need to specify the initial values for all the state variables. In this example, we have defined the first state variable to be the inflow to the model, and give it an initial condition of -10 mL/s (the negative is to denote inflow, rather than outflow of the model). The second state variable is the pressure on the RCR capacitor, which we initialize to 90 mmHg.</p>
+
+<p>The next block is the surface mapping block.</p>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/genbc/imgs/srftox_block.png">
+  <figcaption class="svCaption" >Surface mapping block of GenBC.</figcaption>
+</figure>
+
+<p>In this block, we specify the mapping between state variables in the boundary condition model and surface IDs in the SimVascular simulation. Recall that in our solver.inp we had to specify a list of the surface IDs for the Dirichlet and Neumann surfaces. These two vectors (srfToXdPtr and srfToXPtr) are the corresponding lists in the boundary condition model. The elements of these vectors are the state variable indices that will be applied as boundary conditions on the model.</p>
+
+<p>Take the first vector as an example. This vector is called “srfToXdPtr” and specifies the mapping between state variables and the Dirichlet surfaces of the SimVascular model. Recall from the section on the initial conditions that we defined the first state variable (i.e. index 1) to correspond to the flow at the cylinder inlet. Hence, the vector “srfToXdPtr” has a 1 to indicate this.</p>
+
+<p>The second vector “srfToXPtr” specifies the mapping between state variables and the Neumann surfaces in our SimVascular model. Since we are using the second state variable for the RCR capacitance pressure, we put a 2 in this list.</p>
+
+<p>Additional entries can be added to these vectors for more complex models separated by commas:</p>
+<pre class="highlight plaintext"><code>srfToXdPts = (/1,4,5,6/)
+</code></pre>
+
+<p>A good safety check at this point is the make sure the vectors in this block have the exact same length as the corresponding lists of surface IDs in solver.inp. SrfToXdPtr should have the same length as “List of Dirichlet Surfaces” in solver.inp, and srfToXPtr should have the same length as “List of Neumann Surfaces”. Each element in the USER.f lists should have a matching pair in the solver.inp lists. To recap for this example, state variable 1 gets applied to surface ID 2 as a Dirichlet boundary condition, and state variable 2 gets applied to surface ID 3 as a Neumann boundary condition.</p>
+
+<p>The final block in USER.f is the equations block:</p>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/genbc/imgs/equations_block.png">
+  <figcaption class="svCaption" >Equations block of GenBC.</figcaption>
+</figure>
+
+<p>In this block, we specify parameter values, write out the governing differential equations, and specify any extra outputs we would like to be printed out. We first define the parameters of our RCR outlet circuit. We need to specify three parameters: proximal resistance Rp, capacitance C, and distal resistance Rd. As is typical of Windkessel models, the distal resistance is significantly higher. Here, we use a simple 10:1 ratio, which is fairly standard. Typically, the values of these parameters are specified or tuned such that the simulation results match either population average data or patient-specific data. Here, we just use nominal values for this example. Note the Fortran method for specifying variables. First the type and name of the variables must be declared:</p>
+<pre class="highlight plaintext"><code>REAL(8) Rp, C, Rd
+</code></pre>
+
+<p>Then, the values can be set on subsequent lines. Also note how all non-comment lines of code start in column 7, as is required by the Fortran programming language.</p>
+
+<p>Next, we specify the governing differential equations for our LPN model. These are saved in the output vector “f”. Note that “f” has length equal to the number of unknowns. Since we have 2 unknowns in this cylinder model, we need to specify a differential equation for both. For our inflow (i.e. state variable 1) recall that we set an initial condition of 10 mL/s. Just for the sake of this example, let’s apply a simple sinusoidal oscillation such that we get a little unsteadiness in our result. We apply a time derivative of cos(15t) to the inflow. Note that if a steady inflow is desired, simply set the time derivative to 0. This will cause the boundary condition model to maintain the initial condition.</p>
+
+<p>For the RCR circuit, we apply the differential equation governing the pressure evolution on the capacitor. Assuming an inflow of Q into the capacitor, P is the current pressure on the capacitor, and applying Kirchoff’s laws of current and voltage conservation, the time derivative of the pressure is:</p>
+
+<figure>
+  <img class="svImg svImgSm" src="documentation/genbc/imgs/dpdt.jpg">
+  <figcaption class="svCaption" >RCR equation for pressure.</figcaption>
+</figure>
+
+<p>This is reflected in the code in the expression for f(2). Finally, we need to add an offset for the proximal resistance. The offset serves a purpose of adding to or subtracting from a state variable before it gets applied as a boundary condition for the fluid dynamics simulation. In this case, the pressure that is applied on the simulation needs to be offset by the action of the proximal resistance. This offset pressure is simply the flow into the capacitor multiplied by the proximal resistance.</p>
+
+<p>A quick explanation about the P and Q variables. Note how these are inputs to the FINDF subroutine we have been modifying. These are pressures and flows that are computed by the fluid dynamics simulation and passed to the boundary condition model as inputs. For Dirichlet boundary conditions, SimVascular computes an area-averaged pressure across that face and passes it to P vector. For Neumann boundary conditions, SimVascular computes the flow out of that outlet and passes it to Q vector. For most coupled boundary conditions, these P and Q values are needed as inputs. Take our RCR outlet condition for example. It needed the flow out of the outlet face (i.e. Q(1)) in order to specify the differential equation for the pressure. This is what is meant by “coupled” boundary conditions, where the pressure and flow at the caps of our model are intimately linked through the boundary condition model. We did not make use of the P vector in this case since we are using a special case of a completely prescribed inflow. But this will be used for more general Dirichlet boundary conditions.</p>
+
+<p>Another quick explanation on the “x” variable. This vector contains the current values for the state variables. In this case, x(1) contains the current value of flow at the inflow, and x(2) contains the current value of pressure on the RCR capacitor. The current values of the state variables are often used in numerical solutions of systems of ordinary differential equations, so this x variable is how you access them. In this example, we only utilized the current pressure on the capacitor in specifying f(2), but more complex models will make more use of the “x” variable.</p>
+
+<p>We recommend writing out the governing equations using a pencil and paper before implementing them in the Fortran code. This will keep you organized and ensure that the equations are being derived and implemented in the code correctly.</p>
+
+<p>Finally, we can specify additional outputs that we would like to see in the Xprint vector. The variables specified here will appear in the outputs. This part is completely optional, but it can be useful to print out additional variables when debugging. Recall in the input block that we specified 3 Xprints, which will allocate 3 slots in the Xprint vector. You can raise this number if you would like to print out more. For this case, we have printed out three variables: the current time (t), the flow at the Neumann outlet (Q(1)), and the value of the proximal resistance offset.</p>
+</section>
+<section id="final_steps" class="group"><h2>Compiling GenBC</h2>
+
+<p>Once all of the settings and equations have been set in USER.f, you will need to compile the code. Navigate to the folder on your Linux or Mac machine using the terminal and type “make”. If the code compiled without any errors, you should see a GenBC executable file in the current folder (note that this is NOT GenBC.o or GenBC.f). If it does not appear, then you will need to fix any syntax errors that the compiler wishes to fix. You can sometimes get some warnings depending on the compiler, but you can mostly ignore these. The warning to pay attention to is the warning about uninitialized variables, where you have declared a variable for use but did not specify a value.</p>
+
+<h2>Running a flow simulation and checking results</h2>
+
+<p>We now have all the files we need to run a simulation with GenBC. In particular, we will need the following files: bct.dat, geombc.dat.1, numstart.dat, restart.0.1, solver.inp, and GenBC. Once you have all of these in the same folder, you can run svSolver from there. Once the simulation starts, you should see a file named “AllData” that gets produced. This is an output file produced by GenBC that prints out the values of the state variables as a function of time, as well as the additional Xprint outputs we specified earlier.</p>
+
+<p>If you are running your simulation on a machine other than your own (i.e. a supercomputing cluster) you MUST recompile GenBC on that machine. You have to compile GenBC with the same compilers as the system you are running the simulation on.</p>
+
+<p>This concludes the GenBC tutorial! Please reach out to us if anything is unclear or if you need assistance crafting your custom boundary condition model!</p>
+</section>
+</div>
+
+
+
+    </div>
+</div>
+
+
+    <!-- /.container -->
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container-fluid text-center">
+          <ul class="nav navbar-nav">
+            <li><a>Copyright &copy; SimVascular Development Team - 2017</a></li>
+          </ul>
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+    <script src="js/jquery-1.11.0.js" type="text/javascript"></script><script src="js/bootstrap.min.js" type="text/javascript"></script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+      });
+      $('body').scrollspy({
+        target: '.bs-docs-sidebar',
+        offset: 40
+      });
+    </script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-55333921-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <script type="text/javascript"
+      src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+</body>
+
+</html>
