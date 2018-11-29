@@ -3,40 +3,45 @@
 <br>
 ### Supported Versions ###
 	
-	Mac OS X 10.10 (tested)
-	Mac OS X 10.11 (tested)
-	Mac OS X 10.12 (tested)
+Mac OS X versions 10.11 or higher.
+
+	SimVascular is compiled on MacOS 10.11 and should be compatible with newer versions of MacOS. 
 
 <br>
 ### Installing SimVascular ###
 
-1. Launch the downloaded package and agree to the terms of service.
+1. Download the SimVascular MacOS installer from [SimTK](https://simtk.org/frs/index.php?group_id=188).
 
-2. Drag SimVascular into your Applications folder when this window opens.
+2. Double-click on the downloaded installation (.dmg) file.
+
+3. Agree to the terms of service.
+
+4. Drag the SimVascular application to the Applications folder.
 
 	<figure>
 	  <img class="svImg svImgXl"  src="documentation/installation/imgs/macDrag.png"> 
 	  <figcaption class="svCaption" ></figcaption>
 	</figure>
 
-3. Launch SimVascular through your Applications folder or Launchpad.
+5. Launch SimVascular through your Applications folder or Launchpad.
 
-		A dialog may popup when launching, saying: “SimVascular” can’t be opened because it is from an unidentified developer.”.
-		Go to System Preferences -> Security & Privacy -> General, click “Open Anyway”.
-		If it doesn't work, turn on  "Anywhere" for "Allow apps downloaded from"; After SimVascular launches, turn it back on to "Mac App Store and identified developers".
-		If it doesn't work either, try turn off Fire wall temporarily.
+		SimVascular is not a registered app with Apple so when you open it a warning dialog is displayed stating “SimVascular can’t be opened because it is from an unidentified developer.”. You can then open SimVascular by going to 'System Preferences>Security & Privacy>General' and click on “Open Anyway”.        
 
-4. SimVascular still provides the old GUI. If you want to launch SimVascular with the old GUI by default:
-
-		Open a terminal.
-		Run "touch ~/.simvascular_default_tcl" which creates an empty file.
-
-5. To run simulation, you need to install svSolver (<a href="https://simtk.org/project/xml/downloads.xml?group_id=188" target="_blank">download</a>).
-
-6. (Optional) You can also launch SimVascular using the Terminal. To install the SimvVascular command line tools run:
+6. Setup SimVascular to run from a terminal. (optional)
 
 		sudo /Applications/SimVascular.app/Contents/Resources/setup-symlinks.sh
 
-Notice: 
+		This creates a script called 'simvascular' in /usr/local/bin/ that can be executed from the command line.
 
-		svSolver is installed at /usr/local/sv/svsolver/yyyy-mm-dd
+<br>
+### Installing svSolver ###
+
+1. Download the svSolver MacOS installer.
+
+2. Double-click on the downloaded installation (.pkg) file.
+
+3. Follow the instructions.
+
+4. The solver is installed in /usr/local/sv/svsolver/yyyy-mm-dd
+
+

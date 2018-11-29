@@ -2,12 +2,13 @@
 
 1. Go to  <a href="https://simtk.org/project/xml/downloads.xml?group_id=188" target="_blank">SimVascular download webpage</a>.
 
-2. Login to SimTk or create a new account (if you haven’t done so).
+2. Login to SimTK. If you don't have a SimTK account you will need to create one.
 
-3. Click “Download Links” and choose the latest **SimVascular** installer for your operating system.
+3. From the SimVascular **Download links** menu select the installer for your operating system and version.
 
 4. List your intended use for the software and agree to the license agreement.
 
-5. If you need to run simualtion, please also download and install **svSolver** from the same website as above.
+5. You may also download **svSolver** and **svFSI** solvers from this same web page.
 
-Notice: if your operating system/version is not listed in our supported versions, SimVascular may not run on it. However, feel free to try it!
+Note: SimVascular is not guaranteed to work if installed on operating system versions not listed in the **Download links** menu.
+

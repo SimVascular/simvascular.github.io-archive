@@ -2,57 +2,142 @@
 
 <br>
 ### Supported Versions ###
-	
-	Ubuntu 14 (tested)
-	Ubuntu 16 (tested)
+
+Ubuntu 14.04
+
+	SimVascular requires a newer version of GLIBCXX than is shipped with Ubuntu 14.
+
+Ubuntu 16.04 and 18.04
+
+	No system updates should be required.
+
+Red Hat 7 / CentOS 7
+
+	Red Hat 7 releases are considered alpha with very limited testing.
+
+	CentOS 7 requires an updated compiler.
+
 
 <br>
-### Installing SimVascular ###
+### Installing SimVascular on Ubuntu 14.04 ###
 
-1. Install the SimVascular deb package. Notice: for Ubuntu1 16, you need to install Ubuntu Software Center before installing the deb package!
+1. Download the SimVascular Ubuntu installer from [SimTK](https://simtk.org/frs/index.php?group_id=188). 
 
-2. To launch SimVascular:
+2. Double-click on the downloaded installation (.deb) file.
 
-		Go to Unity Dash, search for "SimVascular"
+		SimVascular is installed in /usr/local/sv/simvascular/yyyy-mm-dd, where yyyy-mm-dd represents the SimVascular release date (e.g. 2018-11-25).
+
+3. Install the gcc-4.9 compiler to get a newer version of GLIBCXX.
+
+		% sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+		% sudo apt-get update
+		% sudo apt-get install gcc-4.9 g++-4.9
+
+4. To launch SimVascular:
+
+		Go to Unity Dash and search for "SimVascular"
 		Click the SimVascular icon.
 
-3. Notice: it may mention missing some libs during launch, according to the information, try "sudo apt-get install [missing lib]" to install them. Most likely you need to run:
+5. Setup SimVascular to run from a terminal. (optional)
+
+		sudo bash /usr/local/sv/simvascular/yyyy-mm-dd/setup-symlinks.sh
+
+		This creates a script called 'simvascular' in /usr/local/bin/ that can be executed from the command line.
+
+
+### Installing SimVascular on Ubuntu 16.04 and 18.04 ###
+
+1. Download the SimVascular Ubuntu installer from [SimTK](https://simtk.org/frs/index.php?group_id=188). 
+
+2. Double-click on the downloaded installation (.deb) file.
+
+		SimVascular is installed in /usr/local/sv/simvascular/yyyy-mm-dd, where yyyy-mm-dd represents the SimVascular release date (e.g. 2018-11-25).
+
+
+3. To launch SimVascular:
+
+		Go to Unity Dash and search for "SimVascular"
+		Click the SimVascular icon.
+
+
+4. Setup SimVascular to run from a terminal. (optional)
+
+		sudo bash /usr/local/sv/simvascular/yyyy-mm-dd/setup-symlinks.sh
+
+		This creates a script called 'simvascular' in /usr/local/bin/ that can be executed from the command line.
+
+
+### Installing SimVascular on CentOS 7 ###
+
+1. Download the SimVascular CentOS installer from [SimTK](https://simtk.org/frs/index.php?group_id=188). 
+
+		The intaller is a .tar.gz file that is manually installed.
+
+2. Create a /usr/local/package directory if it does not already exist.
+
+		% su root
+
+		% cd /usr/local
+
+		% mkdir package
+
+3. Untar the contents of the installer .tar.gz file to the SimVascular application directory.
+
+		% tar xzvf ~/Downloads/SimVascular-centos7-x64.Nov.25-2018.tar.gz
+
+		SimVascular is installed in /usr/local/package/simvascular/2018-11-25
+
+4. Execute a shell script to setup SimVascular to run from the command line.
+
+		% /usr/local/package/simvascular/2018-11-25/post-install.sh
+
+                This creates a 'simvascular' script file in /usr/local/bin.
+
+5. Launch SimVascular 
+
+		% simvascular
+
+
+<br>
+#### Note 
+	SimVascular may fail to launch if certain shared libraries are missing from your computer. Missing libraries can be installed using "sudo apt-get install [missing lib name]". The following commands can be used to install some libraries commonly missing from standard Ubuntu distributions:
 
 		sudo apt-get install libgstreamer0.10-0
 		sudo apt-get install libgstreamer-plugins-base0.10-dev
-
-		Sometimes, you may need to:
 		sudo apt-get install libxss
 		sudo apt-get install libxmu-dev (for OpenCASCADE)
 		sudo apt-get install libxi-dev  (for OpenCASCADE)
 
-4. SimVascular still provides the old GUI. If you want to launch SimVascular with the old GUI by default:
+<br>
 
-		Open a terminal.
-		Run "touch ~/.simvascular_default_tcl" which creates an empty file.
+### Installing svSolver ###
 
-		you may need to:
-		sudo apt-get install tcllib tklib (for old GUI)
-		sudo apt-get install tcl-dev tk-dev (for old GUI)
+1. Download the svSolver Ubuntu installer.
 
-5. To run simulation, you need to install svSolver (<a href="https://simtk.org/project/xml/downloads.xml?group_id=188" target="_blank">download</a>), and MPI:
+2. Double-click on the downloaded installation (.deb) file.
 
-		For Ubuntu 14:		
+3. The solver is installed in /usr/local/sv/svsolver/yyyy-mm-dd
+
+### Installing svFSI ###
+
+1. Download the svFSI Ubuntu installer.
+
+2. Double-click on the downloaded installation (.deb) file.
+
+3. The solver is installed in /usr/local/sv/svfsi/yyyy-mm-dd
+
+
+
+### Installing MPI
+
+	Both svSolver and svFSI use MPI. 
+
+	For Ubuntu 14:		
 		sudo apt-get install libmpich2-dev
 
-		For Ubuntu 16:
+	For Ubuntu 16:
 		sudo apt-get install libmpich-dev
 
-6. (Optional) To add SimVascular to your path , you will need to run the post-install script:
-
-		sudo bash setup-symlinks.sh
-		
-	This script places symbolic links in /usr/local/bin to the simvascular executable scripts. You may wish to edit the symbolic links.
-
-Notice: 
-
-		Simvascular is installed at /usr/local/sv/simvascular/yyyy-mm-dd
-		svSolver is installed at /usr/local/sv/svsolver/yyyy-mm-dd
 
 <br>
 <br>
