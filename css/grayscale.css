@@ -1,4 +1,4 @@
-/* line 4, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+/* line 4, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
 body {
   width: 100%;
   height: 100%;
@@ -6,12 +6,12 @@ body {
   color: white;
   background-color: black; }
 
-/* line 12, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+/* line 12, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
 html {
   width: 100%;
   height: 100%; }
 
-/* line 22, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+/* line 22, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
 h1,
 h2,
 h3,
@@ -24,73 +24,73 @@ h6 {
   font-weight: 700;
   letter-spacing: 1px; }
 
-/* line 30, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+/* line 30, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
 p {
   margin: 0 0 25px;
   font-size: 18px;
   line-height: 1.5; }
 
 @media (min-width: 767px) {
-  /* line 37, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+  /* line 37, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
   p {
     margin: 0 0 35px;
     font-size: 20px;
     line-height: 1.6; } }
-/* line 44, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+/* line 44, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
 a {
   color: #219ab3;
   -webkit-transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out; }
-  /* line 50, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+  /* line 50, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
   a:hover, a:focus {
     text-decoration: none;
     color: #11505d; }
 
-/* line 56, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+/* line 56, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
 .light {
   font-weight: 400; }
 
-/* line 60, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+/* line 60, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
 .navbar-custom {
   margin-bottom: 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   text-transform: uppercase;
   font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
   background-color: black; }
-  /* line 66, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+  /* line 66, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
   .navbar-custom .navbar-brand {
     font-weight: 700; }
-    /* line 68, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+    /* line 68, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
     .navbar-custom .navbar-brand:focus {
       outline: none; }
-    /* line 71, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+    /* line 71, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
     .navbar-custom .navbar-brand .navbar-toggle {
       padding: 4px 6px;
       font-size: 16px;
       color: white; }
-      /* line 76, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+      /* line 76, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
       .navbar-custom .navbar-brand .navbar-toggle:focus, .navbar-custom .navbar-brand .navbar-toggle:active {
         outline: none; }
-  /* line 81, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+  /* line 81, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
   .navbar-custom a {
     color: white; }
-  /* line 86, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+  /* line 86, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
   .navbar-custom .nav li.active {
     outline: nonte;
     background-color: rgba(255, 255, 255, 0.3); }
-  /* line 90, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+  /* line 90, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
   .navbar-custom .nav li a {
     -webkit-transition: background .3s ease-in-out;
     -moz-transition: background .3s ease-in-out;
     transition: background .3s ease-in-out; }
-    /* line 96, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+    /* line 96, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
     .navbar-custom .nav li a:hover, .navbar-custom .nav li a:focus, .navbar-custom .nav li a.active {
       outline: none;
       background-color: rgba(255, 255, 255, 0.3); }
 
 @media (min-width: 767px) {
-  /* line 106, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+  /* line 106, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
   .navbar {
     padding: 20px 0;
     border-bottom: none;
@@ -100,15 +100,15 @@ a {
     -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
     transition: background .5s ease-in-out,padding .5s ease-in-out; }
 
-  /* line 116, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+  /* line 116, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
   .top-nav-collapse {
     padding: 0;
     background-color: black; }
 
-  /* line 121, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+  /* line 121, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
   .navbar-custom.top-nav-collapse {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3); } }
-/* line 126, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+/* line 126, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
 .intro {
   display: table;
   width: 100%;
@@ -122,51 +122,51 @@ a {
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover; }
-  /* line 139, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+  /* line 139, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
   .intro .intro-body {
     display: table-cell;
     vertical-align: middle; }
-    /* line 142, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+    /* line 142, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
     .intro .intro-body .brand-heading {
       font-size: 40px; }
-    /* line 146, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+    /* line 146, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
     .intro .intro-body .intro-text {
       font-size: 25px; }
 
 @media (max-width: 320px) {
-  /* line 153, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+  /* line 153, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
   .intro {
     height: 100%;
     padding: 0px; }
-    /* line 157, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+    /* line 157, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
     .intro .intro-body .brand-heading {
       font-size: 25px; }
-    /* line 161, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+    /* line 161, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
     .intro .intro-body .intro-text {
       font-size: 15px; } }
 @media (min-width: 767px) {
-  /* line 169, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+  /* line 169, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
   .intro {
     height: 100%;
     padding: 100px; }
-    /* line 173, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+    /* line 173, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
     .intro .intro-body .brand-heading {
       font-size: 40px; }
-    /* line 177, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+    /* line 177, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
     .intro .intro-body .intro-text {
       font-size: 20px; } }
 @media (min-width: 1024px) {
-  /* line 185, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+  /* line 185, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
   .intro {
     height: 100%;
     padding: 0; }
-    /* line 189, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+    /* line 189, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
     .intro .intro-body .brand-heading {
       font-size: 50px; }
-    /* line 193, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+    /* line 193, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
     .intro .intro-body .intro-text {
       font-size: 25px; } }
-/* line 200, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+/* line 200, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
 .btn-circle {
   width: 70px;
   height: 70px;
@@ -180,18 +180,18 @@ a {
   -webkit-transition: background .3s ease-in-out;
   -moz-transition: background .3s ease-in-out;
   transition: background .3s ease-in-out; }
-  /* line 214, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+  /* line 214, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
   .btn-circle:hover, .btn-circle:focus {
     outline: none;
     color: white;
     background: rgba(255, 255, 255, 0.1); }
-  /* line 219, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+  /* line 219, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
   .btn-circle i.animated {
     -webkit-transition-property: -webkit-transform;
     -webkit-transition-duration: 1s;
     -moz-transition-property: -moz-transform;
     -moz-transition-duration: 1s; }
-  /* line 226, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+  /* line 226, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
   .btn-circle:hover i.animated {
     -webkit-animation-name: pulse;
     -moz-animation-name: pulse;
@@ -203,38 +203,38 @@ a {
     -moz-animation-timing-function: linear; }
 
 @-webkit-keyframes pulse {
-  /* line 240, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+  /* line 240, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
   0 {
     -webkit-transform: scale(1);
     transform: scale(1); }
 
-  /* line 245, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+  /* line 245, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
   50% {
     -webkit-transform: scale(1.2);
     transform: scale(1.2); }
 
-  /* line 250, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+  /* line 250, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
   100% {
     -webkit-transform: scale(1);
     transform: scale(1); } }
 
 @-moz-keyframes pulse {
-  /* line 257, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+  /* line 257, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
   0 {
     -moz-transform: scale(1);
     transform: scale(1); }
 
-  /* line 262, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+  /* line 262, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
   50% {
     -moz-transform: scale(1.2);
     transform: scale(1.2); }
 
-  /* line 267, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+  /* line 267, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
   100% {
     -moz-transform: scale(1);
     transform: scale(1); } }
 
-/* line 273, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+/* line 273, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
 .download-section {
   width: 100%;
   padding: 50px 0;
@@ -246,30 +246,30 @@ a {
   background-size: cover;
   -o-background-size: cover; }
 
-/* line 285, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+/* line 285, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
 #map {
   width: 100%;
   height: 200px;
   margin-top: 100px; }
 
-/* line 291, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+/* line 291, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
 .content-section {
   padding-top: 100px; }
 
 @media screen and (min-width: 768px) and (max-width: 1200px) {
-  /* line 296, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+  /* line 296, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
   .content-section {
     padding-top: 200px; } }
 @media (min-width: 768px) {
-  /* line 302, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+  /* line 302, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
   .download-section {
     padding: 100px 0; }
 
-  /* line 306, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+  /* line 306, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
   #map {
     height: 400px;
     margin-top: 250px; } }
-/* line 312, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+/* line 312, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
 .btn {
   text-transform: uppercase;
   font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -278,171 +278,171 @@ a {
   -moz-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out; }
 
-/* line 321, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+/* line 321, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
 .btn-default {
   border: 1px solid #219ab3;
   color: #219ab3;
   background-color: transparent; }
-  /* line 326, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+  /* line 326, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
   .btn-default:hover, .btn-default:focus {
     border: 1px solid #219ab3;
     outline: none;
     color: black;
     background-color: #219ab3; }
 
-/* line 334, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+/* line 334, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
 ul.banner-social-buttons {
   margin-top: 0; }
 
 @media (max-width: 1199px) {
-  /* line 339, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+  /* line 339, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
   ul.banner-social-buttons {
     margin-top: 15px; } }
 @media (max-width: 767px) {
-  /* line 346, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+  /* line 346, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
   ul.banner-social-buttons li {
     display: block;
     margin-bottom: 20px;
     padding: 0; }
-    /* line 350, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+    /* line 350, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
     ul.banner-social-buttons li:last-child {
       margin-bottom: 0; } }
-/* line 357, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+/* line 357, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
 footer {
   padding: 50px 0; }
-  /* line 359, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+  /* line 359, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
   footer p {
     margin: 0; }
 
-/* line 364, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+/* line 364, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
 ::-moz-selection {
   text-shadow: none;
   background: #fcfcfc;
   background: rgba(255, 255, 255, 0.2); }
 
-/* line 370, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+/* line 370, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
 ::selection {
   text-shadow: none;
   background: #fcfcfc;
   background: rgba(255, 255, 255, 0.2); }
 
-/* line 376, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+/* line 376, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
 img::selection {
   background: transparent; }
 
-/* line 380, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+/* line 380, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
 img::-moz-selection {
   background: transparent; }
 
-/* line 384, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+/* line 384, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
 body {
   webkit-tap-highlight-color: rgba(255, 255, 255, 0.2); }
 
-/* line 388, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+/* line 388, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
 #team p {
   text-align: justify; }
 
-/* line 396, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+/* line 396, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
 .fixed {
   height: 400px;
   overflow: hidden; }
 
-/* line 397, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+/* line 397, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
 .scrollit {
   height: 400px;
   overflow-y: scroll; }
 
-/* line 400, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+/* line 400, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
 .LegalStuff {
   font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: small; }
 
-/* line 405, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+/* line 405, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
 .content {
   display: none; }
 
-/* line 407, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+/* line 407, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
 .BioPar p {
   font-family: "Montserrat";
   font-size: x-small; }
 
-/* line 412, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+/* line 412, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
 .top-buffer {
   margin-top: 30px; }
 
-/* line 413, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+/* line 413, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
 .bottom-buffer-small {
   margin-bottom: 5px; }
 
-/* line 414, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+/* line 414, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
 .top-buffer-small {
   margin-top: 5px; }
 
-/* line 415, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+/* line 415, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
 .top-buffer-md {
   margin-top: 15px; }
 
-/* line 418, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+/* line 418, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
 .justifiedText {
   text-align: justify; }
 
-/* line 422, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+/* line 422, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
 .otherContrib {
   font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: small; }
 
-/* line 427, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+/* line 427, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
 .thumBlack {
   background-color: black;
   border-color: gray; }
 
-/* line 432, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+/* line 432, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
 #visitorMessage {
   resize: none; }
 
-/* line 436, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+/* line 436, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
 .test {
   border: 0px;
   border-color: black;
   border-width: 0px; }
 
-/* line 442, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+/* line 442, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
 .repoImgLeft {
   float: left; }
 
-/* line 445, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+/* line 445, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
 .repoImgRight {
   float: right; }
 
-/* line 448, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+/* line 448, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
 .repoImgCenter {
   float: center; }
 
-/* line 452, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+/* line 452, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
 .thumBlackRepo {
   background-color: black;
   border-color: black;
   height: 150px; }
 
-/* line 458, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+/* line 458, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
 .likeSch {
   display: inline-block; }
 
-/* line 462, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+/* line 462, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
 #svLogoTitle {
   width: 100%; }
 
-/* line 466, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+/* line 466, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
 .centerTitleText {
   margin: auto;
   text-align: center; }
 
-/* line 471, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+/* line 471, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
 .centreDoc {
   width: 50%;
   margin: 0 auto; }
 
-/* line 476, /media/gabriel/Data/projects/SV/simvascular.github.io/source/css/grayscale.scss */
+/* line 476, /Users/parkerda/software/SimVascular/simvascular.github.io/source/simvascular.github.io/source/css/grayscale.scss */
 .rotate90 {
   -webkit-transform: rotate(270deg);
   -moz-transform: rotate(270deg);
