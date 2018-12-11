@@ -96,7 +96,7 @@ ccmake ..</code></pre>
    <p>To do this, toggle off the SV_EXTERNALS_DOWNLOAD_'External' variables.</p>
    <p>Building of externals has only been tested on the supported platforms, so there may be difficulties that arrise on other platforms</p>
    <p>Note that on Mac you will need to obtain MacPorts with additional libraries, while on linux, additional packages will likely have to be installed with the package manager.</p>
-   <p>The source versions of the externals are available through <a href="https://github.com/SimVascular">github</a> and on SimVascular's <a href="http://simvascular.stanford.edu/downloads/public/simvascular/externals/src/originals">server</a>.</p>
+   <p>The latest externals source can be downloading frome <a href="http://simvascular.stanford.edu/downloads/public/simvascular/externals/2018.05/src/originals">here</a>.</p>
    </p>
    <p>
    <h3 id="buildSimVascular">Building Standalone SimVascular</h3>
