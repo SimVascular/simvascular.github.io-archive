@@ -55,7 +55,7 @@ $ bundle exec middleman server
 ```
 View the SimVascular website html files generated from the markdown file edits by opening the url *http://0.0.0.0:4567* in a browser. The results of new edit are view by refreshing the browser.
 
-### Editing the Home Page ***Our Team***  Information
+### Editing the Home Page ***Our Team*** Section
 
 The content for the home page **Our Team** section is stored in the **_team.erb** embedded Ruby file located in the *simvascular.github.io/source/homepage* directory. Edit this file to add or remove the picture and biography of a team member. The team member pictures are located in the *simvascular.github.io/source/img/bio* directory. The new team picture must have the same width, height (242x200) and resolution (72x72) as the other team pictures in order for the team boxes to correctly line up. You can set these properties using the GIMP image editor by selecting **image** -> **Print Size ...**.
 
