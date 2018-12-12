@@ -27,9 +27,9 @@ $ gem install bundler (may prompt for password for sudo access)
 $ bundle install (get dependencies)
 ```
 
-### Editing markup files
+### Editing the ***User Guides*** Documentation
 
-The documentation markdown files for the **User Guides** are located in subdirectories under the *simvascular.github.io/source/documentation/* directory
+The documentation for the **User Guides** is stored in markdown files located in subdirectories under the *simvascular.github.io/source/documentation/* directory
 
 ```
 compile/
@@ -54,6 +54,12 @@ The results of documentation edits can be viewed using a local web server. The w
 $ bundle exec middleman server
 ```
 View the SimVascular website html files generated from the markdown file edits by opening the url *http://0.0.0.0:4567* in a browser. The results of new edit are view by refreshing the browser.
+
+### Editing the Home Page ***Our Team***  Information
+
+The content for the home page **Our Team** section is stored in the **_team.erb** embedded Ruby file located in the *simvascular.github.io/source/homepage* directory. Edit this file to add or remove the picture and biography of a team member. The team member pictures are located in the *simvascular.github.io/source/img/bio* directory. The new team picture must have the same width, height (242x200) and resolution (72x72) as the other team pictures in order for the team boxes to correctly line up. You can set these properties using the GIMP image editor by selecting **image** -> **Print Size ...**.
+
+The team member biographies are stored in markdown files located in the *simvascular.github.io/source/homepage/team_members* directory. To view changes made to the team picture you must stop and restart the middleman web server. 
 
 ### Building the **master** branch production files
 
