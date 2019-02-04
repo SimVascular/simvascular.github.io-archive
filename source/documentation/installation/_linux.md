@@ -138,6 +138,8 @@ Red Hat 7 / CentOS 7
 	For Ubuntu 16:
 		sudo apt-get install libmpich-dev
 
+	Note that some applications may install a different implementation (e.g. Open MPI) of MPI. This may interfere with the MPI version needed by the svSolver or cause the solver not to execute correctly.
+
 
 <br>
 <br>
