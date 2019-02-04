@@ -246,6 +246,14 @@ This creates a script called 'simvascular' in /usr/local/bin/ that can be execut
 <li><p>Follow the instructions.</p></li>
 <li><p>The solver is installed in /usr/local/sv/svsolver/yyyy-mm-dd</p></li>
 </ol>
+
+<h3>Installing MPI</h3>
+<pre class="highlight plaintext"><code>svSolver uses MPICH implementation of MPI. To install MPI type the follow command in a terminal window
+
+    brew install mpich2
+
+Note that some applications may install a different implementation (e.g. Open MPI) of MPI. This may interfere with the MPI version needed by the svSolver or cause the solver not to execute correctly.
+</code></pre>
 </section>
 <section id="installationLinux" class="group"><h1>Installation Instructions for Linux</h1>
 
@@ -376,6 +384,8 @@ For Ubuntu 14:
 
 For Ubuntu 16:
     sudo apt-get install libmpich-dev
+
+Note that some applications may install a different implementation (e.g. Open MPI) of MPI. This may interfere with the MPI version needed by the svSolver or cause the solver not to execute correctly.
 </code></pre>
 
 <p><br>
