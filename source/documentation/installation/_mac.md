@@ -44,4 +44,13 @@ Mac OS X versions 10.11 or higher.
 
 4. The solver is installed in /usr/local/sv/svsolver/yyyy-mm-dd
 
+### Installing MPI
+
+	svSolver uses MPICH implementation of MPI. To install MPI type the follow command in a terminal window
+
+  		brew install mpich2
+
+  	Note that some applications may install a different implementation (e.g. Open MPI) of MPI. This may interfere with the MPI version needed by the svSolver or cause the solver not to execute correctly.
+
+
 
