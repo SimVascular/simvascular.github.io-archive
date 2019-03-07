@@ -4,9 +4,20 @@ This tutorial demonstrates how to use the General Boundary Conditions (GenBC) fr
 
 ## What is GenBC?
 
-GenBC provides a framework to define custom inflow and outflow boundary conditions for a CFD simulation. The framework allows users to create an arbitrary lumped parameter network (LPN) layout suitable for their application. Some common examples include a lumped parameter heart model that models contraction of the heart chambers to use as an inlet boundary condition, sophisticated models of the downstream circulation for various areas of the body such as the legs and upper body, or a closed-loop formulation where all outflow of the SimVascular model returns back to the inflow after passing through the veins, heart, and pulmonary arteries!
+GenBC provides a framework to programmmatically define custom inflow and outflow boundary conditions for a CFD simulation. The framework 
+allows users to create an arbitrary lumped parameter network (LPN) layout suitable for their application. Some common examples include a 
+lumped parameter heart model that models contraction of the heart chambers to use as an inlet boundary condition, sophisticated models of 
+the downstream circulation for various areas of the body such as the legs and upper body, or a closed-loop formulation where all outflow 
+of the SimVascular model returns back to the inflow after passing through the veins, heart, and pulmonary arteries.
 
-The current implementation of GenBC is in the Fortran programming language. Users will first have to derive the governing ordinary differential equations for their lumped parameter layout of choice, and implement these equations in Fortran source code. As such, some programming experience with Fortran is recommended, especially if the user wants to use complex and sophisticated lumped parameter layouts. Once the equations and parameters have been implemented in the Fortran code, the code must be compiled to produce a GenBC executable program. This program will then interact with the SimVascular flowsolver during execution to provide the appropriate boundary conditions.
+The GenBC framework is implemented as a Fortran program called by the SimVascular flow solver svSolver. Users must derive the governing 
+ordinary differential equations for the lumped parameter layout and implement them in Fortran inside the GenBC program. The Fortan program 
+is then compiled to produce a GenBC executable program. This executable is called by svSolver during execution to provide values for 
+custom boundary conditions.
+
+SimVascular does not currently provide functionality to define GenBC boundary conditions using the GUI. The GUI is used
+to generate simulation files for built-in boundary conditions. These files are then manually edited to incorporate the commands
+needed to define data for the boundary conditions and to tell svSolver to use the GenBC framework. 
 
 
 ## Cylinder RCR example

@@ -15,7 +15,7 @@ an inductor or have a specified flow waveform (e.g. measured or adapted from lit
 box in the row of the cap **Name** and the column of the **BC Type** and select **Prescribed Velocities** from the drop-down menu. 
 Double-click the cap name under **Name** to open up a window with additional parameters. Set **BC Type** to 
 **Prescribed Velocities** and set **Analytic Shape** to **parabolic**. For the flow rate select the **inlet.flow** file from the 
-project's **flow-files** directory. 
+project's **simulation-files** directory. 
 
 <figure>
   <img class="svImg svImgMd" src="documentation/genbc/imgs/velocities_window.png">
@@ -25,7 +25,7 @@ project's **flow-files** directory.
 A Neumann boundary condition is typically used for caps that interface directly with either a capacitor or a resistor. 
 For the **outlet** cap we specify a Neumann boundary condition by selecting **Resistance** for the **BC Type** and assigning it 
 a value of 0. These settings are used to create the appropriate entries in the **solver.inp** file we will later modify. 
-The **Inlet and Outlet Bcs** tab should now look like this:
+The **Inlet and Outlet BCs** tab should now look like this
 
 <figure>
   <img class="svImg svImgMd" src="documentation/genbc/imgs/inlet_and_outlet_bcs.png">
