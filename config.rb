@@ -61,7 +61,7 @@ end
 end
 
 # workshops
-["WCB"].each do |name|
+["WCB", "SB3C19"].each do |name|
   proxy "/workshop#{name}.html", "/workshopTemplate.html", :locals => { :man_name => name }, :ignore => true
 end
 
