@@ -1,0 +1,232 @@
+<html>
+<head>
+<title>File 'Core/osmsc.tcl'</title>
+<link rel=stylesheet href="styles.css"
+ type="text/css">
+</head>
+<body >
+<h1>File 'Core/osmsc.tcl'</h1><hr class="navbar"><p class="navbar"><a href="index.htm" class="navbar">Home</a> | <a href="files.html" class="index-file">Files</a> | <a href="procs.html" class="index-procedure">Procedures</a> | <a href="namespaces.html" class="index-namespace">Namespaces</a> </p><hr class="navbar">
+<div class="file-header"><dl><dt><span class="header-title">Depends on</span><dd><span class="header-value">md5</span></dl></div><hr class="file"><ul class="proc-listing"><li class="proc-listing"><a href="f_Core_osmsc.tcl.html#pbctdat_from_temporal_vtk" class="proc">bctdat_from_temporal_vtk</a> <span class="arg-list">(temporal_vtk addZeroPt outfn)</span><li class="proc-listing"><a href="f_Core_osmsc.tcl.html#pbctdat_to_vtp" class="proc">bctdat_to_vtp</a> <span class="arg-list">(bctdatFileName inflowFaceFileName old_units new_units shift outFaceFileName outFlowFileName)</span><li class="proc-listing"><a href="f_Core_osmsc.tcl.html#pcreate_polydata_model_from_mesh_surfaces" class="proc">create_polydata_model_from_mesh_surfaces</a> <span class="arg-list">(all_face_files outfn)</span><li class="proc-listing"><a href="f_Core_osmsc.tcl.html#pgeom_scale" class="proc">geom_scale</a> <span class="arg-list">(src scale dst)</span><li class="proc-listing"><a href="f_Core_osmsc.tcl.html#pimg_copy_sorted_images" class="proc">img_copy_sorted_images</a> <span class="arg-list">(scan_list dstTopDir)</span><li class="proc-listing"><a href="f_Core_osmsc.tcl.html#pmesh_writeCompleteMesh" class="proc">mesh_writeCompleteMesh</a> <span class="arg-list">(mesh solid prefix outdir)</span><li class="proc-listing"><a href="f_Core_osmsc.tcl.html#pmesh_writeCompleteMeshFromFiles" class="proc">mesh_writeCompleteMeshFromFiles</a> <span class="arg-list">(mesh_fn solid_fn prefix outdir)</span><li class="proc-listing"><a href="f_Core_osmsc.tcl.html#pmvres" class="proc">mvres</a> <span class="arg-list">(startnum stopnum)</span><li class="proc-listing"><a href="f_Core_osmsc.tcl.html#prepos_readXMLPolyData" class="proc">repos_readXMLPolyData</a> <span class="arg-list">(filename rtnobj)</span><li class="proc-listing"><a href="f_Core_osmsc.tcl.html#prepos_writeXMLPolyData" class="proc">repos_writeXMLPolyData</a> <span class="arg-list">(inobj outfn)</span><li class="proc-listing"><a href="f_Core_osmsc.tcl.html#psort_GE_MR_files" class="proc">sort_GE_MR_files</a> <span class="arg-list">(in_files)</span><li class="proc-listing"><a href="f_Core_osmsc.tcl.html#pvtkobj_translate_shift" class="proc">vtkobj_translate_shift</a> <span class="arg-list">(inobj old_units new_units shift stress_mags stress_vectors outobj)</span><li class="proc-listing"><a href="f_Core_osmsc.tcl.html#pvtp_create_wss_osi_pulse" class="proc">vtp_create_wss_osi_pulse</a> <span class="arg-list">(vtp_file tractionName outFN)</span><li class="proc-listing"><a href="f_Core_osmsc.tcl.html#pvtp_extractSingleFace" class="proc">vtp_extractSingleFace</a> <span class="arg-list">(pd faceObj)</span><li class="proc-listing"><a href="f_Core_osmsc.tcl.html#pvtp_integrateFace" class="proc">vtp_integrateFace</a> <span class="arg-list">(inflowFace rtnP rtnQ rtnA)</span><li class="proc-listing"><a href="f_Core_osmsc.tcl.html#pvtp_momentumInFace" class="proc">vtp_momentumInFace</a> <span class="arg-list">(faceFileName rho outFileName)</span><li class="proc-listing"><a href="f_Core_osmsc.tcl.html#pvtu_calc_flow_thru_faces" class="proc">vtu_calc_flow_thru_faces</a> <span class="arg-list">(vtuFileNames mesh_surface_vtk_filenames skipWalls outFlowFileName outPressureFileName)</span><li class="proc-listing"><a href="f_Core_osmsc.tcl.html#pvtu_combine_steps" class="proc">vtu_combine_steps</a> <span class="arg-list">(vtuFileNames tractionName inflowFaceFileName outFileName)</span><li class="proc-listing"><a href="f_Core_osmsc.tcl.html#pvtu_create_wss_osi_pulse" class="proc">vtu_create_wss_osi_pulse</a> <span class="arg-list">(vtu_files tractionName wssFN osiFN pulseFN)</span><li class="proc-listing"><a href="f_Core_osmsc.tcl.html#pvtu_extractFace" class="proc">vtu_extractFace</a> <span class="arg-list">(vtuObjs faceObj readFiles args)</span><li class="proc-listing"><a href="f_Core_osmsc.tcl.html#pvtu_extractFaceFileFromUG" class="proc">vtu_extractFaceFileFromUG</a> <span class="arg-list">(ug faceFileName faceObj)</span><li class="proc-listing"><a href="f_Core_osmsc.tcl.html#pvtu_extractFaceFromFiles" class="proc">vtu_extractFaceFromFiles</a> <span class="arg-list">(vtuFileName faceFileName faceObj)</span><li class="proc-listing"><a href="f_Core_osmsc.tcl.html#pvtu_extractSingleFace" class="proc">vtu_extractSingleFace</a> <span class="arg-list">(ug faceObj)</span><li class="proc-listing"><a href="f_Core_osmsc.tcl.html#pvtx_TemporalFlowThruFaces" class="proc">vtx_TemporalFlowThruFaces</a> <span class="arg-list">(vtxFileName mesh_surface_vtk_filenames skipWalls sim_units outFlowFileName outPressureFileName outAveragesFileName outAveragesUnitsFileName)</span></ul><hr class="file"><a name="pbctdat_from_temporal_vtk"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">bctdat_from_temporal_vtk</span> <span class="arg-list">(temporal_vtk addZeroPt outfn)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1303"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: temporal_vtk
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1304"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: addZeroPt
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1305"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: outfn
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1306"></a>not documented</span>
+</td></tr></table></p><a name="pbctdat_to_vtp"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">bctdat_to_vtp</span> <span class="arg-list">(bctdatFileName inflowFaceFileName old_units new_units shift outFaceFileName outFlowFileName)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1307"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: bctdatFileName
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1308"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: inflowFaceFileName
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1309"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: old_units
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1310"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: new_units
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1311"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: shift
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1312"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: outFaceFileName
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1313"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: outFlowFileName
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1314"></a>not documented</span>
+</td></tr></table></p><a name="pcreate_polydata_model_from_mesh_surfaces"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">create_polydata_model_from_mesh_surfaces</span> <span class="arg-list">(all_face_files outfn)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1315"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: all_face_files
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1316"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: outfn
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1317"></a>not documented</span>
+</td></tr></table></p><a name="pgeom_scale"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">geom_scale</span> <span class="arg-list">(src scale dst)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">transform a src PolyData with an isotropic scaling.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: src
+</td><td class="argument-description">input PolyData object.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: scale
+</td><td class="argument-description">scale factor.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: dst
+</td><td class="argument-description">output PolyData object.
+</td></tr></table></p><a name="pimg_copy_sorted_images"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">img_copy_sorted_images</span> <span class="arg-list">(scan_list dstTopDir)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Sort passes for 5X image data.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: scan_list
+</td><td class="argument-description">Tcl list of directories containing 5X formatted image volumes.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: dstTopDir
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1318"></a>not documented</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: dstTopDir: Top level directory for result files.
+</td></tr></table></p><a name="pmesh_writeCompleteMesh"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">mesh_writeCompleteMesh</span> <span class="arg-list">(mesh solid prefix outdir)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1319"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: mesh
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1320"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: solid
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1321"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: prefix
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1322"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: outdir
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1323"></a>not documented</span>
+</td></tr></table></p><a name="pmesh_writeCompleteMeshFromFiles"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">mesh_writeCompleteMeshFromFiles</span> <span class="arg-list">(mesh_fn solid_fn prefix outdir)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1324"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: mesh_fn
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1325"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: solid_fn
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1326"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: prefix
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1327"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: outdir
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1328"></a>not documented</span>
+</td></tr></table></p><a name="pmvres"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">mvres</span> <span class="arg-list">(startnum stopnum)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1329"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: startnum
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1330"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: stopnum
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1331"></a>not documented</span>
+</td></tr></table></p><a name="prepos_readXMLPolyData"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">repos_readXMLPolyData</span> <span class="arg-list">(filename rtnobj)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1332"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: filename
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1333"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: rtnobj
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1334"></a>not documented</span>
+</td></tr></table></p><a name="prepos_writeXMLPolyData"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">repos_writeXMLPolyData</span> <span class="arg-list">(inobj outfn)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">write a PolyData or vtkPolyData object to a file</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: inobj
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1335"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: outfn
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1336"></a>not documented</span>
+</td></tr></table></p><a name="psort_GE_MR_files"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">sort_GE_MR_files</span> <span class="arg-list">(in_files)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1337"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: in_files
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1338"></a>not documented</span>
+</td></tr></table></p><a name="pvtkobj_translate_shift"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">vtkobj_translate_shift</span> <span class="arg-list">(inobj old_units new_units shift stress_mags stress_vectors outobj)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1339"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: inobj
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1340"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: old_units
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1341"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: new_units
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1342"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: shift
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1343"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: stress_mags
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1344"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: stress_vectors
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1345"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: outobj
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1346"></a>not documented</span>
+</td></tr></table></p><a name="pvtp_create_wss_osi_pulse"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">vtp_create_wss_osi_pulse</span> <span class="arg-list">(vtp_file tractionName outFN)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1347"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: vtp_file
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1348"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: tractionName
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1349"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: outFN
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1350"></a>not documented</span>
+</td></tr></table></p><a name="pvtp_extractSingleFace"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">vtp_extractSingleFace</span> <span class="arg-list">(pd faceObj)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1351"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: pd
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1352"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: faceObj
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1353"></a>not documented</span>
+</td></tr></table></p><a name="pvtp_integrateFace"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">vtp_integrateFace</span> <span class="arg-list">(inflowFace rtnP rtnQ rtnA)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1354"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: inflowFace
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1355"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: rtnP
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1356"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: rtnQ
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1357"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: rtnA
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1358"></a>not documented</span>
+</td></tr></table></p><a name="pvtp_momentumInFace"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">vtp_momentumInFace</span> <span class="arg-list">(faceFileName rho outFileName)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1359"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: faceFileName
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1360"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: rho
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1361"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: outFileName
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1362"></a>not documented</span>
+</td></tr></table></p><a name="pvtu_calc_flow_thru_faces"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">vtu_calc_flow_thru_faces</span> <span class="arg-list">(vtuFileNames mesh_surface_vtk_filenames skipWalls outFlowFileName outPressureFileName)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1363"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: vtuFileNames
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1364"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: mesh_surface_vtk_filenames
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1365"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: skipWalls
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1366"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: outFlowFileName
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1367"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: outPressureFileName
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1368"></a>not documented</span>
+</td></tr></table></p><a name="pvtu_combine_steps"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">vtu_combine_steps</span> <span class="arg-list">(vtuFileNames tractionName inflowFaceFileName outFileName)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1369"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: vtuFileNames
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1370"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: tractionName
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1371"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: inflowFaceFileName
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1372"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: outFileName
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1373"></a>not documented</span>
+</td></tr></table></p><a name="pvtu_create_wss_osi_pulse"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">vtu_create_wss_osi_pulse</span> <span class="arg-list">(vtu_files tractionName wssFN osiFN pulseFN)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1374"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: vtu_files
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1375"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: tractionName
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1376"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: wssFN
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1377"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: osiFN
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1378"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: pulseFN
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1379"></a>not documented</span>
+</td></tr></table></p><a name="pvtu_extractFace"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">vtu_extractFace</span> <span class="arg-list">(vtuObjs faceObj readFiles args)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1380"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: vtuObjs
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1381"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: faceObj
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1382"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: readFiles
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1383"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: args
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1384"></a>not documented</span>
+</td></tr></table></p><a name="pvtu_extractFaceFileFromUG"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">vtu_extractFaceFileFromUG</span> <span class="arg-list">(ug faceFileName faceObj)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1385"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: ug
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1386"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: faceFileName
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1387"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: faceObj
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1388"></a>not documented</span>
+</td></tr></table></p><a name="pvtu_extractFaceFromFiles"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">vtu_extractFaceFromFiles</span> <span class="arg-list">(vtuFileName faceFileName faceObj)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1389"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: vtuFileName
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1390"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: faceFileName
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1391"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: faceObj
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1392"></a>not documented</span>
+</td></tr></table></p><a name="pvtu_extractSingleFace"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">vtu_extractSingleFace</span> <span class="arg-list">(ug faceObj)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1393"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: ug
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1394"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: faceObj
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1395"></a>not documented</span>
+</td></tr></table></p><a name="pvtx_TemporalFlowThruFaces"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">vtx_TemporalFlowThruFaces</span> <span class="arg-list">(vtxFileName mesh_surface_vtk_filenames skipWalls sim_units outFlowFileName outPressureFileName outAveragesFileName outAveragesUnitsFileName)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1396"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: vtxFileName
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1397"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: mesh_surface_vtk_filenames
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1398"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: skipWalls
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1399"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: sim_units
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1400"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: outFlowFileName
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1401"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: outPressureFileName
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1402"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: outAveragesFileName
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1403"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: outAveragesUnitsFileName
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1404"></a>not documented</span>
+</td></tr></table></p><hr class="navbar"><p class="navbar"><a href="index.htm" class="navbar">Home</a> | <a href="files.html" class="index-file">Files</a> | <a href="procs.html" class="index-procedure">Procedures</a> | <a href="namespaces.html" class="index-namespace">Namespaces</a> </p><hr class="navbar">
+<hr><p class="generated-by">Generated by <a href="http://www.purl.org/NET/akupries/soft/autodoc/index.htm" class="generated-by">AutoDoc 2.4</a> at 02/09/2015, invoked by <a href="mailto:danschi@danieles-macbook-air.local" class="generated-by">Unknown</a></p></body>
+</html>

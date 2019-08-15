@@ -1,0 +1,9 @@
+##Solid Modeling (Analytic)
+
+In the previous section, it was shown how to create individual 2-D segmentations along a particular vessel path.  It is worthwhile to reinforce at this point the distinction between visualizing geometry and utilizing geometry for numerical simulation.  If you were to graphically display all the segmentations that you created in the previous exercise, your mind may “connect the dots” and create a 3-D mental image of the geometry.  However, we need to create a 3-D solid model that the computer can understand.
+
+Fortunately for us, an ordered relationship between some of the curves is known.  That is, for each path we have an ordered set of curves defining the geometry for the given vessel.  These sets are the groups that we have used to organize the segmentations. All of the segmentations are associated with one and only one vessel.  This motivates a two-stage process to create a solid model.  First, a “lofted” solid is created for each branch.  This results in a collection of solid branches.  Second, a boolean addition (union) is performed of the individual branches.  The result is then a single bounded solid region representing the blood flow domain.
+
+In this section we will explore two steps to create an analytic model, **using OpenCASCADE or Parasolid**. In [Section: Creating Solid Models](#modelingCreatingModelsAnalytic), we will perform a boolean addition to create a single solid model. [Section: Blending the Junction of Two Vessels](#modelingBlendingAnalytic) shows you how to smooth out the intersection between vessels. **The avaibility of OpenCASCADE or Parasolid depends on your SimVascular version.**
+
+<font color="red">**HELPFUL HINT:** </font> You can only use Parasolid to generate a model if you have paid for a Parasolid license and have the licensed portion of the software. 

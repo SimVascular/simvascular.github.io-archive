@@ -1,0 +1,283 @@
+<html>
+<head>
+<title>File 'Core/cv.tcl'</title>
+<link rel=stylesheet href="styles.css"
+ type="text/css">
+</head>
+<body >
+<h1>File 'Core/cv.tcl'</h1><hr class="navbar"><p class="navbar"><a href="index.htm" class="navbar">Home</a> | <a href="files.html" class="index-file">Files</a> | <a href="procs.html" class="index-procedure">Procedures</a> | <a href="namespaces.html" class="index-namespace">Namespaces</a> </p><hr class="navbar">
+<div class="file-header"><dl></dl></div><hr class="file"><ul class="proc-listing"><li class="proc-listing"><a href="f_Core_cv.tcl.html#pRCR_parameter_estimator" class="proc">RCR_parameter_estimator</a> <span class="arg-list">(R C period ratio units bn flow_fn)</span><li class="proc-listing"><a href="f_Core_cv.tcl.html#pResistance_Ratio_Calculator" class="proc">Resistance_Ratio_Calculator</a> <span class="arg-list">(R C period units bn)</span><li class="proc-listing"><a href="f_Core_cv.tcl.html#pTAC_calculator" class="proc">TAC_calculator</a> <span class="arg-list">(R C period units)</span><li class="proc-listing"><a href="f_Core_cv.tcl.html#pcalc_rotation_matrix" class="proc">calc_rotation_matrix</a> <span class="arg-list">(vector th n)</span><li class="proc-listing"><a href="f_Core_cv.tcl.html#pcreate_pvd" class="proc">create_pvd</a> <span class="arg-list">(insrc outfn)</span><li class="proc-listing"><a href="f_Core_cv.tcl.html#pgeom_appendPds" class="proc">geom_appendPds</a> <span class="arg-list">(pdList outPd)</span><li class="proc-listing"><a href="f_Core_cv.tcl.html#pgeom_avgNormal" class="proc">geom_avgNormal</a> <span class="arg-list">(inPd)</span><li class="proc-listing"><a href="f_Core_cv.tcl.html#pgeom_butterfly" class="proc">geom_butterfly</a> <span class="arg-list">(inPd numDivs outPd)</span><li class="proc-listing"><a href="f_Core_cv.tcl.html#pgeom_cap_with_delaunay" class="proc">geom_cap_with_delaunay</a> <span class="arg-list">(inPd cutPd outPd)</span><li class="proc-listing"><a href="f_Core_cv.tcl.html#pgeom_densify" class="proc">geom_densify</a> <span class="arg-list">(inPd numDivs outPd)</span><li class="proc-listing"><a href="f_Core_cv.tcl.html#pgeom_fillHoles" class="proc">geom_fillHoles</a> <span class="arg-list">(inPd outPd)</span><li class="proc-listing"><a href="f_Core_cv.tcl.html#pgeom_fillSurfaceVoid" class="proc">geom_fillSurfaceVoid</a> <span class="arg-list">(inPd outPd id)</span><li class="proc-listing"><a href="f_Core_cv.tcl.html#pgeom_largestConnected" class="proc">geom_largestConnected</a> <span class="arg-list">(inPd outPd)</span><li class="proc-listing"><a href="f_Core_cv.tcl.html#pgeom_mkSphere" class="proc">geom_mkSphere</a> <span class="arg-list">(x y z r outPd)</span><li class="proc-listing"><a href="f_Core_cv.tcl.html#pgeom_orientPd" class="proc">geom_orientPd</a> <span class="arg-list">(inPd outPd)</span><li class="proc-listing"><a href="f_Core_cv.tcl.html#pgeom_quadraticDecimation" class="proc">geom_quadraticDecimation</a> <span class="arg-list">(inPd target outPd)</span><li class="proc-listing"><a href="f_Core_cv.tcl.html#pgeom_smooth" class="proc">geom_smooth</a> <span class="arg-list">(inPd relaxFactor numIters outPd)</span><li class="proc-listing"><a href="f_Core_cv.tcl.html#pgeom_syncsmooth" class="proc">geom_syncsmooth</a> <span class="arg-list">(inPd passBandValue numIters outPd)</span><li class="proc-listing"><a href="f_Core_cv.tcl.html#pgeom_tagAllCellsWithId" class="proc">geom_tagAllCellsWithId</a> <span class="arg-list">(inPd id)</span><li class="proc-listing"><a href="f_Core_cv.tcl.html#pimg_castToFloat" class="proc">img_castToFloat</a> <span class="arg-list">(inImg outImg)</span><li class="proc-listing"><a href="f_Core_cv.tcl.html#pimg_castToShort" class="proc">img_castToShort</a> <span class="arg-list">(inImg outImg)</span><li class="proc-listing"><a href="f_Core_cv.tcl.html#pimg_loadVTI" class="proc">img_loadVTI</a> <span class="arg-list">(filename objName)</span><li class="proc-listing"><a href="f_Core_cv.tcl.html#pimg_maskImg" class="proc">img_maskImg</a> <span class="arg-list">(inImg maskImg outImg)</span><li class="proc-listing"><a href="f_Core_cv.tcl.html#pimg_mkThrImg" class="proc">img_mkThrImg</a> <span class="arg-list">(inImg thrVal outImg)</span><li class="proc-listing"><a href="f_Core_cv.tcl.html#pmath_factorial" class="proc">math_factorial</a> <span class="arg-list">(number)</span><li class="proc-listing"><a href="f_Core_cv.tcl.html#pmath_matrix_add" class="proc">math_matrix_add</a> <span class="arg-list">(mat_A mat_B)</span><li class="proc-listing"><a href="f_Core_cv.tcl.html#pmath_matrix_exp" class="proc">math_matrix_exp</a> <span class="arg-list">(mat_A n)</span><li class="proc-listing"><a href="f_Core_cv.tcl.html#pmath_matrix_mult" class="proc">math_matrix_mult</a> <span class="arg-list">(mat_A mat_B)</span><li class="proc-listing"><a href="f_Core_cv.tcl.html#pmath_matrix_mult_3x1" class="proc">math_matrix_mult_3x1</a> <span class="arg-list">(mat_A mat_B)</span><li class="proc-listing"><a href="f_Core_cv.tcl.html#pmath_matrix_mult_scale" class="proc">math_matrix_mult_scale</a> <span class="arg-list">(mat_A scale)</span><li class="proc-listing"><a href="f_Core_cv.tcl.html#pmath_matrix_power" class="proc">math_matrix_power</a> <span class="arg-list">(mat n)</span><li class="proc-listing"><a href="f_Core_cv.tcl.html#ppost_TKE" class="proc">post_TKE</a> <span class="arg-list">(fullsimdir filePrefix startStepNo stopStepNo outerIncr maxStepNo periodIncr fulloutdir)</span><li class="proc-listing"><a href="f_Core_cv.tcl.html#ppost_tweak_pulsatile_bc" class="proc">post_tweak_pulsatile_bc</a> <span class="arg-list">(solid_fn mesh_surf_dir mesh_fn res_fns faceinfo out_fn)</span><li class="proc-listing"><a href="f_Core_cv.tcl.html#psolid_mkDiscreteModel" class="proc">solid_mkDiscreteModel</a> <span class="arg-list">(pd outModel fn)</span></ul><hr class="file"><a name="pRCR_parameter_estimator"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">RCR_parameter_estimator</span> <span class="arg-list">(R C period ratio units bn flow_fn)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1027"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: R
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1028"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: C
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1029"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: period
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1030"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: ratio
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1031"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: units
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1032"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: bn
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1033"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: flow_fn
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1034"></a>not documented</span>
+</td></tr></table></p><a name="pResistance_Ratio_Calculator"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">Resistance_Ratio_Calculator</span> <span class="arg-list">(R C period units bn)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1035"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: R
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1036"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: C
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1037"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: period
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1038"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: units
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1039"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: bn
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1040"></a>not documented</span>
+</td></tr></table></p><a name="pTAC_calculator"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">TAC_calculator</span> <span class="arg-list">(R C period units)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1041"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: R
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1042"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: C
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1043"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: period
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1044"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: units
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1045"></a>not documented</span>
+</td></tr></table></p><a name="pcalc_rotation_matrix"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">calc_rotation_matrix</span> <span class="arg-list">(vector th n)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1046"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: vector
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1047"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: th
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1048"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: n
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1049"></a>not documented</span>
+</td></tr></table></p><a name="pcreate_pvd"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">create_pvd</span> <span class="arg-list">(insrc outfn)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1050"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: insrc
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1051"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: outfn
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1052"></a>not documented</span>
+</td></tr></table></p><a name="pgeom_appendPds"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">geom_appendPds</span> <span class="arg-list">(pdList outPd)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1053"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: pdList
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1054"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: outPd
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1055"></a>not documented</span>
+</td></tr></table></p><a name="pgeom_avgNormal"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">geom_avgNormal</span> <span class="arg-list">(inPd)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1056"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: inPd
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1057"></a>not documented</span>
+</td></tr></table></p><a name="pgeom_butterfly"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">geom_butterfly</span> <span class="arg-list">(inPd numDivs outPd)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1058"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: inPd
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1059"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: numDivs
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1060"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: outPd
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1061"></a>not documented</span>
+</td></tr></table></p><a name="pgeom_cap_with_delaunay"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">geom_cap_with_delaunay</span> <span class="arg-list">(inPd cutPd outPd)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1062"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: inPd
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1063"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: cutPd
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1064"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: outPd
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1065"></a>not documented</span>
+</td></tr></table></p><a name="pgeom_densify"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">geom_densify</span> <span class="arg-list">(inPd numDivs outPd)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1066"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: inPd
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1067"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: numDivs
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1068"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: outPd
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1069"></a>not documented</span>
+</td></tr></table></p><a name="pgeom_fillHoles"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">geom_fillHoles</span> <span class="arg-list">(inPd outPd)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1070"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: inPd
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1071"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: outPd
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1072"></a>not documented</span>
+</td></tr></table></p><a name="pgeom_fillSurfaceVoid"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">geom_fillSurfaceVoid</span> <span class="arg-list">(inPd outPd id)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1073"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: inPd
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1074"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: outPd
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1075"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: id
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1076"></a>not documented</span>
+</td></tr></table></p><a name="pgeom_largestConnected"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">geom_largestConnected</span> <span class="arg-list">(inPd outPd)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1077"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: inPd
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1078"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: outPd
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1079"></a>not documented</span>
+</td></tr></table></p><a name="pgeom_mkSphere"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">geom_mkSphere</span> <span class="arg-list">(x y z r outPd)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1080"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: x
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1081"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: y
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1082"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: z
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1083"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: r
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1084"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: outPd
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1085"></a>not documented</span>
+</td></tr></table></p><a name="pgeom_orientPd"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">geom_orientPd</span> <span class="arg-list">(inPd outPd)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1086"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: inPd
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1087"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: outPd
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1088"></a>not documented</span>
+</td></tr></table></p><a name="pgeom_quadraticDecimation"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">geom_quadraticDecimation</span> <span class="arg-list">(inPd target outPd)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1089"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: inPd
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1090"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: target
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1091"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: outPd
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1092"></a>not documented</span>
+</td></tr></table></p><a name="pgeom_smooth"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">geom_smooth</span> <span class="arg-list">(inPd relaxFactor numIters outPd)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1093"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: inPd
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1094"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: relaxFactor
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1095"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: numIters
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1096"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: outPd
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1097"></a>not documented</span>
+</td></tr></table></p><a name="pgeom_syncsmooth"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">geom_syncsmooth</span> <span class="arg-list">(inPd passBandValue numIters outPd)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1098"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: inPd
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1099"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: passBandValue
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1100"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: numIters
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1101"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: outPd
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1102"></a>not documented</span>
+</td></tr></table></p><a name="pgeom_tagAllCellsWithId"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">geom_tagAllCellsWithId</span> <span class="arg-list">(inPd id)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1103"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: inPd
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1104"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: id
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1105"></a>not documented</span>
+</td></tr></table></p><a name="pimg_castToFloat"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">img_castToFloat</span> <span class="arg-list">(inImg outImg)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1106"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: inImg
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1107"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: outImg
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1108"></a>not documented</span>
+</td></tr></table></p><a name="pimg_castToShort"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">img_castToShort</span> <span class="arg-list">(inImg outImg)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1109"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: inImg
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1110"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: outImg
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1111"></a>not documented</span>
+</td></tr></table></p><a name="pimg_loadVTI"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">img_loadVTI</span> <span class="arg-list">(filename objName)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1112"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: filename
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1113"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: objName
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1114"></a>not documented</span>
+</td></tr></table></p><a name="pimg_maskImg"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">img_maskImg</span> <span class="arg-list">(inImg maskImg outImg)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1115"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: inImg
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1116"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: maskImg
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1117"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: outImg
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1118"></a>not documented</span>
+</td></tr></table></p><a name="pimg_mkThrImg"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">img_mkThrImg</span> <span class="arg-list">(inImg thrVal outImg)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1119"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: inImg
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1120"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: thrVal
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1121"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: outImg
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1122"></a>not documented</span>
+</td></tr></table></p><a name="pmath_factorial"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">math_factorial</span> <span class="arg-list">(number)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1123"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: number
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1124"></a>not documented</span>
+</td></tr></table></p><a name="pmath_matrix_add"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">math_matrix_add</span> <span class="arg-list">(mat_A mat_B)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1125"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: mat_A
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1126"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: mat_B
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1127"></a>not documented</span>
+</td></tr></table></p><a name="pmath_matrix_exp"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">math_matrix_exp</span> <span class="arg-list">(mat_A n)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1128"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: mat_A
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1129"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: n
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1130"></a>not documented</span>
+</td></tr></table></p><a name="pmath_matrix_mult"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">math_matrix_mult</span> <span class="arg-list">(mat_A mat_B)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1131"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: mat_A
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1132"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: mat_B
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1133"></a>not documented</span>
+</td></tr></table></p><a name="pmath_matrix_mult_3x1"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">math_matrix_mult_3x1</span> <span class="arg-list">(mat_A mat_B)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1134"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: mat_A
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1135"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: mat_B
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1136"></a>not documented</span>
+</td></tr></table></p><a name="pmath_matrix_mult_scale"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">math_matrix_mult_scale</span> <span class="arg-list">(mat_A scale)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1137"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: mat_A
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1138"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: scale
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1139"></a>not documented</span>
+</td></tr></table></p><a name="pmath_matrix_power"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">math_matrix_power</span> <span class="arg-list">(mat n)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1140"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: mat
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1141"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: n
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1142"></a>not documented</span>
+</td></tr></table></p><a name="ppost_TKE"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">post_TKE</span> <span class="arg-list">(fullsimdir filePrefix startStepNo stopStepNo outerIncr maxStepNo periodIncr fulloutdir)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1143"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: fullsimdir
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1144"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: filePrefix
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1145"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: startStepNo
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1146"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: stopStepNo
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1147"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: outerIncr
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1148"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: maxStepNo
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1149"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: periodIncr
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1150"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: fulloutdir
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1151"></a>not documented</span>
+</td></tr></table></p><a name="ppost_tweak_pulsatile_bc"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">post_tweak_pulsatile_bc</span> <span class="arg-list">(solid_fn mesh_surf_dir mesh_fn res_fns faceinfo out_fn)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1152"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: solid_fn
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1153"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: mesh_surf_dir
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1154"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: mesh_fn
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1155"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: res_fns
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1156"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: faceinfo
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1157"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: out_fn
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1158"></a>not documented</span>
+</td></tr></table></p><a name="psolid_mkDiscreteModel"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">solid_mkDiscreteModel</span> <span class="arg-list">(pd outModel fn)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1159"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: pd
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1160"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: outModel
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1161"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: fn
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1162"></a>not documented</span>
+</td></tr></table></p><hr class="navbar"><p class="navbar"><a href="index.htm" class="navbar">Home</a> | <a href="files.html" class="index-file">Files</a> | <a href="procs.html" class="index-procedure">Procedures</a> | <a href="namespaces.html" class="index-namespace">Namespaces</a> </p><hr class="navbar">
+<hr><p class="generated-by">Generated by <a href="http://www.purl.org/NET/akupries/soft/autodoc/index.htm" class="generated-by">AutoDoc 2.4</a> at 02/09/2015, invoked by <a href="mailto:danschi@danieles-macbook-air.local" class="generated-by">Unknown</a></p></body>
+</html>
