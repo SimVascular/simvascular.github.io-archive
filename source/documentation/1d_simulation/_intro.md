@@ -6,7 +6,7 @@ in deformable one-dimensional hemodynamic networks. These equations offer a rela
 realistic wave propagation phenomemon in vascular networks. One-dimensional networks can be coupled to both 0D lumped 
 parameter models and to more complex 3D flow simulations as boundary conditions.
 
-###Mesh Geometry
+###Centerlines Geometry
 The geometry of the one-dimensional networks used for a 1D simulation is based on the centerlines computed from the surface 
 of a 3D geometric model.  The 3D geometric model is created from image data using the typical 
 SimVascular <a href="docsModelGuide.html"> modeling workflow </a>.
@@ -25,23 +25,28 @@ The source and target points are selected from the model caps defined in the Sim
 </figure>
 <br>
 
-The centerlines geometry is used to define cylindrical segments representing the length and diameter between vessel branching points 
-in the 3D model. Segments are then discretized into a larger mesh of finite elements in order to numerically solve the 1D 
-equations of fluid flow in deformable vessels.
+###Network Geometry and 1D Simulation Mesh
+The centerlines geometry is used to define network **nodes** at vessel inlets, outlets and branching points. A number of cylindrical 
+**segments** are defined representing the length and diameter between vessel **nodes**.
 
 <br>
 <figure>
-  <img src="documentation/1d_simulation/imgs/vessel-segments.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
-  <img src="documentation/1d_simulation/imgs/segment-elements.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 1.5em;">
-  <p style="clear: both;">
-  <figcaption> <i>Cylindrical segments representing the length and diameter between vessel branching points. Each segment is in turn discretized into a number of finite elements.</i></figcaption>
+  <img class="svImg svImgSm" src="documentation/1d_simulation/imgs/vessel-segments.png">
+  <figcaption class="svCaption"> The cylindrical segments representing vessel length and diameter between branching points. </figcaption>
 </figure>
 <br>
 
+Segments are then discretized into a mesh of finite elements in order to numerically solve the 1D equations of fluid flow in 
+deformable vessels.
+
+<br>
+<figure>
+  <img class="svImg svImgMd" src="documentation/1d_simulation/imgs/segment-elements.png">
+  <figcaption class="svCaption"> A segment is discretized into a mesh of finite elements. </figcaption>
+</figure>
+<br>
+
+
 ###Units 
 All model quantities and associated boundary conditions are specified in CGS units.
-
-
-The following sections describe how to use the **1D Simulation Tool** to create one-dimensional hemodynamic networks 
-from 3D vascular models and simulate them using the **sv1DSolver**.  
 
