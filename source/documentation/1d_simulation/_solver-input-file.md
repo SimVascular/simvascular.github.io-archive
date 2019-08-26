@@ -1,17 +1,23 @@
 
 # Input File Format
 
-The 1D Solver executes using a single input text file. The file contains sections defining data for
+The 1D Solver executes using a single input text file. The 1D Solver reads in the input text file and 
+executes keyword statements to define data for
 
 <ol>
-  <li>Network coordinates and connectivity</li>
-  <li>Segment properties</li>
+  <li>Finite element mesh</li>
   <li>Boundary conditions</li>
+  <li>Material model</li>
   <li>Solver parameters </li>
-  <li>Material model parameters </li>
 </ol>
 
-Data sections are defined using the following keywords 
+The general format for a keyword statement is a capitalized name followed by list of data values
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #000000;">
+  KEYWORD <i>value$\_1$</i> <i>value$\_2$</i> ... <i>value$\_N$</i>
+</div>
+<br>
+
+The following keywords are used by the 1D Solver to define and execute a 1D simulation
 
 <ol>
   <li> <a href="#format_data_table"> DATATABLE / ENDDATATABLE </a> </li>
@@ -29,8 +35,9 @@ Data sections are defined using the following keywords
 
 <!-- DATATABLE --> 
 
+<br>
 <a id="format_data_table"> <h3> DATATABLE / ENDDATATABLE </h3></a> 
-The DATATABLE keyword is used to specify constant and time-varying quantities for inlet/outlet boundary conditions 
+The DATATABLE statement is used to specify constant and time-varying quantities for inlet/outlet boundary conditions 
 as a list of List of time/value pairs.
 It also computes admittance and impedance from a parametric definition of the downstream vessel morphometry. 
 
@@ -38,10 +45,10 @@ Format
 <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #000000;">
   DATATABLE <i>name</i>  <i>type</i> 
   <ul style="list-style-type:none;">
-  <li><i>time$\_1$ value$\_1$</i></li>
-  <li><i>time$\_2$ value$\_2$</i></li>
+  <li><i>$row\_1$</i></li>
+  <li><i>$row\_2$</i></li>
   <li><i>...</i></li>
-  <li><i>time$\_N$ value$\_N$</i></li>
+  <li><i>$row\_N$</i></li>
   </ul>
   ENDDATATABLE
   <br>
@@ -50,12 +57,26 @@ Format
   Arguments
   <ul style="list-style-type:none;">
     <li><i>name</i> (string)) - Data table name </li><br>
-    <li><i>type</i> (string) - Data table type. The following types are supported, with additional types in development:
+    <li><i>type</i> (string) - Data table type. 
+  </ul>
+  <br>
+
+  Data table type
+  <ul style="list-style-type:none;">
+    <li>LIST - Table values are specified by alternating the time and the quantity of interest at that instant in time. 
+      <ul style="list-style-type:none;">
+      <li>$row\_1$</i> = <i>time$\_1$ value$\_1$</i></li>
+      <li><i>$row\_2$</i> = time$\_2$ value$\_2$</i></li>
+      <li><i>...</i></li>
+      <li><i>$row\_N$</i> = time$\_N$ value$\_N$</i></li>
+      </ul>
+   </li><br>
   </ul>
 
 </div>
 
-An example with a constant inlet flow rate of 14.0 is
+ <br>
+Example: Set a constant inlet flow rate of 14.0.
 
 ```
   DATATABLE INLETDATA LIST
@@ -64,7 +85,8 @@ An example with a constant inlet flow rate of 14.0 is
   ENDDATATABLE
 ```
 
-An example with a time-varying inlet flow rate is
+ <br>
+Example: Set a time-varying inlet flow rate. 
 
 ```
   DATATABLE INLETDATA LIST
@@ -81,19 +103,12 @@ An example with a time-varying inlet flow rate is
 ```
 <br>
 
-####LIST data entries
-If the data table is of type LIST, values are specified by alternating the time and the quantity of interest at that instant in time. An example is
-
-```
-  DATATABLE TABLE1 LIST
-  0.0 0.0 
-  1000.0 0.0
-  ENDDATATABLE
-```
-
 <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid green; border-left: 6px solid green">
-When entering, for example, scalar values for *PRESSURE*, *RESISTANCE*, *RCR*, etc. you need to enter the associated time, even if its value will not be read. The following example shows how to enter an outlet resistance value of 1000.0 Barye s/mL 
+When entering values for PRESSURE, RESISTANCE, RCR, etc. a time value must be given even if its value will not be read. 
 </div>
+<br>
+
+Example: Set outlet resistance value of 1000.0 Barye s/mL.
 
 ```
   DATATABLE RTABLE LIST
@@ -103,8 +118,9 @@ When entering, for example, scalar values for *PRESSURE*, *RESISTANCE*, *RCR*, e
 
 <!-- INCLUDE -->
 
+<br>
 <a id="format_include"> <h3> INCLUDE </h3></a> 
-This card is used to recursively include input files in the project. 
+The INCLUDE statement is used to recursively include input files in the project. 
 
 Format
 <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #000000;">
@@ -119,7 +135,7 @@ Format
   </ul>
 </div>
 
-Example 
+Example: Include the file named *auxFile.in* in the current model.
 
 ```
   INCLUDE auxFile.in TRUE
@@ -127,8 +143,9 @@ Example
 
 <!-- JOINT -->
 
+<br>
 <a id="format_joint"> <h3> JOINT </h3></a> 
-This card is used to specify a connection between vessel segments. By entering the inlet and outlet vessel segments is it possible to enforce a unique value of pressure in the junction and a flow rate that satisfy conservation of mass. An example is 
+The JOINT statement is used to specify a connection between vessel segments. By entering the inlet and outlet vessel segments is it possible to enforce a unique value of pressure in the junction and a flow rate that satisfy conservation of mass. 
 
 Format
 
@@ -147,7 +164,7 @@ Format
 </div>
 <br>
 
-Example
+Example: Define a joint named *JOINT1* at node *1* connecting inlet *IN0* to outlet *OUT0*. 
 
 ```
   JOINT JOINT1 1 IN0 OUT0
@@ -157,7 +174,7 @@ Example
 
 <br>
 <a id="format_joint_inlet"> <h3> JOINTINLET </h3></a> 
-This card is used to specify a list of segments ID numbers as inlets for a joint entity. An example is 
+The JOINTINLET statement is used to specify a list of segments IDs as inlets for a joint entity. 
 
 Format
 <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #000000;">
@@ -175,19 +192,17 @@ Format
 </div>
 <br>
 
-Example
+Example: Define a inlet joint named *IN0* with segment ID equal to 2, 4, and 5.
 
 ```
   JOINTINLET IN0 3 2 4 5
-
-  The inlet joint named *IN0* has 3 inlets with segment ID equal to 2, 4, and 5 respectively. 
 ```
 
 <!-- JOINTOUTLET -->
 
 <br>
 <a id="format_joint_outlet"> <h3> JOINTOUTLET </h3></a> 
-This card is used to specify a list of segments ID numbers as outlets for a joint entity. An example is 
+The JOINTOUTLET statement is used to specify a list of segment IDs as outlets for a joint entity. 
 
 Format
 
@@ -209,13 +224,13 @@ Example: Define an outlet joint named *OUT0* with 3 inlets and segment IDs 2, 4,
 
 ```
   JOINTOUTLET OUT0 3 2 4 5
-
 ```
 
 <!-- MATERIAL -->
 
+<br>
 <a id="format_material"> <h3> MATERIAL </h3></a> 
-This card is used to specify a constitutive relationship between pressure, cross section diameter and thickness. Example are 
+The MATERIAL statement is used to specify a constitutive relationship between pressure, cross section diameter and thickness. 
 
 Format
 
@@ -231,7 +246,7 @@ Format
   Arguments
   <ul style="list-style-type:none;">
     <li><i>name</i> (string) - Material name. </li><br>
-    <li><i>type</i> (string) - Material type.  Valid types are: LINEAR and OLUFSEN.  </li><br>
+    <li><i>type</i> (string) - Material type. </li><br>
     <li><i>density</i> (double) - Material density.  </li><br>
     <li><i>viscosity</i> (double) - Material viscosity.  </li><br>
     <li><i>pressure</i> (double) - Material reference pressure.  </li><br>
@@ -240,6 +255,13 @@ Format
     <li><i>$k_2$</i> (double) - Material $k_2$ parameter. Optional, used for OLUFSEN material. </li><br>
     <li><i>$k_3$</i> (double) - Material $k_3$ parameter. Optional, used for OLUFSEN material. </li><br>
   </ul>
+
+  Material types
+  <ul style="list-style-type:none;">
+    <li>LINEAR - Linear material. </li><br>
+    <li>OLUFSEN - Olufsen material. </li><br>
+  </ul>
+
 </div>
 <br>
 
@@ -273,7 +295,7 @@ thickness divided by the radius.
 
 <br>
 <a id="format_model"> <h3> MODEL </h3></a> 
-This card allows the user to specify a name for the model that will be used when generating the output files. If, for example, we want to call our model *Artery*, we need to specify the following line 
+The MODEL statement is used to define a name for the model that is used when generating the output files. 
 
 Format
 <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #000000;">
@@ -286,7 +308,7 @@ Format
 </div>
 <br>
 
-Example
+Example: Define a model named *Artery*.
 
 ```
   MODEL Artery
@@ -296,7 +318,7 @@ Example
 
 <br>
 <a id="format_node"> <h3> NODE </h3></a> 
-This card is used to specify the coordinates of a connection between vessel segments. 
+The NODE statement is used to specify the coordinates of a connection between vessel segments. 
 
 Format
 <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #000000;">
@@ -313,7 +335,7 @@ Format
 </div>
 <br>
 
-Example 
+Example: Define a node with ID *1* and coordinates *1.0 2.0 3.0*.
 
 ```
   NODE 0 1.0 2.0 3.0
@@ -323,7 +345,7 @@ Example
 
 <br>
 <a id="format_output"> <h3> OUTPUT </h3></a> 
-The OUTPUT card specifies the file formats for the program outputs. An example is 
+The OUTPUT statement specifies the file formats for the program outputs. 
 
 Format
 <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #000000;">
@@ -331,8 +353,8 @@ Format
  
   Arguments
   <ul style="list-style-type:none;">
-    <li><i>format</i> (string) -  Output file format. Valid formats are: TEXT, VTK and BOTH.  </li><br>
-    <li><i>option</i> (integer) -  VTK export option. Valid options are: 0 and 1. </li><br>
+    <li><i>format</i> (string) - Output file format. </li><br>
+    <li><i>option</i> (integer) - VTK export option. </li><br>
   </ul>
 
   Output formats
@@ -351,7 +373,7 @@ Format
 </div>
 <br>
 
-Example
+Example: Write results in VTK format to multiple files.
 
 ```
   OUTPUT VTK 0
@@ -361,7 +383,7 @@ Example
 
 <br>
 <a id="format_segment"> <h3> SEGMENT </h3></a> 
-The SEGMENT keyword is used to define a vessel segment. 
+The SEGMENT statement is used to define a vessel segment. 
 
 Format
 <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #000000;">
@@ -431,7 +453,7 @@ Example
 
 <br>
 <a id="format_solver_options"> <h3> SOLVEROPTIONS </h3></a> 
-The SOLVEROPTIONS specifies the option needed by the finite element solver. An example is 
+The SOLVEROPTIONS statement specifies options needed by the finite element solver. 
 
 Format
 <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #000000;">
@@ -489,5 +511,4 @@ Example
   SOLVEROPTIONS 0.01 10 1000 4 INLETDATA FLOW 1.0e-3 1 1  
 ```
   
-
 
