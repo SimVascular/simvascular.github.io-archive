@@ -1,12 +1,15 @@
 <h1> Tutorial - Simple Artery </h1>
 This tutorial demonstrates how to create a 1D Solver input file for a model of a single vessel with different outflow boundary conditions. 
 
-In the following sections the contents of the 1D Solver input file are shown as shaded blocks. Text  preceding each block
+In the following sections the contents of the 1D Solver input file are shown as shaded blocks. Text preceding each block
 describe its contents.
 
 <h2> Outlet Flow </h2>
 Create a 1D Simulation input file for a FLOW outlet boundary condition. 
 Since the model contains a single vessel there is only one segment and thus no **JOINTS** need be defined.
+
+The complete 1D Simulation input file listing is 
+<a href="documentation/1d_simulation/solver/files/01_simpleArtery_Flow.in"> here </a>.
 
 <h3> 1D Solver input file </h3>
 Set the model name to be **simpleArtery\_Flow\_**.
@@ -25,23 +28,25 @@ Create two nodes defining the ends of the vessel.
 
 <br>
 Create a segment with the following properties
-<ul style="list-style-type:none;">
-  <li>ID = 0 </li>
-  <li>length = 20.0 </li>
-  <li>number of finite elements in segment = 50 </li>
-  <li>segment inlet Node = 0 </li>
-  <li>segment outlet Node = 1 </li>
-  <li>segment inlet area = 2.0 </li>
-  <li>segment outlet area = 2.0 </li>
-  <li>segment initial flow = 14 </li>
-  <li>segment material = MAT1 </li>
-  <li>minor loss type = NONE</li>
-  <li>branch angle = 0.0 </li>
-  <li>upstream segment ID = 0 </li>
-  <li>branch segment ID = 0 </li>
-  <li>boundary condition type = FLOW </li>
-  <li>data table name for boundary condition = OUTLETDATA </li>
-</ul>
+<p style="font-size:11px">
+<i>
+ID = 0,
+length = 20.0,
+number of finite elements in segment = 50,
+segment inlet node = 0,
+segment outlet node = 1,
+segment inlet area = 2.0,
+segment outlet area = 2.0,
+segment initial flow = 14,
+segment material = MAT1,
+minor loss type = NON,
+branch angle = 0.0,
+upstream segment ID = 0,
+branch segment ID = 0,
+boundary condition type = FLOW,
+data table name for boundary condition = OUTLETDATA 
+</i>
+</p>
 
 ```
 SEGMENT ARTERY 0 20.0 50 0 1 2.0 2.0 14.0 MAT1 NONE 0.0 0 0 FLOW OUTLETDATA
@@ -50,7 +55,8 @@ SEGMENT ARTERY 0 20.0 50 0 1 2.0 2.0 14.0 MAT1 NONE 0.0 0 0 FLOW OUTLETDATA
 <br>
 Create a data table for an inlet flow boundary condition.
 
-```
+<div style="height:120px;overflow:auto;">
+<pre>
   DATATABLE INLETDATA LIST
   0.0 24.9485671447
   0.00401706131058 25.038543576
@@ -253,7 +259,8 @@ Create a data table for an inlet flow boundary condition.
   0.795975472033 24.7714012308
   0.8 24.9485671447
   ENDDATATABLE
-```
+</pre>
+</div>
 
 <br>
 Create a data table for an outlet flow boundary condition.
@@ -267,17 +274,19 @@ Create a data table for an outlet flow boundary condition.
 
 <br>
 Create a material named **MAT1** for an OLUFSEN consitutive model with the following parameters
-  <ul style="list-style-type:none;">
-    <li>name = MAT1 </li>
-    <li>type = OLUFSEN </li>
-    <li>density =  1.06 </li>
-    <li>viscosity = 0.04 </li>
-    <li>pressure = 113324.0 </li>
-    <li>exponent = 1.0  </li>
-    <li>$k\_1$ = 2.0e7 </li>
-    <li>$k\_2$ = -22.5267 </li>
-    <li>$k\_3$ = 8.65e5 </li>
-  </ul>
+<p style="font-size:11px">
+<i>
+name = MAT1,
+type = OLUFSEN,
+density =  1.06,
+viscosity = 0.04,
+pressure = 113324.0,
+exponent = 1.0,
+$k\_1$ = 2.0e7,
+$k\_2$ = -22.5267,
+$k\_3$ = 8.65e5 
+</i>
+</p>
 
 ```
   MATERIAL MAT1 OLUFSEN 1.06 0.04 113324.0 1.0 2.0e7 -22.5267 8.65e5
@@ -285,17 +294,19 @@ Create a material named **MAT1** for an OLUFSEN consitutive model with the follo
 
 <br>
 Set the solver following solver options
-  <ul style="list-style-type:none;">
-    <li>time step = 0.01 </li>
-    <li>save results frequency = 1 </li>
-    <li>number of time steps = 400 </li>
-    <li>number of finite element quadrature points = 2 </li>
-    <li>inlet boundary conditions data table name = INLETDATA </li>
-    <li>inlet boundary condition type = FLOW </li>
-    <li>convergence tolerance = 1.0e-4 </li>
-    <li>formulation type = 1 (conservative formulation) </li>
-    <li>stabilization = 1 (use stabilization) </li>
-  </ul>
+<p style="font-size:11px">
+<i>
+time step = 0.01, 
+save results frequency = 1,
+number of time steps = 400, 
+number of finite element quadrature points = 2,
+inlet boundary conditions data table name = INLETDATA, 
+inlet boundary condition type = FLOW,
+convergence tolerance = 1.0e-4, 
+formulation type = 1 (conservative formulation),
+stabilization = 1 (use stabilization) 
+</i>
+</p>
 
 ```
 SOLVEROPTIONS 0.01 1 400 2 INLETDATA FLOW 1.0e-4 1 1 
@@ -310,19 +321,13 @@ OUTPUT TEXT
 
 <br>
 <h3> Results </h3>
-The results of the simulation are shown using the following graph.
+The results of the simulation are shown using the following graphs.
 
 <br>
 <figure>
-  <img class="svImg svImgMd" src="documentation/1d_simulation/solver/images/Ex01-plottingExample_01.png">
-  <figcaption class="svCaption"> Model flows. </figcaption>
-</figure>
-<br>
-
-<br>
-<figure>
-  <img class="svImg svImgMd" src="documentation/1d_simulation/solver/images/Ex01-plottingExample_03.png">
-  <figcaption class="svCaption"> Model pressues. </figcaption>
+  <img src="documentation/1d_simulation/solver/images/Ex01-plottingExample_01.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
+  <img src="documentation/1d_simulation/solver/images/Ex01-plottingExample_03.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
+  <p style="clear: both;">
 </figure>
 <br>
 
@@ -332,6 +337,9 @@ The results of the simulation are shown using the following graph.
 <br>
 <h2> Outlet Resistance </h2>
 Create a 1D Simulation input file for a constant resistance outlet boundary condition. 
+
+The complete 1D Simulation input file listing is 
+<a href="documentation/1d_simulation/solver/files/02_simpleArtery_Resistance.in"> here </a>.
 
 <h3> 1D Solver input file </h3>
 The MODEL and SEGMENT statements need to be modified and the OUTLETDATA data table replaced with outlet resistance data. 
@@ -362,19 +370,13 @@ Create a data table for the outlet resistance boundary condition.
 
 <br>
 <h3> Results </h3>
-The results of the simulation are shown using the following graph.
+The results of the simulation are shown using the following graphs.
 
 <br>
 <figure>
-  <img class="svImg svImgMd" src="documentation/1d_simulation/solver/images/Ex02-plottingExample_01.png">
-  <figcaption class="svCaption"> Model flows. </figcaption>
-</figure>
-<br>
-
-<br>
-<figure>
-  <img class="svImg svImgMd" src="documentation/1d_simulation/solver/images/Ex02-plottingExample_03.png">
-  <figcaption class="svCaption"> Model pressues. </figcaption>
+  <img src="documentation/1d_simulation/solver/images/Ex02-plottingExample_01.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
+  <img src="documentation/1d_simulation/solver/images/Ex02-plottingExample_03.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
+  <p style="clear: both;">
 </figure>
 <br>
 
@@ -384,6 +386,9 @@ The results of the simulation are shown using the following graph.
 <br>
 <h2> Outlet Pressure </h2>
 Create a 1D Simulation input file for a constant pressure outlet boundary condition. 
+
+The complete 1D Simulation input file listing is 
+<a href="documentation/1d_simulation/solver/files/04_simpleArtery_Pressure.in"> here </a>.
 
 <h3> 1D Solver input file </h3>
 The MODEL and SEGMENT statements need to be modified and the OUTLETDATA data table replaced with outlet pressure data. 
@@ -418,16 +423,11 @@ The results of the simulation are shown using the following graph.
 
 <br>
 <figure>
-  <img class="svImg svImgMd" src="documentation/1d_simulation/solver/images/Ex04-plottingExample_01.png">
-  <figcaption class="svCaption"> Model flows. </figcaption>
+  <img src="documentation/1d_simulation/solver/images/Ex04-plottingExample_01.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
+  <img src="documentation/1d_simulation/solver/images/Ex04-plottingExample_03.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
+  <p style="clear: both;">
 </figure>
 <br>
 
-<br>
-<figure>
-  <img class="svImg svImgMd" src="documentation/1d_simulation/solver/images/Ex04-plottingExample_03.png">
-  <figcaption class="svCaption"> Model pressues. </figcaption>
-</figure>
-<br>
 
 
