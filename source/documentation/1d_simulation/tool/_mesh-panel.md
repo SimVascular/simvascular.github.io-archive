@@ -15,7 +15,7 @@ then the centerline computation may fail.
 ###Panel Layout
 <br>
 <figure>
-  <img src="documentation/1d_simulation/imgs/panel.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
+  <img src="documentation/1d_simulation/tool/images/panel.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
   <p style="clear: both;">
 </figure>
 <br>
@@ -27,7 +27,7 @@ then the centerline computation may fail.
 **Select Inlet Face** - Select the source for the centerline computation. Clicking on this button causes a multi-element 
 check box to appear with entries for each model inlet/outlet face. A (single) face is selected, typically vessel inlet.
 
-  <img class="svImg svImgSm" src="documentation/1d_simulation/imgs/source-face.png">
+  <img class="svImg svImgSm" src="documentation/1d_simulation/tool/images/source-face.png">
 
 **Inlet Face** - The model face name used as a source for the centerline computation. This text box is for display only,
                  a face name cannot be entered.

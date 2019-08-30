@@ -1,13 +1,14 @@
 
 ##Solver Parameters Panel
-The Solver Parameters panel is used to set the material properties for vessel walls. The following material models are supported
+The Solver Parameters panel is used to set the parameters needed to execute the 1D Solver.
+ 
 
 ###Panel Layout
 The panel GUI contains a single table listing **Time Step** and **Output Control** solver parameters.
 
 <br>
 <figure>
-  <img src="documentation/1d_simulation/imgs/solver-params-panel.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
+  <img src="documentation/1d_simulation/tool/images/solver-params-panel.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
   <p style="clear: both;">
 </figure>
 <br>

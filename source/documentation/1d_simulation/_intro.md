@@ -18,8 +18,8 @@ The source and target points are selected from the model caps defined in the Sim
 
 <br>
 <figure>
-  <img src="documentation/1d_simulation/imgs/model-geom.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
-  <img src="documentation/1d_simulation/imgs/centerlines.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
+  <img src="documentation/1d_simulation/images/model-geom.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
+  <img src="documentation/1d_simulation/images/centerlines.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
   <p style="clear: both;">
   <figcaption> <i>The centerlines (right) computed from a 3D geometric model of the aorta and femoral arteries (left). </i></figcaption>
 </figure>
@@ -31,7 +31,7 @@ The centerlines geometry is used to define network **nodes** at vessel inlets, o
 
 <br>
 <figure>
-  <img class="svImg svImgSm" src="documentation/1d_simulation/imgs/vessel-segments.png">
+  <img class="svImg svImgSm" src="documentation/1d_simulation/images/vessel-segments.png">
   <figcaption class="svCaption"> The cylindrical segments representing vessel length and diameter between branching points. </figcaption>
 </figure>
 <br>
@@ -41,7 +41,7 @@ deformable vessels.
 
 <br>
 <figure>
-  <img class="svImg svImgMd" src="documentation/1d_simulation/imgs/segment-elements.png">
+  <img class="svImg svImgMd" src="documentation/1d_simulation/images/segment-elements.png">
   <figcaption class="svCaption"> A segment is discretized into a mesh of finite elements. </figcaption>
 </figure>
 <br>

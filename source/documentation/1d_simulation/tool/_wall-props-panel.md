@@ -11,8 +11,8 @@ The panel GUI contains parameters that vary with the material model selected by 
 
 <br>
 <figure>
-  <img src="documentation/1d_simulation/imgs/wall-props-linear.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
-  <img src="documentation/1d_simulation/imgs/wall-props-olufsen.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
+  <img src="documentation/1d_simulation/tool/images/wall-props-linear.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
+  <img src="documentation/1d_simulation/tool/images/wall-props-olufsen.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
   <p style="clear: both;">
   <figcaption> <i>The panel displays different material parameters depending on the material model selected.</i></figcaption>
 </figure>

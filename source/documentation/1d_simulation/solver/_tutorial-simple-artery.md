@@ -314,14 +314,14 @@ The results of the simulation are shown using the following graph.
 
 <br>
 <figure>
-  <img class="svImg svImgLg" src="documentation/1d_simulation/imgs/Ex01-plottingExample_01.png">
+  <img class="svImg svImgMd" src="documentation/1d_simulation/solver/images/Ex01-plottingExample_01.png">
   <figcaption class="svCaption"> Model flows. </figcaption>
 </figure>
 <br>
 
 <br>
 <figure>
-  <img class="svImg svImgLg" src="documentation/1d_simulation/imgs/Ex01-plottingExample_03.png">
+  <img class="svImg svImgMd" src="documentation/1d_simulation/solver/images/Ex01-plottingExample_03.png">
   <figcaption class="svCaption"> Model pressues. </figcaption>
 </figure>
 <br>
@@ -366,14 +366,14 @@ The results of the simulation are shown using the following graph.
 
 <br>
 <figure>
-  <img class="svImg svImgLg" src="documentation/1d_simulation/imgs/Ex02-plottingExample_01.png">
+  <img class="svImg svImgMd" src="documentation/1d_simulation/solver/images/Ex02-plottingExample_01.png">
   <figcaption class="svCaption"> Model flows. </figcaption>
 </figure>
 <br>
 
 <br>
 <figure>
-  <img class="svImg svImgLg" src="documentation/1d_simulation/imgs/Ex02-plottingExample_03.png">
+  <img class="svImg svImgMd" src="documentation/1d_simulation/solver/images/Ex02-plottingExample_03.png">
   <figcaption class="svCaption"> Model pressues. </figcaption>
 </figure>
 <br>
@@ -418,14 +418,14 @@ The results of the simulation are shown using the following graph.
 
 <br>
 <figure>
-  <img class="svImg svImgLg" src="documentation/1d_simulation/imgs/Ex04-plottingExample_01.png">
+  <img class="svImg svImgMd" src="documentation/1d_simulation/solver/images/Ex04-plottingExample_01.png">
   <figcaption class="svCaption"> Model flows. </figcaption>
 </figure>
 <br>
 
 <br>
 <figure>
-  <img class="svImg svImgLg" src="documentation/1d_simulation/imgs/Ex04-plottingExample_03.png">
+  <img class="svImg svImgMd" src="documentation/1d_simulation/solver/images/Ex04-plottingExample_03.png">
   <figcaption class="svCaption"> Model pressues. </figcaption>
 </figure>
 <br>

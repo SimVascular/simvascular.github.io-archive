@@ -7,7 +7,7 @@ a popup window.
 
 <br>
 <figure>
-  <img class="svImg svImgSm" src="documentation/1d_simulation/imgs/create-job.png">
+  <img class="svImg svImgSm" src="documentation/1d_simulation/tool/images/create-job.png">
   <figcaption class="svCaption"> The Create 1D Simulation job popup menu. </figcaption>
 </figure>
 
@@ -19,12 +19,22 @@ panel.
 
 <br>
 <figure>
-  <img class="svImg svImgSm" src="documentation/1d_simulation/imgs/panel.png">
+  <img class="svImg svImgSm" src="documentation/1d_simulation/tool/images/panel.png">
   <figcaption class="svCaption"> The 1D Simulation Tool panel. </figcaption>
 </figure>
 <br>
 
 The panel contains seven sub-panels used to create or input a specific category of data needed to execute a 1D solver simulation.
-The following sections describe how each of the panels are used.
+<ul style="list-style-type:none;">
+  <li> 1D Mesh </li>
+  <li> Basic Parameters </li>
+  <li> Inlet and Outlet BCs </li>
+  <li> Wall Properties </li>
+  <li> Solver Parameters </li>
+  <li> Create Files and Run Simulation </li>
+  <li> Convert Results </li>
+</ul>
+
+A selecting a sub-panel name brings up the sub-panel's widgets. The following sections describe how each of the sub-panels are used.
 
 
