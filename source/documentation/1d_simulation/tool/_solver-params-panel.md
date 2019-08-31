@@ -1,5 +1,4 @@
-
-##Solver Parameters Panel
+## Solver Parameters Panel ##
 The Solver Parameters panel is used to set the parameters needed to execute the 1D Solver.
  
 

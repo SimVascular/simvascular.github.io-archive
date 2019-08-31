@@ -109,7 +109,8 @@ We adopt the disjoint decomposition approach described in 2.3 to derive appropri
 First, we divide our spatial domain $\Omega=[0,L]$ into an upstream **numerical** domain $\Omega^{n}: z\in(0,B)$, 
 and a downstream **analytic** domain $\Omega^{a}: z\in(B,L)$.
 
-The boundary that separates these domains is defined as $\Gamma\_{B} : z = B$. We define a disjoint decomposition of our variables, for example for our unknown solution vector, $\mathbf{U}$
+The boundary that separates these domains is defined as $\Gamma\_{B} : z = B$. We define a disjoint decomposition of 
+our variables, for example for our unknown solution vector $\mathbf{U}$
 
    $$\mathbf{U} = \mathbf{U}^{n} + \mathbf{U}^{a}$$
 
@@ -411,5 +412,3 @@ After the residual converges to a chosen tolerance, the scheme is advanced in ti
 
 **Remark 2** So far, we have presented the derivation for a single segment. At a connection of multiple segments, pressure continuity and conservation of mass are enforced using Lagrange multipliers. Pressure, cross-sectional area and flow rate boundary conditions are treated as essential boundary conditions. 
 Both of these features are exactly the same as in Wan et al. <a href="#ref-4">[4]</a> and are therefore not repeated here.
-
-

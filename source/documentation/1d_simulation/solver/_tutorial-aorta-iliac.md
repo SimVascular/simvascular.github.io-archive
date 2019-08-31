@@ -1,4 +1,4 @@
-<h1> Tutorial - Branching Artery </h1>
+<h1> Tutorial - Aorta and Iliac Arteries </h1>
 This tutorial demonstrates how to create a 1D Solver input file for a model of an abdominal aorta with branching 
 right and left iliac arteries. 
 

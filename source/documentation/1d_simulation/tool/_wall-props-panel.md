@@ -1,5 +1,4 @@
-
-##Wall Properites Panel
+## Wall Properites Panel
 The Wall Properites panel is used to set the material properties for vessel walls. The following material models are supported
 <ol>
   <li>Linear</li>
@@ -46,7 +45,6 @@ K1, K2, K3 - The empirically-derived constants used to best fit the equation $Eh
 Exponent - The material exponent.
 <br>
 Pressure - The material reference pressure.
-<br>
 <br>
 
 

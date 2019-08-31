@@ -8,7 +8,7 @@ a popup window.
 <br>
 <figure>
   <img class="svImg svImgSm" src="documentation/1d_simulation/tool/images/create-job.png">
-  <figcaption class="svCaption"> The Create 1D Simulation job popup menu. </figcaption>
+  <figcaption class="svCaption"> The <b>Create 1D Simulation Job</b> popup menu. </figcaption>
 </figure>
 
 Use the **Select Model** list to select the 3D geometric surface model used to create centerlines. The list contains the names of 
@@ -19,7 +19,8 @@ panel.
 
 <br>
 <figure>
-  <img class="svImg svImgSm" src="documentation/1d_simulation/tool/images/panel.png">
+<img src="documentation/1d_simulation/tool/images/panel.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
+  <p style="clear: both;">
   <figcaption class="svCaption"> The 1D Simulation Tool panel. </figcaption>
 </figure>
 <br>

@@ -1,4 +1,3 @@
-
 # Input File Format
 
 The 1D Solver executes using a single input text file. The 1D Solver reads in the input text file and 

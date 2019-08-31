@@ -1,4 +1,3 @@
-
 ##1D Mesh Panel
 
 The 1D Mesh panel is primarily used to create centerlines from the surface of a 3D geometric model. A source for the centerline 
