@@ -4,7 +4,7 @@ femoral arteries.
 
 <br>
 <figure>
-  <img class="svImg svImgMd" src="documentation/1d_simulation/solver/images/aorta-femoral.png">
+  <img class="svImg svImgSm" src="documentation/1d_simulation/solver/images/aorta-femoral.png">
   <figcaption class="svCaption"> Model geometry showing abdominal aorta, renal, celiacs and femoral arteries. </figcaption>
 </figure>
 
