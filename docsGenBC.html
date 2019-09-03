@@ -155,7 +155,8 @@
 <li><a href="#sv_prep">Preparing SV files for <br> GenBC Simulations</a></li>
 <li><a href="#genbc_setup">Setting up GenBC</a></li>
 <li><a href="#final_steps">Compiling GenBC and <br> Running Simulation</a></li>
-<li><a href="https://simtk.org/frs/download_confirm.php/latestzip/2031/GenBCTutorialExampleFiles-latest.zip?group_id=188">Example project and files</a></li>
+<li><a href="#pressure_waveform">Pressure Waveform <br> Inlet Boundary Condition</a></li>
+<li><a href="https://simtk.org/frs/download_confirm.php/latestzip/2031/GenBCTutorialExampleFiles-latest.zip?group_id=188">Cylinder Example Project</a></li>
 </ul>
 
 
@@ -175,52 +176,87 @@
 
         <div class="manGenBC"><section id="intro" class="group"><h2>Introduction</h2>
 
-<p>This tutorial is for users who wish to use the GenBC framework for setting inlet and outlet boundary conditions in computational fluid dynamics simulations in SimVascular. It will cover all of the settings and parameters that need to be specified. We will follow a simple example of a cylinder with a prescribed Dirichlet inflow and RCR outflow, which should cover the basics needed to extend the framework to most situations. Additional notes will be included to explain any additional steps needed to extend the framework for more complex models. If you have any questions or if anything is unclear, please do not hesitate to contact us through the public forums!</p>
+<p>This tutorial demonstrates how to use the General Boundary Conditions (GenBC) framework to define custom inlet and outlet boundary conditions for a computational fluid dynamics (CFD) simulation in SimVascular. It will cover all of the settings and parameters that need to be specified. We will follow a simple example of a cylinder with a prescribed Dirichlet inflow and RCR outflow, which should cover the basics needed to extend the framework to most situations. Additional notes will be included to explain any additional steps needed to extend the framework for more complex models. If you have any questions or if anything is unclear, please do not hesitate to contact us through the public forums!</p>
 
 <h2>What is GenBC?</h2>
 
-<p>Short for “General Boundary Conditions”, GenBC offers users a framework to customize the inflow and outflow boundary conditions of their SimVascular model beyond the built-on boundary conditions (i.e. prescribed inflow, resistance outflow, RCR Windkessel, and open-loop Coronary). It allows users to craft an arbitrary lumped parameter network (LPN) layout to suit their application. Some common examples include a lumped parameter heart model that models contraction of the heart chambers to use as an inlet boundary condition, sophisticated models of the downstream circulation for various areas of the body such as the legs and upper body, or a closed-loop formulation where all outflow of the SimVascular model returns back to the inflow after passing through the veins, heart, and pulmonary arteries!</p>
+<p>GenBC provides a framework to programmmatically define custom inflow and outflow boundary conditions for a CFD simulation. The framework 
+allows users to create an arbitrary lumped parameter network (LPN) layout suitable for their application. Some common examples include a 
+lumped parameter heart model that models contraction of the heart chambers to use as an inlet boundary condition, sophisticated models of 
+the downstream circulation for various areas of the body such as the legs and upper body, or a closed-loop formulation where all outflow 
+of the SimVascular model returns back to the inflow after passing through the veins, heart, and pulmonary arteries.</p>
 
-<p>The current implementation of GenBC is in the Fortran programming language. Users will first have to derive the governing ordinary differential equations for their lumped parameter layout of choice, and implement these equations in Fortran source code. As such, some programming experience with Fortran is recommended, especially if the user wants to use complex and sophisticated lumped parameter layouts. Once the equations and parameters have been implemented in the Fortran code, the code must be compiled to produce a GenBC executable program. This program will then interact with the SimVascular flowsolver during execution to provide the appropriate boundary conditions.</p>
+<p>The GenBC framework is implemented as a Fortran program called by the SimVascular flow solver svSolver. Users must derive the governing 
+ordinary differential equations for the lumped parameter layout and implement them in Fortran inside the GenBC program. The Fortan program 
+is then compiled to produce a GenBC executable program. This executable is called by svSolver during execution to provide values for 
+custom boundary conditions.</p>
 
-<p>We are currently working on a graphical user interface which will allow users to easily specify a lumped parameter layout using an interactive plugin. This should greatly simplify the user experience and allow for more rapid iteration on different lumped parameter layouts for cardiovascular simulation.</p>
+<p>SimVascular does not currently provide functionality to define GenBC boundary conditions using the GUI. The GUI is used
+to generate simulation files for built-in boundary conditions. These files are then manually edited to incorporate the commands
+needed to define data for the boundary conditions and to tell svSolver to use the GenBC framework. </p>
 
 <h2>Cylinder RCR example</h2>
 
-<p>For this tutorial, we will use a simple example of a cylinder with a prescribed inflow and RCR boundary conditions. While these simple boundary conditions can be accomplished using the built-in features in SimVascular, we felt that they provide a good test case that provides a gentle introduction to all the details that goes into implementing a GenBC simulation. A graphical representation of our test case is illustrated in the figure below. You may also find the accompanying SimVascular project and GenBC source files in a link on the left hand side toolbar.</p>
+<p>This tutorial demonstrates how to use GenBC to define inflow and RCR boundary conditions for flow in a cylinder. Although these 
+boundary conditions can be defined using the built-in features in SimVascular they are used here as a simple example of all the 
+steps needed to implement GenBC boundary conditions. A graphical representation of the boundary conditions for the cylinder example 
+is shown in the figure below. </p>
 
 <figure>
   <img class="svImg svImgMd" src="documentation/genbc/imgs/rcr_cylinder.jpeg">
   <figcaption class="svCaption" >Cylinder with sinusoidal inflow and RCR outflow.</figcaption>
 </figure>
+
+<p>The SimVascular project for the cylinder example can be downloaded using the <strong>Cylinder Example Project</strong> link in the menu on the 
+left-hand side of this page. The project contains all of the data (image, model, and mesh) needed for the tutorial. You will need 
+to manually load the mesh by selecting <strong>Meshes-&gt;cylinder_mesh-&gt;Load/Unload Mesh</strong> from the <strong>SV Data Manager</strong> menu. The project
+has two additional folders</p>
+<pre class="highlight plaintext"><code>1) GenBC-program - Contains the Fortran code implementing the GenBC framework 
+2) flow-file - Contains the **inlet.flow** file used to to define the flow rate for Direchlet boundary conditions.
+</code></pre>
 </section>
-<section id="sv_prep" class="group"><h2>Preparing SimVascular solver files to interact with GenBC</h2>
+<section id="sv_prep" class="group"><h2>Preparing SimVascular solver files for GenBC</h2>
 
-<p>We will assume at this point that you will have already built the geometry of your model and meshed it using the model construction pipeline in SimVascular. This tutorial will start right at the “Simulations” module. Create a new Simulation job by right-clicking the “Simulations” item in the Data Manager, then click “Create New Simulation Job”. Select the appropriate Model from the drop down menu and give it a name.</p>
+<p>We will assume at this point that you will have already built the geometry of your model and meshed it using the model construction 
+pipeline in SimVascular. This tutorial will start right at the <strong>Simulations</strong> module. Create a new Simulation job by right-clicking 
+the <strong>Simulations</strong> item in the <strong>Data Manager</strong>, then click <strong>Create New Simulation Job</strong>. Select the appropriate Model from the 
+drop down menu and give it the name <strong>cyl_sim</strong>. Navigate through the various tabs to set simulation parameters discussed 
+in <a href="http://simvascular.github.io/docsQuickGuide.html#simulation"> Quick Guide / Simulations</a>. In particular, the values for 
+<strong>Number of Time Steps</strong>, <strong>Time Step Size</strong> and <strong>Number of Timesteps between Restarts</strong> parameters under the <strong>Solver Parameters</strong> 
+tab must be set.</p>
 
-<p>Navigate through the various tabs to set your simulation parameters. We will skip over the majority of these settings in this tutorial to keep it focused on GenBC, but you can find detailed explanations about the Simulations module in the main documentation. </p>
-
-<p>We now focus our attention to the “Inlet and Outlet Bcs” tab. In this tab, you should see a list of all the caps of your model. The main task we want to accomplish here is to tag our caps as either a Dirichlet (i.e. flow) or Neumann (i.e. pressure). For caps where we want to specify flow, double-click the empty box in the “BC Type” column and select “Prescribed Velocities” from the drop-down menu. Now, double-click the name of the Dirichlet outlet to open up a new window with additional parameters.</p>
+<p>During execution the solver will normalize the velocity profile of the Dirichlet inlets to have a flow of 1.0 and then multiply 
+the velocity profile by the flow that is computed in GenBC. Caps with Dirichlet boundary conditions are typically connected to 
+an inductor or have a specified flow waveform (e.g. measured or adapted from literature). For the cylinder example we want to specify the 
+<strong>inlet</strong> face to have a Dirichlet boundary condition. To set a Dirichlet boundary condition for the <strong>inlet</strong> cap double-click the 
+box in the row of the cap <strong>Name</strong> and the column of the <strong>BC Type</strong> and select <strong>Prescribed Velocities</strong> from the drop-down menu. 
+Double-click the cap name under <strong>Name</strong> to open up a window with additional parameters. Set <strong>BC Type</strong> to 
+<strong>Prescribed Velocities</strong> and set <strong>Analytic Shape</strong> to <strong>parabolic</strong>. For the flow rate select the <strong>inlet.flow</strong> file from the 
+project&rsquo;s <strong>simulation-files</strong> directory. </p>
 
 <figure>
   <img class="svImg svImgMd" src="documentation/genbc/imgs/velocities_window.png">
   <figcaption class="svCaption" >Prescribed inflow settings window.</figcaption>
 </figure>
 
-<p>Here, we need to specify an analytic shape of the velocity profile (usually parabolic or plug), and a “template” .flow file (can just be a steady flow file. We have provided one as part of this tutorial). Even though the GenBC framework will compute the flows that will ultimately be applied on your model, SimVascular still needs to have some information about the desired velocity profile in the form of a bct.dat file. During execution, SimVascular will normalize the velocity profile on your Dirichlet inlets to have a flow of 1.0, then multiply the velocity profile by the flow that is computed in GenBC. Dirichlet flow caps are normally associated with caps directly connected to an inductor, or at caps where the user wants to directly specify a flow waveform that is either measured or adapted from literature. For the cylinder example, we want to specify the “inlet” face as a Dirichlet boundary condition. Set the BC Type to Prescribed Velocities, and set the Analytic Shape to parabolic. For the Flow rate entry, select the “template_flow.flow” file that we have also provided.</p>
-
-<p>For outlets where we want to specify a Neumann/pressure boundary condition, select “Resistance” for the BC Type and assign it a value of 0. These settings are merely a placeholder and will be updated shortly. Neumann-type boundary conditions are typically used for caps that interface directly with either a capacitor or a resistor. For our cylinder case, specify the “outlet” face as a Resistance boundary condition and set its Value to zero. When you are done, the Inlet and Outlet Bcs tab should look like this:</p>
+<p>A Neumann boundary condition is typically used for caps that interface directly with either a capacitor or a resistor. 
+For the <strong>outlet</strong> cap we specify a Neumann boundary condition by selecting <strong>Resistance</strong> for the <strong>BC Type</strong> and assigning it 
+a value of 0. These settings are used to create the appropriate entries in the <strong>solver.inp</strong> file we will later modify. 
+The <strong>Inlet and Outlet BCs</strong> tab should now look like this</p>
 
 <figure>
   <img class="svImg svImgMd" src="documentation/genbc/imgs/inlet_and_outlet_bcs.png">
   <figcaption class="svCaption" >Inlet and outlet conditions.</figcaption>
 </figure>
 
-<p>After setting the wall properties and solver parameters, we need to create the data files for the simulation. Go to the “Create Files and Run Simulation” tab, select the appropriate mesh fro the drop down menu, and click “Create Data Files for Simulation”. If this step completes successfully, then navigate to your project directory using the file explorer on your machine. Inside the Simulations folder, you should see a folder corresponding to the simulation job you just created. Inside that folder should be various files and folders:</p>
+<p>To create the data files for the simulation go to the <strong>Create Files and Run Simulation</strong> tab, select the appropriate mesh from 
+the drop down menu and click <strong>Create Data Files for Simulation</strong>. The simulation files are written to the project directory inside 
+the <strong>Simulations</strong> folder. In this folder you will see a folder for the simulation job you created named <strong>cyl_sim</strong>. Inside this 
+folder are the following files and folders:</p>
 <pre class="highlight plaintext"><code>1. mesh-complete – Contains mesh information and discretization in VTK format files
-2. bct.dat and bct.vtp – Contains velocity profile information on your Dirichet caps
-3. .svpre file – Pre-solver script which instructs SimVascular how to prepare the simulation files
-         from your mesh. Contains the ID numbers for mesh surfaces (used later)
+2. bct.dat and bct.vtp – Contains velocity profile information on your Dirichlet caps
+3. cyl_sim.svpre file – Pre-solver script which instructs SimVascular how to prepare the simulation files
+           from your mesh. Contains the ID numbers for mesh surfaces (used later)
 4. geombc.dat.1 – Simulation file that contains geometry information
 5. inlet.flow - .flow file which has the template flow information at your inlet face(s)
 6. numstart.dat – Dummy file which tells the solver on which timestep to start on
@@ -228,58 +264,58 @@
 8. solver.inp – Solver settings file
 </code></pre>
 
-<p>We will need to make some slight modifications to the solver.inp file to facilitate the use of GenBC. Open solver.inp with your favorite text editor, and scroll down to the section right below “Step Construction”. You should see a list of three commands that all have to do with Resistance boundary conditions:</p>
-<pre class="highlight plaintext"><code>Number of Resistance Surfaces: 1
-List of Resistance Surfaces: 3
-Resistance Values: 0
-</code></pre>
-
-<p>Recall that we specified Resistances surfaces as placeholders for our Neumann surfaces. We can thus delete these from the solver.inp.</p>
-
-<p>We next need to add commands to the solver.inp to instruct SimVascular to look for GenBC and to properly look for all the surfaces. First, add the following commands to your solver.inp right under the Step Construction:</p>
-<pre class="highlight plaintext"><code>Find the GenBC Inside the Running Directory: True
-Number of Timesteps for GenBC Initialization: 0
-</code></pre>
-
-<p>These commands will tell SimVascular to look for a GenBC file to specify boundary conditions. Next, we need to include a block of commands to specify the Dirichlet surfaces:</p>
-<pre class="highlight plaintext"><code>Number of Dirichlet Surfaces: 1
-List of Dirichlet Surfaces: 2
-</code></pre>
-
-<p>The first command, “Number of Dirichlet Surfaces”, specifies the total number of caps in your model where we want to supply a Dirichlet boundary condition from GenBC. The next command, “List of Dirichlet Surfaces”, is a list of all the surface IDs where a Dirichlet surface will be applied. The surface ID numbers are automatically generated by SimVascular when creating the simulation files. In this cylinder case, the inlet is tagged with an ID number of 2, so we put 2 in the list. </p>
-
-<p>You can check the ID numbers for your surfaces by opening the .svpre file mentioned earlier in a text editor. Inside the .svpre file you should see commands named “set<em>surface</em>id_vtp”, followed by a path to a mesh surface, followed by a number. Our cylinder example produced the following ID numbers in the .svpre file:</p>
+<p>Surfaces are identified using integer IDs automatically generated by SimVascular and assigned to surfaces in 
+the <strong>.svpre</strong> file using the <strong>set_surface_id_vtp</strong> command  </p>
 
 <figure>
   <img class="svImg svImgMd" src="documentation/genbc/imgs/surface_ids.png">
   <figcaption class="svCaption" >Surface IDs in .svpre file.</figcaption>
 </figure>
 
-<p>Here, you can see that the exterior of our mesh is tagged with ID 1, the inlet is tagged with ID 2, and the outlet is tagged with ID 3. This confirms our selection of “2” in the List of Dirichlet Surfaces.</p>
-
-<p>If you have more than one surface that needs to be included in the List of Dirichlet Surfaces, separate their ID numbers with a space like so:</p>
-<pre class="highlight plaintext"><code>List of Dirichlet Surfaces: 2 4 5 6
+<p>We need to manually modify the <strong>solver.inp</strong> file to use GenBC. Edit the <strong>solver.inp</strong> file with a text editor and scroll down to 
+the section right below <strong>Step Construction</strong>. You wil see following three commands for Resistance boundary conditions</p>
+<pre class="highlight plaintext"><code>Number of Resistance Surfaces: 1
+List of Resistance Surfaces: 3
+Resistance Values: 0
 </code></pre>
 
-<p>We now have to add a similar block for our Neumann surfaces:</p>
+<p>These commands were created for the <strong>outlet</strong> cap Neumann boundary condition but are not needed and so we delete them.</p>
+
+<p>We next need to add commands to instruct the solver to look for GenBC and all the inlet/outlet surfaces. Below the <strong>Step Construction</strong> 
+command add </p>
+<pre class="highlight plaintext"><code>Find the GenBC Inside the Running Directory: True
+Number of Timesteps for GenBC Initialization: 0
+</code></pre>
+
+<p>We next add commands identifyibng the inlet Dirichlet surfaces</p>
+<pre class="highlight plaintext"><code>Number of Dirichlet Surfaces: 1
+List of Dirichlet Surfaces: 2
+</code></pre>
+
+<p>The <strong>Number of Dirichlet Surfaces</strong> command specifies the total number of caps in your model where Dirichlet boundary condition are 
+defined for GenBC. The <strong>List of Dirichlet Surfaces</strong> is a space-delimited list surface IDs for the Dirichlet boundary conditions.
+For the cylinder model the <strong>inlet</strong> is assigned ID 2. </p>
+
+<p>We now add a similar commandes for surfaces with Neumann boundary conditios </p>
 <pre class="highlight plaintext"><code>Number of Neumann Surfaces: 1    
 List of Neumann Surfaces: 3 
 </code></pre>
 
-<p>Since our outlet has ID 3, we use that number in the List of Neumann Surfaces. Like before, if you have multiple Neumann surfaces you can specify their IDs numbers in the list separated by spaces.</p>
+<p>We now change the value of <strong>Number of Coupled Surfaces</strong> to the total number of Dirichlet and Neumann surfaces in your model. 
+This is to indicate that these surfaces are coupled in the sense that the flow and pressure have the potential to be coupled in 
+the GenBC formulation. For this example the number of coupled surfaces is 2 because we have 1 Dirichlet surface and 1 Neumann surface.</p>
 
-<p>Finally, we need to make one more small adjustment. You should see a command called “Number of Coupled Surfaces” in the solver.inp. Change this number to the total number of Dirichlet AND Neumann surfaces in your model. This is to indicate that these surfaces are coupled in the sense that the flow and pressure have the potential to be coupled in the GenBC formulation. For this example, the number of coupled surfaces is 2 because we have 1 Dirichlet surface and 1 Neumann surface.</p>
-
-<p>That is it for the edits to the solver.inp. After making these changes, you should have the following lines of code in your solver.inp:</p>
+<p>After making these changes the <strong>solver.inp</strong> file should look like</p>
 
 <figure>
   <img class="svImg svImgMd" src="documentation/genbc/imgs/solver_lines.png">
   <figcaption class="svCaption" >Configured solver.inp for GenBC simulation of an RCR cylinder.</figcaption>
 </figure>
 </section>
-<section id="genbc_setup" class="group"><h2>Setting up the GenBC</h2>
+<section id="genbc_setup" class="group"><h2>Setting up GenBC</h2>
 
-<p>Now that the solver files are out of the way, now it is time to implement the boundary condition equations into GenBC. In our included files, you should see a folder called “GenBC_files”. Inside this you should find three Fortran source files: GenBC.f, Modules.f, and USER.f. You should also see Makefile to assist you in compiling.</p>
+<p>The Fortan files implementing GenBC are found in the project directory under the <strong>GenBC-program</strong> folder. This folder contains 
+three Fortran source files (GenBC.f, Modules.f and USER.f) and a Makefile.</p>
 
 <p>All of the implementation will be done in USER.f. Open this file with a text editor. We will proceed down this code and explain it in blocks. The first block that the user can change is the “unit conversion” block:</p>
 
@@ -288,7 +324,7 @@ List of Neumann Surfaces: 3
   <figcaption class="svCaption" >Unit conversion block of GenBC.</figcaption>
 </figure>
 
-<p>In this block, you can specify conversion factors between pressure and flow in the GenBC code, and pressure and flow in the SimVascular flowsolver. In general, SimVascular models and flowsolvers use the CGS unit system (centimeters-grams-seconds). The units for pressure and flow in this system are dyne/cm^2 and cm^3/s, respectively. In the GenBC framework, it is often convenient to work with “clinical” units of pressure (i.e. mmHg). The conversion factor between mmHg and dyne/cm^2 is 1334 (dyne/cm^2) / mmHg, hence the value of 1.334D3 for the pConv variable. The clinical unit for flow is mL/s, which is equivalent to cm^3/s, so we leave the qConv variable at 1.0. If you want to develop your LPN model using CGS units for the parameter values, then you can change both Conv variables to 1.0. Note that the system you will choose to work with will affect the values of the parameters in your LPN network, and the values for the initial conditions in your LPN network as will be described below.</p>
+<p>In this block, you can specify conversion factors between pressure and flow in the GenBC code, and pressure and flow in the SimVascular flowsolver. In general, SimVascular models and flowsolvers use the CGS unit system (centimeter-gram-second). The units for pressure and flow in this system are dyne/cm^2 and cm^3/s, respectively. In the GenBC framework, it is often convenient to work with “clinical” units of pressure (i.e. mmHg). The conversion factor between mmHg and dyne/cm^2 is 1334 (dyne/cm^2) / mmHg, hence the value of 1.334D3 for the pConv variable. The clinical unit for flow is mL/s, which is equivalent to cm^3/s, so we leave the qConv variable at 1.0. If you want to develop your LPN model using CGS units for the parameter values, then you can change both Conv variables to 1.0. Note that the system you will choose to work with will affect the values of the parameters in your LPN network, and the values for the initial conditions in your LPN network as will be described below.</p>
 
 <p>The pCorr and qCorr variables are seldom used and can be left as .FALSE.
 The next block is the inputs block:</p>
@@ -366,15 +402,66 @@ The next block is the inputs block:</p>
 </section>
 <section id="final_steps" class="group"><h2>Compiling GenBC</h2>
 
-<p>Once all of the settings and equations have been set in USER.f, you will need to compile the code. Navigate to the folder on your Linux or Mac machine using the terminal and type “make”. If the code compiled without any errors, you should see a GenBC executable file in the current folder (note that this is NOT GenBC.o or GenBC.f). If it does not appear, then you will need to fix any syntax errors that the compiler wishes to fix. You can sometimes get some warnings depending on the compiler, but you can mostly ignore these. The warning to pay attention to is the warning about uninitialized variables, where you have declared a variable for use but did not specify a value.</p>
+<p>Once all of the settings and equations have been set in USER.f you can compile the source code. Navigate to the <strong>GenBC-program</strong> folder 
+on your Linux or Mac machine using the terminal and type <strong>make</strong>. This creates an executable named <strong>GenBC</strong> in the current folder. 
+Copy the executable to the project <strong>Simulations</strong> <strong>cyl_sim</strong> folder.</p>
 
 <h2>Running a flow simulation and checking results</h2>
 
-<p>We now have all the files we need to run a simulation with GenBC. In particular, we will need the following files: bct.dat, geombc.dat.1, numstart.dat, restart.0.1, solver.inp, and GenBC. Once you have all of these in the same folder, you can run svSolver from there. Once the simulation starts, you should see a file named “AllData” that gets produced. This is an output file produced by GenBC that prints out the values of the state variables as a function of time, as well as the additional Xprint outputs we specified earlier.</p>
+<p>Now navigate to the  <strong>Simulations</strong> <strong>cyl_sim</strong> folder. You can now run the svSolver program. Once the simulation starts it will 
+creaate a file named <strong>AllData</strong>. This is an output file produced by GenBC which contains the values of the state variables as a 
+function of time and the additional Xprint outputs we specified earlier.</p>
+</section>
+<section id="pressure_waveform" class="group"><h2>Prescribing a pressure waveform as an inlet boundary condition</h2>
 
-<p>If you are running your simulation on a machine other than your own (i.e. a supercomputing cluster) you MUST recompile GenBC on that machine. You have to compile GenBC with the same compilers as the system you are running the simulation on.</p>
+<p>This section of the tutorial describes how to use the GenBC framework to define a Neumann boundary condition as a pressure 
+waveform at an inlet surface. The pressure boundary condition is implemented in Fortran using the GenBC framework. The pressure 
+at the cylinder inlet is obtained by interpolating a pressure waveform defined in the GenBC Fortan code.</p>
 
-<p>This concludes the GenBC tutorial! Please reach out to us if anything is unclear or if you need assistance crafting your custom boundary condition model!</p>
+<figure>
+  <img class="svImg svImgMd" src="documentation/genbc/imgs/waveform.png">
+  <figcaption class="svCaption" >Pressure waveform used for the inlet Neumann boundary condition.</figcaption>
+</figure>
+
+<p>The pressure waveform inlet boundary condition simulation is similar to the RCR simulation we created above except
+for changes to the boundary conditions and some changes in the simulation parameters needed for solver stability. Create a new 
+Simulation job by right-clicking the <strong>Simulations</strong> item in the <strong>Data Manager</strong>, then click <strong>Create New Simulation Job</strong>. 
+Select the appropriate Model from the drop down menu and give it the name <strong>cyl_pres</strong>. Navigate to the <strong>Solver Parameters</strong> tab and 
+set </p>
+<pre class="highlight plaintext"><code>Number of Time Steps: 2000 
+
+Time Step Size: 0.000588 
+
+Number of Timesteps between Restarts: 20 
+</code></pre>
+
+<p>We will define Neumann boundary conditions for both the inlet and outlet caps selecting <strong>Resistance</strong> for the <strong>BC Type</strong> and assigning it 
+a value of 0. These settings are used to create the appropriate entries in the <strong>solver.inp</strong> file we will later modify. The <strong>Inlet and 
+Outlet BCs</strong> tab should now look like this</p>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/genbc/imgs/pres_inlet_and_outlet_bcs.png">
+</figure>
+
+<p>To create the data files for the simulation go to the <strong>Create Files and Run Simulation</strong> tab, select the appropriate mesh from
+the drop down menu and click <strong>Create Data Files for Simulation</strong>. The simulation files are written to the project directory inside
+the <strong>Simulations</strong> folder. In this folder you will see a folder for the simulation job you created named <strong>cyl_pres</strong>. Now navigate
+to the <strong>cyl_pres</strong> folder. Inside this folder are the following files and folders:</p>
+<pre class="highlight plaintext"><code>    1. mesh-complete – Contains mesh information and discretization in VTK format files
+    2. cyl_pres.svpre file – Pre-solver script which instructs SimVascular how to prepare the simulation files
+           from your mesh. Contains the ID numbers for mesh surfaces (used later)
+    3. geombc.dat.1 – Simulation file that contains geometry information
+    4. numstart.dat – Dummy file which tells the solver on which timestep to start on
+    5. restart.0.1 – Contains initial conditions for pressure and velocity in your simulations
+    6. solver.inp – Solver settings file
+</code></pre>
+
+<p>We need an additional <strong>rcrt.dat</strong> file containing the RCR parameters that set the relationship between flow and pressure on 
+the outflow face. Copt this file from the <strong>simulation-files</strong> folder to here. </p>
+
+<p>the presover solver script (svpre) is needed to be modified by treating the inlet as a Neunmann face (see steady_rcr.svpre). Thus, to prepare a simulation with a prescribed pressure waveform, we run the presolver with the modified presolver script to generate geombc.dat and restart.0.1 files with surfaces properly tagged. Then we complie the GenBC files (user defined Fortran files) before calling the flow solver.</p>
+
+<p>Note that apart from potentially increased computational cost and numerical instability (which might be insignificant), prescribing a pressure waveform doesn&rsquo;t necessarily make flow simulations better agree with clinical target values. So extra adjustments are often needed in order to match target pressures and flow. Don&rsquo;t forget to check resulting inflow when the Nuemann BC (pre-defined pressure or a lumped parameter model defined pressure) is applied to the inlet.</p>
 </section>
 </div>
 
