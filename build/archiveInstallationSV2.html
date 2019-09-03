@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SimVascular Docs</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+
+    <link href="css/shop-item.css" rel="stylesheet" type="text/css" />
+
+    <link href="css/codestyle.css" rel="stylesheet" type="text/css" />    
+
+    <link rel="stylesheet" href="font-awesome-4.1.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
+
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                <i class="fa fa-bars" id="barIcon"></i>
+              </button>
+                <a class="navbar-brand" id="brandName" href="index.html">
+                  <img src="img/svlogo/svLogoSmallText.png" alt="...">
+                </a>
+                <a class="navbar-brand page-scroll">            
+                2.0
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">            
+                <ul class="nav navbar-nav">
+
+                  <!-- USER GUIDES -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b><span class="fa fa-user"></span>  User Guides </b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="archiveInstallationSV2.html"><b><span class="fa fa-sign-in fa-rotate-90"></span> Installation</b></a></li>
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="archiveQuickGuideSV2.html"><b><span class="icon ion-ios7-bolt"></span> Quick Guide</b></a></li>
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="archiveImageGuideSV2.html"><b><span class="icon ion-settings"></span> Image Visualization</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="archiveModelGuideSV2.html"><b><span class="icon ion-settings"></span> Modeling</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="archiveMeshingSV2.html"><b><span class="icon ion-ios7-keypad"></span> Meshing</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="archiveFlowSolverSV2.html"><b><span class="icon ion-play"></span> Simulation</b></a></li>
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="archiveCodeSnippetsSV2.html"><b><span class="icon ion-play"></span> Code Snippets</b></a></li>
+                    </ul>
+                  </li>
+                  
+
+                  <!-- Latest version -->
+                  <li>
+                    <a href="docsQuickGuide.html" id="dropdownMenu1" >
+                      <b>Back To Lastest Version</b>
+                    </a>
+                  </li>  
+
+                    <!-- <li><a href="docsQuickGuide.html" id="btnQuickGuide"><b><span class="icon ion-ios7-bolt"></span> Quick Guide</b></a></li>
+                    <li><a href="docsModelGuide.html" id="btnModelGuide"><b><span class="icon ion-settings"></span> Modeling</b></a></li> 
+                    
+                    <li><a href="docsMeshing.html" id="btnMeshing"><b><span class="icon ion-ios7-keypad"></span> Meshing</b></a></li>
+                    <li><a href="docsPresolver.html" id="btnPresolver"><b><span class="icon ion-log-in"></span> svPre</b></a></li>
+                    <li><a href="docsFlowSolver.html" id="btnFlowSolver"><b><span class="icon ion-play"></span> svSolver</b></a></li>
+                    <li><a href="docsRefs.html" id="btnRefs"><b><span class="icon ion-document-text"></span> References</b></a></li>
+                    <li><a href="clinicalCase1.html" id="btnRefs"><b>Case Studies</b></a></li> -->
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <!--Nav Bar -->
+<div class="row">
+    <div class="col-xs-1 col-sm-1 hidden-md hidden-lg">
+    </div>
+    <!-- ONE COLUMN OF SPACE -->
+    <nav class="hidden-xs hidden-sm col-md-2 col-lg-2 bs-docs-sidebar">
+
+        <ul id="sidebar" class="nav nav-stacked fixed manInstallationSV2"> <!--Nav Bar -->
+<p><h3>Installation</h3></p>
+<li><a href="#installationDownload">Download</a></li>
+<li><a href="#installationWindows">Windows</a></li>
+<li><a href="#installationMac">Mac</a>
+<li><a href="#installationLinux">Linux</a>
+<li><a href="#installationCommand">Command Line Tools</a>
+</ul>
+
+
+
+
+
+
+        
+    </nav>
+    
+    <!--Main Content -->
+    <div class="col-xs-10 col-sm-10 col-md-9 col-lg-9" id="manualContent">
+
+      <!-- ACTUAL CONTENT -->
+
+        <div class="manInstallationSV2"><section id="installationDownload" class="group"><h1>Downloading SimVascular</h1>
+
+<ol>
+<li><p>On the SimVascular hompage, click 
+<a href="https://simtk.org/project/xml/downloads.xml?group_id=188" target="_blank">Download Installation Package</a>. </p>
+
+<p>Once on simtk.org choose the correct download link:</p>
+<pre class="highlight plaintext"><code>Windows: simvascular-2.0.10129-Win64.msi 
+Mac: simvascular-2.0.10129-darwin-x86_64.dmg
+Linux: simvascular-2.0.10129-Linux-x64.tar.gz
+</code></pre></li>
+<li><p>Login to SimTk or create a new account.</p></li>
+<li><p>List your intended use for the software and agree to the license agreement. The download should begin, if not, click the link given and follow the instructions.</p></li>
+</ol>
+</section>
+<section id="installationWindows" class="group"><h1>Installation Instructions for Windows</h1>
+
+<p><br></p>
+
+<h3>1. Prerequisites</h3>
+
+<p>On Windows, SimVascular requires several external packages and runtime libraries to be installed. Depending on your OS and other
+software that you have installed, you may have many of the runtime libraries already installed. It is better to be safe
+than sorry – if you already have a prerequisite installed, running the installer will do nothing.</p>
+
+<p><em><strong>NOTE:</strong> MPICH2 is needed to run simulations. GDCM is needed to read info from DICOM headers</em></p>
+
+<p><br></p>
+
+<h3>2. Requirements</h3>
+
+<h4>Windows 8</h4>
+
+<p>Windows 8 appears to currently have all the runtime prerequisites installed for the current release of SimVascular, except packags for DICOM and MPICH2.</p>
+
+<h4>Windows 7 / Windows</h4>
+
+<p>Install MSVC &amp; Intel Fortran runtime compiler libraries:</p>
+
+<!--
+    1. Install vcredist_x86-2008-sp0.exe
+    2. Install msvc10_vcredist_x64.exe (64-bit machines only)
+    3. Install msvc2010sp1-vcredist_x64.exe (64 bit machines only)
+    4. Install msvc10_sp1_vcredist_x86.exe
+    5. w_fcompxe_redist_intel64_2011.6.233.msi (64-bit machines only)
+    6. w_fcompxe_redist_ia32_2011.6.233.msi
+    7. w_fcompxe_redist_intel64_2011.11.344.msi (64-bit machines only)
+    8. w_fcompxe_redist_ia32_2011.11.344.msi
+    -->
+<pre class="highlight plaintext"><code>NetFx20SP2_x86.exe
+</code></pre>
+
+<p>Required External Packages for DICOM</p>
+<pre class="highlight plaintext"><code>1. Install Win32OpenSSL_Light-1_0_1c.exe
+2. Install GDCM-2.2.1-Windows-x86.exe  (Add GDCM to system PATH for ALL users!)
+</code></pre>
+
+<p>Required External Packages for SimVascular Flow Solver</p>
+<pre class="highlight plaintext"><code>1. Install MPICH2:
+
+mpich2-1.4.1p1-win-x86-64.msi (64-bit machines only)
+</code></pre>
+
+<!--    2. mpich2-1.4.1p1-win-ia32.msi (32-bit machines only) -->
+
+<p><em><strong>NOTE:</strong> install for ALL users. MPICH2 must be installed from the REAL Administrator account, NOT just a user with
+administrative privileges!!!! To enable the Administrator account, first you’ll need to open a command prompt in
+administrator mode by right-clicking and choosing “Run as administrator” (or use the Ctrl+Shift+Enter shortcut from the
+search box) and then typing:</em></p>
+<pre class="highlight plaintext"><code>net user administrator /active:yes
+</code></pre>
+
+<figure>
+  <img class="svImg svImgSm" src="archives/sv2/installation/imgs/mpich.jpg">
+  <figcaption class="svCaption" >Open Command Prompt in Administrator Mode</figcaption>
+</figure>
+
+<p><em>Remember to add a password for the administrator account and re-login with the account to install MPICH2!</em></p>
+
+<p><br></p>
+
+<h3>3. Installing SimVascular</h3>
+
+<p>Install SimVascular &amp; configure firewall (for flow solver if needed):</p>
+<pre class="highlight plaintext"><code>1. Install simvascular-2.0.xxxxx-Win-x64.msi 
+2. Add exceptions to Windows Firewall for “flowsolver.exe” and “mpiexec.exe” installed under the SimVascular installation folder in “Program Files". Be careful since “private” networks and “public” networks have different settings.
+</code></pre>
+
+<p><br></p>
+</section>
+<section id="installationMac" class="group"><h1>Installation Instructions for Apple OS X</h1>
+
+<ol>
+<li><p>Launch the downloaded package and agree to the terms of service.</p></li>
+<li><p>Drag SimVascular into your Applications folder when this window opens.</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="archives/sv2/installation/imgs/macDrag.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure></li>
+<li><p>Launch SimVascular through your Applications folder or using the Terminal (see step 5).</p></li>
+<li><p>(Optional) To run svSolver from the GUI, you will need to install mpich through MacPorts. MacPorts is available at <a href="https://www.macports.org/"target="blank"> macports.org</a>:</p>
+<pre class="highlight plaintext"><code>sudo port install mpich-gcc46
+</code></pre></li>
+<li><p>(Optional) To install the SimvVascular command line tools run:</p>
+<pre class="highlight plaintext"><code>sudo /Applications/SimVascular.app/Contents/Resources/setup-symlinks.sh
+</code></pre></li>
+</ol>
+</section>
+<section id="installationLinux" class="group"><h1>Installation Instructions for Linux</h1>
+
+<ol>
+<li><p>Before installing SimVascular, you may need to install libxss, mpich2, or libgfortran. If you&rsquo;re on linux these may work:</p>
+<pre class="highlight plaintext"><code>sudo apt-get install libxss
+sudo apt-get install mpich2
+sudo apt-get install gfortran
+</code></pre></li>
+<li><p>To use Meshim on linux copy your Meshsim license file into the simvascular directory and rename it meshsim-license.dat</p></li>
+<li><p>To add SimVascular to your path (this is very helpful with using svsolver), you will need to run the post-install script:</p>
+<pre class="highlight plaintext"><code>sudo bash setup-symlinks.sh
+</code></pre>
+
+<p>This script places symbolic links in /usr/local/bin to the simvascular executable scripts.
+You may wish to edit the symbolic links.</p>
+
+<p>Note that the solver can be run with mpiexec.
+For example to run on two processors:</p>
+<pre class="highlight plaintext"><code>cd /folder/with/input
+mpiexec -np 2 svsolver
+</code></pre></li>
+</ol>
+</section>
+<section id="Command Line Tools" class="group"><h2>Running SimVascular From the Command Line</h2>
+
+<p><strong>Note:</strong> Currently, Windows does not support command line tools
+<br>
+<br></p>
+
+<table class="table table-bordered">
+<thead>
+<tr>
+  <th>Executable</th>
+  <th>Linux/OSX Script</th>
+</tr>
+</thead>
+<tr>
+  <td>SimVascular</td>
+  <td>simvascular</td>
+</tr>
+<tr>
+  <td>svSolver</td>
+  <td>svsolver</td>
+</tr>
+<tr>
+  <td>svAdapt</td>
+  <td>svadapt</td>
+</tr>
+<tr>
+  <td>svTetAdapt</td>
+  <td>svtetadapt</td>
+</tr>
+<tr>
+  <td>svPost</td>
+  <td>svpost</td>
+</tr>
+</table>
+
+<p><br>
+<br>
+<br></p>
+</section>
+</div>
+
+
+
+
+
+
+
+    </div>
+</div>    
+
+
+    <!-- /.container -->
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container-fluid text-center">
+          <ul class="nav navbar-nav">
+            <li><a>Copyright &copy; SimVascular Development Team - 2017</a></li>                
+          </ul>
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    
+    <script src="js/jquery-1.11.0.js" type="text/javascript"></script><script src="js/bootstrap.min.js" type="text/javascript"></script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+      });
+      $('body').scrollspy({
+        target: '.bs-docs-sidebar',
+        offset: 40
+      });
+    </script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-55333921-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <script type="text/javascript"
+      src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+</body>
+
+</html>

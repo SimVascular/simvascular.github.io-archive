@@ -1,0 +1,155 @@
+<html>
+<head>
+<title>File 'Core/osmsc-dcm.tcl'</title>
+<link rel=stylesheet href="styles.css"
+ type="text/css">
+</head>
+<body >
+<h1>File 'Core/osmsc-dcm.tcl'</h1><hr class="navbar"><p class="navbar"><a href="index.htm" class="navbar">Home</a> | <a href="files.html" class="index-file">Files</a> | <a href="procs.html" class="index-procedure">Procedures</a> | <a href="namespaces.html" class="index-namespace">Namespaces</a> </p><hr class="navbar">
+<div class="file-header"><dl></dl></div><hr class="file"><ul class="proc-listing"><li class="proc-listing"><a href="f_Core_osmsc-dcm.tcl.html#pdcm_ijkLPS" class="proc">dcm_ijkLPS</a> <span class="arg-list">(i j Pixel_Spacing Image_Position Image_Orientation)</span><li class="proc-listing"><a href="f_Core_osmsc-dcm.tcl.html#pdcm_ijkRAS" class="proc">dcm_ijkRAS</a> <span class="arg-list">(i j Pixel_Spacing Image_Position Image_Orientation)</span><li class="proc-listing"><a href="f_Core_osmsc-dcm.tcl.html#pdcm_img2_readSlice" class="proc">dcm_img2_readSlice</a> <span class="arg-list">(filename rtnImg)</span><li class="proc-listing"><a href="f_Core_osmsc-dcm.tcl.html#pdcm_img2_readSliceROI" class="proc">dcm_img2_readSliceROI</a> <span class="arg-list">(filename rtnImg roi)</span><li class="proc-listing"><a href="f_Core_osmsc-dcm.tcl.html#pdcm_img_readHeader" class="proc">dcm_img_readHeader</a> <span class="arg-list">(args)</span><li class="proc-listing"><a href="f_Core_osmsc-dcm.tcl.html#pdcm_img_readSlice" class="proc">dcm_img_readSlice</a> <span class="arg-list">(fn)</span><li class="proc-listing"><a href="f_Core_osmsc-dcm.tcl.html#pdcm_img_readSliceROI" class="proc">dcm_img_readSliceROI</a> <span class="arg-list">(fn roi)</span><li class="proc-listing"><a href="f_Core_osmsc-dcm.tcl.html#pdicom_createPatientFile" class="proc">dicom_createPatientFile</a> <span class="arg-list">(filenames)</span><li class="proc-listing"><a href="f_Core_osmsc-dcm.tcl.html#pdicom_deidentify_destroy_file" class="proc">dicom_deidentify_destroy_file</a> <span class="arg-list">(studyID patID name gender age savePrivate filename)</span><li class="proc-listing"><a href="f_Core_osmsc-dcm.tcl.html#pdicom_deidentify_file" class="proc">dicom_deidentify_file</a> <span class="arg-list">(studyID patID name gender age savePrivate inFile outFile)</span><li class="proc-listing"><a href="f_Core_osmsc-dcm.tcl.html#pdicom_deidentify_multiple_files" class="proc">dicom_deidentify_multiple_files</a> <span class="arg-list">(studyID patID name gender age savePrivate inFiles outDir)</span><li class="proc-listing"><a href="f_Core_osmsc-dcm.tcl.html#pdicom_findMaxMinFromHeaders" class="proc">dicom_findMaxMinFromHeaders</a> <span class="arg-list">(filenames rtnMinPt rtnMaxPt)</span><li class="proc-listing"><a href="f_Core_osmsc-dcm.tcl.html#pdicom_generateUID" class="proc">dicom_generateUID</a> <span class="arg-list">()</span><li class="proc-listing"><a href="f_Core_osmsc-dcm.tcl.html#pdicom_sortCardiacFiles" class="proc">dicom_sortCardiacFiles</a> <span class="arg-list">(filenames rmHDRflag)</span><li class="proc-listing"><a href="f_Core_osmsc-dcm.tcl.html#pdicom_sortFiles" class="proc">dicom_sortFiles</a> <span class="arg-list">(filenames args)</span><li class="proc-listing"><a href="f_Core_osmsc-dcm.tcl.html#pdicom_summary" class="proc">dicom_summary</a> <span class="arg-list">(dirnames outFn)</span></ul><hr class="file"><a name="pdcm_ijkLPS"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">dcm_ijkLPS</span> <span class="arg-list">(i j Pixel_Spacing Image_Position Image_Orientation)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1237"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: i
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1238"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: j
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1239"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: Pixel_Spacing
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1240"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: Image_Position
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1241"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: Image_Orientation
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1242"></a>not documented</span>
+</td></tr></table></p><a name="pdcm_ijkRAS"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">dcm_ijkRAS</span> <span class="arg-list">(i j Pixel_Spacing Image_Position Image_Orientation)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1243"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: i
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1244"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: j
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1245"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: Pixel_Spacing
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1246"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: Image_Position
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1247"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: Image_Orientation
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1248"></a>not documented</span>
+</td></tr></table></p><a name="pdcm_img2_readSlice"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">dcm_img2_readSlice</span> <span class="arg-list">(filename rtnImg)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Read in a slice of image data.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: filename
+</td><td class="argument-description">image filename.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: rtnImg
+</td><td class="argument-description">Repository ImageData object to create.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: status
+</td></tr></table></p><a name="pdcm_img2_readSliceROI"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">dcm_img2_readSliceROI</span> <span class="arg-list">(filename rtnImg roi)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Read in a slice of image data.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: filename
+</td><td class="argument-description">image filename.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: rtnImg
+</td><td class="argument-description">Repository ImageData object to create.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: roi
+</td><td class="argument-description">List (minX, maxX, minY, maxY)
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: status
+</td></tr></table></p><a name="pdcm_img_readHeader"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">dcm_img_readHeader</span> <span class="arg-list">(args)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1249"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: args
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1250"></a>not documented</span>
+</td></tr></table></p><a name="pdcm_img_readSlice"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">dcm_img_readSlice</span> <span class="arg-list">(fn)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Natha Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Read in a 2-D DICOM image file.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: fn
+</td><td class="argument-description">Image filename.
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: Returns a vtkImageData object.
+</td></tr></table></p><a name="pdcm_img_readSliceROI"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">dcm_img_readSliceROI</span> <span class="arg-list">(fn roi)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">by</span> <span class="proc">Nathan Wilson</span>
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="header-description-value">Read in a region of interest from a 2-D DICOM image file.</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: fn
+</td><td class="argument-description">Image filename.
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: roi
+</td><td class="argument-description">List (minX, maxX, minY, maxY)
+</td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc">Returns</span>: Returns a vtkImageData object.
+</td></tr></table></p><a name="pdicom_createPatientFile"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">dicom_createPatientFile</span> <span class="arg-list">(filenames)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1251"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: filenames
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1252"></a>not documented</span>
+</td></tr></table></p><a name="pdicom_deidentify_destroy_file"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">dicom_deidentify_destroy_file</span> <span class="arg-list">(studyID patID name gender age savePrivate filename)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1253"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: studyID
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1254"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: patID
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1255"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: name
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1256"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: gender
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1257"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: age
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1258"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: savePrivate
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1259"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: filename
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1260"></a>not documented</span>
+</td></tr></table></p><a name="pdicom_deidentify_file"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">dicom_deidentify_file</span> <span class="arg-list">(studyID patID name gender age savePrivate inFile outFile)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1261"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: studyID
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1262"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: patID
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1263"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: name
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1264"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: gender
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1265"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: age
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1266"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: savePrivate
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1267"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: inFile
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1268"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: outFile
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1269"></a>not documented</span>
+</td></tr></table></p><a name="pdicom_deidentify_multiple_files"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">dicom_deidentify_multiple_files</span> <span class="arg-list">(studyID patID name gender age savePrivate inFiles outDir)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1270"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: studyID
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1271"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: patID
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1272"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: name
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1273"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: gender
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1274"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: age
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1275"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: savePrivate
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1276"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: inFiles
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1277"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: outDir
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1278"></a>not documented</span>
+</td></tr></table></p><a name="pdicom_findMaxMinFromHeaders"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">dicom_findMaxMinFromHeaders</span> <span class="arg-list">(filenames rtnMinPt rtnMaxPt)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1279"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: filenames
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1280"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: rtnMinPt
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1281"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: rtnMaxPt
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1282"></a>not documented</span>
+</td></tr></table></p><a name="pdicom_generateUID"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">dicom_generateUID</span> <span class="arg-list">()</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1283"></a>not documented</span>
+</td></tr></table></p><a name="pdicom_sortCardiacFiles"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">dicom_sortCardiacFiles</span> <span class="arg-list">(filenames rmHDRflag)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1284"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: filenames
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1285"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: rmHDRflag
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1286"></a>not documented</span>
+</td></tr></table></p><a name="pdicom_sortFiles"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">dicom_sortFiles</span> <span class="arg-list">(filenames args)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1287"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: filenames
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1288"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: args
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1289"></a>not documented</span>
+</td></tr></table></p><a name="pdicom_summary"></a>
+<p class="proc"><table border width=100% class="proc"><tr class="proc"><td colspan=2 class="proc"><h2 class="proc"><span class="proc-name">dicom_summary</span> <span class="arg-list">(dirnames outFn)</span></h2></td></tr><tr class="proc"><td colspan=2 class="proc"><span class="proc-desc-error"><a name="xr1290"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: dirnames
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1291"></a>not documented</span>
+</td></tr><tr class="proc"><td class="argument-name"><span class="argument-name">Argument</span>: outFn
+</td><td class="argument-description"><span class="argument-description-desc-error"><a name="xr1292"></a>not documented</span>
+</td></tr></table></p><hr class="navbar"><p class="navbar"><a href="index.htm" class="navbar">Home</a> | <a href="files.html" class="index-file">Files</a> | <a href="procs.html" class="index-procedure">Procedures</a> | <a href="namespaces.html" class="index-namespace">Namespaces</a> </p><hr class="navbar">
+<hr><p class="generated-by">Generated by <a href="http://www.purl.org/NET/akupries/soft/autodoc/index.htm" class="generated-by">AutoDoc 2.4</a> at 02/09/2015, invoked by <a href="mailto:danschi@danieles-macbook-air.local" class="generated-by">Unknown</a></p></body>
+</html>

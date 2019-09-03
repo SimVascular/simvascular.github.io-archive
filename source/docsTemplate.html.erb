@@ -1,0 +1,91 @@
+---
+title: SimVascular Docs
+---
+<!--Nav Bar -->
+<div class="row">
+    <div class="col-xs-1 col-sm-1 hidden-md hidden-lg">
+    </div>
+    <!-- ONE COLUMN OF SPACE -->
+    <nav class="hidden-xs hidden-sm col-md-2 col-lg-2 bs-docs-sidebar">
+
+      <% if man_name == "Installation" %>
+        <ul id="sidebar" class="nav nav-stacked fixed manInstallation"> <%= partial "documentation/installation_TOC" %></ul>
+      <% end %>
+
+      <% if man_name == "QuickGuide" %>
+        <ul id="sidebar" class="nav nav-stacked fixed manQuickGuide"> <%= partial "documentation/quickguide_TOC" %></ul>
+      <% end %>
+
+      <% if man_name == "ModelGuide" %>
+        <ul id="sidebar" class="nav nav-stacked fixed manModelGuide"> <%= partial "documentation/modeling_TOC" %></ul>
+      <% end %>
+
+      <% if man_name == "Meshing" %>
+        <ul id="sidebar" class="nav nav-stacked fixed manMeshing">    <%= partial "documentation/meshing_TOC" %></ul>
+      <% end %>
+
+      <% if man_name == "FlowSolver" %>
+        <ul id="sidebar" class="nav nav-stacked fixed manFlowSolver"> <%= partial "documentation/flowsolver_TOC" %></ul>
+      <% end %>
+
+      <% if man_name == "svFSI" %>
+        <ul id="sidebar" class="nav nav-stacked fixed mansvFSI"> <%= partial "documentation/fsi_tutorial_TOC" %></ul>
+      <% end %>
+
+      <% if man_name == "GenBC" %>
+        <ul id="sidebar" class="nav nav-stacked fixed manGenBC"> <%= partial "documentation/genbc_tutorial_TOC" %></ul>
+      <% end %>
+
+      <% if man_name == "Compile" %>
+        <ul id="sidebar" class="nav nav-stacked fixed manSource"> <%= partial "documentation/compile_TOC" %></ul>
+      <% end %>
+
+      <% if man_name == "Refs" %>
+        <ul id="sidebar" class="nav nav-stacked fixed manRefs">       <%= partial "documentation/refs_TOC" %></ul>
+      <% end %>
+
+    </nav>
+
+    <!--Main Content -->
+    <div class="col-xs-10 col-sm-10 col-md-9 col-lg-9" id="manualContent">
+
+      <!-- ACTUAL CONTENT -->
+
+      <% if man_name == "Installation" %>
+        <div class="manInstallation"><%= partial "documentation/installation_content" %></div>
+      <% end %>
+
+      <% if man_name == "QuickGuide" %>
+        <div class="manQuickGuide"><%= partial "documentation/quickguide_content" %></div>
+      <% end %>
+
+      <% if man_name == "ModelGuide" %>
+        <div class="manModelGuide"><%= partial "documentation/modeling_content" %></div>
+      <% end %>
+
+      <% if man_name == "Meshing" %>
+        <div class="manMeshing">   <%= partial "documentation/meshing_content" %></div>
+      <% end %>
+
+      <% if man_name == "FlowSolver" %>
+        <div class="manFlowSolver"><%= partial "documentation/flowsolver_content" %></div>
+      <% end %>
+
+      <% if man_name == "svFSI" %>
+        <div class="mansvFSI"><%= partial "documentation/fsi_tutorial_content" %></div>
+      <% end %>
+
+      <% if man_name == "GenBC" %>
+        <div class="manGenBC"><%= partial "documentation/genbc_tutorial_content" %></div>
+      <% end %>
+
+      <% if man_name == "Compile" %>
+        <div class="manCompile"><%= partial "documentation/compile_content" %></div>
+      <% end %>
+
+      <% if man_name == "Refs" %>
+        <div class="manRefs">      <%= partial "documentation/refs_content" %></div>
+      <% end %>
+
+    </div>
+</div>

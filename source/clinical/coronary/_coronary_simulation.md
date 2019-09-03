@@ -1,0 +1,3 @@
+##Coronary Simulation
+
+We will now provide detailed explanations on how to set up a coronary simulation in SimVascular, how to select parameter values, run a simulation, and analyze the results. To create a simulation, right-click the “Simulations” module in the Data Manager and select “Create Simulation Job”. After giving your simulation job a name, it will open up the “SV Simulation” module on the right side of the screen. Here, we describe the case of setting up an “open-loop” coronary flow simulation. Descriptions of more complex closed-loop models, and automated tuning methods can be found in our recent publications at the bottom of this tutorial.

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title><%= current_page.data.title || "SimVascular" %></title>
+
+    <%= stylesheet_link_tag "bootstrap",
+                            "bootstrap-select.min",
+                            "grayscale" %>
+
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="//vjs.zencdn.net/4.8/video-js.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+  <!-- FB STUFF -->
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+
+    <%= yield %>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <h5>Copyright &copy; SimVascular Development Team - 2017</h5>
+        </div>
+    </footer>
+
+    <%= javascript_include_tag "jquery-1.11.0",
+                               "bootstrap.min",
+                               "bootstrap-select.min",
+                               "jquery.easing.min",
+                               "grayscale",
+                               "simple-expand.min",
+                               "svVideo" %>
+
+    <script src="//vjs.zencdn.net/4.8/video.js"></script>
+
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-55333921-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+    <script>
+
+      !function(d,s,id){
+        var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+        if(!d.getElementById(id)){
+          js=d.createElement(s);
+          js.id=id;
+          js.src=p+"://platform.twitter.com/widgets.js";
+          fjs.parentNode.insertBefore(js,fjs);
+        }
+      }(document,"script","twitter-wjs");
+
+
+      $(document).ready(function() {
+        // Select Peeker
+        $('.selectpicker').selectpicker({
+          size: 8
+        });    
+        // Content Expansion
+        $('.expander').simpleexpand();  
+        // Form Submission
+        $('form#contact-us').submit(function() {
+          $('form#contact-us .error').remove();
+          $('form#contact-us span').remove();
+          $('div#resDiv').remove();
+          
+          var hasError = false;          
+          $('.requiredField').each(function() {
+            $(this).parent().removeClass('has-error');
+            if($.trim($(this).val()) == '') {
+              var labelText = $(this).prev('label').text();
+              $(this).parent().addClass('has-error');
+              $(this).parent().append('<span class="glyphicon glyphicon-remove form-control-feedback"></span>');
+              hasError = true;
+            } else if($(this).hasClass('email')) {
+              var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+              if(!emailReg.test($.trim($(this).val()))) {
+                var labelText = $(this).prev('label').text();
+                $(this).parent().append('<span class="error">Sorry! You\'ve entered an invalid '+labelText+'.</span>');
+                $(this).addClass('inputError');
+                hasError = true;
+              }
+            }else{
+              $(this).parent().addClass('has-success');
+              $(this).parent().append('<span class="glyphicon glyphicon-ok form-control-feedback"></span>');
+            }
+        });
+        // if content OK
+        if(!hasError) {
+          var formInput = $(this).serialize();
+          $.post($(this).attr('action'),formInput, function(data,status){
+            console.log(data);
+            $('form#contact-us').after('<div id="resDiv" class="alert alert-success" role="alert"><p>Mail Sent!</p></div>');
+          });
+        }else{
+          $('form#contact-us').after('<div id="resDiv" class="alert alert-danger" role="alert"><p>Please Review Your Data</p></div>');
+        }
+        return false; 
+      });
+    });
+  </script>
+  </body>
+</html>
