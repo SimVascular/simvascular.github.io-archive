@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['s0sh',['s0sh',['../mmatpar_8h.html#a578c3d322aa7824c68c490bf8a5f5c09',1,'mmatpar.h']]],
+  ['savelesrestart_5f',['savelesrestart_',['../leslib__code__usr_8c.html#a1ee383a0eed1c5b9c86d4147a6d64b24',1,'savelesrestart_(Integer *lesId, Real *aperm, Integer *nshg, Integer *myrank, Integer *lstep, Integer *nPermDims):&#160;leslib_code_usr.c'],['../leslib__dummy__prototypes_8c.html#a1ee383a0eed1c5b9c86d4147a6d64b24',1,'savelesrestart_(Integer *lesId, Real *aperm, Integer *nshg, Integer *myrank, Integer *lstep, Integer *nPermDims):&#160;leslib_dummy_prototypes.c']]],
+  ['scdiff',['scdiff',['../sclrs_8h.html#ab06f410fc7b7654941be45ad2035b284',1,'sclrs.h']]],
+  ['setper',['setper',['../solver__subroutines_8f.html#a63900e05cdf781d4557ac472d6875763',1,'solver_subroutines.f']]],
+  ['shptet',['SHPTET',['../shptet_8c.html#a59608a0cbf175266ceed132530d85418',1,'shptet.c']]],
+  ['sigs',['sigs',['../mmatpar_8h.html#ad527177b20e010eb5874df3c3537bf50',1,'mmatpar.h']]],
+  ['smooth',['smooth',['../solver__subroutines_8f.html#aa88eafd5a687f7f597cf9bf4a9aa2213',1,'solver_subroutines.f']]],
+  ['solflow',['solflow',['../solver__subroutines_8f.html#a9fde8f1991ccf99f744113f0cf9a2a24',1,'solver_subroutines.f']]],
+  ['solsclr',['solsclr',['../solver__subroutines_8f.html#a7a67f5331587ba01e7fb6b78cd122aee',1,'solver_subroutines.f']]],
+  ['solverlicenseserver_5f',['solverlicenseserver_',['../leslib__code__usr_8c.html#aca4b5ecfff6c82106cb2eb1d23e12fdc',1,'solverlicenseserver_(char key[]):&#160;leslib_code_usr.c'],['../leslib__dummy__prototypes_8c.html#aca4b5ecfff6c82106cb2eb1d23e12fdc',1,'solverlicenseserver_(char key[]):&#160;leslib_dummy_prototypes.c']]],
+  ['sparseloc',['sparseloc',['../solver__subroutines_8f.html#a8a530353fc568edc213c3ab47a5c8a3d',1,'solver_subroutines.f']]],
+  ['statsflow',['statsflow',['../incomp_8h.html#a5b42627e3ea54f2cf7f677f431c8d894',1,'incomp.h']]],
+  ['statssclr',['statssclr',['../incomp_8h.html#a44159df50901260c31eef53329cdf58c',1,'incomp.h']]],
+  ['stepseq',['stepseq',['../sequence_8h.html#a38981d686a80ba423e9cd422af607612',1,'sequence.h']]],
+  ['stsgetstats',['stsgetstats',['../solver__subroutines_8f.html#aee5bc7fb622c1e7cbec3f3c94e6ad0de',1,'solver_subroutines.f']]],
+  ['stsinitlhs',['stsinitlhs',['../solver__subroutines_8f.html#a01fb97b083c3964c114b1040f0fb4d6f',1,'solver_subroutines.f']]],
+  ['stswritestats',['stswritestats',['../solver__subroutines_8f.html#a7d27a48dcd6d3540ccd388a8cb044cf4',1,'solver_subroutines.f']]],
+  ['sumgat',['sumgat',['../solver__subroutines_8f.html#a8ea284a713418b969029d39a0c77658a',1,'solver_subroutines.f']]],
+  ['sumgatint',['sumgatint',['../solver__subroutines_8f.html#a6022b2771901c371f5fb481dae45dd2b',1,'solver_subroutines.f']]],
+  ['sumgatn',['sumgatn',['../solver__subroutines_8f.html#a5fb96b834e59a5cbdfc3f4d3e74c8e48',1,'solver_subroutines.f']]],
+  ['symtet',['SYMTET',['../symtet_8c.html#a20bb385687f156883e022f9543bc4161',1,'symtet.c']]],
+  ['symtri',['SYMTRI',['../symtri_8c.html#a74de259ca2a1dcb574fea9febb38ea08',1,'symtri.c']]]
+];

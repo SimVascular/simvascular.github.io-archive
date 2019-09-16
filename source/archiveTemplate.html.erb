@@ -1,0 +1,75 @@
+---
+title: SimVascular Docs
+---
+<!--Nav Bar -->
+<div class="row">
+    <div class="col-xs-1 col-sm-1 hidden-md hidden-lg">
+    </div>
+    <!-- ONE COLUMN OF SPACE -->
+    <nav class="hidden-xs hidden-sm col-md-2 col-lg-2 bs-docs-sidebar">
+
+      <% if man_name == "InstallationSV2" %>
+        <ul id="sidebar" class="nav nav-stacked fixed manInstallationSV2"> <%= partial "archives/sv2/installation_TOC" %></ul>
+      <% end %>
+
+      <% if man_name == "QuickGuideSV2" %>
+        <ul id="sidebar" class="nav nav-stacked fixed manQuickGuideSV2"> <%= partial "archives/sv2/userguide_TOC" %></ul>
+      <% end %>
+
+      <% if man_name == "ImageGuideSV2" %>
+        <ul id="sidebar" class="nav nav-stacked fixed manImageGuideSV2"> <%= partial "archives/sv2/imaging_TOC" %></ul>
+      <% end %>
+
+      <% if man_name == "ModelGuideSV2" %>
+        <ul id="sidebar" class="nav nav-stacked fixed manModelGuideSV2"> <%= partial "archives/sv2/modeling_TOC" %></ul>
+      <% end %>
+
+      <% if man_name == "MeshingSV2" %>
+        <ul id="sidebar" class="nav nav-stacked fixed manMeshingSV2">    <%= partial "archives/sv2/meshing_TOC" %></ul>
+      <% end %>
+
+      <% if man_name == "FlowSolverSV2" %>
+        <ul id="sidebar" class="nav nav-stacked fixed manFlowSolverSV2"> <%= partial "archives/sv2/flowsolver_TOC" %></ul>
+      <% end %>
+
+      <% if man_name == "CodeSnippetsSV2" %>
+        <ul id="sidebar" class="nav nav-stacked fixed manCodeSnippetsSV2">  <%= partial "archives/sv2/codesnippets_TOC" %></ul>
+      <% end %>
+        
+    </nav>
+    
+    <!--Main Content -->
+    <div class="col-xs-10 col-sm-10 col-md-9 col-lg-9" id="manualContent">
+
+      <!-- ACTUAL CONTENT -->
+
+      <% if man_name == "InstallationSV2" %>
+        <div class="manInstallationSV2"><%= partial "archives/sv2/installation_content" %></div>
+      <% end %>
+
+      <% if man_name == "QuickGuideSV2" %>
+        <div class="manQuickGuideSV2"><%= partial "archives/sv2/userguide_content" %></div>
+      <% end %>
+
+      <% if man_name == "ImageGuideSV2" %>
+        <div class="manImageGuideSV2"><%= partial "archives/sv2/imaging_content" %></div>
+      <% end %>
+
+      <% if man_name == "ModelGuideSV2" %>
+        <div class="manModelGuideSV2"><%= partial "archives/sv2/modeling_content" %></div>
+      <% end %>
+
+      <% if man_name == "MeshingSV2" %>
+        <div class="manMeshingSV2">   <%= partial "archives/sv2/meshing_content" %></div>
+      <% end %>
+
+      <% if man_name == "FlowSolverSV2" %>
+        <div class="manFlowSolverSV2"><%= partial "archives/sv2/flowsolver_content" %></div>
+      <% end %>
+
+      <% if man_name == "CodeSnippetsSV2" %>
+        <div class="manCodeSnippetsSV2">      <%= partial "archives/sv2/codesnippets_content" %></div>
+      <% end %>
+
+    </div>
+</div>    

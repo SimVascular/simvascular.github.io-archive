@@ -1,0 +1,10 @@
+<map id="initstats" name="initstats">
+<area shape="rect" id="node2" href="$solver__subroutines_8f.html#a6a9a325de41d3536159597d772d8c547" title="Compute the necessary terms for the statistics projection matrices. " alt="" coords="120,83,208,111"/>
+<area shape="rect" id="node9" href="$solver__subroutines_8f.html#a01fb97b083c3964c114b1040f0fb4d6f" title="Compute the Lhs matrices needed for the conservative projection of the statistics. " alt="" coords="128,135,200,163"/>
+<area shape="rect" id="node3" href="$solver__subroutines_8f.html#a3785c66a7c905ccf5b80f40573d9ed25" title="This subroutine performs a vector gather/scatter operation for the nodal coordinates array..." alt="" coords="264,5,320,33"/>
+<area shape="rect" id="node5" href="$solver__subroutines_8f.html#a7b5e86d2876e5bca3950f184cd84bccd" title="Compute the terms needed for the left hand side matrices needed for the conservative projection..." alt="" coords="257,161,327,189"/>
+<area shape="rect" id="node7" href="$solver__subroutines_8f.html#a5506faed7039887f8b13bdf081f37ebb" title="This subroutine performs a vector gather/scatter operation. " alt="" coords="268,57,316,85"/>
+<area shape="rect" id="node8" href="$solver__subroutines_8f.html#a30a15c8a4f202d0587b82353ec81c145" title="This subroutine is responsible for interprocessor communication of the residual and solution vectors..." alt="" coords="259,109,325,137"/>
+<area shape="rect" id="node4" href="$solver__subroutines_8f.html#a397fada3c9be3510f131e949fb0b76d2" title="This utility routine prints out the error and stops the program. " alt="" coords="386,57,435,85"/>
+<area shape="rect" id="node6" href="$solver__subroutines_8f.html#afadadbc408ece713593d9886e96eac78" title="Compute the normal to each of the nodes. " alt="" coords="377,161,445,189"/>
+</map>

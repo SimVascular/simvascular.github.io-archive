@@ -76,6 +76,7 @@
                       <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase1.html"><b><span class="fa fa-user-md"></span> Aortofemoral Normal - 1</b></a></li>
                       <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase2.html"><b><span class="fa fa-user-md"></span> Aortofemoral Normal - 2</b></a></li>
                       <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase4.html"><b><span class="fa fa-user-md"></span> Healthy Pulmonary</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/projects/sv_tests"><b><span class="fa fa-user-md"></span> All demo projects</b></a></li>
                     </ul>
                   </li>
 
@@ -160,6 +161,7 @@
 	<li><a href="#modelingUsingGroups">Using Groups</a></li>
 	<li><a href="#modelingThresholding">Using Thresholding <br>to Define a Countour</a></li>
 	<li><a href="#modelingLevelSet">Using Level Sets <br>to Define a Countour</a></li>
+  <li><a href="#modelingMachineLearning">Automatic <br>Machine Learning</br> Segmentations</li>
 	<li><a href="#modelingManual">Segmenting an Image <br>Manually</a></li>
 	<li><a href="#modelingCopyingPastingContours">Copying and Pasting <br>Contours</a></li>
 	<li><a href="#modelingLoftingPreview">Lofting Preview</a></li>
@@ -729,6 +731,42 @@ Click the button "LevelSet"
 </figure>
 
 <p><font color="red"><strong>HELPFUL HINT:</strong> </font>   You want the spacing between locations to be sufficient to capture the curvature and other changes in the vessel.  If the vessel is relatively straight, as is the case in this the abdominal aorta for this dataset, you can space the segmentations relatively far apart.</p>
+</section>
+<section id="modelingMachineLearning" class="subgroup"><h3>Automatic Machine Learning Segmentation</h3>
+
+<p>SimVascular has recently added the capability to automatically generate segmentations using pretrained convolutional neural networks.</p>
+
+<h4>Multi path segmentation</h4>
+
+<p>With SimVascular&rsquo;s machine learning segmentation it is possible to compute segmentations at multiple path points for multiple paths simultaneously.</p>
+
+<p>To use multi path segmentation:</p>
+<pre class="highlight plaintext"><code>Click the multi path tab within the segmentation window.
+Select the paths you want to segment (or click *select all paths* to select all paths)
+In the **Interval** input box enter the interval at which you want segmentations to be computed (e.g. once every 10 path points)
+In the **Fourier Modes** input box, enter the number of fourier modes you want to use to smooth the segmentations, a lower number means more smoothing.
+Click the segment button and wait for the segmentations to be computed (roughly one second per segmentation).
+</code></pre>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/ml_multi.png">
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<h4>Single path segmentation</h4>
+
+<p>To create a segmentation using machine learning for a single path point (interactively):</p>
+<pre class="highlight plaintext"><code>Click the button "NN" (this stands for Neural Network)
+An options tab will appear, which means the method is activated for interaction.
+Enter the values you want for the options.
+Click on the NN button again and the segmentation will be computed.
+To compute segmentations for other locations simply change the reslice slider and click the NN button again.
+</code></pre>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/ml_single.png">
+  <figcaption class="svCaption" ></figcaption>
+</figure>
 </section>
 <section id="modelingManual" class="subgroup"><h3>Segmenting an Image Manually</h3>
 
