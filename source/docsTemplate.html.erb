@@ -32,6 +32,10 @@ title: SimVascular Docs
         <ul id="sidebar" class="nav nav-stacked fixed mansvFSI"> <%= partial "documentation/fsi_tutorial_TOC" %></ul>
       <% end %>
 
+      <% if man_name == "1DSimulation" %>
+        <ul id="sidebar" class="nav nav-stacked fixed man1DSimulation"> <%= partial "documentation/1d_simulation_TOC" %></ul>
+      <% end %>
+
       <% if man_name == "GenBC" %>
         <ul id="sidebar" class="nav nav-stacked fixed manGenBC"> <%= partial "documentation/genbc_tutorial_TOC" %></ul>
       <% end %>
@@ -73,6 +77,10 @@ title: SimVascular Docs
 
       <% if man_name == "svFSI" %>
         <div class="mansvFSI"><%= partial "documentation/fsi_tutorial_content" %></div>
+      <% end %>
+
+      <% if man_name == "1DSimulation" %>
+        <div class="man1DSimulation"><%= partial "documentation/1d_simulation_content" %></div>
       <% end %>
 
       <% if man_name == "GenBC" %>
