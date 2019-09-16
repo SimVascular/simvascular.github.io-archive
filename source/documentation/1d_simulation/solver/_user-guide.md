@@ -87,3 +87,27 @@ change in inlet and outlet area of the segments more gradual. It could also incl
 branches with very small radii.
 
 
+<h3> Simlation Results </h3>
+
+The 1D solver writes simulation results for cross-section area, flow, pressure, Reynolds number (Re), and wall shear stress (WSS) for
+each segment in your model. Results files are named using the following convention
+
+<pre>
+MODEL_SEGMENT_DATA.dat
+
+  where 
+
+    MODEL - Model name
+    SEGMENT - Segement name
+    DATA - Data name: area, flow, pressure, Re, wss
+
+  Example: 
+
+    demoGroup0_Seg0_wss.dat
+
+</pre>
+
+Each row in the .dat file contains simulation results for each segement finite element for each output simulation time as 
+set by the solver input file **SOLVEROPTIONS** statement. There are N+1 rows for a segment divided into into N elements.
+The last row contains results for the segment outlet.
+
