@@ -14,7 +14,7 @@ three inlet and outlet faces defined.
 
 <br>
 <figure>
-  <img src="documentation/1d_simulation/tool/images/bcs-panel.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
+  <img src="documentation/1d_simulation/tool/images/bcs-panel-fixed.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
   <p style="clear: both;">
 </figure>
 <br>

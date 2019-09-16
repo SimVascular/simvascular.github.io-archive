@@ -37,7 +37,7 @@ These components are labeled in Fig. 2.
 <figure>
   <img src="documentation/1d_simulation/solver/images/labeled-1d-network-model.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
   <p style="clear: both;">
- <figcaption> <i>Figure 2. A 1D network model comprising 10 nodes, 9 joints and 9 segments. Node IDs are in parentheses</i></figcaption>
+ <figcaption> <i>Figure 2. A 1D network model comprising 10 nodes, 4 joints and 9 segments. Node IDs are in parentheses</i></figcaption>
 </figure>
 <br>
 

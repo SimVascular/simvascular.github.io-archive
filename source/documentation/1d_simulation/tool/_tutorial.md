@@ -383,3 +383,45 @@ Completed!
 
 
  
+<!-- -------------------------------------------- -->
+<!--              Convert results                 -->
+<!-- -------------------------------------------- -->
+
+<h3> Convert and simulation results </h3>
+
+Select the **Convert Results** sub-panel name to bring up the **Convert Results** panel used to
+used to convert 1D solver simulation results to CSV format files.
+
+<br>
+<figure>
+  <img src="documentation/1d_simulation/tool/images/tutorial-1/convert-results-panel.png" style="float: left; width: 80%; margin-right: 1%; margin-bottom: 0.5em;">
+  <p style="clear: both;">
+</figure>
+<br>
+
+Set the **Results Directory** by selecting **...** to bring up a file browser. Navigate to the **/PROJECT/Simulations1d/demo/** 
+directory and press **Open**. Set the time range **Start** value 0.0 and the **Stop** value to 0.8. 
+From the **Data** scrolling text box select **flow** and **pressure** data. Select the **Convert** button to convert the results.
+
+<br>
+<figure>
+  <img src="documentation/1d_simulation/tool/images/tutorial-1/convert-results.png" style="float: left; width: 80%; margin-right: 1%; margin-bottom: 0.5em;">
+  <p style="clear: both;">
+</figure>
+<br>
+
+The CSV files for flow and pressure results are stored in the **/PROJECT/Simulations1d/demo/demo-converted-results** directory. 
+The CSV files can be graphed using several applications (gnuplot, MATLAB, ParaView, etc.). Here we have plotted flow results 
+using ParaView. 
+
+<br>
+<figure>
+  <img src="documentation/1d_simulation/tool/images/tutorial-1/paraview.png" style="float: left; width: 80%; margin-right: 1%; margin-bottom: 0.5em;">
+  <p style="clear: both;">
+</figure>
+<br>
+
+
+
+
+
