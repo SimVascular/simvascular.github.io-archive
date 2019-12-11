@@ -1,6 +1,7 @@
-## Setting up the GenBC
+## Setting up GenBC
 
-Now that the solver files are out of the way, now it is time to implement the boundary condition equations into GenBC. In our included files, you should see a folder called “GenBC_files”. Inside this you should find three Fortran source files: GenBC.f, Modules.f, and USER.f. You should also see Makefile to assist you in compiling.
+The Fortan files implementing GenBC are found in the project directory under the **GenBC-program** folder. This folder contains 
+three Fortran source files (GenBC.f, Modules.f and USER.f) and a Makefile.
 
 All of the implementation will be done in USER.f. Open this file with a text editor. We will proceed down this code and explain it in blocks. The first block that the user can change is the “unit conversion” block:
 
@@ -9,7 +10,7 @@ All of the implementation will be done in USER.f. Open this file with a text edi
   <figcaption class="svCaption" >Unit conversion block of GenBC.</figcaption>
 </figure>
 
-In this block, you can specify conversion factors between pressure and flow in the GenBC code, and pressure and flow in the SimVascular flowsolver. In general, SimVascular models and flowsolvers use the CGS unit system (centimeters-grams-seconds). The units for pressure and flow in this system are dyne/cm^2 and cm^3/s, respectively. In the GenBC framework, it is often convenient to work with “clinical” units of pressure (i.e. mmHg). The conversion factor between mmHg and dyne/cm^2 is 1334 (dyne/cm^2) / mmHg, hence the value of 1.334D3 for the pConv variable. The clinical unit for flow is mL/s, which is equivalent to cm^3/s, so we leave the qConv variable at 1.0. If you want to develop your LPN model using CGS units for the parameter values, then you can change both Conv variables to 1.0. Note that the system you will choose to work with will affect the values of the parameters in your LPN network, and the values for the initial conditions in your LPN network as will be described below.
+In this block, you can specify conversion factors between pressure and flow in the GenBC code, and pressure and flow in the SimVascular flowsolver. In general, SimVascular models and flowsolvers use the CGS unit system (centimeter-gram-second). The units for pressure and flow in this system are dyne/cm^2 and cm^3/s, respectively. In the GenBC framework, it is often convenient to work with “clinical” units of pressure (i.e. mmHg). The conversion factor between mmHg and dyne/cm^2 is 1334 (dyne/cm^2) / mmHg, hence the value of 1.334D3 for the pConv variable. The clinical unit for flow is mL/s, which is equivalent to cm^3/s, so we leave the qConv variable at 1.0. If you want to develop your LPN model using CGS units for the parameter values, then you can change both Conv variables to 1.0. Note that the system you will choose to work with will affect the values of the parameters in your LPN network, and the values for the initial conditions in your LPN network as will be described below.
 
 The pCorr and qCorr variables are seldom used and can be left as .FALSE.
 The next block is the inputs block:

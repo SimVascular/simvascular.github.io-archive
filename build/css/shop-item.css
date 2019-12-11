@@ -1,66 +1,66 @@
-/* line 4, /home/simvascular/gitwork/simvascular.github.io/2019-11-25-compile_update/source/css/shop-item.css.scss */
+/* line 4, /home/marsdenlab/projects/SV/svweb/simvascular.github.io/source/css/shop-item.css.scss */
 body {
   position: relative; }
 
-/* line 8, /home/simvascular/gitwork/simvascular.github.io/2019-11-25-compile_update/source/css/shop-item.css.scss */
+/* line 8, /home/marsdenlab/projects/SV/svweb/simvascular.github.io/source/css/shop-item.css.scss */
 .thumbnail img {
   width: 100%; }
 
-/* line 12, /home/simvascular/gitwork/simvascular.github.io/2019-11-25-compile_update/source/css/shop-item.css.scss */
+/* line 12, /home/marsdenlab/projects/SV/svweb/simvascular.github.io/source/css/shop-item.css.scss */
 .ratings {
   padding-right: 10px;
   padding-left: 10px;
   color: #d17581; }
 
-/* line 18, /home/simvascular/gitwork/simvascular.github.io/2019-11-25-compile_update/source/css/shop-item.css.scss */
+/* line 18, /home/marsdenlab/projects/SV/svweb/simvascular.github.io/source/css/shop-item.css.scss */
 .thumbnail {
   padding: 0; }
 
-/* line 22, /home/simvascular/gitwork/simvascular.github.io/2019-11-25-compile_update/source/css/shop-item.css.scss */
+/* line 22, /home/marsdenlab/projects/SV/svweb/simvascular.github.io/source/css/shop-item.css.scss */
 .thumbnail .caption-full {
   padding: 9px;
   color: #333; }
 
-/* line 27, /home/simvascular/gitwork/simvascular.github.io/2019-11-25-compile_update/source/css/shop-item.css.scss */
+/* line 27, /home/marsdenlab/projects/SV/svweb/simvascular.github.io/source/css/shop-item.css.scss */
 footer {
   margin: 50px 0; }
 
-/* line 31, /home/simvascular/gitwork/simvascular.github.io/2019-11-25-compile_update/source/css/shop-item.css.scss */
+/* line 31, /home/marsdenlab/projects/SV/svweb/simvascular.github.io/source/css/shop-item.css.scss */
 .test {
   height: 100px; }
 
-/* line 36, /home/simvascular/gitwork/simvascular.github.io/2019-11-25-compile_update/source/css/shop-item.css.scss */
+/* line 36, /home/marsdenlab/projects/SV/svweb/simvascular.github.io/source/css/shop-item.css.scss */
 .group {
   padding-top: 50px;
   padding-bottom: 0px; }
 
-/* line 40, /home/simvascular/gitwork/simvascular.github.io/2019-11-25-compile_update/source/css/shop-item.css.scss */
+/* line 40, /home/marsdenlab/projects/SV/svweb/simvascular.github.io/source/css/shop-item.css.scss */
 .subgroup {
   padding-top: 50px;
   padding-bottom: 0px; }
 
-/* line 45, /home/simvascular/gitwork/simvascular.github.io/2019-11-25-compile_update/source/css/shop-item.css.scss */
+/* line 45, /home/marsdenlab/projects/SV/svweb/simvascular.github.io/source/css/shop-item.css.scss */
 .bottom-buffer {
   padding-bottom: 50px; }
 
-/* line 49, /home/simvascular/gitwork/simvascular.github.io/2019-11-25-compile_update/source/css/shop-item.css.scss */
+/* line 49, /home/marsdenlab/projects/SV/svweb/simvascular.github.io/source/css/shop-item.css.scss */
 #sidebar {
   padding-top: 70px;
   padding-bottom: 70px; }
 
-/* line 55, /home/simvascular/gitwork/simvascular.github.io/2019-11-25-compile_update/source/css/shop-item.css.scss */
+/* line 55, /home/marsdenlab/projects/SV/svweb/simvascular.github.io/source/css/shop-item.css.scss */
 .fixed {
   position: fixed; }
 
 /* sidebar */
-/* line 60, /home/simvascular/gitwork/simvascular.github.io/2019-11-25-compile_update/source/css/shop-item.css.scss */
+/* line 60, /home/marsdenlab/projects/SV/svweb/simvascular.github.io/source/css/shop-item.css.scss */
 .bs-docs-sidebar {
   padding-left: 20px;
   margin-top: 20px;
   margin-bottom: 20px; }
 
 /* all links */
-/* line 67, /home/simvascular/gitwork/simvascular.github.io/2019-11-25-compile_update/source/css/shop-item.css.scss */
+/* line 67, /home/marsdenlab/projects/SV/svweb/simvascular.github.io/source/css/shop-item.css.scss */
 .bs-docs-sidebar .nav > li > a {
   color: #999;
   border-left: 2px solid transparent;
@@ -69,7 +69,7 @@ footer {
   font-weight: 400; }
 
 /* nested links */
-/* line 76, /home/simvascular/gitwork/simvascular.github.io/2019-11-25-compile_update/source/css/shop-item.css.scss */
+/* line 76, /home/marsdenlab/projects/SV/svweb/simvascular.github.io/source/css/shop-item.css.scss */
 .bs-docs-sidebar .nav .nav > li > a {
   padding-top: 1px;
   padding-bottom: 1px;
@@ -77,7 +77,7 @@ footer {
   font-size: 12px; }
 
 /* active & hover links */
-/* line 86, /home/simvascular/gitwork/simvascular.github.io/2019-11-25-compile_update/source/css/shop-item.css.scss */
+/* line 86, /home/marsdenlab/projects/SV/svweb/simvascular.github.io/source/css/shop-item.css.scss */
 .bs-docs-sidebar .nav > .active > a,
 .bs-docs-sidebar .nav > li > a:hover,
 .bs-docs-sidebar .nav > li > a:focus {
@@ -87,43 +87,43 @@ footer {
   border-left-color: #563d7c; }
 
 /* all active links */
-/* line 95, /home/simvascular/gitwork/simvascular.github.io/2019-11-25-compile_update/source/css/shop-item.css.scss */
+/* line 95, /home/marsdenlab/projects/SV/svweb/simvascular.github.io/source/css/shop-item.css.scss */
 .bs-docs-sidebar .nav > .active > a,
 .bs-docs-sidebar .nav > .active:hover > a,
 .bs-docs-sidebar .nav > .active:focus > a {
   font-weight: 700; }
 
 /* nested active links */
-/* line 101, /home/simvascular/gitwork/simvascular.github.io/2019-11-25-compile_update/source/css/shop-item.css.scss */
+/* line 101, /home/marsdenlab/projects/SV/svweb/simvascular.github.io/source/css/shop-item.css.scss */
 .bs-docs-sidebar .nav .nav > .active > a,
 .bs-docs-sidebar .nav .nav > .active:hover > a,
 .bs-docs-sidebar .nav .nav > .active:focus > a {
   font-weight: 500; }
 
 /* hide inactive nested list */
-/* line 106, /home/simvascular/gitwork/simvascular.github.io/2019-11-25-compile_update/source/css/shop-item.css.scss */
+/* line 106, /home/marsdenlab/projects/SV/svweb/simvascular.github.io/source/css/shop-item.css.scss */
 .bs-docs-sidebar .nav ul.nav {
   display: none; }
 
 /* show active nested list */
-/* line 110, /home/simvascular/gitwork/simvascular.github.io/2019-11-25-compile_update/source/css/shop-item.css.scss */
+/* line 110, /home/marsdenlab/projects/SV/svweb/simvascular.github.io/source/css/shop-item.css.scss */
 .bs-docs-sidebar .nav > .active > ul.nav {
   display: block; }
 
-/* line 114, /home/simvascular/gitwork/simvascular.github.io/2019-11-25-compile_update/source/css/shop-item.css.scss */
+/* line 114, /home/marsdenlab/projects/SV/svweb/simvascular.github.io/source/css/shop-item.css.scss */
 #solverTable td {
   text-align: center; }
 
-/* line 118, /home/simvascular/gitwork/simvascular.github.io/2019-11-25-compile_update/source/css/shop-item.css.scss */
+/* line 118, /home/marsdenlab/projects/SV/svweb/simvascular.github.io/source/css/shop-item.css.scss */
 #solverTable th {
   text-align: center; }
 
-/* line 122, /home/simvascular/gitwork/simvascular.github.io/2019-11-25-compile_update/source/css/shop-item.css.scss */
+/* line 122, /home/marsdenlab/projects/SV/svweb/simvascular.github.io/source/css/shop-item.css.scss */
 #barIcon {
   color: white; }
 
 /* IMAGE STYLE - SVGUIDE */
-/* line 127, /home/simvascular/gitwork/simvascular.github.io/2019-11-25-compile_update/source/css/shop-item.css.scss */
+/* line 127, /home/marsdenlab/projects/SV/svweb/simvascular.github.io/source/css/shop-item.css.scss */
 img.svImg {
   display: block;
   margin-left: auto;
@@ -132,7 +132,7 @@ img.svImg {
   margin-bottom: 5px; }
 
 /* CAPTION STYLE - SVGUIDE */
-/* line 136, /home/simvascular/gitwork/simvascular.github.io/2019-11-25-compile_update/source/css/shop-item.css.scss */
+/* line 136, /home/marsdenlab/projects/SV/svweb/simvascular.github.io/source/css/shop-item.css.scss */
 figcaption.svCaption {
   text-align: center;
   font-family: times;
@@ -142,28 +142,28 @@ figcaption.svCaption {
   margin-bottom: 20px; }
 
 /* IMAGE SIZE */
-/* line 146, /home/simvascular/gitwork/simvascular.github.io/2019-11-25-compile_update/source/css/shop-item.css.scss */
+/* line 146, /home/marsdenlab/projects/SV/svweb/simvascular.github.io/source/css/shop-item.css.scss */
 img.svImgXs {
   width: 15%; }
 
-/* line 149, /home/simvascular/gitwork/simvascular.github.io/2019-11-25-compile_update/source/css/shop-item.css.scss */
+/* line 149, /home/marsdenlab/projects/SV/svweb/simvascular.github.io/source/css/shop-item.css.scss */
 img.svImgSm {
   width: 25%; }
 
-/* line 152, /home/simvascular/gitwork/simvascular.github.io/2019-11-25-compile_update/source/css/shop-item.css.scss */
+/* line 152, /home/marsdenlab/projects/SV/svweb/simvascular.github.io/source/css/shop-item.css.scss */
 img.svImgMd {
   width: 50%; }
 
-/* line 155, /home/simvascular/gitwork/simvascular.github.io/2019-11-25-compile_update/source/css/shop-item.css.scss */
+/* line 155, /home/marsdenlab/projects/SV/svweb/simvascular.github.io/source/css/shop-item.css.scss */
 img.svImgLg {
   width: 75%; }
 
-/* line 158, /home/simvascular/gitwork/simvascular.github.io/2019-11-25-compile_update/source/css/shop-item.css.scss */
+/* line 158, /home/marsdenlab/projects/SV/svweb/simvascular.github.io/source/css/shop-item.css.scss */
 img.svImgXl {
   width: 95%; }
 
 /* SCROLL PROPERTY FOR DOCS AND CLINICAL CASES*/
-/* line 163, /home/simvascular/gitwork/simvascular.github.io/2019-11-25-compile_update/source/css/shop-item.css.scss */
+/* line 163, /home/marsdenlab/projects/SV/svweb/simvascular.github.io/source/css/shop-item.css.scss */
 .bs-docs-sidebar > ul {
   overflow-y: auto;
   height: 100%; }

@@ -46,7 +46,7 @@ activate :syntax
 #  :which_fake_page => "Rendering a fake page with a local variable" }
 
 # DOCS
-["Installation", "QuickGuide", "ModelGuide", "Meshing", "FlowSolver", "svFSI",  "GenBC", "Compile", "Refs"].each do |name|
+["Installation", "QuickGuide", "ModelGuide", "Meshing", "FlowSolver", "svFSI",  "1DSimulation", "GenBC", "Compile", "Refs"].each do |name|
   proxy "/docs#{name}.html", "/docsTemplate.html", :locals => { :man_name => name }, :ignore => true
 end
 
