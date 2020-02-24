@@ -28,6 +28,9 @@ Results can be selectively converted for one or more of these data.
 **Results Directory** - Set the directory containing the 1D simulation results to convert. The directory path can be entered in 
                         the text box. Selecting **...** brings up a file browser.
 
+**Convert Directory** - Set the directory where converted results are written. The directory path can be entered in 
+                        the text box. Selecting **...** brings up a file browser.
+
 **Start** - Set the start time for the time range usded to convert simulation data. The time is a real simulation time value.
 
 **Stop** - Set the stop time for the time range usded to convert simulation data. The time is a real simulation time value.
@@ -37,6 +40,6 @@ Results can be selectively converted for one or more of these data.
 
 **Data** - Set the names of data to convert. 
 
-**Convert** - Select the output directory for the converted files and start the conversion process.
+**Convert** - Convert the 1D simulation results.
 
 
