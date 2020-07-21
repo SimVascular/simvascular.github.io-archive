@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SimVascular Docs</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+
+    <link href="css/shop-item.css" rel="stylesheet" type="text/css" />
+
+    <link href="css/codestyle.css" rel="stylesheet" type="text/css" />    
+
+    <link rel="stylesheet" href="font-awesome-4.1.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
+
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                <i class="fa fa-bars" id="barIcon"></i>
+              </button>
+                <a class="navbar-brand" id="brandName" href="index.html">
+                  <img src="img/svlogo/svLogoSmallText.png" alt="...">
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">            
+                <ul class="nav navbar-nav">
+
+                  <!-- USER GUIDES -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b><span class="fa fa-user"></span> User Guides</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsInstallation.html"><b><span class="fa fa-sign-in fa-rotate-90"></span> Installation</b></a></li>
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsQuickGuide.html"><b><span class="icon ion-ios7-bolt"></span> Quick Guide</b></a></li>
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsModelGuide.html"><b><span class="icon ion-settings"></span> Modeling</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsMeshing.html"><b><span class="icon ion-ios7-keypad"></span> Meshing</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsFlowSolver.html"><b><span class="icon ion-play"></span> Simulation</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsPythonInterface.html"><b><span class="icon ion-play"></span> Python Interface</b></a></li>
+                    </ul>
+                  </li>
+                  
+                  <!-- CLINCAL CASES -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b><i class="fa fa-stethoscope"></i> Clinical Cases</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase3.html"><b><span class="fa fa-user-md"></span> Coronary Normal</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase1.html"><b><span class="fa fa-user-md"></span> Aortofemoral Normal - 1</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase2.html"><b><span class="fa fa-user-md"></span> Aortofemoral Normal - 2</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase4.html"><b><span class="fa fa-user-md"></span> Healthy Pulmonary</b></a></li>
+                    </ul>
+                  </li>
+
+                  <!-- DEVELOPER GUIDES -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b><span class="fa fa-caret-square-o-right"></span> Developer Guides</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsCompile.html"><b><span class="fa fa-file-text-o"></span> Compile Source Code</b></a></li>
+                    </ul>
+                  </li>                  
+
+                  <!-- svCOMMUNITY -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b><i class="fa fa-users"></i> svCommunity</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/forums/viewforum.php?f=188"><b><span class="fa fa-users"></span> Public Forum</b></a></li>                                          
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/mailman/listinfo/simvascular-news"><b><span class="fa fa-sign-in"></span> Join News Mailing List</b></a></li>                      
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/pipermail/simvascular-news/"><b><span class="fa fa-pencil-square-o"></span> News Mailing List Archive</b></a></li>                      
+                    </ul>
+                  </li>
+
+                  <!-- REFERENCES -->
+                  <li>
+                    <a href="docsRefs.html" id="dropdownMenu1" >
+                      <b><span class="icon ion-document-text"></span>References</b>
+                    </a>
+                  </li>  
+
+                  <!-- Archives -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b> Archives</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="archiveQuickGuideSV2.html"><b>SimVascular 2.0</b></a></li>
+                    </ul>
+                  </li>
+
+                    <!-- <li><a href="docsQuickGuide.html" id="btnQuickGuide"><b><span class="icon ion-ios7-bolt"></span> Quick Guide</b></a></li>
+                    <li><a href="docsModelGuide.html" id="btnModelGuide"><b><span class="icon ion-settings"></span> Modeling</b></a></li> 
+                    
+                    <li><a href="docsMeshing.html" id="btnMeshing"><b><span class="icon ion-ios7-keypad"></span> Meshing</b></a></li>
+                    <li><a href="docsPresolver.html" id="btnPresolver"><b><span class="icon ion-log-in"></span> svPre</b></a></li>
+                    <li><a href="docsFlowSolver.html" id="btnFlowSolver"><b><span class="icon ion-play"></span> svSolver</b></a></li>
+                    <li><a href="docsRefs.html" id="btnRefs"><b><span class="icon ion-document-text"></span> References</b></a></li>
+                    <li><a href="clinicalCase1.html" id="btnRefs"><b>Case Studies</b></a></li> -->
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <!--Nav Bar -->
+<div class="row">
+    <div class="col-xs-1 col-sm-1 hidden-md hidden-lg">
+    </div>
+    <!-- ONE COLUMN OF SPACE -->
+    <nav class="hidden-xs hidden-sm col-md-2 col-lg-2 bs-docs-sidebar">
+
+
+        <ul id="sidebar" class="nav nav-stacked fixed manPythonInterface"> <!--Nav Bar -->
+<p><h3>Python Interface</h3></p>
+<li><a href="#intro">Introduction</a></li>
+
+<h3>Download</h3>
+<a href="https://simtk.org/frs/download_confirm.php/file/5113/DemoProject.zip?group_id=930">Demo Project</a>
+</ul>
+
+        
+    </nav>
+    
+    <!--Main Content -->
+    <div class="col-xs-10 col-sm-10 col-md-9 col-lg-9" id="manualContent">
+
+      <!-- ACTUAL CONTENT -->
+
+
+        <div class="manQuickGuide"><section id="intro" class="group"><h1>Quick Guide</h1>
+
+<p><strong>Quick Guide</strong>, as a brief tutorial, introduces the GUI and commonly used functions, and teaches users how to visualize medical imaging data, create a model, generate mesh and run simulation with SimVascular for a simple case. It only covers very basic steps for cardiovascular modeling/simulation pipeline.</p>
+
+<h2>Introduction</h2>
+
+<!-- After learning with this guide, you can check other guides for more explanation/details and advanced options: [**Imaging Guide**](docsImageGuide.html), [**Modeling Guide**](docsModelGuide.html), [**Meshing Guide**](docsMeshing.html), and **Solver Guide**([**svPre**](docsPresolver.html), [**svSolver**](docsFlowSolver.html)). -->
+
+<p>Once <strong>SimVascular</strong> has launched, you will see the following main window as below. Please first read Welcome page on the righ part of the main window. Click &ldquo;Welcome Tutorial&rdquo; to learn the main window layout and basic usage of Data Manager, Image Navigator, Display, etc. </p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/quickguide/imgs/mainwindow_firsttime.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+</section>
+
+<section id="guilayout" class="group"><h2>GUI Layout</h2>
+
+<p>The SimVascualr main window is composed of a title, a menubar and toolbars (on the top), a status bar (on the bottom), and tool panels (in the middle). Each tool panel is a container which can include several tools. <strong>You can click a tab to show the corresponding tool, or drag-drop a tag to another place to relocate the tool.</strong></p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/quickguide/imgs/mainwindow.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>The window title shows the names and versions of major external packages used by SimVascular. The status bar shows useful information for users, like the cursor location on the image, messages and process of data operations, computer memory usage, etc.</p>
+
+<p><br></p>
+
+<h3>Menubar</h3>
+
+<p>The menubar contains menus to acces all functions and tools. The tools specially for cardiovascular modeling/simulation pipeline are listed on the top of Menu &ldquo;Tools&rdquo;.</p>
+
+<figure>
+  <img class="svImg svImgMd"  src="documentation/quickguide/imgs/menus.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+<pre class="highlight plaintext"><code>Change tool settings: Menu -&gt; Windows -&gt; Preferences...
+
+Switch between the preset GUI layouts (Perspectives): Menu -&gt; Windows -&gt; Open Perspective
+</code></pre>
+
+<p><br></p>
+
+<h3>Toolbars</h3>
+
+<p>There are three toolbars shown as below. They give quick access to various functions and tools.  </p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/quickguide/imgs/toolbars.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<h3>Status Bar</h3>
+
+<p>The status bar is a convenient location which provides some useful information about the data you are working on or the status/progress of some ongoing data operation, crosshair center coordiantes, memory usage, etc.</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/quickguide/imgs/statusbar.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+</section>
+<section id="datamanager" class="group"><h2>Data Manager</h2>
+
+<p>Data Manager is normally located on the left side of the main window. It lists and organize all the loaded data in a tree structure. After data is loaded from a file, a data node (representing the data) shows in Data Manager.</p>
+
+<p>To open a file (loading data into Data Manager):</p>
+<pre class="highlight plaintext"><code>Menu: File → Open File...
+</code></pre>
+
+<p><font color="red"><strong>Attention:</strong> </font> If you load a file by &ldquo;Open File&rdquo;, the data is loaded into Data Manager but not into a SimVascular Project. Therefore, SimVascular&rsquo;s project management doen&rsquo;s apply to it. But you are still able to use various tools with the data.</p>
+
+<p>To show/hide data (in Display):</p>
+<pre class="highlight plaintext"><code>Toggle on/off the checkbox next to the corresponding data node in Data Manager
+</code></pre>
+
+<p>When you right click the data node, a menu pops up. It gives you many functions to deal with data nodes. Some functions are only available to data nodes in a certain type.</p>
+
+<figure>
+  <img class="svImg svImgSm"  src="documentation/quickguide/imgs/datamanagermenu.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>The functions for all types of data include:</p>
+
+<p><strong>Global Reinit:</strong> Reset 2D/3D views of Display using the maximum Cartesian space of all the data nodes in Data Manager <br>
+<strong>Save&hellip;:</strong> Save the selected data node to a file <br>
+<strong>Reinit:</strong>  Reset 2D/3D views of Display using the Cartesian space of the selected data node in Data Manager <br>
+<strong>Show only selected nodes:</strong>  Show the selected data nodes in Display <br>
+<strong>Toggle visibility:</strong>  show ( or hide) the selected data nodes in Display if they are hidden (or visible) <br>
+<strong>Details:</strong> show more information about the selected data node in a popup dialog, such as dimensions, spacing, etc. <br>
+<strong>Remove:</strong> remove the data node from Data Manager <br>
+<strong>Opacity:</strong> change the opacity of the selected data node <br>
+<strong>Color:</strong> click the color button to change the color of the selected data node <br>
+<strong>Rename:</strong> Rename the selected data node<br>
+<strong>Copy:</strong> copy the selected data node <br>
+<strong>Paste:</strong> duplicate the copied data node in a folder in Data Manager <br></p>
+
+<p>As shown in the figure above, the functions only for images include:</p>
+
+<p><strong>Texture Interpolation:</strong> Smoothes the image, so that no single pixels are visible anymore. <br>
+<strong>Colormap:</strong> Change the colormap for the image <br></p>
+</section>
+<section id="dicom" class="group"><h2>DICOM Images</h2>
+
+<p>SimVascular provides several ways to load dicom images.</p>
+
+<p>The simplest way is:</p>
+<pre class="highlight plaintext"><code>Menu: File → Open File...
+Select one of dicom image
+SimVascular automatically loads all the images from the same folder
+</code></pre>
+
+<p>The advanced way (providing more info) is to use the tool &ldquo;MITK DICOM Browser&rdquo; <img src="documentation/quickguide/imgs/dicom.png"></p>
+<pre class="highlight plaintext"><code>Toolbar: MITK DICOM Browser
+Go to tab: "Import"
+Click "Scan directory" and select the directory which inlucdes dicome images
+Some info is listed in the tables
+Select an item in one of the tables
+Click "Add to local storage" to add the selected one to the local storage
+Click "View" to add the selected on to Data Manager, which enable you to see the image in Display.
+</code></pre>
+
+<figure>
+  <img class="svImg svImgMd"  src="documentation/quickguide/imgs/dicomplugin.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+</section>
+<section id="display" class="group"><h2>Display</h2>
+
+<p>Display is a multi-window tool to show data in 2D/3D views, normally located on the right side of the main window. There are three 2D views and one 3D view. Typically imaging data is a set of scalar values (e.g. integers ranging from 0 to 4096) defined on a structured 3D grid. Note that this data may be acquired in 2D slices and resampled in some fashion. The most common use for (diagnostic) medical imaging data is for visualization. For example, a vascular surgeon may acquire image data on a patient suspected of having vascular disease. Traditionally, most surgeons and radiologists look at sets of 2D slices of image data acquired in a 3D volume. This requires the person to create a mental image of the patient’s 3D anatomy.</p>
+
+<figure>
+  <img class="svImg svImgMd"  src="documentation/quickguide/imgs/display.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>The demo data we are using are magnetic resonance images of the aorta and the iliac bifurcation.</p>
+
+<figure>
+  <img class="svImg svImgMd"  src="documentation/quickguide/imgs/sampleimage.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>Place your mouse within the 2D View windows in Display. You should find that:</p>
+<pre class="highlight plaintext"><code>Left Mouse Button: moves the crosshairs.
+Right Mouse Button: zooms the 2D view
+Center Mouse Button (scrolling): navigates to a certain image slice
+</code></pre>
+
+<p>Place your mouse within the 3D View window in Display. You should find that the:</p>
+<pre class="highlight plaintext"><code>Left Mouse Button: rotates the 3D volume
+Right Mouse Button: zooms the 3D volume
+Center Mouse Button (or ‘shift’ + left mouse button): translates the 3D volume
+</code></pre>
+
+<p>When you move the cursor to a window, a icon menu shows up. The menu for the first icon is shown as below. From this  menu, you can show/hide crosshair, or enable/disable crosshair rotation (change image slice orientation).</p>
+
+<figure>
+  <img class="svImg svImgSm"  src="documentation/quickguide/imgs/displaymenu1.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>The second icon is to switch between single-window layout and multi-window layout. The menu for the first icon is shown as below, providing various options to change the layout.</p>
+
+<figure>
+  <img class="svImg svImgSm"  src="documentation/quickguide/imgs/displaymenu2.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<h3>Window Level</h3>
+
+<p>The right widget in Display is for “window leveling”, which is a very common technique in viewing image data. Window leveling basically creates a non-linear color mapping function to help distinguish features in the image data. Specifically, the “window” value actually defines the center of the color range, while the level defines the width of the “band” around the center.  For example, the default color map of “[1 166]” corresponds to values of window = 83 and level = 164 as seen in the following color lookup table:</p>
+
+<table class="table table-bordered">
+<tr>
+  <th>Scalar value</th>
+  <th>Color</th>
+</tr>
+<tr>
+  <td>1    (window – 0.5*level)</td>
+  <td>Black  (0)</td>
+</tr>
+<tr>
+  <td>83  (window)</td>
+  <td>Gray  (0.5)</td>
+</tr>
+<tr>
+  <td>165  (window + 0.5*level)</td>
+  <td>White  (1)</td>
+</tr>
+</table>
+
+<p>Graphically, this is what window leveling does:</p>
+
+<figure>
+  <img class="svImg svImgLg"  src="documentation/quickguide/imgs/windowlevel.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>By changing thw window and level values, you can change the brightness and contrast of the image.</p>
+<pre class="highlight plaintext"><code>Change window value: move the vertical slider or modify the value in the first text field
+Change level value: change the length of the slider or modify the value in the second text field
+</code></pre>
+
+<p>To access more options for window level:</p>
+<pre class="highlight plaintext"><code>Right click at the window level widege, a menu pops up.
+</code></pre>
+
+<figure>
+  <img class="svImg svImgSm"  src="documentation/quickguide/imgs/windowlevelmenu.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+</section>
+<section id="imagenavigator" class="group"><h2>Image Navigator</h2>
+
+<p>Image Navigator is normally located on the left-bottom of the main window. The volume dataset we are using for this demo is 512 x 64 x 512 voxels. You can change the location of each slice plane by moving the sliders in Image Navigator. The “Sagittal” refers to left/right direction; “Coronal” refers to posterior/anterior direction; “Axial” refers to inferior/superior direction. </p>
+
+<figure>
+  <img class="svImg svImgSm"  src="documentation/quickguide/imgs/imagenavigator.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+</section>
+<section id="volumerendering" class="group"><h2>Volume Rendering</h2>
+
+<p>An additional technique gaining popularity is known as 3D volume rendering. The user defines an opacity transfer function (which can be non-linear) and uses ray casting (or hardware acceleration) to render the 3D volume. It should be noted that 3D volume rendering is the most computationally intensive method of visualizing imaging data and usually requires very high-end graphics cards for decent performance.</p>
+
+<p>Doule click the image data node and the tool &ldquo;Volume Visualization&rdquo; shows up. To see the image&rsquo;s volume rendering:</p>
+<pre class="highlight plaintext"><code>Toggle on the checkbox "Volumerendering"
+Choose a preset or click the tab "Threshold" or "Bell" to create a custom transfer function.
+</code></pre>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/quickguide/imgs/volumerendering.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p><font color="red"><strong>HELPFUL HINT:</strong> </font> Move the cursor inside the tool, there will be tooltip showing to tell users how to use certain functions.</p>
+</section>
+
+<section id="projectmanagement" class="group"><h2>Project Management</h2>
+
+<p>To work on a modeling/simualtion case, it is required to create a SimVascular (SV) Project first. The project can organize, manage, save all the required data. </p>
+
+<p><strong>To create a project:</strong></p>
+<pre class="highlight plaintext"><code>Menu: File → Create SV Project...
+Provide a name for the new project
+Provde a diretory/folder in which the project will be created
+Click the button “OK”
+</code></pre>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/quickguide/imgs/newprojectdialog.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>A new project is created in Data Manager as below. It has no actual data so far. Later, data will be added or created under those data nodes according to data types.</p>
+
+<figure>
+  <img class="svImg svImgSm" src="documentation/quickguide/imgs/emptyproject.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>If you add/remove data nodes, or change data of a data node inside a SV project, you need to save those changes to the underlying files.</p>
+
+<p><strong>To save SV projects:</strong></p>
+<pre class="highlight plaintext"><code>Method 1: Toolbar -&gt; Save SV Projects
+Method 2: Menu -&gt; File -&gt; Save Sv Projects
+</code></pre>
+
+<p>You can close a project with exiting SimVascular. Make sure you save the project before closing it. After closing a project, it&rsquo;s removed from Data Manager.</p>
+
+<p><strong>To close a SV project:</strong></p>
+<pre class="highlight plaintext"><code>Right click the data node of a SV project in Data Manager
+Click "Close SV Project" in the popup menu
+</code></pre>
+
+<p><strong>Undo/Redo is implemented for data changes.</strong> To restore the data to the previous state, apply Undo/Redo.</p>
+<pre class="highlight plaintext"><code>Undo: Ctrl+Z
+Redo: Ctrl+Y
+</code></pre>
+
+<h3>Add Image to Project</h3>
+
+<p><strong>To use an image for a project, the image is required to be added to the project.</strong></p>
+
+<p><strong>To add a image to a project:</strong></p>
+<pre class="highlight plaintext"><code>Right click the data node "Images" in the project "SVProject" in Data Manager
+Click "Add/Replace Image" in the popup menu
+Choose an image and click "Open"
+"Do you want to copy the image as vti into the project?" Choose Yes or No
+If Yes, "Do you wanto scale the image (for unit conversion)?": for instance, 0.1 if from mm to cm.
+</code></pre>
+
+<p>Then the image is added under the data node &ldquo;Images&rdquo;. At the same time, the image is shown in Display. If you choose to copy the image to the project, the project is portable and you can transfer the project to another computer and continue working on it.</p>
+
+<p><font color="red"><strong>HELPFUL HINT:</strong> </font> If you want to add a series of DICOM images to the project, just choose one of them, SimVascular will load all the images in the same folder.</p>
+</section>
+
+<section id="modeling" class="group"><h2>Geometric Modeling</h2>
+
+<p>To create 3-D models, paths along the vessels of interest need to be specified first. 2D segmentations (contours) are then generated along each of the paths. Using these segmentations, a separate solid model is created for each vessel, and these are all unioned together to create the final model. </p>
+
+<figure>
+  <img class="svImg svImgMd"  src="documentation/quickguide/imgs/modelingflowchart.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+</section>
+<section id="path" class="subgroup"><h3>Creating a Path</h3>
+
+<p>To create a geometric model for a vessel, you need to first create a path, which you can regard as a centerline of the vessel. </p>
+<pre class="highlight plaintext"><code>Right click the data node "Paths" in the project "SVProject" in Data Manager
+Click "Create Path" in the popup menu
+Path Name: aorta
+Subdivision Type: choose "Spacing Based"
+The minimum image spacing is automatically filled for "Spacing"
+</code></pre>
+
+<p>A new path &ldquo;aorta&rdquo; is created under the data node &ldquo;Paths&rdquo; in Data Manager. Double click the data node &ldquo;aorta&rdquo; and the tool &ldquo;SV Path Planning&rdquo; shows up. The new path is empty and has no points so far. To add a contro point:</p>
+<pre class="highlight plaintext"><code>Image Navigator: Axial slider: 475
+Place the curson into the Axial 2D View in display
+Right press and move to zoom in
+Method 1: Click at the center of the vessel; Ctrl+A or click the button "Add"
+Method 2(interactive): Move the cursor to the center of the vessle; Ctrl + Left Click
+</code></pre>
+
+<p>A control point is added for the path and should appear under the Control Point List. In Display, the point is shown as a blue or red point, depending on if the point is selected. To interactively move the point:</p>
+<pre class="highlight plaintext"><code>Move the cursor to the control point, it becomes red(selected) if not selected yet
+Left press on the point and move 
+</code></pre>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/quickguide/imgs/addpoint.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>Continue to move down the aorta inferiorly in the Axial 2D View in increments of 25-50 using the Axial slider in Image Navigator, similarly, add the center points to the path. When you reach the bifurcation (the aorta splits into the two iliac arteries), continue your path down the LEFT iliac artery. At the same you can see the path in the 3D View.</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/quickguide/imgs/addpoint2.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p><font color="red"><strong>Delete a control point</strong> </font> in the path</p>
+<pre class="highlight plaintext"><code>Method 1: select the one you want to remove in the Control Point List and click the button "Delete"
+Method 2(interactive): Move the cursor to the point you want to remove and Ctrl + Right Click
+</code></pre>
+
+<p>Build your path down as far as possible (you should be able to get to around Axial slider position 10 before things get harder to see. </p>
+
+<p><font color="red"><strong>Save SV Projects:</strong> </font> When the data in the project change, remember to save the project by:</p>
+<pre class="highlight plaintext"><code>Click "Save SV Projects" on the tool bar
+</code></pre>
+
+<p>The path will be saved to a file inside the project folder.</p>
+</section>
+<section id="segmentation" class="subgroup"><h3>2-D Segmentation</h3>
+
+<p>Along the path we created, a group of contours of the aorta vessel wall can be defined based on the imaging data. First, create a contour group.</p>
+<pre class="highlight plaintext"><code>Right click the data node "Segmentations" in the project "SVProject" in Data Manager
+Click "Create Contour Group" in the popup menu
+Select Path: aorta
+Group Name: use the path name by default
+</code></pre>
+
+<p>A new group &ldquo;aorta&rdquo; is created under the data node &ldquo;Segmentations&rdquo; in Data Manager. Double click the group data node &ldquo;aorta&rdquo; and the tool &ldquo;SV 2D Segmentation&rdquo; shows up. The window layout of Display changes. The left top view shows image reslice in intensity; the left bottom view shows in gradient magnitude; the right 3D view shows image intensity on the probe plane (the red square) perpendicular to the path. The new group is empty ans has no contours so far. To add create and add a contour point:</p>
+<pre class="highlight plaintext"><code>Toggle on "Convert to Spline"; Ctrl No. (12) is the number of control points you want the along contour line    
+Click the button "LevelSet"; LevelSet parameter panel appears
+Use the default parameter values in the panel
+Click the button "LevelSet" again
+</code></pre>
+
+<p>A contour is created/added for the group and should appear under the Contour List. In Display, the countour is shown in red with 12 green control points on the contour line. Two more control points are inside the contour, one for shifting and the other for scaling.</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/quickguide/imgs/2dsegmentation.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>To interactively modify the contour:</p>
+<pre class="highlight plaintext"><code>Move the cursor to a control point, it becomes red(selected)
+Left press on the point and move 
+</code></pre>
+
+<p>Continue to move along the path in increments of about 5-25 using the “Reslice&quot; slider until approximately 285, and define and add contours to the group. You may wish to additionally smooth certain contours, then selecte the contour and click the button &ldquo;Smooth&rdquo;. Values between 6 and 10 for Fourier number are appropriate for this section of the aorta.
+If a contour is abnormal because the probe plane is at the vessel bifurcation region, just delete this contour and move down the path to get a better contour.</p>
+
+<p><font color="red"><strong>HELPFUL HINT:</strong> </font> When a contour is selected, some geoetry info about this contour is shown in the status bar on the bottom of the main window. The info includes area, perimeter, and the center point coordinates.</p>
+
+<p>To speed up modeling, <strong>SimVascular</strong> can perform batch segmentations.  To perform batch segmentation:</p>
+<pre class="highlight plaintext"><code>Toggle on "Batch Mode"
+Enter "10:30:600" in List.
+Click the button "LevelSet"
+</code></pre>
+
+<p>A number of new contours are created (at reslice positions: 10, 40, 70, 100&hellip;) and added to the group. If some are abnormal, just delete them.</p>
+
+<p>To checkout the group quality for lofting:</p>
+<pre class="highlight plaintext"><code>Toggle on "Lofting Preview"
+</code></pre>
+
+<p>A new data node &ldquo;Lofted&rdquo; for lofting face is created under this group in Data Manager</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/quickguide/imgs/batchlofting.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p><font color="red"><strong>HELPFUL HINT:</strong> </font> When the data in the project change, remember to save the project by:</p>
+<pre class="highlight plaintext"><code>Click "Save SV Projects" on the tool bar
+</code></pre>
+
+<p>The contour will be saved to a file inside the project folder.</p>
+
+<p>Similarly, we create a path and a group of contours for the right iliac artery.</p>
+</section>
+<section id="3dsegmentation" class="subgroup"><h3>3-D Segmentation</h3>
+
+<p>Beside 2D segmentation, you can also use 3D segmetation, which is faster and better to capture the geometry of vessels, especially for aneurysm, junction region. etc. First, let&rsquo;s create a 3D segmentation (empty).</p>
+<pre class="highlight plaintext"><code>Right click the data node "Segmentations" in the project "SVProject" in Data Manager
+Click "Create 3D Segmentation" in the popup menu
+Name: seg3d 
+</code></pre>
+
+<p>A new 3D segmentation &ldquo;seg3d&rdquo; is created under the data node &ldquo;Segmentations&rdquo; in Data Manager. Double click the 3D segmentation node &ldquo;seg3d&rdquo; and the tool &ldquo;SV 3D Segmentation&rdquo; shows up. The method used here is colliding fronts. You need place seed for using this method.</p>
+<pre class="highlight plaintext"><code>Place a starting seed: move image slices using Image Navigator; move the cursor to a proper location in the 3D window:  Shift + Left Click
+Place a end seed: similary, but use:  Ctrl + Left Click
+</code></pre>
+
+<p>To create a 3D segmentation:</p>
+<pre class="highlight plaintext"><code>Place a starting seed (in green) in the upper aorta
+Place a ending seed (in blue) in the bottom of left and right iliac artery, respectively. 
+Threshold Values: choose the lower vavalue as 65 and the upper value as the maximum
+Click the button "Segment"
+</code></pre>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/quickguide/imgs/3dsegmentation.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>A 3D segmentation with two branches is created and shown in Display. </p>
+
+<figure>
+  <img class="svImg svImgSm"  src="documentation/quickguide/imgs/3dsegmentation2.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>Later we can create a PolyData model using this segmentation and smooth it to get a nice surface.</p>
+
+<p>You can move or delete the seed and re-segment.</p>
+<pre class="highlight plaintext"><code>Move Seed: move the cursor to the seed, press the left mouse button and drag the seed.
+Delete seed: move the cursor to the seed, press key "Delete"
+</code></pre>
+</section>
+<section id="polydata" class="subgroup"><h3>Creating a Model (with PolyData)</h3>
+
+<p>With the two groups of contour segmentation (aorta and right_iliac), we are now able to create a model for the aorta with two branch vessels using PolyData.</p>
+<pre class="highlight plaintext"><code>Right click the data node "Models" in the project "SVProject" in Data Manager
+Click "Create Model" in the popup menu
+Model Type: PolyData
+Model Name: demo
+</code></pre>
+
+<p>A new PolyData model &ldquo;demo&rdquo; is created under the data node &ldquo;Models&rdquo; in Data Manager. Double click the model data node &ldquo;demo&quot;and the tool &quot;SV Modeling&rdquo; shows up. The new model is empty so far. To loft and create the actual model:</p>
+<pre class="highlight plaintext"><code>Click the button "Create Model..."
+Choose and use "aorta" and "right_iliac" in the dialog
+Number of Sampling Points: 40 (optional for PolyData)
+Click the button "OK"
+</code></pre>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/quickguide/imgs/modellofting.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>All the faces of the model are listed under “Face List” tab. Double click a face name to change it and change face type in (wall,cap).  For the inlet and outlets, we change the names as: <em>inflow_aorta</em>, <em>outflow_aorta</em> and <em>outflow_right_iliac</em>. Click a face in the table and the face will highlighted in Display. To select/hightlight a face interactively from 3D view:</p>
+<pre class="highlight plaintext"><code>Move the cursor on a face in 3D View
+Press key "S"
+</code></pre>
+
+<figure>
+  <img class="svImg svImgLg"  src="documentation/quickguide/imgs/highlightface.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p><font color="red"><strong>HELPFUL HINT:</strong> </font> When a face is selected, some geoetry info (area) about this face is shown in the status bar on the bottom of the main window. </p>
+
+<p>Different colors can be assigned to those faces.</p>
+<pre class="highlight plaintext"><code>Double click the table cell in the column "C" in the table.
+Selecte a color for the corresponding face.
+</code></pre>
+
+<figure>
+  <img class="svImg svImgLg"  src="documentation/quickguide/imgs/facecolor.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p><font color="red"><strong>HELPFUL HINT:</strong> </font> When the data in the project change, remember to save the project by:</p>
+<pre class="highlight plaintext"><code>Click "Save SV Projects" on the tool bar
+</code></pre>
+
+<p>The model will be saved to files inside the project folder.</p>
+</section>
+<section id="parasolid" class="subgroup"><h3>Creating a Model (with OpenCASCADE or Parasolid)</h3>
+
+<p>With the two groups of contour segmentation (aorta and right_iliac), we are also able to create a model for the aorta with two branch vessels using OpenCASCADE or Parasolid, besides PolyData.</p>
+<pre class="highlight plaintext"><code>Right click the data node "Models" in the project "SVProject" in Data Manager
+Click "Create Model" in the popup menu
+Model Type: OpenCASCADE (or Parasolid)
+Model Name: demo2
+</code></pre>
+
+<p>A new OpenCASCADE model &ldquo;demo2&rdquo; is created under the data node &ldquo;Models&rdquo; in Data Manager. Double click the model data node &ldquo;demo2&quot;and the tool &quot;SV Modeling&rdquo; shows up. The new model is empty so far. To loft and create the actual model:</p>
+<pre class="highlight plaintext"><code>Click the button "Create Model..."
+Choose and use "aorta" and "right_iliac" in the dialog
+Number of Sampling Points: 20 (default)
+Click the button "OK"
+</code></pre>
+
+<p>To get smoother surface for the mode, click the button &ldquo;Change Facet Size..&rdquo; and give a smaller size.</p>
+
+<figure>
+  <img class="svImg svImgLg"  src="documentation/quickguide/imgs/occtlofting.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>To blend faces:</p>
+<pre class="highlight plaintext"><code>Click the tab "Blend"
+Set radius for the face pair as 0.2
+Click the button "Blend Faces"
+</code></pre>
+
+<figure>
+  <img class="svImg svImgLg"  src="documentation/quickguide/imgs/occtblending.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p><font color="red"><strong>HELPFUL HINT:</strong> </font> When the data in the project change, remember to save the project by:</p>
+<pre class="highlight plaintext"><code>Click "Save SV Projects" on the tool bar
+</code></pre>
+
+<p>The model will be saved to files inside the project folder.</p>
+</section>
+<section id="meshing" class="group"><h2>Meshing</h2>
+
+<p>Discretization, also known as grid or mesh generation, is defined as the process of breaking up a physical domain into smaller sub-domains (usually called elements). Discretization is necessary in order to facilitate the numerical solution of partial differential equations. <strong>SimVascular</strong> provide two ways for meshing.</p>
+</section>
+<section id="tetgen" class="subgroup"><h3>Meshing Using TetGen</h3>
+
+<p>With the solid model &ldquo;demo&rdquo; (or &ldquo;demo2&rdquo;) ready, we are now able to create a mesh for this model using TetGen.</p>
+<pre class="highlight plaintext"><code>Right click the data node "Meshes" in the project "SVProject" in Data Manager
+Click "Create Mesh" in the popup menu
+Select Model: demo (or demo2)
+Mesh Type: TetGen
+Mesh Name: demomesh
+</code></pre>
+
+<p>A new TetGen mesh &ldquo;demomesh&rdquo; is created under the data node &ldquo;Meshes&rdquo; in Data Manager. Double click the mesh data node &ldquo;demomesh&quot;and the tool &quot;SV Meshing&rdquo; shows up. The new model is empty so far. To create the actual mesh:</p>
+<pre class="highlight plaintext"><code>Click the button "Estimate" to provide estimated value for "Global Max Edge Size"
+Use the default parameter values
+Click the button "Run Mesher"
+</code></pre>
+
+<p><font color="red"><strong>HELPFUL HINT:</strong> </font> The estimated edge size is about half of the radius of the smallest cap in the model.</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/quickguide/imgs/tetgenmesh.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>Now the mesh is created for the model as above.</p>
+
+<p><font color="red"><strong>HELPFUL HINT:</strong> </font> When the data in the project change, remember to save the project by:</p>
+<pre class="highlight plaintext"><code>Click "Save SV Projects" on the tool bar
+</code></pre>
+
+<p>The mesh will be saved to files inside the project folder.</p>
+</section>
+<!-- <section id="meshsim" class="subgroup"><h3>Meshing Using MeshSim</h3>
+<pre class="highlight plaintext"><code>Tab: MeshSim → Mesh
+Type: Parasolid
+File: demo.xmt_txt
+Global Max Edge Size: 0.3  (absolute)
+Click “Run Mesher”
+“Creating mesh can take a long time. Continue anyway?”: "Yes"
+“Use currently selected meshing options?...”: "Yes"
+</code></pre>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/quickguide/imgs/meshsim1.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>Now the mesh is created for the model as below.</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/quickguide/imgs/meshsim2.jpg"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>To output mesh data files (later used for simulation):</p>
+<pre class="highlight plaintext"><code>Click “Write Files”
+</code></pre>
+
+<p>All mesh data files are in the folder <em>mesh-complete</em> under the project folder <em>demo</em>.</p>
+
+<p><font color="red"><strong>HELPFUL HINT:</strong> </font>   You can check more details on <a href="/docsMeshing.html#meshSec2">MeshSim meshing in the Meshing Guide</a>.  </p>
+</section> -->
+<section id="simulation" class="group"><h2>Simulation</h2>
+
+<p>Now we’ll use <strong>SimVascular/Solver</strong> for three-dimensional blood flow numerical simulations (solving Navier-Stokes equations in an arbitrary domain). </p>
+
+<p>With the model &ldquo;demo&rdquo; and the mesh &ldquo;demomesh&rdquo; ready, we are now able to create a job for blood flow simulation.</p>
+<pre class="highlight plaintext"><code>Right click the data node "Simulations" in the project "SVProject" in Data Manager
+Click "Create Simulation Job" in the popup menu
+Select Model: demo
+Job Name: demojob
+</code></pre>
+
+<p>A new job &ldquo;demojob&rdquo; is created under the data node &ldquo;Simulations&rdquo; in Data Manager. Double click the job data node &ldquo;demojob&quot;and the tool &quot;SV Simulation&rdquo; shows up. Now we start to set parameters for the job</p>
+
+<h3>Basic Parameters</h3>
+
+<p>Basic paramters include fluid material properties, cardiac cycle period and initial conditions. Just use the defult values.</p>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/quickguide/imgs/basic.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<h3>Inlet and Outlet Bcs</h3>
+
+<p>Click &ldquo;Inlets and Outlet BC&rdquo; and the parameter table appears. This model has one inlet &ldquo;inflow_aorta&rdquo; and two outlets &ldquo;outflow_right_iliac&rdquo;, &ldquo;outflow_aorta&rdquo;. Let&rsquo;s set boundary conditions for those faces.</p>
+
+<p>For the inlet: inflow_aorta, we need to prepare a file &ldquo;steady.flow&rdquo; first. It contains the data for the flow rate with respect to time. Here we assume the flow rate is constant.</p>
+
+<p><strong>steady.flow</strong></p>
+<pre class="highlight plaintext"><code>0.0 -100
+1.0 -100
+</code></pre>
+
+<p>To set BC for the inlet:</p>
+<pre class="highlight plaintext"><code>Right click on its line (first line on the table)
+Click "Set BC" on the popup menu; a setting dialog shows
+BC Type: Prescribed Velocities
+Analytic Shape: parabolic
+Point Number: 2 (for constant flow rate, 20 for pulsatile flow rate)
+Fourier Modes: 1 (for constant flow rate, 10 for pulsatile flow rate)
+Period: optional (provide if it's different from the value in Basic Parameters)
+Click the button "..." to select the file "steady.flow for its flow rate
+Click the button "OK"
+</code></pre>
+
+<figure>
+  <img class="svImg svImgSm"  src="documentation/quickguide/imgs/inletbc.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>To set BC for the outlets (outflow_right_iliac, outflow_aorta):</p>
+<pre class="highlight plaintext"><code>Double click the column "BC Type" on the table
+Choose "Resistance"
+Double click the column "Values" on the table
+Assign 16000
+</code></pre>
+
+<figure>
+  <img class="svImg svImgSm"  src="documentation/quickguide/imgs/outletbc.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p><font color="red"><strong>HELPFUL HINT:</strong> </font> When a cap is selected, some geoetry info (area) about this cap is shown in the status bar on the bottom of the main window. </p>
+
+<h3>Wall Properties</h3>
+<pre class="highlight plaintext"><code>Type: Rigid
+</code></pre>
+
+<h3>Solver Parameters</h3>
+
+<p>There are many parameters for flow solver, but only a few is required to set explicitly. Advanced paramters are optional.</p>
+<pre class="highlight plaintext"><code>Number of Timesteps: 100
+Time Step Size: 0.0004
+Number of Timesteps between Restarts: 10
+Step Construction : 2 # standard two iterations, enough for constant  problems.
+</code></pre>
+
+<figure>
+  <img class="svImg svImgSm"  src="documentation/quickguide/imgs/solverparameters.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p><font color="red"><strong>HELPFUL HINT:</strong> </font> Step Construction together with Time Step Size and the quality of the spatial discretization given by the finite element mesh, will completely determine the performance of the linear solver of equations. The better chosen these parameters are, the faster and more accurately our simulation will run.</p>
+
+<h3>Running Simulation</h3>
+
+<p>To run simualtion:</p>
+<pre class="highlight plaintext"><code>Click the button "Create Data Files for Simulation"
+Number of Processes: give the number of cores you need
+Click the button "Run Simulation"
+</code></pre>
+
+<figure>
+  <img class="svImg svImgSm"  src="documentation/quickguide/imgs/runjob.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>After the simulation is completed, all the simulation result files restart.*<em>.</em>* are in the folder [proj_path]/Simulations/demojob.</p>
+
+<p><font color="red"><strong>HELPFUL HINT:</strong> </font>  If you choose more than one processors, for example, 8 processors are used. <strong>SimVascular</strong> will create a new folder <em>8-procs_case</em> in the folder [proj<em>path]/Simulations/demojob. All the simulation result files restart.*.* are in the folder 8-procs</em>_case.</p>
+
+<h4>Runnning Simulation at Computer Clusters</h4>
+
+<p>You can also export the required data files and upload to a computer cluster to run the simulation. </p>
+
+<p>To export the files:</p>
+<pre class="highlight plaintext"><code>Make sure you have created data files for this job.
+Right click on the job node "demojob" in Data Manager
+Click "Export Data Files"
+Select a directory
+</code></pre>
+
+<p>A folder &ldquo;demojob-sim-files&rdquo; is created, which contains the required files to run the simulation. </p>
+
+<p>To run the simulation at the cluster:</p>
+<pre class="highlight plaintext"><code>Make sure SimVascular flow solver is available on the cluster.
+Upload the folder "demojob-sim-files" to the cluster
+Login the cluster
+Go to the folder "demojob-sim-files"
+Run "mpiexec -n [number of processes] [solver path]/svsolver" or you need create/submit a job file as required by the cluster to run the simulation
+</code></pre>
+
+<p>During the simualtion, result files are saved at the folder &ldquo;demojob-sim-files/[number of processes]]-procs_case/&rdquo;. You can download the files back to your computer and convert them to vtp/vtu files.</p>
+
+<h3>Convert Results</h3>
+
+<p>To convert the simulation result files to .vtp and .vtu files, which we can use to show the results in ParaView.</p>
+<pre class="highlight plaintext"><code>Result Dir:  [proj_path]/Simulations/demojob/*8-procs_\_case* or Click the button "..." to select a directory
+Start: 10
+Stop: 100
+Increment: 10
+Click the button "Convert ..."
+Select a directory for exporting (in this example: [proj_path]/Simulations/demojob/)
+</code></pre>
+
+<figure>
+  <img class="svImg svImgSm"  src="documentation/quickguide/imgs/convertresults.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>Since it is a steady case, only the last time step is needed. A new folder &ldquo;demojob-converted-results&rdquo; is created and contains the output files all_results_00010.vtp,&hellip;, all_results_00100.vtp, all_results_00010.vtu, &hellip;, all_results_00100.vtu, average_results.vtp.</p>
+</section>
+<section id="results" class="group"><h2>Visualizing Results</h2>
+
+<p>Launch ParaView.</p>
+<pre class="highlight plaintext"><code>Open the file "all_results_00100.vtu" with ParaView.
+Click the button “Apply”
+</code></pre>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/quickguide/imgs/result1.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>The pressure result is displayed in the display window.  In order to visualize the velocities in the lumen, we need to use a volume render visualization technique.</p>
+
+<p>To do this, we must calculate the scalar quantity representing the magnitude of the velocity. </p>
+<pre class="highlight plaintext"><code>Click the calculator tool button
+Result Array Name: vel mag (cm/s)
+Enter "mag(velocity)" just above the calculator pane
+Click the button “Apply”
+Representation: Volume
+</code></pre>
+
+<figure>
+  <img class="svImg svImgXl"  src="documentation/quickguide/imgs/result2.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<p>You should get a similar volume rendering result as the figure above. Click the button “Edit” to get different visual effects.
+<br>
+<br>
+<br>
+<br></p>
+</section>
+</div>
+
+
+
+
+
+
+    </div>
+</div>    
+
+
+    <!-- /.container -->
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container-fluid text-center">
+          <ul class="nav navbar-nav">
+            <li><a>Copyright &copy; SimVascular Development Team - 2017</a></li>                
+          </ul>
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    
+    <script src="js/jquery-1.11.0.js" type="text/javascript"></script><script src="js/bootstrap.min.js" type="text/javascript"></script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+      });
+      $('body').scrollspy({
+        target: '.bs-docs-sidebar',
+        offset: 40
+      });
+    </script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-55333921-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <script type="text/javascript"
+      src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+</body>
+
+</html>
