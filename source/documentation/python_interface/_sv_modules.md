@@ -1,150 +1,58 @@
 # SimVascular Python Modules #
 
-The <b>sv</b> module is imported into Python using the <b>import sv</b> command. Importing the **sv** module defines additional modules 
-displayed in the left panel of the <b>Python Console</b>. Typing <b>help(sv.MODLENAME)</b> prints information about the **MODULENAME** module. For example, you can 
-type <b>help(sv.Contour)</b> to see the names of functions defined for the <b>Contour</b> module.
+The SimVascular **sv** Python package extends Python to include modules and classes used to access, manipulate and create
+data for each of the path planning, segmentation, modeling, mesh generation and simulation steps in the SimVascular
+image-based modeling pipeline. The <b>sv</b> package is imported into Python using the <b>import sv</b> statement. 
+The **sv** package defines the following modules 
+
+<ul>
+  <li> <b> dmg </b> - Access to SV Data Manager nodes </li>
+  <li> <b> geometry </b> - Functions operating on VTK PolyData objects </li>
+  <li> <b> meshing </b> - Interface to SimVascular meshing functionality </li>
+  <li> <b> modeling </b> - Interface to SimVascular modeling functionality </li>
+  <li> <b> pathplanning </b> - Interface to SimVascular path plannning functionality </li>
+  <li> <b> segmentation </b> - Interface to SimVascular segmentation functionality </li>
+  <li> <b> vmtk </b> - Interrface to several VMTK funcntions </li>
+</ul>
+
+Modules can then be accessed using **sv.MODULENAME**. The <b>sv</b> package can also be imported into Python using the 
+<b>from sv import \*</b> statement. This makes all of the module names accessible without the **sv** prefix. The difference
+between the two statements can be seen using the **dir()** function which shows imported modules
+
+<pre>
+$ simvascular --python
+>>> import sv
+>>> print(dir())
+['__builtins__', '__doc__', '__loader__', '__name__', '__package__', '__spec__', 'sv']
+>>> print(dir(sv))
+['MeshSimListOption', 'MeshSimOptionTemplate', 'MutableSequence', 'OrderedDict', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__path__', '__spec__', 'ctypes', 'dmg', 'ext', 'geometry', 'image', 'load_module', 'mesh_utils', 'meshing', 'meshsim_options', 'meshsim_plugin', 'modeling', 'parasolid_plugin', 'pathplanning', 'project', 'python_api_lib', 'repository', 'seg_lib', 'segmentation', 'solid_occt', 'sys', 'vmtk']
+>>>
+>>> from sv import *
+>>> print(dir())
+['MeshSimListOption', 'MeshSimOptionTemplate', 'MutableSequence', 'OrderedDict', '__builtins__', '__doc__', '__loader__', '__name__', '__package__', '__spec__', 'ctypes', 'dmg', 'ext', 'geometry', 'image', 'load_module', 'mesh_utils', 'meshing', 'meshsim_options', 'meshsim_plugin', 'modeling', 'parasolid_plugin', 'pathplanning', 'project', 'python_api_lib', 'repository', 'seg_lib', 'segmentation', 'solid_occt', 'sv', 'sys', 'vmtk']
+>>> 
+</pre>
+Both of these statements show the modules defined from importing <b>sv</b>; 'dmg', 'meshing', etc. 
+<br>
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #0000e6; border-left: 6px solid #0000e6">
+The <b>import sv</b> statement is the prefered way to import <b>sv</b> because it does not pull everything into the global namespace,
+which may cause naming connflicts with custom programs.
+</div>
+<br>
+
+## Interactive Help ##
+
+The python **help** function is used to display the documentation of modules, functions, classes, keywords etc.
+Typing <b>help(sv)</b> prints information about the **sv** package. 
 
 <pre>
 <div style="font-size:8px; color: green; height: 70px; overflow: visible;">
->>> help(sv.Contour)
-Help on module pyContour:
+>>> help(sv)
 
-NAME
-    pyContour
-
-CLASSES
-    builtins.Exception(builtins.BaseException)
-        error
-    builtins.object
-        pyContour
-        pyContourFactoryRegistrar
-    
-    class error(builtins.Exception)
-     |  Common base class for all non-exit exceptions.
-     |  
-     |  Method resolution order:
-     |      error
-     |      builtins.Exception
-     |      builtins.BaseException
-     |      builtins.object
-     |  
-     |  Data descriptors defined here:
-     |  
-     |  __weakref__
-     |      list of weak references to the object (if defined)
-     |  
-     |  ----------------------------------------------------------------------
-     |  Methods inherited from builtins.Exception:
-     |  
-     |  __init__(self, /, *args, **kwargs)
-     |      Initialize self.  See help(type(self)) for accurate signature.
-     |  
-     |  __new__(*args, **kwargs) from builtins.type
-     |      Create and return a new object.  See help(type) for accurate signature.
-     |  
-     |  ----------------------------------------------------------------------
-     |  Methods inherited from builtins.BaseException:
-     |  
-     |  __delattr__(self, name, /)
-     |      Implement delattr(self, name).
-     |  
-     |  __getattribute__(self, name, /)
-     |      Return getattr(self, name).
-     |  
-     |  __reduce__(...)
-     |      helper for pickle
-     |  
-     |  __repr__(self, /)
-     |      Return repr(self).
-     |  
-     |  __setattr__(self, name, value, /)
-     |      Implement setattr(self, name, value).
-     |  
-     |  __setstate__(...)
-     |  
-     |  __str__(self, /)
-     |      Return str(self).
-     |  
-     |  with_traceback(...)
-     |      Exception.with_traceback(tb) --
-     |      set self.__traceback__ to tb and return self.
-     |  
-     |  ----------------------------------------------------------------------
-     |  Data descriptors inherited from builtins.BaseException:
-     |  
-     |  __cause__
-     |      exception cause
-     |  
-     |  __context__
-     |      exception context
-     |  
-     |  __dict__
-     |  
-     |  __suppress_context__
-     |  
-     |  __traceback__
-     |  
-     |  args
-    
-    class pyContour(builtins.object)
-     |  pyContour  objects
-     |  
-     |  Methods defined here:
-     |  
-     |  Area(...)
-     |  
-     |  Center(...)
-     |  
-     |  Create(...)
-     |  
-     |  CreateSmoothCt(...)
-     |  
-     |  GetObject(...)
-     |  
-     |  GetPolyData(...)
-     |  
-     |  NewObject(...)
-     |  
-     |  Perimeter(...)
-     |  
-     |  SetCtrlPts(...)
-     |  
-     |  SetCtrlPtsByRadius(...)
-     |  
-     |  SetImg(...)
-     |  
-     |  SetThresholdValue(...)
-     |  
-     |  __init__(self, /, *args, **kwargs)
-     |      Initialize self.  See help(type(self)) for accurate signature.
-     |  
-     |  __new__(*args, **kwargs) from builtins.type
-     |      Create and return a new object.  See help(type) for accurate signature.
-    
-    class pyContourFactoryRegistrar(builtins.object)
-     |  pyContourFactoryRegistrar wrapper
-     |  
-     |  Methods defined here:
-     |  
-     |  __new__(*args, **kwargs) from builtins.type
-     |      Create and return a new object.  See help(type) for accurate signature.
-
-FUNCTIONS
-    SetContourKernel(...)
-
-FILE
-    (built-in)
 </div>
 </pre>
-
-
-
-<br>
-<br>
-<br>
 <br>
 
-
-
+Typing <b>help(sv.MODLENAME)</b> prints information about the **MODULENAME** module. 
 
 
