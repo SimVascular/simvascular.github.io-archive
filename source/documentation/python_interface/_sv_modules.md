@@ -20,6 +20,7 @@ Modules can then be accessed using **sv.MODULENAME**. The <b>sv</b> package can 
 between the two statements can be seen using the **dir()** function which shows imported modules
 
 <pre>
+<div style="font-size:10px; height: auto; overflow: visible;">
 $ simvascular --python
 >>> import sv
 >>> print(dir())
@@ -31,6 +32,7 @@ $ simvascular --python
 >>> print(dir())
 ['MeshSimListOption', 'MeshSimOptionTemplate', 'MutableSequence', 'OrderedDict', '__builtins__', '__doc__', '__loader__', '__name__', '__package__', '__spec__', 'ctypes', 'dmg', 'ext', 'geometry', 'image', 'load_module', 'mesh_utils', 'meshing', 'meshsim_options', 'meshsim_plugin', 'modeling', 'parasolid_plugin', 'pathplanning', 'project', 'python_api_lib', 'repository', 'seg_lib', 'segmentation', 'solid_occt', 'sv', 'sys', 'vmtk']
 >>> 
+</div>
 </pre>
 Both of these statements show the modules defined from importing <b>sv</b>; 'dmg', 'meshing', etc. 
 <br>
@@ -39,20 +41,4 @@ The <b>import sv</b> statement is the prefered way to import <b>sv</b> because i
 which may cause naming connflicts with custom programs.
 </div>
 <br>
-
-## Interactive Help ##
-
-The python **help** function is used to display the documentation of modules, functions, classes, keywords etc.
-Typing <b>help(sv)</b> prints information about the **sv** package. 
-
-<pre>
-<div style="font-size:8px; color: green; height: 70px; overflow: visible;">
->>> help(sv)
-
-</div>
-</pre>
-<br>
-
-Typing <b>help(sv.MODLENAME)</b> prints information about the **MODULENAME** module. 
-
 

@@ -1,7 +1,7 @@
 # Introduction #
 SimVascular provides an application programming interface (API) for accessing core SimVascular functions using the
-Python. The API defines a number of Python modules and classes used to access, manipulate and create
-data for each of the path planning, segmentation, modeling, mesh generation and simulation steps in the SimVascular 
+Python programming language. The API defines a number of Python modules and classes used to access, manipulate and 
+create data for each of the path planning, segmentation, modeling, mesh generation and simulation steps in the SimVascular 
 image-based modeling pipeline. Custom Python scripts can be written to augment the functionality provided by the
 SimVascular GUI and to automate modeling tasks for optimization, uncertainty quantification, and studies with large 
 patient cohorts.
