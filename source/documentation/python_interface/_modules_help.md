@@ -3,47 +3,11 @@
 The Python **help** function is used to display the documentation of modules, functions, classes, keywords etc. 
 Typing <b>help(sv)</b> prints information about the **sv** package. 
 
-<pre>
-<div style="font-size:10px; height: auto; overflow: visible;">
-$ simvascular --python
->>> help(sv)
-NAME
-    sv - SimVascular Python API
-
-DESCRIPTION
-    The sv package provides an application programming interface (API) for accessing core 
-    SimVascular functions. The API defines a number of Python modules and classes used to 
-    access, manipulate and create data for each of the path planning, segmentation, modeling, 
-    mesh generation and simulation steps in the SimVascular image-based modeling pipeline. 
-    Custom Python scripts can be written to augment the functionality provided by the 
-    SimVascular GUI and to automate modeling tasks for optimization, uncertainty quantification, 
-    and studies with large patient cohorts.
-    
-    The sv package defines the following modules
-    
-      dmg - Access to SV Data Manager nodes </li>
-      geometry - Functions operating on VTK PolyData objects </li>
-      meshing - Interface to SimVascular meshing functionality </li>
-      modeling - Interface to SimVascular modeling functionality </li>
-      pathplanning - Interface to SimVascular path plannning functionality </li>
-      segmentation - Interface to SimVascular segmentation functionality </li>
-      vmtk - Interrface to several VMTK funcntions </li>
-
-PACKAGE CONTENTS
-    loft_nurbs_options
-    meshsim_options
-
-DATA
-    meshsim_plugin = None
-    parasolid_plugin = None
-    project = None
-    python_api_lib = 'lib_simvascular_python_api'
-    seg_lib = 'lib_simvascular_segmentation'
-    solid_occt = None
+<div style="background-color:#eeeeee;font-size:10px; height: auto; overflow: visible;">
+  <p><iframe src="documentation/python_interface/files/sv-help.txt" frameborder="0" height="400" width="95%"></iframe></p>
 </div>
-</pre>
-<br>
 
+<br>
 Typing <b>help(sv.MODLENAME)</b> prints information about the **MODULENAME** module 
 
 <ul>
@@ -51,117 +15,61 @@ Typing <b>help(sv.MODLENAME)</b> prints information about the **MODULENAME** mod
   <li> Description of each class and its methods </li>
 </ul>
 
+<div style="background-color:#eeeeee;font-size:10px; height: auto; overflow: visible;">
+  <p><iframe src="documentation/python_interface/files/seg-help.txt" frameborder="0" height="400" width="95%"></iframe></p>
+</div>
+
+<br>
+The <b>help()</b> function can be used for any component (e.g. class and methods) of a module. For example, 
+<b>help(sv.segmentation.Circle)</b> prints the documentation for the <b>segmentation</b> module <b>Circle</b> class 
+
+<div style="background-color:#eeeeee;font-size:10px; height: auto; overflow: visible;">
+  <p><iframe src="documentation/python_interface/files/circle-help.txt" frameborder="0" height="400" width="95%"></iframe></p>
+</div>
+
+<br>
+### Documentation Format ###
+The help documention describes the **sv** package using Python <b>docstrings</b> format, a string literal that occurs as the first 
+statement in a module, function, class, or method definition. A docstring is stored in the the <b>\_\_doc\_\_</b> special attribute 
+of an object. The docstring for a function or method summarizes its behavior and documents its arguments and return value(s). 
+
+Constructor, method and function arguments are listed under the <b>Args:</b> heading. Each argument is described with its name, type
+and description. Optional arguments are indicated using <b>Optional</b> preceding the argument type. The default value of optional 
+arguments are given in the argument list. An optional argument without a default value is documented using NAME=None in the function 
+or method definition. For example,
+the <b>Circle</b> class constructor that has <i>center</i>, <i>normal</i> and <i>frame</i> optional arguments that have no default value
+is documented using
 <pre>
-<div style="font-size:10px; height: 400px; overflow: visible;">
-$ simvascular --python
->>> help(sv.segmentation)
-Help on module segmentation:
-
-NAME
-    segmentation - SimVascular segmentation module.
-
-DESCRIPTION
-      The segmentation module provides an interface for SV segmentation methods. A segmentation defines 
-      the contour geometry of a region of interest using various 2D image segmentation methods. The segmentation 
-      module provides several classes used to create and modify 2D segmentations using circle, ellipse, level set, 
-      polygon, spline polygon and threshold methods. 
-      
-CLASSES
-    builtins.Exception(builtins.BaseException)
-        SegmentationError
-    builtins.Segmentation(builtins.object)
-        Circle
-        Contour
-        LevelSet
-        Polygon
-        SplinePolygon
-        Threshold
-    builtins.object
-        Group
-        Method
-        SubdivisionType
-    
-    class Circle(builtins.Segmentation)
-     |  Circle(radius, center=None, normal=None, frame=None)  
-     |  
-     |  The CircleSegmentation class provides an interface for creating a circle segmentation. 
-     |  A circle segmentation is defined by a radius, a 3D point defining its center and a normal. 
-     |  The normal defines its orientation (i.e. the plane the circle lies in). 
-     |  
-     |  A CircleSegmentation object is created using a radius, center and normal or a PathFrame obje
-ct. 
-     |  
-     |  
-     |  A PathFrame object contains a path's interpolating spline (curve points) position, tangent, 
-and normal data 
-     |  at a given location. The position is used for the circle center, the tangent for its normal.
-     |  
-     |  Args: 
-     |    radius (float): The circle radius. 
-     |    center (list([float,float,float]): The circle center. 
-     |    normal(list([float,float,float]): The circle normal direction. 
-     |    frame (Optional[PathFrame]): A PathFrame object defing the circle's center and coordinate 
-frame.
-     |  
-     |  Method resolution order:
-     |      Circle
-     |      builtins.Segmentation
-     |      builtins.object
-     |  
-     |  Methods defined here:
-     |  
-     |  __init__(self, /, *args, **kwargs)
-     |      Initialize self.  See help(type(self)) for accurate signature.
-     |  
-     |  __new__(*args, **kwargs) from builtins.type
-     |      Create and return a new object.  See help(type) for accurate signature.
-     |  
-     |  get_center(...)
-     |      get_center() 
-     |      
-     |      Get the circle segmentation center. 
-     |      
-     |      Returns (list([float,float,float]): The circle center.
-     |  
-     |  get_normal(...)
-     |      get_normal() 
-     |      
-     |      Get the circle segmentation normal. 
-     |      Returns (list([float,float,float]): The circle normal.
-.
-.
-.
-</div> 
+Circle(radius, center=None, normal=None, frame=None)
 </pre>
 
 <br>
-The <b>help()</b> function can be used for any component (e.g. class and methods) of a module 
+Argument types are described using the following naming convention
 
+<ul style="list-style-type:none;">
+  <li> bool - Data with one of two built-in values True or False 
+  <li> dict - Unordered collection of data in a key:value pair form put in curly backets <b>{ }</b>
+  <li> float - Real number with a floating point representation in which a fractional component is denoted by a decimal symbol or scientific notation 
+  <li> int - Positive or negative whole numbers without a fractional part
+  <li> list - A list object is an ordered collection of one or more data items put in square brackets <b>[ ]</b> 
+  <li> str - A string value is a collection of one or more characters put in single, double or triple quotes
+</ul>
+
+<br>
+A 3D point is represented as a list of three floats
 <pre>
-<div style="font-size:10px; height: auto; overflow: visible;">
-$ simvascular --python
->>> help(sv.segmentation.Circle)
-Help on class Circle:
+list( [float, float, float] )
 
-class Circle(builtins.Segmentation)
- |  Circle(radius, center=None, normal=None, frame=None)  
- |  
- |  The CircleSegmentation class provides an interface for creating a circle segmentation. 
- |  A circle segmentation is defined by a radius, a 3D point defining its center and a normal. 
- |  The normal defines its orientation (i.e. the plane the circle lies in). 
-.
-.
-.
->>> 
->>> help(sv.segmentation.Circle.get_normal
-Help on method_descriptor:
-
-get_normal(...)
-    get_normal() 
-    
-    Get the circle segmentation normal. 
-    
-    Returns (list([float,float,float]): The circle normal.
->>> 
-</div>
+Example: pt = [1.0, 2.0, 3.0] 
 </pre>
+
+<br>
+A list of 3D points is represented as a list of a list of three floats 
+<pre>
+(list (list( [float, float, float] )) 
+
+Example: control_points = [ [1.0, 2.0, 3.0], [2.0, 3.0, 4.0], [3.0, 4.0, 5.0] ]
+</pre>
+</ul>
+
+

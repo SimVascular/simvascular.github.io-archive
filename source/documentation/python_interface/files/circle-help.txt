@@ -1,0 +1,142 @@
+$ simvascular --python
+>>> import sv
+>>> help(sv.segmentation.Circle)
+
+Help on class Circle:
+
+class Circle(builtins.Segmentation)
+ |  Circle(radius, center=None, normal=None, frame=None)  
+ |  
+ |  The CircleSegmentation class provides an interface for creating a circle segmentation. 
+ |  A circle segmentation is defined by a radius, a 3D point defining its center and a normal. 
+ |  The normal defines its orientation (i.e. the plane the circle lies in). 
+ |  
+ |  A CircleSegmentation object is created using a radius, center and normal or a PathFrame object. 
+ |  
+ |  
+ |  A PathFrame object contains a path's interpolating spline (curve points) position, tangent, and normal data 
+ |  at a given location. The position is used for the circle center, the tangent for its normal.
+ |  
+ |  Args: 
+ |    radius (float): The circle radius. 
+ |    center (list([float,float,float]): The circle center. 
+ |    normal(list([float,float,float]): The circle normal direction. 
+ |    frame (Optional[PathFrame]): A PathFrame object defing the circle's center and coordinate frame.
+ |  
+ |  Method resolution order:
+ |      Circle
+ |      builtins.Segmentation
+ |      builtins.object
+ |  
+ |  Methods defined here:
+ |  
+ |  __init__(self, /, *args, **kwargs)
+ |      Initialize self.  See help(type(self)) for accurate signature.
+ |  
+ |  __new__(*args, **kwargs) from builtins.type
+ |      Create and return a new object.  See help(type) for accurate signature.
+ |  
+ |  get_center(...)
+ |      get_center() 
+ |      
+ |      Get the circle segmentation center. 
+ |      
+ |      Returns (list([float,float,float]): The circle center.
+ |  
+ |  get_normal(...)
+ |      get_normal() 
+ |      
+ |      Get the circle segmentation normal. 
+ |      
+ |      Returns (list([float,float,float]): The circle normal.
+ |  
+ |  get_radius(...)
+ |      get_radius(r) 
+ |      
+ |      Get the radius for a circle segmentation. 
+ |      
+ |      Returns (float): The radius of the circle.
+ |  
+ |  set_center(...)
+ |      set_center(center) 
+ |      
+ |      Set the circle segmentation center. 
+ |      
+ |      Args: 
+ |        center (list([float,float,float]): The circle center.
+ |  
+ |  set_frame(...)
+ |      set_frame(frame) 
+ |      
+ |      Set the circle segmentation coordinate frame using a PathFrame object. 
+ |      
+ |      Args: 
+ |        frame (PathFrame): The PathFrame object defing the circle's center and coordinate frame.
+ |  
+ |  set_normal(...)
+ |      set_normal(normal)  
+ |      
+ |      Set the circle segmentation normal. 
+ |      
+ |      Args: 
+ |        normal (list([float,float,float]): The circle normal.
+ |  
+ |  set_radius(...)
+ |      set_radius(radius) 
+ |      
+ |      Set the radius for a circle segmentation. 
+ |      
+ |      Args: 
+ |        radius (float): The radius of the circle.
+ |  
+ |  ----------------------------------------------------------------------
+ |  Methods inherited from builtins.Segmentation:
+ |  
+ |  get_id(...)
+ |      get_id()  
+ |      
+ |      Get the contour ID. 
+ |      
+ |      Args:                                    
+ |        None 
+ |      
+ |      Returns int: The contour id.
+ |  
+ |  get_path_point(...)
+ |      get_path_point()  
+ |      
+ |      Get the contour path point. 
+ |      
+ |      Args:                                    
+ |        None 
+ |      
+ |      Returns dict(pos:[x,y,z], tangent:[x,y,z], rotation:[x,y,z]): The contour path point.
+ |  
+ |  get_points(...)
+ |      get_points()  
+ |      
+ |      Get the segmentation contour points. 
+ |      
+ |      Args:                                    
+ |        None 
+ |      
+ |      Returns list([x,y,z]): The list of contour points.
+ |  
+ |  get_polydata(...)
+ |      get_vtk_polydata()  
+ |      
+ |      Get the contour type. 
+ |      
+ |      Args: 
+ |        None 
+ |      Returns (str): contour type.
+ |  
+ |  get_type(...)
+ |      get_type()  
+ |      
+ |      Get the contour type. 
+ |      
+ |      Args: 
+ |        None 
+ |      Returns (str): contour type.
+
