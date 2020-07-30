@@ -22,6 +22,21 @@ that extends Python to include classes, functions and variables used to directly
 provide a means of bundling data and functionality together into a specific object type they create. Python packages and 
 modules are accessed using the Python **import** statement.
 
+Components of a module are accessed using a dot <b>.</b> notation. For example, the <b>Circle</b> class defined
+in the <b>segmentation</b> module is accessed using  <b>sv.segmentation.Circle()</b>.
+
+### Python Objects ###
+Almost everything in Python is an object. An object is an encapsulation of data members (variables) functions into a single entity.
+A <b>class</b> is an template for creating objects. A class <i>constructor</i> is used for instantiating an object by initializng 
+or assigning values to its data members when an object is created. A constructor can be passed arguments just like a function and 
+used the values of those arguments to assign values to its data members. For example, the <b>segmentation.Circle</b> class is used 
+to create a circle segmentation with a given radius, center and normal arguments passed to its constructor 
+
+<pre>
+>>> circle_seg = sv.segmentation.Circle(radius=1.0, center=[1.0,1.0,1.0], normal=[1.0,0.0,0.0])
+</pre>
+
+
 ### Visualization Toolkit ###
 SimVascular uses the Visualization Toolkit (VTK), an open-source software system for image processing, 3D graphics, volume 
 rendering and visualization, for many applications and uses its file formats to store image, model and mesh data. Many Python 

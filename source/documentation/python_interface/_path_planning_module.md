@@ -12,15 +12,4 @@ The <b>pathplanning</b> module defines the classes
   <li> <b> SubdivisionMethod </b> </li>
 </ul>
 
-### Group Class ###
-The <b>Group</b> class provides methods for querying, creating, and modifying SimVascular path planning groups.
- 
-<pre>
-<div style="font-size:8px; color: green; height: 70px; overflow: visible;">
->>> help(sv)
-
-</div>
-</pre>
-
-
 
