@@ -26,10 +26,10 @@ TypeError: CircleSegmentation() argument 1 must be float, not str
 </pre>
 
 <br>
-### Try and Except Block ###
+### Try / Except Block ###
 Exceptions cause program termination unless they are explicitly caught and handled by a try and except block. Python executes code 
-following the try statement as it would normally do. If an exception is generated in this code section the code following the except statement 
-is executed and the program continues. 
+following the try statement as it would normally do. If an exception is generated in this code section then the code following the 
+except statement is executed and the program continues. 
 
 The **TypeError** exception generated from using a string for the <i>radius</i> argument when creating a <b>Circle</b> segmentation 
 is caught using a try/except block like this
@@ -54,10 +54,24 @@ the <b>segmentation.Error</b> exception name and a try/except block like this
 >>> except segmentation.Error as err:
 >>>    print("Exception type: ", type(err))
 >>>    print("Error: ", err)
-Exception type:  <class 'segmentation.Error'>
+Exception type: class 'segmentation.Error'
 Error:  CircleSegmentation() The 'normal' argument is not a 3D point (three float values).
 </pre>
 
+Any exception can be caught using the <b>except Exception as err: </b> statement.
+
+<pre>
+>>> try:
+>>>    seg = segmentation.Circle(radius=1.0, center=[1.0,0.0,0.0], normal=[1.0])
+>>> 
+>>> except Exception as err:
+>>>    print("Exception type: ", type(err))
+>>>    print("Unexpected error: ", err)
+Exception type: class 'segmentation.Error'
+Unexpected error:  CircleSegmentation() The 'normal' argument is not a 3D point (three float values).
+</pre>
+
+<br>
 <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #0000e6; border-left: 6px solid #0000e6">
 The try/except block is used to recover from errors and continue program execution. This is useful for a long-runninng program
 processing lots of data sets; if the programs fails for one data set then it can still continue processing others. For some 
