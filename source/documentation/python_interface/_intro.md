@@ -1,3 +1,31 @@
+
+<html>
+<head>
+
+<style>
+.PythonMethodsDiv {
+   background-color: #F0F0F0;
+   padding: 10px;
+   border: 1px solid #e6e6e6;
+}
+</style>
+
+<style>
+.PythonMethodsLegend {
+   font-size: 14px;
+}
+</style>
+
+<style>
+.PythonMethodsPre {
+   font-size: 12px;
+}
+</style>
+
+</head>
+<body>
+
+
 # Introduction #
 SimVascular provides an application programming interface (API) for accessing core SimVascular functions using the
 Python programming language. The API defines a number of Python modules and classes used to access, manipulate and 
