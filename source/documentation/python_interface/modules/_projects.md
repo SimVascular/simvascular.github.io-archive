@@ -7,6 +7,7 @@ to represent geometry and parameters. The parameters store the tool's state and 
 by the user. The predefined subdirectories and XML file extension for each tool are
 
 <ul style="list-style-type:none;">
+   <li> <b> Images </b> - Imagine tool supports several formats: DICOM <b>.dcm</b>, VTK image <b>.vti</b>, and other formats.
    <li> <b> Meshes </b> - Meshing tool <b>.msh</b> </li>
    <li> <b> Models </b> - Modeling tool <b>.mdl</b> </li>
    <li> <b> Paths </b> - Path planning tool <b>.pth</b> </li>
@@ -16,7 +17,6 @@ by the user. The predefined subdirectories and XML file extension for each tool 
    <li> <b> svFSI </b> - FSI Simulation tool <b>.fsijob</b> </li>
 </ul>
 
-The <b> Images </b> tool stores image data in DICOM (.dcm) or VTK image (.vti) formats.
 
 <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #d0d0d0; border-left: 6px solid #d0d0d0">
 The SimVascular Python API cannot create SimVascular projects. Projects must be created interactively using the GUI.

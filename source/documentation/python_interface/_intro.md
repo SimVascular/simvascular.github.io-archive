@@ -11,6 +11,15 @@
 </style>
 
 <style>
+.PythonClassDiv {
+   width: 660px;
+   background-color: #F0F0F0;
+   padding: 10px;
+   border: 1px solid #e6e6e6;
+}
+</style>
+
+<style>
 .PythonMethodsLegend {
    font-size: 14px;
 }
@@ -18,13 +27,21 @@
 
 <style>
 .PythonMethodsPre {
+   background-color: #F0F0F0;
    font-size: 12px;
+}
+</style>
+
+<style>
+.PythonIframe {
+    background-color: #FFFFFF; 
+    height="400";
+    width="95%";
 }
 </style>
 
 </head>
 <body>
-
 
 # Introduction #
 SimVascular provides an application programming interface (API) for accessing core SimVascular functions using the

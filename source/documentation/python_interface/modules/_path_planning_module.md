@@ -13,28 +13,28 @@ The <b>pathplanning</b> module defines the following classes
   <li> <b> SubdivisionMethod </b> </li>
 </ul>
 
-<br>
-<div style="background-color: #FFFFFF; padding: 10px; border: 1px solid #d0d0d0;">
+<div class="PythonClassDiv" > 
 <legend style="font-size:20px; text-align:left"> <b> Path </b> </legend>
-<iframe src="documentation/python_interface/module_docs/sv.pathplanning.Path.html" frameborder="0" height="400" width="95%"> </iframe>
+<iframe src="documentation/python_interface/modules/docs/pathplanning_Path.html" style="background-color: #FFFFFF" frameborder="0" height="400" width="95%"> </iframe>
 </div>
 
 <br>
-<div style="background-color: #FFFFFF; padding: 10px; border: 1px solid #d0d0d0;">
+<div class="PythonClassDiv" > 
 <legend style="font-size:20px; text-align:left"> <b> PathFrame </b> </legend>
-<iframe src="documentation/python_interface/module_docs/sv.pathplanning.PathFrame.html" frameborder="0" height="400" width="95%"> </iframe>
+<iframe src="documentation/python_interface/modules/docs/pathplanning_PathFrame.html" style="background-color: #FFFFFF" frameborder="0" height="300" width="95%"> </iframe>
 </div>
 
 <br>
-<div style="background-color: #FFFFFF; padding: 10px; border: 1px solid #d0d0d0;">
+<div class="PythonClassDiv" > 
 <legend style="font-size:20px; text-align:left"> <b> Series </b> </legend>
-<iframe src="documentation/python_interface/module_docs/sv.pathplanning.Series.html" frameborder="0" height="400" width="95%"> </iframe>
+<iframe src="documentation/python_interface/modules/docs/pathplanning_Series.html" style="background-color: #FFFFFF" frameborder="0" height="400" width="95%"> </iframe>
 </div>
 
 <br>
-<div style="background-color: #FFFFFF; padding: 10px; border: 1px solid #d0d0d0;">
+<div class="PythonClassDiv" > 
 <legend style="font-size:20px; text-align:left"> <b> SubdivisionMethod </b> </legend>
-<iframe src="documentation/python_interface/module_docs/sv.pathplanning.SubdivisionMethod.html" frameborder="0" height="400" width="95%"> </iframe>
+<iframe src="documentation/python_interface/modules/docs/pathplanning_SubdivisionMethod.html" style="background-color: #FFFFFF" 
+frameborder="0" height="250" width="95%"> 
+</iframe>
 </div>
-
 
