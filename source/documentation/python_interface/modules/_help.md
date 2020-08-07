@@ -53,23 +53,40 @@ Argument types are described using the following naming convention
   <li> int - Positive or negative whole numbers without a fractional part
   <li> list - A list object is an ordered collection of one or more data items put in square brackets <b>[ ]</b> 
   <li> str - A string value is a collection of one or more characters put in single, double or triple quotes
+  <li> [float, float, float] - A list of three floats; used to represent 3D points and vectors. 
 </ul>
 
 <br>
 A 3D point is represented as a list of three floats
 <pre>
-list( [float, float, float] )
-
+[float, float, float]
+<br>
 Example: pt = [1.0, 2.0, 3.0] 
 </pre>
 
 <br>
 A list of 3D points is represented as a list of a list of three floats 
 <pre>
-(list (list( [float, float, float] )) 
-
+list( [float, float, float] ) 
+<br>
 Example: control_points = [ [1.0, 2.0, 3.0], [2.0, 3.0, 4.0], [3.0, 4.0, 5.0] ]
 </pre>
 </ul>
+
+<br>
+SimVascular Python object types used as function arguments and return values are designated using the class name. 
+For example, the <b>Modeling</b> <b>union</b> method, which takes two <b>sv.modeling.Model</b> arguments, is documented 
+using just the <b>Model</b> class name 
+<pre> <strong> union(model1, model2)  </strong>
+<br>
+&nbsp;&nbsp;&nbsp; Create a solid from the Boolean union operation on two solids. 
+<br>
+&nbsp;&nbsp;&nbsp; Args:
+      model1 (Model): A solid model created by a modeler.
+      model2 (Model): A solid model created by a modeler. 
+<br>
+&nbsp;&nbsp;&nbsp; Returns (Model): The solid model of the unioned models.
+</pre>
+
 
 

@@ -36,6 +36,13 @@ to create a circle segmentation with a given radius, center and normal arguments
 >>> circle_seg = sv.segmentation.Circle(radius=1.0, center=[1.0,1.0,1.0], normal=[1.0,0.0,0.0])
 </pre>
 
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #d0d0d0; border-left: 6px solid #d0d0d0">
+The SimVascular Python API uses the following naming conventions
+<ul style="list-style-type:none;">
+  <li> <b>Classes</b> - The first letter is capitalized: sv.pathplanning.<b>Path</b>, sv.modeling.<b>Modeler</b>  </li> 
+  <li> <b>Modules</b> - All lower case: sv.<b>pathplanning</b>, sv.<b>modeling</b>  </li> 
+  <li> <b>Functions and Methods</b> - All lower case and underscores: sv.segmention.Circle.<b>get_center()</b>  </li> 
+</div>
 
 ### Visualization Toolkit ###
 SimVascular uses the Visualization Toolkit (VTK), an open-source software system for image processing, 3D graphics, volume 

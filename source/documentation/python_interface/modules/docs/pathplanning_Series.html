@@ -1,4 +1,4 @@
-<pre class="PythonMethodsPre"><strong>Series(file_name=None)</strong>  
+<pre class="PythonMethodsPre"><strong>Series</strong>(file_name=None)  
 
 The Series class stores time-varying Path objects.                        
 
@@ -15,31 +15,28 @@ Args:
   file_name (Optional[str]): The name of an SV .pth file. </pre> 
 <br>
 <legend style="font-size:20px; text-align:left"> <b> Methods </b> </legend> 
-<pre class="PythonMethodsPre"><strong>get_calculation_number()</strong> 
+<pre class="PythonMethodsPre"><strong>get_calculation_number</strong>() 
    
    Get the path group's calculation number. 
    
    Returns (int): The path group's calculation number. 
 </pre> 
-
-
-<pre class="PythonMethodsPre"><strong>get_method()</strong> 
+<br>
+<pre class="PythonMethodsPre"><strong>get_method</strong>() 
    
    Get the path group method. 
    
    Returns (str): The path group's method name. 
 </pre> 
-
-
-<pre class="PythonMethodsPre"><strong>get_num_times()</strong> 
+<br>
+<pre class="PythonMethodsPre"><strong>get_num_times</strong>() 
    
    Get the number of time steps paths are defined for.  
    
    Returns (int): The number of time steps paths are defined for. 
 </pre> 
-
-
-<pre class="PythonMethodsPre"><strong>get_path(time=0)</strong> 
+<br>
+<pre class="PythonMethodsPre"><strong>get_path</strong>(time=0) 
    
    Get the path for a given time. 
    
@@ -48,43 +45,38 @@ Args:
    
    Returns (sv.path.Path object): The path object for the given time.
 </pre> 
-
-
-<pre class="PythonMethodsPre"><strong>get_path_id()</strong> 
+<br>
+<pre class="PythonMethodsPre"><strong>get_path_id</strong>() 
    
    Get the path time ID. 
    
    Returns (int): The time ID of the path series. 
 </pre> 
-
-
-<pre class="PythonMethodsPre"><strong>get_spacing()</strong> 
+<br>
+<pre class="PythonMethodsPre"><strong>get_spacing</strong>() 
    
    Get the spacing for the path group. 
    
    Returns (float): The spacing for the path group. 
 </pre> 
-
-
-<pre class="PythonMethodsPre"><strong>set_calculation_number(number)</strong> 
+<br>
+<pre class="PythonMethodsPre"><strong>set_calculation_number</strong>(number) 
    
    Set the path group's calculation number. 
    
    Args: 
      number (int): The calculation number. 
 </pre> 
-
-
-<pre class="PythonMethodsPre"><strong>set_method(method)</strong> 
+<br>
+<pre class="PythonMethodsPre"><strong>set_method</strong>(method) 
    
    Set the path group method. 
    
    Args: 
      method (str): The subdivision method name. Valid names are: SPACING, SUBDIVISION or TOTAL 
 </pre> 
-
-
-<pre class="PythonMethodsPre"><strong>set_path(path, time)</strong> 
+<br>
+<pre class="PythonMethodsPre"><strong>set_path</strong>(path, time) 
    
    Set the path for a given time. 
    
@@ -92,32 +84,28 @@ Args:
      path (sv.path.Path object): The path object to set.
      time (int): The time to set the path for. 
 </pre> 
-
-
-<pre class="PythonMethodsPre"><strong>set_path_id(id)</strong> 
+<br>
+<pre class="PythonMethodsPre"><strong>set_path_id</strong>(id) 
    
    Set the ID for the path group. 
    
    Args: 
      id (int): The path ID.
 </pre> 
-
-
-<pre class="PythonMethodsPre"><strong>set_spacing(spacing)</strong> 
+<br>
+<pre class="PythonMethodsPre"><strong>set_spacing</strong>(spacing) 
    
    Set the spacing used by the SPACING method. 
    
    Args: 
      spacing (float): The spacing value. 
 </pre> 
-
-
-<pre class="PythonMethodsPre"><strong>write(file_name)</strong> 
+<br>
+<pre class="PythonMethodsPre"><strong>write</strong>(file_name) 
    
    Write the path group to an SV .pth file.
    
    Args: 
      file_name (str): The name of the file to write the path group to.
 </pre> 
-
-
+<br>

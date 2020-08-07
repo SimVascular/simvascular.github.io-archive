@@ -13,6 +13,7 @@ The <b>pathplanning</b> module defines the following classes
   <li> <b> SubdivisionMethod </b> </li>
 </ul>
 
+<br>
 <div class="PythonClassDiv" > 
 <legend style="font-size:20px; text-align:left"> <b> Path </b> </legend>
 <iframe src="documentation/python_interface/modules/docs/pathplanning_Path.html" style="background-color: #FFFFFF" frameborder="0" height="400" width="95%"> </iframe>

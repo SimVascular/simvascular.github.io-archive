@@ -1,6 +1,6 @@
 ## Segmentation Module ##
 
-The <b>segmentation</b> module provides an interface to the SimVascular image segmentation planning functionality. 
+The <b>segmentation</b> module provides an interface to the SimVascular image segmentation functionality. 
 
 The <b>segmentation</b> module defines the following classes
 <ul style="list-style-type:none;">
