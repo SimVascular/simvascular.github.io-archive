@@ -1,71 +1,77 @@
 ## Meshing Module ##
 
-The <b>meshing</b> module provides an interface to SimVascular functionality used to generate a finite element mesh 
-from solid models of vessel geometry. 
-                                                                             
-Methods are provided for creating finite element meshes using a set of parameters similar to those found in the 
-SimVascular Meshing tool. This includes setting user-defined regions on model faces for local mesh refinement. 
+The <b>meshing</b> module provides an interface to SimVascular meshing functionality used to generate a 
+finite element tetrahedral mesh from a solid model. 
+
+Methods are provided for setting meshing parameters, generating meshes and extracting mesh results as VTK 
+unstructured mesh objects. User-defined regions on model faces can be defined for local mesh refinement. 
 
 Two mesh generation software components (aka kernels) are supported
 <ol style="list-style-type:number;">
    <li> MeshSim </li>
    <li> TetGen </li>
 </ol>
-    
+
+MeshSim is a commercial software package used to generate meshes from Parasolid solid models. 
+Using MeshSim requires purchasing a license from Simmetrix, a Parasolid license from Siemens 
+and SimVascular plugins providing an interface to the software. 
+
+TetGen is an open source software package used to generate meshes from PolyData solid models.
+
 A mesh generation kernel name is specified using the <b>meshing.Kernel</b> class
 <ol style="list-style-type:number;">
    <li> Kernel.MESHSIM </li> 
    <li> Kernel.TETGEN </li> 
 </ol>
 
-The PolyData modeling kernel represents models as unstructured surfaces composed of 3-sided polygons. 
-    
-The OpenCASCADE modeling kernel is an open source software 3D CAD package.  Models are represented as 
-Non-Uniform Rational B-Spline (NURBS) surfaces. 
-    
-The Parasolid modeling kernel is a commercial software package providing 3D solid modeling functionality. 
-Using Parasolid requires purchasing a license from Siemens for the Parasolid libraries and a SimVascular 
-plugin providing an interface to the libraries.
-
 <br>
-The <b>modeling</b> module defines the following classes
+The <b> meshing </b> module defines the following classes
 <ul style="list-style-type:none;">
-  <li> <b> <a href="#KernelClass"> Kernel </a> </b> </li>
-  <li> <b> <a href="#ModelerClass"> Modeler </a> </b> </li>
-  <li> <b> <a href="#OpenCascadeClass"> OpenCascade </a> </b> </li>
-  <li> <b> <a href="#ParasolidClass"> Parasolid </a> </b> </li>
-  <li> <b> <a href="#PolyDataClass"> PolyData </a> </b> </li>
+  <li> <b> <a href="#AdaptMeshingKernelClass"> AdaptiveKernel </a> </b> </li>
+  <li> <b> <a href="#MeshingKernelClass"> Kernel </a> </b> </li>
+  <li> <b> <a href="#MeshSimClass"> MeshSim </a> </b> </li>
+  <li> <b> <a href="#MeshingSeriesClass"> Series </a> </b> </li>
+  <li> <b> <a href="#TetGenClass"> TetGen </a> </b> </li>
+  <li> <b> <a href="#TetGenOptionsClass"> TetGenOptions </a> </b> </li>
 </ul>
 
 <br>
-<div id="KernelClass" class="PythonClassDiv" >
+<div id="AdaptMeshingKernelClass" class="PythonClassDiv" >
+<legend style="font-size:20px; text-align:left"> <b> AdaptiveKernel </b> </legend>
+<iframe src="documentation/python_interface/modules/docs/meshing_AdaptiveKernel.html" style="background-color: #FFFFFF" frameborder="0" height="400" width="95%"> </iframe>
+</div>
+
+<br>
+<div id="MeshingKernelClass" class="PythonClassDiv" >
 <legend style="font-size:20px; text-align:left"> <b> Kernel </b> </legend>
-<iframe src="documentation/python_interface/modules/docs/modeling_Kernel.html" style="background-color: #FFFFFF" frameborder="0" height="400" width="95%"> </iframe>
+<iframe src="documentation/python_interface/modules/docs/meshing_Kernel.html" style="background-color: #FFFFFF" frameborder="0" height="400" width="95%"> </iframe>
 </div>
 
 <br>
-<div id="ModelerClass" class="PythonClassDiv" >
-<legend style="font-size:20px; text-align:left"> <b> Modeler </b> </legend>
-<iframe src="documentation/python_interface/modules/docs/modeling_Modeler.html" style="background-color: #FFFFFF" frameborder="0" height="400" width="95%"> </iframe>
+<div id="MeshSimClass" class="PythonClassDiv" >
+<legend style="font-size:20px; text-align:left"> <b> MeshSim </b> </legend>
+<iframe src="documentation/python_interface/modules/docs/meshing_MeshSim.html" style="background-color: #FFFFFF" frameborder="0" height="400" width="95%"> </iframe>
 </div>
 
 <br>
-<div id="OpenCascadeClass" class="PythonClassDiv" >
-<legend style="font-size:20px; text-align:left"> <b> OpenCascade </b> </legend>
-<iframe src="documentation/python_interface/modules/docs/modeling_OpenCascade.html" style="background-color: #FFFFFF" frameborder="0" height="400" width="95%"> </iframe>
+<div id="MeshingSeriesClass" class="PythonClassDiv" >
+<legend style="font-size:20px; text-align:left"> <b> Series </b> </legend>
+<iframe src="documentation/python_interface/modules/docs/meshing_Series.html" style="background-color: #FFFFFF" frameborder="0" height="400" width="95%"> </iframe>
 </div>
 
 <br>
-<div id="ParasolidClass" class="PythonClassDiv" >
-<legend style="font-size:20px; text-align:left"> <b> Parasolid </b> </legend>
-<iframe src="documentation/python_interface/modules/docs/modeling_Parasolid.html" style="background-color: #FFFFFF" frameborder="0" height="400" width="95%"> </iframe>
+<div id="TetGenClass" class="PythonClassDiv" >
+<legend style="font-size:20px; text-align:left"> <b> TetGen </b> </legend>
+<iframe src="documentation/python_interface/modules/docs/meshing_TetGen.html" style="background-color: #FFFFFF" frameborder="0" height="400" width="95%"> </iframe>
 </div>
 
 <br>
-<div id="PolyDataClass" class="PythonClassDiv" >
-<legend style="font-size:20px; text-align:left"> <b> PolyData </b> </legend>
-<iframe src="documentation/python_interface/modules/docs/modeling_PolyData.html" style="background-color: #FFFFFF" frameborder="0" height="400" width="95%"> </iframe>
+<div id="TetGenClass" class="PythonClassDiv" >
+<legend style="font-size:20px; text-align:left"> <b> TetGenOptions </b> </legend>
+<iframe src="documentation/python_interface/modules/docs/meshing_TetGenOptions.html" style="background-color: #FFFFFF" frameborder="0" height="400" width="95%"> </iframe>
 </div>
+
+
 
 
 <br>

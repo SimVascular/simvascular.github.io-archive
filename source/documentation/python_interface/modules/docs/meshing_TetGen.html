@@ -1,6 +1,4 @@
-<pre class="PythonMethodsPre">SimVascular TetGen mesher class. 
-
-The TetGen class provides an interface for creating tetrahedral finite  
+<pre class="PythonMethodsPre">The TetGen class provides an interface for creating tetrahedral finite  
 element meshes from PolyData solid models using the TetGen open source  
 mesh generator.                                                         
 
@@ -11,7 +9,6 @@ The TetGen class inherits most of its methods from the Mesher base class. </pre>
    
    Compute the boundary faces for the solid model. 
    
-   ----------------------------------------------------------------------   
    This method needs to be called only for PolyData solid models that do    
    not have face information already defined (e.g. models from STL files).  
    It does not need to be called for OpenCascade or Parasolid models.       
@@ -36,7 +33,6 @@ The TetGen class inherits most of its methods from the Mesher base class. </pre>
 <br>
 <pre class="PythonMethodsPre"><strong>get_face_polydata</strong>(face_id)  
    
-   ----------------------------------------------------------------------   
    Get the mesh face VTK PolyData for the given face ID.  
    
    Args: 
@@ -52,11 +48,9 @@ The TetGen class inherits most of its methods from the Mesher base class. </pre>
    Returns (str): The name of the mesher kernel. 
 </pre> 
 <br>
-<pre class="PythonMethodsPre"><strong> get_mesh</strong>()  
+<pre class="PythonMethodsPre"><strong>get_mesh</strong>()  
   
   Get the mesh that has been generated. 
-  
-  Args:                                    
 </pre> 
 <br>
 <pre class="PythonMethodsPre"><strong>get_model_face_ids</strong>()  
@@ -64,16 +58,13 @@ The TetGen class inherits most of its methods from the Mesher base class. </pre>
   Get the mesh solid model face IDs. 
   
   Returns list([int]): The list of integer face IDs. 
-  
 </pre> 
 <br>
-<pre class="PythonMethodsPre"><strong>get_model_polydata  
+<pre class="PythonMethodsPre"><strong>get_model_polydata</strong>()  
    
-   ----------------------------------------------------------------------   
    Get the VTK PolyData for the mesh solid model. 
    
-   Returns </strong>(vtkPolyData): The VTK PolyData object for the mesh solid model.  
-   
+   Returns (vtkPolyData): The VTK PolyData object for the mesh solid model. 
 </pre> 
 <br>
 <pre class="PythonMethodsPre"><strong>get_surface</strong>()  
@@ -81,18 +72,16 @@ The TetGen class inherits most of its methods from the Mesher base class. </pre>
    Get the mesh surface as VTK PolyData. 
    
    Returns (vtkPolyData): The VTK PolyData object for the mesh surface.  
-   
 </pre> 
 <br>
-<pre class="PythonMethodsPre"><strong>load_mesh</strong>(volume_file, surface_file)  
+<pre class="PythonMethodsPre"><strong>load_mesh</strong>(volume_file, surface_file=None)  
    
-   ----------------------------------------------------------------------   
    Load a mesh from a VTK .vtu file.                                        
    
    Args: 
-     volume_file (str): The name of the VTK .vtu file containing a            
-         volume mesh. 
-     surface_file (Optionla[str]): The name of the VTK .vtp file containing a            
+     volume_file (str): The name of the VTK .vtu file containing a           
+         volume mesh.                                                        
+     surface_file (Optionla[str]): The name of the VTK .vtp file containing a
          surface mesh. 
 </pre> 
 <br>
@@ -107,7 +96,6 @@ The TetGen class inherits most of its methods from the Mesher base class. </pre>
 <pre class="PythonMethodsPre"><strong>set_boundary_layer</strong>(number_of_layers, edge_size_fraction, layer_decreasing_ratio, 
        constant_thickness)  
    
-   ----------------------------------------------------------------------   
    Set the options for boundary layer meshing. 
    
    Args: 
@@ -119,7 +107,6 @@ The TetGen class inherits most of its methods from the Mesher base class. </pre>
          successive boundary layers. 
      constant_thickness (bool): If True then the boundary layers will have a 
          constant thickness. 
-   
 </pre> 
 <br>
 <pre class="PythonMethodsPre"><strong>set_walls</strong>(face_ids)  
@@ -129,13 +116,11 @@ The TetGen class inherits most of its methods from the Mesher base class. </pre>
    This function must be called prior to meshing to identify model wall     
    and cap faces.                                                           
    
-   ----------------------------------------------------------------------   
    A solid model must be loaded before calling this function. The solid     
    model must have boundary faces defined for it.                           
    
    Args: 
      face_ids (list[int]): The face IDs to set to type wall. 
-   
 </pre> 
 <br>
 <pre class="PythonMethodsPre"><strong>write_mesh</strong>(file_name)  
