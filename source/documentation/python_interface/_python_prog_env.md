@@ -12,8 +12,11 @@ Python ensures the compatability between Python and the installed module version
 packages that may already be installed on your computer. 
 
 The Python interface can be accesed from the SimVascular **Python Console** or from a terminal using the **Python Shell**. 
-Scripts accessing a project's data nodes shown in the **SV Data Manager** must use the **Python Console** because data
-nodes are only defined when SimVascular is executed with the GUI.
+
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #e6e600; border-left: 6px solid #e6e600">
+Scripts accessing a project's data nodes shown in the <b>SV Data Manager</b> must use the <b>Python Console</b> because 
+data nodes are only defined when SimVascular is executed with the GUI.
+</div>
 
 ### Python Modules ###
 A Python module is used to organize related code (e.g. code used to operate on paths) and encapsulates Python classes, 
