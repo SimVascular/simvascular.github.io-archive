@@ -70,9 +70,3 @@ The <b>modeling</b> module defines the following classes
 <iframe src="documentation/python_interface/modules/docs/modeling_PolyData.html" style="background-color: #FFFFFF" frameborder="0" height="400" width="95%"> </iframe>
 </div>
 
-
-<br>
-<br>
-<br>
-<br>
-

@@ -72,10 +72,3 @@ The <b> meshing </b> module defines the following classes
 </div>
 
 
-
-
-<br>
-<br>
-<br>
-<br>
-

@@ -1,0 +1,102 @@
+<pre class="PythonMethodsPre">The LoftNurbsOptions class stores parameter values used to control how  
+lofted NURBS surfaces are generated.                                    
+
+Example: Create a loft nurbs options object                             
+
+    options = sv.geometry.LoftNurbsOptions()                            </pre> 
+<br>
+<legend style="font-size:20px; text-align:left"> <b> Methods </b> </legend> 
+<pre class="PythonMethodsPre"><strong>get_values</strong>()  
+  
+  Get options names and values.
+  
+  Returns (dict): A dict with key/value pairs for each option name/value. 
+</pre> 
+<br>
+<legend style="font-size:20px; text-align:left"> <b> Data </b> </legend> 
+<pre class="PythonMethodsPre"><strong>knot_span_types</strong>
+   SimVascular loft nurbs knot span types. 
+   
+   This attribute provides symbols for the names used to control how knots  
+   are generated for a NURBS surface.                                       
+   
+   The knot span types are                                                  
+       (1) AVERAGE = 'average'                                              
+       (2) DERIVATIVE = 'derivative'                                        
+       (3) EQUAL = 'equal'                                                  
+
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>parametric_span_types</strong>
+   SimVascular loft nurbs parametric span types. 
+   
+   This attribute provides symbols for the names used to control how        
+   parametric space is generated for a NURBS surface.                       
+   
+   The parametric span types are                                            
+       (1) CENTRIPETAL = 'centripetal'                                      
+       (2) CHORD = 'chord'                                                  
+       (3) EQUAL = 'equal'                                                  
+
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>u_degree</strong>
+   Type: int                                                              
+   Default: 2                                                             
+   
+   The degree value controls the surface curvature in the logitudinal     
+   direction of the lofted surface. Degree can be thought of as constraining 
+   the surface’s freedom to bend: 1=linear, 2=quadratic, 3=cubic, etc.    
+
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>u_knot_span_type</strong>
+   Type: str                                                              
+   Default: 'derivative'                                                  
+   
+   How the knot vector divides the parametric space in a u knot interval. 
+
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>u_parametric_span_type</strong>
+   Type: str                                                              
+   Default: 'centripetal'                                                 
+   
+   How the parametric space is constructed.                               
+
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>v_degree</strong>
+   Type: int                                                              
+   Default: 2                                                             
+   
+   The degree value controls the surface curvature in the circumferential 
+   direction of the lofted surface. Degree can be thought of as constraining 
+   the surface’s freedom to bend: 1=linear, 2=quadratic, 3=cubic, etc.    
+
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>v_knot_span_type</strong>
+   Type: str                                                              
+   Default: 'average'                                                     
+   
+   How the knot vector divides the parametric space in a v knot interval. 
+
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>v_parametric_span_type</strong>
+   Type: str                                                               
+   Default: 'chord'                                                        
+   
+   How the parametric space is constructed.                                 
+
+</pre> 
+
+

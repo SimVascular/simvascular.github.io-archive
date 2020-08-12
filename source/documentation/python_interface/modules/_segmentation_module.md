@@ -45,9 +45,3 @@ The <b>segmentation</b> module defines the following classes
 </div>
 
 
-
-<br>
-<br>
-<br>
-<br>
-
