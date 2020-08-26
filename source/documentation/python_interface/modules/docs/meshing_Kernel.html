@@ -1,0 +1,20 @@
+<pre class="PythonMethodsPre">The Kernel class provides the kernel names used to generate finite       
+element meshes. The kernel names are stored as class attributes and are  
+referenced using the class name.                                         
+
+A meshing kernel names are                                               
+    (1) Kernel.MESHSIM                                                   
+    (2) Kernel.TETGEN                                                    
+
+Example: Using the Kernel.TETGEN kernel name to create a TetGen mesher   
+
+    mesher = sv.meshing.create_mesher(sv.meshing.Kernel.TETGEN)          </pre> 
+<br>
+<legend style="font-size:20px; text-align:left"> <b> Methods </b> </legend> 
+<pre class="PythonMethodsPre"><strong>get_names</strong>()  
+   
+   Get the meshing kernel names. 
+   
+   Returns (list[str]) - The list of meshing kernel names.
+</pre> 
+<br>

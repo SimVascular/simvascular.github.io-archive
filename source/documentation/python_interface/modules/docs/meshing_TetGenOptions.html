@@ -1,0 +1,188 @@
+<pre class="PythonMethodsPre"><strong>TetGenOptions</strong>(global_edge_size=None, surface_mesh_flag=None,            
+              volume_mesh_flag=None)                                     
+
+The TetGenOptions class stores parameter values used to control how      
+TetGen generates a finite element mesh.                                  
+
+Example: Create a TetGen options object with default parameter values    
+
+    options = sv.meshing.TetGenOptions()                                 
+
+Args: 
+  global_edge_size (Optional[float]): The maxium length of an element    
+     edge.                                                               
+  surface_mesh_flag (Optional[bool]): If True then perform surface       
+      remeshing.                                                         
+  volume_mesh_flag (Optional[bool]): If True then generate a volume mesh.</pre> 
+<br>
+<legend style="font-size:20px; text-align:left"> <b> Methods </b> </legend> 
+<pre class="PythonMethodsPre"><strong>get_values</strong>()  
+  
+  Get the names and values of TetGen mesh generation options. 
+  
+  Returns (dict): A dict containing options as name/value pairs.       
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>local_edge_size</strong>(face_id, size)  
+  
+  Create a value for the local_edge_size option. 
+  
+  Args:  
+    face_id (int): The ID of the face to set the edge size for.  
+    size (float): The edge size for the face.  
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>sphere_refinement</strong>(edge_size, radius, center)  
+  
+  Create a sphere refinement value. 
+  
+  Args:  
+    edge_size (float): The edge size.  
+    radius: (float): The sphere radius.  
+    center: (list[float,float,float]): The sphere center.  
+</pre> 
+<br>
+<legend style="font-size:20px; text-align:left"> <b> Data </b> </legend> 
+<pre class="PythonMethodsPre"><strong>allow_multiple_regions</strong>
+   Type: bool                                                              
+   Default: False                                                          
+   
+   If True then allow for multiple unconnected regions.                    
+   
+
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>boundary_layer_inside</strong>
+   Type: bool                                                              
+   Default: True                                                           
+   
+   If True then place the boundary layer inside the solid model surface.   
+   This is used for creating a boundary layer for CFD.                     
+   
+
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>global_edge_size</strong>
+   Type: float                                                             
+   Default: 0.1                                                            
+   
+   The maxium length of an element edge.            
+   
+
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>local_edge_size_on</strong>
+   Type: bool                                                             
+   Default: False                                                         
+   
+   If True then enable using local edge sizes for meshing.                
+   
+
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>no_bisect</strong>
+   Type: bool                                                              
+   Default: True                                                           
+   If True then use the solid model surface mesh for the volume mesh.      
+   
+
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>no_merge</strong>
+   Type: bool                                                              
+   Default: True                                                           
+   
+   If True then do not merge coplanar faces.                               
+   
+
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>optimization</strong>
+   Type: int                                                               
+   Default: 3                                                              
+   
+   The number of times to optimize the mesh. Optimization moves nodes to   
+   obtain a better quality mesh.                                           
+   
+
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>quality_ratio</strong>
+   Type: float                                                             
+   Default: 1.4                                                            
+   
+   he quality measure for the mesh. This number corresponds to the ratio   
+   between the radius of the circumsphere of an element and the maximum    
+   edge size.                                                              
+   
+
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>radius_meshing_compute_centerlines</strong>
+   Type: bool                                                             
+   Default: False                                                         
+   
+   If True then enable computing centerlines for radius-based meshing.    
+   
+
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>radius_meshing_on</strong>
+   Type: bool                                                             
+   Default: False                                                         
+   
+   If True then enable radius-based meshing.                              
+   
+
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>sphere_refinement_on</strong>
+   Type: bool                                                             
+   Default: False                                                         
+   
+   If True then enable sphere refinement meshing.                         
+   
+
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>surface_mesh_flag</strong>
+   Type: bool                                                              
+   Default: True                                                           
+   
+   If True then perform surface remeshing.                                 
+   
+
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>use_mmg</strong>
+   Type: bool                                                              
+   Default: True                                                           
+   
+   If True then use MMG for remeshing.                                     
+   
+
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>volume_mesh_flag</strong>
+   Type: bool                                                              
+   Default: True                                                           
+   
+   If True then generate a volume mesh.                                    
+   
+
+</pre> 
+
+

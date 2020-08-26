@@ -1,0 +1,158 @@
+<pre class="PythonMethodsPre">The Path class provides methods for querying, creating, and modifying SV  
+path planning objects.                                                    </pre> 
+<br>
+<legend style="font-size:20px; text-align:left"> <b> Methods </b> </legend> 
+<pre class="PythonMethodsPre"><strong>add_control_point</strong>(point, index=None) 
+   
+   Add a control point to a path. 
+   
+   The point is inserted into the path's list of control points at the location to the control point it is closest to.  
+   If the 'location' argument is given then the point is added at that location in the list. 
+   
+   Args: 
+     point (list[float,float,float]): The control point (x,y,z) coordinates. 
+     index (Optional[int]): The index into the current list of control points to add the control point. 0 <= index <= number of path control points - 1
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>get_control_points</strong>() 
+   
+   Get the path's control points. 
+   
+   Returns (list(list[float,float,float])): The list of the path's control points. 
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>get_curve_frame</strong>(index) 
+   
+   Get the coordinate frame at the path's interpolating curve at a given location. 
+   
+   Args: 
+     index (int): The index into the path's curve frames. 0 <= index <= number of path curve frames - 1. 
+   
+   Returns (list([float,float,float])): The path's curve normal at the given location. 
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>get_curve_normal</strong>(index) 
+   
+   Get the normal to the path's interpolating curve at a given location. 
+   
+   Args: 
+     index (int): The index into the path's curve normals. 0 <= index <= number of path curve points - 1. 
+   
+   Returns (list([float,float,float])): The path's curve normal at the given location. 
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>get_curve_point</strong>(index) 
+   
+   Get the point on the path's interpolating curve at a given location. 
+   
+   Args: 
+     index (int): The index into the path's curve points. 0 <= index <= number of path curve points - 1. 
+   
+   Returns (list([float,float,float])): The path's curve point at the given location. 
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>get_curve_points</strong>() 
+   
+   Get the points along the path's interpolating curve. 
+   
+   Returns (list(list[float,float,float])): The list of the path's interpolating curve points. 
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>get_curve_polydata</strong>() 
+   
+   Get the vtkPolyData object representing the path's interpolating curve. 
+   
+   Returns (vtkPolyData): The vtkPolyData object representing the path's interpolating curve.  
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>get_curve_tangent</strong>(index) 
+   
+   Get the tangent to the path's interpolating curve at a given location. 
+   
+   Args: 
+     index (int): The index into the path's curve tangents. 0 <= index <= number of path curve tangents - 1. 
+   
+   Returns (list([float,float,float])): The path's curve tangent at the given location. 
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>get_num_curve_points</strong>() 
+   
+   Get the number of points along the path's interpolating curve. 
+   
+   Returns (int): The number of points along the path's interpolating curve. 
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>get_num_subdivisions</strong>() 
+   
+   Get the path group's calculation number. 
+   
+   Returns (int): The path group's calculation number. 
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>get_subdivision_method</strong>() 
+   
+   Get the path's subdivision method. 
+   
+   Returns (str): The path's subdivsion method. 
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>get_subdivision_spacing</strong>() 
+   
+   Get the path's subdivsion spacing value. 
+   
+   Returns (float): The path's subdivsion spacling value. 
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>remove_control_point</strong>(index) 
+   
+   Remove a control point from a path. 
+   
+   Args: 
+     index (int): The index into the path's list of control points of the control point to remove. 0 <= index <= number of control points - 1. 
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>replace_control_point</strong>(index, point) 
+   
+   Replace a control point in a path. 
+   
+   Args: 
+     index (int): The index into the path's list of control points of the control point to remove. 0 <= index <= number of control points - 1. 
+     point (list[float,float,float]): A list of three floats represent the coordinates of a 3D point. 
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>set_control_points</strong>(points) 
+   
+   Set the path's control points. 
+   
+   Args: 
+     points (list(list[float,float,float])): The list of control points. 
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>set_subdivision_method</strong>(method, num_subdiv=None, num_total=None, spacing=None) 
+   
+   Set the subdivision method and paramters used to determine the number of path curve points created between two adjacent control points. 
+   
+   The optional parameters are only used with the appropriate method being set. The path's curve points are updated using the given 
+   method and paramater value. 
+   
+   Args: 
+     method (str): The subdivision method name. Valid names are: SPACING, SUBDIVISION or TOTAL 
+     num_div (Optional[int]): The number of subdivisions used with the SUBDIVISION method. 
+     num_total (Optional[int]): The number of total subdivisions used with the TOTAL method. 
+     spacing (Optional[float]): The spacing by the SPACING method. 
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>smooth</strong>(sample_rate, num_modes, smooth_control_pts=False) 
+   
+   Smooth a path's control points or curve points as a source. 
+   
+   Args: 
+     sample_rate (int): The rate used to sample the source points for smoothing. 
+        A sample rate of 2 uses every other point for smoothing. 
+     num_modes (int): The number of Fourier modes used to reconstuct the source points. 
+        The lower the number of modes the more the source points are smoothed. 
+     control_point_based (Optional[bool]): If True then smooth control points; otherwise smooth curve points. 
+   
+   Returns (sv.path.Path object): A new smoothed path. 
+</pre> 
+<br>

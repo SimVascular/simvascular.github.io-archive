@@ -1,0 +1,21 @@
+<pre class="PythonMethodsPre">The Kernel class provides the kernel names used to create Modeling     
+objects. The kernel names are stored as class attributes and are        
+referenced using the class name.                                        
+
+The modeling kernel names are                                           
+    (1) Kernel.POLYDATA                                                 
+    (2) Kernel.OPENCASCADE                                              
+    (3) Kernel.PARASOLID                                                
+
+Example: Using the Kernel.POLYDATA kernel name to create a modeler      
+
+    modeler = sv.modeling.Modeler(sv.modeling.Kernel.POLYDATA)          </pre> 
+<br>
+<legend style="font-size:20px; text-align:left"> <b> Methods </b> </legend> 
+<pre class="PythonMethodsPre"><strong>get_names</strong>()  
+   
+   Get the modeling kernel names. 
+   
+   Returns (list[str]) - The list of modeling kernel names.
+</pre> 
+<br>
