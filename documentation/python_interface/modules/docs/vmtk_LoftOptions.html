@@ -1,0 +1,43 @@
+<pre class="PythonMethodsPre">The LoftOptions class stores parameter values used to control how lofted
+lofted surfaces are generated.                                          
+
+Example: Create a loft options object                                   
+
+    options = sv.geometry.LoftOptions()                                 </pre> 
+<br>
+<legend style="font-size:20px; text-align:left"> <b> Methods </b> </legend> 
+<pre class="PythonMethodsPre"><strong>get_values</strong>()  
+  
+  Get the names and values of loft options. 
+  
+  Returns (dict): A dict with key/value pairs for each option name/value.  
+</pre> 
+<br>
+<legend style="font-size:20px; text-align:left"> <b> Data </b> </legend> 
+<pre class="PythonMethodsPre"><strong>interpolate_spline_points</strong>
+   Type: bool                                                              
+   Default: True                                                           
+   
+   If True then Use linear interpolation between spline sample points.     
+
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>num_long_points</strong>
+   Type: int                                                               
+   Default: 100                                                            
+   
+   The number of longitudinal points created for the lofted surface.       
+
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>num_spline_points</strong>
+   Type: int                                                               
+   Default: 20                                                             
+   
+   The number of spline sample points used with linear interpolation.      
+
+</pre> 
+
+

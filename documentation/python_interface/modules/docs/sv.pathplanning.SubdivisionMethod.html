@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: class SubdivisionMethod</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><strong>sv.pathplanning.SubdivisionMethod</strong> = <a name="sv.pathplanning.SubdivisionMethod">class SubdivisionMethod</a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>The&nbsp;SubdivisionMethod&nbsp;class&nbsp;provides&nbsp;the&nbsp;names&nbsp;used&nbsp;to&nbsp;set&nbsp;the&nbsp;subdivision&nbsp;method&nbsp;for&nbsp;a&nbsp;path&nbsp;as&nbsp;class&nbsp;variables.&nbsp;<br>
+&nbsp;<br>
+&nbsp;The&nbsp;subdivision&nbsp;method&nbsp;is&nbsp;used&nbsp;to&nbsp;determine&nbsp;the&nbsp;number&nbsp;of&nbsp;path&nbsp;curve&nbsp;points&nbsp;N&nbsp;created&nbsp;between&nbsp;two&nbsp;adjacent&nbsp;control&nbsp;points.&nbsp;<br>
+&nbsp;<br>
+Valid&nbsp;subdivision&nbsp;method&nbsp;names&nbsp;are:&nbsp;<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;SPACING&nbsp;-&nbsp;Divide&nbsp;the&nbsp;distance&nbsp;D&nbsp;between&nbsp;adjacent&nbsp;control&nbsp;points&nbsp;by&nbsp;a&nbsp;given&nbsp;spacing&nbsp;value&nbsp;S:&nbsp;N&nbsp;=&nbsp;D/S&nbsp;-&nbsp;1&nbsp;<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;SUBDIVISION&nbsp;-&nbsp;Set&nbsp;N&nbsp;to&nbsp;a&nbsp;given&nbsp;subdivision&nbsp;number.&nbsp;<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;TOTAL&nbsp;-&nbsp;Appoximate&nbsp;the&nbsp;total&nbsp;number&nbsp;of&nbsp;path&nbsp;points&nbsp;using&nbsp;the&nbsp;number&nbsp;of&nbsp;control&nbsp;points&nbsp;Nc&nbsp;and&nbsp;total&nbsp;numner&nbsp;Nt:&nbsp;N&nbsp;=&nbsp;(Nt-1)/(Nc-1)&nbsp;-&nbsp;1<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="SubdivisionMethod-get_names"><strong>get_names</strong></a>(...)</dt><dd><tt><a href="#sv.pathplanning.SubdivisionMethod-get_names">get_names</a>()&nbsp;<br>
+&nbsp;<br>
+Get&nbsp;the&nbsp;valid&nbsp;subdivision&nbsp;method&nbsp;names.&nbsp;<br>
+&nbsp;<br>
+Args:&nbsp;<br>
+&nbsp;&nbsp;None</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>SPACING</strong> = 'SPACING'</dl>
+
+<dl><dt><strong>SUBDIVISION</strong> = 'SUBDIVISION'</dl>
+
+<dl><dt><strong>TOTAL</strong> = 'TOTAL'</dl>
+
+<dl><dt><strong>names</strong> = ['SPACING', 'SUBDIVISION', 'TOTAL']</dl>
+
+</td></tr></table>
+</body></html>
