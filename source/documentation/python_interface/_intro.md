@@ -43,6 +43,9 @@
 </head>
 <body>
 
+# Beta Version #
+The Python API documentation is in beta. The contents of the documentation is not finalized and could change in the future.
+
 # Introduction #
 SimVascular provides an application programming interface (API) for accessing core SimVascular functions using the
 Python programming language. The API defines a number of Python modules and classes used to access, manipulate and 
