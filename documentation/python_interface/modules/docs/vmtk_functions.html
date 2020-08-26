@@ -1,0 +1,73 @@
+<pre class="PythonMethodsPre"><strong>cap</strong>
+   cap(surface, use_center)  
+   
+   Fill the holes in a surface mesh with planar faces.                     
+   
+   Args: 
+     surface (vtkPolyData): A polygonal surface. 
+     use_center (bool): If true then the planar faces are constructed using   
+        polygons connected to hole centers.                                   
+   
+   Returns (vtkPolyData): The capped geometry.                                 
+
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>cap_with_ids</strong>
+   cap_with_ids(surface, fill_id=0, increment_id=True)  
+   
+   Fill the holes in a surface mesh with planar faces and adding data      
+   arrays to the returned vtkPolyData object identifying faces.            
+   
+   A cell data array named 'ModelFaceID' is added used to assign an integer
+   face ID to each cell (polygon) in the vtkPolyData object.               
+   
+   Args: 
+     surface (vtkPolyData): A polygonal surface.                           
+     fill_id (int): The initial face ID to use.                            
+     increment_id (bool): If True then assign each face a new ID starting  
+        from 'fill_id' and incremented by 1, else assign each face the     
+        same ID.                                                           
+   
+   Returns (vtkPolyData): The capped geometry.                             
+
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>centerlines</strong>
+   centerlines(surface, inlet_ids, outlet_ids, use_face_ids=False)         
+   
+   Compute the centerlines for a closed surface.                            
+   
+   Args: 
+     surface (vtkPolyData): The vtkPolyData object representing a closed   
+        surface. 
+     inlet_ids (list[int]): The list of integer IDs identifying the vessel 
+        inlet faces.                                                       
+     outlet_ids (list[int]): The list of integer IDs identifying the vessel
+        outlet faces. 
+     use_face_ids (bool): If True then the input IDs are face IDs, else    
+        they are node IDs.                                                 
+   
+   Returns (vtkPolyData): The centerlines geometry (lines) and data.       
+
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>distance_to_centerlines</strong>
+   distance_to_centerlines(surface, centerlines)  
+   
+   Compute the distance beteen centerlines and surface points.             
+   
+   Args: 
+     surface (vtkPolyData): The vtkPolyData object representing a closed   
+        surface.                                                           
+     centerlines (vtkPolyData): The vtkPolyData object returned from a     
+        centerlines calculation. 
+   
+   Returns (vtkPolyData): The vtkPolyData  object of the original surface  
+      with a 'DistanceToCenterlines' point data array storing the distances.
+
+</pre> 
+
+

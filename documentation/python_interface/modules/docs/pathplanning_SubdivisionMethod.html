@@ -1,0 +1,25 @@
+<pre class="PythonMethodsPre">The SubdivisionMethod class provides the names used to set the subdivision
+method for a path as class variables.                                     
+
+The subdivision method is used to determine the number of path curve    
+points N created between two adjacent control points.                   
+
+Valid subdivision method names are: 
+
+   SPACING - Divide the distance D between adjacent control points by a 
+             given spacing value S: N = D/S - 1 
+
+   SUBDIVISION - Set N to a given subdivision number. 
+
+   TOTAL - Appoximate the total number of path points using the number of 
+           control points Nc and total numner Nt: N = (Nt-1)/(Nc-1) - 1 </pre> 
+<br>
+<legend style="font-size:20px; text-align:left"> <b> Methods </b> </legend> 
+<pre class="PythonMethodsPre"><strong>get_names</strong>() 
+   
+   Get the valid subdivision method names. 
+   
+   Args: 
+     None 
+</pre> 
+<br>

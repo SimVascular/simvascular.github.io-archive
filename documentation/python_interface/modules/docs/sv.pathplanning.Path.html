@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: class Path</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><strong>sv.pathplanning.Path</strong> = <a name="sv.pathplanning.Path">class Path</a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>The&nbsp;Path&nbsp;class&nbsp;provides&nbsp;methods&nbsp;for&nbsp;querying,&nbsp;creating,&nbsp;and&nbsp;modifying&nbsp;SV&nbsp;&nbsp;<br>
+path&nbsp;planning&nbsp;objects.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Path-__init__"><strong>__init__</strong></a>(self, /, *args, **kwargs)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="Path-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;object.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="Path-add_control_point"><strong>add_control_point</strong></a>(...)</dt><dd><tt><a href="#sv.pathplanning.Path-add_control_point">add_control_point</a>(point,&nbsp;index=None)&nbsp;<br>
+&nbsp;<br>
+Add&nbsp;a&nbsp;control&nbsp;point&nbsp;to&nbsp;a&nbsp;path.&nbsp;<br>
+&nbsp;<br>
+The&nbsp;point&nbsp;is&nbsp;inserted&nbsp;into&nbsp;the&nbsp;path's&nbsp;list&nbsp;of&nbsp;control&nbsp;points&nbsp;at&nbsp;the&nbsp;location&nbsp;to&nbsp;the&nbsp;control&nbsp;point&nbsp;it&nbsp;is&nbsp;closest&nbsp;to.&nbsp;&nbsp;<br>
+If&nbsp;the&nbsp;'location'&nbsp;argument&nbsp;is&nbsp;given&nbsp;then&nbsp;the&nbsp;point&nbsp;is&nbsp;added&nbsp;at&nbsp;that&nbsp;location&nbsp;in&nbsp;the&nbsp;list.&nbsp;<br>
+&nbsp;<br>
+Args:&nbsp;<br>
+&nbsp;&nbsp;point&nbsp;(list[float,float,float]):&nbsp;The&nbsp;control&nbsp;point&nbsp;(x,y,z)&nbsp;coordinates.&nbsp;<br>
+&nbsp;&nbsp;index&nbsp;(Optional[int]):&nbsp;The&nbsp;index&nbsp;into&nbsp;the&nbsp;current&nbsp;list&nbsp;of&nbsp;control&nbsp;points&nbsp;to&nbsp;add&nbsp;the&nbsp;control&nbsp;point.&nbsp;0&nbsp;&lt;=&nbsp;index&nbsp;&lt;=&nbsp;number&nbsp;of&nbsp;path&nbsp;control&nbsp;points&nbsp;-&nbsp;1</tt></dd></dl>
+
+<dl><dt><a name="Path-get_control_points"><strong>get_control_points</strong></a>(...)</dt><dd><tt><a href="#sv.pathplanning.Path-get_control_points">get_control_points</a>()&nbsp;<br>
+&nbsp;<br>
+Get&nbsp;the&nbsp;path's&nbsp;control&nbsp;points.&nbsp;<br>
+&nbsp;<br>
+Returns&nbsp;(list(list[float,float,float])):&nbsp;The&nbsp;list&nbsp;of&nbsp;the&nbsp;path's&nbsp;control&nbsp;points.</tt></dd></dl>
+
+<dl><dt><a name="Path-get_curve_frame"><strong>get_curve_frame</strong></a>(...)</dt><dd><tt><a href="#sv.pathplanning.Path-get_curve_frame">get_curve_frame</a>(index)&nbsp;<br>
+&nbsp;<br>
+Get&nbsp;the&nbsp;coordinate&nbsp;frame&nbsp;at&nbsp;the&nbsp;path's&nbsp;interpolating&nbsp;curve&nbsp;at&nbsp;a&nbsp;given&nbsp;location.&nbsp;<br>
+&nbsp;<br>
+Args:&nbsp;<br>
+&nbsp;&nbsp;index&nbsp;(int):&nbsp;The&nbsp;index&nbsp;into&nbsp;the&nbsp;path's&nbsp;curve&nbsp;frames.&nbsp;0&nbsp;&lt;=&nbsp;index&nbsp;&lt;=&nbsp;number&nbsp;of&nbsp;path&nbsp;curve&nbsp;frames&nbsp;-&nbsp;1.&nbsp;<br>
+&nbsp;<br>
+Returns&nbsp;(list([float,float,float])):&nbsp;The&nbsp;path's&nbsp;curve&nbsp;normal&nbsp;at&nbsp;the&nbsp;given&nbsp;location.</tt></dd></dl>
+
+<dl><dt><a name="Path-get_curve_normal"><strong>get_curve_normal</strong></a>(...)</dt><dd><tt><a href="#sv.pathplanning.Path-get_curve_normal">get_curve_normal</a>(index)&nbsp;<br>
+&nbsp;<br>
+Get&nbsp;the&nbsp;normal&nbsp;to&nbsp;the&nbsp;path's&nbsp;interpolating&nbsp;curve&nbsp;at&nbsp;a&nbsp;given&nbsp;location.&nbsp;<br>
+&nbsp;<br>
+Args:&nbsp;<br>
+&nbsp;&nbsp;index&nbsp;(int):&nbsp;The&nbsp;index&nbsp;into&nbsp;the&nbsp;path's&nbsp;curve&nbsp;normals.&nbsp;0&nbsp;&lt;=&nbsp;index&nbsp;&lt;=&nbsp;number&nbsp;of&nbsp;path&nbsp;curve&nbsp;points&nbsp;-&nbsp;1.&nbsp;<br>
+&nbsp;<br>
+Returns&nbsp;(list([float,float,float])):&nbsp;The&nbsp;path's&nbsp;curve&nbsp;normal&nbsp;at&nbsp;the&nbsp;given&nbsp;location.</tt></dd></dl>
+
+<dl><dt><a name="Path-get_curve_point"><strong>get_curve_point</strong></a>(...)</dt><dd><tt><a href="#sv.pathplanning.Path-get_curve_point">get_curve_point</a>(index)&nbsp;<br>
+&nbsp;<br>
+Get&nbsp;the&nbsp;point&nbsp;on&nbsp;the&nbsp;path's&nbsp;interpolating&nbsp;curve&nbsp;at&nbsp;a&nbsp;given&nbsp;location.&nbsp;<br>
+&nbsp;<br>
+Args:&nbsp;<br>
+&nbsp;&nbsp;index&nbsp;(int):&nbsp;The&nbsp;index&nbsp;into&nbsp;the&nbsp;path's&nbsp;curve&nbsp;points.&nbsp;0&nbsp;&lt;=&nbsp;index&nbsp;&lt;=&nbsp;number&nbsp;of&nbsp;path&nbsp;curve&nbsp;points&nbsp;-&nbsp;1.&nbsp;<br>
+&nbsp;<br>
+Returns&nbsp;(list([float,float,float])):&nbsp;The&nbsp;path's&nbsp;curve&nbsp;point&nbsp;at&nbsp;the&nbsp;given&nbsp;location.</tt></dd></dl>
+
+<dl><dt><a name="Path-get_curve_points"><strong>get_curve_points</strong></a>(...)</dt><dd><tt><a href="#sv.pathplanning.Path-get_curve_points">get_curve_points</a>()&nbsp;<br>
+&nbsp;<br>
+Get&nbsp;the&nbsp;points&nbsp;along&nbsp;the&nbsp;path's&nbsp;interpolating&nbsp;curve.&nbsp;<br>
+&nbsp;<br>
+Returns&nbsp;(list(list[float,float,float])):&nbsp;The&nbsp;list&nbsp;of&nbsp;the&nbsp;path's&nbsp;interpolating&nbsp;curve&nbsp;points.</tt></dd></dl>
+
+<dl><dt><a name="Path-get_curve_polydata"><strong>get_curve_polydata</strong></a>(...)</dt><dd><tt><a href="#sv.pathplanning.Path-get_curve_polydata">get_curve_polydata</a>()&nbsp;<br>
+&nbsp;<br>
+Get&nbsp;the&nbsp;vtkPolyData&nbsp;object&nbsp;representing&nbsp;the&nbsp;path's&nbsp;interpolating&nbsp;curve.&nbsp;<br>
+&nbsp;<br>
+Returns&nbsp;(vtkPolyData):&nbsp;The&nbsp;vtkPolyData&nbsp;object&nbsp;representing&nbsp;the&nbsp;path's&nbsp;interpolating&nbsp;curve.</tt></dd></dl>
+
+<dl><dt><a name="Path-get_curve_tangent"><strong>get_curve_tangent</strong></a>(...)</dt><dd><tt><a href="#sv.pathplanning.Path-get_curve_tangent">get_curve_tangent</a>(index)&nbsp;<br>
+&nbsp;<br>
+Get&nbsp;the&nbsp;tangent&nbsp;to&nbsp;the&nbsp;path's&nbsp;interpolating&nbsp;curve&nbsp;at&nbsp;a&nbsp;given&nbsp;location.&nbsp;<br>
+&nbsp;<br>
+Args:&nbsp;<br>
+&nbsp;&nbsp;index&nbsp;(int):&nbsp;The&nbsp;index&nbsp;into&nbsp;the&nbsp;path's&nbsp;curve&nbsp;tangents.&nbsp;0&nbsp;&lt;=&nbsp;index&nbsp;&lt;=&nbsp;number&nbsp;of&nbsp;path&nbsp;curve&nbsp;tangents&nbsp;-&nbsp;1.&nbsp;<br>
+&nbsp;<br>
+Returns&nbsp;(list([float,float,float])):&nbsp;The&nbsp;path's&nbsp;curve&nbsp;tangent&nbsp;at&nbsp;the&nbsp;given&nbsp;location.</tt></dd></dl>
+
+<dl><dt><a name="Path-get_num_curve_points"><strong>get_num_curve_points</strong></a>(...)</dt><dd><tt><a href="#sv.pathplanning.Path-get_num_curve_points">get_num_curve_points</a>()&nbsp;<br>
+&nbsp;<br>
+Get&nbsp;the&nbsp;number&nbsp;of&nbsp;points&nbsp;along&nbsp;the&nbsp;path's&nbsp;interpolating&nbsp;curve.&nbsp;<br>
+&nbsp;<br>
+Returns&nbsp;(int):&nbsp;The&nbsp;number&nbsp;of&nbsp;points&nbsp;along&nbsp;the&nbsp;path's&nbsp;interpolating&nbsp;curve.</tt></dd></dl>
+
+<dl><dt><a name="Path-get_num_subdivisions"><strong>get_num_subdivisions</strong></a>(...)</dt><dd><tt><a href="#sv.pathplanning.Path-get_num_subdivisions">get_num_subdivisions</a>()&nbsp;<br>
+&nbsp;<br>
+Get&nbsp;the&nbsp;path&nbsp;group's&nbsp;calculation&nbsp;number.&nbsp;<br>
+&nbsp;<br>
+Returns&nbsp;(int):&nbsp;The&nbsp;path&nbsp;group's&nbsp;calculation&nbsp;number.</tt></dd></dl>
+
+<dl><dt><a name="Path-get_subdivision_method"><strong>get_subdivision_method</strong></a>(...)</dt><dd><tt><a href="#sv.pathplanning.Path-get_subdivision_method">get_subdivision_method</a>()&nbsp;<br>
+&nbsp;<br>
+Get&nbsp;the&nbsp;path's&nbsp;subdivision&nbsp;method.&nbsp;<br>
+&nbsp;<br>
+Returns&nbsp;(str):&nbsp;The&nbsp;path's&nbsp;subdivsion&nbsp;method.</tt></dd></dl>
+
+<dl><dt><a name="Path-get_subdivision_spacing"><strong>get_subdivision_spacing</strong></a>(...)</dt><dd><tt><a href="#sv.pathplanning.Path-get_subdivision_spacing">get_subdivision_spacing</a>()&nbsp;<br>
+&nbsp;<br>
+Get&nbsp;the&nbsp;path's&nbsp;subdivsion&nbsp;spacing&nbsp;value.&nbsp;<br>
+&nbsp;<br>
+Returns&nbsp;(float):&nbsp;The&nbsp;path's&nbsp;subdivsion&nbsp;spacling&nbsp;value.</tt></dd></dl>
+
+<dl><dt><a name="Path-remove_control_point"><strong>remove_control_point</strong></a>(...)</dt><dd><tt><a href="#sv.pathplanning.Path-remove_control_point">remove_control_point</a>(index)&nbsp;<br>
+&nbsp;<br>
+Remove&nbsp;a&nbsp;control&nbsp;point&nbsp;from&nbsp;a&nbsp;path.&nbsp;<br>
+&nbsp;<br>
+Args:&nbsp;<br>
+&nbsp;&nbsp;index&nbsp;(int):&nbsp;The&nbsp;index&nbsp;into&nbsp;the&nbsp;path's&nbsp;list&nbsp;of&nbsp;control&nbsp;points&nbsp;of&nbsp;the&nbsp;control&nbsp;point&nbsp;to&nbsp;remove.&nbsp;0&nbsp;&lt;=&nbsp;index&nbsp;&lt;=&nbsp;number&nbsp;of&nbsp;control&nbsp;points&nbsp;-&nbsp;1.</tt></dd></dl>
+
+<dl><dt><a name="Path-replace_control_point"><strong>replace_control_point</strong></a>(...)</dt><dd><tt><a href="#sv.pathplanning.Path-replace_control_point">replace_control_point</a>(index,&nbsp;point)&nbsp;<br>
+&nbsp;<br>
+Replace&nbsp;a&nbsp;control&nbsp;point&nbsp;in&nbsp;a&nbsp;path.&nbsp;<br>
+&nbsp;<br>
+Args:&nbsp;<br>
+&nbsp;&nbsp;index&nbsp;(int):&nbsp;The&nbsp;index&nbsp;into&nbsp;the&nbsp;path's&nbsp;list&nbsp;of&nbsp;control&nbsp;points&nbsp;of&nbsp;the&nbsp;control&nbsp;point&nbsp;to&nbsp;remove.&nbsp;0&nbsp;&lt;=&nbsp;index&nbsp;&lt;=&nbsp;number&nbsp;of&nbsp;control&nbsp;points&nbsp;-&nbsp;1.&nbsp;<br>
+&nbsp;&nbsp;point&nbsp;(list[float,float,float]):&nbsp;A&nbsp;list&nbsp;of&nbsp;three&nbsp;floats&nbsp;represent&nbsp;the&nbsp;coordinates&nbsp;of&nbsp;a&nbsp;3D&nbsp;point.</tt></dd></dl>
+
+<dl><dt><a name="Path-set_control_points"><strong>set_control_points</strong></a>(...)</dt><dd><tt><a href="#sv.pathplanning.Path-set_control_points">set_control_points</a>(points)&nbsp;<br>
+&nbsp;<br>
+Set&nbsp;the&nbsp;path's&nbsp;control&nbsp;points.&nbsp;<br>
+&nbsp;<br>
+Args:&nbsp;<br>
+&nbsp;&nbsp;points&nbsp;(list(list[float,float,float])):&nbsp;The&nbsp;list&nbsp;of&nbsp;control&nbsp;points.</tt></dd></dl>
+
+<dl><dt><a name="Path-set_subdivision_method"><strong>set_subdivision_method</strong></a>(...)</dt><dd><tt><a href="#sv.pathplanning.Path-set_subdivision_method">set_subdivision_method</a>(method,&nbsp;num_subdiv=None,&nbsp;num_total=None,&nbsp;spacing=None)&nbsp;<br>
+&nbsp;<br>
+Set&nbsp;the&nbsp;subdivision&nbsp;method&nbsp;and&nbsp;paramters&nbsp;used&nbsp;to&nbsp;determine&nbsp;the&nbsp;number&nbsp;of&nbsp;path&nbsp;curve&nbsp;points&nbsp;created&nbsp;between&nbsp;two&nbsp;adjacent&nbsp;control&nbsp;points.&nbsp;<br>
+&nbsp;<br>
+The&nbsp;optional&nbsp;parameters&nbsp;are&nbsp;only&nbsp;used&nbsp;with&nbsp;the&nbsp;appropriate&nbsp;method&nbsp;being&nbsp;set.&nbsp;The&nbsp;path's&nbsp;curve&nbsp;points&nbsp;are&nbsp;updated&nbsp;using&nbsp;the&nbsp;given&nbsp;<br>
+method&nbsp;and&nbsp;paramater&nbsp;value.&nbsp;<br>
+&nbsp;<br>
+Args:&nbsp;<br>
+&nbsp;&nbsp;method&nbsp;(str):&nbsp;The&nbsp;subdivision&nbsp;method&nbsp;name.&nbsp;Valid&nbsp;names&nbsp;are:&nbsp;SPACING,&nbsp;SUBDIVISION&nbsp;or&nbsp;TOTAL&nbsp;<br>
+&nbsp;&nbsp;num_div&nbsp;(Optional[int]):&nbsp;The&nbsp;number&nbsp;of&nbsp;subdivisions&nbsp;used&nbsp;with&nbsp;the&nbsp;SUBDIVISION&nbsp;method.&nbsp;<br>
+&nbsp;&nbsp;num_total&nbsp;(Optional[int]):&nbsp;The&nbsp;number&nbsp;of&nbsp;total&nbsp;subdivisions&nbsp;used&nbsp;with&nbsp;the&nbsp;TOTAL&nbsp;method.&nbsp;<br>
+&nbsp;&nbsp;spacing&nbsp;(Optional[float]):&nbsp;The&nbsp;spacing&nbsp;by&nbsp;the&nbsp;SPACING&nbsp;method.</tt></dd></dl>
+
+<dl><dt><a name="Path-smooth"><strong>smooth</strong></a>(...)</dt><dd><tt><a href="#sv.pathplanning.Path-smooth">smooth</a>(sample_rate,&nbsp;num_modes,&nbsp;smooth_control_pts=False)&nbsp;<br>
+&nbsp;<br>
+Smooth&nbsp;a&nbsp;path's&nbsp;control&nbsp;points&nbsp;or&nbsp;curve&nbsp;points&nbsp;as&nbsp;a&nbsp;source.&nbsp;<br>
+&nbsp;<br>
+Args:&nbsp;<br>
+&nbsp;&nbsp;sample_rate&nbsp;(int):&nbsp;The&nbsp;rate&nbsp;used&nbsp;to&nbsp;sample&nbsp;the&nbsp;source&nbsp;points&nbsp;for&nbsp;smoothing.&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;sample&nbsp;rate&nbsp;of&nbsp;2&nbsp;uses&nbsp;every&nbsp;other&nbsp;point&nbsp;for&nbsp;smoothing.&nbsp;<br>
+&nbsp;&nbsp;num_modes&nbsp;(int):&nbsp;The&nbsp;number&nbsp;of&nbsp;Fourier&nbsp;modes&nbsp;used&nbsp;to&nbsp;reconstuct&nbsp;the&nbsp;source&nbsp;points.&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;lower&nbsp;the&nbsp;number&nbsp;of&nbsp;modes&nbsp;the&nbsp;more&nbsp;the&nbsp;source&nbsp;points&nbsp;are&nbsp;smoothed.&nbsp;<br>
+&nbsp;&nbsp;control_point_based&nbsp;(Optional[bool]):&nbsp;If&nbsp;True&nbsp;then&nbsp;smooth&nbsp;control&nbsp;points;&nbsp;otherwise&nbsp;smooth&nbsp;curve&nbsp;points.&nbsp;<br>
+&nbsp;<br>
+Returns&nbsp;(sv.path.Path&nbsp;object):&nbsp;A&nbsp;new&nbsp;smoothed&nbsp;path.</tt></dd></dl>
+
+</td></tr></table>
+</body></html>

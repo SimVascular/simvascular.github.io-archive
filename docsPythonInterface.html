@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SimVascular Docs</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+
+    <link href="css/shop-item.css" rel="stylesheet" type="text/css" />
+
+    <link href="css/codestyle.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="font-awesome-4.1.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
+
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                <i class="fa fa-bars" id="barIcon"></i>
+              </button>
+                <a class="navbar-brand" id="brandName" href="index.html">
+                  <img src="img/svlogo/svLogoSmallText.png" alt="...">
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+
+                  <!-- USER GUIDES -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b><span class="fa fa-user"></span> User Guides</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsInstallation.html"><b><span class="fa fa-sign-in fa-rotate-90"></span> Installation</b></a></li>
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsQuickGuide.html"><b><span class="icon ion-ios7-bolt"></span> Quick Guide</b></a></li>
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsModelGuide.html"><b><span class="icon ion-settings"></span> Modeling</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsMeshing.html"><b><span class="icon ion-ios7-keypad"></span> Meshing</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsFlowSolver.html"><b><span class="icon ion-play"></span> Simulation</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docssvFSI.html"><b><span class="icon ion-plus-round"></span> svFSI</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docs1DSimulation.html"><b><span class="icon ion-plus-round"></span> 1D Simulation</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsGenBC.html"><b><span class="icon ion-refresh"></span> GenBC</b></a></li>
+                    </ul>
+                  </li>
+
+                  <!-- CLINCAL CASES -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b><i class="fa fa-stethoscope"></i> Clinical Cases</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase3.html"><b><span class="fa fa-user-md"></span> Coronary Normal</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase1.html"><b><span class="fa fa-user-md"></span> Aortofemoral Normal - 1</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase2.html"><b><span class="fa fa-user-md"></span> Aortofemoral Normal - 2</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase4.html"><b><span class="fa fa-user-md"></span> Healthy Pulmonary</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/projects/sv_tests"><b><span class="fa fa-user-md"></span> All demo projects</b></a></li>
+                    </ul>
+                  </li>
+
+                  <!-- DEVELOPER GUIDES -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b><span class="fa fa-caret-square-o-right"></span> Developer Guides</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsCompile.html"><b><span class="fa fa-file-text-o"></span> Compile Source Code</b></a></li>
+                    </ul>
+                  </li>
+
+                  <!-- svCOMMUNITY -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b><i class="fa fa-users"></i> svCommunity</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/forums/viewforum.php?f=188"><b><span class="fa fa-users"></span> Public Forum</b></a></li>
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/mailman/listinfo/simvascular-news"><b><span class="fa fa-sign-in"></span> Join News Mailing List</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/pipermail/simvascular-news/"><b><span class="fa fa-pencil-square-o"></span> News Mailing List Archive</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/SimVascular/SimVascular/issues"><b><span class="fa fa-bug"></span> Report bugs and request features</b></a></li>
+                    </ul>
+                  </li>
+
+                  <!-- REFERENCES -->
+                  <li>
+                    <a href="docsRefs.html" id="dropdownMenu1" >
+                      <b><span class="icon ion-document-text"></span>References</b>
+                    </a>
+                  </li>
+
+                  <!-- Archives -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b> Archives</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="archiveQuickGuideSV2.html"><b>SimVascular 2.0</b></a></li>
+                    </ul>
+                  </li>
+
+                    <!-- <li><a href="docsQuickGuide.html" id="btnQuickGuide"><b><span class="icon ion-ios7-bolt"></span> Quick Guide</b></a></li>
+                    <li><a href="docsModelGuide.html" id="btnModelGuide"><b><span class="icon ion-settings"></span> Modeling</b></a></li>
+
+                    <li><a href="docsMeshing.html" id="btnMeshing"><b><span class="icon ion-ios7-keypad"></span> Meshing</b></a></li>
+                    <li><a href="docsPresolver.html" id="btnPresolver"><b><span class="icon ion-log-in"></span> svPre</b></a></li>
+                    <li><a href="docsFlowSolver.html" id="btnFlowSolver"><b><span class="icon ion-play"></span> svSolver</b></a></li>
+                    <li><a href="docsRefs.html" id="btnRefs"><b><span class="icon ion-document-text"></span> References</b></a></li>
+                    <li><a href="clinicalCase1.html" id="btnRefs"><b>Case Studies</b></a></li> -->
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <!--Nav Bar -->
+<div class="row">
+    <div class="col-xs-1 col-sm-1 hidden-md hidden-lg">
+    </div>
+    <!-- ONE COLUMN OF SPACE -->
+    <nav class="hidden-xs hidden-sm col-md-2 col-lg-2 bs-docs-sidebar">
+
+
+
+
+
+
+
+
+
+        <ul id="sidebar" class="nav nav-stacked fixed manPythonInterface"> <!--Nav Bar -->
+<p><h3>Python Interface</h3></p>
+<li><a href="#intro">Introduction</a></li>
+<li><a href="#python_prog_env">Python Environment</a></li>
+<li><a href="#console">Python Console</a>
+  <ul class="nav nav-stacked">
+    <li><a href="#console_mode">Console Mode</a></li>
+    <li><a href="#text_edit_mode">Text Edit Mode</a></li>
+  </ul>	
+<li><a href="#python_shell">Python Shell</a>
+<li><a href="#sv_modules">SimVascular Python Modules</a>
+  <ul class="nav nav-stacked">
+    <li><a href="#projects">SimVascular Projects</a></li>
+    <li><a href="#help">Interactive Help</a></li>
+    <li><a href="#function_arguments">Function Arguments</a></li>
+    <li><a href="#error_handling">Error Handling</a></li>
+    <li><a href="#dmg_module">Dmg Module</a></li>
+    <li><a href="#geometry_module">Geometry Module</a></li>
+    <li><a href="#meshing_module">Meshing Module</a></li>
+    <li><a href="#modeling_module">Modeling Module</a></li>
+    <li><a href="#path_planning_module">Path Planning Module</a></li>
+    <li><a href="#segmentation_module">Segmentation Module</a></li>
+    <li><a href="#vmtk_module">Vmtk Module</a></li>
+  </ul>	
+</li>
+
+
+</ul>
+
+
+
+    </nav>
+
+    <!--Main Content -->
+    <div class="col-xs-10 col-sm-10 col-md-9 col-lg-9" id="manualContent">
+
+      <!-- ACTUAL CONTENT -->
+
+
+
+
+
+
+
+
+
+        <div class="manPythonInterface"><section id="intro" class="group"><p><html>
+<head></p>
+
+<style>
+.PythonMethodsDiv {
+   background-color: #F0F0F0;
+   padding: 10px;
+   border: 1px solid #e6e6e6;
+}
+</style>
+
+<style>
+.PythonClassDiv {
+   width: 660px;
+   background-color: #F0F0F0;
+   padding: 10px;
+   border: 1px solid #e6e6e6;
+}
+</style>
+
+<style>
+.PythonMethodsLegend {
+   font-size: 14px;
+}
+</style>
+
+<style>
+.PythonMethodsPre {
+   background-color: #F0F0F0;
+   font-size: 12px;
+}
+</style>
+
+<style>
+.PythonIframe {
+    background-color: #FFFFFF; 
+    height="400";
+    width="95%";
+}
+</style>
+
+<p></head>
+<body></p>
+
+<h1>Beta Version</h1>
+
+<p>The Python API documentation is in beta. The contents of the documentation is not finalized and could change in the future.</p>
+
+<h1>Introduction</h1>
+
+<p>SimVascular provides an application programming interface (API) for accessing core SimVascular functions using the
+Python programming language. The API defines a number of Python modules and classes used to access, manipulate and 
+create data for each of the path planning, segmentation, modeling, mesh generation and simulation steps in the SimVascular 
+image-based modeling pipeline. Custom Python scripts can be written to augment the functionality provided by the
+SimVascular GUI and to automate modeling tasks for optimization, uncertainty quantification, and studies with large 
+patient cohorts.</p>
+
+<p>The API attempts to provide an interface conceptually similar to how data is accessed and how operations are
+performed using the GUI. There are, however, some differences between the GUI and API because the GUI hides 
+SimVascular internals that must sometmes be exposed in the API. These differences are explained in the 
+<a href="#sv_modules"> SimVascular Python Modules </a> section.</p>
+</section>
+<section id="python_prog_env" class="group"><h1>Python Programming Environment</h1>
+
+<p>Python is an interpreted, high-level, general-purpose programming language. It supports an object-oriented programming 
+paradigm based on the concept of <strong>objects</strong>, which can contain data and functions (often known as methods) which
+operate on the data. In object-oriented programming, a <strong>class</strong> is an template for creating objects, providing initial 
+values for data and functions or methods. The SimVascular API defines a number of classes that are used to interface
+to SimVascular core functions.</p>
+
+<p>The Python programming environment is embeded in the SimVascular executable and includes the standard library that is 
+distributed with Python as well as some optional components not included in Python distributions. 
+This means that Python does not need to be installed on your computer to use Python and access the API. Embeding 
+Python ensures the compatability between Python and the installed module versions. However, it prevents using Python 
+packages that may already be installed on your computer. </p>
+
+<p>The Python interface can be accesed from the SimVascular <strong>Python Console</strong> or from a terminal using the <strong>Python Shell</strong>. </p>
+
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #e6e600; border-left: 6px solid #e6e600">
+Scripts accessing a project&rsquo;s data nodes shown in the <b>SV Data Manager</b> must use the <b>Python Console</b> because 
+data nodes are only defined when SimVascular is executed with the GUI.
+</div>
+
+<h3>Python Modules</h3>
+
+<p>A Python module is used to organize related code (e.g. code used to operate on paths) and encapsulates Python classes, 
+functions and variables under a single module name. The SimVascular <strong>sv</strong> Python package is a collection of modules 
+that extends Python to include classes, functions and variables used to directly call SimVascular C++ functions. Classes 
+provide a means of bundling data and functionality together into a specific object type they create. Python packages and 
+modules are accessed using the Python <strong>import</strong> statement.</p>
+
+<p>Components of a module are accessed using a dot <b>.</b> notation. For example, the <b>Circle</b> class defined
+in the <b>segmentation</b> module is accessed using  <b>sv.segmentation.Circle()</b>.</p>
+
+<h3>Python Objects</h3>
+
+<p>Almost everything in Python is an object. An object is an encapsulation of data members (variables) functions into a single entity.
+A <b>class</b> is an template for creating objects. A class <i>constructor</i> is used for instantiating an object by initializng 
+or assigning values to its data members when an object is created. A constructor can be passed arguments just like a function and 
+used the values of those arguments to assign values to its data members. For example, the <b>segmentation.Circle</b> class is used 
+to create a circle segmentation with a given radius, center and normal arguments passed to its constructor </p>
+
+<pre>
+>>> circle_seg = sv.segmentation.Circle(radius=1.0, center=[1.0,1.0,1.0], normal=[1.0,0.0,0.0])
+</pre>
+
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #d0d0d0; border-left: 6px solid #d0d0d0">
+The SimVascular Python API uses the following naming conventions
+<ul style="list-style-type:none;">
+  <li> <b>Classes</b> - The first letter is capitalized: sv.pathplanning.<b>Path</b>, sv.modeling.<b>Modeler</b>  </li> 
+  <li> <b>Modules</b> - All lower case: sv.<b>pathplanning</b>, sv.<b>modeling</b>  </li> 
+  <li> <b>Functions and Methods</b> - All lower case and underscores: sv.segmention.Circle.<b>get_center()</b>  </li> 
+</div>
+
+<h3>Visualization Toolkit</h3>
+
+<p>SimVascular uses the Visualization Toolkit (VTK), an open-source software system for image processing, 3D graphics, volume 
+rendering and visualization, for many applications and uses its file formats to store image, model and mesh data. Many Python 
+API functions return VTK objects that can be used in further computations or displayed in a graphics window. The VTK package 
+is included in the SimVascular Python environment. It is accessed using the <strong>import vtk</strong> statement.</p>
+
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #e6e600; border-left: 6px solid #e6e600">
+Scripts that use SimVascular API functions returning VTK objects must import the VTK package, otherwise the functions
+will not be able to create VTK objects and the script will generate an error. 
+</div>
+
+<h3>Vascular Modeling Toolkit</h3>
+
+<p>SimVascular uses the Vascular Modeling Toolkit (VMTK), a collection of libraries and tools for 3D reconstruction, geometric 
+analysis, mesh generation and surface data analysis for image-based modeling of blood vessels, from some applications. 
+The VMTK Python module is not included in the Python programming environment. However, some of the VMTK functionality
+is accessable using the SimVascular <strong>sv.vmtk</strong> module.</p>
+
+<h3>Python Scripts</h3>
+
+<p>A Python script is a plain text file containing code written in Python. A script file containing Python code has the 
+extension <strong>.py</strong>. Scripts are made to be directly executed. Note that a text file containing Python code can also be 
+designed to be imported as a module. This is a useful way for a user application to organize code into reusable utilities.</p>
+</section>
+<section id="console" class="group"><h2>Python Console</h2>
+
+<p>The SimVascular <strong>Python Console</strong> is opened by selecting the 
+<img src="documentation/python_interface/imgs/python-icon.png" width="20" height="20"> icon 
+located at the far right end on the SimVascular tool bar. The <strong>Python Console</strong> has two panels. 
+The right panel is used to execute commands by the Python interpreter. </p>
+
+<figure>
+  <img class="svImg svImgXl" src="documentation/python_interface/imgs/main-window-1.png" width="100" height="500">
+  <figcaption class="svCaption" > Opening the SimVascular Python Console prints the version of the Python interpreter and is ready for keyboard input at 
+                                  the Python <b>>>></b> prompt. 
+</figure>
+
+<p><br></p>
+
+<p>The left panel lists the currently defined Python attributes (variables). Importing a module adds that module name to the list of attributes. Importing 
+all of the <b>sv</b> modules by typing <b>from sv import *</b> in the interpreter panel adds all of the modules defined by <b>sv</b> to the list of attributes
+in the left panel.</p>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/python_interface/imgs/console-atts.png" width="100" height="400">
+  <figcaption class="svCaption"> Using the <b>from sv import *</b> command to list all of <b>sv</b> modules.
+</figure>
+
+<p><br></p>
+
+<p>The <b>Python Console</b> has two modes of operation: <b>Console</b> and <b>Text Editor</b>. The <b>Python Console</b> opens in <b>Console</b> mode 
+that is used to interactively execute Python commands. The version of the Python interpreter embedded in the SimVascular application is printed 
+and the Python <strong>&gt;&gt;&gt;</strong> prompt is displayed meaning that the interpreter is ready for keyboard input. The <b>Console</b> and <b>Text Editor</b> 
+buttons located at the bottom of the right panel are used to select the operational mode.</p>
+</section>
+<section id="console_mode" class="group"><h3>Console Mode</h3>
+
+<p>All of the built-in modules are available from the standard library that is distributed with Python. Modules can be imported and used just like any typical Python
+application. Commands can be interactively typed in and executed by pressing return.</p>
+
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #e6e600; border-left: 6px solid #e6e600">
+The SimVascular <b>Console</b> does not support automatic indentation to mark blocks of code. Indented code blocks defined by the <b>:</b> delimiter
+(.e.g. if-statements, for-loops and function definitions) cannot be used as they normally would in an interactive Python session. The console interpreter
+executes each command after a return and does not store commands after a <b>:</b> delimiter to execute as a code block. For for-loops this limitation can be
+overcome using list comprehension but in general it is better to use the <b>Text Editor</b> for creating scripts.
+</div>
+</section>
+<section id="text_edit_mode" class="group"><h3>Text Editor Mode</h3>
+
+<p>Selecting the <b>Python Console</b> <b>Text Editor</b> button switches to a panel that is used to read, edit, save, and 
+execute Python scripts. This is the prefered method to use when developing Python scripts that need to be have access to 
+the <strong>SV Data Manager</strong>. A new Python script can be interactively written, tested and saved to a file. It can later be 
+read in and executed. 
+For example, the <b> PathDemo.py </b> script can be read in and executed by pressing the
+<img src="documentation/python_interface/imgs/play-icon.png" width="15" height="15"> button.</p>
+
+<figure>
+  <img class="svImg svImgSm" src="documentation/python_interface/imgs/console-3.png">
+  <figcaption class="svCaption" > Reading and executing the <b> PathDemo.py </b> script. </figcaption>
+</figure>
+
+<p><br></p>
+
+<p>After a script is executed the variables and functions defined by it are available in the <b>Console</b>. Variables defined in the <b>Console</b> are
+also available in the <b>Text Editor</b>.</p>
+</section>
+<section id="python_shell" class="group"><h2>Python Shell</h2>
+
+<p>The SimVascular <strong>Python Shell</strong> provides a Python interface to SimVascular without the GUI. The <strong>Python Shell</strong> is envoked from a 
+terminal by executing the script used to launch SimVascular interactively. The launch script is located in the SimVascular install
+directory and is executed for different platforms using </p>
+
+<pre>
+Linux: /usr/local/sv/simvascular/<em>DATE</em>/simvascular 
+
+MacOS: /usr/local/sv/simvascular/<em>DATE</em>/simvascular 
+
+Windows: C:\Program Files\SimVascular\SimVascular\<em>DATE</em>\sv.bat  
+</pre>
+
+<p>where <em>DATE</em> is the SimVascular install date (e.g. 2020-04-06). In the following discusion we will use <strong>simvascular</strong> to represent the 
+the SimVascular launch script.</p>
+
+<p><br>
+The SimVascular Python interpreter, the application that executes Python programs, is envoked in interactive mode using the <strong>&mdash;python</strong> flag.
+That means you can enter Python statements or expressions interactively and have them executed or evaluated while you wait.
+The <strong>Python Shell</strong> behaves like the standard Python interperter and therefore supports automatic indentation to mark blocks of code. </p>
+
+<pre>
+<div style="font-size:10px">
+$ simvascular --python
+SimVascular Python Shell
+Copyright (c) Stanford University, The Regents of the University
+              of California, and others.  All Rights Reserved.
+
+Python 3.5.5 (default, Jun 14 2019, 00:18:30) 
+[GCC 4.2.1 Compatible Apple LLVM 8.1.0 (clang-802.0.38)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+>>> print("Hello")
+Hello
+>>>
+</div>
+</pre>
+
+<p><br>
+The <strong>Python Shell</strong> is terminated using </p>
+
+<pre>
+Linux and MacOS: Ctrl-D 
+
+Windows: exit() or hold the Ctrl key down while you enter a Z, then hit the “Enter” key to get back to your Windows command prompt
+</pre>
+
+<p><br>
+Python scripts are read in and executed using a double-dash <strong>&mdash;</strong> before the script name. The <strong>Python Shell</strong> passes the script to the 
+Python interpreter for execution and then exits.</p>
+
+<pre>
+<div style="font-size:10px">
+$ simvascular --python -- path.py
+SimVascular Python Shell
+Copyright (c) Stanford University, The Regents of the University
+              of California, and others.  All Rights Reserved.
+
+New gRepository created from cv_solid_init
+  TetGen:      1.5.1
+PyModule_Create called
+               splinePolygonContour Enabled
+               levelSetContour Enabled
+               polygonContour Enabled
+               circleContour Enabled
+               splinePolygonContour Enabled
+  OpenCASCADE: 7.3.0
+  Itk:         4.13.2
+               TetGen Adaption Enabled
+pyPath initialized.
+Point 0, 0.000000, 0.000000, 0.000000 
+Point 1, 0.000000, 0.000000, 30.000000 
+Total number of path points created is: 100 
+$
+</div>
+</pre>
+</section>
+<section id="sv_modules" class="group"><h1>SimVascular Python Modules</h1>
+
+<p>The SimVascular <strong>sv</strong> Python package extends Python to include modules and classes used to access, manipulate and create
+data for each of the path planning, segmentation, modeling, mesh generation and simulation steps in the SimVascular
+image-based modeling pipeline. The <b>sv</b> package is imported into Python using the <b>import sv</b> statement. 
+The <strong>sv</strong> package defines the following modules </p>
+
+<ul style="list-style-type:none;">
+  <li> <b> dmg </b> - Access to SV Data Manager nodes </li>
+  <li> <b> geometry </b> - Functions operating on VTK PolyData objects </li>
+  <li> <b> meshing </b> - Classes and methods interfacing to SimVascular meshing </li>
+  <li> <b> modeling </b> - Classes and methods interfacing to SimVascular modeling </li>
+  <li> <b> pathplanning </b> - Classes and methods interfacing to SimVascular path plannning </li>
+  <li> <b> segmentation </b> - Classes and methods interfacing to SimVascular segmentation </li>
+  <li> <b> vmtk </b> - Interrface to several VMTK funcntions </li>
+</ul>
+
+<p><br>
+Modules are accessed using <b>sv.<i>MODULENAME</i></b>. The <b>sv</b> package can also be imported into Python using the 
+<b>from sv import *</b> statement. This makes all of the module names accessible without the <strong>sv</strong> prefix. A single <b>sv</b> 
+module can be imported using <b>from sv import <i>MODULENAME</i></b>. The difference between the these statements is seen using 
+the <strong>dir()</strong> function which shows imported modules</p>
+
+<pre>
+<div style="font-size:10px; height: auto; overflow: visible;">
+$ simvascular --python
+>>> import sv
+>>> print(dir())
+['__builtins__', '__doc__', '__loader__', '__name__', '__package__', '__spec__', 'sv']
+>>> dir(sv)
+['MeshSimListOption', 'MeshSimOptionTemplate', 'MutableSequence', 'OrderedDict', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__path__', '__spec__', 'ctypes', 'dmg', 'ext', 'geometry', 'image', 'load_module', 'mesh_utils', 'meshing', 'meshsim_options', 'meshsim_plugin', 'modeling', 'parasolid_plugin', 'pathplanning', 'project', 'python_api_lib', 'repository', 'seg_lib', 'segmentation', 'solid_occt', 'sys', 'vmtk']
+>>>
+>>>
+>>> from sv import *
+>>> dir()
+['MeshSimListOption', 'MeshSimOptionTemplate', 'MutableSequence', 'OrderedDict', '__builtins__', '__doc__', '__loader__', '__name__', '__package__', '__spec__', 'ctypes', 'dmg', 'ext', 'geometry', 'image', 'load_module', 'mesh_utils', 'meshing', 'meshsim_options', 'meshsim_plugin', 'modeling', 'parasolid_plugin', 'pathplanning', 'project', 'python_api_lib', 'repository', 'seg_lib', 'segmentation', 'solid_occt', 'sv', 'sys', 'vmtk']
+>>> 
+>>>
+>>> from sv import segmentation
+>>> dir()
+['__builtins__', '__doc__', '__loader__', '__name__', '__package__', '__spec__', 'segmentation']
+</div>
+</pre>
+
+<p>Both of these statements show the modules defined from importing <b>sv</b>; <b>dmg</b>, <b>meshing</b>, etc. 
+<br>
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #0000e6; border-left: 6px solid #0000e6">
+The <b>import sv</b> or <b>from sv import <i>MODULENAME</i></b> statements are the prefered ways to import modules because they don&rsquo;t pull 
+everything into the global namespace, which may cause naming conflicts with custom programs. 
+</div></p>
+</section>
+<section id="projects" class="group"><h2>SimVascular Projects</h2>
+
+<p>The SimVascular GUI requires an active project to access the image-based modeling pipeline. A project organizes and saves data to 
+predefined subdirectories located under the main project directory. There is a sepatate folder for each tool in the image-based 
+modeling pipeline. Each tool has an XML format file with a specific extension associated with it that stores data used by the tool
+to represent geometry and parameters. The parameters store the tool&rsquo;s state and are typically displayed in the GUI and can be modified 
+by the user. The predefined subdirectories and XML file extension for each tool are</p>
+
+<ul style="list-style-type:none;">
+   <li> <b> Images </b> - Imagine tool supports several formats: DICOM <b>.dcm</b>, VTK image <b>.vti</b>, and other formats.
+   <li> <b> Meshes </b> - Meshing tool <b>.msh</b> </li>
+   <li> <b> Models </b> - Modeling tool <b>.mdl</b> </li>
+   <li> <b> Paths </b> - Path planning tool <b>.pth</b> </li>
+   <li> <b> Segmentations </b> - Segmentation tool <b>.ctgr</b> </li>
+   <li> <b> Simulations </b> - Simulation tool <b>.sjb</b> </li>
+   <li> <b> Simulations1d </b> - 1D Simulation tool <b>.s1djb</b> </li>
+   <li> <b> svFSI </b> - FSI Simulation tool <b>.fsijob</b> </li>
+</ul>
+
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #d0d0d0; border-left: 6px solid #d0d0d0">
+The SimVascular Python API cannot create SimVascular projects. Projects must be created interactively using the GUI.
+</div>
+
+<p><br>
+Tool XML files were designed to store data derived from time-varying imaging data (e.g. 4D MRI). For this reason each file 
+has a <b>timestep</b> element used to identify data with a discrete integer time step. Each <b>sv</b> module defines a 
+<b>Series</b> class used to read in XML files and extract data for each time step.</p>
+</section>
+<section id="help" class="group"><h2>Interactive Help</h2>
+
+<p>The Python <strong>help</strong> function is used to display the documentation of modules, functions, classes, keywords etc. 
+Typing <b>help(sv)</b> prints information about the <strong>sv</strong> package. </p>
+
+<div style="background-color:#eeeeee;font-size:10px; height: auto; overflow: visible;">
+  <p><iframe src="documentation/python_interface/files/sv-help.txt" frameborder="0" height="400" width="95%"></iframe></p>
+</div>
+
+<p><br>
+Typing <b>help(sv.MODLENAME)</b> prints information about the <strong>MODULENAME</strong> module </p>
+
+<ul>
+  <li> List of classes defined by the module </li>
+  <li> Description of each class and its methods </li>
+</ul>
+
+<div style="background-color:#eeeeee;font-size:10px; height: auto; overflow: visible;">
+  <p><iframe src="documentation/python_interface/files/seg-help.txt" frameborder="0" height="400" width="95%"></iframe></p>
+</div>
+
+<p><br>
+The <b>help()</b> function can be used for any component (e.g. class and methods) of a module. For example, 
+<b>help(sv.segmentation.Circle)</b> prints the documentation for the <b>segmentation</b> module <b>Circle</b> class </p>
+
+<div style="background-color:#eeeeee;font-size:10px; height: auto; overflow: visible;">
+  <p><iframe src="documentation/python_interface/files/circle-help.txt" frameborder="0" height="400" width="95%"></iframe></p>
+</div>
+
+<p><br></p>
+
+<h3>Documentation Format</h3>
+
+<p>The help documention describes the <strong>sv</strong> package using Python <b>docstrings</b> format, a string literal that occurs as the first 
+statement in a module, function, class, or method definition. A docstring is stored in the the <b>__doc__</b> special attribute 
+of an object. The docstring for a function or method summarizes its behavior and documents its arguments and return value(s). </p>
+
+<p>Constructor, method and function arguments are listed under the <b>Args:</b> heading. Each argument is described with its name, type
+and description. Optional arguments are indicated using <b>Optional</b> preceding the argument type. The default value of optional 
+arguments are given in the argument list. An optional argument without a default value is documented using NAME=None in the function 
+or method definition. For example,
+the <b>Circle</b> class constructor that has <i>center</i>, <i>normal</i> and <i>frame</i> optional arguments that have no default value
+is documented using
+<pre>
+Circle(radius, center=None, normal=None, frame=None)
+</pre></p>
+
+<p><br>
+Argument types are described using the following naming convention</p>
+
+<ul style="list-style-type:none;">
+  <li> bool - Data with one of two built-in values True or False 
+  <li> dict - Unordered collection of data in a key:value pair form put in curly backets <b>{ }</b>
+  <li> float - Real number with a floating point representation in which a fractional component is denoted by a decimal symbol or scientific notation 
+  <li> int - Positive or negative whole numbers without a fractional part
+  <li> list - A list object is an ordered collection of one or more data items put in square brackets <b>[ ]</b> 
+  <li> str - A string value is a collection of one or more characters put in single, double or triple quotes
+  <li> [float, float, float] - A list of three floats; used to represent 3D points and vectors. 
+</ul>
+
+<p><br>
+A 3D point is represented as a list of three floats
+<pre>
+[float, float, float]
+<br>
+Example: pt = [1.0, 2.0, 3.0] 
+</pre></p>
+
+<p><br>
+A list of 3D points is represented as a list of a list of three floats 
+<pre>
+list( [float, float, float] ) 
+<br>
+Example: control_points = [ [1.0, 2.0, 3.0], [2.0, 3.0, 4.0], [3.0, 4.0, 5.0] ]
+</pre>
+</ul></p>
+
+<p><br>
+SimVascular Python object types used as function arguments and return values are designated using the class name. 
+For example, the <b>Modeling</b> <b>union</b> method, which takes two <b>sv.modeling.Model</b> arguments, is documented 
+using just the <b>Model</b> class name 
+<pre> <strong> union(model1, model2)  </strong>
+<br>
+&nbsp;&nbsp;&nbsp; Create a solid from the Boolean union operation on two solids. 
+<br>
+&nbsp;&nbsp;&nbsp; Args:
+      model1 (Model): A solid model created by a modeler.
+      model2 (Model): A solid model created by a modeler. 
+<br>
+&nbsp;&nbsp;&nbsp; Returns (Model): The solid model of the unioned models.
+</pre></p>
+</section>
+<section id="function_arguments" class="group"><h2>Function Arguments</h2>
+
+<p>The methods and functions used in the Python API are able to use Python keyword (named) arguments. This allows functions to 
+know the names of the arguments they accept. Keyword arguments are used to clarify which values are used by what arguments.
+For example, creating a <strong>Circle</strong> segmentation with a given <i>radius</i>, <i>center</i>and <i>normal</i> using keyword arguments makes clear
+the meaning of the data passed to the <strong>Circle</strong> class constructor</p>
+
+<pre>
+>>> seg = sv.segmentation.Circle(radius=1.0, center=[1.0,1.0,1.0], normal=[1.0,0.0,0.0])
+</pre>
+
+<p><br>
+All data passed to a function is checked against the type expected by the function. A type mismatch generates an error.
+General type errors are detected by Python. For example, using a string for the <i>radius</i> argument which expects a 
+float generates a Python <strong>TypeError</strong></p>
+
+<pre>
+>>> seg = sv.segmentation.Circle(radius='a', center=[1.0,1.0,1.0], normal=[1.0,0.0,0.0])
+TypeError: CircleSegmentation() argument 1 must be float, not str
+</pre>
+
+<p><br>
+Errors associated with data needed by the C++ functions called from the SimVascular API are detected within the API C++
+implementation. For example, passing in a list of two instead of three floats for the <strong>Circle</strong> class constructor 
+<i>normal</i> argument generates a <strong>segmentation</strong> module error</p>
+
+<pre>
+>>> seg = sv.segmentation.Circle(radius=1.0, center=[1.0,0.0,0.0], normal=[1.0])
+segmentation.Error: CircleSegmentation() The 'normal' argument is not a 3D point (three float values).
+</pre>
+
+<p><br>
+All API errors are handled using exceptions. See the <a href="#modules_error_handling"> Error Handling </a> section.. </p>
+</section>
+<section id="error_handling" class="group"><h2>Error Handling</h2>
+
+<p>A Python program terminates when it encounters an error. An error can be a syntax error or an exception. 
+A syntax error occours when the Python parser is unable to understand a line of code. An exception is an 
+error detected during the execution of a Python program. Both syntax errors and exceptions are fatal and
+cause a program to terminate.</p>
+
+<p>Exceptions come in different types. The exception type is included as part of the a message printed by Python when 
+an exception is encountered. For example, a divide by zero generates a <b>ZeroDivisionError</b> exeception type</p>
+
+<pre>
+>>> 10 * (1/0)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ZeroDivisionError: division by zero
+</pre>
+
+<p>Python has many standard exception names that are built-in identifiers (not reserved keywords). The <b>TypeError</b> exception 
+is generated when an inappropriate type is passed to an API function. For example, using a string for the <i>radius</i> argument 
+for the <b>Circle</b> constructor generates a Python <strong>TypeError</strong></p>
+
+<pre>
+>>> seg = sv.segmentation.Circle(radius='a', center=[1.0,1.0,1.0], normal=[1.0,0.0,0.0])
+TypeError: CircleSegmentation() argument 1 must be float, not str
+</pre>
+
+<p><br></p>
+
+<h3>Try / Except Block</h3>
+
+<p>Exceptions cause program termination unless they are explicitly caught and handled by a try/except block. Python executes code 
+following the try statement as it would normally do. If an exception is generated in this code section then the code following the 
+except statement is executed and the program continues. </p>
+
+<p>The <strong>TypeError</strong> exception generated from using a string for the <i>radius</i> argument when creating a <b>Circle</b> segmentation 
+is caught using a try/except block like this</p>
+
+<pre>
+>>> try:
+>>>     seg = segmentation.Circle(radius=1.0, center=[0.0,0.0,0.0], normal=[1.0,0.0,0.0])
+>>> except TypeError as err:
+>>>     print("TypeError: ", err)
+>>>
+TypeError:  CircleSegmentation() argument 1 must be float, not str
+</pre>
+
+<p>Errors assoicated with the C++ functions called by the SimVascular API can use exception names defined by the API in the <b>except</b> statement. 
+For example, passing in a list of two elements for the <i>normal</i> argument generates a <strong>segmentation</strong> module error is caught using 
+the <b>segmentation.Error</b> exception name and a try/except block like this</p>
+
+<pre>
+>>> try:
+>>>    seg = segmentation.Circle(radius=1.0, center=[1.0,0.0,0.0], normal=[1.0])
+>>> 
+>>> except segmentation.Error as err:
+>>>    print("Exception type: ", type(err))
+>>>    print("Error: ", err)
+Exception type: class 'segmentation.Error'
+Error:  CircleSegmentation() The 'normal' argument is not a 3D point (three float values).
+</pre>
+
+<p>Any exception can be caught using the <b>except Exception as err: </b> statement.</p>
+
+<pre>
+>>> try:
+>>>    seg = segmentation.Circle(radius=1.0, center=[1.0,0.0,0.0], normal=[1.0])
+>>> 
+>>> except Exception as err:
+>>>    print("Exception type: ", type(err))
+>>>    print("Unexpected error: ", err)
+Exception type: class 'segmentation.Error'
+Unexpected error:  CircleSegmentation() The 'normal' argument is not a 3D point (three float values).
+</pre>
+
+<p><br>
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #0000e6; border-left: 6px solid #0000e6">
+The try/except block is used to recover from errors and continue program execution. This is useful for a long-runninng program
+processing lots of data sets; if the programs fails for one data set then it can still continue processing others. For some 
+applications it might be accceptable to not handle exceptions and just let the program terminate. 
+</div></p>
+</section>
+<section id="dmg_module" class="group"><h2>Dmg Module</h2>
+
+<p>The <b>dmg</b> (data manager) module provides an interface for accessing the <b>SV Data Manager</b>, 
+the panel located on the left side of the main window that organizes the data defined for a SimVascular 
+project as a hierarchical tree of data nodes. The Data Manager organizes data nodes into predefined primary data 
+node types according to the tools that create them create them  </p>
+
+<ul style="list-style-type:none;">
+  <li> Images </li> 
+  <li> Meshes </li> 
+  <li> Models </li> 
+  <li> Paths </li> 
+  <li> Segmentations </li> 
+  <li> Simulations </li> 
+  <li> Simulations1d </li> 
+  <li> svFSI </li> 
+</ul>
+
+<p>When new data is added to the project a new data node is added under the appropriate data node type
+with a user-defined name.</p>
+
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #e6e600; border-left: 6px solid #e6e600">
+Scripts accessing a project&rsquo;s data nodes shown in the <b>SV Data Manager</b> must use the GUI <b>Python Console</b> 
+because data nodes are only defined when SimVascular is executed with the GUI.
+</div>
+
+<p><br>
+The <b>dmg</b> module does not define any classes. All access to the  <b>SV Data Manager</b> is through functions defined 
+for the module. For example, getting path data from the <b>aorta</b> data node is performed using the <b>get_path()</b>
+function accessed directly from the <b>dmg</b> module</p>
+
+<pre>
+>>> path = sv.dmg.get_path('aorta')
+</pre>
+
+<p><br>
+<div id="DmgFunctions" class="PythonClassDiv" >
+<legend style="font-size:20px; text-align:left"> <b> Dmg Module Functions </b> </legend>
+<iframe src="documentation/python_interface/modules/docs/dmg_functions.html" style="background-color: #FFFFFF" frameborder="0" height="400" width="95%"> </iframe>
+</div></p>
+</section>
+<section id="geometry_module" class="group"><h2>Geometry Module</h2>
+
+<p>The <b>geometry</b> module provides functions for performing geometric operations on vtkPolyData objects used to 
+represents vertices, lines and polygons. </p>
+
+<p>All geometric operations are performed using functions defined for the module. For example, aligning contours is performed using 
+the <b>align_profile()</b> function accessed directly from the <b>geometry</b> module</p>
+
+<pre>
+>>> align_cont = sv.geometry.align_profile(source_cont, cont2)
+</pre>
+
+<p><br>
+The <b>geometry</b> module defines two classes used to set lofting parameters
+<ul style="list-style-type:none;">
+  <li> <b> <a href="#LoftOptionsClass"> LoftOptions </a> </b> </li>
+  <li> <b> <a href="#LoftNurbsOptionsClass"> LoftNurbsOptions </a> </b> </li>
+</ul></p>
+
+<p><br>
+<div id="GeometryFunctions" class="PythonClassDiv" >
+<legend style="font-size:20px; text-align:left"> <b> Geometry Module Functions </b> </legend>
+<iframe src="documentation/python_interface/modules/docs/geometry_functions.html" style="background-color: #FFFFFF" frameborder="0" height="400" width="95%"> </iframe>
+</div></p>
+
+<p><br>
+<div id="LoftOptionsClass" class="PythonClassDiv" >
+<legend style="font-size:20px; text-align:left"> <b> LoftOptions Class </b> </legend>
+<iframe src="documentation/python_interface/modules/docs/geometry_LoftOptions.html" style="background-color: #FFFFFF" frameborder="0" height="400" width="95%"> </iframe>
+</div></p>
+
+<p><br>
+<div id="LoftNurbsOptionsClass" class="PythonClassDiv" >
+<legend style="font-size:20px; text-align:left"> <b> LoftNurbsOptions Class </b> </legend>
+<iframe src="documentation/python_interface/modules/docs/geometry_LoftNurbsOptions.html" style="background-color: #FFFFFF" frameborder="0" height="400" width="95%"> </iframe>
+</div></p>
+</section>
+<section id="meshing_module" class="group"><h2>Meshing Module</h2>
+
+<p>The <b>meshing</b> module provides an interface to SimVascular meshing functionality used to generate a 
+finite element tetrahedral mesh from a solid model. </p>
+
+<p>Methods are provided for setting meshing parameters, generating meshes and extracting mesh results as VTK 
+unstructured mesh objects. User-defined regions on model faces can be defined for local mesh refinement. </p>
+
+<p>Two mesh generation software components (aka kernels) are supported
+<ol style="list-style-type:number;">
+   <li> MeshSim </li>
+   <li> TetGen </li>
+</ol></p>
+
+<p>MeshSim is a commercial software package used to generate meshes from Parasolid solid models. 
+Using MeshSim requires purchasing a license from Simmetrix, a Parasolid license from Siemens 
+and SimVascular plugins providing an interface to the software. </p>
+
+<p>TetGen is an open source software package used to generate meshes from PolyData solid models.</p>
+
+<p>A mesh generation kernel name is specified using the <b>meshing.Kernel</b> class
+<ol style="list-style-type:number;">
+   <li> Kernel.MESHSIM </li> 
+   <li> Kernel.TETGEN </li> 
+</ol></p>
+
+<p><br>
+The <b> meshing </b> module defines the following classes
+<ul style="list-style-type:none;">
+  <li> <b> <a href="#AdaptMeshingKernelClass"> AdaptiveKernel </a> </b> </li>
+  <li> <b> <a href="#MeshingKernelClass"> Kernel </a> </b> </li>
+  <li> <b> <a href="#MeshSimClass"> MeshSim </a> </b> </li>
+  <li> <b> <a href="#MeshingSeriesClass"> Series </a> </b> </li>
+  <li> <b> <a href="#TetGenClass"> TetGen </a> </b> </li>
+  <li> <b> <a href="#TetGenOptionsClass"> TetGenOptions </a> </b> </li>
+</ul></p>
+
+<p><br>
+<div id="AdaptMeshingKernelClass" class="PythonClassDiv" >
+<legend style="font-size:20px; text-align:left"> <b> AdaptiveKernel </b> </legend>
+<iframe src="documentation/python_interface/modules/docs/meshing_AdaptiveKernel.html" style="background-color: #FFFFFF" frameborder="0" height="400" width="95%"> </iframe>
+</div></p>
+
+<p><br>
+<div id="MeshingKernelClass" class="PythonClassDiv" >
+<legend style="font-size:20px; text-align:left"> <b> Kernel </b> </legend>
+<iframe src="documentation/python_interface/modules/docs/meshing_Kernel.html" style="background-color: #FFFFFF" frameborder="0" height="400" width="95%"> </iframe>
+</div></p>
+
+<p><br>
+<div id="MeshSimClass" class="PythonClassDiv" >
+<legend style="font-size:20px; text-align:left"> <b> MeshSim </b> </legend>
+<iframe src="documentation/python_interface/modules/docs/meshing_MeshSim.html" style="background-color: #FFFFFF" frameborder="0" height="400" width="95%"> </iframe>
+</div></p>
+
+<p><br>
+<div id="MeshingSeriesClass" class="PythonClassDiv" >
+<legend style="font-size:20px; text-align:left"> <b> Series </b> </legend>
+<iframe src="documentation/python_interface/modules/docs/meshing_Series.html" style="background-color: #FFFFFF" frameborder="0" height="400" width="95%"> </iframe>
+</div></p>
+
+<p><br>
+<div id="TetGenClass" class="PythonClassDiv" >
+<legend style="font-size:20px; text-align:left"> <b> TetGen </b> </legend>
+<iframe src="documentation/python_interface/modules/docs/meshing_TetGen.html" style="background-color: #FFFFFF" frameborder="0" height="400" width="95%"> </iframe>
+</div></p>
+
+<p><br>
+<div id="TetGenClass" class="PythonClassDiv" >
+<legend style="font-size:20px; text-align:left"> <b> TetGenOptions </b> </legend>
+<iframe src="documentation/python_interface/modules/docs/meshing_TetGenOptions.html" style="background-color: #FFFFFF" frameborder="0" height="400" width="95%"> </iframe>
+</div></p>
+</section>
+<section id="modeling_module" class="group"><h2>Modeling Module</h2>
+
+<p>The <b>modeling</b> module provides an interface to SimVascular modeling functionality used to generate geometric models 
+from medical imaging data. Solid models of vessel geometry are created by lofting and capping 2D segmentations. 
+Separate solid models are then unioned together to create a model representing a region of the vascular anatomy.                           </p>
+
+<p>Methods are provided for querying, creating, and modifying models. This includes Boolean operations, operations 
+on model faces, local operations acting on user-defined regions globel operations acting on the entire model. </p>
+
+<p>Three 3D solid modeling software components (aka kernels) are supported
+<ol style="list-style-type:number;">
+   <li> PolyData </li>
+   <li> OpenCASCADE </li>
+   <li> Parasolid </li>
+</ol></p>
+
+<p>A modeling kernel name is specified using the <b>modeling.Kernel</b> class
+<ol style="list-style-type:number;">
+   <li> Kernel.POLYDATA </li> 
+   <li> Kernel.OPENCASCADE </li> 
+   <li> Kernel.PARASOLID </li> 
+</ol></p>
+
+<p>The PolyData modeling kernel represents models as unstructured surfaces composed of 3-sided polygons. </p>
+
+<p>The OpenCASCADE modeling kernel is an open source software 3D CAD package.  Models are represented as 
+Non-Uniform Rational B-Spline (NURBS) surfaces. </p>
+
+<p>The Parasolid modeling kernel is a commercial software package providing 3D solid modeling functionality. 
+Using Parasolid requires purchasing a license from Siemens for the Parasolid libraries and a SimVascular 
+plugin providing an interface to the libraries.</p>
+
+<p><br>
+The <b>modeling</b> module defines the following classes
+<ul style="list-style-type:none;">
+  <li> <b> <a href="#KernelClass"> Kernel </a> </b> </li>
+  <li> <b> <a href="#ModelerClass"> Modeler </a> </b> </li>
+  <li> <b> <a href="#OpenCascadeClass"> OpenCascade </a> </b> </li>
+  <li> <b> <a href="#ParasolidClass"> Parasolid </a> </b> </li>
+  <li> <b> <a href="#PolyDataClass"> PolyData </a> </b> </li>
+</ul></p>
+
+<p><br>
+<div id="KernelClass" class="PythonClassDiv" >
+<legend style="font-size:20px; text-align:left"> <b> Kernel </b> </legend>
+<iframe src="documentation/python_interface/modules/docs/modeling_Kernel.html" style="background-color: #FFFFFF" frameborder="0" height="400" width="95%"> </iframe>
+</div></p>
+
+<p><br>
+<div id="ModelerClass" class="PythonClassDiv" >
+<legend style="font-size:20px; text-align:left"> <b> Modeler </b> </legend>
+<iframe src="documentation/python_interface/modules/docs/modeling_Modeler.html" style="background-color: #FFFFFF" frameborder="0" height="400" width="95%"> </iframe>
+</div></p>
+
+<p><br>
+<div id="OpenCascadeClass" class="PythonClassDiv" >
+<legend style="font-size:20px; text-align:left"> <b> OpenCascade </b> </legend>
+<iframe src="documentation/python_interface/modules/docs/modeling_OpenCascade.html" style="background-color: #FFFFFF" frameborder="0" height="400" width="95%"> </iframe>
+</div></p>
+
+<p><br>
+<div id="ParasolidClass" class="PythonClassDiv" >
+<legend style="font-size:20px; text-align:left"> <b> Parasolid </b> </legend>
+<iframe src="documentation/python_interface/modules/docs/modeling_Parasolid.html" style="background-color: #FFFFFF" frameborder="0" height="400" width="95%"> </iframe>
+</div></p>
+
+<p><br>
+<div id="PolyDataClass" class="PythonClassDiv" >
+<legend style="font-size:20px; text-align:left"> <b> PolyData </b> </legend>
+<iframe src="documentation/python_interface/modules/docs/modeling_PolyData.html" style="background-color: #FFFFFF" frameborder="0" height="400" width="95%"> </iframe>
+</div></p>
+</section>
+<section id="path_planning_module" class="group"><h2>Path Plannning Module</h2>
+
+<p>The <b>pathplanning</b> module provides an interface to the SimVascular path planning functionality. Paths model vessel centerlines 
+using a small number of manually selected control points. Path geometry is represented by a set of curve points sampled from a 
+spline passing through the control points. </p>
+
+<p>The <b>pathplanning</b> module defines the following classes
+<ul style="list-style-type:none;">
+  <li> <b> Path </b> </li>
+  <li> <b> PathFrame </b> </li>
+  <li> <b> Series </b> </li>
+  <li> <b> SubdivisionMethod </b> </li>
+</ul></p>
+
+<p><br>
+<div class="PythonClassDiv" > 
+<legend style="font-size:20px; text-align:left"> <b> Path </b> </legend>
+<iframe src="documentation/python_interface/modules/docs/pathplanning_Path.html" style="background-color: #FFFFFF" frameborder="0" height="400" width="95%"> </iframe>
+</div></p>
+
+<p><br>
+<div class="PythonClassDiv" > 
+<legend style="font-size:20px; text-align:left"> <b> PathFrame </b> </legend>
+<iframe src="documentation/python_interface/modules/docs/pathplanning_PathFrame.html" style="background-color: #FFFFFF" frameborder="0" height="300" width="95%"> </iframe>
+</div></p>
+
+<p><br>
+<div class="PythonClassDiv" > 
+<legend style="font-size:20px; text-align:left"> <b> Series </b> </legend>
+<iframe src="documentation/python_interface/modules/docs/pathplanning_Series.html" style="background-color: #FFFFFF" frameborder="0" height="400" width="95%"> </iframe>
+</div></p>
+
+<p><br>
+<div class="PythonClassDiv" > 
+<legend style="font-size:20px; text-align:left"> <b> SubdivisionMethod </b> </legend>
+<iframe src="documentation/python_interface/modules/docs/pathplanning_SubdivisionMethod.html" style="background-color: #FFFFFF" 
+frameborder="0" height="250" width="95%"> 
+</iframe>
+</div></p>
+</section>
+<section id="segmentation_module" class="group"><h2>Segmentation Module</h2>
+
+<p>The <b>segmentation</b> module provides an interface to the SimVascular image segmentation functionality. </p>
+
+<p>The <b>segmentation</b> module defines the following classes
+<ul style="list-style-type:none;">
+  <li> <b> Circle </b> </li>
+  <li> <b> Contour </b> </li>
+  <li> <b> Method </b> </li>
+  <li> <b> Polygon </b> </li>
+  <li> <b> SplinePolygon </b> </li>
+</ul></p>
+
+<p><br>
+<div class="PythonClassDiv" >
+<legend style="font-size:20px; text-align:left"> <b> Circle </b> </legend>
+<iframe src="documentation/python_interface/modules/docs/segmentation_Circle.html" style="background-color: #FFFFFF" frameborder="0" height="400" width="95%"> </iframe>
+</div></p>
+
+<p><br>
+<div class="PythonClassDiv" >
+<legend style="font-size:20px; text-align:left"> <b> Contour </b> </legend>
+<iframe src="documentation/python_interface/modules/docs/segmentation_Contour.html" style="background-color: #FFFFFF" frameborder="0" height="400" width="95%"> </iframe>
+</div></p>
+
+<p><br>
+<div class="PythonClassDiv" >
+<legend style="font-size:20px; text-align:left"> <b> Method </b> </legend>
+<iframe src="documentation/python_interface/modules/docs/segmentation_Method.html" style="background-color: #FFFFFF" frameborder="0" height="400" width="95%"> </iframe>
+</div></p>
+
+<p><br>
+<div class="PythonClassDiv" >
+<legend style="font-size:20px; text-align:left"> <b> Polygon </b> </legend>
+<iframe src="documentation/python_interface/modules/docs/segmentation_Polygon.html" style="background-color: #FFFFFF" frameborder="0" height="400" width="95%"> </iframe>
+</div></p>
+
+<p><br>
+<div class="PythonClassDiv" >
+<legend style="font-size:20px; text-align:left"> <b> SplinePolygon </b> </legend>
+<iframe src="documentation/python_interface/modules/docs/segmentation_SplinePolygon.html" style="background-color: #FFFFFF" frameborder="0" height="400" width="95%"> </iframe>
+</div></p>
+</section>
+<section id="vmtk_module" class="group"><h2>Vmtk Module</h2>
+
+<p>The <b>vmtk</b> module provides an interface to VMTK functions.</p>
+
+<p>All VMTK operations are performed using functions defined for the module. For example, computing centerlines is performed using 
+the <b>centerlines()</b> function accessed directly from the <b>vmtk</b> module</p>
+
+<pre>
+>>> centerlines = sv.vmtk.centerlines(model, sourc_ids, target_ids, use_face_ids=True)
+</pre>
+
+<p><br>
+<div id="GeometryFunctions" class="PythonClassDiv" >
+<legend style="font-size:20px; text-align:left"> <b> Vmtk Module Functions </b> </legend>
+<iframe src="documentation/python_interface/modules/docs/vmtk_functions.html" style="background-color: #FFFFFF" frameborder="0" height="400" width="95%"> </iframe>
+</div></p>
+
+<p><br> <br> <br></p>
+</section>
+
+</div>
+
+
+
+    </div>
+</div>
+
+
+    <!-- /.container -->
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container-fluid text-center">
+          <ul class="nav navbar-nav">
+            <li><a>Copyright &copy; SimVascular Development Team - 2017</a></li>
+          </ul>
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+    <script src="js/jquery-1.11.0.js" type="text/javascript"></script><script src="js/bootstrap.min.js" type="text/javascript"></script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+      });
+      $('body').scrollspy({
+        target: '.bs-docs-sidebar',
+        offset: 40
+      });
+    </script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-55333921-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <script type="text/javascript"
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+</body>
+
+</html>
