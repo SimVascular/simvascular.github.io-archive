@@ -39,6 +39,6 @@ DATA
     solid_occt = None
 
 FILE
-    /Users/parkerda/software/ktbolt/SimVascular/Python/site-packages/sv/__init__.py
+    SimVascular/Python/site-packages/sv/__init__.py
 
 
