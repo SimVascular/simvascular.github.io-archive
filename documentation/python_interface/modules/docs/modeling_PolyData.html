@@ -1,4 +1,4 @@
-<pre class="PythonMethodsPre">The modeling PolyData class is used to represent anPolyData solid       
+<pre class="PythonMethodsPre">The modeling PolyData class is used to represent a PolyData solid       
 model.                                                                  </pre> 
 <br>
 <legend style="font-size:20px; text-align:left"> <b> Methods </b> </legend> 
@@ -47,6 +47,14 @@ model.                                                                  </pre>
    Get the polydata geometry for the model.  
    
    Returns (vtkPolyData object): The vtkPolyData object containing the model geometry.  
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>set_surface</strong>(surface)  
+  
+  Set the PolyData surface defining the model. 
+  
+  Args: 
+    surface (vtkPolyData): The vtkPolyData object representing the surface. 
 </pre> 
 <br>
 <pre class="PythonMethodsPre"><strong>write</strong>(file_name, format)  
