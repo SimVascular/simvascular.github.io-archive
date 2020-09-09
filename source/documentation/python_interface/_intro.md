@@ -56,6 +56,6 @@ patient cohorts.
 
 The API attempts to provide an interface conceptually similar to how data is accessed and how operations are
 performed using the GUI. There are, however, some differences between the GUI and API because the GUI hides 
-SimVascular internals that must sometmes be exposed in the API. These differences are explained in the 
+SimVascular internals that must sometimes be exposed in the API. These differences are explained in the 
 <a href="#sv_modules"> SimVascular Python Modules </a> section.
 

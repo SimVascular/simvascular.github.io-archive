@@ -1,6 +1,6 @@
 ## Python Shell ##
 
-The SimVascular **Python Shell** provides a Python interface to SimVascular without the GUI. The **Python Shell** is envoked from a 
+The SimVascular **Python Shell** provides a Python interface to SimVascular without the GUI. The **Python Shell** is invoked from a 
 terminal by executing the script used to launch SimVascular interactively. The launch script is located in the SimVascular install
 directory and is executed for different platforms using 
 
@@ -12,14 +12,14 @@ MacOS: /usr/local/sv/simvascular/<em>DATE</em>/simvascular
 Windows: C:\Program Files\SimVascular\SimVascular\<em>DATE</em>\sv.bat  
 </pre>
 
-where <em>DATE</em> is the SimVascular install date (e.g. 2020-04-06). In the following discusion we will use **simvascular** to represent the 
+where <em>DATE</em> is the SimVascular install date (e.g. 2020-04-06). In the following discussion we will use **simvascular** to represent the 
 the SimVascular launch script.
 
 
 <br>
-The SimVascular Python interpreter, the application that executes Python programs, is envoked in interactive mode using the **---python** flag.
+The SimVascular Python interpreter, the application that executes Python programs, is invoked in interactive mode using the **---python** flag.
 That means you can enter Python statements or expressions interactively and have them executed or evaluated while you wait.
-The **Python Shell** behaves like the standard Python interperter and therefore supports automatic indentation to mark blocks of code. 
+The **Python Shell** behaves like the standard Python interpreter and therefore supports automatic indentation to mark blocks of code. 
 
 <pre>
 <div style="font-size:10px">

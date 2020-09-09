@@ -5,13 +5,13 @@ operate on the data. In object-oriented programming, a **class** is an template 
 values for data and functions or methods. The SimVascular API defines a number of classes that are used to interface
 to SimVascular core functions.
 
-The Python programming environment is embeded in the SimVascular executable and includes the standard library that is 
+The Python programming environment is embedded in the SimVascular executable and includes the standard library that is 
 distributed with Python as well as some optional components not included in Python distributions. 
-This means that Python does not need to be installed on your computer to use Python and access the API. Embeding 
-Python ensures the compatability between Python and the installed module versions. However, it prevents using Python 
+This means that Python does not need to be installed on your computer to use Python and access the API. Embedding 
+Python ensures the compatibility between Python and the installed module versions. However, it prevents using Python 
 packages that may already be installed on your computer. 
 
-The Python interface can be accesed from the SimVascular **Python Console** or from a terminal using the **Python Shell**. 
+The Python interface can be accessed from the SimVascular **Python Console** or from a terminal using the **Python Shell**. 
 
 <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #e6e600; border-left: 6px solid #e6e600">
 Scripts accessing a project's data nodes shown in the <b>SV Data Manager</b> must use the <b>Python Console</b> because 
@@ -30,7 +30,7 @@ in the <b>segmentation</b> module is accessed using  <b>sv.segmentation.Circle()
 
 ### Python Objects ###
 Almost everything in Python is an object. An object is an encapsulation of data members (variables) functions into a single entity.
-A <b>class</b> is an template for creating objects. A class <i>constructor</i> is used for instantiating an object by initializng 
+A <b>class</b> is an template for creating objects. A class <i>constructor</i> is used for instantiating an object by initializing 
 or assigning values to its data members when an object is created. A constructor can be passed arguments just like a function and 
 used the values of those arguments to assign values to its data members. For example, the <b>segmentation.Circle</b> class is used 
 to create a circle segmentation with a given radius, center and normal arguments passed to its constructor 
@@ -62,7 +62,7 @@ will not be able to create VTK objects and the script will generate an error.
 SimVascular uses the Vascular Modeling Toolkit (VMTK), a collection of libraries and tools for 3D reconstruction, geometric 
 analysis, mesh generation and surface data analysis for image-based modeling of blood vessels, from some applications. 
 The VMTK Python module is not included in the Python programming environment. However, some of the VMTK functionality
-is accessable using the SimVascular **sv.vmtk** module.
+is accessible using the SimVascular **sv.vmtk** module.
 
 ### Python Scripts ###
 A Python script is a plain text file containing code written in Python. A script file containing Python code has the 

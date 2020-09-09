@@ -1,7 +1,7 @@
 ## SimVascular Projects ##
 
 The SimVascular GUI requires an active project to access the image-based modeling pipeline. A project organizes and saves data to 
-predefined subdirectories located under the main project directory. There is a sepatate folder for each tool in the image-based 
+predefined subdirectories located under the main project directory. There is a separate folder for each tool in the image-based 
 modeling pipeline. Each tool has an XML format file with a specific extension associated with it that stores data used by the tool
 to represent geometry and parameters. The parameters store the tool's state and are typically displayed in the GUI and can be modified 
 by the user. The predefined subdirectories and XML file extension for each tool are

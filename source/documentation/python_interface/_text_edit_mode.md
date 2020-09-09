@@ -1,7 +1,7 @@
 
 ###Text Editor Mode 
 Selecting the <b>Python Console</b> <b>Text Editor</b> button switches to a panel that is used to read, edit, save, and 
-execute Python scripts. This is the prefered method to use when developing Python scripts that need to be have access to 
+execute Python scripts. This is the preferred method to use when developing Python scripts that need to be have access to 
 the **SV Data Manager**. A new Python script can be interactively written, tested and saved to a file. It can later be 
 read in and executed. 
 For example, the <b> PathDemo.py </b> script can be read in and executed by pressing the

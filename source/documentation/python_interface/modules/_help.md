@@ -29,7 +29,7 @@ The <b>help()</b> function can be used for any component (e.g. class and methods
 
 <br>
 ### Documentation Format ###
-The help documention describes the **sv** package using Python <b>docstrings</b> format, a string literal that occurs as the first 
+The help documentation describes the **sv** package using Python <b>docstrings</b> format, a string literal that occurs as the first 
 statement in a module, function, class, or method definition. A docstring is stored in the the <b>\_\_doc\_\_</b> special attribute 
 of an object. The docstring for a function or method summarizes its behavior and documents its arguments and return value(s). 
 
@@ -48,7 +48,7 @@ Argument types are described using the following naming convention
 
 <ul style="list-style-type:none;">
   <li> bool - Data with one of two built-in values True or False 
-  <li> dict - Unordered collection of data in a key:value pair form put in curly backets <b>{ }</b>
+  <li> dict - Unordered collection of data in a key:value pair form put in curly brackets <b>{ }</b>
   <li> float - Real number with a floating point representation in which a fractional component is denoted by a decimal symbol or scientific notation 
   <li> int - Positive or negative whole numbers without a fractional part
   <li> list - A list object is an ordered collection of one or more data items put in square brackets <b>[ ]</b> 
