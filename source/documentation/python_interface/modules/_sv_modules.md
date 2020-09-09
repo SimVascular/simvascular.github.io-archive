@@ -10,9 +10,9 @@ The **sv** package defines the following modules
   <li> <b> geometry </b> - Functions operating on VTK PolyData objects </li>
   <li> <b> meshing </b> - Classes and methods interfacing to SimVascular meshing </li>
   <li> <b> modeling </b> - Classes and methods interfacing to SimVascular modeling </li>
-  <li> <b> pathplanning </b> - Classes and methods interfacing to SimVascular path plannning </li>
+  <li> <b> pathplanning </b> - Classes and methods interfacing to SimVascular path planning </li>
   <li> <b> segmentation </b> - Classes and methods interfacing to SimVascular segmentation </li>
-  <li> <b> vmtk </b> - Interrface to several VMTK funcntions </li>
+  <li> <b> vmtk </b> - Interface to several VMTK functions </li>
 </ul>
 
 <br>
@@ -44,7 +44,7 @@ $ simvascular --python
 Both of these statements show the modules defined from importing <b>sv</b>; <b>dmg</b>, <b>meshing</b>, etc. 
 <br>
 <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #0000e6; border-left: 6px solid #0000e6">
-The <b>import sv</b> or <b>from sv import <i>MODULENAME</i></b> statements are the prefered ways to import modules because they don't pull 
+The <b>import sv</b> or <b>from sv import <i>MODULENAME</i></b> statements are the preferred ways to import modules because they don't pull 
 everything into the global namespace, which may cause naming conflicts with custom programs. 
 </div>
 

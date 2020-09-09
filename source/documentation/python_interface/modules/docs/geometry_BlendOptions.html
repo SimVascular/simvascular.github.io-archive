@@ -1,0 +1,79 @@
+<pre class="PythonMethodsPre">The BlendOptions class stores parameter values used to control how       
+blended surfaces are generated.                                         
+
+Example: Create a blend options object                                   
+
+    options = sv.geometry.BlendOptions()                                 </pre> 
+<br>
+<legend style="font-size:20px; text-align:left"> <b> Methods </b> </legend> 
+<pre class="PythonMethodsPre"><strong>get_values</strong>()  
+  
+  Get the names and values of blend options. 
+  
+  Returns (dict): A dict with key/value pairs for each option name/value.  
+</pre> 
+<br>
+<legend style="font-size:20px; text-align:left"> <b> Data </b> </legend> 
+<pre class="PythonMethodsPre"><strong>num_blend_operations</strong>
+   Type: int                                                               
+   Default: 2                                                              
+   
+   The number of times to perform blending operations. A series of subbblend
+   opertations and a subdivision operation is performed for each blending  
+   operation.                                                              
+
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>num_cgsmooth_iterations</strong>
+   Type: int                                                               
+   Default: 2                                                              
+   
+   The number of conjugate gradient iterations used in the constrained     
+   constrained smoothing computation performed for each subbblend operation.
+
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>num_lapsmooth_operations</strong>
+   Type: int                                                               
+   Default: 50                                                             
+   
+   The number of laplacian smoothing operations to perform for each        
+   subbblend operation.                                                    
+
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>num_subblend_operations</strong>
+   Type: int                                                               
+   Default: 3                                                              
+   
+   The number of subdivision operations to be performed within each blending
+   operation. Each subbblend operation performs: constrained smoothing,    
+   Laplacian smoothing, and decimation operations.                         
+
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>num_subdivision_operations</strong>
+   Type: int                                                               
+   Default: 1                                                              
+   
+   The number of subdivisions operations to perform at the end of each     
+   blending operation. Each triangle in the surface is divided into four   
+   new triangles for each subdivision operation.                           
+
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>target_decimation</strong>
+   Type: float                                                             
+   Default: 1.0                                                            
+   
+   The percent of triangles to remove from the smoothed surface each       
+   subblend operation.                                                     
+
+</pre> 
+
+

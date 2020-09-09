@@ -6,7 +6,7 @@ All VMTK operations are performed using functions defined for the module. For ex
 the <b>centerlines()</b> function accessed directly from the <b>vmtk</b> module
 
 <pre>
->>> centerlines = sv.vmtk.centerlines(model, sourc_ids, target_ids, use_face_ids=True)
+>>> centerlines = sv.vmtk.centerlines(model, source_ids, target_ids, use_face_ids=True)
 </pre>
 
 <br>

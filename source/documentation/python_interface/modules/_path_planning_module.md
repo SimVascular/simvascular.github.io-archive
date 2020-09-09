@@ -1,5 +1,5 @@
 
-## Path Plannning Module ##
+## Path Planning Module ##
 
 The <b>pathplanning</b> module provides an interface to the SimVascular path planning functionality. Paths model vessel centerlines 
 using a small number of manually selected control points. Path geometry is represented by a set of curve points sampled from a 

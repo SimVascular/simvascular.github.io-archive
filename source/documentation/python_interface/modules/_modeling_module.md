@@ -5,7 +5,7 @@ from medical imaging data. Solid models of vessel geometry are created by loftin
 Separate solid models are then unioned together to create a model representing a region of the vascular anatomy.                           
                                                                              
 Methods are provided for querying, creating, and modifying models. This includes Boolean operations, operations 
-on model faces, local operations acting on user-defined regions globel operations acting on the entire model. 
+on model faces, local operations acting on user-defined regions global operations acting on the entire model. 
 
 Three 3D solid modeling software components (aka kernels) are supported
 <ol style="list-style-type:number;">

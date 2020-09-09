@@ -49,7 +49,9 @@ mesh generator.                                                         </pre>
 <br>
 <pre class="PythonMethodsPre"><strong>get_mesh</strong>()  
   
-  Get the mesh that has been generated. 
+  Get the generated volume mesh.                                             
+  
+  Returns (vtkUnstructuredGrid) The generated volume mesh.                   
 </pre> 
 <br>
 <pre class="PythonMethodsPre"><strong>get_model_face_ids</strong>()  
@@ -132,9 +134,14 @@ mesh generator.                                                         </pre>
 <br>
 <pre class="PythonMethodsPre"><strong>write_mesh</strong>(file_name)  
    
-   Write the generated volume mesh to a VTK .vtu format file. 
+   Write the generated volume mesh to a file. 
+   
+   The format of the file depends on the meshing kernel used to generate the  
+   mesh                                                                       
+      1) TetGen - A vtkUnstructuredGrid .vtu file.                            
+      2) MeshSim - A MeshSim .sms file.                                       
    
    Args: 
-     file_name (str): The name of the file to write the mesh to. 
+     file_name (str): The name of the file to write the mesh to.              
 </pre> 
 <br>

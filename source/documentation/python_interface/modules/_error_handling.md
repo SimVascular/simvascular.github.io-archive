@@ -1,12 +1,12 @@
 ## Error Handling ##
 
 A Python program terminates when it encounters an error. An error can be a syntax error or an exception. 
-A syntax error occours when the Python parser is unable to understand a line of code. An exception is an 
+A syntax error occurs when the Python parser is unable to understand a line of code. An exception is an 
 error detected during the execution of a Python program. Both syntax errors and exceptions are fatal and
 cause a program to terminate.
 
 Exceptions come in different types. The exception type is included as part of the a message printed by Python when 
-an exception is encountered. For example, a divide by zero generates a <b>ZeroDivisionError</b> exeception type
+an exception is encountered. For example, a divide by zero generates a <b>ZeroDivisionError</b> exception type
 
 <pre>
 >>> 10 * (1/0)
@@ -42,7 +42,7 @@ is caught using a try/except block like this
 TypeError:  CircleSegmentation() argument 1 must be float, not str
 </pre>
 
-Errors assoicated with the C++ functions called by the SimVascular API can use exception names defined by the API in the <b>except</b> statement. 
+Errors associated with the C++ functions called by the SimVascular API can use exception names defined by the API in the <b>except</b> statement. 
 For example, passing in a list of two elements for the <i>normal</i> argument generates a **segmentation** module error is caught using 
 the <b>segmentation.Error</b> exception name and a try/except block like this
 
@@ -74,7 +74,7 @@ Unexpected error:  CircleSegmentation() The 'normal' argument is not a 3D point 
 <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #0000e6; border-left: 6px solid #0000e6">
 The try/except block is used to recover from errors and continue program execution. This is useful for a long-runninng program
 processing lots of data sets; if the programs fails for one data set then it can still continue processing others. For some 
-applications it might be accceptable to not handle exceptions and just let the program terminate. 
+applications it might be acceptable to not handle exceptions and just let the program terminate. 
 </div>
 
 
