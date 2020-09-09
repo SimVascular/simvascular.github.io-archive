@@ -257,7 +257,7 @@ patient cohorts.</p>
 
 <p>The API attempts to provide an interface conceptually similar to how data is accessed and how operations are
 performed using the GUI. There are, however, some differences between the GUI and API because the GUI hides 
-SimVascular internals that must sometmes be exposed in the API. These differences are explained in the 
+SimVascular internals that must sometimes be exposed in the API. These differences are explained in the 
 <a href="#sv_modules"> SimVascular Python Modules </a> section.</p>
 </section>
 <section id="python_prog_env" class="group"><h1>Python Programming Environment</h1>
@@ -268,13 +268,13 @@ operate on the data. In object-oriented programming, a <strong>class</strong> is
 values for data and functions or methods. The SimVascular API defines a number of classes that are used to interface
 to SimVascular core functions.</p>
 
-<p>The Python programming environment is embeded in the SimVascular executable and includes the standard library that is 
+<p>The Python programming environment is embedded in the SimVascular executable and includes the standard library that is 
 distributed with Python as well as some optional components not included in Python distributions. 
-This means that Python does not need to be installed on your computer to use Python and access the API. Embeding 
-Python ensures the compatability between Python and the installed module versions. However, it prevents using Python 
+This means that Python does not need to be installed on your computer to use Python and access the API. Embedding 
+Python ensures the compatibility between Python and the installed module versions. However, it prevents using Python 
 packages that may already be installed on your computer. </p>
 
-<p>The Python interface can be accesed from the SimVascular <strong>Python Console</strong> or from a terminal using the <strong>Python Shell</strong>. </p>
+<p>The Python interface can be accessed from the SimVascular <strong>Python Console</strong> or from a terminal using the <strong>Python Shell</strong>. </p>
 
 <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #e6e600; border-left: 6px solid #e6e600">
 Scripts accessing a project&rsquo;s data nodes shown in the <b>SV Data Manager</b> must use the <b>Python Console</b> because 
@@ -295,7 +295,7 @@ in the <b>segmentation</b> module is accessed using  <b>sv.segmentation.Circle()
 <h3>Python Objects</h3>
 
 <p>Almost everything in Python is an object. An object is an encapsulation of data members (variables) functions into a single entity.
-A <b>class</b> is an template for creating objects. A class <i>constructor</i> is used for instantiating an object by initializng 
+A <b>class</b> is an template for creating objects. A class <i>constructor</i> is used for instantiating an object by initializing 
 or assigning values to its data members when an object is created. A constructor can be passed arguments just like a function and 
 used the values of those arguments to assign values to its data members. For example, the <b>segmentation.Circle</b> class is used 
 to create a circle segmentation with a given radius, center and normal arguments passed to its constructor </p>
@@ -329,7 +329,7 @@ will not be able to create VTK objects and the script will generate an error.
 <p>SimVascular uses the Vascular Modeling Toolkit (VMTK), a collection of libraries and tools for 3D reconstruction, geometric 
 analysis, mesh generation and surface data analysis for image-based modeling of blood vessels, from some applications. 
 The VMTK Python module is not included in the Python programming environment. However, some of the VMTK functionality
-is accessable using the SimVascular <strong>sv.vmtk</strong> module.</p>
+is accessible using the SimVascular <strong>sv.vmtk</strong> module.</p>
 
 <h3>Python Scripts</h3>
 
@@ -383,7 +383,7 @@ overcome using list comprehension but in general it is better to use the <b>Text
 <section id="text_edit_mode" class="group"><h3>Text Editor Mode</h3>
 
 <p>Selecting the <b>Python Console</b> <b>Text Editor</b> button switches to a panel that is used to read, edit, save, and 
-execute Python scripts. This is the prefered method to use when developing Python scripts that need to be have access to 
+execute Python scripts. This is the preferred method to use when developing Python scripts that need to be have access to 
 the <strong>SV Data Manager</strong>. A new Python script can be interactively written, tested and saved to a file. It can later be 
 read in and executed. 
 For example, the <b> PathDemo.py </b> script can be read in and executed by pressing the
@@ -401,7 +401,7 @@ also available in the <b>Text Editor</b>.</p>
 </section>
 <section id="python_shell" class="group"><h2>Python Shell</h2>
 
-<p>The SimVascular <strong>Python Shell</strong> provides a Python interface to SimVascular without the GUI. The <strong>Python Shell</strong> is envoked from a 
+<p>The SimVascular <strong>Python Shell</strong> provides a Python interface to SimVascular without the GUI. The <strong>Python Shell</strong> is invoked from a 
 terminal by executing the script used to launch SimVascular interactively. The launch script is located in the SimVascular install
 directory and is executed for different platforms using </p>
 
@@ -413,13 +413,13 @@ MacOS: /usr/local/sv/simvascular/<em>DATE</em>/simvascular
 Windows: C:\Program Files\SimVascular\SimVascular\<em>DATE</em>\sv.bat  
 </pre>
 
-<p>where <em>DATE</em> is the SimVascular install date (e.g. 2020-04-06). In the following discusion we will use <strong>simvascular</strong> to represent the 
+<p>where <em>DATE</em> is the SimVascular install date (e.g. 2020-04-06). In the following discussion we will use <strong>simvascular</strong> to represent the 
 the SimVascular launch script.</p>
 
 <p><br>
-The SimVascular Python interpreter, the application that executes Python programs, is envoked in interactive mode using the <strong>&mdash;python</strong> flag.
+The SimVascular Python interpreter, the application that executes Python programs, is invoked in interactive mode using the <strong>&mdash;python</strong> flag.
 That means you can enter Python statements or expressions interactively and have them executed or evaluated while you wait.
-The <strong>Python Shell</strong> behaves like the standard Python interperter and therefore supports automatic indentation to mark blocks of code. </p>
+The <strong>Python Shell</strong> behaves like the standard Python interpreter and therefore supports automatic indentation to mark blocks of code. </p>
 
 <pre>
 <div style="font-size:10px">
@@ -489,9 +489,9 @@ The <strong>sv</strong> package defines the following modules </p>
   <li> <b> geometry </b> - Functions operating on VTK PolyData objects </li>
   <li> <b> meshing </b> - Classes and methods interfacing to SimVascular meshing </li>
   <li> <b> modeling </b> - Classes and methods interfacing to SimVascular modeling </li>
-  <li> <b> pathplanning </b> - Classes and methods interfacing to SimVascular path plannning </li>
+  <li> <b> pathplanning </b> - Classes and methods interfacing to SimVascular path planning </li>
   <li> <b> segmentation </b> - Classes and methods interfacing to SimVascular segmentation </li>
-  <li> <b> vmtk </b> - Interrface to several VMTK funcntions </li>
+  <li> <b> vmtk </b> - Interface to several VMTK functions </li>
 </ul>
 
 <p><br>
@@ -524,14 +524,14 @@ $ simvascular --python
 <p>Both of these statements show the modules defined from importing <b>sv</b>; <b>dmg</b>, <b>meshing</b>, etc. 
 <br>
 <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #0000e6; border-left: 6px solid #0000e6">
-The <b>import sv</b> or <b>from sv import <i>MODULENAME</i></b> statements are the prefered ways to import modules because they don&rsquo;t pull 
+The <b>import sv</b> or <b>from sv import <i>MODULENAME</i></b> statements are the preferred ways to import modules because they don&rsquo;t pull 
 everything into the global namespace, which may cause naming conflicts with custom programs. 
 </div></p>
 </section>
 <section id="projects" class="group"><h2>SimVascular Projects</h2>
 
 <p>The SimVascular GUI requires an active project to access the image-based modeling pipeline. A project organizes and saves data to 
-predefined subdirectories located under the main project directory. There is a sepatate folder for each tool in the image-based 
+predefined subdirectories located under the main project directory. There is a separate folder for each tool in the image-based 
 modeling pipeline. Each tool has an XML format file with a specific extension associated with it that stores data used by the tool
 to represent geometry and parameters. The parameters store the tool&rsquo;s state and are typically displayed in the GUI and can be modified 
 by the user. The predefined subdirectories and XML file extension for each tool are</p>
@@ -589,7 +589,7 @@ The <b>help()</b> function can be used for any component (e.g. class and methods
 
 <h3>Documentation Format</h3>
 
-<p>The help documention describes the <strong>sv</strong> package using Python <b>docstrings</b> format, a string literal that occurs as the first 
+<p>The help documentation describes the <strong>sv</strong> package using Python <b>docstrings</b> format, a string literal that occurs as the first 
 statement in a module, function, class, or method definition. A docstring is stored in the the <b>__doc__</b> special attribute 
 of an object. The docstring for a function or method summarizes its behavior and documents its arguments and return value(s). </p>
 
@@ -608,7 +608,7 @@ Argument types are described using the following naming convention</p>
 
 <ul style="list-style-type:none;">
   <li> bool - Data with one of two built-in values True or False 
-  <li> dict - Unordered collection of data in a key:value pair form put in curly backets <b>{ }</b>
+  <li> dict - Unordered collection of data in a key:value pair form put in curly brackets <b>{ }</b>
   <li> float - Real number with a floating point representation in which a fractional component is denoted by a decimal symbol or scientific notation 
   <li> int - Positive or negative whole numbers without a fractional part
   <li> list - A list object is an ordered collection of one or more data items put in square brackets <b>[ ]</b> 
@@ -685,12 +685,12 @@ All API errors are handled using exceptions. See the <a href="#modules_error_han
 <section id="error_handling" class="group"><h2>Error Handling</h2>
 
 <p>A Python program terminates when it encounters an error. An error can be a syntax error or an exception. 
-A syntax error occours when the Python parser is unable to understand a line of code. An exception is an 
+A syntax error occurs when the Python parser is unable to understand a line of code. An exception is an 
 error detected during the execution of a Python program. Both syntax errors and exceptions are fatal and
 cause a program to terminate.</p>
 
 <p>Exceptions come in different types. The exception type is included as part of the a message printed by Python when 
-an exception is encountered. For example, a divide by zero generates a <b>ZeroDivisionError</b> exeception type</p>
+an exception is encountered. For example, a divide by zero generates a <b>ZeroDivisionError</b> exception type</p>
 
 <pre>
 >>> 10 * (1/0)
@@ -728,7 +728,7 @@ is caught using a try/except block like this</p>
 TypeError:  CircleSegmentation() argument 1 must be float, not str
 </pre>
 
-<p>Errors assoicated with the C++ functions called by the SimVascular API can use exception names defined by the API in the <b>except</b> statement. 
+<p>Errors associated with the C++ functions called by the SimVascular API can use exception names defined by the API in the <b>except</b> statement. 
 For example, passing in a list of two elements for the <i>normal</i> argument generates a <strong>segmentation</strong> module error is caught using 
 the <b>segmentation.Error</b> exception name and a try/except block like this</p>
 
@@ -760,7 +760,7 @@ Unexpected error:  CircleSegmentation() The 'normal' argument is not a 3D point 
 <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #0000e6; border-left: 6px solid #0000e6">
 The try/except block is used to recover from errors and continue program execution. This is useful for a long-runninng program
 processing lots of data sets; if the programs fails for one data set then it can still continue processing others. For some 
-applications it might be accceptable to not handle exceptions and just let the program terminate. 
+applications it might be acceptable to not handle exceptions and just let the program terminate. 
 </div></p>
 </section>
 <section id="dmg_module" class="group"><h2>Dmg Module</h2>
@@ -921,7 +921,7 @@ from medical imaging data. Solid models of vessel geometry are created by loftin
 Separate solid models are then unioned together to create a model representing a region of the vascular anatomy.                           </p>
 
 <p>Methods are provided for querying, creating, and modifying models. This includes Boolean operations, operations 
-on model faces, local operations acting on user-defined regions globel operations acting on the entire model. </p>
+on model faces, local operations acting on user-defined regions global operations acting on the entire model. </p>
 
 <p>Three 3D solid modeling software components (aka kernels) are supported
 <ol style="list-style-type:number;">
@@ -986,7 +986,7 @@ The <b>modeling</b> module defines the following classes
 <iframe src="documentation/python_interface/modules/docs/modeling_PolyData.html" style="background-color: #FFFFFF" frameborder="0" height="400" width="95%"> </iframe>
 </div></p>
 </section>
-<section id="path_planning_module" class="group"><h2>Path Plannning Module</h2>
+<section id="path_planning_module" class="group"><h2>Path Planning Module</h2>
 
 <p>The <b>pathplanning</b> module provides an interface to the SimVascular path planning functionality. Paths model vessel centerlines 
 using a small number of manually selected control points. Path geometry is represented by a set of curve points sampled from a 
@@ -1077,7 +1077,7 @@ frameborder="0" height="250" width="95%">
 the <b>centerlines()</b> function accessed directly from the <b>vmtk</b> module</p>
 
 <pre>
->>> centerlines = sv.vmtk.centerlines(model, sourc_ids, target_ids, use_face_ids=True)
+>>> centerlines = sv.vmtk.centerlines(model, source_ids, target_ids, use_face_ids=True)
 </pre>
 
 <p><br>

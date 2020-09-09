@@ -34,12 +34,11 @@
 <pre class="PythonMethodsPre"><strong>add_model</strong>
    add_model(name, model) 
    
-   Add a model to the SV Data Manager Models node. 
+   Add a model to the SV Data Manager Models node.                            
    
    Args: 
-     name (str): The name for the model data node. 
-     model (sv.modeling.Series object): The model series object from which 
-        to create the model node.                                          
+     name (str): The name for the model data node.                            
+     model (sv.modeling.Modeler): The model object representing a solid model.
 
 </pre> 
 
@@ -88,10 +87,14 @@
    
    Get a model from the SV Data Manager Models node. 
    
+   The model returned is an sv.modeling modeler object of the same type used  
+   used to create the model in SimVascular. For example, getting a PolyData   
+   model returns an sv.modeling.PolyData object.                              
+   
    Args: 
      name (str): The model node name. 
    
-   Returns an sv.modeling.Series object.  
+   Returns a model object.                                                    
 
 </pre> 
 
@@ -109,15 +112,15 @@
 </pre> 
 
 
-<pre class="PythonMethodsPre"><strong>get_segmentation</strong>
-   segmentation(name)                                    
+<pre class="PythonMethodsPre"><strong>get_segmentations</strong>
+   get_segmentations(name) 
    
-   Get a segmentation from the SV Data Manager Segmentations node.       
+   Get the segmentations from an SV Data Manager Segmentations node.          
    
-   Args:                                                          
+   Args: 
      name (str): The segmentation node name. 
    
-   Returns an sv.segmentation.Series object. 
+   Returns a list of sv.segmentation.Segmentation objects.                    
 
 </pre> 
 
