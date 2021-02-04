@@ -1,79 +1,102 @@
-##Segmenting an image with 3D segmentation
+##3D Level Set Segmentation 
 
-NOTE: in older versions of SimVascular, to use 3D segmentation, make sure the loaded image data does not have the same name as your project, otherwise the 3D segmentation algorithms may not properly load your image data.
+###Introduction 
 
-The 2D Segmentation tools in **SimVascular** allow for flexible segmentation of various vessel geometries.
- However certain geometries with complex 3D structures are difficult to segment in 2D. In this section we will
-show you how to use the 3D segmentation tools in **SimVascular** to tackle complex 3D geometries and rapidly
-segment many vessels at once.
+SimVascular provides a 3D level set method <a href="#ref-1">[1]</a> that can be used to generate segmentation surfaces for anatomical structures
+difficult to segment using the lofted 2D segmentation approach discussed above. The level set method is a mathematical framework 
+used to represent implicit deformable surfaces described by a 3D image volume, the level set function, evolving in time. The geometry 
+of the segmentation surface is defined by the zero isolevel of the level set function. The final surface will be located at the 
+regions corresponding to the steepest change (gradient magnitude) of image intensity. The surface can be imported into a SimVascular
+Modeling tool after preprocessing.
 
-The 3D segmentation algorithm in **SimVascular** is the Colliding Fronts algorithm. The Colliding fronts
-algorithm lets you pick seed points at the start and end of vessels and then creates a 3d segmentation
-inside the selected vessels by numerically propagating fronts.
+The level set segmentation algorithm requires initializing the level set function. The best results are obtained when the 
+initialization produces a surface that is close to the desired segmentation surface. SimVascular uses the colliding fronts 
+algorithm <a href="#ref-2">[2]</a> to initialize the level set function. The user first defines groups of start and end 
+seed points placed at the extremities of the image region to be segmented. A wavefront is then propagated from each seed with 
+speeds proportional to the image intensity. The initial level set deformable surface is defined as the region where fronts collide.
+Define a several groups of seed points to initialize a large region of the image requires the specification of an image threshold to 
+constrain the propagation of the wavefront.
 
-To start out, open a project, or create a new one and import the image data from the demo data
+The temporal evolution of the level set function is described by a partial differential equation containing the following three terms  
+
+<ol>
+   <li> Advection term that expands the surface towards the ridges of the image gradient magnitude 
+
+   <li> Propagation term that governs the expansion speed
+
+   <li> Smoothenss constraint for the mean curvature of the surface </li>
+</ol>
+
+Weights are assigned to regulate the influence of each term on surface evolution. Weights may need to be adjusted for different image modalities
+with differnt properties (e.g. signal to noise ratio).
+
+The level set formulation requires computing an image gradient. Derivatives are computed for the image data by applying using a  
+Gaussian smoothing filter with a user defined value for the standard deviation. Applying a smoothing filter dereases the effect of 
+image noise on derivative computation but may remove image features below the scale corresponding to the standard deviation used.
+
+The level set equation is solved numericaly for a number of iterations (time steps) incrementally updating the level set function and implicitly 
+the segmentation surface. Enough iterations need to be performed so that the surface expands close to the boundaries of the anatomical structures 
+that are being segmented. The result of the level set computation is the level set function reprenting a segmentation image. The geometry
+of the segmentation surface, a triangle mesh, is then extracted from this image at the zero isolevel. 
+
+After a segmentation surface has been extracted centerlines and SimVascular paths can be then computed for it. The path files can be
+imported into SimVascular and used to automatically generate a model using the machine learning capability in the SimVascular Segmentation 
+tool. This may be useful when building models of complex vascular anatomy.
+
+The segmentation surface does not have the planar caps needed for SimVascular models. However, the SimVascular Modeling tool can use paths 
+to trim the surface at its ends. Caps can then be created for the trimmed model using the Modeling tool <b>Fill Holes w/o ID</b> operation
+(see <a href="http://simvascular.github.io/docsModelGuide.html#modelingEditingPolyData">Modeling Guide - Global/Local Operations</a>). 
+
+
+###Level Set Tool 
+
+The SimVascular **3D Level Set Tool** is used to interactively generate 3D segmentations from volumetric imaging data using the
+level set method with colliding fronts initialization. The tool uses the image data read in by SimVascular and stored under the
+SV Data Manager <b>Images</b> node. Data created by the tool is stored in files under a project's Images/level-set
+directory. The demo-image.vti image data file from the SimVascular <b> Demo Project </b> is used in the following sections.
+
+The **3D Level Set Tool** is opened by selecting the 
+<img src="documentation/modeling/imgs/3d-level-set/level-set-icon.png" width="20" height="20"> icon located at the top of the
+SimVascular toolbar. The tool panel opens to the right of the screen the same as other SimVascular tools.The tool has 
+<b>Seeds</b>, <b>Level Set</b>, <b>Surface</b> and <b>Paths</b> sub-panels. 
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/3dseg/1_imageopen.png">
-  <figcaption class="svCaption" ></figcaption>
+  <img class="svImg svImgXl"  src="documentation/modeling/imgs/3d-level-set/init.png">
+  <figcaption class="svCaption"> Opening the <b> 3D Level Set Tool</b> brings up its panel and creates a <b>level-set</b> 
+    node under the SV Data Managert Images node.
+  </figcaption>
 </figure>
 
-Once the image has been loaded in, click the "3D" plugin icon on the top menubar to open the 3D segmentation plugin. Take note of the following GUI elements as these will be needed for later steps.
 
-<figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/3dseg/window.png">
-  <figcaption class="svCaption" ></figcaption>
-</figure>
+   <li> Open the <b>3D Level Set Tool</b>
+   <li> Create one or more groups of start and end seeds for initializing the level set function (<b>Seeds</b> panel)
+   <li> Set the level set parameters and execute the level set solution (<b>Level Set</b> panel)
+   <li> Extract centerlines from the segmentation surface (<b>Surface</b> panel)
+   <li> Convert centerlines to paths (<b>Paths</b> panel)
+</ol>
 
-Maximize the 3D view by clicking the blue square in the top right corner of the 3D view.
 
-In the 3D segmentation plugin tab, at the top, click the "Show seed points" checkbox so that it is checked.
 
-Now move your mouse to the 3D window, you should see a blue sphere appear wherever your mouse cursor moves, this shows us where we are about to place a seed point.
+After interactively creating seeds used 
 
-Left click on the 3D window view to make sure it is activated.
 
-Navigate the axial, coronal and sagittal view planes so that you have a good view of the aorta. Then, navigate your mouse cursor to an area inside the aorta, near the top. Once you have found a good location, press the S key to place a start seed point (note you may need to left click the 3D view to make sure it is activated).
+Seeds used to initialize the level set are interactively placed using 
 
-Next navigate the axial, coronal and sagittal view planes so that you have a good view of the iliac arteries. Move your cursor inside each of the common iliac arteries, and press the E key to place end seed points.
 
-Your seed points should look something like the following image
+interactively position starting and ending seed points by manipulating axial, coronal, and sagittal
+       planes in a 3D view
 
-<figure>
-  <img class="svImg svImaggeMd"  src="documentation/modeling/imgs/segmentation/3dseg/seeds.png">
-  <figcaption class="svCaption" ></figcaption>
-</figure>
+ation
 
-If you ever need to redo a seed point, you can delete a seed point by moving your cursor near it and right-clicking.
+placing seeds to identify the regions for segmentation
 
-With the seed points in place, we can now set up the colliding fronts 3D segmentation algorithm.
 
-First, in the 3D segmentation tab, find the "input image" dropdown menu and select the image data that you loaded (Note, if no options are available you may need to close and reopen the 3D segmentation plugin).
 
-Now, in the 3D segmentation tab, find the algorithm menu. Click on the "full pipelines" bar and then on "colliding fronts segmentation". You should now see several input bars where you can specify parameters for the colliding fronts algorithm.
+### References
 
-Here is a description of each of them:
+<a id="ref-1"> [1] Osher, S.J. and Fedkiw, R.P., **Level Set Methods and Dynamic Implicit Surfaces**, Springer-Verlag (2002) </a>
 
-*Gradient Length Scale*: The approximate wall thickness of the vessel lumen we are segmenting, generally values around 0.2 work well.
+<a id="ref-2"> [2]  Antiga, L., Piccinelli, M., Botti, L. et al., **An image-based modeling framework for patient-specific computational hemodynamics**, Med Biol Eng Comput 46, 1097 (2008) </a>
 
-*Upper Threshold* and *Lower Threshold*: The intensity pixel values to bound the segmentation, the segmentation will only segment regions with intensity values within the Lower and Upper threshold range. You can find pixel values for the vessels you want to segment by left-clicking in one of the 2D cross-sectional views and dragging your mouse around. The pixel value will be shown in the bottom right of the Simvascular Application window. In general, to get good quality segmentations, the upper and lower threshold range should be chosen to be slightly larger than the intensity ranges you find in the vessels you are segmenting.
 
-*Propagation Scaling*: Value between 0 and 1, higher values cause the segmentation to expand and fill out the vessel being segmented. Typically 0.7 works well
 
-*Advection Scaling*: Value between 0 and 1, higher values cause the segmentation to move towards edges in the image. Typicaly 0.7 works well.
-
-*Curvature Scaling*: Value between 0 and 1, The amount of smoothing that the level set will apply to the colliding fronts output, higher values result in more smoothing.
-
-*Iterations*: The number of level set iterations to run after the colliding fronts algorithm. More iterations will cause the level set to propagate more, move closer to edges and smooth the segmentation more. Typically can be left at 50.
-
-*IsoValue*: The pixel value to define the segmentation boundary after running colliding fronts, can be left at 0.
-
-Now enter 180 and 30 for the Upper and Lower threshold respectively (if using the demo data, otherwise investigate the pixel values to find suitable threshold values.) Leave the other parameters with their default values.
-
-Click "run colliding fronts", after some computation time, a popup window should appear asking you to name the produced 3D segmentation. Enter a name, and the 3D segmentation should appear in the "Segmentations" folder in the datamanager on the left of the SimVascular application window. Your 3D segmentation should look something like the following image
-<figure>
-  <img class="svImg svImgMd"  src="documentation/modeling/imgs/segmentation/3dseg/model.png">
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-convert it into a usable model using the ([3D modeling guide](#modelingSolidModelingPolyData))
