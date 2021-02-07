@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: class Contour</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><strong>sv.segmentation.Contour</strong> = <a name="sv.segmentation.Contour">class Contour</a>(builtins.Segmentation)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Contour(contour_points)&nbsp;&nbsp;<br>
+&nbsp;<br>
+The&nbsp;ContourSegmentation&nbsp;class&nbsp;provides&nbsp;an&nbsp;interface&nbsp;for&nbsp;creating&nbsp;a&nbsp;contour&nbsp;segmentation.&nbsp;<br>
+A&nbsp;contur&nbsp;segmentation&nbsp;is&nbsp;defined&nbsp;by&nbsp;a&nbsp;set&nbsp;of&nbsp;3D&nbsp;points.&nbsp;<br>
+&nbsp;<br>
+Args:&nbsp;<br>
+&nbsp;&nbsp;points(list([float,float,float]):&nbsp;The&nbsp;list&nbsp;of&nbsp;3D&nbsp;points&nbsp;defining&nbsp;the&nbsp;contour.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd>Contour</dd>
+<dd>builtins.Segmentation</dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Contour-__init__"><strong>__init__</strong></a>(self, /, *args, **kwargs)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="Contour-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;object.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="Contour-get_center"><strong>get_center</strong></a>(...)</dt><dd><tt><a href="#sv.segmentation.Contour-get_center">get_center</a>()&nbsp;&nbsp;<br>
+&nbsp;<br>
+Get&nbsp;the&nbsp;center&nbsp;of&nbsp;the&nbsp;polygon&nbsp;segmentation.&nbsp;<br>
+&nbsp;<br>
+&nbsp;<br>
+Returns&nbsp;(list([float,float,float]):&nbsp;The&nbsp;polygon&nbsp;segmentation&nbsp;center.</tt></dd></dl>
+
+<dl><dt><a name="Contour-get_normal"><strong>get_normal</strong></a>(...)</dt><dd><tt><a href="#sv.segmentation.Contour-get_normal">get_normal</a>()&nbsp;&nbsp;<br>
+&nbsp;<br>
+Get&nbsp;the&nbsp;normal&nbsp;of&nbsp;the&nbsp;polygon&nbsp;segmentation.&nbsp;<br>
+&nbsp;<br>
+&nbsp;<br>
+Returns&nbsp;(list([float,float,float]):&nbsp;The&nbsp;polygon&nbsp;segmentation&nbsp;normal.</tt></dd></dl>
+
+<dl><dt><a name="Contour-set_contour_points"><strong>set_contour_points</strong></a>(...)</dt><dd><tt><a href="#sv.segmentation.Contour-set_contour_points">set_contour_points</a>(contour_points)&nbsp;&nbsp;<br>
+&nbsp;<br>
+Set&nbsp;the&nbsp;contour&nbsp;points&nbsp;for&nbsp;a&nbsp;contour&nbsp;segmentation.&nbsp;<br>
+&nbsp;<br>
+Args:&nbsp;<br>
+&nbsp;&nbsp;points&nbsp;(list(list([float,float,float])):&nbsp;The&nbsp;list&nbsp;of&nbsp;contour&nbsp;points.</tt></dd></dl>
+
+<hr>
+Methods inherited from builtins.Segmentation:<br>
+<dl><dt><a name="Contour-get_id"><strong>get_id</strong></a>(...)</dt><dd><tt><a href="#sv.segmentation.Contour-get_id">get_id</a>()&nbsp;&nbsp;<br>
+&nbsp;<br>
+Get&nbsp;the&nbsp;contour&nbsp;ID.&nbsp;<br>
+&nbsp;<br>
+Args:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;None&nbsp;<br>
+&nbsp;<br>
+Returns&nbsp;int:&nbsp;The&nbsp;contour&nbsp;id.</tt></dd></dl>
+
+<dl><dt><a name="Contour-get_path_point"><strong>get_path_point</strong></a>(...)</dt><dd><tt><a href="#sv.segmentation.Contour-get_path_point">get_path_point</a>()&nbsp;&nbsp;<br>
+&nbsp;<br>
+Get&nbsp;the&nbsp;contour&nbsp;path&nbsp;point.&nbsp;<br>
+&nbsp;<br>
+Args:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;None&nbsp;<br>
+&nbsp;<br>
+Returns&nbsp;dict(pos:[x,y,z],&nbsp;tangent:[x,y,z],&nbsp;rotation:[x,y,z]):&nbsp;The&nbsp;contour&nbsp;path&nbsp;point.</tt></dd></dl>
+
+<dl><dt><a name="Contour-get_points"><strong>get_points</strong></a>(...)</dt><dd><tt><a href="#sv.segmentation.Contour-get_points">get_points</a>()&nbsp;&nbsp;<br>
+&nbsp;<br>
+Get&nbsp;the&nbsp;segmentation&nbsp;contour&nbsp;points.&nbsp;<br>
+&nbsp;<br>
+Args:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;None&nbsp;<br>
+&nbsp;<br>
+Returns&nbsp;list([x,y,z]):&nbsp;The&nbsp;list&nbsp;of&nbsp;contour&nbsp;points.</tt></dd></dl>
+
+<dl><dt><a name="Contour-get_polydata"><strong>get_polydata</strong></a>(...)</dt><dd><tt>get_vtk_polydata()&nbsp;&nbsp;<br>
+&nbsp;<br>
+Get&nbsp;the&nbsp;contour&nbsp;type.&nbsp;<br>
+&nbsp;<br>
+Args:&nbsp;<br>
+&nbsp;&nbsp;None&nbsp;<br>
+Returns&nbsp;(str):&nbsp;contour&nbsp;type.</tt></dd></dl>
+
+<dl><dt><a name="Contour-get_type"><strong>get_type</strong></a>(...)</dt><dd><tt><a href="#sv.segmentation.Contour-get_type">get_type</a>()&nbsp;&nbsp;<br>
+&nbsp;<br>
+Get&nbsp;the&nbsp;contour&nbsp;type.&nbsp;<br>
+&nbsp;<br>
+Args:&nbsp;<br>
+&nbsp;&nbsp;None&nbsp;<br>
+Returns&nbsp;(str):&nbsp;contour&nbsp;type.</tt></dd></dl>
+
+</td></tr></table>
+</body></html>

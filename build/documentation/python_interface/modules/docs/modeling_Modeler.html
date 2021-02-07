@@ -1,0 +1,115 @@
+<pre class="PythonMethodsPre"><strong>Modeler</strong>(kernel) 
+
+The Modeler class provides an interface for creating solid models and   
+performing intersect, subtract and union Boolean operations on them.    
+
+A Modeler object is created for a specific kernel by passing a kernel   
+name as an argument to the Modeler() constructor. The kernel name is    
+specified using the modeling.Kernel class.                              
+
+Example: Creating a modeler for a PolyData kernel                       
+
+    >>> modeler = sv.modeling.Modeler(sv.modeling.Kernel.POLYDATA)      
+
+A Modeler object creates solid models for the kernel it was created     
+with. Modeler Boolean operations require models created with the same   
+kernel.                                                                 
+
+Args:
+  kernel (str): The name of the kernel used to create the modeler.      </pre> 
+<br>
+<legend style="font-size:20px; text-align:left"> <b> Methods </b> </legend> 
+<pre class="PythonMethodsPre"><strong>box</strong>(center, width, height, length)  
+   
+   Create a 3D solid box. 
+   
+   Args:
+     center ([float,float,float]): The box center. 
+     width (float): The box width in the X coordinate direction. 
+     height (float): The box height in the Y coordinate direction. 
+     length (float): The box length in the Z coordinate direction. 
+   
+   Returns (Model): The box solid model. 
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>cylinder</strong>(center, axis, radius, length)  
+   
+   Create a 3D solid cylinder aligned with an axis. 
+   
+   Args:
+     center ([float,float,float]): The cylinder center. 
+     axis ([float,float,float]): The cylinder axis. 
+     radius (float): The cylinder radius. 
+     length (float): The cylinder length. 
+   
+   Returns (Model): The cylinder solid model. 
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>intersect</strong>(model1, model2)  
+   
+   Create a solid from the Booealn intersect operation on two solids. 
+   
+   Args:
+     model1 (Model): A solid model created by a modeler. 
+     model2 (Model): A solid model created by a modeler. 
+   
+   Returns (Model): The solid model of the intersected models. 
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>read</strong>(file_name)  
+   
+   Read a solid model from a native format file. 
+   
+   The native formats supported for each modeling kernel are: 
+   
+         OpenCascade: brep 
+   
+         Parasolid: xmt_txt 
+   
+         PolyData:  ply, stl, vtk and vtp  
+   
+   Args:
+     file_name (str): The name of the file contining the solid model. 
+   
+   Returns (Model): The solid model read from the file. 
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>sphere</strong>(center, radius)  
+   
+   Create a 3D solid sphere. 
+   
+   Args:
+     center ([float,float,float]): The sphere center. 
+     radius (float): The sphere radius. 
+   
+   Returns (Model): The sphere solid model. 
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>subtract</strong>(main, subtract)  
+   
+   Creates a solid from the result of a Boolean subtract operation on two solids. 
+   
+   Args:
+     main (Model): The solid model to subtract from. 
+     subtract (Model): The solid model to subtract from main. 
+   
+   Returns (Model): The solid model of the subtracted models. 
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>union</strong>(model1, model2)  
+   
+   Create a solid from the Boolean union operation on two solids. 
+   
+   Args:
+     model1 (Model): A solid model created by a modeler. 
+     model2 (Model): A solid model created by a modeler. 
+   
+   Returns (Model): The solid model of the unioned models. 
+</pre> 
+<br>
+<legend style="font-size:20px; text-align:left"> <b> Data </b> </legend> 
+<pre class="PythonMethodsPre"><strong>kernel</strong>
+   The kernel name for this modeler.
+</pre> 
+
+

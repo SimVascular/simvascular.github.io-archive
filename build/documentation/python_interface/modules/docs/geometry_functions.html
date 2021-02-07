@@ -1,0 +1,119 @@
+<pre class="PythonMethodsPre"><strong>align_profile</strong>
+   align_profile(reference, align, use_distance=True) 
+   
+   Align a profile represented as a closed curve with a given reference    
+   profile also represented as a closed curve.                             
+   
+   The profile is aligned by reordering its points.                        
+   
+   Args: 
+     reference (vtkPolyData): The profile to align to.                     
+     align (vtkPolyData): The profile to align to the reference.           
+     use_distance (Optional[bool]): If True then align profile initial     
+       points using the minium distance between points. If False then align
+       profile initial points using the angle beteenn points.              
+   
+   Returns (vtkPolyData): The aligned profile.                             
+
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>average_point</strong>
+   average_point(polydata) 
+   
+   Calculate the average point for the points of a VTK PolyData object.    
+   
+   Args: 
+     polydata (vtkPolyData): The vtkPolyData object to compute the average 
+       point for.                                                          
+   
+   Returns list([float, float, float]): The average point. 
+
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>interpolate_closed_curve</strong>
+   interpolate_closed_curve(polydata, number_of_points) 
+   
+   Generate a list of 3D points linearly interpolated between the points   
+   of a closed 3D curve.                                                   
+   
+   Args: 
+     polydata (vtkPolyData): The vtkPolyData object representing a closed  
+        curve.                                                             
+     number_of_points (int): The number of points to generate.             
+   
+   Returns list([float, float, float]): The list of interpolated points.   
+
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>local_blend</strong>
+   local_blend(surface, faces, options)                                    
+   
+   ??? Set the computational kernel used to segment image data.       
+   
+   Args:                                                          
+     kernel (str): Name of the contouring kernel. Valid names are: Circle, Ellipse, LevelSet, Polygon, SplinePolygon or Threshold. 
+
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>loft</strong>
+   loft(polydata_list, loft_options) 
+   
+   Create a lofted surface from a list of polydata curves.                  
+   
+   The loft method fits a surface through two or more profile curves that   
+   define the surface shape. This is typically used to create a surface of  
+   a vessel from a group of contours segmenting the vessel's lumen.         
+   
+   The surface is created using splines interpolating profile points along  
+   the its length and linearly interpolation around its profile.            
+   
+   Args: 
+     polydata_list (list[vtkPolyData]): The list of vtkPolyData objects     
+        representing the profile curves defining a surface.                 
+     loft_options (sv.geometry.LoftOptions): The LoftOptions object         
+        containing lofting parameter values.                                
+   
+   Returns (vtkPolyData): The vtkPolyData object of the lofted surface.     
+
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>loft_nurbs</strong>
+   loft_nurbs(polydata_list, loft_options) 
+   
+   Create a lofted NURBS surface from a list of polydata curves.            
+   
+   The loft method fits a surface through two or more profile curves that   
+   define the surface shape. This is typically used to create a surface of  
+   a vessel from a group of contours segmenting the vessel's lumen.         
+   
+   Args: 
+     polydata_list (list[vtkPolyData]): The list of vtkPolyData objects     
+        representing the profile curves defining a surface.                 
+     loft_options (sv.geometry.LoftNurbsOptions): The LoftNurbsOptions      
+        object containing lofting parameter values.                         
+   
+   Returns (vtkPolyData): The vtkPolyData object of the lofted surface.     
+
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>point_inside</strong>
+   point_inside(polydata, point) 
+   
+   Determine if a 3D point is inside or outside of a solid.                
+   
+   Args: 
+     polydata (vtkPolyData): The vtkPolyData object representing a solid   
+        as a closed surface 
+     point ([float, float, float]): The 3D point to classify.              
+   
+   Returns True if the point is inside the solid, False if it is outside.  
+
+</pre> 
+
+

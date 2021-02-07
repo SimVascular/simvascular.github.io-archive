@@ -1,0 +1,68 @@
+<pre class="PythonMethodsPre">The modeling OpenCascade class is used to represent an Open Cascade    
+solid model.                                                           </pre> 
+<br>
+<legend style="font-size:20px; text-align:left"> <b> Methods </b> </legend> 
+<pre class="PythonMethodsPre"><strong>compute_boundary_faces</strong>(angle)  
+   
+   Compute the boundary faces for the solid model. 
+   
+   This method needs to be called when creating new PolyData or reading in  
+   models that don't have faces already defined (e.g. models derived from   
+   STL data). It does not need to be called for OpenCascade or Parasolid    
+   models.
+   
+   For PolyData models faces are distinguished using the angle of the       
+   normals between adjacent triangles. If the angle is less than or equal   
+   to the 'angle' argument then the triangles are considered to part of     
+   the same face. 
+   
+   Args: 
+     angle (float): The angle used to distinguish faces in a model.         
+   
+   Returns list([int]): The list of integer face IDs. 
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>get_face_ids</strong>()  
+   
+   Get the model face IDs. 
+   
+   Face IDs identify the boundary faces representing the solid model. They  
+   are used to identify a face for certain operations (e.g. get_face_polydata). 
+   
+   Returns list([int]): The list of integer face IDs. 
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>get_face_polydata</strong>(face_id)  
+   
+   Get the polydata geometry for a face.  
+   
+   Args: 
+     face_id (int): The face ID. 
+   
+   Returns (vtkPolyData object): The vtkPolyData object containing the face geometry.  
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>get_polydata</strong>()  
+   
+   Get the polydata geometry for the model.  
+   
+   Returns (vtkPolyData object): The vtkPolyData object containing the model geometry.  
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>write</strong>(file_name, format)  
+   
+   Write the solid model to a file in its native format. 
+   
+   The native formats supported for each modeling kernel are: 
+   
+         OpenCascade: brep 
+   
+         Parasolid: xmt_txt 
+   
+         PolyData: ply, stl, vtk and vtp  
+   
+   Args: 
+     file_name (str): The name in the file to write the model to. 
+     format (str): The native format to write the model to. 
+</pre> 
+<br>

@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: class Series</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><strong>sv.pathplanning.Series</strong> = <a name="sv.pathplanning.Series">class Series</a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>The&nbsp;Paths&nbsp;class&nbsp;provides&nbsp;methods&nbsp;for&nbsp;querying,&nbsp;creating,&nbsp;and&nbsp;modifying&nbsp;SV&nbsp;path&nbsp;planning&nbsp;group&nbsp;objects.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Series-__init__"><strong>__init__</strong></a>(self, /, *args, **kwargs)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="Series-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;object.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="Series-get_calculation_number"><strong>get_calculation_number</strong></a>(...)</dt><dd><tt><a href="#sv.pathplanning.Series-get_calculation_number">get_calculation_number</a>()&nbsp;<br>
+&nbsp;<br>
+Get&nbsp;the&nbsp;path&nbsp;group's&nbsp;calculation&nbsp;number.&nbsp;<br>
+&nbsp;<br>
+Returns&nbsp;(int):&nbsp;The&nbsp;path&nbsp;group's&nbsp;calculation&nbsp;number.</tt></dd></dl>
+
+<dl><dt><a name="Series-get_method"><strong>get_method</strong></a>(...)</dt><dd><tt><a href="#sv.pathplanning.Series-get_method">get_method</a>()&nbsp;<br>
+&nbsp;<br>
+Get&nbsp;the&nbsp;path&nbsp;group&nbsp;method.&nbsp;<br>
+&nbsp;<br>
+Returns&nbsp;(str):&nbsp;The&nbsp;path&nbsp;group's&nbsp;method&nbsp;name.</tt></dd></dl>
+
+<dl><dt><a name="Series-get_num_times"><strong>get_num_times</strong></a>(...)</dt><dd><tt><a href="#sv.pathplanning.Series-get_num_times">get_num_times</a>()&nbsp;<br>
+&nbsp;<br>
+Get&nbsp;the&nbsp;number&nbsp;of&nbsp;time&nbsp;steps&nbsp;paths&nbsp;are&nbsp;defined&nbsp;for.&nbsp;&nbsp;<br>
+&nbsp;<br>
+Returns&nbsp;(int):&nbsp;The&nbsp;number&nbsp;of&nbsp;time&nbsp;steps&nbsp;paths&nbsp;are&nbsp;defined&nbsp;for.</tt></dd></dl>
+
+<dl><dt><a name="Series-get_path"><strong>get_path</strong></a>(...)</dt><dd><tt><a href="#sv.pathplanning.Series-get_path">get_path</a>(time=0)&nbsp;<br>
+&nbsp;<br>
+Get&nbsp;the&nbsp;path&nbsp;for&nbsp;a&nbsp;given&nbsp;time.&nbsp;<br>
+&nbsp;<br>
+Args:&nbsp;<br>
+&nbsp;&nbsp;time&nbsp;(Optional[int]):&nbsp;The&nbsp;time&nbsp;to&nbsp;get&nbsp;the&nbsp;path&nbsp;for.&nbsp;<br>
+&nbsp;<br>
+Returns&nbsp;(sv.path.Path&nbsp;object):&nbsp;The&nbsp;path&nbsp;object&nbsp;for&nbsp;the&nbsp;given&nbsp;time.</tt></dd></dl>
+
+<dl><dt><a name="Series-get_path_id"><strong>get_path_id</strong></a>(...)</dt><dd><tt><a href="#sv.pathplanning.Series-get_path_id">get_path_id</a>()&nbsp;<br>
+&nbsp;<br>
+Get&nbsp;the&nbsp;path&nbsp;time&nbsp;ID.&nbsp;<br>
+&nbsp;<br>
+Returns&nbsp;(int):&nbsp;The&nbsp;time&nbsp;ID&nbsp;of&nbsp;the&nbsp;path&nbsp;series.</tt></dd></dl>
+
+<dl><dt><a name="Series-get_spacing"><strong>get_spacing</strong></a>(...)</dt><dd><tt><a href="#sv.pathplanning.Series-get_spacing">get_spacing</a>()&nbsp;<br>
+&nbsp;<br>
+Get&nbsp;the&nbsp;spacing&nbsp;for&nbsp;the&nbsp;path&nbsp;group.&nbsp;<br>
+&nbsp;<br>
+Returns&nbsp;(float):&nbsp;The&nbsp;spacing&nbsp;for&nbsp;the&nbsp;path&nbsp;group.</tt></dd></dl>
+
+<dl><dt><a name="Series-set_calculation_number"><strong>set_calculation_number</strong></a>(...)</dt><dd><tt><a href="#sv.pathplanning.Series-set_calculation_number">set_calculation_number</a>(number)&nbsp;<br>
+&nbsp;<br>
+Set&nbsp;the&nbsp;path&nbsp;group's&nbsp;calculation&nbsp;number.&nbsp;<br>
+&nbsp;<br>
+Args:&nbsp;<br>
+&nbsp;&nbsp;number&nbsp;(int):&nbsp;The&nbsp;calculation&nbsp;number.</tt></dd></dl>
+
+<dl><dt><a name="Series-set_method"><strong>set_method</strong></a>(...)</dt><dd><tt><a href="#sv.pathplanning.Series-set_method">set_method</a>(method)&nbsp;<br>
+&nbsp;<br>
+Set&nbsp;the&nbsp;path&nbsp;group&nbsp;method.&nbsp;<br>
+&nbsp;<br>
+Args:&nbsp;<br>
+&nbsp;&nbsp;method&nbsp;(str):&nbsp;The&nbsp;subdivision&nbsp;method&nbsp;name.&nbsp;Valid&nbsp;names&nbsp;are:&nbsp;SPACING,&nbsp;SUBDIVISION&nbsp;or&nbsp;TOTAL</tt></dd></dl>
+
+<dl><dt><a name="Series-set_path"><strong>set_path</strong></a>(...)</dt><dd><tt><a href="#sv.pathplanning.Series-set_path">set_path</a>(path,&nbsp;time)&nbsp;<br>
+&nbsp;<br>
+Set&nbsp;the&nbsp;path&nbsp;for&nbsp;a&nbsp;given&nbsp;time.&nbsp;<br>
+&nbsp;<br>
+Args:&nbsp;<br>
+&nbsp;&nbsp;path&nbsp;(sv.path.Path&nbsp;object):&nbsp;The&nbsp;path&nbsp;object&nbsp;to&nbsp;set.<br>
+&nbsp;&nbsp;time&nbsp;(int):&nbsp;The&nbsp;time&nbsp;to&nbsp;set&nbsp;the&nbsp;path&nbsp;for.</tt></dd></dl>
+
+<dl><dt><a name="Series-set_path_id"><strong>set_path_id</strong></a>(...)</dt><dd><tt><a href="#sv.pathplanning.Series-set_path_id">set_path_id</a>(id)&nbsp;<br>
+&nbsp;<br>
+Set&nbsp;the&nbsp;ID&nbsp;for&nbsp;the&nbsp;path&nbsp;group.&nbsp;<br>
+&nbsp;<br>
+Args:&nbsp;<br>
+&nbsp;&nbsp;id&nbsp;(int):&nbsp;The&nbsp;path&nbsp;ID.</tt></dd></dl>
+
+<dl><dt><a name="Series-set_spacing"><strong>set_spacing</strong></a>(...)</dt><dd><tt><a href="#sv.pathplanning.Series-set_spacing">set_spacing</a>(spacing)&nbsp;<br>
+&nbsp;<br>
+Set&nbsp;the&nbsp;spacing&nbsp;used&nbsp;by&nbsp;the&nbsp;SPACING&nbsp;method.&nbsp;<br>
+&nbsp;<br>
+Args:&nbsp;<br>
+&nbsp;&nbsp;spacing&nbsp;(float):&nbsp;The&nbsp;spacing&nbsp;value.</tt></dd></dl>
+
+<dl><dt><a name="Series-write"><strong>write</strong></a>(...)</dt><dd><tt><a href="#sv.pathplanning.Series-write">write</a>(file_name)&nbsp;<br>
+&nbsp;<br>
+Write&nbsp;the&nbsp;path&nbsp;group&nbsp;to&nbsp;an&nbsp;SV&nbsp;.pth&nbsp;file.<br>
+&nbsp;<br>
+Args:&nbsp;<br>
+&nbsp;&nbsp;file_name&nbsp;(str):&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;file&nbsp;to&nbsp;write&nbsp;the&nbsp;path&nbsp;group&nbsp;to.</tt></dd></dl>
+
+</td></tr></table>
+</body></html>

@@ -1,0 +1,127 @@
+<pre class="PythonMethodsPre"><strong>add_geometry</strong>
+   add_geometry(name, geometry, plugin, node) 
+   
+   Add a vtkPolyData object to the SV Data Manager. 
+   
+   The geometry is added to the SV Data Manger under the given plugin and  
+   node, and is displayed in the SV graphics window.
+   
+   Args: 
+     name (str): The name of the data node. 
+     geometry (vtkPolyData object): The vtkPolyData to add to the SV Data  
+        Manager.                                                           
+     plugin (str): The name of the plugin the data node resides under.     
+        Valid names: Image, Mesh, Model, Path, or Segmentation.            
+     node (str): The date node name to add the geomerty to.                
+
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>add_mesh</strong>
+   add_mesh(name, mesh, model)  
+   
+   Add a mesh to the SV Data Manager Meshes node. 
+   
+   Args: 
+     name (str): The name of the mesh data node.                           
+     mesh (vtkUnstructuredGrid object): The vtkUnstructuredGrid object.    
+     model (str): The name of the SV Data Manager Models node associated   
+        with the mesh.                                                     
+
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>add_model</strong>
+   add_model(name, model) 
+   
+   Add a model to the SV Data Manager Models node.                            
+   
+   Args: 
+     name (str): The name for the model data node.                            
+     model (sv.modeling.Modeler): The model object representing a solid model.
+
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>add_path</strong>
+   add_path(name, path)  
+   
+   Add a path to the SV Data Manager Paths node. 
+   
+   Args: 
+     name (str): The name of the path data node.                           
+     path (sv.path.Path object): The path object to create the path node from. 
+
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>add_segmentation</strong>
+   add_segmentation(name, path, segmentations) 
+   
+   Add a segmentation to the SV Data Manager Segmentations node. 
+   
+   Args: 
+     name (str): The name of the segmentations data node to add. 
+     path (str): The name of the path data node used by the segmentation. 
+     segmentations (list[Segmentation]): The list of segmentation objects 
+        defined for a vessel segmentation.                                
+
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>get_mesh</strong>
+   get_mesh(name) 
+   
+   Get a mesh from the SV Data Manager Meshes node. 
+   
+   Args: 
+     name (str): The mesh node name. 
+   
+   Returns a vtkUnstructuredGrid object.  
+
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>get_model</strong>
+   get_model(name) 
+   
+   Get a model from the SV Data Manager Models node. 
+   
+   The model returned is an sv.modeling modeler object of the same type used  
+   used to create the model in SimVascular. For example, getting a PolyData   
+   model returns an sv.modeling.PolyData object.                              
+   
+   Args: 
+     name (str): The model node name. 
+   
+   Returns a model object.                                                    
+
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>get_path</strong>
+   get_path(name) 
+   
+   Get a path from the SV Data Manager Paths node. 
+   
+   Args: 
+     name (str): The name of the path data node. 
+   
+   Returns an sv.path.Path object.  
+
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>get_segmentations</strong>
+   get_segmentations(name) 
+   
+   Get the segmentations from an SV Data Manager Segmentations node.          
+   
+   Args: 
+     name (str): The segmentation node name. 
+   
+   Returns a list of sv.segmentation.Segmentation objects.                    
+
+</pre> 
+
+

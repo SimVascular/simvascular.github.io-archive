@@ -1,0 +1,50 @@
+<pre class="PythonMethodsPre"><strong>Series</strong>(file_name) 
+
+The meshing Series class provides an interface to SV time-varying meshes.  
+A time series of meshes created from time-varying model data are stored in 
+this class.                                                                
+
+A Series object can be created with the name of an SV .msh meshing         
+file. The file is read and a Mesh object is created for each time point    
+defined in the file.                                                       
+
+Example: Creating a Series object from a .msh file                         
+
+    mesh_series = sv.meshing.Series("demo.msh")                          
+
+Args:
+  file_name (Optional[str]): The name of an SV .msh meshing file.          </pre> 
+<br>
+<legend style="font-size:20px; text-align:left"> <b> Methods </b> </legend> 
+<pre class="PythonMethodsPre"><strong>get_mesh</strong>(time=0) 
+   
+   Get the mesh object for the given time. The meshing options read from   
+   the SV mesh .msh file are also returned.                                
+   
+   Example: Getting the mesh and options for time 0                        
+   
+       mesh, options = mesh_series(time=0)                                 
+   
+   Args: 
+     time (Optional[int]): The time to get the mesh for.                    
+         0 <= time < number of time points in the series.                   
+   
+   Returns mesher and options objects for the meshing kernel defined for    
+       the series. 
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>get_num_times</strong>() 
+   
+   Get the number of time points in the series. 
+   
+   Returns (int): The number of time points in the series.
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>write</strong>(file_name) 
+   
+   Write the mesh group to an SV .msh file.
+   
+   Args: 
+     file_name (str): The name of the file to write the mesh group to. 
+</pre> 
+<br>

@@ -1,0 +1,36 @@
+<pre class="PythonMethodsPre">ContourGroup  objects</pre> 
+<br>
+<legend style="font-size:20px; text-align:left"> <b> Methods </b> </legend> 
+<pre class="PythonMethodsPre"><strong>get_num_segmentations</strong>(time=0) 
+   
+   Get the number of segmentations for the given time. 
+   
+   Args: 
+     time (Optional[int]): The time to get the number of segmentation for. 
+   
+   Returns (int): The number of segmentations for the given time.
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>get_num_times</strong>() 
+   
+   Get the number of time points in the series. 
+   
+   Returns (int): The number of time points in the series.
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>get_segmentation</strong>(id, time=0) 
+   
+   Get the segmentation for the given id and time.                            
+   
+   The segmentation id identifies a segmentation from a list of segmentations 
+   defined for each time point. The id is between 0 and the number of         
+   segementations - 1.                                                        
+   
+   Args: 
+     id (int): The id of the segmentation to get. 0 <= id <= #segmentations-1 
+     time (Optional[int]): The time to get the segmentation for.              
+   
+   Returns (sv.segmentation.Segmentation): The segmentation object for the    
+      given id and time.                                                      
+</pre> 
+<br>
