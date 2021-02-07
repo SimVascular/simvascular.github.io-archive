@@ -24,19 +24,19 @@ The temporal evolution of the level set function is described by a partial diffe
 
    <li> Propagation term that governs the expansion speed
 
-   <li> Smoothenss constraint for the mean curvature of the surface </li>
+   <li> Smoothness constraint for the mean curvature of the surface </li>
 </ol>
 
 Weights are assigned to regulate the influence of each term on surface evolution. Weights may need to be adjusted for different image modalities
-with differnt properties (e.g. signal to noise ratio).
+with different properties (e.g. signal to noise ratio).
 
 The level set formulation requires computing an image gradient. Derivatives are computed for the image data by applying using a  
 Gaussian smoothing filter with a user defined value for the standard deviation. Applying a smoothing filter decreases the effect of 
 image noise on derivative computation but may remove image features below the scale corresponding to the standard deviation used.
 
-The level set equation is solved numericaly for a number of iterations (time steps) incrementally updating the level set function and implicitly 
+The level set equation is solved numerically for a number of iterations (time steps) incrementally updating the level set function and implicitly 
 the segmentation surface. Enough iterations need to be performed so that the surface expands close to the boundaries of the anatomical structures 
-that are being segmented. The result of the level set computation is the level set function reprenting a segmentation image. The geometry
+that are being segmented. The result of the level set computation is the level set function representing a segmentation image. The geometry
 of the segmentation surface, a triangle mesh, is then extracted from this image at the zero isolevel. 
 
 After a segmentation surface has been extracted centerlines and SimVascular paths can be then computed for it. The path files can be
@@ -101,12 +101,12 @@ itself has four sub-nodes used to store and display geometry created by each of 
 <br>
 
 Data created by the <b>3D Level Set Tool</b> is stored in files under a project's <i>Images/level-set</i> directory. 
-The details of each file is descibed in the sections below for the panel that creates it.
+The details of each file is described in the sections below for the panel that creates it.
 
 <br>
 <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #e6e600; border-left: 6px solid #e6e600">
 Unlike other SimVascular plugins the <b>3D Level Set Tool</b> does not currently save the values of the parameters set in the
-panels nor does it store seed postions. The capability to restore the tool's state will be added in a future SimVascular release.
+panels nor does it store seed positions. The capability to restore the tool's state will be added in a future SimVascular release.
 </div>
 
 <!-- ====================================== Seeds Panel  ================================= -->
@@ -185,7 +185,7 @@ The segmentation surface geometry is stored in a file named <i>surface.vtp</i> i
 
 <i>Advection weight</i> - The weight used to regulate the attraction of the surface towards the ridges of the image gradient magnitude.
 
-<i>Curvature weight</i> - The weight used to regulate the surface mean curvature smoothenss constraint.
+<i>Curvature weight</i> - The weight used to regulate the surface mean curvature smoothness constraint.
 
 <i>Number of iterations</i> - The number of iterations to incrementally update (evolve in time) the level set function. 
 
@@ -229,7 +229,7 @@ identified in the centerlines geometry. The number of path points created for ea
 
 When the extract paths computation has completed the paths are displayed as yellow spheres in the graphics window.
 The path extracted is stored in a file named <i>path_N.pth</i>, where N = 1 to the number of paths, in the project's 
-<i>Images/level-set</i> directory. Existing path files are removed before writting the new path files.
+<i>Images/level-set</i> directory. Existing path files are removed before writing the new path files.
 
 <br>
 <img src="documentation/modeling/imgs/3d-level-set/paths-panel.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
@@ -275,7 +275,7 @@ the center of the aorta. Press the <i>S</i> key to create a start seed; it is di
 <b>Step 4 - Create end seeds for the left and right iliacs</b> <br>
 Move the crosshairs in the 2D Saggital window down until the iliac arteries can be seen in the 2D Axial window. Move the crosshairs 
 in the 2D Axial window to the center of the left iliac and press the <i>E</i> key to create an end seed.  
-Move the crosshairs in the 2D Axial window to the center of the rigth iliac and press the <i>E</i> key to create another end seed.
+Move the crosshairs in the 2D Axial window to the center of the right iliac and press the <i>E</i> key to create another end seed.
 The end seeds are displayed as a red spheres.
 <figure>
 <img class="svImg svImgXl" src="documentation/modeling/imgs/3d-level-set/example-1/fig-4.png">
