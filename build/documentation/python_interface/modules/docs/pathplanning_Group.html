@@ -1,0 +1,111 @@
+The Group class provides methods for querying, creating, and modifying SV path planning group objects.   
+<br>
+<br>
+
+<legend style="font-size:20px; text-align:left"> <b> Methods </b> </legend> 
+<pre class="PythonMethodsPre"><strong>get_calculation_number()</strong> 
+   
+   Get the path group's calculation number. 
+   
+   Returns (int): The path group's calculation number. 
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>get_method()</strong> 
+   
+   Get the path group method. 
+   
+   Returns (str): The path group's method name. 
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>get_num_paths()</strong> 
+   
+   Get the number of paths stored in the group.  
+   
+   Returns (int): The number of paths stored in the group. 
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>get_path(time)</strong> 
+   
+   Get the path for a given time. 
+   
+   Args: 
+     time (int): The time to get the path for. 
+   
+   Returns (sv.path.Path object): The path object for the given time.
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>get_path_id()</strong> 
+   
+   Get the path group id. 
+   
+   Returns (int): The ID of the path group.
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>get_spacing()</strong> 
+   
+   Get the spacing for the path group. 
+   
+   Returns (float): The spacing for the path group. 
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>set_calculation_number(number)</strong> 
+   
+   Set the path group's calculation number. 
+   
+   Args: 
+     number (int): The calculation number. 
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>set_method(method)</strong> 
+   
+   Set the path group method. 
+   
+   Args: 
+     method (str): The subdivision method name. Valid names are: SPACING, SUBDIVISION or TOTAL 
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>set_path(path, time)</strong> 
+   
+   Set the path for a given time. 
+   
+   Args: 
+     path (sv.path.Path object): The path object to set.
+     time (int): The time to set the path for. 
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>set_path_id(id)</strong> 
+   
+   Set the ID for the path group. 
+   
+   Args: 
+     id (int): The path ID.
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>set_spacing(spacing)</strong> 
+   
+   Set the spacing used by the SPACING method. 
+   
+   Args: 
+     spacing (float): The spacing value. 
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>write(file_name)</strong> 
+   
+   Write the path group to an SV .pth file.
+   
+   Args: 
+     file_name (str): The name of the file to write the path group to.
+</pre> 
+
+

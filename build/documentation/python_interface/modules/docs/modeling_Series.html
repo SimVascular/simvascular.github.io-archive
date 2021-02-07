@@ -1,0 +1,49 @@
+<pre class="PythonMethodsPre">SimVascular modeling Series class. 
+
+Series(file_name) 
+
+The modeling Series class provides an interface to SV time-varying       
+models. Models created from time-varying image data are stored in this   
+class.                                                                   
+
+A Series object can be created with the name of an SV .mdl modelinng     
+file. The file is read and Model objects are created for each time       
+point defined in the file.                                               
+
+Example: Creating a modeling Series object from a .mdl file              
+
+    model_series = sv.modeling.Series("demo.mdl")                      
+
+Args:
+  file_name (Optional[str]): The name of an SV .mdl modeling file.       </pre> 
+<br>
+<legend style="font-size:20px; text-align:left"> <b> Methods </b> </legend> 
+<pre class="PythonMethodsPre"><strong>get_model</strong>(time=0) 
+   
+   Get the solid model object for a given time. 
+   
+   Args: 
+     time Optional[int]): The time step to get the solid model for. 
+         0 <= time < number of time points in the series.           
+   
+   Returns (ModelingModel object): The ModelingModel object for the solid model.
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>get_num_times</strong>() 
+  
+   Get the number of time points in the series. 
+   
+   Returns (int): The number of time points in the series.
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>write</strong>(file_name) 
+   
+   Write the modeling group to an SV .mdl format file.
+   
+   The .mdl file stores modeling group data in an XML format that 
+   that can be read by SV into a SV Modeling node. 
+   
+   Args: 
+     file_name (str): The name of the file to write the modeling group to. 
+</pre> 
+<br>

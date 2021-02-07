@@ -1,0 +1,44 @@
+$ simvascular --python
+>>> import sv
+>>> help(sv)
+
+Help on package sv:
+
+NAME
+    sv - SimVascular Python API
+
+DESCRIPTION
+    The sv package provides an application programming interface (API) for accessing core 
+    SimVascular functions. The API defines a number of Python modules and classes used to 
+    access, manipulate and create data for each of the path planning, segmentation, modeling, 
+    mesh generation and simulation steps in the SimVascular image-based modeling pipeline. 
+    Custom Python scripts can be written to augment the functionality provided by the 
+    SimVascular GUI and to automate modeling tasks for optimization, uncertainty quantification, 
+    and studies with large patient cohorts.
+    
+    The sv package defines the following modules
+
+      dmg - Access to SV Data Manager nodes 
+      geometry - Functions operating on VTK PolyData objects 
+      meshing - Classes and methods for meshing 
+      modeling - Classes and methods for modeling 
+      pathplanning - Classes and methods for path plannning 
+      segmentation - Classes and methods for segmentation 
+      vmtk - Interrface to several VMTK funcntions 
+
+PACKAGE CONTENTS
+    loft_nurbs_options
+    meshsim_options
+
+DATA
+    meshsim_plugin = None
+    parasolid_plugin = None
+    project = None
+    python_api_lib = 'lib_simvascular_python_api'
+    seg_lib = 'lib_simvascular_segmentation'
+    solid_occt = None
+
+FILE
+    SimVascular/Python/site-packages/sv/__init__.py
+
+

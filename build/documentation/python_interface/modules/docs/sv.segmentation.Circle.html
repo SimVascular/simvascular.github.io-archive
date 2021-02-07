@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: class Circle</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><strong>sv.segmentation.Circle</strong> = <a name="sv.segmentation.Circle">class Circle</a>(builtins.Segmentation)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Circle(radius,&nbsp;center=None,&nbsp;normal=None,&nbsp;frame=None)&nbsp;&nbsp;<br>
+&nbsp;<br>
+The&nbsp;CircleSegmentation&nbsp;class&nbsp;provides&nbsp;an&nbsp;interface&nbsp;for&nbsp;creating&nbsp;a&nbsp;circle&nbsp;segmentation.&nbsp;<br>
+A&nbsp;circle&nbsp;segmentation&nbsp;is&nbsp;defined&nbsp;by&nbsp;a&nbsp;radius,&nbsp;a&nbsp;3D&nbsp;point&nbsp;defining&nbsp;its&nbsp;center&nbsp;and&nbsp;a&nbsp;normal.&nbsp;<br>
+The&nbsp;normal&nbsp;defines&nbsp;its&nbsp;orientation&nbsp;(i.e.&nbsp;the&nbsp;plane&nbsp;the&nbsp;circle&nbsp;lies&nbsp;in).&nbsp;<br>
+&nbsp;<br>
+A&nbsp;CircleSegmentation&nbsp;object&nbsp;is&nbsp;created&nbsp;using&nbsp;a&nbsp;radius,&nbsp;center&nbsp;and&nbsp;normal&nbsp;or&nbsp;a&nbsp;PathFrame&nbsp;object.&nbsp;<br>
+&nbsp;<br>
+&nbsp;<br>
+A&nbsp;PathFrame&nbsp;object&nbsp;contains&nbsp;a&nbsp;path's&nbsp;interpolating&nbsp;spline&nbsp;(curve&nbsp;points)&nbsp;position,&nbsp;tangent,&nbsp;and&nbsp;normal&nbsp;data&nbsp;<br>
+at&nbsp;a&nbsp;given&nbsp;location.&nbsp;The&nbsp;position&nbsp;is&nbsp;used&nbsp;for&nbsp;the&nbsp;circle&nbsp;center,&nbsp;the&nbsp;tangent&nbsp;for&nbsp;its&nbsp;normal.<br>
+&nbsp;<br>
+Args:&nbsp;<br>
+&nbsp;&nbsp;radius&nbsp;(float):&nbsp;The&nbsp;circle&nbsp;radius.&nbsp;<br>
+&nbsp;&nbsp;center&nbsp;(list([float,float,float]):&nbsp;The&nbsp;circle&nbsp;center.&nbsp;<br>
+&nbsp;&nbsp;normal(list([float,float,float]):&nbsp;The&nbsp;circle&nbsp;normal&nbsp;direction.&nbsp;<br>
+&nbsp;&nbsp;frame&nbsp;(Optional[PathFrame]):&nbsp;A&nbsp;PathFrame&nbsp;object&nbsp;defing&nbsp;the&nbsp;circle's&nbsp;center&nbsp;and&nbsp;coordinate&nbsp;frame.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd>Circle</dd>
+<dd>builtins.Segmentation</dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Circle-__init__"><strong>__init__</strong></a>(self, /, *args, **kwargs)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="Circle-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;object.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="Circle-get_center"><strong>get_center</strong></a>(...)</dt><dd><tt><a href="#sv.segmentation.Circle-get_center">get_center</a>()&nbsp;<br>
+&nbsp;<br>
+Get&nbsp;the&nbsp;circle&nbsp;segmentation&nbsp;center.&nbsp;<br>
+&nbsp;<br>
+Returns&nbsp;(list([float,float,float]):&nbsp;The&nbsp;circle&nbsp;center.</tt></dd></dl>
+
+<dl><dt><a name="Circle-get_normal"><strong>get_normal</strong></a>(...)</dt><dd><tt><a href="#sv.segmentation.Circle-get_normal">get_normal</a>()&nbsp;<br>
+&nbsp;<br>
+Get&nbsp;the&nbsp;circle&nbsp;segmentation&nbsp;normal.&nbsp;<br>
+&nbsp;<br>
+Returns&nbsp;(list([float,float,float]):&nbsp;The&nbsp;circle&nbsp;normal.</tt></dd></dl>
+
+<dl><dt><a name="Circle-get_radius"><strong>get_radius</strong></a>(...)</dt><dd><tt><a href="#sv.segmentation.Circle-get_radius">get_radius</a>(r)&nbsp;<br>
+&nbsp;<br>
+Get&nbsp;the&nbsp;radius&nbsp;for&nbsp;a&nbsp;circle&nbsp;segmentation.&nbsp;<br>
+&nbsp;<br>
+Returns&nbsp;(float):&nbsp;The&nbsp;radius&nbsp;of&nbsp;the&nbsp;circle.</tt></dd></dl>
+
+<dl><dt><a name="Circle-set_center"><strong>set_center</strong></a>(...)</dt><dd><tt><a href="#sv.segmentation.Circle-set_center">set_center</a>(center)&nbsp;<br>
+&nbsp;<br>
+Set&nbsp;the&nbsp;circle&nbsp;segmentation&nbsp;center.&nbsp;<br>
+&nbsp;<br>
+Args:&nbsp;<br>
+&nbsp;&nbsp;center&nbsp;(list([float,float,float]):&nbsp;The&nbsp;circle&nbsp;center.</tt></dd></dl>
+
+<dl><dt><a name="Circle-set_frame"><strong>set_frame</strong></a>(...)</dt><dd><tt><a href="#sv.segmentation.Circle-set_frame">set_frame</a>(frame)&nbsp;<br>
+&nbsp;<br>
+Set&nbsp;the&nbsp;circle&nbsp;segmentation&nbsp;coordinate&nbsp;frame&nbsp;using&nbsp;a&nbsp;PathFrame&nbsp;object.&nbsp;<br>
+&nbsp;<br>
+Args:&nbsp;<br>
+&nbsp;&nbsp;frame&nbsp;(PathFrame):&nbsp;The&nbsp;PathFrame&nbsp;object&nbsp;defing&nbsp;the&nbsp;circle's&nbsp;center&nbsp;and&nbsp;coordinate&nbsp;frame.</tt></dd></dl>
+
+<dl><dt><a name="Circle-set_normal"><strong>set_normal</strong></a>(...)</dt><dd><tt><a href="#sv.segmentation.Circle-set_normal">set_normal</a>(normal)&nbsp;&nbsp;<br>
+&nbsp;<br>
+Set&nbsp;the&nbsp;circle&nbsp;segmentation&nbsp;normal.&nbsp;<br>
+&nbsp;<br>
+Args:&nbsp;<br>
+&nbsp;&nbsp;normal&nbsp;(list([float,float,float]):&nbsp;The&nbsp;circle&nbsp;normal.</tt></dd></dl>
+
+<dl><dt><a name="Circle-set_radius"><strong>set_radius</strong></a>(...)</dt><dd><tt><a href="#sv.segmentation.Circle-set_radius">set_radius</a>(radius)&nbsp;<br>
+&nbsp;<br>
+Set&nbsp;the&nbsp;radius&nbsp;for&nbsp;a&nbsp;circle&nbsp;segmentation.&nbsp;<br>
+&nbsp;<br>
+Args:&nbsp;<br>
+&nbsp;&nbsp;radius&nbsp;(float):&nbsp;The&nbsp;radius&nbsp;of&nbsp;the&nbsp;circle.</tt></dd></dl>
+
+<hr>
+Methods inherited from builtins.Segmentation:<br>
+<dl><dt><a name="Circle-get_id"><strong>get_id</strong></a>(...)</dt><dd><tt><a href="#sv.segmentation.Circle-get_id">get_id</a>()&nbsp;&nbsp;<br>
+&nbsp;<br>
+Get&nbsp;the&nbsp;contour&nbsp;ID.&nbsp;<br>
+&nbsp;<br>
+Args:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;None&nbsp;<br>
+&nbsp;<br>
+Returns&nbsp;int:&nbsp;The&nbsp;contour&nbsp;id.</tt></dd></dl>
+
+<dl><dt><a name="Circle-get_path_point"><strong>get_path_point</strong></a>(...)</dt><dd><tt><a href="#sv.segmentation.Circle-get_path_point">get_path_point</a>()&nbsp;&nbsp;<br>
+&nbsp;<br>
+Get&nbsp;the&nbsp;contour&nbsp;path&nbsp;point.&nbsp;<br>
+&nbsp;<br>
+Args:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;None&nbsp;<br>
+&nbsp;<br>
+Returns&nbsp;dict(pos:[x,y,z],&nbsp;tangent:[x,y,z],&nbsp;rotation:[x,y,z]):&nbsp;The&nbsp;contour&nbsp;path&nbsp;point.</tt></dd></dl>
+
+<dl><dt><a name="Circle-get_points"><strong>get_points</strong></a>(...)</dt><dd><tt><a href="#sv.segmentation.Circle-get_points">get_points</a>()&nbsp;&nbsp;<br>
+&nbsp;<br>
+Get&nbsp;the&nbsp;segmentation&nbsp;contour&nbsp;points.&nbsp;<br>
+&nbsp;<br>
+Args:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;None&nbsp;<br>
+&nbsp;<br>
+Returns&nbsp;list([x,y,z]):&nbsp;The&nbsp;list&nbsp;of&nbsp;contour&nbsp;points.</tt></dd></dl>
+
+<dl><dt><a name="Circle-get_polydata"><strong>get_polydata</strong></a>(...)</dt><dd><tt>get_vtk_polydata()&nbsp;&nbsp;<br>
+&nbsp;<br>
+Get&nbsp;the&nbsp;contour&nbsp;type.&nbsp;<br>
+&nbsp;<br>
+Args:&nbsp;<br>
+&nbsp;&nbsp;None&nbsp;<br>
+Returns&nbsp;(str):&nbsp;contour&nbsp;type.</tt></dd></dl>
+
+<dl><dt><a name="Circle-get_type"><strong>get_type</strong></a>(...)</dt><dd><tt><a href="#sv.segmentation.Circle-get_type">get_type</a>()&nbsp;&nbsp;<br>
+&nbsp;<br>
+Get&nbsp;the&nbsp;contour&nbsp;type.&nbsp;<br>
+&nbsp;<br>
+Args:&nbsp;<br>
+&nbsp;&nbsp;None&nbsp;<br>
+Returns&nbsp;(str):&nbsp;contour&nbsp;type.</tt></dd></dl>
+
+</td></tr></table>
+</body></html>

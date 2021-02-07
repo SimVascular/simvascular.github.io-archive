@@ -1,0 +1,30 @@
+<legend style="font-size:20px; text-align:left"> <b> Functions </b> </legend> 
+<pre class="PythonMethodsPre"><strong>create_adaptive_mesher</strong>
+   create_adaptive_mesher(kernel)  
+   
+   Create an adaptive mesh generator. 
+   
+   Args: 
+     None 
+
+</pre> 
+
+
+<pre class="PythonMethodsPre"><strong>create_mesher</strong>
+   create_mesher(kernel)  
+   
+   Create a mesher object for the given kernel. 
+   
+   Meshing kernels are identified using the meshing.Kernel class.           
+   
+   Exmaple: Create a TetGen mesher                                          
+   
+       mesher = sv.meshing.create_mesher(sv.meshing.Kernel.TETGEN)          
+   
+   Args: 
+     kernel (str): The name of the meshing kernel.  
+   
+
+</pre> 
+
+

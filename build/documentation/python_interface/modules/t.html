@@ -1,0 +1,42 @@
+The pathplanning module provides an interface for SV path planning. Paths  model vessel centerlines using a small number of manually selected 
+control points. Path geometry is represented by a set of curve points sampled from a spline passing through the control points. Path curve 
+points are used to postition a slice plane for image segmentaion.                             
+<br> <br>
+
+<legend style="font-size:20px; text-align:left"> <b> Methods </b> </legend>
+
+<!---           add_control_point           ---> 
+<pre class="PythonMethodsPre">
+<strong>add_control_point(point, index=None) </strong> 
+
+   Add a control point to a path. 
+ 
+   The point is inserted into the path's list of control points at the location to the control point it is closest to.  
+   If the 'location' argument is given then the point is added at that location in the list. 
+ 
+   Args: 
+     point (list[float,float,float]): The control point (x,y,z) coordinates. 
+     index (Optional[int]): The index into the current list of control points to add the control point. 0 <= index <= number of path control points - 1
+</pre>
+
+<pre class="PythonMethodsPre">
+<strong>get_control_points() </strong> 
+
+   Get the path's control points. 
+   
+   Returns (list(list[float,float,float])): The list of the path's control points. 
+</pre>
+
+
+<pre class="PythonMethodsPre">
+<strong>get_curve_frame(index) </strong> 
+   
+   Get the coordinate frame at the path's interpolating curve at a given location. 
+   
+   Args: 
+     index (int): The index into the path's curve frames. 0 <= index <= number of path curve frames - 1. 
+   
+   Returns (list([float,float,float])): The path's curve normal at the given location. 
+</pre>
+
+</body>

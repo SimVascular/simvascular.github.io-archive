@@ -1,0 +1,111 @@
+<pre class="PythonMethodsPre"><strong>Series</strong>(file_name=None)  
+
+The Series class stores time-varying Path objects.                        
+
+The Series class can be used to read in an SV project .pth XML file and    
+extract path data derived from time-varying imaging data. The path data for 
+a given timestep element is identified using a discrete integer time step. 
+
+Example: Read in an SV project .pth file.                                  
+
+   path_series = sv.pathplanning.Series('aorta.pth')                       
+
+
+Args: 
+  file_name (Optional[str]): The name of an SV .pth file. </pre> 
+<br>
+<legend style="font-size:20px; text-align:left"> <b> Methods </b> </legend> 
+<pre class="PythonMethodsPre"><strong>get_calculation_number</strong>() 
+   
+   Get the path group's calculation number. 
+   
+   Returns (int): The path group's calculation number. 
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>get_method</strong>() 
+   
+   Get the path group method. 
+   
+   Returns (str): The path group's method name. 
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>get_num_times</strong>() 
+   
+   Get the number of time steps paths are defined for.  
+   
+   Returns (int): The number of time steps paths are defined for. 
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>get_path</strong>(time=0) 
+   
+   Get the path for a given time. 
+   
+   Args: 
+     time (Optional[int]): The time to get the path for. 
+   
+   Returns (sv.path.Path object): The path object for the given time.
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>get_path_id</strong>() 
+   
+   Get the path time ID. 
+   
+   Returns (int): The time ID of the path series. 
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>get_spacing</strong>() 
+   
+   Get the spacing for the path group. 
+   
+   Returns (float): The spacing for the path group. 
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>set_calculation_number</strong>(number) 
+   
+   Set the path group's calculation number. 
+   
+   Args: 
+     number (int): The calculation number. 
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>set_method</strong>(method) 
+   
+   Set the path group method. 
+   
+   Args: 
+     method (str): The subdivision method name. Valid names are: SPACING, SUBDIVISION or TOTAL 
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>set_path</strong>(path, time) 
+   
+   Set the path for a given time. 
+   
+   Args: 
+     path (sv.path.Path object): The path object to set.
+     time (int): The time to set the path for. 
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>set_path_id</strong>(id) 
+   
+   Set the ID for the path group. 
+   
+   Args: 
+     id (int): The path ID.
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>set_spacing</strong>(spacing) 
+   
+   Set the spacing used by the SPACING method. 
+   
+   Args: 
+     spacing (float): The spacing value. 
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>write</strong>(file_name) 
+   
+   Write the path group to an SV .pth file.
+   
+   Args: 
+     file_name (str): The name of the file to write the path group to.
+</pre> 
+<br>

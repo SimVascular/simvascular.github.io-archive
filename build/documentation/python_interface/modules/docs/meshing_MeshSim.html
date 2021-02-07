@@ -1,0 +1,147 @@
+<pre class="PythonMethodsPre">The MeshSim class provides an interface for creating tetrahedral finite 
+element meshes from Parasolid solid models using the commercial MeshSim 
+mesh generator.                                                         </pre> 
+<br>
+<legend style="font-size:20px; text-align:left"> <b> Methods </b> </legend> 
+<pre class="PythonMethodsPre"><strong>compute_model_boundary_faces</strong>(angle)  
+   
+   Compute the boundary faces for the solid model. 
+   
+   This method needs to be called only for PolyData solid models that do    
+   not have face information already defined (e.g. models from STL files).  
+   It does not need to be called for OpenCascade or Parasolid models.       
+   
+   For PolyData models faces are distinguished using the angle of the       
+   normals between adjacent triangles. If the angle is less than or equal   
+   to the 'angle' argument then the triangles are considered to part of     
+   the same face. 
+   
+   Args:                                    
+     angle (double): The angle in degrees used to determine the boundary faces of the solid model. 
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>create_options</strong>(global_edge_size, surface_mesh_flag=True, volume_mesh_flag=True, )  
+  
+  Create a MeshSimOptions object. 
+  
+  Args:                                    
+    global_edge_size ({'edge_size':double, 'absolute':bool}): The 'edge_size' parameter sets the global edge size. The 'absolute' paramater sets how to interpret the 'edge_size'; if true then the edge size is in absolute terms, else it is in relative terms. 
+    surface_mesh_flag (bool): The value used to set the surface_mesh_flag parameter. 
+    volume_mesh_flag (bool): The value used to set the volume_mesh_flag parameter. 
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>get_face_polydata</strong>(face_id)  
+   
+   Get the mesh face VTK PolyData for the given face ID.  
+   
+   Args: 
+     face_id (int): The face ID to get the PolyData for. 
+   
+   Returns (vtkPolyData): The VTK PolyData object for the face.  
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>get_kernel</strong>()  
+   
+   Get the mesher kernel. 
+   
+   Returns (str): The name of the mesher kernel. 
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>get_mesh</strong>()  
+  
+  Get the generated volume mesh.                                             
+  
+  Returns (vtkUnstructuredGrid) The generated volume mesh.                   
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>get_model_face_ids</strong>()  
+  
+  Get the mesh solid model face IDs. 
+  
+  Returns list([int]): The list of integer face IDs. 
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>get_model_polydata</strong>()  
+   
+   Get the VTK PolyData for the mesh solid model. 
+   
+   Returns (vtkPolyData): The VTK PolyData object for the mesh solid model. 
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>get_surface</strong>()  
+   
+   Get the mesh surface as VTK PolyData. 
+   
+   Returns (vtkPolyData): The VTK PolyData object for the mesh surface.  
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>load_mesh</strong>(volume_file, surface_file=None)  
+   
+   Load a mesh from a VTK .vtu file.                                        
+   
+   Args: 
+     volume_file (str): The name of the VTK .vtu file containing a           
+         volume mesh.                                                        
+     surface_file (Optionla[str]): The name of the VTK .vtp file containing a
+         surface mesh. 
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>load_model</strong>(file_name)  
+  
+  Load a solid model from a file into the mesher. 
+  
+  Args:                                    
+    file_name (str): Name in the solid model file. 
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>set_boundary_layer</strong>(number_of_layers, edge_size_fraction, layer_decreasing_ratio, 
+       constant_thickness)  
+   
+   Set the options for boundary layer meshing. 
+   
+   Args: 
+     number_of_layers (int): The number of boundary layers to create. 
+     edge_size_fraction (float): The fraction of the edge size meshing 
+         option to use as the size for the initial boundary layer. This is 
+         typically set to be between 0.0 and 1.0. 
+     layer_decreasing_ratio (float): The amount of the size decrease between 
+         successive boundary layers. 
+     constant_thickness (bool): If True then the boundary layers will have a 
+         constant thickness. 
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>set_options</strong>(options)  
+  
+  Set the MeshSim mesh generation options. 
+  
+  Args:                                    
+    options (meshing.MeshSimOptions): A MeshSimOptions options object containing option values. 
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>set_walls</strong>(face_ids)  
+   
+   Set the given faces to be of type wall. 
+   
+   This function must be called prior to meshing to identify model wall     
+   and cap faces.                                                           
+   
+   A solid model must be loaded before calling this function. The solid     
+   model must have boundary faces defined for it.                           
+   
+   Args: 
+     face_ids (list[int]): The face IDs to set to type wall. 
+</pre> 
+<br>
+<pre class="PythonMethodsPre"><strong>write_mesh</strong>(file_name)  
+   
+   Write the generated volume mesh to a file. 
+   
+   The format of the file depends on the meshing kernel used to generate the  
+   mesh                                                                       
+      1) TetGen - A vtkUnstructuredGrid .vtu file.                            
+      2) MeshSim - A MeshSim .sms file.                                       
+   
+   Args: 
+     file_name (str): The name of the file to write the mesh to.              
+</pre> 
+<br>
