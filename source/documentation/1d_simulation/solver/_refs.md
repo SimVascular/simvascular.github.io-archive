@@ -44,4 +44,8 @@
 [11] T.J.R. Hughes, L.P. Franca and G.M. Hulbert, **A New Finite Element Formulation for Computational Fluid Dynamics: VIII. The Galerkin/Least-Squares Method for Advective-Diffusive Equations** , Computer Methods in Applied Mechanics and Engineering , 73(2) (1989), 173-189.
 </a>
 
+<a id="ref-12">
+[12] N. Xiao, J. Alastruey, and C. Alberto Figueroa (2014), A systematic comparison between 1‐D and 3‐D hemodynamics in compliant arterial models. Int. J. Numer. Meth. Biomed. Engng., 30: 204-231.
+</a>
+
 
