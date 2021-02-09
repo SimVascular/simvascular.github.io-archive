@@ -421,7 +421,7 @@ Format
     <li><i>angle</i> (double) - Branch angle. </li><br>
     <li><i>uid</i> (integer) - Upstream segment ID. </li><br>
     <li><i>bid</i> (integer) - Branch segment ID. </li><br>
-    <li><i>bctype</i> (string) - Boundary condition type. </li><br>
+    <li><i>bctype</i> (string) - Outlet boundary condition type. </li><br>
     <li><i>dname</i> (string) - Data Table Name for boundary condition. </li><br>
   </ul>
   
@@ -430,14 +430,12 @@ Format
     <li>NONE - No pressure loss. </li><br>
   </ul>
 
-  Boundary condition types
+  Outlet boundary condition types
   <ul style="list-style-type:none;">
     <li> FLOW - Time-varying outlet flow rate. </li><br>
-    <li> NOBOUND - No outlet boundary condition. </li><br>
-    <li> PRESSURE -  Constant pressure in the model units. </li><br>
+    <li> NOBOUND - No outlet boundary condition; used for internal segment outlets. </li><br>
     <li> RCR - Boundary condition specified through an RCR circuit. </li><br>
     <li> RESISTANCE - Constant resistance in model units. </li><br>
-    <li> RESISTANCE_TIME -  Time-varying resistance in model units. </li><br>
   </ul>
 </div>
 <br>
@@ -473,20 +471,16 @@ Format
     <li><i> maxsteps </i> (integer) - Maximum number of time steps. </li><br>
     <li><i> nquad </i> (integer) - Number of quadrature points for finite elements. </li><br>
     <li><i> dname </i> (string) - Name of data table for inlet boundary conditions. </li><br>
-    <li><i> bctype </i> (string) - Boundary condition type. </li><br>
+    <li><i> bctype </i> (string) - Inlet boundary condition type. </li><br>
     <li><i> tol </i> (double) - Convergence tolerance. </li><br>
     <li><i> form </i> (string) - Formulation type. </li><br>
     <li><i> stab </i> (string) - Stabilization. </li><br>
   </ul>
 
-  Boundary condition types
+  Inlet boundary condition types
   <ul style="list-style-type:none;">
-    <li> FLOW - Time-varying outlet flow rate. </li><br>
-    <li> NOBOUND - No outlet boundary condition. </li><br>
-    <li> PRESSURE -  Constant pressure in the model units. </li><br>
-    <li> RCR - Boundary condition specified through an RCR circuit. </li><br>
-    <li> RESISTANCE - Constant resistance in model units. </li><br>
-    <li> RESISTANCE_TIME -  Time-varying resistance in model units. </li><br>
+    <li> FLOW - Time-varying inflow rate. </li><br>
+    <li> PRESSURE_WAVE -  Time varying inlet pressure. </li><br>
   </ul>
 
   Formulation types 
