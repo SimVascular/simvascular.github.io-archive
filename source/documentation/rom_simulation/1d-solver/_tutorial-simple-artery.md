@@ -9,7 +9,7 @@ Create a 1D Simulation input file for a FLOW outlet boundary condition.
 Since the model contains a single vessel there is only one segment and thus no **JOINTS** need be defined.
 
 The complete 1D Simulation input file listing is 
-<a href="documentation/1d_simulation/solver/files/01_simpleArtery_Flow.in"> here </a>.
+<a href="documentation/rom_simulation/1d-solver/files/01_simpleArtery_Flow.in"> here </a>.
 
 <h3> 1D Solver input file </h3>
 Set the model name to be **simpleArtery\_Flow\_**.
@@ -325,8 +325,8 @@ The results of the simulation are shown using the following graphs.
 
 <br>
 <figure>
-  <img src="documentation/1d_simulation/solver/images/Ex01-plottingExample_01.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
-  <img src="documentation/1d_simulation/solver/images/Ex01-plottingExample_03.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
+  <img src="documentation/rom_simulation/1d-solver/images/Ex01-plottingExample_01.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
+  <img src="documentation/rom_simulation/1d-solver/images/Ex01-plottingExample_03.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
   <p style="clear: both;">
 </figure>
 <br>
@@ -339,7 +339,7 @@ The results of the simulation are shown using the following graphs.
 Create a 1D Simulation input file for a constant resistance outlet boundary condition. 
 
 The complete 1D Simulation input file listing is 
-<a href="documentation/1d_simulation/solver/files/02_simpleArtery_Resistance.in"> here </a>.
+<a href="documentation/rom_simulation/1d-solver/files/02_simpleArtery_Resistance.in"> here </a>.
 
 <h3> 1D Solver input file </h3>
 The MODEL and SEGMENT statements need to be modified and the OUTLETDATA data table replaced with outlet resistance data. 
@@ -374,8 +374,8 @@ The results of the simulation are shown using the following graphs.
 
 <br>
 <figure>
-  <img src="documentation/1d_simulation/solver/images/Ex02-plottingExample_01.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
-  <img src="documentation/1d_simulation/solver/images/Ex02-plottingExample_03.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
+  <img src="documentation/rom_simulation/1d-solver/images/Ex02-plottingExample_01.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
+  <img src="documentation/rom_simulation/1d-solver/images/Ex02-plottingExample_03.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
   <p style="clear: both;">
 </figure>
 <br>
@@ -388,7 +388,7 @@ The results of the simulation are shown using the following graphs.
 Create a 1D Simulation input file for a constant pressure outlet boundary condition. 
 
 The complete 1D Simulation input file listing is 
-<a href="documentation/1d_simulation/solver/files/04_simpleArtery_Pressure.in"> here </a>.
+<a href="documentation/rom_simulation/1d-solver/files/04_simpleArtery_Pressure.in"> here </a>.
 
 <h3> 1D Solver input file </h3>
 The MODEL and SEGMENT statements need to be modified and the OUTLETDATA data table replaced with outlet pressure data. 
@@ -423,8 +423,8 @@ The results of the simulation are shown using the following graph.
 
 <br>
 <figure>
-  <img src="documentation/1d_simulation/solver/images/Ex04-plottingExample_01.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
-  <img src="documentation/1d_simulation/solver/images/Ex04-plottingExample_03.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
+  <img src="documentation/rom_simulation/1d-solver/images/Ex04-plottingExample_01.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
+  <img src="documentation/rom_simulation/1d-solver/images/Ex04-plottingExample_03.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
   <p style="clear: both;">
 </figure>
 <br>

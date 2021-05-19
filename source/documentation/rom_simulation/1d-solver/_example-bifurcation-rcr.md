@@ -18,6 +18,6 @@ The results are similar to the results shown in Fig. 11 in <a href="#ref-12">[12
 
 <br>
 <figure>
-  <img class="svImg svImgMd" src="documentation/1d_simulation/solver/images/bifurcation_rcr_results.png">
+  <img class="svImg svImgMd" src="documentation/rom_simulation/1d-solver/images/bifurcation_rcr_results.png">
 </figure>
 

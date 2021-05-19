@@ -4,7 +4,7 @@ femoral arteries.
 
 <br>
 <figure>
-  <img class="svImg svImgMd" src="documentation/1d_simulation/solver/images/aorta-femoral.png">
+  <img class="svImg svImgMd" src="documentation/rom_simulation/1d-solver/images/aorta-femoral.png">
   <figcaption class="svCaption"> Model geometry showing abdominal aorta, renal, celiac and femoral arteries. </figcaption>
 </figure>
 
@@ -16,7 +16,7 @@ describe its contents.
 Create a 1D Simulation input file for a constant resistance outlet boundary condition. 
 
 The complete 1D Simulation input file listing is 
-<a href="documentation/1d_simulation/solver/files/12_AortoFem_Pulse_R.in"> here </a>.
+<a href="documentation/rom_simulation/1d-solver/files/12_AortoFem_Pulse_R.in"> here </a>.
 
 <h3> 1D Solver input file </h3>
 Set the model name to be **OSMSC0006\_Pulse\_R\_**.
@@ -962,16 +962,16 @@ The results of the simulation are shown using the following graphs.
 
 <br>
 <figure>
-  <img src="documentation/1d_simulation/solver/images/Ex12-plottingExample_01.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
-  <img src="documentation/1d_simulation/solver/images/Ex12-plottingExample_12.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
+  <img src="documentation/rom_simulation/1d-solver/images/Ex12-plottingExample_01.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
+  <img src="documentation/rom_simulation/1d-solver/images/Ex12-plottingExample_12.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
   <p style="clear: both;">
 </figure>
 <br>
 
 <br>
 <figure>
-  <img src="documentation/1d_simulation/solver/images/Ex12-plottingExample_13.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
-  <img src="documentation/1d_simulation/solver/images/Ex12-plottingExample_24.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
+  <img src="documentation/rom_simulation/1d-solver/images/Ex12-plottingExample_13.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
+  <img src="documentation/rom_simulation/1d-solver/images/Ex12-plottingExample_24.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
   <p style="clear: both;">
 </figure>
 <br>

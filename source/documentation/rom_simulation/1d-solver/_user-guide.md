@@ -10,8 +10,8 @@ geometry is defined by the 3D coordinates of its nodes.
 
 <br>
 <figure>
-  <img src="documentation/1d_simulation/solver/images/3d-model.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
-  <img src="documentation/1d_simulation/solver/images/1d-network-model.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
+  <img src="documentation/rom_simulation/1d-solver/images/3d-model.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
+  <img src="documentation/rom_simulation/1d-solver/images/1d-network-model.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
   <p style="clear: both;">
   <figcaption> <i>Figure 1. The geometriy of a 3D model (left) is represented by a 1D network (right) of Segments (green) and Nodes (blue). </i></figcaption>
 </figure>
@@ -35,7 +35,7 @@ These components are labeled in Fig. 2.
 
 <br>
 <figure>
-  <img src="documentation/1d_simulation/solver/images/labeled-1d-network-model.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
+  <img src="documentation/rom_simulation/1d-solver/images/labeled-1d-network-model.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
   <p style="clear: both;">
  <figcaption> <i>Figure 2. A 1D network model comprising 10 nodes, 4 joints and 9 segments. Node IDs are in parentheses</i></figcaption>
 </figure>
@@ -51,7 +51,7 @@ deformable vessels (Fig. 3). This yields a 1D finite element mesh.
 
 <br>
 <figure>
-  <img src="documentation/1d_simulation/images/segment-elements.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
+  <img src="documentation/rom_simulation/images/segment-elements.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
   <p style="clear: both;">
  <figcaption> <i> Figure 3. A segment is discretized into a mesh n of finite elements. </i> </figcaption>
 </figure>

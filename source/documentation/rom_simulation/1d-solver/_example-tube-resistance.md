@@ -25,7 +25,7 @@ The simulation is run for 1000 time steps to achieve a steady state.
 
 <br>
 <figure>
-  <img class="svImg svImgMd" src="documentation/1d_simulation/solver/images/tube_r_results.png">
+  <img class="svImg svImgMd" src="documentation/rom_simulation/1d-solver/images/tube_r_results.png">
   <figcaption class="svCaption"> Plot showing a linear pressure drop (blue) and and a contant flow (red) along the tube.
   </figcaption>
 </figure>
