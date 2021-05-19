@@ -18,7 +18,7 @@ Results can be selectively converted for one or more of these data.
 
 <br>
 <figure>
-  <img src="documentation/1d_simulation/tool/images/convert-results-panel-fixed.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
+  <img src="documentation/rom_simulation/tool/images/convert-results-panel.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
   <p style="clear: both;">
 </figure>
 <br>

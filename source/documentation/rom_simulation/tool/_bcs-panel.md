@@ -14,7 +14,7 @@ three inlet and outlet faces defined.
 
 <br>
 <figure>
-  <img src="documentation/1d_simulation/tool/images/bcs-panel-fixed.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
+  <img src="documentation/rom_simulation/tool/images/bcs-panel.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
   <p style="clear: both;">
 </figure>
 <br>
@@ -26,9 +26,9 @@ type
 
 <br>
 <figure>
-  <img src="documentation/1d_simulation/tool/images/bcs-pres-vel.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
-  <img src="documentation/1d_simulation/tool/images/bcs-res.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
-  <img src="documentation/1d_simulation/tool/images/bcs-rcr.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
+  <img src="documentation/rom_simulation/tool/images/bcs-pres-vel.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
+  <img src="documentation/rom_simulation/tool/images/bcs-res.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
+  <img src="documentation/rom_simulation/tool/images/bcs-rcr.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
   <p style="clear: both;">
   <figcaption> <i><b>Set Inlet/Outlet BCs</b> popup window for different boundary condition types: Prescribed velocites, Resistance and RCR.</i></figcaption>
 </figure>
