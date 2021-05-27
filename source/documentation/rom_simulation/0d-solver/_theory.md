@@ -1,6 +1,6 @@
 <h2> 0D Solver Theory </h2>
 
-Flow rate, pressure, and other hemodynamic quantities in zero-dimensional (0D) models of vascular anatomies are governed by a system of differential-algebraic equations (DAEs),
+Flow rate, pressure, and other hemodynamic quantities in 0D models of vascular anatomies are governed by a system of differential-algebraic equations (DAEs),
 
 $$\textbf{E}\left(y, t\right)\dot{y} + \textbf{F}\left(y, t\right)y + C\left(y, t\right) = 0,$$
 
@@ -9,7 +9,7 @@ where $\textbf{E} \in \mathbb{R}^{N \times N}$, $\textbf{F} \in \mathbb{R}^{N \t
 The DAE system is solved implicitly using the generalized-$\alpha$ method [1].
 
 <h3>Generalized-$\alpha$ for 0D DAE System</h3>
-We are interested in solving the DAE system for the solutions, $y\_{n+1}$ and $\dot{y}\_{n+1}$, at the next time, $t\_{n+1}$, using the known solutions, $y\_{n}$ and $\dot{y}\_{n}$, at the current time, $t\_{n}$. Note that $t\_{n+1} = t\_{n} + \Delta\_{t}$, where $\Delta\_{t}$ is the time step size. Using the generalized-$\alpha$ method, we launch a predictor step  and a series of multi-corrector steps to solve for $y\_{n+1}$ and $\dot{y}\_{n+1}$. Similar to other predictor-corrector schemes, we evaluate the solutions at intermediate times between $t\_{n}$ and $t\_{n + 1}$. However, in the generalized-$\alpha$ method, we evaluate $y$ and $\dot{y}$ at different intermediate times. Specifically, we evaluate $y$ at $t\_{n+\alpha\_{f}}$ and $\dot{y}$ at $t\_{n+\alpha\_{m}}$, where $t\_{n+\alpha\_{f}} = t\_{n} + \alpha\_{f}\Delta\_{t}$ and $t\_{n+\alpha\_{m}} = t\_{n} + \alpha\_{m}\Delta\_{t}$. Here, $\alpha\_{m}$ and $\alpha\_{f}$ are the generalized-$\alpha$ parameters, where where $\alpha\_{m} = \frac{3 - \rho}{2 + 2\rho}$ and $\alpha\_{f} = \frac{1}{1 + \rho}$. In the 0D solver, we set $\rho = 0.1$. For each time step, the procedure works as follows.
+We are interested in solving the DAE system for the solutions, $y\_{n+1}$ and $\dot{y}\_{n+1}$, at the next time, $t\_{n+1}$, using the known solutions, $y\_{n}$ and $\dot{y}\_{n}$, at the current time, $t\_{n}$. Note that $t\_{n+1} = t\_{n} + \Delta\_{t}$, where $\Delta\_{t}$ is the time step size. Using the generalized-$\alpha$ method, we launch a predictor step  and a series of multi-corrector steps to solve for $y\_{n+1}$ and $\dot{y}\_{n+1}$. Similar to other predictor-corrector schemes, we evaluate the solutions at intermediate times between $t\_{n}$ and $t\_{n + 1}$. However, in the generalized-$\alpha$ method, we evaluate $y$ and $\dot{y}$ at different intermediate times. Specifically, we evaluate $y$ at $t\_{n+\alpha\_{f}}$ and $\dot{y}$ at $t\_{n+\alpha\_{m}}$, where $t\_{n+\alpha\_{f}} = t\_{n} + \alpha\_{f}\Delta\_{t}$ and $t\_{n+\alpha\_{m}} = t\_{n} + \alpha\_{m}\Delta\_{t}$. Here, $\alpha\_{m}$ and $\alpha\_{f}$ are the generalized-$\alpha$ parameters, where where $\alpha\_{m} = \frac{3 - \rho}{2 + 2\rho}$ and $\alpha\_{f} = \frac{1}{1 + \rho}$. In the 0D solver, we set the spectral radius, $\rho$, to be $0.1$. For each time step, the procedure works as follows.
 
 1. $\textbf{Predictor step}$: First, we make an initial guess for $y\_{n+1}$ and $\dot{y}\_{n+1}$,
 
