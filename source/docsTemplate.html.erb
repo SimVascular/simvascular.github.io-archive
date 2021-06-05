@@ -8,10 +8,6 @@ title: SimVascular Docs
     <!-- ONE COLUMN OF SPACE -->
     <nav class="hidden-xs hidden-sm col-md-2 col-lg-2 bs-docs-sidebar">
 
-      <% if man_name == "Installation" %>
-        <ul id="sidebar" class="nav nav-stacked fixed manInstallation"> <%= partial "documentation/installation_TOC" %></ul>
-      <% end %>
-
       <% if man_name == "QuickGuide" %>
         <ul id="sidebar" class="nav nav-stacked fixed manQuickGuide"> <%= partial "documentation/quickguide_TOC" %></ul>
       <% end %>
@@ -44,12 +40,8 @@ title: SimVascular Docs
         <ul id="sidebar" class="nav nav-stacked fixed manPythonInterface"> <%= partial "documentation/python_interface_TOC" %></ul>
       <% end %>
 
-      <% if man_name == "Compile" %>
-        <ul id="sidebar" class="nav nav-stacked fixed manSource"> <%= partial "documentation/compile_TOC" %></ul>
-      <% end %>
-
-      <% if man_name == "Refs" %>
-        <ul id="sidebar" class="nav nav-stacked fixed manRefs">       <%= partial "documentation/refs_TOC" %></ul>
+      <% if man_name == "References" %>
+        <ul id="sidebar" class="nav nav-stacked fixed manRefs">       <%= partial "documentation/references_TOC" %></ul>
       <% end %>
 
     </nav>
@@ -58,10 +50,6 @@ title: SimVascular Docs
     <div class="col-xs-10 col-sm-10 col-md-9 col-lg-9" id="manualContent">
 
       <!-- ACTUAL CONTENT -->
-
-      <% if man_name == "Installation" %>
-        <div class="manInstallation"><%= partial "documentation/installation_content" %></div>
-      <% end %>
 
       <% if man_name == "QuickGuide" %>
         <div class="manQuickGuide"><%= partial "documentation/quickguide_content" %></div>
@@ -95,12 +83,8 @@ title: SimVascular Docs
         <div class="manPythonInterface"><%= partial "documentation/python_interface_content" %></div>
       <% end %>
 
-      <% if man_name == "Compile" %>
-        <div class="manCompile"><%= partial "documentation/compile_content" %></div>
-      <% end %>
-
-      <% if man_name == "Refs" %>
-        <div class="manRefs">      <%= partial "documentation/refs_content" %></div>
+      <% if man_name == "References" %>
+        <div class="manRefs">      <%= partial "documentation/references_content" %></div>
       <% end %>
 
     </div>
