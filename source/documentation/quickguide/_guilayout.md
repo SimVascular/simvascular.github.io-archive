@@ -5,7 +5,7 @@ _Tool Panel_ is displayed on the left side of the window when a tool is active.
 
 <figure>
   <img class="svImg svImgXl"  src="documentation/quickguide/imgs/mainwindow.png"> 
-  <figcaption class="svCaption">The SimVascular GUI layout</figcaption>
+  <figcaption class="svCaption">Fig. 3 &nbsp The SimVascular GUI layout</figcaption>
 </figure>
 
 <br>
