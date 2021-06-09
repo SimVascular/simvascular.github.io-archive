@@ -211,7 +211,6 @@ The local contributions to the global arrays are
         \end{bmatrix}.
 \end{gather}
 
-##################################################
 <h5> Resistor-Capacitor </h5>
 
 <br>
@@ -252,7 +251,6 @@ The local contributions to the global arrays are
         \end{bmatrix}.
 \end{gather}
 
-##################################################
 <h5> Resistor-Inductor </h5>
 
 <br>
@@ -293,7 +291,6 @@ The local contributions to the global arrays are
         \end{bmatrix}.
 \end{gather}
 
-##################################################
 <h5> Resistor-Capacitor-Inductor </h5>
 
 <br>
@@ -337,8 +334,6 @@ The local contributions to the global arrays are
             1 & -R &  0 &  0 & -1
         \end{bmatrix}.
 \end{gather}
-
-##################################################
 
 <h5> Stenosis </h5>
 
