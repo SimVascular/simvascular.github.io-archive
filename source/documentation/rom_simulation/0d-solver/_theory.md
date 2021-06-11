@@ -211,6 +211,130 @@ The local contributions to the global arrays are
         \end{bmatrix}.
 \end{gather}
 
+<h5> Resistor-Capacitor </h5>
+
+<br>
+<figure>
+  <img class="svImg svImgMd" src="documentation/rom_simulation/0d-solver/images/RC.png">
+  <figcaption class="svCaption"> Resistor-Capacitor element.
+  </figcaption>
+</figure>
+
+The governing equations for the local resistor-capacitor element are
+
+$$P\_{in}^{e} - P\_{out}^{e} - RQ\_{in}^{e} = 0$$
+
+$$Q\_{in}^{e} - Q\_{out}^{e} - C\frac{dP\_{out}^{e}}{dt} = 0.$$
+
+The local contributions to the global arrays are
+
+\begin{gather}
+    \textbf{y}^{e} =
+        \begin{bmatrix}
+            P\_{in}^{e} & Q\_{in}^{e} & P\_{out}^{e} & Q\_{out}^{e}
+        \end{bmatrix}^T,
+\end{gather}
+
+\begin{gather}
+    \textbf{E}^{e} =
+        \begin{bmatrix}
+            0 &  0 &  0 &  0 \ \cr
+            0 &  0 & -C &  0
+        \end{bmatrix},
+\end{gather}
+
+\begin{gather}
+    \textbf{F}^{e} =
+        \begin{bmatrix}
+            1 & -R & -1 &  0 \ \cr
+            0 &  1 &  0 & -1
+        \end{bmatrix}.
+\end{gather}
+
+<h5> Resistor-Inductor </h5>
+
+<br>
+<figure>
+  <img class="svImg svImgMd" src="documentation/rom_simulation/0d-solver/images/RL.png">
+  <figcaption class="svCaption"> Resistor-Inductor element.
+  </figcaption>
+</figure>
+
+The governing equations for the local resistor-inductor element are
+
+$$P\_{in}^{e} - P\_{out}^{e} - RQ\_{in}^{e} - L\frac{dQ\_{out}^{e}}{dt} = 0$$
+
+$$Q\_{in}^{e} - Q\_{out}^{e} = 0.$$
+
+The local contributions to the global arrays are
+
+\begin{gather}
+    \textbf{y}^{e} =
+        \begin{bmatrix}
+            P\_{in}^{e} & Q\_{in}^{e} & P\_{out}^{e} & Q\_{out}^{e}
+        \end{bmatrix}^T,
+\end{gather}
+
+\begin{gather}
+    \textbf{E}^{e} =
+        \begin{bmatrix}
+            0 &  0 &  0 & -L \ \cr
+            0 &  0 &  0 &  0
+        \end{bmatrix},
+\end{gather}
+
+\begin{gather}
+    \textbf{F}^{e} =
+        \begin{bmatrix}
+            1 & -R & -1 &  0 \ \cr
+            0 &  1 &  0 & -1
+        \end{bmatrix}.
+\end{gather}
+
+<h5> Resistor-Capacitor-Inductor </h5>
+
+<br>
+<figure>
+  <img class="svImg svImgMd" src="documentation/rom_simulation/0d-solver/images/RCL.png">
+  <figcaption class="svCaption"> Resistor-Capacitor-Inductor element.
+  </figcaption>
+</figure>
+
+The governing equations for the local resistor-capacitor-inductor element are
+
+$$P\_{in}^{e} - P\_{out}^{e} - RQ\_{in}^{e} - L\frac{dQ\_{out}^{e}}{dt} = 0$$
+
+$$Q\_{in}^{e} - Q\_{out}^{e} - C\frac{dP\_{c}^{e}}{dt} = 0.$$
+
+$$P\_{in}^{e} - RQ\_{in}^{e} - P\_{c} = 0$$
+
+The local contributions to the global arrays are
+
+\begin{gather}
+    \textbf{y}^{e} =
+        \begin{bmatrix}
+            P\_{in}^{e} & Q\_{in}^{e} & P\_{out}^{e} & Q\_{out}^{e} & P\_{c}
+        \end{bmatrix}^T,
+\end{gather}
+
+\begin{gather}
+    \textbf{E}^{e} =
+        \begin{bmatrix}
+            0 &  0 &  0 & -L &  0 \ \cr
+            0 &  0 &  0 &  0 & -C \ \cr
+            0 &  0 &  0 &  0 &  0
+        \end{bmatrix},
+\end{gather}
+
+\begin{gather}
+    \textbf{F}^{e} =
+        \begin{bmatrix}
+            1 & -R & -1 &  0 &  0 \ \cr
+            0 &  1 &  0 & -1 &  0 \ \cr
+            1 & -R &  0 &  0 & -1
+        \end{bmatrix}.
+\end{gather}
+
 <h5> Stenosis </h5>
 
 <br>
