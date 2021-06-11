@@ -17,5 +17,8 @@ SimVascular image-based modeling pipeline. The follow lists each core <i>Tool</i
 paths created by the <i>Paths Tool</i> to position and orient 2D slices in the 3D image volume. The data used by a 
 <i>Tools</i> is specified by the user.
 
+The geometry created by each <i>Tool</i> is typically stored in <a href="https://vtk.org"> Visualization Toolkit (VTK) </a> 
+VTP and VTU <a href="https://vtk.org/wp-content/uploads/2015/04/file-formats.pdf"> VTK File Formats </a>.
+
 Each <i>Tool</i> has a panel containing GUI components (i.e. widgets) used to specify the parameters that control tool behavior. 
 
