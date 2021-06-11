@@ -1,0 +1,2713 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SimVascular Docs</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+
+    <link href="css/shop-item.css" rel="stylesheet" type="text/css" />
+
+    <link href="css/codestyle.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="font-awesome-4.1.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
+
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                <i class="fa fa-bars" id="barIcon"></i>
+              </button>
+                <a class="navbar-brand" id="brandName" href="index.html">
+                  <img src="img/svlogo/svLogoSmallText.png" alt="...">
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+
+                  <!-- USER GUIDES -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b><span class="fa fa-user"></span> User Guides</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsInstallation.html"><b><span class="fa fa-sign-in fa-rotate-90"></span> Installation</b></a></li>
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsQuickGuide.html"><b><span class="icon ion-ios7-bolt"></span> Quick Guide</b></a></li>
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsModelGuide.html"><b><span class="icon ion-settings"></span> Modeling</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsMeshing.html"><b><span class="icon ion-ios7-keypad"></span> Meshing</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsFlowSolver.html"><b><span class="icon ion-play"></span> Simulation</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docssvFSI.html"><b><span class="icon ion-plus-round"></span> svFSI</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsROMSimulation.html"><b><span class="icon ion-plus-round"></span> ROM Simulation</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsGenBC.html"><b><span class="icon ion-refresh"></span> GenBC</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsPythonInterface.html"><b><span class="icon ion-refresh"></span> Python Interface</b></a></li>
+                    </ul>
+                  </li>
+
+                  <!-- CLINCAL CASES -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b><i class="fa fa-stethoscope"></i> Clinical Cases</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase3.html"><b><span class="fa fa-user-md"></span> Coronary Normal</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase1.html"><b><span class="fa fa-user-md"></span> Aortofemoral Normal - 1</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase2.html"><b><span class="fa fa-user-md"></span> Aortofemoral Normal - 2</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase4.html"><b><span class="fa fa-user-md"></span> Healthy Pulmonary</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/projects/sv_tests"><b><span class="fa fa-user-md"></span> All demo projects</b></a></li>
+                    </ul>
+                  </li>
+
+                  <!-- DEVELOPER GUIDES -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b><span class="fa fa-caret-square-o-right"></span> Developer Guides</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsCompile.html"><b><span class="fa fa-file-text-o"></span> Compile Source Code</b></a></li>
+                    </ul>
+                  </li>
+
+                  <!-- svCOMMUNITY -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b><i class="fa fa-users"></i> svCommunity</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/forums/viewforum.php?f=188"><b><span class="fa fa-users"></span> Public Forum</b></a></li>
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/mailman/listinfo/simvascular-news"><b><span class="fa fa-sign-in"></span> Join News Mailing List</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/pipermail/simvascular-news/"><b><span class="fa fa-pencil-square-o"></span> News Mailing List Archive</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/SimVascular/SimVascular/issues"><b><span class="fa fa-bug"></span> Report bugs and request features</b></a></li>
+                    </ul>
+                  </li>
+
+                  <!-- REFERENCES -->
+                  <li>
+                    <a href="docsRefs.html" id="dropdownMenu1" >
+                      <b><span class="icon ion-document-text"></span>References</b>
+                    </a>
+                  </li>
+
+                  <!-- Archives -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b> Archives</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="archiveQuickGuideSV2.html"><b>SimVascular 2.0</b></a></li>
+                    </ul>
+                  </li>
+
+                    <!-- <li><a href="docsQuickGuide.html" id="btnQuickGuide"><b><span class="icon ion-ios7-bolt"></span> Quick Guide</b></a></li>
+                    <li><a href="docsModelGuide.html" id="btnModelGuide"><b><span class="icon ion-settings"></span> Modeling</b></a></li>
+
+                    <li><a href="docsMeshing.html" id="btnMeshing"><b><span class="icon ion-ios7-keypad"></span> Meshing</b></a></li>
+                    <li><a href="docsPresolver.html" id="btnPresolver"><b><span class="icon ion-log-in"></span> svPre</b></a></li>
+                    <li><a href="docsFlowSolver.html" id="btnFlowSolver"><b><span class="icon ion-play"></span> svSolver</b></a></li>
+                    <li><a href="docsRefs.html" id="btnRefs"><b><span class="icon ion-document-text"></span> References</b></a></li>
+                    <li><a href="clinicalCase1.html" id="btnRefs"><b>Case Studies</b></a></li> -->
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <!--Nav Bar -->
+<div class="row">
+    <div class="col-xs-1 col-sm-1 hidden-md hidden-lg">
+    </div>
+    <!-- ONE COLUMN OF SPACE -->
+    <nav class="hidden-xs hidden-sm col-md-2 col-lg-2 bs-docs-sidebar">
+
+
+
+
+
+
+
+        <ul id="sidebar" class="nav nav-stacked fixed manROMSimulation"> <p><h3>ROM Simulation Guide</h3></p>
+<li><a href="#intro">Introduction</a></li>
+<li><a href="#tool">ROM Simulation Tool</a>
+  <ul class="nav nav-stacked">
+    <li><a href="#mesh-panel"> Mesh Panel</a></li>
+    <li><a href="#basic-panel">Basic Parameters Panel</a></li>
+    <li><a href="#bcs-panel">Inlet and Outlet BCs Panel</a></li>
+    <li><a href="#wall-props-panel">Wall Properties Panel</a></li>
+    <li><a href="#solver-params-panel">Solver Parameters Panel</a></li>
+    <li><a href="#create-files-panel">Create Files and Run Simulation Panel</a></li>
+    <li><a href="#convert-results-panel">Convert Results Panel</a></li>
+    <li><a href="#tool-tutorial">Tutorial</a></li>
+    <li><a href="#tool-refs">References</a></li>
+  </ul>
+</li>
+
+<li><a href="#1d-solver">1D Solver</a>
+  <ul class="nav nav-stacked">
+        <li><a href="#1d-solver-theory">Theory</a></li>
+        <li><a href="#1d-solver-user-guide">User Guide</a></li>
+        <li><a href="#1d-solver-input-file">Input File Format</a></li>
+        <li><a href="#1d-solver-example-bifurcation-rcr">Example - Bifurcation with RCR BCs</a></li>
+        <li><a href="#1d-solver-example-tube-resistance">Example - Tube with resistance BCs</a></li>
+        <li><a href="#1d-solver-refs">References</a></li>
+  </ul>
+</li>
+
+<li><a href="#0d-solver">0D Solver</a>
+  <ul class="nav nav-stacked">
+        <li><a href="#0d-solver-theory">Theory</a></li>
+        <li><a href="#0d-solver-refs">References</a></li>
+  </ul>
+</li>
+
+<h3>Download</h3>
+</ul>
+
+
+
+
+
+    </nav>
+
+    <!--Main Content -->
+    <div class="col-xs-10 col-sm-10 col-md-9 col-lg-9" id="manualContent">
+
+      <!-- ACTUAL CONTENT -->
+
+
+
+
+
+
+
+        <div class="manROMSimulation"><section id="intro" class="group"><h1>Introduction</h1>
+
+<p>The SimVascular <strong>ROM Simulation Tool</strong> is used to interactively create the geometry, boundary conditions and solver 
+parameters needed to execute a reduced-order model (ROM) simulation of 3D vascular networks. The reduced-order models 
+implemented in SimVascular use computationally inexpensive mathematical representations and reduced model dimensionality 
+to approximate the flow and pressure quantities in a cardiovascular system.</p>
+
+<p>The SimVascular <strong>sv1DSolver</strong> solves for blood pressure and flow in deformable one-dimensional hemodynamic networks. 
+These equations offer a relatively efficient means to reproduce realistic wave propagation phenomemon in vascular networks. 
+One-dimensional networks can be coupled to both 0D lumped parameter models and to more complex 3D flow simulations as boundary 
+conditions.</p>
+
+<p>The SimVascular <strong>svZeroDSolver</strong> solves for blood pressure and flow in a zero-dimensional spatial representation of
+a vascular network modeled as an electrical circuit. The resistive, elastic and inertial properties of blood flow through 
+vessels are lumped into electrical elements. Although no spatial distribution of flow quantities is provided
+this ROM can be complex enough to provide a good approximatation of circulatory dynamics.</p>
+
+<h2>Centerlines Geometry</h2>
+
+<p>The geometry of the one-dimensional networks used by the <strong>sv1DSolver</strong> is based on the centerlines computed from the surface 
+of a 3D geometric model. The 3D geometric model is created from image data using the typical 
+SimVascular <a href="docsModelGuide.html"> modeling workflow </a>.</p>
+
+<p>Centerlines represent a 1D characterization of blood vessel geometry. The centerlines are computed for a 3D surface using 
+the <a href="http://www.vmtk.org/tutorials/Centerlines.html"> Vascular Modeling Toolkit </a>. The computation solves a wave propagation
+problem using a source point representing the start of the centerlines and target points representing the ends of the centerlines.
+The source and target points are selected from the model caps defined in the SimVascular <strong>Modeling Tool</strong>.</p>
+
+<p><br>
+<figure>
+  <img src="documentation/rom_simulation/images/model-geom.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
+  <img src="documentation/rom_simulation/images/centerlines.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
+  <p style="clear: both;">
+  <figcaption> <i>The centerlines (right) computed from a 3D geometric model of the aorta and femoral arteries (left). </i></figcaption>
+</figure>
+<br></p>
+
+<h3>Network Geometry and 1D Simulation Mesh</h3>
+
+<p>The centerlines geometry is used to define network <strong>nodes</strong> at vessel inlets, outlets and branching points. A number of cylindrical 
+<strong>segments</strong> are defined representing the length and diameter between vessel <strong>nodes</strong>.</p>
+
+<p><br>
+<figure>
+  <img class="svImg svImgSm" src="documentation/rom_simulation/images/vessel-segments.png">
+  <figcaption class="svCaption"> The cylindrical segments representing vessel length and diameter between branching points. </figcaption>
+</figure>
+<br></p>
+
+<p>Segments are then discretized into a mesh of finite elements in order to numerically solve the 1D equations of fluid flow in 
+deformable vessels.</p>
+
+<p><br>
+<figure>
+  <img class="svImg svImgMd" src="documentation/rom_simulation/images/segment-elements.png">
+  <figcaption class="svCaption"> A segment is discretized into a mesh of finite elements. </figcaption>
+</figure>
+<br></p>
+
+<h3>Network Connectivity and 0D Simulation Circuit</h3>
+
+<p>The centerlines geometry is also used to define the connectivty for a 0D electrical circuit. </p>
+
+<h2>Units</h2>
+
+<p>All model quantities and associated boundary conditions are specified in CGS units.</p>
+</section>
+
+<section id="tool" class="group"><h1>ROM Simulation Tool</h1>
+
+<p>The SimVascular <strong>ROM Simulation Tool</strong> is used to interactively create an input file defining the geometry, boundary conditions,
+material properties and solver parameters needed to execute a reduced-order model (ROM) solver simulation. 
+A <strong>ROM Simulation Tool</strong> instance is created by 
+right-clicking on the <strong>ROMSimulations</strong> node under the <strong>SV Data Manager</strong>. Selecting the <strong>Create ROM Simulation job</strong> 
+menu item displays a popup window.</p>
+
+<p><br>
+<figure>
+  <img class="svImg svImgSm" src="documentation/rom_simulation/tool/images/create-job.png">
+  <figcaption class="svCaption"> The <b>Create ROM Simulation Job</b> popup menu. </figcaption>
+</figure></p>
+
+<p>Use the <strong>Select Model</strong> list to select the 3D geometric surface model used to create centerlines. The list contains the names of 
+all models created by any SimVascular <strong>Modeling Tool</strong> instance. Type in a job name used to identify the <strong>Simulations1d Tool</strong> instance 
+and to name the files and directories stored under the SimVascular project&rsquo;s <strong>Simulations1d</strong> directory. Selecting <strong>OK</strong> creates 
+an <strong>ROM Simulation Tool</strong> instance node under the <strong>SV Data Manager</strong>. Selecting this instance displays the 
+<strong>ROM Simulation Tool</strong> panel.</p>
+
+<p><br>
+<figure>
+  <p style="clear: both;">
+  <img class="svImg svImgSm" src="documentation/rom_simulation/tool/images/panel.png">
+  <figcaption class="svCaption"> The ROM Simulation Tool panel. </figcaption>
+</figure>
+<br></p>
+
+<p>The panel contains seven sub-panels used to create or input a specific category of data needed to execute a reduced-order model solver simulation.
+<ul style="list-style-type:none;">
+  <li> Mesh </li>
+  <li> Basic Parameters </li>
+  <li> Inlet and Outlet BCs </li>
+  <li> Wall Properties </li>
+  <li> Solver Parameters </li>
+  <li> Create Files and Run Simulation </li>
+  <li> Convert Results </li>
+</ul></p>
+
+<p>A selecting a sub-panel name brings up the sub-panel&rsquo;s widgets. The following sections describe how each of the sub-panels are used.</p>
+</section>
+  <section id="mesh-panel" class="subgroup"><h2>Mesh Panel</h2>
+
+<p>The Mesh panel is primarily used to create centerlines from the surface of a 3D geometric model. A source for the centerline 
+computation must first be selected from the inlet/outlet faces (model caps) defined by the <strong>Modeling Tool</strong>. The number of
+elements used to discretize a segment may be controled by setting the element size.</p>
+
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #e6e600; border-left: 6px solid #e6e600">
+The centerline computation may take a significant amount of time to finish for a large model with many vessel branches. It is
+also sensitive to the quality of the model surface mesh. If the surface mesh is not well-defined (e.g. has holes or overlapping faces)
+then the centerline computation may fail. 
+</div>
+
+<p><br></p>
+
+<h3>Panel Layout</h3>
+
+<p><br>
+<figure>
+  <img src="documentation/rom_simulation/tool/images/panel.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
+  <p style="clear: both;">
+</figure>
+<br></p>
+
+<h3>Usage</h3>
+
+<p><strong>Model</strong> - The name of the model used to create centerlines. The model is selected when creating the simulation job. This text box is for display only, a model name cannot be entered.</p>
+
+<p><strong>Select Inlet Face</strong> - Select the source for the centerline computation. Clicking on this button causes a multi-element 
+check box to appear with entries for each model inlet/outlet face. A (single) face is selected, typically vessel inlet.</p>
+
+<p><img class="svImg svImgSm" src="documentation/rom_simulation/tool/images/source-face.png"></p>
+
+<p><strong>Inlet Face</strong> - The model face name used as a source for the centerline computation. This text box is for display only,
+                 a face name cannot be entered.</p>
+
+<p><strong>Calculate Centerlines</strong> - Start the centerline computation. </p>
+
+<p><strong>Element size</strong> - Set the size of elements used to discretize a segment. </p>
+</section>
+  <section id="basic-panel" class="subgroup"><h2>Basic Parameters Panel</h2>
+
+<p>The Basic Parameters panel is used to set the fluid physical parameters.</p>
+
+<h3>Panel Layout</h3>
+
+<p>The panel GUI contains a single table. </p>
+
+<p><br>
+<figure>
+  <img src="documentation/rom_simulation/tool/images/basic-panel.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
+  <p style="clear: both;">
+</figure>
+<br></p>
+
+<h3>Usage</h3>
+
+<p>Values may be entered in the table by double clicking in the <strong>Value</strong> column.</p>
+
+<p><strong>Fluid Density</strong> - The value of the fluid density used for simulations. </p>
+
+<p><strong>Fluid Viscosity</strong> - The value of the fluid Viscosity used for simulations. </p>
+</section>
+  <section id="bcs-panel" class="subgroup"><h2>Inlet and Outlet BCs Panel</h2>
+
+<p>The Inlet and Outlet BCs panel is used to set the boundary condition type and parameter values for each inlet and outlet 
+face defined for the model. The following types of boundary conditions are supported
+<ol>
+  <li>Prescribed velocites</li>
+  <li>Resistance</li>
+  <li>RCR</li>
+</ol></p>
+
+<h3>Panel Layout</h3>
+
+<p>The panel GUI contains a single table listing the inlet and outlet faces defined for the model. The panel shown below has 
+three inlet and outlet faces defined.</p>
+
+<p><br>
+<figure>
+  <img src="documentation/rom_simulation/tool/images/bcs-panel.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
+  <p style="clear: both;">
+</figure>
+<br></p>
+
+<h3>Usage</h3>
+
+<p>The boundary condition type and associated parameter values are changed by double clicking on a face name in the <strong>Name</strong> column. 
+This displays a <strong>Set Inlet/Outlet BCs</strong> popup window. The parameters displayed in the window depend on the boundary condition
+type</p>
+
+<p><br>
+<figure>
+  <img src="documentation/rom_simulation/tool/images/bcs-pres-vel.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
+  <img src="documentation/rom_simulation/tool/images/bcs-res.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
+  <img src="documentation/rom_simulation/tool/images/bcs-rcr.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
+  <p style="clear: both;">
+  <figcaption> <i><b>Set Inlet/Outlet BCs</b> popup window for different boundary condition types: Prescribed velocites, Resistance and RCR.</i></figcaption>
+</figure>
+<br></p>
+
+<h4>Prescribed velocites</h4>
+
+<p>The <strong>Prescribed velocites</strong> boundary condition defines a flow waveform for an inlet face. The inlet flow rates are provided by a text file
+with time and flow value colums. </p>
+
+<h5><u>Usage</u></h5>
+
+<p>Analytic Shape - Defines the shape of the velocity profile: parabolid, plug or wormersley.
+<br>
+Point Number - Defines ?
+<br>
+Fourier Modes - Defines ?
+<br>
+Flow rate (from file) - Selecting the <strong>&hellip;</strong> brings a file browser used to selected a flow file. 
+<br>
+Period - 
+<br>
+Flip normal - 
+<br>
+<br></p>
+
+<h4>Resistance</h4>
+
+<p>The <strong>Resistance</strong> boundary condition defines the downstream resistance for an outlet face. </p>
+
+<h5><u>Usage</u></h5>
+
+<p>Resistance - The resistance parameter that characterizes the downstream vasculature.
+<br>
+Distal Pressure - Defines ?
+<br>
+<br></p>
+
+<h4>RCR</h4>
+
+<p>The <strong>RCR</strong> boundary condition defines the downstream resistance for an outlet face. </p>
+
+<h5><u>Usage</u></h5>
+
+<p>Rp C Rd - The resistance parameter that characterizes the downstream vasculature.
+<br>
+Distal Pressure - Defines ?</p>
+</section>
+  <section id="wall-props-panel" class="subgroup"><h2>Wall Properites Panel</h2>
+
+<p>The Wall Properites panel is used to set the material properties for vessel walls. The following material models are supported
+<ol>
+  <li>Linear</li>
+  <li>Olufsen</li>
+</ol></p>
+
+<h3>Panel Layout</h3>
+
+<p>The panel GUI contains parameters that vary with the material model selected by the <strong>Material Model</strong> combination box.</p>
+
+<p><br>
+<figure>
+  <img src="documentation/rom_simulation/tool/images/wall-props-linear.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
+  <img src="documentation/rom_simulation/tool/images/wall-props-olufsen.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
+  <p style="clear: both;">
+  <figcaption> <i>The panel displays different material parameters depending on the material model selected.</i></figcaption>
+</figure>
+<br></p>
+
+<h3>Usage</h3>
+
+<p>The boundary condition type and associated parameter values are changed by double clicking on a face name in the <strong>Name</strong> column. 
+This displays a <strong>Set Inlet/Outlet BCs</strong> popup window. The parameters displayed in the window depend on the boundary condition
+type
+<br></p>
+
+<h4>Linear</h4>
+
+<p>The <strong>Linear</strong> material model.</p>
+
+<h5><u>Usage</u></h5>
+
+<p>Eh/r - The product of elastic modulus and thickness divided by the radius.
+<br>
+Pressure - The material reference pressure.
+<br>
+<br></p>
+
+<h4>Olufsen</h4>
+
+<p>The <strong>Olufsen</strong> material model.</p>
+
+<h5><u>Usage</u></h5>
+
+<p>K1, K2, K3 - The empirically-derived constants used to best fit the equation $Eh/r_0(z) = k_1 \exp(k_2 r_0(z)) + k_3 $.
+<br>
+Exponent - The material exponent.
+<br>
+Pressure - The material reference pressure.
+<br></p>
+</section>
+  <section id="solver-params-panel" class="subgroup"><h2>Solver Parameters Panel</h2>
+
+<p>The Solver Parameters panel is used to set the parameters needed to execute the 1D Solver.</p>
+
+<p>Simulation results are computed for times <strong>Time Step Size</strong>*i, i = 0,1,2,&hellip;,<strong>Number of Time Steps</strong> but are<br>
+only written with the frequency given by <strong>Number of Timesteps between Saving Data</strong>.</p>
+
+<h3>Panel Layout</h3>
+
+<p>The panel GUI contains a single table listing <strong>Time Step</strong> and <strong>Output Control</strong> solver parameters.</p>
+
+<p><br>
+<figure>
+  <img src="documentation/rom_simulation/tool/images/solver-params-panel.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
+  <p style="clear: both;">
+</figure>
+<br></p>
+
+<h3>Usage</h3>
+
+<p>Values may be entered in the table by double clicking in the <strong>Value</strong> column.</p>
+
+<p><strong>Number of Time Steps</strong> - The number of time steps to use for the 1D simulation.</p>
+
+<p><strong>Time Step Size</strong> - The size of the time step to use for the 1D simulation. Time step size affects numerical error and stability.</p>
+
+<p><strong>Number of Timesteps between Saving Data</strong> - The number of time steps to skip when saving 1D simulation results.</p>
+</section>
+  <section id="create-files-panel" class="subgroup"><h2>Create Files and Run Simulation Panel</h2>
+
+<p>The Create Files and Run Simulation panel is used to create a 1D solver input file and run the 1D solver.</p>
+
+<h3>Panel Layout</h3>
+
+<p><br>
+<figure>
+  <img src="documentation/rom_simulation/tool/images/create-files-panel.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
+  <p style="clear: both;">
+</figure>
+<br></p>
+
+<h3>Usage</h3>
+
+<p><strong>Create Files for Simulation</strong> - Create a 1D solver input file. </p>
+
+<p><strong>Run Simulation</strong> - Run the 1D solver. </p>
+</section>
+  <section id="convert-results-panel" class="subgroup"><h2>Convert Results</h2>
+
+<p>The Convert Results panel is used to convert 1D simulation results to a CSV file format. </p>
+
+<p>The simulation results directory must contain a 1D solver input file named <strong>solver.in</strong> and results (.dat) files. 
+Simulation results are stored in the project&rsquo;s <strong>Simulations1d/JOBNAME</strong> directory.  </p>
+
+<p>Results can be selectively converted for segements at vessel outlets. </p>
+
+<p>A time range start/stop values can be given to only convert results within that range. The data conversion times 
+are determined by the parameter values specified in the <strong>Solver Parameters</strong> panel.</p>
+
+<p>The 1D solver writes results for cross-section area, flow, pressure, Reynolds number (Re), and wall shear stress (wss).
+Results can be selectively converted for one or more of these data.</p>
+
+<h3>Panel Layout</h3>
+
+<p><br>
+<figure>
+  <img src="documentation/rom_simulation/tool/images/convert-results-panel.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
+  <p style="clear: both;">
+</figure>
+<br></p>
+
+<h3>Usage</h3>
+
+<p><strong>Results Directory</strong> - Set the directory containing the 1D simulation results to convert. The directory path can be entered in 
+                        the text box. Selecting <strong>&hellip;</strong> brings up a file browser.</p>
+
+<p><strong>Convert Directory</strong> - Set the directory where converted results are written. The directory path can be entered in 
+                        the text box. Selecting <strong>&hellip;</strong> brings up a file browser.</p>
+
+<p><strong>Start</strong> - Set the start time for the time range usded to convert simulation data. The time is a real simulation time value.</p>
+
+<p><strong>Stop</strong> - Set the stop time for the time range usded to convert simulation data. The time is a real simulation time value.</p>
+
+<p><strong>Segements</strong> - Set the segment type used to convert data. Select <b>Outlet</b> to convert data only for segments that have 
+                an outlet boundary condition. Select <b>All</b> for converting data for all segments.</p>
+
+<p><strong>Data</strong> - Set the names of data to convert. </p>
+
+<p><strong>Convert</strong> - Convert the 1D simulation results.</p>
+</section>
+  <section id="tool-tutorial" class="subgroup"><h2> Tutorial </h2>
+
+<p>This section demonstrates how to use the <strong>1D Simulation Tool</strong> to interactively create the geometry, 
+boundary conditions and solver parameters needed to execute a <strong>sv1DSolver</strong> simulation. The geometry of 
+the one-dimensional networks used for a 1D simulation is based on the model of the aorta and branching
+left and right iliac vessels created in the Demo Project discussed in the SimVascular <a href="docsQuickGuide.html#simulation"> QuickGuide </a> documentation. </p>
+
+<p>A flow rate inlet boundary condition is used for the aorta inlet. RCR boundary conditions are used for left and 
+left and right iliac vessels. </p>
+
+<p>An Olufsen material model is used for the vessel wall properties.</p>
+
+<p><br>
+<h3> Open the Demo Project </h3></p>
+
+<p>Opening the Demo Project displays the image slices and model geometry. Change the display layout to big 3D 
+and hide the image to get a better view of the model.</p>
+
+<p><br>
+<figure>
+  <img src="documentation/1d_simulation/tool/images/tutorial-1/open-demo-project.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
+  <img src="documentation/1d_simulation/tool/images/tutorial-1/open-demo-project-model.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
+  <p style="clear: both;">
+  <figcaption> <i> (Left) The model of the aorta and branching left and right iliac vessels created in the Demo Project. (Right) Hiding the image and changing layout to big 3D. </i></figcaption>
+</figure>
+<br></p>
+
+<h3> Create an instance of the 1D Simulation Tool </h3>
+
+<p>Create an instance of the <strong>1D Simulation Tool</strong> by right clicking on the <strong>SV Data Manager</strong> <strong>Simulations1d</strong> node
+and selecting <strong>Create 1D Simulation job</strong> from the popup menu.</p>
+
+<p><br>
+<figure>
+  <img src="documentation/1d_simulation/tool/images/tutorial-1/create-instance.png" style="float: left; width: 80%; margin-right: 1%; margin-bottom: 0.5em;">
+  <p style="clear: both;">
+</figure>
+<br></p>
+
+<p>A box is then displayed that is used to select a model name and to enter the name of the 
+1D simulation job to create. The <strong>Select Model</strong> is set to the default model name <strong>demo</strong>, 
+the only model defined. Enter <strong>demo</strong> in the <strong>Job Name</strong> text box to create a 1D simulation 
+job named <strong>demo</strong>. Click <strong>OK</strong>.</p>
+
+<p><br>
+<figure>
+  <img src="documentation/1d_simulation/tool/images/tutorial-1/create-instance-job.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
+  <p style="clear: both;">
+</figure>
+<br></p>
+
+<p>A node named <strong>demo</strong> is created under <strong>SV Data Manager</strong> <strong>Simulations1d</strong>. Left clicking on this node
+brings up the <strong>1D Simulation Tool</strong> GUI panel on the right side of the SimVascular window. The model name is 
+displayed in the <strong>Model</strong> text box. The model surface representation is changed to wireframe to better show 
+centerlines geometry when it is created.</p>
+
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid green; border-left: 6px solid green">
+Note that the <b>Calculate Centerlines</b> button is grayed out and disabled. This is because a source face 
+has not yet been selected. The button is enabled after a source face is selected. Some of the widgets in other 
+panels are similarly disabled until the data they depend on becomes available.
+</div>
+
+<p><br>
+<figure>
+  <img src="documentation/1d_simulation/tool/images/tutorial-1/create-instance-panel.png" style="float: left; width: 80%; margin-right: 1%; margin-bottom: 0.5em;">
+  <p style="clear: both;">
+</figure>
+<br></p>
+
+<!-- ------------------------------------ -->
+
+<!--     Create centerlines geometry      -->
+
+<!-- ------------------------------------ -->
+
+<h3> Create centerlines geometry </h3>
+
+<p>Select a model inlet face for the start of the centerlines by clicking on the <strong>Select Inlet Face</strong> button. 
+This brings up a check box listing all of the caps (inlet/outlet faces) defined for the <strong>demo</strong> model.
+Select the <b>cap_aorta</b> entry box under the <strong>Use</strong> column of the check box. </p>
+
+<p><br>
+<figure>
+  <img src="documentation/1d_simulation/tool/images/tutorial-1/create-cl-face.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
+  <p style="clear: both;">
+</figure>
+<br></p>
+
+<p>The inlet face selected is displyed in the <strong>Inlet Face</strong> text box. Click on the <strong>Calculate Centerlines</strong> button to start the 
+centerlines computation for the <strong>demo</strong> surface 3D geometric model. 
+When the computation finishes the centerlines geometry is displyed using green lines.</p>
+
+<p><br>
+<figure>
+  <img src="documentation/1d_simulation/tool/images/tutorial-1/create-cl-lines.png" style="float: left; width: 80%; margin-right: 1%; margin-bottom: 0.5em;">
+  <p style="clear: both;">
+</figure>
+<br></p>
+
+<!-- -------------------------------------------- -->
+
+<!-- Setting inlet and outlet boundary conditions -->
+
+<!-- -------------------------------------------- -->
+
+<h3> Set inlet and outlet boundary conditions </h3>
+
+<p>Select the <strong>Inlet and Outlet BCs</strong> sub-panel name to bring up the <strong>Inlet and Outlet BCs</strong> panel used to set the boundary condition type 
+and parameter values for each inlet and outlet face defined for the model.  </p>
+
+<p><br>
+<figure>
+  <img src="documentation/1d_simulation/tool/images/tutorial-1/bcs-panel.png" style="float: left; width: 80%; margin-right: 1%; margin-bottom: 0.5em;">
+  <p style="clear: both;">
+</figure>
+<br></p>
+
+<p>The panel contains a table listing the inlet (cap_aorta) and two outlet (cap_right_iliac and cap_aorta_2) faces 
+defined for the model.</p>
+
+<p><br>
+<h4><b> Set <i>cap_aorta</i> inlet flow boundary condition </b></h4>
+Double click with the left mouse button on <b>cap_aorta</b> under the <strong>Name</strong> column. 
+This brings up a <strong>Set Inlet/Outlet BCs</strong> popup window. To set an inlet flow boundary condition 
+<div style="background-color: #F0F0F0; padding: 10px">
+1) From the <b>BC Type</b> list select <strong>Prescribed Velocities</strong> <br>
+2) Left click on the <strong>Flow rate (from file)</strong> <strong>&hellip;</strong> button to bring up a file browser    <br>
+3) Select the inflow.flow file from the project&rsquo;s <strong>flow-files</strong> directory <br>
+4) Select <strong>OK</strong><br>
+</div>
+<br>
+<figure>
+  <img src="documentation/1d_simulation/tool/images/tutorial-1/bcs-aorta.png" style="float: left; width: 20%; margin-right: 1%; margin-bottom: 0.5em;">
+  <p style="clear: both;">
+</figure>
+<br></p>
+
+<p><br>
+<h4><b> Set <i>cap_right_iliac</i> RCR boundary condition </b></h4>
+Double click with the left mouse button on <b>cap<em>right</em>iliac</b> under the <strong>Name</strong> column. 
+This brings up a <strong>Set Inlet/Outlet BCs</strong> popup window. To set an RCR boundary condition 
+<div style="background-color: #F0F0F0; padding: 10px">
+1) From the <b>BC Type</b> list select <strong>RCR</strong> <br>
+2) Enter <i>90 0.0008 1200</i> into the <b>$R_p C R_d$</b> text box <br>
+3) Select <strong>OK</strong>
+</div>
+<br>
+<figure>
+  <img src="documentation/1d_simulation/tool/images/tutorial-1/bcs-right-iliac.png" style="float: left; width: 20%; margin-right: 1%; margin-bottom: 0.5em;">
+  <p style="clear: both;">
+</figure>
+<br></p>
+
+<p><br>
+<h4><b> Set <i>cap_aorta_2</i> RCR boundary condition </b></h4>
+Double click with the left mouse button on <b>cap_aorta_2</b> under the <strong>Name</strong> column.
+This brings up a <strong>Set Inlet/Outlet BCs</strong> popup window. To set the values for the RCR boundary condition
+<div style="background-color: #F0F0F0; padding: 10px">
+1) From the <b>BC Type</b> list select <strong>RCR</strong> <br>
+2) Enter <i>100 0.0004 1100</i> into the <b>$R_p C R_d$</b> text box <br>
+3) Select <strong>OK</strong>
+</div>
+<br>
+<figure>
+  <img src="documentation/1d_simulation/tool/images/tutorial-1/bcs-left-iliac.png" style="float: left; width: 20%; margin-right: 1%; margin-bottom: 0.5em;">
+  <p style="clear: both;">
+</figure>
+<br></p>
+
+<p>The boundary condition and parameter values for each inlet and outlet faces are now defined and are shown in the
+<strong>Inlet and Outlet BCs</strong> panel table. Boundary conditions may also be directly entered into the table by double clicking 
+with the left mouse button on the <strong>BC Type</strong> and <strong>Values</strong> columns.</p>
+
+<p><br>
+<figure>
+  <img src="documentation/1d_simulation/tool/images/tutorial-1/bcs-values-set.png" style="float: left; width: 80%; margin-right: 1%; margin-bottom: 0.5em;">
+  <p style="clear: both;">
+</figure>
+<br></p>
+
+<!-- -------------------------------------------- -->
+
+<!--           Setting wall properties            -->
+
+<!-- -------------------------------------------- -->
+
+<h3> Set wall properties </h3>
+
+<p>Select the <strong>Wall Properties</strong> sub-panel name to bring up the <strong>Wall Properties</strong> panel used to set the material 
+properties for vessel walls.</p>
+
+<p><br>
+<figure>
+  <img src="documentation/1d_simulation/tool/images/tutorial-1/wall-props-panel.png" style="float: left; width: 80%; margin-right: 1%; margin-bottom: 0.5em;">
+  <p style="clear: both;">
+</figure>
+<br></p>
+
+<p>To set the material model to Olufsen 
+<div style="background-color: #F0F0F0; padding: 10px">
+1) From the <b>Material Model </b> list select <strong>OLUFSEN</strong> <br>
+2) Enter <i> 2.0e7 </i> into the <b>$K_1 $</b> text box <br>
+3) Enter <i> 8.65e5  </i> into the <b>$K_3 $</b> text box <br>
+4) Enter <i> 113324.0 </i> into the <b>Pressure</b> text box <br>
+</div>
+<br></p>
+
+<p><br>
+<figure>
+  <img src="documentation/1d_simulation/tool/images/tutorial-1/wall-props-params.png" style="float: left; width: 80%; margin-right: 1%; margin-bottom: 0.5em;">
+  <p style="clear: both;">
+</figure>
+<br></p>
+
+<!-- -------------------------------------------- -->
+
+<!--           Solver parameters                  -->
+
+<!-- -------------------------------------------- -->
+
+<h3> Set solver parameters </h3>
+
+<p>Select the <strong>Solver Parameters</strong> sub-panel name to bring up the <strong>Solver Parameters</strong> panel used to set the
+parameters needed to execute the 1D Solver.</p>
+
+<p><br>
+<figure>
+  <img src="documentation/1d_simulation/tool/images/tutorial-1/solver-params-panel.png" style="float: left; width: 80%; margin-right: 1%; margin-bottom: 0.5em;">
+  <p style="clear: both;">
+</figure>
+<br></p>
+
+<p>To set the solver parameters 
+<div style="background-color: #F0F0F0; padding: 10px">
+1) Double click with the left mouse button on the <strong>Number of Timesteps</strong> <strong>Values</strong> column and enter <i>10000</i>. <br>
+2) Double click with the left mouse button on the <strong>Time Steps Size</strong> <strong>Values</strong> column and enter <i>0.001</i>. <br>
+3) Double click with the left mouse button on the <strong>Number of Timesteps between Saving Data</strong> <strong>Values</strong> column and enter <i>1</i>. <br>
+</div>
+<br></p>
+
+<p><br>
+<figure>
+  <img src="documentation/1d_simulation/tool/images/tutorial-1/solver-params-values.png" style="float: left; width: 80%; margin-right: 1%; margin-bottom: 0.5em;">
+  <p style="clear: both;">
+</figure>
+<br></p>
+
+<!-- -------------------------------------------- -->
+
+<!--        Create files and Run simulation       -->
+
+<!-- -------------------------------------------- -->
+
+<h3> Create the 1D Solver input file and run a simulation </h3>
+
+<p>Select the <strong>Create Files and Run Simulation</strong> sub-panel name to bring up the <strong>Create Files and Run Simulation</strong> panel used to 
+used to create a 1D solver input file and run the 1D solver.</p>
+
+<p><br>
+<figure>
+  <img src="documentation/1d_simulation/tool/images/tutorial-1/create-files-panel.png" style="float: left; width: 80%; margin-right: 1%; margin-bottom: 0.5em;">
+  <p style="clear: both;">
+</figure>
+<br></p>
+
+<p>To generate the 1D Solver input file click on the <strong>Create Files for Simulation</strong> button. A popup window is displayed
+showing the number of segments, nodes and finite elements created for the 1D simulation. </p>
+
+<p><br>
+<figure>
+  <img src="documentation/1d_simulation/tool/images/tutorial-1/create-files-popup.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
+  <p style="clear: both;">
+</figure>
+<br></p>
+
+<p>Click <strong>OK</strong>.</p>
+
+<p>To run a 1D Solver simulation on the <strong>Run Simulation</strong> button. A popup window is displayed when the simulation finishes. </p>
+
+<p><br>
+<figure>
+  <img src="documentation/1d_simulation/tool/images/tutorial-1/create-files-run-sim.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
+  <p style="clear: both;">
+</figure>
+<br></p>
+
+<p>Selecting the <strong>Show Details</strong> button dispays the 1D Solver log file</p>
+
+<div style="background-color: #F0F0F0">
+<pre>
+<p style="font-size:10px" >
+---------------------------------
+ oneDSolver 
+ 1D Finite Element Hemodynamics  
+---------------------------------
+
+Reading file: /SVProject/Simulations1d/demo/solver.in ... 
+
+Printing Model Echo ... 
+
+Creating and Running Model ...
+Creating Nodes ... 
+Creating Joints ... 
+Creating Materials ... 
+call cvOneMaterialsOlufsen p1_=113324.014500 K3_=0.000000 
+Setting material K's 0 -22.5267 1e+07 ...
+Setting reference Pressure 0
+call SetMaterialType K3_ 10000000.000000 
+new cvOneMaterialOlufsen called check pRef 0.000000 
+Creating Data Tables ... 
+Creating Segments ... 
+Solving Model ... 
+Inlet Condition Type: FLOW
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Number of Joints: 1
+Number of Segments: 3
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+call cvOneMaterialsOlufsen p1_=113324.014500 K3_=33.690970 
+In GetNewInstance cvOneDMaterialOlufsen is called  matID=0 
+call cvOneDMaterialOlufsen that this K3_=10000000.000000 p1_=0.000000 
+In GetNewInstance cvOneDMaterialOlufsen* materials is called 
+subdomain cpp setupMaterial matID=0  
+call cvOneMaterialsOlufsen p1_=113324.014500 K3_=0.000000 
+In GetNewInstance cvOneDMaterialOlufsen is called  matID=0 
+call cvOneDMaterialOlufsen that this K3_=10000000.000000 p1_=0.000000 
+In GetNewInstance cvOneDMaterialOlufsen* materials is called 
+subdomain cpp setupMaterial matID=0  
+RCR boundary condition
+call cvOneMaterialsOlufsen p1_=113324.014500 K3_=0.000000 
+In GetNewInstance cvOneDMaterialOlufsen is called  matID=0 
+call cvOneDMaterialOlufsen that this K3_=10000000.000000 p1_=0.000000 
+In GetNewInstance cvOneDMaterialOlufsen* materials is called 
+subdomain cpp setupMaterial matID=0  
+RCR boundary condition
+Subdomain No. 3
+Joint No. 1
+Outlet No. 2
+Number of equations 1303
+Using Conservative Form ...
+maxStep/stepSize: 10000
+Total Solution is: 10000 x 1303
+**** Time cycle 1
+    iter: 0 normf: 134.606 norms: 0.00421471 time: 0.001614
+    iter: 1 normf: 43.8713 norms: 0.0246538 time: 0.001102
+    iter: 2 normf: 1.14964 norms: 1.17156e-05 time: 0.001108
+    iter: 3 normf: 0.0299168 norms: 5.84007e-08 time: 0.001096
+    iter: 4 normf: 0.000699028 norms: 1.16806e-09 time: 0.001097
+    iter: 5 normf: 2.68722e-05 norms: 3.94369e-11 time: 0.001097
+  Time = 0.001, Mass = 0.0169997, Tot iters = 6
+    iter: 0 normf: 81.4714 norms: 0.0257353 time: 0.001099
+    iter: 1 normf: 7.04379 norms: 4.91323e-05 time: 0.001204
+    iter: 2 normf: 0.288877 norms: 3.82307e-07 time: 0.001262
+    iter: 3 normf: 0.0109262 norms: 2.31787e-08 time: 0.001136
+...
+Time = 9.998, Mass = 0.0889071, Tot iters = 4
+    iter: 0 normf: 0.732147 norms: 0.000141274 time: 0.001097
+    iter: 1 normf: 0.394251 norms: 0.000232438 time: 0.001099
+    iter: 2 normf: 0.0100552 norms: 5.84729e-09 time: 0.001096
+    iter: 3 normf: 0.000314998 norms: 4.17093e-11 time: 0.001097
+  Time = 9.999, Mass = 0.0899291, Tot iters = 4
+    iter: 0 normf: 0.734032 norms: 0.000143682 time: 0.001099
+    iter: 1 normf: 0.384852 norms: 0.000227006 time: 0.001096
+    iter: 2 normf: 0.00978278 norms: 5.759e-09 time: 0.001096
+    iter: 3 normf: 0.000306487 norms: 4.06793e-11 time: 0.001098
+  Time = 10, Mass = 0.0908278, Tot iters = 4
+demoGroup0_Seg0_flow.dat
+demoGroup0_Seg0_area.dat
+demoGroup0_Seg0_pressure.dat
+demoGroup0_Seg0_Re.dat
+demoGroup0_Seg0_wss.dat
+demoGroup2_Seg1_flow.dat
+demoGroup2_Seg1_area.dat
+demoGroup2_Seg1_pressure.dat
+demoGroup2_Seg1_Re.dat
+demoGroup2_Seg1_wss.dat
+demoGroup3_Seg2_flow.dat
+demoGroup3_Seg2_area.dat
+demoGroup3_Seg2_pressure.dat
+demoGroup3_Seg2_Re.dat
+demoGroup3_Seg2_wss.dat
+Completed!
+
+</p>
+</pre>
+</div>
+
+<!-- -------------------------------------------- -->
+
+<!--              Convert results                 -->
+
+<!-- -------------------------------------------- -->
+
+<h3> Convert and simulation results </h3>
+
+<p>Select the <strong>Convert Results</strong> sub-panel name to bring up the <strong>Convert Results</strong> panel used to
+used to convert 1D solver simulation results to CSV format files.</p>
+
+<p><br>
+<figure>
+  <img src="documentation/1d_simulation/tool/images/tutorial-1/convert-results-panel.png" style="float: left; width: 80%; margin-right: 1%; margin-bottom: 0.5em;">
+  <p style="clear: both;">
+</figure>
+<br></p>
+
+<p>Set the <strong>Results Directory</strong> by selecting <strong>&hellip;</strong> to bring up a file browser. Navigate to the <strong>/PROJECT/Simulations1d/demo/</strong> 
+directory and press <strong>Open</strong>. Set the time range <strong>Start</strong> value 0.0 and the <strong>Stop</strong> value to 0.8. 
+From the <strong>Data</strong> scrolling text box select <strong>flow</strong> and <strong>pressure</strong> data. Select the <strong>Convert</strong> button to convert the results.</p>
+
+<p><br>
+<figure>
+  <img src="documentation/1d_simulation/tool/images/tutorial-1/convert-results.png" style="float: left; width: 80%; margin-right: 1%; margin-bottom: 0.5em;">
+  <p style="clear: both;">
+</figure>
+<br></p>
+
+<p>The CSV files for flow and pressure results are stored in the <strong>/PROJECT/Simulations1d/demo/demo-converted-results</strong> directory. 
+The CSV files can be graphed using several applications (gnuplot, MATLAB, ParaView, etc.). Here we have plotted flow results 
+using ParaView. </p>
+
+<p><br>
+<figure>
+  <img src="documentation/1d_simulation/tool/images/tutorial-1/paraview.png" style="float: left; width: 80%; margin-right: 1%; margin-bottom: 0.5em;">
+  <p style="clear: both;">
+</figure>
+<br></p>
+</section>
+  <section id="tool-refs" class="subgroup"><h2>References</h2>
+
+<p>[1] T.J.R. Hughes and J. Lubliner, <strong>On the One-Dimensional Theory of Blood Flow in the Larger Vessels</strong> , Mathematical Biosciences, 18(1-2) (1973), 161-170.</p>
+
+<p>[2] T.J.R. Hughes, <strong>A Study of the One-Dimensional Theory of Arterial Pulse Propagation</strong>, 1974, U.C. Berkeley, Ph.D. Thesis.</p>
+</section>
+
+<section id="1d-solver" class="group"><h1>1D Solver</h1>
+
+<p>The one-dimensional equations for the flow of a Newtonian, incompressible fluid
+in a deforming, elastic domain consist of the continuity equation, a single axial momentum balance equation, a constitutive
+equation, and suitable initial and boundary conditions. The governing equations are derived in a general form by 
+Hughes[2] and Hughes and Lubliner[1].</p>
+</section>
+  <section id="1d-solver-theory" class="subgroup"><h1>A coupled multi-domain method for 1D hemodynamics</h1>
+
+<p>Flow and pressure waves, originating due to the contraction of the heart, propagate along the deformable vessels and reflect due to tapering, branching, and other discontinuities. The size and complexity of the cardiovascular system necessitate a multidomain approach, with “upstream” regions of interest (large arteries) coupled to reduced-order models of “downstream” vessels. Previous efforts to couple upstream and downstream domains have included specifying resistance and impedance outflow boundary conditions for the nonlinear one-dimensional wave propagation equations and iterative coupling between three-dimensional and one-dimensional numerical methods. We have developed a new approach to solve the one-dimensional nonlinear equations of blood flow in elastic vessels utilizing a space-time finite element method with GLSstabilization for the upstream domain, and a boundary term to couple to the downstream domain. </p>
+
+<p>The outflow boundary conditions are derived following an approach analogous to the Dirichlet-to-Neumann (DtN) method. </p>
+
+<p>In the downstream domain, we solve simplified 0D/1D equations to derive relationships between pressure and flow accommodating periodic and transient phenomena with a consistent formulation for different boundary condition types. In this chapter, we also present a new boundary condition that accommodates transient phenomena based on a Green’s function solution of the linear, damped wave equation in the downstream domain. </p>
+
+<p>The mathematical formulation, the numerical derivation and results are presented in the next sections.</p>
+
+<p>We present here the different steps that are required to develop the coupled multidomain method from the strong form in the original domain to the variational form in the computational domain that includes the information of the analytical domain.</p>
+
+<!--- Strong Form --->
+
+<h2>Strong form</h2>
+
+<p>The one-dimensional equations for the flow of a Newtonian, incompressible fluid in a deforming, elastic domain consist of the continuity 
+equation, a single axial momentum balance equation, a constitutive equation, and suitable initial and boundary conditions. The governing 
+equations are derived in a general form by Hughes <a href="#ref-2">[2]</a> and 
+Hughes and Lubliner <a href="#ref-1">[1]</a>. The partial differential equations for mass and momentum 
+balance are given by (z is the axial coordinate):</p>
+
+<p>$$\frac{\partial S}{\partial t} + \frac{\partial Q}{\partial z} = -\psi$$</p>
+
+<p>$$\frac{\partial Q}{\partial t} + \frac{\partial}{\partial z}\left[(1 + \delta)\,\frac{Q^2}{S}\right] + \frac{S}{\rho}\,\frac{\partial p}{\partial z} = S\,f + N\,\frac{Q}{S} + \nu\frac{\partial^2 Q}{\partial z^2}$$</p>
+
+<p>The primary variables are the cross-sectional area $S$, the pressure $p$, and the volumetric flow rate $Q$. 
+The density of the fluid is given by ρ (assumed constant), the external force by $f$, the kinematic viscosity by $\nu$ (assumed constant) 
+and $\psi$ is an outflow function (taken to be zero for impermeable vessels). 
+The variables $\delta$ and $N$ are defined by the choice of a profile function for the velocity over the cross-section. Here we choose 
+a time-varying, parabolic flow profile, thus Hughes and Lubliner <a href="#ref-1">[1]</a>:</p>
+
+<p>$$\delta = \frac{1}{3},\quad N = -8\,\pi\,\nu \label{1} \tag{1} $$</p>
+
+<p>The governing equations are of mixed parabolic-hyperbolic type, but have mainly a hyperbolic nature since the diffusive term is small. We thus impose one boundary condition at each inlet/outlet by specifying values of the primary variables or a relationship between them. </p>
+
+<p>The flow rate is typically specified at the inlet(s) ($\Gamma_in$), but the inlet boundaries can accommodate the same types of boundary conditions as will be subsequently discussed for the outlets:</p>
+
+<p>$$ Q(z,t) = Q_in(t),\quad z\in\Gamma_in $$</p>
+
+<p>The initial conditions for this problem are given by (where $S^0(z)$, $Q^0(z)$ and $p^0(z)$ are prescribed functions):</p>
+
+<p>$$ S(z,0) = S^0(z),Q(z,0) = Q^0(z)\,\text{and}\, p(z,0) = p^0(z) $$</p>
+
+<p>In order to complete the above system, we need to introduce a constitutive relationship. An elastic model is assumed, which relates the pressure to the cross-sectional area as follows:</p>
+
+<p>$$p(z,t) = \tilde{p}[S(z,t),z,t]$$</p>
+
+<p>and its inverse function</p>
+
+<p>$$ S(z,t) = \tilde{S}[p(z,t),z,t] \label{2} \tag{2} $$</p>
+
+<p>The particular constitutive relationship that we have used is that proposed by Olufsen <a href="#ref-3">[3]</a>:</p>
+
+<p>$$ \tilde{p}(S,z) = p^0(z) + \frac{4}{3}\,\frac{E\,h}{r^0(z)}\,\left(1 - \sqrt{\frac{S^0(z)}{S(z,t)}}\right) \label{3} \tag{3} $$</p>
+
+<p>here the Young’s modulus $E$ and the wall thickness $h$ relate to the radius $r^0 = \sqrt{S^0(z)/\pi}$:</p>
+
+<p>$$ \frac{E\,h}{r^0(z)} = k_1\,\exp{k_2\,r^0(z)} + k_3 $$</p>
+
+<p>In this relationship, $k_1$, $k_2$, and $k_3$ are empirically-derived constants with values in CGS units of 
+$2x10^{7} g⋅ s^{-2}⋅ cm^{-1}$, $-22.53 cm^{-1}$, and $8.65 x 10^{5} g⋅ s^{-2}⋅ cm^{-1}$, respectively. 
+Here we use a constant initial pressure $p^0(z) = p^0$. By noting that the pressure gradient can be expanded as</p>
+
+<p>$$ \frac{\partial p}{\partial z} = \frac{\partial\tilde{p}}{\partial S}\,\frac{\partial S}{\partial z} + \frac{\partial\tilde{p}}{\partial z} $$</p>
+
+<p>we can rewrite the system of partial differential equations in the following quasi-linear conservative form:</p>
+
+<p>$$ \frac{\partial\mathbf{U}}{\partial t} + \frac{\partial\mathbf{F}}{\partial z} - \mathbf{K}\,\frac{\partial^2\mathbf{U}}{\partial z^2} = G,\,\text{or}\quad\frac{\partial\mathbf{U}}{\partial t} + \frac{\partial\mathbf{F}}{\partial z} - \mathbf{K}\,\frac{\partial^2\mathbf{U}}{\partial z^2} = \mathbf{C}_F\,\mathbf{U} $$</p>
+
+<p>where</p>
+
+<p>$$ \mathbf{U} = \begin{bmatrix}U_1\ \cr U_2 \end{bmatrix} = \begin{bmatrix} S \cr Q \end{bmatrix} \label{4} \tag{4} $$</p>
+
+<p>$$ \mathbf{F} = \begin{bmatrix} U_2 \cr (1 + \delta)\,\frac{U_2^2}{U_1} + \frac{1}{\rho}\,\int_{p^0}^{p(z,t)}\tilde{S}(p,z,t)\,dp \end{bmatrix}, \quad \mathbf{K} = \begin{bmatrix} 0 &amp; 0 \cr 0 &amp; \nu\ \end{bmatrix} $$</p>
+
+<p>$$ \mathbf{G} = \begin{bmatrix} -\psi \cr U_1\,f + N\,\frac{U_2}{U_1} + \int_{p^0}^{p}\frac{1}{\rho}\,\frac{\partial\tilde{S}(p,z,t)}{\partial z}\,dp \end{bmatrix},\quad $$</p>
+
+<p>$$ \mathbf{C}_F = \begin{bmatrix} -\frac{\psi}{U_1} &amp; 0 \cr f + \frac{1}{U_1}\,\int_{p^0}^{p}\frac{1}{\rho}\,\frac{\partial\tilde{S}(p,z,t)}{\partial z}\,dp &amp; \frac{N}{U_1} \end{bmatrix} $$</p>
+
+<p>The motivation to work with the conservative form rather than the advective form as in previous work <a href="#ref-4">[4]</a>, is to be able to integrate by part the convective term and obtain a flux (a boundary integral) through which the multidomain coupling can be performed.</p>
+
+<p>Note that in the advective form, the only term that can easily be integrated by parts is the longitudinal viscous term, which is very small and often neglected in one-dimensional theory. Thus, the main difference between the two forms is the treatment of the boundary conditions. </p>
+
+<p>In the present conservative formulation, boundary conditions are prescribed in a natural way. In contrast, in the advective form, boundary conditions are enforced in an essential way: the equation for the corresponding dof is replaced by an equation representing the boundary condition.</p>
+
+<h2> Weak form </h2>
+
+<p>The weak formulation of the initial boundary value problem is given as follows with $\Omega = [0, L]$ : find $\mathbf{U}$ in $\mathcal{V} = {\mathbf{U}:\Omega\times (0,T)\rightarrow\mathbb{R}^2\,|\,\mathbf{U}(z,t)\in H_0^1}$ such that $\forall\,\mathbf{W} = \left[W_1\,W_2\right]^T\in\mathcal{V}$,</p>
+
+<p>$$ \begin{eqnarray}
+   &amp; \int_{0}^{t}\int_{0}^{L}\left(-\mathbf{W}_{,t}^T\,\mathbf{U} - \mathbf{W}_{,z}^T\,\mathbf{F} + \mathbf{W}_{,z}^T\,\mathbf{K}\,\mathbf{U}_{,z}-\mathbf{W}^T\,\mathbf{G}\right)\,dz\,dt + \int_{0}^{T} \left[\mathbf{W}^T\left(\mathbf{F}-\mathbf{K}\mathbf{U}_{,z}\right)\right]\_{0}^{L}\,dt + \cr
+   &amp; \int_{0}^{L}\mathbf{W}^T(z,T)\mathbf{U}(z,T)\,dz - \cr
+   &amp; \int_{0}^{L}\mathbf{W}^T(z,0)\,\mathbf{U}^0(z)\,dz = 0
+   \end{eqnarray} $$</p>
+
+<p>where the initial condition is given by $\mathbf{U}^0(z) = \left[S^0(z),Q^0(z)\right]^T$. 
+The boundary conditions are not specified at this point.</p>
+
+<h2> Disjoint Decomposition </h2>
+
+<p>We adopt the disjoint decomposition approach described in 2.3 to derive appropriate outflow boundary conditions. 
+First, we divide our spatial domain $\Omega=[0,L]$ into an upstream <strong>numerical</strong> domain $\Omega^{n}: z\in(0,B)$, 
+and a downstream <strong>analytic</strong> domain $\Omega^{a}: z\in(B,L)$.</p>
+
+<p>The boundary that separates these domains is defined as $\Gamma_{B} : z = B$. We define a disjoint decomposition of 
+our variables, for example for our unknown solution vector $\mathbf{U}$</p>
+
+<p>$$\mathbf{U} = \mathbf{U}^{n} + \mathbf{U}^{a}$$</p>
+
+<p>so that</p>
+
+<p>$$\mathbf{U} = \begin{cases} \mathbf{U}^{n} &amp; z\in\Omega^{n} \cr \mathbf{U}^{a} &amp; z\in\Omega^{a} \end{cases}$$</p>
+
+<p>We use a similar decomposition for our weighting function, $\mathbf{W}$ , and insert these expressions into our variational form. </p>
+
+<p>The disjoint nature of this expression is used to derive a new variational form for the 1D numerical domain: we obtain the original variational form specialized to the 1D numerical domain $\Omega^{n}$ with the addition of a boundary term accounting for the interface to the 1D analytic domain, $\Omega^{a}$</p>
+
+<p>$$\begin{eqnarray}
+   &amp; \int_{0}^{t}\int_{0}^{B}\left(-\mathbf{W}_{,t}^{n\,T}\,\mathbf{U}^{n} - \mathbf{W}_{,z}^{n\,T}\,\mathbf{F}(\mathbf{U}^{n}) + \mathbf{W}_{,z}^{n\,T}\,\mathbf{K}\,\mathbf{U}^{n}_{,z}-\mathbf{W}^{n\,T}\,\mathbf{G}(\mathbf{U}^{n})\right)\,dz\,dt \cr
+   &amp; -\int_{0}^{B}\,\mathbf{W}^{n\,T}(z,T)\,\mathbf{U}^{n}(z,T)\,dz + 
+   \int_{0}^{B}\mathbf{W}^{n\,T}(z,0)\,\mathbf{U}^{n}(z,0)\,dz + \cr
+   &amp; \int_{0}^{T}\left[\mathbf{W}^{n\,T}\left(\mathbf{F}(\mathbf{U}^{n}) - \mathbf{K}\,\mathbf{U}^{n}_{,z}\right)\right]_{z=0}\,dt - 
+   \int_{0}^{T}\left[\mathbf{W}^{a\,T}\left(\mathbf{F}(\mathbf{U}^{a}) - \mathbf{K}\,\mathbf{U}^{a}_{,z}\right)\right]_{z=B}\,dt = 0
+   \end{eqnarray} \label{5} \tag{5} $$</p>
+
+<p>Now, we enforce the continuity of the weighting function at the interface:</p>
+
+<p>$$ \mathbf{W}^{a}\vert_{z=B} = \mathbf{W}^{n}\vert_{z=B} $$</p>
+
+<p>and define the operators $\mathbf{M}$ and $\mathbf{H}$ on the $\Omega^{a}$ domain based on the model of the
+downstream domain:</p>
+
+<p>$$\left[\mathbf{M}(\mathbf{U}^{a})\right]_{z=B} = \left[\mathbf{F}(\mathbf{U}^{a}) - \mathbf{K}\mathbf{U}^{a}_{,z}\right]_{z=B} $$</p>
+
+<p>$\mathbf{M}$ acts on the solution variables and $\mathbf{H}$ depends only on other terms like initial conditions, boundary conditions, and physical properties in the downstream domain. </p>
+
+<p>Finally, we enforce the continuity of the flux at the boundary:</p>
+
+<p>$$ \left[\mathbf{M}(\mathbf{U}^{n})\right]_{z=B} = \left[\mathbf{M}(\mathbf{U}^{a})\right]_{z=B}  \label{6} \tag{6} $$</p>
+
+<p>The final result is</p>
+
+<p>$$ \begin{eqnarray}
+   &amp; \int_{0}^{t}\int_{0}^{B}\left(-\mathbf{W}_{,t}^{n\,T}\,\mathbf{U}^{n} - \mathbf{W}_{,z}^{n\,T}\,\mathbf{F}(\mathbf{U}^{n}) + \mathbf{W}_{,z}^{n\,T}\,\mathbf{K}\,\mathbf{U}^{n}_{,z}-\mathbf{W}^{n\,T}\,\mathbf{G}(\mathbf{U}^{n})\right)\,dz\,dt \cr
+   &amp; -\int_{0}^{B}\,\mathbf{W}^{n\,T}(z,T)\,\mathbf{U}^{n}(z,T)\,dz + 
+   \int_{0}^{B}\mathbf{W}^{n\,T}(z,0)\,\mathbf{U}^{n}(z,0)\,dz + \cr
+   &amp; \int_{0}^{T}\left[\mathbf{W}^{n\,T}\left(\mathbf{F}(\mathbf{U}^{n}) - \mathbf{K}\,\mathbf{U}^{n}_{,z}\right)\right]_{z=0}\,dt - 
+   \int_{0}^{T}\left[\mathbf{W}^{n\,T}\left(\mathbf{M}(\mathbf{U}^{n}) + \mathbf{H}\right)\right]_{z=B}\,dt = 0
+   \end{eqnarray} $$</p>
+
+<p>We see that the solution in the numerical domain depends on the operators $\mathbf{M}$ and $\mathbf{H}$ defined by the mathematical model of the downstream domain but not the solution
+variable, $\mathbf{U}^{a}$, in the downstream domain.</p>
+
+<h2> The Map from the “DtN” Method </h2>
+
+<p>The operators $\mathbf{M}$ and $\mathbf{H}$ are based on the mathematical model of the downstream domain using an approach based on the “Dirichlet-to-Neumann” method <a href="#ref-5">[5-7,9]</a>.
+The physics of the downstream domain depends on the upstream domain. Thus, an explicit solution on the downstream domain cannot be obtained. Instead, a relationship between the unknowns that incorporates all the information of the model, the <em>map</em>, is
+derived. 
+The DtN map is then inserted into the flux term previously described $eq20$, to derive the operators $\mathbf{M}$ and $\mathbf{H}$. 
+In practice, the contribution of the diffusive flux term $\mathbf{K}\mathbf{U}_{,z}$ is observed to be negligible 
+in the boundary integral and is hence omitted in deriving an expression for $\mathbf{M}$ and $\mathbf{H}$ from 
+equations $\eqref{4}$ and $\eqref{6}$:</p>
+
+<p>$$ \begin{eqnarray}
+   M_1(Q,S) + H_1 &amp; = Q \cr
+   M_2(Q,S) + H_2 &amp; = (1 + \delta)\,\frac{Q^2}{S} + \frac{1}{\rho}\int_{p_0}^{p} \tilde{S}(p,z,t)\,dp
+   \end{eqnarray} \label{7} \tag{7} $$</p>
+
+<p>Note that the boundary conditions are not exact since, at a minimum, a linear approximation is employed in the downstream domain whereas a nonlinear model is used in the upstream domain.</p>
+
+<h3> Resistance (0D, constant in time) </h3>
+
+<p>We can distinguish between instantaneous and memory cases. An example of an instantaneous map is when a simple proportional relationship is prescribed between pressure at time $t$ and flow at the same point in time that represents the resistance to flow
+of the downstream domain, $Q(B,t) = p(B,t)/R$. The resistance $R$ can be measured, taken from the literature or derived for Poiseuille flow (steady flow) or other models. 
+Then using equations $\eqref{1}$, $\eqref{2}$, $\eqref{3}$, and integrating the pressure term in $\eqref{7}$:</p>
+
+<p>$$\begin{eqnarray}
+   M_1(S) &amp; = \frac{\tilde{p}(S,B)}{R},\quad H_1 = 0 \cr
+   M_2(S) &amp; = \frac{4}{3}\,\frac{M_1(S)^2}{S} + frac{4\,\sqrt{\pi}}{3}\,\frac{E\,h}{\rho}\,\sqrt{S},\quad H_2 = -\frac{4}{3\,\rho}\,E\,h\,\pi\,r^{0}(B)
+   \end{eqnarray}$$</p>
+
+<h3> Windkessel RCR circuit model (0D, fully transient) </h3>
+
+<p>Flow and pressure are related by the following relationship</p>
+
+<p>$$Q(B,t) = \left[Q(B,0) - \frac{p^0(B)}{R}\right]\exp(-\alpha\,t) + \frac{p(B,t)}{R} - \frac{1}{R^2\,C}\,\int_{0}^{t} p(B,\tau)\exp(-\alpha(t-\tau))\,d\tau$$</p>
+
+<p>$$\alpha = \frac{R + R_d}{R\,R_d\,C}$$</p>
+
+<p>Then using equations $\eqref{1}$, $\eqref{2}$ and $\eqref{3}$, and integrating the pressure term in $\eqref{7}$:</p>
+
+<p>$$M_1(S) = \frac{\tilde{p}[S(B,t),B,t]}{R} - \frac{1}{R^2\,C}\,\int_{0}^{t}\tilde{p}[S(B,\tau),B,\tau]\,\exp(-\alpha(t-\tau))\,d\tau$$</p>
+
+<p>$$H_1 = \left[Q(B,0) - \frac{p^0(B)}{R}\right]\exp(-\alpha\,t)$$</p>
+
+<p>$$M_2(S) = \frac{4}{3}\,\frac{[M_1(S) + H_1]^2}{S} + \frac{4\,\sqrt{\pi}}{3}\,\frac{E\,h}{\rho}\,\sqrt{S}$$</p>
+
+<p>$$H_2 = -\frac{4}{3\,\rho}\,E\,h\,\pi\, r^{0}(B)$$</p>
+
+<p>The flow rate at time $t$ depends on the entire history of the pressure represented by the time integral in the above equations.</p>
+
+<h3> Impedance (1D, periodic) </h3>
+
+<p>Another example of a memory map is the impedance model: the downstream domain is approximated using linear wave propagation theory and we further assume that the solution is periodic in time. We can then derive</p>
+
+<p>$$Q(B,t) = \frac{1}{T}\int_{t-\tau}^{t}\,p(B,\tau)\,y(B,t-\tau)\,d\tau \label{8}  \tag{8} $$</p>
+
+<p>The flow rate at time $t$ depends on the history of the pressure over one period. Here $y(B,t)$ is the inverse Fourier transform of the admittance function 
+The representation formula for the operators then reads, using equations $\eqref{1}$, $\eqref{2}$, $\eqref{3}$,
+$\eqref{7}$, $\eqref{8}$:</p>
+
+<p>$$M_1(S) = \frac{1}{T}\,\int_{t-\tau}^{t}\,\tilde{p}\left[S(B,\tau),B\right]\,y(B,t-\tau)\,d\tau,\quad H_1=0$$</p>
+
+<p>$$M_2(S) = \frac{4}{3}\,\frac{M_1(S)^2}{S} + \frac{4\,\sqrt{\pi}}{3}\,\frac{E\,h}{\rho}\,\sqrt{S},\quad H_2 = -\frac{4}{3\,\rho}\,E\,h\,\pi\, r^{0}(B)$$</p>
+
+<p>The flow rate at time $t$ depends on the history of the pressure over one cardiac cycle represented by the time integral in the above equations.</p>
+
+<h3> Wave in a tube (1D, fully transient) </h3>
+
+<p>Another example of a memory map is the more general one-dimensional wave equation. The derivation of a minimally reflecting boundary condition for the one-dimensional non-linear equations using the wave equation for the downstream domain has been inspired by the work of Givoli, Grote and colleagues <a href="#ref-7">[7-9]</a> on exact nonreflecting boundary conditions for the linear wave equation. 
+For this latter case, we approximate the downstream domain using one-dimensional linear wave propagation theory but do not assume periodicity in time. 
+As an example, in the case where the downstream domain is a single elastic vessel with length $l$ and wave speed $c$, going from the boundary point $B$ to the far end point $L$, we derived a map with the related Green’s function that relates cross-sectional area and its derivative at the inlet of a segment:</p>
+
+<p>$$\frac{\partial S}{\partial z}(B,t) = -\frac{S(B,t)}{l} + \exp(\gamma\, t)\,\int_{0}^{t}\int_{B}^{L}\,\frac{\partial G}{\partial z}(B,t,z_0,t_0)\,f_B(z_0,t_0)\,dz_0\,dt_0 + \mathcal{H}(t)$$</p>
+
+<p>Furthermore we integrate the balance of momentum equation in time to obtain:</p>
+
+<p>$$Q(B,t) = -c^2\,\int_{0}^{t}\,\frac{\partial S}{\partial z}(B,t)\,\exp(2\gamma(t-t_0))\,dt_0 + Q^0(B)\exp(2\,\gamma\,t)$$</p>
+
+<p>We can then derive a map between the flow rate and the cross-sectional area using (3.29) and (3.30):</p>
+
+<p>$$Q(B,t) = 
+   c^2\,\int_{0}^{t}\left[\frac{S(B,t^{*})}{l} - \exp(\gamma\,t^{*})\,\int_{0}^{t^{*}}\int_{B}^{L}\frac{\partial G}{\partial z}(B,t^{*},z_0,t_0)\,f_{B}(z_0,t_0)\,dz_0\,dt_0\right]\exp(2\,\gamma\,(t-t^{*}))\,dt^{*} + 
+   c^2\,\int_{0}^{t}\mathcal{H}(t^{*})\exp(2\,\gamma\,(t-t^{*}))\,dt^{*} + Q^0(B)\exp(2\,\gamma\,t) $$</p>
+
+<p>After integrating by parts in time, the derivatives that constitute $f_B(z_0,t_0)$, and using the 
+Green’s function $\eqref{5}$, the final map reads:</p>
+
+<p>$$Q(B,t) = \frac{c^2}{l}\,\int_{0}^{t}\left[1 + \sum_{n=1}^{\infty}2\right]\,S(B,t^{*})\exp(2\,\gamma\,(t-t^{*}))\,dt^{*}
+   -\left(\frac{c}{l}\right)^3\,\int_{0}^{t}\exp(\gamma\,(2\,t - t^{*}))\int_{0}^{t^{*}}\,S(B,t_0)\exp(-\gamma\,t_0)\left[\sum_{n=1}^{\infty}\frac{2\,n^2\,\pi^2}{\sqrt{\lambda_n}}\,\sin(c\,\sqrt{\lambda_n}(t^{*}-t_0))\right]\,dt_0\,dt^{*}
+    + Q^0(B)\exp(2\,\gamma\,t) + \Theta\,\left[S^0(B), \dot{S}_0(B), S_L(t),\dot{S}_L(t),\ddot{S}_L(t)\right] \label{9} \tag {9} $$</p>
+
+<p>and</p>
+
+<p>$$\Theta\,\left[S^0(B), \dot{S}_0(B), S_L(t),\dot{S}_L(t),\ddot{S}_L(t)\right] = - \left[\sum_{n=1}^{\infty}\frac{2\,c}{l\,\sqrt{\lambda_n}}\,\sin(c\,\sqrt{\lambda_n}\,t)\right]\exp(\gamma\,t)\,S(B,0) 
+   + \left[\sum_{n=1}^{\infty}\,\frac{2\,l}{c\,n^2\,\pi^2\,\sqrt{\lambda_n}}\left(\gamma\,\sin(c\,\sqrt{\lambda}\,t)\right) + c\,\sqrt{\lambda_n}\,\left(\cos(c\,\sqrt{\lambda_n}\,t) - \exp(\gamma\,t)\right)\right]\exp(\gamma\,t)\,\dot{S}(B,0) + 
+   -c^2\int_{0}^{t}\mathcal{H}(t^{*})\exp(2\,\gamma\,(t-t^{*}))\,dt^{*}$$</p>
+
+<p>The operators for the wave boundary condition can now be derived using $\eqref{7} and $\eqref{9},, assuming as for the upstream numerical domain that the initial cross-sectional area is the same as the reference cross-sectional area:</p>
+
+<p>$$Q(B,t) = M_1(S) + H_1,\, \gamma = \frac{N}{2\,S^{0}},\, \forall n \in \mathbb{N}_{&gt;0},\,\lambda = \frac{n^2\,\pi^2}{l^2} - \frac{\gamma^2}{c^2}$$</p>
+
+<p>$$M_1(S) = \frac{c^2}{l}\int_{0}^{t}\left[1 + \sum_{n=1}^{\infty}\,2\right]\,S(B,t^{*})\exp\left[2\gamma(t-t^{*})\right]\,dt^{*} 
+   - \left(\frac{c^2}{l}\right)^3\,\int_{0}^{t}\exp\left[\gamma(2t - t^{*})\right]\int_{0}^{t^{*}}S(B,t_0)\exp(-\gamma\,t_{0})\left[\sum_{n=1}^{\infty}\frac{2\,n^2\,\pi^2}{\sqrt{\lambda_n}}\,sin\left(t^{*} - t_{0}\right)\right]\,dt_0\,dt^{*}$$</p>
+
+<p>$$H_1 = Q^{0}(B)\exp\left(2\,\gamma\,t\right) + \Theta\left[S^0(B), \dot{S}^{0}(B), S_L(t), \dot{S}_L(t), \ddot{S}_L(t)\right]$$</p>
+
+<p>$$M_2(S) = \frac{4}{3}\frac{\left[M_1(S) + H_1\right]^2}{S} + \frac{4\,\sqrt{\pi}}{3}\frac{E\,h}{\rho}\sqrt{S}$$</p>
+
+<p>$$H_2 = -\frac{4}{3\,\rho}\,E\,h\,\pi\,r^0(B)$$</p>
+
+<p>The flow rate is a function of pressure history and depends also on waves coming from the far end boundary conditions and the initial conditions everywhere in the downstream domain. 
+For simplicity, we implemented the equation above assuming that the initial state corresponded to the static solution around which the wave equation is derived, with zero initial derivative of the cross-sectional area and a constant distant cross-sectional area.</p>
+
+<p>The <em>DtN</em> map has now been derived for a variety of boundary conditions. The reader interested in the effect of a different boundary condition can follow the same approach to derive the corresponding map. 
+In particular, this approach can be applied for complex lumped models of the coronary bed, and can also be performed very similarly for lumped-parameter heart models at the inlet of the numerical domain.</p>
+
+<h2> Finite Element Discretization </h2>
+
+<p>We employ a stabilized space-time finite element method, known for its robustness, based on the Discontinuous Galerkin method in time. The procedure presented herein employs ideas developed in Hughes and Mallet <a href="#ref-10">[10]</a> and Hughes, Franca and Hulbert <a href="#ref-11">[11]</a>. 
+We previously <a href="#ref-4">[4]</a> described a space-time method with flow rate, pressure and resistance boundary conditions that employed a  different strong form (non conservative).
+Here we retained the same stabilization term. The present formulation accommodates more general inflow and outflow boundary conditions. We use shape functions that are piecewise constant in time and piecewise linear in space. 
+Let $\tilde{\mathcal{V}}$ be the finite-dimensional approximation of $\mathcal{V}$ restricted to $(0,B)\times(t_n,t_n+1)$. Thus, the weak form for slab $n+1$, from $t_n$ to $t_n+1$ reads:</p>
+
+<p>Find $\mathbf{U^h}$ in $\mathbf{V^h}$ such that $\forall\mathbf{W^h}$ in $\mathbf{V^h}$.</p>
+
+<p>$$\int_{t_n^{+}}^{t_{n+1}^{-}}\int_{0}^{B}\left[\mathbf{W}_{,t}^{T}\,\mathbf{U}^{\mathbf{h}} + 
+  \mathbf{W}_{,z}^{T}\,\mathbf{F}(\mathbf{U}) - 
+  \mathbf{W}_{,z}^{T}\,\mathbf{K}\,\mathbf{U}_{,z} + 
+  \mathbf{W}^{T}\,\mathbf{G}\left(\mathbf{U}\right)
+  \right]\,dz\,dt $$
+  $$ - \int_{0}^{B}\mathbf{W}^{T}\left(z,t_{n+1}^{-}\right)\,\mathbf{U}\left(z,t_{n+1}^{-}\right)\,dz 
+  + \int_{0}^{B}\,\mathbf{W}^{T}\left(z,t_{n+1}^{+}\right)\,\mathbf{U}\left(z,t_{n+1}^{-}\right)\,dz $$</p>
+
+<p>$$ + \int_{t_{n}^{+}}^{t_{n+1}^{-}}{\mathbf{W}[\mathbf{F}(\mathbf{U}) - 
+  \mathbf{K}\,\mathbf{U}_{,z}]}_{z = 0}\,dt
+  - \int_{t_{n}^{+}}^{t_{n+1}^{-}}{\mathbf{W}[\mathbf{M}(\mathbf{U}) + \mathbf{H}]}_{z = B}\,dt = 0$$</p>
+
+<p>For simplicity, we have dropped the superscript $h$. After discretization in time, (3.34) becomes 
+(the superscript $n+1$ refers to time slab $n+1$):</p>
+
+<p>$$\Delta t_n\int_{0}^{B}\left[\mathbf{W}_{,z}^{T,n+1}\,\mathbf{F}^{n+1}(\mathbf{U^{n+1}}) - \mathbf{W}_{,z}^{T,n+1}\,\mathbf{K}\,\mathbf{U}_{,z}^{n+1} + \mathbf{W}^{T,n+1}\,\mathbf{G}^{n+1}(\mathbf{U}^{n+1})\right]\,dz $$</p>
+
+<p>$$ - \int_{0}^{B}\,\mathbf{W}^{T,n+1}\left(\mathbf{U}^{n+1} - \mathbf{U}^{n}\right)\,dz
+   + \Delta t_{n}\left[\mathbf{W}^{T,n+1}\left(\mathbf{F}^{n+1}(\mathbf{U}^{n+1}) - \mathbf{K}\,\mathbf{U}_{,z}^{n+1}\right)\right]_{z=0}
+   - \int_{t_n^{+}}^{t_{n+1}^{-}}\left[\mathbf{W}^{T,n+1}\left(\mathbf{M}^{n+1}(\mathbf{U}) + \mathbf{H}^{n+1}\right)\right]_{z=B} = 0 \label{10} \tag{10} $$</p>
+
+<p>The boundary term appears in the box in this last equation. 
+Stabilization terms are added to $\eqref{10}$. To that end, we define the matrices $\mathbf{A}$ and $\mathbf{C_A}$:</p>
+
+<p>$$\mathbf{A} = 
+   \begin{bmatrix}
+   0 &amp; 1 \cr
+   -(1 + \delta)\,\left(\frac{U_2}{U_1}\right)^2 + \frac{U_1}{\rho}\frac{\partial\tilde{p}}{\partial S} &amp; (1 + \delta)\,\frac{2\,U_2}{U_1} \cr
+   \end{bmatrix} $$</p>
+
+<p>$$\mathbf{C_A} = 
+   \begin{bmatrix}
+   -\frac{\psi}{U_1} &amp; 0 \cr
+   f-\frac{1}{\rho}\,\frac{\partial\tilde{p}}{\partial z} &amp; \frac{N}{U_1} \cr
+   \end{bmatrix}<br>
+   $$</p>
+
+<p>We also define the matrix differential operator:</p>
+
+<p>$$\mathcal{L}(\mathbf{U}) = \mathbf{I}\,\frac{\partial}{\partial t} + \mathbf{A}(\mathbf{U})\,\frac{\partial}{\partial z} - \mathbf{K}\,\frac{\partial^2}{\partial z^2} - \mathbf{C_A}(\mathbf{U})
+   $$</p>
+
+<p>Note that $\mathcal{L}(\mathbf{U})\,\mathbf{U}$ is the residual of the advective form of the partial differential equation system. For the current case of a piecewise constant approximation in time and a piecewise linear approximation in space this simplifies to</p>
+
+<p>$$\mathcal{L}(\mathbf{U})\,\mathbf{U} = \mathbf{A}(\mathbf{U})\,\mathbf{U}_{,z} - \mathbf{C_A}(\mathbf{U})\,\mathbf{U}$$</p>
+
+<p>The stabilization term takes the form:</p>
+
+<p>$$\Delta t_n\sum_{e}\int_{\Omega_e}\left(\mathcal{L}(\mathbf{U})^T\,\mathbf{W}\right)^T\boldsymbol{\tau}\,\mathcal{L}(\mathbf{U})\,\mathbf{U}\,dz $$</p>
+
+<p>The summation ranges over the element interiors and $\tau = \tau(\mathbf{U})$ is the stabilization matrix defined by:</p>
+
+<p>$$\boldsymbol{\tau} = \left[\frac{2}{\Delta t_n}\mathbf{I} + \frac{2}{h}\vert\mathbf{A}\vert + 3\,\left(\frac{2}{h}\right)^2\,\mathbf{K} + \vert\mathbf{C_A}\vert\right]^{-1}
+   $$</p>
+
+<p>Here, the absolute value of a 2x2 matrix B can be obtained from the Cayley-Hamilton theorem,</p>
+
+<p>$$
+   \vert\mathbf{B}\vert = \frac{\mathbf{B}^2 + \sqrt{det(\mathbf{B}^2)}\,\mathbf{I}}{\sqrt{tr(\mathbf{B}^2) + 2\,\sqrt{det(\mathbf{B}^2)}}}
+   $$</p>
+
+<p>Therefore the final variational problem is: find $\mathbf{U}^{n+1}$ such that $\forall\,\mathbf{W}$:</p>
+
+<p>$$
+  \Delta t_n\int_{0}^{B}\left[\mathbf{W}_{,z}^{T,n+1}\,\mathbf{F}^{n+1}(\mathbf{U^{n+1}}) - \mathbf{W}_{,z}^{T,n+1}\,\mathbf{K}\,\mathbf{U}_{,z}^{n+1} + \mathbf{W}^{T,n+1}\,\mathbf{G}^{n+1}(\mathbf{U}^{n+1})\right]\,dz
+$$ 
+  $$- \int_{0}^{B}\,\mathbf{W}^{T,n+1}\left(\mathbf{U}^{n+1} - \mathbf{U}^{n}\right)\,dz
+  + \Delta t_{n}\left[\mathbf{W}^{T,n+1}\left(\mathbf{F}^{n+1}(\mathbf{U}^{n+1}) - \mathbf{K}\,\mathbf{U}_{,z}^{n+1}\right)\right]_{z=0} $$</p>
+
+<p>$$- \int_{t_n^{+}}^{t_{n+1}^{-}}\left[\mathbf{W}^{T,n+1}\left(\mathbf{M}^{n+1}(\mathbf{U}) + \mathbf{H}^{n+1}\right)\right]_{z=B} = 0 $$
+  $$ + \Delta\,t_{n}\sum_{e}\int_{\Omega_e}\left(\mathbf{W}_{,z}^{T}\,\mathbf{A}^{n+1} - \mathbf{W}^{T}\,\mathbf{C}_{A}^{n+1}\right)\boldsymbol{\tau}\left(\mathbf{A}^{n+1}\mathbf{U}_{,z}^{n+1} - \mathbf{C}_{A}^{n+1}\,\mathbf{U}^{n+1}\right)\,dz = 0
+   $$</p>
+
+<p>Using piecewise linear shape functions in space $N_A, A = 1,\dots, m$ with $m$ the number of nodes, the global nodal residual is:</p>
+
+<p>$$
+  \mathbf{R}_{A} = \Delta\,t_{n}\,\int_{0}^{B}\,N_{A,z}\left(\mathbf{F}^{n+1}(\mathbf{U}^{n+1}) - \mathbf{K}\,\mathbf{U}_{,z}^{n+1}\right) + N_{A}\,\mathbf{G}^{n+1}(\mathbf{U^{n+1}})\,dz
+  $$</p>
+
+<p>$$ - \int_{0}^{B}\,N_{A}\left(\mathbf{U}^{n+1} - \mathbf{U}^{n}\right)\,dz
+  + \Delta\,t_n\left[N_{A}\left(\mathbf{F}^{n+1}(\mathbf{U}^{n+1}) - \mathbf{K}\,\mathbf{U}_{,z}^{n+1}\right)\right]_{z=0}
+  $$</p>
+
+<p>$$
+  - \int_{t_{n}^{+}}^{t_{n+1}^{-}}\left[N_{A}\left(\mathbf{M}^{n+1}(\mathbf{U}) + \mathbf{H}^{n+1}\right)\right]_{z=B}\,dt
+  $$</p>
+
+<p>$$ + \Delta\,t_{n}\,\sum_{e}\,\int_{\Omega_e}\left(N_{A,z}\,\mathbf{A}^{n+1} - N_{A}\,\mathbf{C}_{A}^{n+1}\right)\,\boldsymbol{\tau}\,\left(\mathbf{A}^{n+1}\,\mathbf{U}_{,z}^{n+1} - \mathbf{C}_{A}^{n+1}\,\mathbf{U}^{n+1}\right)\,dz = 0
+  $$</p>
+
+<p>These nonlinear equations are then solved with a modified Newton-Raphson technique <a href="#ref-4">[4]</a>. At each iteration k+1 in the time step n+1, the non-linear loop consists of two steps:</p>
+
+<p>Solve for the increment $\Delta\mathbf{U}_{C}^{n+1,k+1}$:</p>
+
+<p>$$
+   \mathbf{K}_{AC}^{n+1,k}\,\Delta\mathbf{U}_{C}^{n+1,k+1} = -\mathbf{R}_{A}^{n+1,k},\quad\text{with}\quad\mathbf{K}_{AC}^{n+1,k} = \frac{\partial\mathbf{R}_{A}^{n+1,k}}{\partial\mathbf{U}_{C}},\quad A,C=1,\dots,m
+   $$</p>
+
+<p>Update the solution:</p>
+
+<p>$$
+   \mathbf{U}_{C}^{n+1,k+1} = \mathbf{U}_{C}^{n+1,k} + \Delta\mathbf{U}_{C}^{n+1,k+1}
+   $$</p>
+
+<p>The matrices $\mathbf{A}$, $\mathbf{C^A}$, $\mathbf{C^F}$ (recall :eq:$eq13$) and $\tau$ are frozen in the calculation of the tangent matrix:</p>
+
+<p>$$ \mathbf{K}_{AC} = \Delta\,t_n\,\int_{0}^{B}\,N_{A,z}\,\left(\frac{\partial\,\mathbf{F}^{n+1,k}}{\partial\,\mathbf{U}_{C}^{n+1,k}} 
+  - \mathbf{K}\,N_{C,z}\right) + N_A\,N_C\,\mathbf{C}_{F}^{n+1,k}\,dz $$</p>
+
+<p>$$ - \int_{0}^{B}\,N_A\,N_C\,\mathbf{I}\,dz $$</p>
+
+<p>$$ + \Delta\,t_n\left[N_A\left(\frac{\partial\,\mathbf{F}^{n+1,k}}{\partial\,\mathbf{U}_{C}^{n+1,k}} - \mathbf{K}\,N_{C,z}\right)\right]_{z=0} $$</p>
+
+<p>$$ - \int_{t_n^{+}}^{t_{n+1}^{-}}\,\left[N_A\,\frac{\partial\,\mathbf{M}^{n+1,k}}{\partial\,\mathbf{U}_{C}^{n+1,k}}\right]_{z=B}\,dt $$</p>
+
+<p>$$ + \Delta\,t_{n}\,\sum_{e}\,\int_{\Omega_e}\left(N_{A,z}\,\mathbf{A}^{n+1} - N_{A}\,\mathbf{C}_{A}^{n+1}\right)\,\boldsymbol{\tau}\,\left(\mathbf{A}^{n+1}\,\mathbf{U}_{,z}^{n+1} - \mathbf{C}_{A}^{n+1}\,\mathbf{U}^{n+1}\right)\,dz = 0 $$</p>
+
+<p>After the residual converges to a chosen tolerance, the scheme is advanced in time to solve for a new time step, initialized with the solution at the previous time step.</p>
+
+<p><strong>Remark 1</strong> In practice, the residuals and the tangent matrices are coded at the element level. The detailed finite element  residuals and tangent matrices are presented for reference in Appendix A for each boundary condition.</p>
+
+<p><strong>Remark 2</strong> So far, we have presented the derivation for a single segment. At a connection of multiple segments, pressure continuity and conservation of mass are enforced using Lagrange multipliers. Pressure, cross-sectional area and flow rate boundary conditions are treated as essential boundary conditions. 
+Both of these features are exactly the same as in Wan et al. <a href="#ref-4">[4]</a> and are therefore not repeated here.</p>
+</section>
+  <section id="1d-solver-user-guide" class="subgroup"><h1>User Guide </h1>
+
+<p>This section describes the concepts needed to define a 1D network model and execute a 1D simulation for it. </p>
+
+<h3> Nodes, Joints and Segments </h3>
+
+<p>In the 1D formulation the arterial network is decomposed into arterial segments connected to each other at nodes. The 1D network
+geometry is defined by the 3D coordinates of its nodes. </p>
+
+<p><br>
+<figure>
+  <img src="documentation/rom_simulation/1d-solver/images/3d-model.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
+  <img src="documentation/rom_simulation/1d-solver/images/1d-network-model.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
+  <p style="clear: both;">
+  <figcaption> <i>Figure 1. The geometriy of a 3D model (left) is represented by a 1D network (right) of Segments (green) and Nodes (blue). </i></figcaption>
+</figure>
+<br></p>
+
+<p>A segment is used to represent a section of a vessel as a tapered cylinder with a reducing cross sections from inlet to outlet. 
+A segment can connect to two joints, a joint and an inlet/outlet, or an inlet to an outlet. A joint is used to 
+enforce pressure and mass continuity across segment junctions. </p>
+
+<p>The 1D network model show in Fig. 1 comprises </p>
+
+<ul>
+  <li> 1 inlet </li>
+  <li> 10 nodes </li>
+  <li> 4 joints </li>
+  <li> 9 segments </li>
+  <li> 5 outlets </li>
+</ul>
+
+<p>These components are labeled in Fig. 2. </p>
+
+<p><br>
+<figure>
+  <img src="documentation/rom_simulation/1d-solver/images/labeled-1d-network-model.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
+  <p style="clear: both;">
+ <figcaption> <i>Figure 2. A 1D network model comprising 10 nodes, 4 joints and 9 segments. Node IDs are in parentheses</i></figcaption>
+</figure>
+<br></p>
+
+<p>Joint1 defines a constraint betreen segments 1, 2 and 4 at node2, joint2 between segments 2, and 7 at node3, etc.</p>
+
+<h3> Finite Element Mesh </h3>
+
+<p>Each segment is discretized into a number of finite elements in order to numerically solve the 1D equations of fluid flow in
+deformable vessels (Fig. 3). This yields a 1D finite element mesh.</p>
+
+<p><br>
+<figure>
+  <img src="documentation/rom_simulation/images/segment-elements.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
+  <p style="clear: both;">
+ <figcaption> <i> Figure 3. A segment is discretized into a mesh n of finite elements. </i> </figcaption>
+</figure>
+<br></p>
+
+<p>The number of elements needed to simulation wave propagation in a segment depends on the material model and boundary conditions used 
+in a 1D simulation. 
+The number of elements required to achieve reliable results should be determined using a mesh convergence study, where several meshes 
+are generated with different number of elements per segment until the simulation results do not substantially change. In general 10-25 
+elements per segment is sufficient. If you have very large segements you will likely want to increase this to 50-150 elements per segment. 
+You can start at the smaller number of elements per segment and increase if you experience solver errors (see below).</p>
+
+<p>The number element quadrature points determines the accuracy of the numerical integration used to approximates integrals in 
+the element formulation. This number generally does not need to be changed and can remain at its default value of 4.</p>
+
+<h3> Time Step </h3>
+
+<p>The size of your time step is influenced by several factors. For a straight, smooth, well-behaved model, a larger time step can be used. 
+Additionally, for more stiff vessels (higher elastic modulus), a larger time step can be used. The more compliance is present in your model 
+or the presence of a larger number of branches or very small branches will likely necessitate smaller time steps. Starting with a time 
+step of 0.01 and decreaing by a factor of &frac12; until your model attains convergence. </p>
+
+<h3> Solver Errors </h3>
+
+<p>If you receive an error while running a simulation, most commonly this can be solved by decreasing the time step 
+(work in factors of &frac12;) and increasing the number of elements per segment (work in factors of 2).</p>
+
+<p>A common error, which can occur when there is a large difference in the inlet and outlet areas of a segment, is <strong>outlet areas going negative</strong>.</p>
+
+<p>If this isn&rsquo;t working, then the geometry of the 1D model may need to be altered. This could involve adding additional segments to make the 
+change in inlet and outlet area of the segments more gradual. It could also included truncating the model to remove branches or sections of 
+branches with very small radii.</p>
+
+<h3> Simlation Results </h3>
+
+<p>The 1D solver writes simulation results for cross-section area, flow, pressure, Reynolds number (Re), and wall shear stress (WSS) for
+each segment in your model. Results files are named using the following convention</p>
+
+<pre>
+MODEL_SEGMENT_DATA.dat
+
+  where 
+
+    MODEL - Model name
+    SEGMENT - Segement name
+    DATA - Data name: area, flow, pressure, Re, wss
+
+  Example: 
+
+    demoGroup0_Seg0_wss.dat
+
+</pre>
+
+<p>Each row in the .dat file contains simulation results for each segement finite element for each output simulation time as 
+set by the solver input file <strong>SOLVEROPTIONS</strong> statement. There are N+1 rows for a segment divided into into N elements.
+The last row contains results for the segment outlet.</p>
+</section>
+  <section id="1d-solver-input-file" class="subgroup"><h1>Input File Format</h1>
+
+<p>The 1D Solver executes using a single input text file. The 1D Solver reads in the input text file and 
+executes keyword statements to define data for</p>
+
+<ol>
+  <li>Finite element mesh</li>
+  <li>Boundary conditions</li>
+  <li>Material model</li>
+  <li>Solver parameters </li>
+</ol>
+
+<p>The general format for a keyword statement is a capitalized name followed by list of data values
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #000000;">
+  KEYWORD <i>value$_1$</i> <i>value$_2$</i> &hellip; <i>value$_N$</i>
+</div>
+<br></p>
+
+<p>The following keywords are used by the 1D Solver to define and execute a 1D simulation</p>
+
+<ol>
+  <li> <a href="#format_data_table"> DATATABLE / ENDDATATABLE </a> </li>
+  <li> <a href="#format_include"> INCLUDE </a> </li>
+  <li> <a href="#format_joint"> JOINT </a> </li>
+  <li> <a href="#format_joint_inlet"> JOINTINLET </a> </li>
+  <li> <a href="#format_joint_outlet"> JOINTOUTLET </a> </li>
+  <li> <a href="#format_material"> MATERIAL </a> </li>
+  <li> <a href="#format_model"> MODEL </a> </li>
+  <li> <a href="#format_node"> NODE </a> </li>
+  <li> <a href="#format_output"> OUTPUT </a> </li>
+  <li> <a href="#format_segment"> SEGMENT </a> </li>
+  <li> <a href="#format_solver_options"> SOLVEROPTIONS </a> </li>
+</ol>
+
+<!-- DATATABLE --> 
+
+<p><br>
+<a id="format_data_table"> <h3> DATATABLE / ENDDATATABLE </h3></a> 
+The DATATABLE statement is used to specify constant and time-varying quantities for inlet/outlet boundary conditions 
+as a list of List of time/value pairs.
+It also computes admittance and impedance from a parametric definition of the downstream vessel morphometry. </p>
+
+<p>Format
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #000000;">
+  DATATABLE <i>name</i>  <i>type</i> 
+  <ul style="list-style-type:none;">
+  <li><i>$row_1$</i></li>
+  <li><i>$row_2$</i></li>
+  <li><i>&hellip;</i></li>
+  <li><i>$row_N$</i></li>
+  </ul>
+  ENDDATATABLE
+  <br>
+  <br></p>
+
+<p>Arguments
+  <ul style="list-style-type:none;">
+    <li><i>name</i> (string)) - Data table name </li><br>
+    <li><i>type</i> (string) - Data table type. 
+  </ul>
+  <br></p>
+
+<p>Data table type
+  <ul style="list-style-type:none;">
+    <li>LIST - Table values are specified by alternating the time and the quantity of interest at that instant in time. 
+      <ul style="list-style-type:none;">
+      <li>$row_1$</i> = <i>time$_1$ value$_1$</i></li>
+      <li><i>$row_2$</i> = time$_2$ value$_2$</i></li>
+      <li><i>&hellip;</i></li>
+      <li><i>$row_N$</i> = time$_N$ value$_N$</i></li>
+      </ul>
+   </li><br>
+  </ul></p>
+
+<p></div></p>
+
+<p><br>
+Example: Set a constant inlet flow rate of 14.0.</p>
+<pre class="highlight plaintext"><code>  DATATABLE INLETDATA LIST
+  0.0 14.0 
+  10.0 14.0
+  ENDDATATABLE
+</code></pre>
+
+<p><br>
+Example: Set a time-varying inlet flow rate. </p>
+<pre class="highlight plaintext"><code>  DATATABLE INLETDATA LIST
+  0.0 14.0 
+  1.0 20.0
+  2.0 50.0
+  2.5 89.2
+  3.5 110.0
+  5.0 70.0
+  6.0 48.0
+  7.0 20.0
+  8.0 14.0
+  ENDDATATABLE
+</code></pre>
+
+<p><br></p>
+
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid green; border-left: 6px solid green">
+When entering values for PRESSURE, RESISTANCE, RCR, etc. a time value must be given even if its value will not be read. 
+</div>
+
+<p><br></p>
+
+<p>Example: Set outlet resistance value of 1000.0 Barye s/mL.</p>
+<pre class="highlight plaintext"><code>  DATATABLE RTABLE LIST
+  0.0 1000.0 
+  ENDDATATABLE
+</code></pre>
+
+<!-- INCLUDE -->
+
+<p><br>
+<a id="format_include"> <h3> INCLUDE </h3></a> 
+The INCLUDE statement is used to recursively include input files in the project. </p>
+
+<p>Format
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #000000;">
+  INCLUDE <i>name</i>  <i>activate</i></p>
+
+<p>Arguments
+  <ul style="list-style-type:none;">
+    <li><i>name</i> (string, no spaces) -  Name of the file to include </li><br>
+    <li><i>activate</i> (boolean) -  Activate file. 
+       If set to TRUE then the file is included in the current model. If set to FALSE then the file is not used. 
+    </li><br> 
+  </ul>
+</div></p>
+
+<p>Example: Include the file named <em>auxFile.in</em> in the current model.</p>
+<pre class="highlight plaintext"><code>  INCLUDE auxFile.in TRUE
+</code></pre>
+
+<!-- JOINT -->
+
+<p><br>
+<a id="format_joint"> <h3> JOINT </h3></a> 
+The JOINT statement is used to specify a connection between vessel segments. By entering the inlet and outlet vessel segments is it possible to enforce a unique value of pressure in the junction and a flow rate that satisfy conservation of mass. </p>
+
+<p>Format</p>
+
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #000000;">
+  JOINT <i>name</i>  <i>node</i> <i>inlet</i> <i>outlet</i>
+  <br>
+  <br>
+
+  Arguments
+  <ul style="list-style-type:none;">
+    <li><i>name</i> (string) -  Joint name </li><br>
+    <li><i>node</i> (integer) -  Joint node ID </li><br>
+    <li><i>inlet</i> (string) - Joint inlet name </li><br>
+    <li><i>outlet</i> (string) - Joint outlet name </li><br>
+  </ul>
+</div>
+
+<p><br></p>
+
+<p>Example: Define a joint named <em>JOINT1</em> at node <em>1</em> connecting inlet <em>IN0</em> to outlet <em>OUT0</em>. </p>
+<pre class="highlight plaintext"><code>  JOINT JOINT1 1 IN0 OUT0
+</code></pre>
+
+<!-- JOINTINLET -->
+
+<p><br>
+<a id="format_joint_inlet"> <h3> JOINTINLET </h3></a> 
+The JOINTINLET statement is used to specify a list of segments IDs as inlets for a joint entity. </p>
+
+<p>Format
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #000000;">
+  JOINTINLET <i>name</i>  <i>nsegs</i>  <i>list</i>
+  <br>
+  <br></p>
+
+<p>Arguments
+  <ul style="list-style-type:none;">
+    <li><i>name</i> (string) - Inlet name </li><br>
+    <li><i>nsegs</i> (integer) - Total number of segments </li><br>
+    <li><i>list</i> (list of integers) - List of segment IDs </li><br>
+  </ul>
+<br>
+</div>
+<br></p>
+
+<p>Example: Define a inlet joint named <em>IN0</em> with segment ID equal to 2, 4, and 5.</p>
+<pre class="highlight plaintext"><code>  JOINTINLET IN0 3 2 4 5
+</code></pre>
+
+<!-- JOINTOUTLET -->
+
+<p><br>
+<a id="format_joint_outlet"> <h3> JOINTOUTLET </h3></a> 
+The JOINTOUTLET statement is used to specify a list of segment IDs as outlets for a joint entity. </p>
+
+<p>Format</p>
+
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #000000;">
+  JOINTOUTLET <i>name</i>
+  <br> <br>
+
+  Arguments
+  <ul style="list-style-type:none;">
+    <li><i>name</i> (string) - Outlet name </li><br>
+    <li><i>nsegs</i> (integer) - Total number of segments </li><br>
+    <li><i>list</i> (list of integers) - List of segment IDs </li><br>
+  </ul>
+<br>
+</div>
+
+<p><br></p>
+
+<p>Example: Define an outlet joint named <em>OUT0</em> with 3 inlets and segment IDs 2, 4, and 5. </p>
+<pre class="highlight plaintext"><code>  JOINTOUTLET OUT0 3 2 4 5
+</code></pre>
+
+<!-- MATERIAL -->
+
+<p><br>
+<a id="format_material"> <h3> MATERIAL </h3></a> 
+The MATERIAL statement is used to specify a constitutive relationship between pressure, cross section diameter and thickness. </p>
+
+<p>Format</p>
+
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #000000;">
+  MATERIAL <i>name</i> 
+    <i>type</i>
+    <i>density</i>
+    <i>viscosity</i>
+    <i>exponent</i>
+    <i>$k_1$</i> [ <i>$k_2$</i> <i>$k_3$</i> ]
+  <br> <br>
+
+  Arguments
+  <ul style="list-style-type:none;">
+    <li><i>name</i> (string) - Material name. </li><br>
+    <li><i>type</i> (string) - Material type. </li><br>
+    <li><i>density</i> (double) - Material density.  </li><br>
+    <li><i>viscosity</i> (double) - Material viscosity.  </li><br>
+    <li><i>pressure</i> (double) - Material reference pressure.  </li><br>
+    <li><i>exponent</i> (double) - Material exponent.  </li><br>
+    <li><i>$k_1$</i> (double) - Material $k_1$ parameter.  </li><br>
+    <li><i>$k_2$</i> (double) - Material $k_2$ parameter. Optional, used for OLUFSEN material. </li><br>
+    <li><i>$k_3$</i> (double) - Material $k_3$ parameter. Optional, used for OLUFSEN material. </li><br>
+  </ul>
+
+  Material types
+  <ul style="list-style-type:none;">
+    <li>LINEAR - Linear material. </li><br>
+    <li>OLUFSEN - Olufsen material. </li><br>
+  </ul>
+
+</div>
+
+<p><br></p>
+
+<p>Example: Linear material</p>
+<pre class="highlight plaintext"><code>  MATERIAL MAT1 LINEAR  1.06 0.04 120000.0 1.0 7.1e4
+</code></pre>
+
+<p><br></p>
+
+<p>Example: Olufsen material</p>
+<pre class="highlight plaintext"><code>  MATERIAL MAT1 OLUFSEN 1.06 0.04 120000.0 1.0 2.0e7 -22.5267 8.65e5
+</code></pre>
+
+<p><br>
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid green; border-left: 6px solid green">
+The reference pressure is the pressure associated with the undeformed area of the vessel. Typically this is the diastolic pressure for a specific vessel. Multiple reference pressures can be assigned to segments using multiple material models.
+</div></p>
+
+<p><br>
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid green; border-left: 6px solid green">
+For the OLUFSEN material model, all three parameters need to be defined, i.e., $k_1$, $k_2$,$k_3$. For a LINEAR material 
+model instead only the first material parameter $k_1$ is used and set equal to $E\,h/r$, i.e., the product of elastic modulus and 
+thickness divided by the radius.
+</div></p>
+
+<!-- MODEL -->
+
+<p><br>
+<a id="format_model"> <h3> MODEL </h3></a> 
+The MODEL statement is used to define a name for the model that is used when generating the output files. </p>
+
+<p>Format
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #000000;">
+  MODEL <i>name</i> </p>
+
+<p>Arguments
+  <ul style="list-style-type:none;">
+    <li><i>name</i> (string) - Model name. </li><br>
+  </ul>
+</div>
+<br></p>
+
+<p>Example: Define a model named <em>Artery</em>.</p>
+<pre class="highlight plaintext"><code>  MODEL Artery
+</code></pre>
+
+<!-- NODE -->
+
+<p><br>
+<a id="format_node"> <h3> NODE </h3></a> 
+The NODE statement is used to specify the coordinates of a connection between vessel segments. </p>
+
+<p>Format
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #000000;">
+  NODE <i>id</i> <i>x</i>  <i>y</i>  <i>z</i>
+  <br></p>
+
+<p>Arguments
+  <ul style="list-style-type:none;">
+    <li><i>id</i> (integer) - Node ID. </li><br>
+    <li><i>x</i> (double) - Node X coordinate. </li><br>
+    <li><i>y</i> (double) - Node Y coordinate. </li><br>
+    <li><i>z</i> (double) - Node Z coordinate. </li><br>
+  </ul>
+</div>
+<br></p>
+
+<p>Example: Define a node with ID <em>1</em> and coordinates <em>1.0 2.0 3.0</em>.</p>
+<pre class="highlight plaintext"><code>  NODE 0 1.0 2.0 3.0
+</code></pre>
+
+<!-- OUTPUT -->
+
+<p><br>
+<a id="format_output"> <h3> OUTPUT </h3></a> 
+The OUTPUT statement specifies the file formats for the program outputs. </p>
+
+<p>Format
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #000000;">
+  OUTPUT <i>format</i> [ <i>option</i> ]</p>
+
+<p>Arguments
+  <ul style="list-style-type:none;">
+    <li><i>format</i> (string) - Output file format. </li><br>
+    <li><i>option</i> (integer) - VTK export option. </li><br>
+  </ul></p>
+
+<p>Output formats
+  <ul style="list-style-type:none;">
+    <li>TEXT  - Writes each segment in a separate text file for the flow rate, pressure, area and Reynolds number.  The rows contain output values at varying locations along the segment while columns contains results at various time instants.  </li><br>
+    <li>VTK  - Results for all time steps are plotted to a 3D-like model using the XML VTK file format. </li><br>
+    <li>BOTH -  Write both TEXT and VTK results. </li><br>
+  </ul></p>
+
+<p>VTK export options
+  <ul style="list-style-type:none;">
+    <li>0 - Output multiple files (default). A separate file is written for each saved increment. A <strong>pvd</strong> file is also provided which contains the time information of the sequence. This is the best option to create animations. </li><br>
+    <li>1 - The results for all time steps are plotted to a single XML VTK file. </li><br>
+  </ul></p>
+
+<p></div>
+<br></p>
+
+<p>Example: Write results in VTK format to multiple files.</p>
+<pre class="highlight plaintext"><code>  OUTPUT VTK 0
+</code></pre>
+
+<!-- SEGMENT -->
+
+<p><br>
+<a id="format_segment"> <h3> SEGMENT </h3></a> 
+The SEGMENT statement is used to define a vessel segment. </p>
+
+<p>Format
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #000000;">
+  SEGMENT <i>name</i> 
+    <i>id</i>
+    <i>length</i>
+    <i>nelems</i>
+    <i>inode</i>
+    <i>onode</i>
+    <i>iarea</i>
+    <i>oarea</i>
+    <i>iflow</i>
+    <i>material</i>
+    <i>mltype</i>
+    <i>angle</i>
+    <i>uid</i>
+    <i>bid</i>
+    <i>bctype</i>
+    <i>dname</i>
+  <br>
+  <br></p>
+
+<p>Arguments
+  <ul style="list-style-type:none;">
+    <li><i>name</i> (string) -  Segment name. </li><br>
+    <li><i>id</i> (integer) - Segment ID. </li><br>
+    <li><i>length</i> (double - Segment length. </li><br>
+    <li><i>nelems</i> (integer) - Total finite elements in segment. </li><br>
+    <li><i>inode</i> (integer) - Segment inlet <strong>Node</strong>. </li><br>
+    <li><i>onode</i> (integer) - Segment outlet <strong>Node</strong>. </li><br>
+    <li><i>iarea</i> (double - Segment inlet area. </li><br>
+    <li><i>oarea</i> (double - Segment outlet area. </li><br>
+    <li><i>iflow</i> (double - Segment initial flow. </li><br>
+    <li><i>material</i> (string) - Segment material. </li><br>
+    <li><i>mltype</i> (string) - Minor loss type. </li><br>
+    <li><i>angle</i> (double) - Branch angle. </li><br>
+    <li><i>uid</i> (integer) - Upstream segment ID. </li><br>
+    <li><i>bid</i> (integer) - Branch segment ID. </li><br>
+    <li><i>bctype</i> (string) - Outlet boundary condition type. </li><br>
+    <li><i>dname</i> (string) - Data Table Name for boundary condition. </li><br>
+  </ul></p>
+
+<p>Minor loss types
+  <ul style="list-style-type:none;">
+    <li>NONE - No pressure loss. </li><br>
+  </ul></p>
+
+<p>Outlet boundary condition types
+  <ul style="list-style-type:none;">
+    <li> FLOW - Time-varying outlet flow rate. </li><br>
+    <li> NOBOUND - No outlet boundary condition; used for internal segment outlets. </li><br>
+    <li> RCR - Boundary condition specified through an RCR circuit. </li><br>
+    <li> RESISTANCE - Constant resistance in model units. </li><br>
+  </ul>
+</div>
+<br></p>
+
+<p>Example  </p>
+<pre class="highlight plaintext"><code>  SEGMENT ARTERY 0 40.0 15 0 1 2.8 2.1 0.0 MAT1 NONE 0.0 0 0 FLOW INLETDATA
+</code></pre>
+
+<!-- SOLVEROPTIONS -->
+
+<p><br>
+<a id="format_solver_options"> <h3> SOLVEROPTIONS </h3></a> 
+The SOLVEROPTIONS statement specifies options needed by the finite element solver. </p>
+
+<p>Format
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #000000;">
+  SOLVEROPTIONS <i>timestep</i> 
+    <i>savefreq</i>
+    <i>maxsteps</i>
+    <i>nquad</i>
+    <i>dname</i>
+    <i>bctype</i>
+    <i>tol</i>
+    <i>form</i>
+    <i>stab</i></p>
+
+<p>Arguments
+  <ul style="list-style-type:none;">
+    <li><i> timestep </i> (double) - Solver time step. </li><br>
+    <li><i> savefreq </i> (integer) - Number of steps between saving results. </li><br>
+    <li><i> maxsteps </i> (integer) - Maximum number of time steps. </li><br>
+    <li><i> nquad </i> (integer) - Number of quadrature points for finite elements. </li><br>
+    <li><i> dname </i> (string) - Name of data table for inlet boundary conditions. </li><br>
+    <li><i> bctype </i> (string) - Inlet boundary condition type. </li><br>
+    <li><i> tol </i> (double) - Convergence tolerance. </li><br>
+    <li><i> form </i> (string) - Formulation type. </li><br>
+    <li><i> stab </i> (string) - Stabilization. </li><br>
+  </ul></p>
+
+<p>Inlet boundary condition types
+  <ul style="list-style-type:none;">
+    <li> FLOW - Time-varying inflow rate. </li><br>
+    <li> PRESSURE_WAVE -  Time varying inlet pressure. </li><br>
+  </ul></p>
+
+<p>Formulation types 
+  <ul style="list-style-type:none;">
+    <li> 0 - Advective formulation. </li><br>
+    <li> 1 - Conservative formulation. </li><br>
+  </ul></p>
+
+<p>Stabilization options 
+  <ul style="list-style-type:none;">
+    <li> 0 - No stabilization. </li><br>
+    <li> 1 - Use stabilization. </li><br>
+  </ul></p>
+
+<p></div>
+<br></p>
+
+<p>Example</p>
+<pre class="highlight plaintext"><code>  SOLVEROPTIONS 0.01 10 1000 4 INLETDATA FLOW 1.0e-3 1 1  
+</code></pre>
+</section>
+  <section id="s1d-olver-example-bifurcation-rcr" class="subgroup"><h1> Example - Bifurcation with RCR boundary conditions </h1>
+
+<p>This example demonstrates a 1D Solver simulation for a model of a aortic bifurcation taken from <a href="#ref-12">[12]</a>. </p>
+
+<p>The model geometry consists of a symmetric bifurcation with all three branches having a constant diameter. </p>
+
+<p>The inflow boundary condition is pulsatile. </p>
+
+<p>RCR boundary conditions are defined for both outlets. </p>
+
+<p>Simulation parameters are taken from Table III in <a href="#ref-12">[12]</a>. </p>
+
+<p>The complete 1D Simulation input file is available 
+<a href="http://github.com/SimVascular/svOneDSolver/blob/master/test/bifurcation_RCR.in" > here </a>.</p>
+
+<h3> Simulation Results </h3> 
+
+<p>The simulation is run for only 2 cycles; to reach a periodic state, at least 10 cycles are required.
+The results are similar to the results shown in Fig. 11 in <a href="#ref-12">[12]</a></p>
+
+<p><br>
+<figure>
+  <img class="svImg svImgMd" src="documentation/rom_simulation/1d-solver/images/bifurcation_rcr_results.png">
+</figure></p>
+</section>
+  <section id="1d-solver-example-tube-resistance" class="subgroup"><h1> Example - Tube with resistance boundary condition </h1>
+
+<p>This example demonstrates a 1D Solver simulation for a model of a rigid tube with resistance boundary conditions.
+The tube has a length <i>L=10</i> and constant cross-sectionional area <i> A=1.0</i>.</p>
+
+<p>The inlet boundary condition is defined as constant flow <i>Q=100</i>.</p>
+
+<p>The outlet boundary condition is defined with a resistance <i>R<sub>2</sub>=100</i>. </p>
+
+<p>The tube material is defind as a quasi-rigid wall (i.e. the wall stiffness approaches infinity).</p>
+
+<p>The complete 1D Simulation input file is available 
+<a href="http://github.com/SimVascular/svOneDSolver/blob/master/test/tube_r.in" > here </a>.</p>
+
+<h3> Analytical Results </h3> 
+
+<p>Using $\mu=0.04$ for viscosity the tube resistance can be analytically calculated as $R_1 = \frac{8\mu l \pi}{A^2} \approx 10.05309649 $.</p>
+
+<p>Inlet and outlet pressues can thus be calculated as</p>
+
+<p>$P_{in} = Q \cdot (R_1 + R_2) \approx 11005.309649$</p>
+
+<p>$P_{out} = Q \cdot R_2 = 10000.0$</p>
+
+<h3> Simulation Results </h3> 
+
+<p>The simulation is run for 1000 time steps to achieve a steady state.</p>
+
+<p><br>
+<figure>
+  <img class="svImg svImgMd" src="documentation/rom_simulation/1d-solver/images/tube_r_results.png">
+  <figcaption class="svCaption"> Plot showing a linear pressure drop (blue) and and a contant flow (red) along the tube.
+  </figcaption>
+</figure></p>
+</section>
+  <section id="1d-solver-refs" class="subgroup"><h1>References</h1>
+
+<p><a id="ref-1"> 
+[1] T.J.R. Hughes and J. Lubliner, <strong>On the One-Dimensional Theory of Blood Flow in the Larger Vessels</strong> , Mathematical Biosciences , 18(1-2) (1973), 161-170. 
+</a></p>
+
+<p><a id="ref-2"> 
+[2] T.J.R. Hughes, <strong>A Study of the One-Dimensional Theory of Arterial Pulse Propagation</strong>, 1974, U.C. Berkeley, Ph.D. Thesis. </a></p>
+
+<p><a id="ref-3"> 
+[3] M.S. Olufsen, <strong>Structured Tree Outflow Condition for Blood Flow in Larger Systemic Arteries</strong> , American Journal of Physiology , 276 (1999), H257-268.
+</a></p>
+
+<p><a id="ref-4"> 
+[4] J. Wan, B.N. Steele, S.A. Spicer, S. Strohband, G.R. Feijoo, T.J.R. Hughes and C.A. Taylor, <strong>A One-Dimensional Finite Element Method for Simulation-Based Medical Planning for Cardiovascular Disease</strong> , Computer Methods in Biomechanics and Biomedical Engineering , 5(3) (2002), 195-206.
+</a></p>
+
+<p><a id="ref-5"> 
+[5] D. Givoli and J.B. Keller, <strong>A Finite Element Method for Large Domains</strong> , Computer Methods in Applied Mechanics and Engineering , 76(1) (1989), 41-66.
+</a></p>
+
+<p><a id="ref-6"> 
+[6] J.B. Keller and D. Givoli, <strong>Exact Non-Reflecting Boundary-Conditions</strong> , Journal of Computational Physics , 82(1) (1989), 172-192.
+</a></p>
+
+<p><a id="ref-7"> 
+[7] D. Givoli, <strong>Numerical Methods for Problems in Infinite Domains</strong>, 1992, Elsevier Science.
+</a></p>
+
+<p><a id="ref-8"> 
+[8] M. Grote and J. Keller, <strong>Exact Nonreflecting Boundary Conditions for the Time Dependent Wave Equation</strong> , SIAM Journal on Applied Mathematics , 55(2) (1995), 280-297.
+</a></p>
+
+<p><a id="ref-9"> 
+[9] I. Patlashenko, D. Givoli and P. Barbone, <strong>Time-Stepping Schemes for Systems of Volterra Integro-Differential Equations</strong> , Computer Methods in Applied Mechanics and Engineering , 190 (2001), 5691-5718.
+</a></p>
+
+<p><a id="ref-10"> 
+[10] T.J.R. Hughes and M. Mallet, <strong>A New Finite Element Formulation for Computational Fluid Dynamics: III. The Generalized Streamline Operator for Advective-Diffusive Systems</strong> , Computer Methods in Applied Mechanics and Engineering , 58 (1986), 305-328.
+</a></p>
+
+<p><a id="ref-11"> 
+[11] T.J.R. Hughes, L.P. Franca and G.M. Hulbert, <strong>A New Finite Element Formulation for Computational Fluid Dynamics: VIII. The Galerkin/Least-Squares Method for Advective-Diffusive Equations</strong> , Computer Methods in Applied Mechanics and Engineering , 73(2) (1989), 173-189.
+</a></p>
+
+<p><a id="ref-12">
+[12] N. Xiao, J. Alastruey, and C. Alberto Figueroa (2014), A systematic comparison between 1‐D and 3‐D hemodynamics in compliant arterial models. Int. J. Numer. Meth. Biomed. Engng., 30: 204-231.
+</a></p>
+</section>
+
+
+<section id="0d-solver" class="group"><h1>0D Solver</h1>
+
+<p>Zero-dimensional (0D) models are lightweight methods to simulate bulk hemodynamic quantities in the cardiovascular system. Unlike 3D and 1D models, 0D models are purely time-dependent; they are unable to simulate spatial patterns in the hemodynamics. 0D models primarily simulate bulk cardiovascular flow rates and pressures; however, they can simulate other hemodynamic quantities, such as wall shear stress [1] or volume, as well. Furthermore, 0D models are highly modular and compartmentalized, meaning different regions of the 0D models represent the hemodynamics in different parts of the cardiovascular anatomy being modeled.</p>
+
+<p>0D models are analogous to electrical circuits. The flow rate simulated by 0D models represents electrical current, while the pressure represents voltage. Three primary building blocks of 0D models are resistors, capacitors, and inductors. Resistance captures the viscous effects of blood flow, capacitance represents the compliance and distensibility of the vessel wall, and inductance represents the inertia of the blood flow. Different combinations of these building blocks, as well as others, can be formed to reflect the hemodynamics and physiology of different cardiovascular anatomies.</p>
+</section>
+  <section id="0d-solver-theory" class="subgroup"><h2> 0D Solver Theory </h2>
+
+<p>Flow rate, pressure, and other hemodynamic quantities in 0D models of vascular anatomies are governed by a system of nonlinear differential-algebraic equations (DAEs),</p>
+
+<p>$$\textbf{E}\left(\textbf{y}, t\right)\cdot\dot{\textbf{y}} + \textbf{F}\left(\textbf{y}, t\right)\cdot \textbf{y} + \textbf{c}\left(\textbf{y}, t\right) = \textbf{0},$$</p>
+
+<p>where $\textbf{E} \in \mathbb{R}^{N \times N}$, $\textbf{F} \in \mathbb{R}^{N \times N}$, $\textbf{c} \in \mathbb{R}^{N}$, and $\textbf{y} \in \mathbb{R}^{N}$. Here, $\textbf{y}$ is the vector of solution quantities and $\dot{\textbf{y}}$ is the time derivative of $\textbf{y}$. $N$ is the total number of equations and the total number of global unknowns.</p>
+
+<p>The DAE system is solved implicitly using the generalized-$\alpha$ method [2].</p>
+
+<h3>Generalized-$\alpha$ Method for 0D DAE System</h3>
+
+<p>We are interested in solving the DAE system for the solutions, $\textbf{y}_{n+1}$ and $\dot{\textbf{y}}_{n+1}$, at the next time, $t_{n+1}$, using the known solutions, $\textbf{y}_{n}$ and $\dot{\textbf{y}}_{n}$, at the current time, $t_{n}$. Note that $t_{n+1} = t_{n} + \Delta t$, where $\Delta t$ is the time step size. Using the generalized-$\alpha$ method, we launch a predictor step  and a series of multi-corrector steps to solve for $\textbf{y}_{n+1}$ and $\dot{\textbf{y}}_{n+1}$. Similar to other predictor-corrector schemes, we evaluate the solutions at intermediate times between $t_{n}$ and $t_{n + 1}$. However, in the generalized-$\alpha$ method, we evaluate $\textbf{y}$ and $\dot{\textbf{y}}$ at different intermediate times. Specifically, we evaluate $\textbf{y}$ at $t_{n+\alpha_{f}}$ and $\dot{\textbf{y}}$ at $t_{n+\alpha_{m}}$, where $t_{n+\alpha_{f}} = t_{n} + \alpha_{f}\Delta t$ and $t_{n+\alpha_{m}} = t_{n} + \alpha_{m}\Delta t$. Here, $\alpha_{m}$ and $\alpha_{f}$ are the generalized-$\alpha$ parameters, where $\alpha_{m} = \frac{3 - \rho}{2 + 2\rho}$ and $\alpha_{f} = \frac{1}{1 + \rho}$. In the 0D solver, we set the spectral radius, $\rho$, to be $0.1$. For each time step, the procedure works as follows.</p>
+
+<ol>
+<li><p>$\textbf{Predictor step}$: First, we make an initial guess for $\textbf{y}_{n+1}$ and $\dot{\textbf{y}}_{n+1}$,</p>
+
+<p>$$\textbf{y}_{n+1} = \textbf{y}_{n},$$</p>
+
+<p>$$\dot{\textbf{y}}_{n+1} = \frac{\gamma - 1}{\gamma}\dot{\textbf{y}}_{n},$$</p>
+
+<p>where $\gamma = 0.5 + \alpha_{m} - \alpha_{f}$.</p></li>
+<li><p>$\textbf{Initiator step}$: Then, we initialize the values of $\dot{\textbf{y}}_{n+\alpha_{m}}$ and $\textbf{y}_{n+\alpha_{f}}$,</p>
+
+<p>$$\dot{\textbf{y}}_{n+\alpha_{m}}^{k=0} = \dot{\textbf{y}}_{n} + \alpha_{m}\left(\dot{\textbf{y}}_{n+1} - \dot{\textbf{y}}_{n}\right),$$</p>
+
+<p>$$\textbf{y}_{n+\alpha_{f}}^{k=0} = \textbf{y}_{n} + \alpha_{f}\left(\textbf{y}_{n+1} - \textbf{y}_{n}\right).$$</p></li>
+<li><p>$\textbf{Multi-corrector step}$: Then, for $k \in \left[0, N_{int} - 1\right]$, we iteratively update our guess of $\dot{\textbf{y}}_{n+\alpha_{m}}^{k}$ and $\textbf{y}_{n+\alpha_{f}}^{k}$.</p>
+
+<p>We desire the residual, $\textbf{r}\left(\dot{\textbf{y}}_{n+\alpha_{m}}^{k + 1}, \textbf{y}_{n+\alpha_{f}}^{k + 1}, t_{n+\alpha_{f}}\right)$, to be $\textbf{0}$, where</p>
+
+<p>$$\textbf{r}\left(\dot{\textbf{y}}_{n+\alpha_{m}}^{k+1}, \textbf{y}_{n+\alpha_{f}}^{k+1}, t_{n+\alpha_{f}}\right) = \textbf{E}\left(\textbf{y}_{n+\alpha_{f}}^{k+1}, t_{n+\alpha_{f}}\right)\cdot\dot{\textbf{y}}_{n+\alpha_{m}}^{k+1} + \textbf{F}\left(\textbf{y}_{n+\alpha_{f}}^{k+1}, t_{n+\alpha_{f}}\right)\cdot\textbf{y}_{n+\alpha_{f}}^{k+1} + \textbf{c}\left(\textbf{y}_{n+\alpha_{f}}^{k+1}, t_{n+\alpha_{f}}\right).$$</p>
+
+<p>Using Newton&rsquo;s method, we linearize this equation about $\textbf{y}_{n+\alpha_{f}}^{k}$ to obtain</p>
+
+<p>$$\textbf{K}\left(\dot{\textbf{y}}_{n+\alpha_{m}}^{k}, \textbf{y}_{n+\alpha_{f}}^{k}, t_{n+\alpha_{f}}\right)\cdot\Delta \textbf{y}_{n+\alpha_{f}}^{k} = -\textbf{r}\left(\dot{\textbf{y}}_{n+\alpha_{m}}^{k}, \textbf{y}_{n+\alpha_{f}}^{k}, t_{n+\alpha_{f}}\right),$$</p>
+
+<p>where $\textbf{K}\left(\dot{\textbf{y}}_{n+\alpha_{m}}, \textbf{y}_{n+\alpha_{f}}, t_{n+\alpha_{f}}\right) = \frac{\partial \textbf{r}\left(\dot{\textbf{y}}_{n+\alpha_{m}}, \textbf{y}_{n+\alpha_{f}}, t_{n+\alpha_{f}}\right)}{\partial \textbf{y}_{n+\alpha_{f}}}$ is the consistent tangent matrix.</p>
+
+<p>We solve this equation to find $\Delta \textbf{y}_{n+\alpha_{f}}^{k}$ and update our guess of $\dot{\textbf{y}}_{n+\alpha_{m}}$ and $\textbf{y}_{n+\alpha_{f}}$,</p>
+
+<!-- where $\textbf{r}\left(\dot{\textbf{y}}\_{n+\alpha\_{m}}^{k}, \textbf{y}\_{n+\alpha\_{f}}^{k}, t\_{n+\alpha\_{f}}\right) = \textbf{E}\left(\textbf{y}\_{n+\alpha\_{f}}^{k}, t\_{n+\alpha\_{f}}\right)\dot{\textbf{y}}\_{n+\alpha\_{m}}^{k} + \textbf{F}\left(\textbf{y}\_{n+\alpha\_{f}}^{k}, t\_{n+\alpha\_{f}}\right)\textbf{y}\_{n+\alpha\_{f}}^{k} + \textbf{c}\left(\textbf{y}\_{n+\alpha\_{f}}^{k}, t\_{n+\alpha\_{f}}\right)$ and $\textbf{K} = \frac{\partial \textbf{r}\left(\textbf{y}, t\_{n+\alpha\_{f}}\right)}{\partial \textbf{y}}$ is the consistent tangent matrix. -->
+
+<p>$$\textbf{y}_{n+\alpha_{f}}^{k+1} = \textbf{y}_{n+\alpha_{f}}^{k} + \Delta \textbf{y}_{n+\alpha_{f}}^{k},$$</p>
+
+<p>$$\dot{\textbf{y}}_{n+\alpha_{m}}^{k+1} = \dot{\textbf{y}}_{n+\alpha_{m}}^{k} + \frac{\alpha_{m}}{\Delta t\alpha_{f}\gamma}\Delta \textbf{y}_{n+\alpha_{f}}^{k}.$$</p>
+
+<p>The consistent tangent matrix is</p>
+
+<p>$$\textbf{K}\left(\dot{\textbf{y}}_{n+\alpha_{m}}, \textbf{y}_{n+\alpha_{f}}, t_{n+\alpha_{f}}\right) = \underset{\text{Term 1}}{\underbrace{\frac{\partial \textbf{E}\left(\textbf{y}_{n+\alpha_{f}}, t_{n+\alpha_{f}}\right)}{\partial \textbf{y}_{n+\alpha_{f}}}\cdot\dot{\textbf{y}}_{n+\alpha_{m}}}} + \frac{\alpha_{m}}{\Delta t\alpha_{f}\gamma}\textbf{E}\left(\textbf{y}_{n+\alpha_{f}}, t_{n+\alpha_{f}}\right) + \underset{\text{Term 2}}{\underbrace{\frac{\partial \textbf{F}\left(\textbf{y}_{n+\alpha_{f}}, t_{n+\alpha_{f}}\right)}{\partial \textbf{y}_{n+\alpha_{f}}}\cdot\textbf{y}_{n+\alpha_{f}}}} + \textbf{F}\left(\textbf{y}_{n+\alpha_{f}}, t_{n+\alpha_{f}}\right) + \underset{\text{Term 3}}{\underbrace{\frac{\partial \textbf{c}\left(\textbf{y}_{n+\alpha_{f}}, t_{n+\alpha_{f}}\right)}{\partial \textbf{y}_{n+\alpha_{f}}}}}.$$</p>
+
+<p>For simplicity, denote terms 1, 2, and 3 as $\textbf{dE}$, $\textbf{dF}$, and $\textbf{dc}$ respectively. Furthermore, the notation used for $\textbf{dA} = \frac{\partial\textbf{A}}{\partial\textbf{y}}\cdot\textbf{y}$ is defined as $dA_{ik} = \frac{\partial A_{ij}}{\partial y_{k}}y_{j}$.</p>
+
+<!-- https://docs.mathjax.org/en/latest/input/tex/macros/index.html -->
+
+<!-- https://math.meta.stackexchange.com/questions/23244/how-to-do-a-underbracket-with-mathjax -->
+
+<!-- 4. Repeat Step 3 until convergence to tolerance or until hit maximum number of iterations --></li>
+<li><p>$\textbf{Update step}$: Finally, we update $\textbf{y}_{n+1}$ and $\dot{\textbf{y}}_{n+1}$ using our final value of $\dot{\textbf{y}}_{n+\alpha_{m}}$ and $\textbf{y}_{n+\alpha_{f}}$.</p>
+
+<p>$$\textbf{y}_{n+1} = \textbf{y}_{n} + \frac{\textbf{y}_{n+\alpha_{f}}^{N_{int}} - \textbf{y}_{n}}{\alpha_{f}}$$</p>
+
+<p>$$\dot{\textbf{y}}_{n+1} = \dot{\textbf{y}}_{n} + \frac{\dot{\textbf{y}}_{n+\alpha_{m}}^{N_{int}} - \dot{\textbf{y}}_{n}}{\alpha_{m}}$$</p></li>
+</ol>
+
+<h3> Assembly </h3>
+
+<p>Similar to a finite element solver, the 0D solver defines local element contributions to $\textbf{E}$, $\textbf{F}$, $\textbf{c}$, $\textbf{dE}$, $\textbf{dF}$, and $\textbf{dc}$. The solver automatically assembles these local contributions into the global arrays,</p>
+
+<!-- https://math.meta.stackexchange.com/questions/11900/text-and-mathjax-above-symbol -->
+
+<p>$$\textbf{E} = \underset{e = 1}{\overset{N_{elem}}{\mathbb{A}}}\textbf{E}^{e},$$</p>
+
+<p>$$\textbf{F} = \underset{e = 1}{\overset{N_{elem}}{\mathbb{A}}}\textbf{F}^{e},$$</p>
+
+<p>$$\textbf{c} = \underset{e = 1}{\overset{N_{elem}}{\mathbb{A}}}\textbf{c}^{e},$$</p>
+
+<p>$$\textbf{dE} = \underset{e = 1}{\overset{N_{elem}}{\mathbb{A}}}\textbf{dE}^{e},$$</p>
+
+<p>$$\textbf{dF} = \underset{e = 1}{\overset{N_{elem}}{\mathbb{A}}}\textbf{dF}^{e},$$</p>
+
+<p>$$\textbf{dc} = \underset{e = 1}{\overset{N_{elem}}{\mathbb{A}}}\textbf{dc}^{e}.$$</p>
+
+<p>where $\mathbb{A}$ is the assembly operator and $N_{elem}$ is the total number of 0D elements in our 0D model.</p>
+
+<h3> Local element contributions </h3>
+
+<p>For each 0d element, if a local element array is not specified, then it is implied to be an array of zeros.</p>
+
+<p>Note that the governing equations for an element, $e$, can be cast into the form of</p>
+
+<p>$$\textbf{E}^{e}\left(\textbf{y}^{e}, t\right)\cdot\dot{\textbf{y}}^{e} + \textbf{F}^{e}\left(\textbf{y}^{e}, t\right)\cdot\textbf{y}^{e} + \textbf{c}^{e}\left(\textbf{y}^{e}, t\right) = \textbf{0}.$$</p>
+
+<h4> Vessel elements </h4>
+
+<h5> Resistor </h5>
+
+<p><br>
+<figure>
+  <img class="svImg svImgMd" src="documentation/rom_simulation/0d-solver/images/resistor.png">
+  <figcaption class="svCaption"> Resistor element.
+  </figcaption>
+</figure></p>
+
+<p>The governing equations for the local resistor element are</p>
+
+<!-- https://github.com/mathjax/MathJax/issues/329 -- need to add a backslash before all underscore in an equation -->
+
+<p>$$P_{in}^{e} - P_{out}^{e} - RQ_{in}^{e} = 0$$</p>
+
+<p>$$Q_{in}^{e} - Q_{out}^{e} = 0.$$</p>
+
+<p>The local contributions to the global arrays are</p>
+
+<p>\begin{gather}
+    \textbf{y}^{e} =
+        \begin{bmatrix}
+            P_{in}^{e} &amp; Q_{in}^{e} &amp; P_{out}^{e} &amp; Q_{out}^{e}
+        \end{bmatrix}^T,
+\end{gather}</p>
+
+<p>\begin{gather}
+    \textbf{F}^{e} =
+        \begin{bmatrix}
+            1 &amp; -R &amp; -1 &amp;  0 \ \cr
+            0 &amp;  1 &amp;  0 &amp; -1
+        \end{bmatrix}.
+\end{gather}</p>
+
+<h5> Capacitor </h5>
+
+<p><br>
+<figure>
+  <img class="svImg svImgMd" src="documentation/rom_simulation/0d-solver/images/capacitor.png">
+  <figcaption class="svCaption"> Capacitor element.
+  </figcaption>
+</figure></p>
+
+<p>The governing equations for the local capacitor element are</p>
+
+<p>$$C\frac{d\left( P_{in}^{e} - P_{out}^{e} \right)}{dt} - Q_{in}^{e} = 0$$</p>
+
+<p>$$Q_{in}^{e} - Q_{out}^{e} = 0.$$</p>
+
+<p>The local contributions to the global arrays are</p>
+
+<p>\begin{gather}
+    \textbf{y}^{e} =
+        \begin{bmatrix}
+            P_{in}^{e} &amp; Q_{in}^{e} &amp; P_{out}^{e} &amp; Q_{out}^{e}
+        \end{bmatrix}^T,
+\end{gather}</p>
+
+<p>\begin{gather}
+    \textbf{E}^{e} =
+        \begin{bmatrix}
+            C &amp;  0 &amp; -C &amp;  0 \ \cr
+            0 &amp;  0 &amp;  0 &amp;  0
+        \end{bmatrix},
+\end{gather}</p>
+
+<p>\begin{gather}
+    \textbf{F}^{e} =
+        \begin{bmatrix}
+            0 &amp; -1 &amp;  0 &amp;  0 \ \cr
+            0 &amp;  1 &amp;  0 &amp; -1
+        \end{bmatrix}.
+\end{gather}</p>
+
+<h5> Inductor </h5>
+
+<p><br>
+<figure>
+  <img class="svImg svImgMd" src="documentation/rom_simulation/0d-solver/images/inductor.png">
+  <figcaption class="svCaption"> Inductor element.
+  </figcaption>
+</figure></p>
+
+<p>The governing equations for the local inductor element are</p>
+
+<p>$$P_{in}^{e} - P_{out}^{e} - L\frac{dQ_{in}^{e}}{dt} = 0$$</p>
+
+<p>$$Q_{in}^{e} - Q_{out}^{e} = 0.$$</p>
+
+<p>The local contributions to the global arrays are</p>
+
+<p>\begin{gather}
+    \textbf{y}^{e} =
+        \begin{bmatrix}
+            P_{in}^{e} &amp; Q_{in}^{e} &amp; P_{out}^{e} &amp; Q_{out}^{e}
+        \end{bmatrix}^T,
+\end{gather}</p>
+
+<p>\begin{gather}
+    \textbf{E}^{e} =
+        \begin{bmatrix}
+            0 &amp; -L &amp;  0 &amp;  0 \ \cr
+            0 &amp;  0 &amp;  0 &amp;  0
+        \end{bmatrix},
+\end{gather}</p>
+
+<p>\begin{gather}
+    \textbf{F}^{e} =
+        \begin{bmatrix}
+            1 &amp;  0 &amp; -1 &amp;  0 \ \cr
+            0 &amp;  1 &amp;  0 &amp; -1
+        \end{bmatrix}.
+\end{gather}</p>
+
+<h5> Resistor-Capacitor </h5>
+
+<p><br>
+<figure>
+  <img class="svImg svImgMd" src="documentation/rom_simulation/0d-solver/images/RC.png">
+  <figcaption class="svCaption"> Resistor-Capacitor element.
+  </figcaption>
+</figure></p>
+
+<p>The governing equations for the local resistor-capacitor element are</p>
+
+<p>$$P_{in}^{e} - P_{out}^{e} - RQ_{in}^{e} = 0$$</p>
+
+<p>$$Q_{in}^{e} - Q_{out}^{e} - C\frac{dP_{out}^{e}}{dt} = 0.$$</p>
+
+<p>The local contributions to the global arrays are</p>
+
+<p>\begin{gather}
+    \textbf{y}^{e} =
+        \begin{bmatrix}
+            P_{in}^{e} &amp; Q_{in}^{e} &amp; P_{out}^{e} &amp; Q_{out}^{e}
+        \end{bmatrix}^T,
+\end{gather}</p>
+
+<p>\begin{gather}
+    \textbf{E}^{e} =
+        \begin{bmatrix}
+            0 &amp;  0 &amp;  0 &amp;  0 \ \cr
+            0 &amp;  0 &amp; -C &amp;  0
+        \end{bmatrix},
+\end{gather}</p>
+
+<p>\begin{gather}
+    \textbf{F}^{e} =
+        \begin{bmatrix}
+            1 &amp; -R &amp; -1 &amp;  0 \ \cr
+            0 &amp;  1 &amp;  0 &amp; -1
+        \end{bmatrix}.
+\end{gather}</p>
+
+<h5> Resistor-Inductor </h5>
+
+<p><br>
+<figure>
+  <img class="svImg svImgMd" src="documentation/rom_simulation/0d-solver/images/RL.png">
+  <figcaption class="svCaption"> Resistor-Inductor element.
+  </figcaption>
+</figure></p>
+
+<p>The governing equations for the local resistor-inductor element are</p>
+
+<p>$$P_{in}^{e} - P_{out}^{e} - RQ_{in}^{e} - L\frac{dQ_{out}^{e}}{dt} = 0$$</p>
+
+<p>$$Q_{in}^{e} - Q_{out}^{e} = 0.$$</p>
+
+<p>The local contributions to the global arrays are</p>
+
+<p>\begin{gather}
+    \textbf{y}^{e} =
+        \begin{bmatrix}
+            P_{in}^{e} &amp; Q_{in}^{e} &amp; P_{out}^{e} &amp; Q_{out}^{e}
+        \end{bmatrix}^T,
+\end{gather}</p>
+
+<p>\begin{gather}
+    \textbf{E}^{e} =
+        \begin{bmatrix}
+            0 &amp;  0 &amp;  0 &amp; -L \ \cr
+            0 &amp;  0 &amp;  0 &amp;  0
+        \end{bmatrix},
+\end{gather}</p>
+
+<p>\begin{gather}
+    \textbf{F}^{e} =
+        \begin{bmatrix}
+            1 &amp; -R &amp; -1 &amp;  0 \ \cr
+            0 &amp;  1 &amp;  0 &amp; -1
+        \end{bmatrix}.
+\end{gather}</p>
+
+<h5> Resistor-Capacitor-Inductor </h5>
+
+<p><br>
+<figure>
+  <img class="svImg svImgMd" src="documentation/rom_simulation/0d-solver/images/RCL.png">
+  <figcaption class="svCaption"> Resistor-Capacitor-Inductor element.
+  </figcaption>
+</figure></p>
+
+<p>The governing equations for the local resistor-capacitor-inductor element are</p>
+
+<p>$$P_{in}^{e} - P_{out}^{e} - RQ_{in}^{e} - L\frac{dQ_{out}^{e}}{dt} = 0$$</p>
+
+<p>$$Q_{in}^{e} - Q_{out}^{e} - C\frac{dP_{c}^{e}}{dt} = 0.$$</p>
+
+<p>$$P_{in}^{e} - RQ_{in}^{e} - P_{c} = 0$$</p>
+
+<p>The local contributions to the global arrays are</p>
+
+<p>\begin{gather}
+    \textbf{y}^{e} =
+        \begin{bmatrix}
+            P_{in}^{e} &amp; Q_{in}^{e} &amp; P_{out}^{e} &amp; Q_{out}^{e} &amp; P_{c}
+        \end{bmatrix}^T,
+\end{gather}</p>
+
+<p>\begin{gather}
+    \textbf{E}^{e} =
+        \begin{bmatrix}
+            0 &amp;  0 &amp;  0 &amp; -L &amp;  0 \ \cr
+            0 &amp;  0 &amp;  0 &amp;  0 &amp; -C \ \cr
+            0 &amp;  0 &amp;  0 &amp;  0 &amp;  0
+        \end{bmatrix},
+\end{gather}</p>
+
+<p>\begin{gather}
+    \textbf{F}^{e} =
+        \begin{bmatrix}
+            1 &amp; -R &amp; -1 &amp;  0 &amp;  0 \ \cr
+            0 &amp;  1 &amp;  0 &amp; -1 &amp;  0 \ \cr
+            1 &amp; -R &amp;  0 &amp;  0 &amp; -1
+        \end{bmatrix}.
+\end{gather}</p>
+
+<h5> Stenosis </h5>
+
+<p><br>
+<figure>
+  <img class="svImg svImgMd" src="documentation/rom_simulation/0d-solver/images/stenosis.png">
+  <figcaption class="svCaption"> Stenosis element.
+  </figcaption>
+</figure></p>
+
+<p>The governing equations for the local stenosis element [3] are</p>
+
+<p>$$P_{in}^{e} - P_{out}^{e} - R_{pre}\left(Q_{in}^{e}\right)Q_{in}^{e} = 0$$</p>
+
+<p>$$Q_{in}^{e} - Q_{out}^{e} = 0,$$</p>
+
+<p>where $R_{pre}\left(Q\right) = K_{t}\frac{\rho}{2A_{o}^{2}}\left(\frac{A_{o}}{A_{s}} - 1\right)^{2}|Q| + R_{p}$ and $R_{p} = \frac{8\mu L}{\pi r^{4}}.$</p>
+
+<p>The local contributions to the global arrays are</p>
+
+<p>\begin{gather}
+    \textbf{y}^{e} =
+        \begin{bmatrix}
+            P_{in}^{e} &amp; Q_{in}^{e} &amp; P_{out}^{e} &amp; Q_{out}^{e}
+        \end{bmatrix}^T,
+\end{gather}</p>
+
+<p>\begin{gather}
+    \textbf{F}^{e} =
+        \begin{bmatrix}
+            1 &amp; -R_{pre}|Q_{in}^{e}| - R_{p} &amp; -1 &amp;  0 \ \cr
+            0 &amp;  1 &amp;  0 &amp; -1
+        \end{bmatrix}.
+\end{gather}</p>
+
+<p>\begin{gather}
+    \textbf{dF}^{e} =
+        \begin{bmatrix}
+            1 &amp; -R_{pre}|Q_{in}^{e}| &amp; -1 &amp;  0 \ \cr
+            0 &amp;  0 &amp;  0 &amp; 0
+        \end{bmatrix}.
+\end{gather}</p>
+
+<h5> Junction </h5>
+
+<p><br>
+<figure>
+  <img class="svImg svImgMd" src="documentation/rom_simulation/0d-solver/images/junction.png">
+  <figcaption class="svCaption"> An example junction element with one inlet and two outlets.
+  </figcaption>
+</figure></p>
+
+<p>Across all inlets and outlets of the junction, mass is conserved and pressure is continuous.</p>
+
+<p>$$\sum_{i \in \text{inlets}} Q_{i}^{e} = \sum_{j \in \text{outlets}} Q_{j}^{e}$$</p>
+
+<p>$$ P_{i}^{e} = P_{j}^{e}, \forall i \in \text{inlets}, j \in \text{outlets}$$</p>
+
+<h4> Boundary condition elements </h4>
+
+<h5> RCR </h5>
+
+<p><br>
+<figure>
+  <img class="svImg svImgMd" src="documentation/rom_simulation/0d-solver/images/rcr_bc.png">
+  <figcaption class="svCaption"> RCR boundary condition element.
+  </figcaption>
+</figure></p>
+
+<p>The governing equations for the RCR boundary condition are</p>
+
+<p>$$R_{d}Q^{e} - P_{c}^{e} + P_{ref} - R_{d}C\frac{dP_{c}^{e}}{dt} = 0,$$</p>
+
+<p>$$P^{e} - P_{c}^{e} - R_{p}Q^{e} = 0.$$</p>
+
+<p>The local contributions to the global arrays are</p>
+
+<p>\begin{gather}
+    \textbf{y}^{e} =
+        \begin{bmatrix}
+            P^{e} &amp; Q^{e} &amp; P_{c}^{e}
+        \end{bmatrix}^T,
+\end{gather}</p>
+
+<p>\begin{gather}
+    \textbf{E}^{e} =
+        \begin{bmatrix}
+            0 &amp; 0 &amp; -R_{d}C \ \cr
+            0 &amp; 0 &amp; 0
+        \end{bmatrix},
+\end{gather}</p>
+
+<p>\begin{gather}
+    \textbf{F}^{e} =
+        \begin{bmatrix}
+            0 &amp; R_{d} &amp; -1 \ \cr
+            1 &amp; -R_{p} &amp; -1
+        \end{bmatrix},
+\end{gather}</p>
+
+<p>\begin{gather}
+    \textbf{c}^{e} =
+        \begin{bmatrix}
+            P_{ref} \ \cr
+            0
+        \end{bmatrix}.
+\end{gather}</p>
+
+<h5> Coronary </h5>
+
+<p><br>
+<figure>
+  <img class="svImg svImgMd" src="documentation/rom_simulation/0d-solver/images/coronary_bc.png">
+  <figcaption class="svCaption"> Coronary boundary condition element.
+  </figcaption>
+</figure></p>
+
+<p>The governing equations for the coronary boundary condition [4] are</p>
+
+<p>$$C_{im}R_{v}Q^{e} - V_{im}^{e} - C_{im}P_{im} + C_{im}P_{v} - C_{im}R_{v}\frac{dV_{im}^{e}}{dt} - C_{a}C_{im}R_{v}\frac{dP^{e}}{dt} + R_{a}C_{a}C_{im}R_{v}\frac{dQ^{e}}{dt} + C_{a}C_{im}R_{v}\frac{dP_{a}^{e}}{dt} = 0,$$</p>
+
+<p>$$C_{im}R{v}P^{e} - C_{im}R_{v}R_{a}Q^{e} - R_{v}V_{im}^{e} - C_{im}R_{v}P_{im} - C_{im}R_{v}R_{am}\frac{dV_{im}^{e}}{dt} - R_{am}V_{im}^{e} - C_{im}R_{am}P_{im} + R_{am}C_{im}P_{v} = 0.$$</p>
+
+<p>The local contributions to the global arrays are</p>
+
+<p>\begin{gather}
+    \textbf{y}^{e} =
+        \begin{bmatrix}
+            P^{e} &amp; Q^{e} &amp; V_{im}^{e}
+        \end{bmatrix}^T,
+\end{gather}</p>
+
+<p>\begin{gather}
+    \textbf{E}^{e} =
+        \begin{bmatrix}
+            -C_{a}C_{im}R_{v} &amp; R_{a}C_{a}C_{im}R_{v} &amp; -C_{im}R_{v} \ \cr
+            0 &amp;  0 &amp;  -C_{im}R_{v}R_{am}
+        \end{bmatrix},
+\end{gather}</p>
+
+<p>\begin{gather}
+    \textbf{F}^{e} =
+        \begin{bmatrix}
+            0 &amp;  C_{im}R_{v} &amp; -1 \ \cr
+            C_{im}R_{v} &amp; -C_{im}R_{v}R_{a} &amp;  -\left(R_{v} + R_{am}\right)
+        \end{bmatrix},
+\end{gather}</p>
+
+<p>\begin{gather}
+    \textbf{c}^{e} =
+        \begin{bmatrix}
+            C_{im} \left(-P_{im} + P_{v} \right) + C_{a}C_{im}R_{v}\frac{dP_{a}}{dt} \ \cr
+            -C_{im}\left( R_{v} + R_{am}\right)P_{im} + R_{am}C_{im}P_{v}
+        \end{bmatrix}.
+\end{gather}</p>
+
+<p>Assume $P_{a} = 0$.</p>
+</section>
+  <section id="0d-solver-refs" class="subgroup"><h1>References</h1>
+
+<p><a id="ref-1">
+Seo J, Fleeter C, Kahn A, Marsden A, Schiavazzi D. <strong>Multi-fidelity estimators for coronary artery models under clinically-informed data uncertainty</strong>. Int J Uncertain Quantif. 2020.
+</a></p>
+
+<p><a id="ref-2">
+K.E. Jansen, C.H. Whiting, G.M. Hulbert, <strong>A generalized-$\alpha$ method for integrating the filtered Navier–Stokes equations with a stabilized finite element method</strong>, Comp. Methods Appl. Mech. Engrg. 190 (1999) 305–319.
+</a></p>
+
+<p><a id="ref-3">
+Mehran Mirramezani and Shawn C. Shadden. <strong>A distributed lumped parameter model of blood flow. Annals
+of Biomedical Engineering</strong>, 2020.
+</a></p>
+
+<p><a id="ref-4">
+H.J. Kim, I.E. Vignon-Clementel, J.S. Coogan, C.A. Figueroa, K.E. Jansen and C.A. Taylor, <strong>Patient-specific modeling of blood flow and pressure in human coronary arteries</strong>, Annals of Biomedical Engineering, 38(10):3195-3209, 2010.
+</a></p>
+</section>
+</div>
+
+
+
+
+
+    </div>
+</div>
+
+
+    <!-- /.container -->
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container-fluid text-center">
+          <ul class="nav navbar-nav">
+            <li><a>Copyright &copy; SimVascular Development Team - 2017</a></li>
+          </ul>
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+    <script src="js/jquery-1.11.0.js" type="text/javascript"></script><script src="js/bootstrap.min.js" type="text/javascript"></script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+      });
+      $('body').scrollspy({
+        target: '.bs-docs-sidebar',
+        offset: 40
+      });
+    </script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-55333921-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <script type="text/javascript"
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+</body>
+
+</html>
