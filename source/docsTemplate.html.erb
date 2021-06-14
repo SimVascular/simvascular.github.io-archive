@@ -32,6 +32,10 @@ title: SimVascular Docs
         <ul id="sidebar" class="nav nav-stacked fixed mansvFSI"> <%= partial "documentation/fsi_tutorial_TOC" %></ul>
       <% end %>
 
+      <% if man_name == "SimCardio" %>
+        <ul id="sidebar" class="nav nav-stacked fixed manSimCardio"> <%= partial "documentation/simcardio_TOC" %></ul>
+      <% end %>
+
       <% if man_name == "ROMSimulation" %>
         <ul id="sidebar" class="nav nav-stacked fixed manROMSimulation"> <%= partial "documentation/rom_simulation_TOC" %></ul>
       <% end %>
@@ -81,6 +85,10 @@ title: SimVascular Docs
 
       <% if man_name == "svFSI" %>
         <div class="mansvFSI"><%= partial "documentation/fsi_tutorial_content" %></div>
+      <% end %>
+
+      <% if man_name == "SimCardio" %>
+        <div class="manSimCardio"><%= partial "documentation/simcardio_content" %></div>
       <% end %>
 
       <% if man_name == "ROMSimulation" %>
