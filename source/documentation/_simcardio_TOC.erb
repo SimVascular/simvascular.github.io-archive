@@ -1,0 +1,79 @@
+<p><h3>SimCardio Guide</h3></p>
+
+<li><a href="#intro">Introduction</a></li>
+
+<li><a href="#automatic-cardiac-modeling">Cardiac Geometric Modeling Tool </a>
+  <ul class="nav nav-stacked">
+    <li><a href="#auto-ml-cardiac-segmentation">Automated Image Segmentation</a>
+
+      <ul class="nav nav-stacked">
+        <li><a href="#seg-intro">Introduction</a></li>
+        <li><a href="#seg-inputs">Input Requirements</a></li>
+        <li><a href="#seg-pre-trained-models">Pre-Trained Models</a></li>
+        <li><a href="#seg-predict">Segmenting Image Data</a></li>
+        <li><a href="#seg-visualize">Visualization</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#auto-meshing">Mesh Generation</a>
+      <ul class="nav nav-stacked">
+        <li><a href="#mesh-intro">Introduction</a></li>
+        <li><a href="#mesh-lv-surface">Constructing Surface <br>Meshes</a></li>
+        <li><a href="#mesh-volume">Volumetric Meshing</a></li>
+        <li><a href="#mesh-register">Mesh Registration</a></li>
+        <li><a href="#mesh-motion">Mesh Motion</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#refs">References</a></li>
+  </ul>
+</li>
+
+<li><a href="#cep-modeling">Cardiac Electro- <br>physiology Modeling</a>
+  <ul class="nav nav-stacked">
+    <li><a href="#cep-intro">Introduction</a></li>
+    <li><a href="#cep-theory">Mathematical <br>Formulation</a></li>
+    <li><a href="#cep-activation-models">Cellular Acti-<br>vation Models</a></li>
+    <li><a href="#purkinje">Purkinje Network</a>
+      <ul class="nav nav-stacked">
+        <li><a href="#pnet-intro">Introduction</a></li>
+        <li><a href="#pnet-install">Plugin Installation</a></li>
+        <li><a href="#pnet-workflow">Plugin Workflow &<br>Usage</a></li>
+        <li><a href="#pnet-parameters">Plugin Parameters</a></li>
+        <li><a href="#pnet-issues">Plugin Issues</a></li>
+      </ul>
+    </li>
+    <li><a href="#cep-examples">Examples</a>
+      <ul class="nav nav-stacked">
+        <li><a href="#cep-example-block">Activation of Cardiac Tissue</a></li>
+        <li><a href="#cep-example-pnet">Activation of Purkinje Network</a></li>
+      </ul>
+    </li>
+    <li><a href="#cep-refs">References</a></li>
+  </ul>
+</li>
+
+<li><a href="#mechanics-modeling">Cardiac Mechanics <br> Modeling</a>
+  <ul class="nav nav-stacked">
+    <li><a href="#mechanics-solve">Solve Cardiac Mechanics <br> with svFSI</a>
+      <ul class="nav nav-stacked">
+        <li><a href="#mechanics-obtain-svFSI">Obtain svFSI</a></li>
+        <li><a href="#mechanics-mesh-gen">Model Construction & <br> Mesh Generation</a></li>
+        <li><a href="#mechanics-fiber-gen">Fiber Generation</a></li>
+        <li><a href="#mechanics-solver-input">Input File</a></li>
+        <li><a href="#mechanics-simulation">Run Simulation</a></li>
+      </ul>
+    </li>
+    <li><a href="#mechanics-theory">svFSI Structure Solver</a>
+      <ul class="nav nav-stacked">
+        <li><a href="#mechanics-kinematics">Kinematics</a></li>
+        <li><a href="#mechanics-struct">STRUCT: displacement- <br> based elastodynamics</a></li>
+        <li><a href="#mechanics-ustruct">uSTRUCT: mixed formu- <br> lation elastodynamics</a></li>
+        <li><a href="#mechanics-material-models">Material Models</a></li>
+      </ul>
+    </li>
+    <li><a href="#amechanics-refs">References</a></li>
+  </ul>
+</li>
+
+
