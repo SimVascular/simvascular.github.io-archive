@@ -1,6 +1,13 @@
-## Compute Mesh Motion from Registered Meshes ##
+## Mesh Motion 
 
-Once we have registered meshes, we can then compute the displacement on each mesh vertex over the whole cardiac cycle. As the temporal resolution of time-series image data is usually not high enough for CFD simulations, we can apply cubic spline interpolation to the registered meshes to obtain finer and smooth mesh displacements. We provide a Python script to interpolate the meshes, compute the mesh motion, and write out a <code>.dat</code> file for each boundary face that can used in svFSI to set up the displacement boundary conditions. The interpolation script <code>interpolation.py</code> can be found here in SimVascular&#39;s source code: Python/site-packages/sv_auto_lv_modeling/modeling/svfsi/interpolation.py.
+Once meshes have been registered the displacement of each mesh vertex over the whole cardiac cycle can be computed. 
+The series of registered meshes are interpolated using cubic splines to obtain mesh displacements with a temporal resolution 
+suitable for simulations. 
+
+The 
+<a href="https://github.com/SimVascular/SimVascular/blob/master/Python/site-packages/sv_auto_lv_modeling/modeling/elastix_main.py">
+interpolation.py </a> script is used to interpolate meshes and compute the mesh motion. It writes out a <b>.dat</b> file for each 
+boundary face that can used in svFSI to set up the displacement boundary conditions
 
 <pre><code class='language-shell' lang='shell'>
     # Generate motion.dat File for svFSI
