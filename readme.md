@@ -67,7 +67,7 @@ The **master** branch html files are generated from the **source** branch by run
 ```
 $ bundle exec middleman build
 ```
-in the top level *simvascular.github.io* directory. This creates a **build** directory containing the html files to be pushed to the **master** branch. Copy the **build** directory someplace outside of the **simvascular.github.io**, checkout the **master** the branch, and copy the files in **build** directory. For example
+in the top level **simvascular.github.io** directory. This creates a **build** directory containing the html files to be pushed to the **master** branch. Copy the **build** directory someplace outside of the **simvascular.github.io**, checkout the **master** the branch, and copy the files in **build** directory. For example
 ```
 $ cd simvascular.github.io
 $ git branch
@@ -80,6 +80,7 @@ $ git add .
 $ git commit
 $ git push origin master
 ```
-```
+
+Do a pull request on **master** and merge into the remote **master** branch. The changes will then appread on **http://simvascular.github.io**.
 
 
