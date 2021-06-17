@@ -53,18 +53,15 @@
                       <b><span class="fa fa-user"></span> User Guides</b>
                     </a>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsInstallation.html"><b><span class="fa fa-sign-in fa-rotate-90"></span> Installation</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/SimVascular/SimVascular/wiki/user_simvascular_software_suite_install"><b><span class="fa fa-sign-in fa-rotate-90"></span> Installation</b></a></li>
                       <li role="presentation" class="divider"></li>
                       <li role="presentation"><a role="menuitem" tabindex="-1" href="docsQuickGuide.html"><b><span class="icon ion-ios7-bolt"></span> Quick Guide</b></a></li>
                       <li role="presentation" class="divider"></li>
                       <li role="presentation"><a role="menuitem" tabindex="-1" href="docsModelGuide.html"><b><span class="icon ion-settings"></span> Modeling</b></a></li>
                       <li role="presentation"><a role="menuitem" tabindex="-1" href="docsMeshing.html"><b><span class="icon ion-ios7-keypad"></span> Meshing</b></a></li>
                       <li role="presentation"><a role="menuitem" tabindex="-1" href="docsFlowSolver.html"><b><span class="icon ion-play"></span> Simulation</b></a></li>
-
                       <li role="presentation"><a role="menuitem" tabindex="-1" href="docssvFSI.html"><b><span class="icon ion-plus-round"></span> svFSI</b></a></li>
-
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsSimCardio.html"><b><span class="icon ion-plus-round"></span> SimCardio </b></a></li>
-
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsSimCardio.html"><b><span class="icon ion-plus-round"></span> SimCardio</b></a></li>
                       <li role="presentation"><a role="menuitem" tabindex="-1" href="docsROMSimulation.html"><b><span class="icon ion-plus-round"></span> ROM Simulation</b></a></li>
                       <li role="presentation"><a role="menuitem" tabindex="-1" href="docsGenBC.html"><b><span class="icon ion-refresh"></span> GenBC</b></a></li>
                       <li role="presentation"><a role="menuitem" tabindex="-1" href="docsPythonInterface.html"><b><span class="icon ion-refresh"></span> Python Interface</b></a></li>
@@ -91,7 +88,7 @@
                       <b><span class="fa fa-caret-square-o-right"></span> Developer Guides</b>
                     </a>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsCompile.html"><b><span class="fa fa-file-text-o"></span> Compile Source Code</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/SimVascular/SimVascular/wiki/wiki_for_developers"><b><span class="fa fa-file-text-o"></span> Compile Source Code</b></a></li>
                     </ul>
                   </li>
 
@@ -103,6 +100,8 @@
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
                       <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/forums/viewforum.php?f=188"><b><span class="fa fa-users"></span> Public Forum</b></a></li>
                       <li role="presentation" class="divider"></li>
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/SimVascular/SimVascular/wiki/"><b><span class="fa fa-file-text-o"></span> Wiki</b></a></li>
+		      <li role="presentation" class="divider"></li>
                       <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/mailman/listinfo/simvascular-news"><b><span class="fa fa-sign-in"></span> Join News Mailing List</b></a></li>
                       <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/pipermail/simvascular-news/"><b><span class="fa fa-pencil-square-o"></span> News Mailing List Archive</b></a></li>
                       <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/SimVascular/SimVascular/issues"><b><span class="fa fa-bug"></span> Report bugs and request features</b></a></li>
@@ -159,26 +158,30 @@
 
 <li><a href="#intro">Introduction</a></li>
 
-<li><a href="#automatic-cardiac-modeling">Cardiac Modeling</a>
+<li><a href="#automatic-cardiac-modeling">Cardiac Geometric Modeling Tool </a>
   <ul class="nav nav-stacked">
-    <li><a href="#auto-ml-cardiac-segmentation">Automatic Cardiac <br>Segmentation</a>
+    <li><a href="#auto-ml-cardiac-segmentation">Automated Image Segmentation</a>
+
       <ul class="nav nav-stacked">
         <li><a href="#seg-intro">Introduction</a></li>
         <li><a href="#seg-inputs">Input Requirements</a></li>
-        <li><a href="#seg-pre-trained-models">Download Pre-<br>Trained Models</a></li>
-        <li><a href="#seg-predict">Predict <br>Segmentations</a></li>
+        <li><a href="#seg-pre-trained-models">Pre-Trained Models</a></li>
+        <li><a href="#seg-predict">Segmenting Image Data</a></li>
         <li><a href="#seg-visualize">Visualization</a></li>
       </ul>
     </li>
-    <li><a href="#auto-meshing">Automatic Mesh <br>Generation</a>
+
+    <li><a href="#auto-meshing">Mesh Generation</a>
       <ul class="nav nav-stacked">
         <li><a href="#mesh-intro">Introduction</a></li>
-        <li><a href="#mesh-lv-surface">Construct Surface <br>Meshes</a></li>
+        <li><a href="#mesh-lv-surface">Constructing Surface <br>Meshes</a></li>
         <li><a href="#mesh-volume">Volumetric Meshing</a></li>
         <li><a href="#mesh-register">Mesh Registration</a></li>
-        <li><a href="#mesh-motion">Compute Mesh Motion</a></li>
+        <li><a href="#mesh-motion">Mesh Motion</a></li>
       </ul>
     </li>
+
+    <li><a href="#refs">References</a></li>
   </ul>
 </li>
 
@@ -230,507 +233,6 @@
 </li>
 
 
-<section id="mechanics-modeling" class="group"><h1>Cardiac Mechanics Modeling</h1>
-
-<p>Human heart is an intrinsic multiphysics system. It&rsquo;s normal function requires synchronization and coupling of cardiac electrophysiology, tissue (myocardium) mechanics, and hemodynamics. Among the three physics, cardiac mechanics plays a central role, as it serves as the bridge between electrophysiology and blood flow. In a physiological setting, the myocardial cells (myocytes) in the heart tissue initiate and propagate an electrical impulse (action potential) that travels through the heart and drives the contraction of the cardiac muscle, which, in turn, propels the blood to sustain whole body circulation.</p>
-
-<p><strong>svFSI</strong> is a new multi-physics finite element solver designed for computational modeling of the whole heart dynamics. As the next generation underlining solver for the <strong>SimVascular</strong> software, <strong>svFSI</strong> is capable of simulating myocardial electrical activity using state-of-the-art cellular activation models, employ nonlinear hyperelastic material models to simulate tissue mechanics and activation coupling strategies, and perform large deformation fluid-structure interaction (FSI) to simulate the dynamics between heart tissue and blood flow. <strong>svFSI</strong> is compatible with several mesh formats and can read a wide range of 2D and 3D element types. The methods employed are widely popular among the scientific community and continue to evolve through research and development. The solver is parallelized using MPI for inter-process communication and was demonstrated to scale efficiently on large supercomputing clusters. ParMETIS is used for partitioning the computational domains. Simulation results are outputted into VTK format that can be easily visualized in the free software <a href="https://www.paraview.org"> Paraview</a>. In this document, we focus on demonstrating <strong>svFSI</strong>&rsquo;s capability of cardiac mechanics modeling.</p>
-</section>
-  <section id="mechanics-solve" class="subgroup"><h1>Solve Cardiac Mechanics with svFSI</h1>
-
-<p>Solving cardiac mechanics is a challenging task as the heart muscle is a complex fibrous structure that is predominantly incompressible <a href="#ref-1">[1]</a>, and undergoes large deformation during a cardiac cycle. In the following sections, we will introduce the workflow of modeling cardiac mechanics in <strong>svFSI</strong> using the benchmark example from Land et al. <a href="#ref-2">[2]</a>, i.e., the passive inflation of an idealized left ventricle.</p>
-</section>
-  <section id="mechanics-obtain-svFSI" class="subgroup"><h2>Obtain svFSI</h2>
-
-<p>The source code of <strong>svFSI</strong> is publicly released through <a href="https://github.com/SimVascular/svFSI">
-GitHub</a>, and many new features are introduced frequently. Users are encouraged to download the most recent version and test it on their problems. <strong>svFSI</strong> is built through a CMake system and a short build guide is provided <a href="https://github.com/SimVascular/svFSI/blob/master/README.md"> here</a>. In addition to the source code, pre-built binary files are also available through <a href="https://simtk.org/frs/?group_id=188#">SimTK</a>. Here users can download <strong>svFSI</strong> binary for Ubuntu or MacOS.</p>
-
-<p>The <strong>svFSI</strong> executable (either built from source or downloaded from SimTK) is not packaged into each SimVascular release, so users have to manually add its path to <strong>SimVascular</strong> GUI. The location is under <code>Window</code> -&gt; <code>Preference</code> -&gt; <code>svFSI Simulation</code>.</p>
-
-<figure>
-  <img class="svImg svImgMd" src="documentation/simcardio/mechanics/images/path_to_binary.png">
-  <figcaption class="svCaption" >Set up path to **svFSI** solver in SimVascular.</figcaption>
-</figure>
-</section>
-  <section id="mechanics-mesh-gen" class="subgroup"><h2>Model Construction &amp; Mesh Generation</h2>
-
-<p><strong>SimVascular</strong> GUI provides a complete pipeline that includes model construction, mesh generation, problem configuration, input file generation, and numerical simulation. Although the model construction and mesh generation have been discussed extensively in other parts of the <strong>SimVascular</strong> user guides, we will go over them briefly in this subsection for the sake of completeness.</p>
-
-<p>First, we create a SV Project called LV_Inflation. In cardiovascular modeling, computational models are usually generated from medical images. However, as we are using an idealized ventricular geometry here, we can directly import the model into the <code>SV Data Manager</code> by right clicking <code>Models</code> and selecting <code>Import Solid Model</code>. The solid model can be a surface mesh stored in either stl or vtp format.</p>
-
-<figure>
-  <img class="svImg svImgMd" src="documentation/simcardio/mechanics/images/import_model.png">
-  <figcaption class="svCaption" >Import solid model for mesh generation.</figcaption>
-</figure>
-
-<p>We could name the new model LV. When asked if you would like to extract faces from the model, click yes and accept the default separation angle (50 degree). Oftentimes, the imported model is not centered in the field of view. One can right click on the model and click <code>Global Reinit</code> to recenter the geometry. Double click the model name to open the <code>SV Modeling</code> window and rename each face corresponding to its physiological interpretation (base - LV basal plane; endo - endocardium; epi - epicardium) and set each of these face types as wall. You may also change the color of each face to distinguish them in the Display window.</p>
-
-<figure>
-  <img class="svImg svImgMd" src="documentation/simcardio/mechanics/images/faces.png">
-  <figcaption class="svCaption" >Extract faces from the imported model.</figcaption>
-</figure>
-
-<p>Next we will generate an unstructured mesh from this idealized LV model. In the <code>SV Data Manager</code>, right click <code>Meshes</code> and select <code>Create Mesh</code>. Accepting the default options will create a mesh object named LV. Double click the mesh object to open the <code>SV Meshing</code> configuration window. The most import parameter here is <code>Global Max Edge Size</code>, which controls the size of the elements. We will set this value to 2.0 and run the mesher. A relatively coarse mesh will be generated. Users can reduce the <code>Global Max Edge Size</code> if a finer mesh is desired. </p>
-
-<figure>
-  <img class="svImg svImgMd" src="documentation/simcardio/mechanics/images/Mesher.png">
-  <figcaption class="svCaption" >Meshing configuration.</figcaption>
-</figure>
-
-<p>To convert the generated mesh to the svFSI-ready format, right click the mesh object, LV, and select <code>Export Mesh Complete</code>.</p>
-
-<figure>
-  <img class="svImg svImgMd" src="documentation/simcardio/mechanics/images/export_mesh.png">
-  <figcaption class="svCaption" >Export the complete mesh.</figcaption>
-</figure>
-
-<p>Open the destination folder to find the mesh files contained in a folder called &amp;ltmesh object name&amp;gt-mesh-complete (LV-mesh-complete in this case). In this folder, the vtu file (mesh-complete.mesh.vtu) contains the volume mesh of the ventricle. The surface (boundary) mesh files could be found in the subfolder mesh-surfaces in vtp format. This set of vtk files defines the computational domain of this problem and can be visualized in Paraview.</p>
-
-<figure>
-  <img class="svImg svImgMd" src="documentation/simcardio/mechanics/images/mesh_folder.png">
-  <figcaption class="svCaption" >Layout of the mesh folder.</figcaption>
-</figure>
-</section>
-  <section id="mechanics-fiber-gen" class="subgroup"><h2>Generation of Fiber Distribution</h2>
-
-<p>The heart wall is a composite of layers (or sheets) of parallel myocytes, which are the predominant fiber types. These fiber and sheet directions enable defining a local orthonormal coordinate system inside the cardiac muscle. This local coordinate system is crucial for using a structurally-based constitutive relation for the cardiac muscle <a href="#ref-9">[9]</a>. For 3D problems, the users are required to prescribe fiber and sheet directions in the computational domain for certain constitutive relations. Users are provided an option to define a constant fiber direction through the following input directives,</p>
-
-<pre class="highlight plaintext"><code>
-# Fiber direction
-Fiber direction: (1.0, 0.0, 0.0)
-
-# Sheet direction
-Fiber direction: (0.0, 1.0, 0.0)
-</code></pre>
-
-<p><strong>svFSI</strong> also supports specifying distributed fiber and sheet direction generated by rule-based methods <a href="#ref-3">[3]</a> through the following input commands,</p>
-
-<pre class="highlight plaintext"><code>
-# Fiber direction
-Fiber direction file path: fibersLong.vtu
-
-# Sheet direction
-Fiber direction file path: fibersSheet.vtu
-</code></pre>
-
-<p>In the latter approach, the vtu file should have the local coordinate system stored as a vector with the name &ldquo;FIB_DIR&rdquo; at the centroid of each element. An example is provided <a href="https://github.com/SimVascular/svFSI-Tests/blob/master/06-ustruct/03-LV-Guccione-active/mesh/P1/fibersLong.vtu">here</a>.</p>
-</section>
-  <section id="mechanics-solver-input" class="subgroup"><h2>Input File</h2>
-
-<p><strong>svFSI</strong> requires a plain-text input file to specify simulation parameters. An overview of the syntax could be found <a href=https://sites.google.com/site/memt63/tools/MUPFES/mupfes-scripting>here</a>. The <strong>SimVascular</strong> GUI currently supports limited input configurations. To access more advanced functions of <strong>svFSI</strong>, users are recommended to create their own input file by modifying existing <a href="https://github.com/SimVascular/svFSI-Tests">templates</a>. Below is a template of the input file for modeling passive inflation of a left ventricle,</p>
-
-<pre class="highlight plaintext"><code>
-# File svFSI.inp
-#----------------------------------------------------------------
-# General simulation parameters
-
-Continue previous simulation: f
-Number of spatial dimensions: 3
-Number of time steps: 100
-Time step size: 0.01
-Spectral radius of infinite time step: 0.50
-Searched file name to trigger stop: STOP_SIM
-
-Save results to VTK format: 1
-Name prefix of saved VTK files: result
-Increment in saving VTK files: 1
-Start saving after time step: 1
-
-Increment in saving restart files: 100
-Convert BIN to VTK format: 0
-
-Verbose: 1
-Warning: 1
-Debug: 0
-
-#----------------------------------------------------------------
-# Mesh data including volume (vtu) and surface (vtp) meshes,
-# domains and fiber distributions
-
-Add mesh: msh {
-   Mesh file path:    &ltpath to mesh-complete folder&gt/mesh-complete.mesh.vtu
-   Add face: endo {
-      Face file path: &ltpath to mesh-complete folder&gt/mesh-surfaces/endo.vtp
-   }
-   Add face: epi {
-      Face file path: &ltpath to mesh-complete folder&gt/mesh-surfaces/epi.vtp
-   }
-   Add face: base {
-      Face file path: &ltpath to mesh-complete folder&gt/mesh-surfaces/base.vtp
-   }
-   Fiber direction: (1.0, 0.0, 0.0)
-   Fiber direction: (0.0, 1.0, 0.0)
-}
-
-#----------------------------------------------------------------
-# Equations solved
-# Here we use mixed formulation, ustruct, with stabilization
-# displacement-based formulation can be invoked through struct
-Add equation: ustruct {
-   # Define min and max number of iterations, and convergence
-   # tolerance for the nonlinear solver (Newton method)
-   Coupled: 1
-   Min iterations: 4
-   Max iterations: 10
-   Tolerance: 1e-6
-   Use Taylor-Hood type basis: f
-
-   # Define constitutive model and its parameters
-   Constitutive model: Guccione {
-      C:   1.0e4
-      bf:  1.0
-      bt:  1.0
-      bfs: 1.0
-   }
-
-   # Define a small density value for quasi-steady (static)
-   # simulation
-   Density: 1e-3
-
-   # Define Poisson ratio
-   Poisson ratio: 0.5
-
-#==================================================================================
-#  This block is for struct; remove if ustruct is used
-   # Define elasticity modulus for the volumetric part of the
-   # strain energy function
-   Elasticity modulus: 1.0
-   # Penalty method to enforce incompressibility
-   Dilational penalty model: ST91
-   # Use a penalty parameter, if different from bulk modulus
-   Penalty parameter: 1.0E6
-#==================================================================================
-
-#==================================================================================
-#  This block is for ustruct; remove if struct is used
-   # Define elasticity modulus to calculate tauM/tauC
-   Elasticity modulus: 2.0e5
-   # Stabilization paramters
-   Momentum stabilization coefficient: 1e-3
-   Continuity stabilization coefficient: 1e-3
-#==================================================================================
-
-   # Define variables for output
-   Output: Spatial {
-      Displacement: t
-      Velocity: t
-      Jacobian: t
-   }
-
-   # Linear solver parameter
-   # Jacobi preconditioner (FSILS) is the default.
-   # For ustruct, trilinos-ilu preconditioner is recommended.
-   LS type: GMRES
-   {
-      Preconditioner:      FSILS
-      Tolerance:           1D-6
-      Max iterations:      1000
-      Krylov space dimension: 50
-   }
-
-   # Apply zero displacement BC at the base
-   Add BC: base {
-      Type: Dir
-      Value: 0.0
-      Impose on state variable integral: t
-   }
-
-   # Add pressure load at the endo surface
-   # Here we define a ramp function to linearly
-   # increase pressure load from zero to the
-   # desired value to increase solver stability.
-   # Follower pressure load is set as the direction
-   # of the applied load follows deformation.
-   Add BC: endo {
-      Type: Neu
-      Time dependence: Unsteady
-      Temporal values file path: &ltpath to load.dat file&gt
-      Ramp function: t
-      Follower pressure load: t
-   }
-}
-</code></pre>
-
-<p>The applied load on the endocardial surface is provided in a file, load.dat, defining the ramp function. In this file, the first line specifies that there are two data points and the value will change linearly. The second and third line specify the time and the value at that time. Note that for a ramp function, the code expects data at two time points only. Should the simulation go beyond the last time stamp (t=1.0 in the current example), a constant value equal to the last extrema (1.0e4) will be applied.</p>
-
-<pre class="highlight plaintext"><code>
-2    1
-0.0  0.0
-1.0  1.0e4
-# content of load.dat
-</code></pre>
-</section>
-  <section id="mechanics-simulation" class="subgroup"><h2>Run Simulation</h2>
-
-<p>Though we can run the simulation through the GUI. It currently does not support some advanced features. Hence, we will use the aforementioned input file to directly run the simulation in terminals. The MPI run can be initiated through the following command
-<pre class="highlight plaintext"><code>
-  mpiexec -np &amp;ltnumber of MPI processes&amp;gt  &amp;ltpath to svFSI executable&amp;gt  &amp;ltpath to the input file&amp;gt
-</code></pre></p>
-
-<p><strong>Please remember to change the path to mesh folder and path to the load.dat in the input file according to your local configuration.</strong>  <strong>svFSI</strong>  will create a results directory called n-procs, where n is the number of MPI processes for the simulation. This directory will have vtu files that contain all the requested output fields and a log file called histor.dat.</p>
-</section>
-
-  <section id="mechanics-theory" class="subgroup"><h1>svFSI Nonlinear Mechanics Solver</h1>
-
-<p>This section briefly explains the theory and implementation of the nonlinear solid dynamics solver in <strong>svFSI</strong>. Two types of formulations are provided in <strong>svFSI</strong> for modeling solid mechanics: STRUCT and uSTRUCT. STRUCT uses a pure displacement-based formulation of the balance laws (mass and momentum conservation principles), while uSTRUCT uses a mixed (velocity-pressure) formulation of the governing equations. The latter approach uses either a stabilized equal-order discretization for velocity and pressure function spaces, or the inf-sup-conforming Taylor-Hood-type finite element discretization.</p>
-</section>
-  <section id="mechanics-kinematics" class="subgroup"><h2>Kinematics</h2>
-
-<p>During a cardiac cycle, the heart undergoes large deformations which can no longer be described by linear elasticity. Since the domain is continuously deforming, we introduce the concepts of a reference configuration (denoted $\Omega<em>{0}$) and a current configuration (denoted $\Omega</em>{t}$). The reference configuration is fixed for all times, and often refers to the initial geometry when $t=0$. We will use the vector $\mathbf{X}$ to denote the physical coordinates of the geometry in the reference configuration, and define the following relation:</p>
-
-<p>$$
-\begin{equation}
-  \mathbf{x}(\mathbf{X}, t)=\mathbf{X}+\mathbf{u}(\mathbf{X}, t)
-\end{equation}
-$$</p>
-
-<p>where $\mathbf{x}$ describes the physical coordinates of the geometry in the current configuration and $\mathbf{u}$ is the time-varying displacement vector field on $\Omega<em>{0}$ which acts as a mapping between the reference and current configurations such that $\mathbf{u}: \Omega</em>{0} \Rightarrow \Omega_{t} .$ We also define the following relationships and tensors, which are standard for describing nonlinear structural mechanics:</p>
-
-<p>$$
-\begin{equation}
-  \begin{split}
-    \ddot{\mathbf{u}}=\frac{d^{2} \mathbf{u}}{d t^{2}}, \quad \mathbf{F}=\frac{\partial \mathbf{x}}{\partial \mathbf{X}}, \quad &amp; J=\operatorname{det}(\mathbf{F}) \
-    \mathbf{E}=\frac{1}{2}(\mathbf{C}-\mathbf{I}), \quad &amp; \mathbf{C}=\mathbf{F}^{T} \mathbf{F}
-  \end{split}
-\end{equation}
-$$</p>
-
-<p>where $\ddot{\mathbf{u}}$ refers to the structural acceleration and the time derivative operator, $d^{2} / d t^{2}$, is applied on the reference configuration. $\mathbf{F}$ denotes the deformation gradient tensor and $J$ is the the determinant of $\mathbf{F}$ tensor that denotes the Jacobian of the transformation. $\mathbf{C}$ is the Cauchy-Green deformation tensor while $\mathbf{E}$ is the Green-Lagrange strain tensor.</p>
-</section>
-  <section id="mechanics-struct" class="subgroup"><h2>STRUCT: displacement-based nonlinear elastodynamics</h2>
-
-<p>The STRUCT equation solves equations for nonlinear structural dynamics using finite element formulation. We start with the function spaces and weak form. We require that the trial and weighting functions satisfy their respective properties on the current domain. The strong form of the momentum balance is</p>
-
-<p>$$
-  \begin{equation}
-    \begin{split}
-      \rho\ddot{\mathbf{u}} = \nabla<em>{x}\cdot{\sigma} + \rho\mathbf{f</em>b}, \
-      \sigma\cdot \mathbf{n} = \mathbf{h},~\mathrm{on}~\left(\Gamma<em>{t}\right)</em>{h}.
-    \end{split}
-  \end{equation}
-  $$</p>
-
-<p>where $\sigma$ is the stress term in the current configuration.</p>
-
-<p>The resulting weak form of the structural dynamics equations is </p>
-
-<p>$$
-\begin{equation}
-  \int<em>{\Omega</em>{t}} \mathbf{w} \cdot \rho \ddot{\mathbf{u}} d \Omega+\int<em>{\Omega</em>{0}} \nabla<em>{X} \mathbf{w}:(\mathbf{F} \mathbf{S}) d \Omega-\int</em>{\Omega<em>{t}} \mathbf{w} \cdot \rho \mathbf{f</em>b} d \Omega-\int<em>{\left(\Gamma</em>{t}\right)<em>{h}} \mathbf{w} \cdot \mathbf{h} d \Gamma</em>{h}=0
-\end{equation}
-$$</p>
-
-<p>The acceleration term (i.e. $\int<em>{\Omega</em>{t}} \mathbf{w} \cdot \rho \ddot{\mathbf{u}} d \Omega$), body forcing term (i.e. $\int<em>{\Omega</em>{t}} \mathbf{w} \cdot \mathbf{f<em>b} d \Omega$), and the natural boundary condition term (i.e. $\int</em>{\left(\Gamma<em>{t}\right)</em>{h}} \mathbf{w} \cdot \mathbf{h} d \Gamma_{h}$) are all evaluated in the current configuration. These terms are commonly referred to as external work done on the structure by body forces and surface tractions. The remaining stress term in the equation is often referred to as internal work done on the structure by internal stresses, which we will treat differently here. We rewrite this in the reference configuration in terms of the deformation gradient and the second Piola-Kirchhoff stress tensor, which is commonly denoted as $\mathbf{S}$. </p>
-
-<p><strong>svFSI</strong>  uses a splitting approach where the strain energy and the resulting second Piola-Kirchhoff stress tensor, $\mathbf{S}$, are decomposed into deviatoric (or isochoric, $\mathbf{S}<em>{iso}$) and dilational (or volumetric, $\mathbf{S}</em>{vol}$) components. The specific form of $\mathbf{S}$ will depend on the chosen constitutive model (isochoric and volumetric). More information on these <a href="#material-model">Material models</a> can be found in the literature <a href="#ref-1">[1]</a>. It is noted that the symbol $E$ denotes the elastic modulus of the structure and is not to be confused with $\mathbf{E}$, which denotes the Green-Lagrange strain tensor, and $\nu$ represents Poisson&rsquo;s ratio. Some key material parameters can then be defined as,
-$$
-\begin{equation}
-    \lambda=\frac{E v}{(1+v)(1-2 v)}, \quad \mu=\frac{E}{2(1+v)}, \quad \kappa=\lambda + \frac{2}{3} \mu
-\end{equation}
-$$</p>
-
-<p>where, $\lambda$ and $\mu$ are the Lam&amp;eacute&rsquo;s first and second parameters, respectively, and $\kappa$ is the bulk modulus. The second Piola-Kirchhoff stress tensors for a few standard constitutive models are given as,</p>
-
-<p>$$
-\begin{equation}
-  \begin{split}
-    &amp; \mathbf{S}^{StVK} &amp; = 2 \mu \mathbf{E} + \lambda \operatorname{tr}(\mathbf{E}) \mathbf{I}, &amp; \quad \textrm{St. Venant-Kirchhoff} \
-    &amp; \mathbf{S}^{mStVK} &amp; = \kappa \operatorname{ln}(J) \mathbf{C}^{-1} + \mu(\mathbf{C} - \mathbf{I}), &amp; \quad \textrm{Modified St. Venant-Kirchhoff} \
-    &amp; \mathbf{S_{iso}}^{nHK} &amp; = \mu J^{-2/3} \left(\mathbf{I} - \frac{1}{3} \operatorname{tr}(\mathbf{C}) \mathbf{C}^{-1} \right), &amp; \quad \textrm{Neo-Hookean}
-  \end{split}
-\end{equation}
-$$</p>
-
-<p>where $\mathbf{I}$ is the identity matrix. For the Neo-Hookean and other hyperelastic constitutive models, the $\mathbf{S}$ tensor is computed as $\mathbf{S} = \mathbf{S<em>{iso}} + \mathbf{S</em>{vol}}$, where $\mathbf{S_{vol}} = p J \mathbf{C}^{-1}$, and $p$ is the hydrostatic pressure computed based on the chosen dilational strain-energy function. See the section on <a href="#material-model">Material models</a> and the corresponding references for the available dilational penalty models in <strong>svFSI</strong> .</p>
-</section>
-  <section id="mechanics-ustruct" class="subgroup"><h2>uSTRUCT: mixed formulation nonlinear elastodynamics</h2>
-
-<p><strong>svFSI</strong> allows solving nonlinear elastodynamics using a mixed formulation where the structure&rsquo;s velocity and pressure are the unknown degrees of freedom <a href="#ref-4">[4]</a>. Two variants are available within this feature: (a) first, a novel variational multiscale stabilized (VMS) formulation that allows equal-order interpolation of velocity and pressure bases using a unified framework <a href="#ref-4">[4]</a>; (b) second, using the classical inf-sup stable Taylor-Hood type elements where the velocity basis is derived from a function space that is one order higher relative to the pressure basis. In the displacement-based formulation, a hyperelastic material model assumes the existence of a Helmholtz free energy potential. However, uSTRUCT postulates hyperelasticity using Gibbs free energy potential <a href="#ref-4">[4]</a> and takes the following additive decoupled form as,
-$$
-\begin{equation}
-  G(\overline{\mathbf{C}},p,T) = G<em>{iso}(\overline{\mathbf{C}},T) + G</em>{vol}(p,T)
-\end{equation}
-$$</p>
-
-<p>where $G<em>{vol}(p,T)=\int \rho^{-1}dp$, $\overline{\mathbf{C}}=J^{-2/3}\mathbf{C}$, $p$ is the pressure and $T$ is the temperature. It is worth mentioning that the free energy above is the specific free energy, i.e. the energy per unit mass. The free energy per unit volume is $G^R=\rho</em>0G$, where $\rho_0$ is the density of the reference configuration. The Helmholtz free energy per unit volume can be obtained by a Legendre transformation of $-G^R$ as,</p>
-
-<p>$$
-\begin{equation}
-  H^R(\overline{\mathbf{C}},J,T)=\sup_p\left(-pJ+G^R(\overline{\mathbf{C}},p,T) \right).
-\end{equation}
-$$</p>
-
-<p>and due to the additive splitting of the Gibbs free energy, we have, </p>
-
-<p>$$
-\begin{equation}
-  H^R(\overline{\mathbf{C}},J,T)=G<em>{iso}^R(\overline{\mathbf{C}},T) + \sup</em>p\left(-pJ+G_{vol}^R(p,T) \right).
-\end{equation}
-$$</p>
-
-<p>It is noted that Gibbs free energy naturally introduces pressure into the stress term. The governing equations for the motion of a continuum body in the current configuration are,</p>
-
-<p>$$
-\begin{equation}
-  \begin{split}
-    &amp; \frac{\mathrm{d} \mathbf{u}}{\mathrm{d} t} - \mathbf{v} = \mathbf{0} \</p>
-<pre class="highlight plaintext"><code>&amp; \beta(p) \frac{\mathrm{d} p}{\mathrm{d} t} + \nabla_x \cdot \mathbf{v} = 0  \\
-
-&amp; \rho(p) \frac{\mathrm{d} \mathbf{v}}{\mathrm{d} t} - \nabla_x \cdot \mathbf{\sigma_{dev}} + \nabla_x p - \rho(p) \mathbf{f_b} = \mathbf{0}.
-</code></pre>
-
-<p>\end{split}
-\end{equation}
-$$</p>
-
-<p>The above system of equations represent the kinematic relation between displacement and velocity, balance of mass and linear momentum. $\sigma_{dev}$ is the deviatoric Cauchy stress, while $\rho$ and $\beta$ are the density and isothermal compressibility coefficient, respectively, defined as functions of pressure. The expressions for these quantities are given as follows,</p>
-
-<p>$$
-\begin{equation}
-  \begin{split}
-    &amp; \rho(p) = \left( \frac{\mathrm{d} G<em>{vol}}{\mathrm{d} p} \right)^{-1} \quad &amp;, \quad &amp; \beta(p) = \frac{1}{\rho} \frac{\mathrm{d} \rho}{\mathrm{d} p} = -\frac{\partial^2 G</em>{vol}}{\partial p^2} / \frac{\partial G_{vol}}{\partial p} \</p>
-<pre class="highlight plaintext"><code>&amp; \mathbf{\sigma_{dev}} = J^{-1} \bar{\mathbf{F}} \left( \mathbb{P}:\bar{\mathbf{S}} \right) \bar{\mathbf{F}}^T \quad &amp;, \quad &amp; \bar{\mathbf{S}} = 2 \frac{\partial G_{iso}^R}{\partial \bar{\mathbf{C}}} = 2 \frac{\partial (\rho_0 G_{iso})}{\partial \bar{\mathbf{C}}},
-</code></pre>
-
-<p>\end{split}
-\end{equation}
-$$</p>
-
-<p>where $\mathbb{P} = \mathbb{I} - \frac{1}{3}\mathbf{C} \otimes \mathbf{C}^{-1}$ is the projection tensor, $\bar{\mathbf{F}} = J^{-1/3} \mathbf{F}$ and $\bar{\mathbf{C}} = J^{-2/3} \mathbf{C}$.</p>
-
-<p>This mixed finite element problem is stabilized using variational multiscale method to allow using equal-order interpolating functions for velocity and pressure unknowns, employ linear elements and handle material incompressibility without suffering from locking issues. Defining an appropriate mixed function space, the stabilized weak form can then be written in the current configuration as,</p>
-
-<p>$$
-  \begin{equation}
-  \begin{split}
-    &amp; \mathbf{B}<em>k := &amp; \int</em>{\Omega<em>x} \mathbf{w}</em>\mathbf{u} \cdot \left( \frac{\mathrm{d} \mathbf{u}}{\mathrm{d} t} - \mathbf{v} \right) \mathrm{d} \Omega_x = \mathbf{0} \</p>
-<pre class="highlight plaintext"><code>&amp; \mathbf{B}_p := &amp; \int_{\Omega_x} w_p \left( \beta(p) \frac{\mathrm{d} p}{\mathrm{d} t} + \nabla_x \cdot \mathbf{v} \right) \mathrm{d} \Omega_\mathbf{x} \\
-
-&amp; &amp; + \sum_e \int_{\Omega_x^e} \tau_M^e \nabla_x w_p \cdot \left( \rho(p)\frac{\mathrm{d} \mathbf{v}}{\mathrm{d} t} - \nabla_x \cdot \mathbf{\sigma_{dev}} + \nabla_x p - \rho(p)\mathbf{f_b} \right) \mathrm{d} \Omega_x^e = 0 \\
-
-&amp; \mathbf{B}_m := &amp; \int_{\Omega_x} \left( \mathbf{w}_\mathbf{v} \cdot \rho(p) \frac{\mathrm{d} \mathbf{v}}{\mathrm{d} t} + \nabla_x \mathbf{w}_\mathbf{v} : \mathbf{\sigma_{dev}} - \nabla_x \cdot \mathbf{w}_\mathbf{v} p - \mathbf{w}_\mathbf{v} \cdot \rho(p)\mathbf{f_b} \right) \mathrm{d} \Omega_x \\
-
- &amp; &amp; -\int_{\Gamma_x^h} \mathbf{w}_\mathbf{v} \cdot \mathbf{h} \mathrm{d} \Gamma_x + \sum_e \int_{\Omega_x^e} \tau_C \left(\nabla_x \cdot \mathbf{w}_\mathbf{v} \right) \left( \beta(p) \frac{\mathrm{d} p}{\mathrm{d} t} + \nabla_x \cdot \mathbf{v} \right) \mathrm{d} \Omega_x^e = 0.
-
-\end{split}
-</code></pre>
-
-<p>\end{equation}
-  $$</p>
-
-<p>The stabilization parameters are chosen as, </p>
-
-<p>$$
-\begin{equation}
-  \mathbf{\tau}<em>M = \tau</em>M\mathbf{I}<em>{nd}, \quad \tau</em>M = c<em>m \frac{\Delta x^e}{c\rho}, \quad \tau</em>C = c_c c\Delta x^e \rho
-\end{equation}
-$$</p>
-
-<p>where, $\Delta x^e$ is the diameter of the circumscribing sphere of the tetrahedral element, $c<em>m$ and $c</em>c$ are two non-dimensional parameters, and $c$ is the maximum wave speed in the solid body. For compressible materials, $c$ is the bulk wave speed. Assuming isotropic small-strain linear elastic material, the bulk wave speed can be approximated as, $c=\sqrt{ \left( \lambda+2\mu \right) / \rho<em>0}$, where $\lambda$ and $\mu$ are the Lam&amp;eacute&rsquo;s parameters. For incompressible materials, $c = \sqrt{\frac{\mu}{\rho</em>0}}$ is the shear wave speed. Further details about the formulation, finite element discretization and time integration could be found in Liu et al. <a href="#ref-4">[4]</a>.</p>
-</section>
-  <section id="mechanics-material-models" class="subgroup"><h2>Material Models</h2>
-
-<p>Below is the list of available material constitutive models in <strong>svFSI</strong> :</p>
-
-<table class="table table-bordered">
-  <caption>Volumetric constitutive models for the struct/ustruct equations</caption>
-  <thead>
-  <tr>
-    <th>Volumetric Model</th>
-    <th>Input Keyword</th>
-  </tr>
-  </thead>
-  <tr>
-    <td>Quadratic model</td>
-    <td> &ldquo;quad&rdquo;, &ldquo;Quad&rdquo;, &ldquo;quadratic&rdquo;, &ldquo;Quadratic&rdquo; </td>
-  </tr>
-  <tr>
-    <td>Simo-Taylor91 model<a href="#ref-5">[5]</a></td>
-    <td>&ldquo;ST91&rdquo;, &ldquo;Simo-Taylor91&rdquo;</td>
-  </tr>
-  <tr>
-    <td>Miehe94 model<a href="#ref-6">[6]</a></td>
-    <td>&ldquo;M94&rdquo;, &ldquo;Miehe94&rdquo;</td>
-  </tr>
-</table>
-
-<table class="table table-bordered">
-  <caption>Isochoric constitutive models for the struct/ustruct equations</caption>
-  <thead>
-  <tr>
-    <th>Isochoric Model</th>
-    <th>Input Keyword</th>
-  </tr>
-  </thead>
-    <tr>
-      <td>Saint Venant-Kirchhoff$^\dagger$ </td>
-      <td>&ldquo;stVK&rdquo;, &ldquo;stVenantKirchhoff&rdquo; </td>
-    </tr>
-    <tr>
-      <td>modified Saint Venant-Kirchhoff$^\dagger$</td>
-      <td>&ldquo;m-stVK&rdquo;, &ldquo;modified-stVK&rdquo;,  &ldquo;modified-stVenantKirchhoff&rdquo; </td>
-    </tr>
-    <tr>
-      <td>Neo-Hookean model </td>
-      <td>&ldquo;nHK&rdquo;, &ldquo;nHK91&rdquo;, &ldquo;neoHookean&rdquo;, &ldquo;neoHookeanSimo91&rdquo; </td>
-    </tr>
-    <tr>
-      <td>Mooney-Rivlin model </td>
-      <td>&ldquo;MR&rdquo;, &ldquo;Mooney-Rivlin&rdquo; </td>
-    </tr>
-    <tr>
-      <td>Holzapfel-Gasser-Ogden model <a href="#ref-7">[7]</a> </td>
-      <td> &ldquo;HGO&rdquo; </td>
-    </tr>
-    <tr>
-      <td>Guccione model <a href="#ref-8">[8]</a> </td>
-      <td> &ldquo;Guccione&rdquo;, &ldquo;Gucci&rdquo; </td>
-    </tr>
-    <tr>
-      <td>Holzapfel-Ogden model <a href="#ref-9">[9]</a></td>
-      <td> &ldquo;HO&rdquo;, &ldquo;Holzapfel&rdquo; </td>
-    </tr>
-</table>
-
-<p>$^\dagger$ These models are not available for ustruct.</p>
-</section>
-  <section id="mechanics-refs" class="subgroup"><h1>Reference</h1>
-
-<p><a id="ref-1"> <a href="https://www.wiley.com/en-us/Nonlinear+Solid+Mechanics%3A+A+Continuum+Approach+for+Engineering-p-9780471823193">
-[1] Holzapfel, G. A. (2002). <strong>Nonlinear solid mechanics: a continuum approach for engineering science</strong>. Wiley. </a></a></p>
-
-<p><a id="ref-2"> <a href="https://doi.org/10.1098/rspa.2015.0641">
-[2] Land, S., Gurev, V., Arens, S., Augustin, C. M., Baron, L., Blake, R., Bradley, C., Castro, S., Crozier, A., Favino, M., Fastl, T. E., Fritz, T., Gao, H., Gizzi, A., Griffith, B. E., Hurtado, D. E., Krause, R., Luo, X., Nash, M. P., … Niederer, S. A. (2015). <strong>Verification of cardiac mechanics software: benchmark problems and solutions for testing active and passive material behaviour</strong>. Proceedings of the Royal Society A: Mathematical, Physical and Engineering Science, 471 (2184), 20150641. https://doi.org/10.1098/rspa.2015.0641 </a></a></p>
-
-<p><a id="ref-3"> <a href="https://doi.org/10.1007/s10439-012-0593-5">
-[3] Bayer, J. D., Blake, R. C., Plank, G., &amp; Trayanova, N. A. (2012). <strong>A Novel Rule-Based Algorithm for Assigning Myocardial Fiber Orientation to Computational Heart Models</strong>. Annals of Biomedical Engineering, 40(10), 2243–2254. https://doi.org/10.1007/s10439-012-0593-5 </a></a></p>
-
-<p><a id="ref-4"> <a href="https://doi.org/10.1016/J.CMA.2018.03.045">
-[4] Liu, J., &amp; Marsden, A. L. (2018). <strong>A unified continuum and variational multiscale formulation for fluids, solids, and fluid–structure interaction</strong>. Computer Methods in Applied Mechanics and Engineering, 337, 549–597. https://doi.org/10.1016/J.CMA.2018.03.045 </a></a></p>
-
-<p><a id="ref-5"> <a href="https://doi.org/10.1016/0045-7825(91)90100-K">
-[5] Simo, J. C., &amp; Taylor, R. L. (1991). <strong>Quasi-incompressible finite elasticity in principal stretches. Continuum basis and numerical algorithms</strong>. Computer Methods in Applied Mechanics and Engineering, 85(3), 273–310. https://doi.org/10.1016/0045-7825(91)90100-K</a></a></p>
-
-<p><a id="ref-6"> <a href="https://doi.org/10.1002/nme.1620371202">
-[6] Miehe, C. (1994). <strong>Aspects of the formulation and finite element implementation of large strain isotropic elasticity</strong>. International Journal for Numerical Methods in Engineering, 37(12), 1981–2004. https://doi.org/10.1002/nme.1620371202 </a></a></p>
-
-<p><a id="ref-7"> <a href="https://doi.org/10.1098/rsif.2005.0073">
-[7] Gasser, T. C., Ogden, R. W., &amp; Holzapfel, G. A. (2006). <strong>Hyperelastic modelling of arterial layers with distributed collagen fibre orientations</strong>. Journal of The Royal Society Interface, 3(6), 15–35. https://doi.org/10.1098/rsif.2005.0073 </a></a></p>
-
-<p><a id="ref-8"> <a href="https://doi.org/10.1115/1.2894084">
-[8] Guccione, J. M., McCulloch, A. D., &amp; Waldman, L. K. (1991). <strong>Passive material properties of intact ventricular myocardium determined from a cylindrical model</strong>. Journal of Biomechanical Engineering, 113(February), 42–55. https://doi.org/10.1115/1.2894084 </a></a></p>
-
-<p><a id="ref-9"> <a href="https://doi.org/10.1098/rsta.2009.0091">
-[9] Holzapfel, G. A, &amp; Ogden, R. W. (2009). <strong>Constitutive modelling of passive myocardium: a structurally based framework for material characterization</strong>. Philosophical Transactions of the Royal Society Series A, 367(1902), 3445–3475. https://doi.org/10.1098/rsta.2009.0091 </a></a></p>
-
-<p><a id="ref-10"> <a href="https://doi.org/10.1016/J.JMBBM.2014.06.016">
-[10] Nolan, D. R., Gower, A. L., Destrade, M., Ogden, R. W., &amp; McGarry, J. P. (2014). <strong>A robust anisotropic hyperelastic formulation for the modelling of soft tissue</strong>. Journal of the Mechanical Behavior of Biomedical Materials, 39, 48–60. https://doi.org/10.1016/J.JMBBM.2014.06.016 </a></a></p>
-
-<p><br><br><br><br><br></p>
-</section>
-
-
-
 </ul>
 
 
@@ -757,9 +259,9 @@ $$</p>
 
 <p>The SimVascular <strong>SimCardio</strong> software suite includes a machine learning-based tool to automatically segment heart chambers from medical data and create patient-specific cardiac models, a finite element solver for performing multiphysics cardiac simulations, and python-based plugins to interactively create cardiac models, Purkinje network and set solver parameters from within the main SimVascular GUI application. While some of the interactive plugins are under development, the software allows flexibility to use scripting and perform simulations on high performance clusters.</p>
 
-<h3>Cardiac Segmentation and Modeling</h3>
+<h3>Cardiac Segmentation and Geometric Modeling</h3>
 
-<p>The SimVascular <strong>Automatic Cardiac Segmentation Tool</strong> uses pre-trained deep neural network models to automaticall generate segmentations for major cardiac structures, the four heart chambers, aorta and pulmonary arteries. The automatic cardiac segmentation tool utilized an ensemble of two-dimensional (2D) convolutional neural networks (CNNs) for automatic segmentation of cardiac structures from three-dimensional (3D) patient images and demonstrated state-of-the-art performance than prior approaches when evaluated on a benchmark dataset containing both magnetic resonance (MR) and computed tomography(CT) scans. This tool can be used from both the SimVascular&rsquo;s Python plugin in the GUI or from the command line version of the SimVascular Python.</p>
+<p>The SimVascular <strong>Cardiac Image Segmentation Tool</strong> uses pre-trained deep neural network models to automaticall generate segmentations for major cardiac structures, the four heart chambers, aorta and pulmonary arteries. The automatic cardiac segmentation tool utilized an ensemble of two-dimensional (2D) convolutional neural networks (CNNs) for automatic segmentation of cardiac structures from three-dimensional (3D) patient images and demonstrated state-of-the-art performance than prior approaches when evaluated on a benchmark dataset containing both magnetic resonance (MR) and computed tomography(CT) scans. This tool can be used from both the SimVascular&rsquo;s Python plugin in the GUI or from the command line version of the SimVascular Python.</p>
 
 <h3>Multiphysics Finite Element Solver</h3>
 
@@ -770,22 +272,39 @@ $$</p>
 <p>The source code of <strong>svFSI</strong> is available on <a href="https://github.com/SimVascular/svFSI">GitHub</a> as part of the SimVascular project and the precompiled installers can be downloaded from <a href="https://simtk.org/projects/simvascular#">SimTK</a> website. A variety of examples are also available on <a href="https://github.com/SimVascular/svFSI-Tests">GitHub</a> for the users to get started quickly on using the solver. We recommend users to navigate through all the examples under a particular physics to educate themselves with the variety of options that the solver could accommodate. We also recommend users to use the existing input files as templates and make suitable modifications that meet their needs.</p>
 </section>
 
-<section id="automatic-cardiac-modeling" class="group"><h1>Automatic Cardiac Modeling Tool</h1>
+<section id="automatic-cardiac-modeling" class="group"><h1>Cardiac Geometric Modeling Tool</h1>
 
-<p>The SimVascular <strong>Automatic Cardiac Modeling Tool</strong> is designed to automatically segment medical images to extract major cardiac structures using machine learning techniques, create a volumetric mesh and perform registration to extract the wall motion for the ensuing blood flow simulation in <strong>svFSI</strong>.</p>
+<p>The SimVascular <strong>Cardiac Geometric Modeling Tool</strong> is used to extract major cardiac structures from time-resolved imaging data
+using automatic machine learning techniques. Volumetric meshes created from segmentation geometry are registered with image
+data to extract heart wall motion that can be later used in multi-physics simulations of the heart using the <strong>svFSI</strong> solver.</p>
+
+<p>The <strong>Cardiac Geometric Modeling Tool</strong> is implemented as the 
+<a href="https://github.com/SimVascular/SimVascular/tree/master/Python/site-packages/sv_auto_lv_modeling"> 
+<b>sv_auto_lv_modeling</b> </a> Python package included with the SimVascualar
+application.</p>
 </section>
-  <section id="auto-ml-cardiac-segmentation" class="subgroup"><h1>Automatic Machine Learning Cardiac Segmentation</h1>
-</section>
-  <section id="seg-intro" class="subgroup"><h2>Introduction</h2>
+  <section id="seg-intro" class="subgroup"><h1>Automated Image Segmentation</h1>
 
-<p>The SimVascular <strong>Automatic Cardiac Segmentation Tool</strong> uses pre-trained deep neural network models to automaticall generate segmentations for major cardiac structures, the four heart chambers, aorta and pulmonary arteries. The automatic cardiac segmentation tool utilized an ensemble of two-dimensional (2D) convolutional neural networks (CNNs) for automatic segmentation of cardiac structures from three-dimensional (3D) patient images and demonstrated state-of-the-art performance than prior approaches when evaluated on a benchmark dataset containing both magnetic resonance (MR) and computed tomogra- phy(CT) cardiac scans. This tool can be used from both the SimVascular&rsquo;s Python plugin in the GUI or from the command line version of the SimVascular Python. Detailed description about this tool can be found in the following paper:</p>
-
-<p>Kong, F., and Shadden, S. C. (August 7, 2020). &ldquo;Automating Model Generation for Imagebased Cardiac Flow Simulation.&rdquo; ASME. J Biomech Eng. doi: <a href='https://doi.org/10.1115/1.4048032' target='_blank' class='url'>https://doi.org/10.1115/1.4048032</a></p>
+<p>The SimVascular <strong>Cardiac Geometric Modeling Tool</strong> uses pre-trained deep neural network models to automatically 
+generate segmentations of major cardiac structures: the four heart chambers, aorta and pulmonary arteries. The segmentation tool 
+uses an ensemble of two-dimensional (2D) convolutional neural networks (CNNs) for automatic segmentation of cardiac structures from 
+three-dimensional (3D) patient images. It has been shown to have superior performance compared to prior approaches when evaluated on 
+a benchmark dataset containing both magnetic resonance (MR) and computed tomography (CT) image data <a href="#ref-1">[1]</a>. 
+The tool can be used from both the SimVascular GUI Python console and from the command line within the SimVascular Python 
+environment. </p>
 </section>
   <section id="seg-inputs" class="subgroup"><h2>Input Requirements</h2>
 
-<p>The preferred input format of the image volumes is <strong>.nii.gz or .nii or .vti</strong>. VTK image volumes (.vti) should be reoriented to have an orientation matrix of identity. This is because the segmnetation method requires identity-oriented image volumes while the version of VTK within SimVascular does not include orientation matrix with VTI images.
-The directory containing the input image data should be organized as follows:</p>
+<p>The preferred input format of the image volumes is <b>.nii.gz</b>, <b>.nii</b> or <b>.vti</b> files. 
+The segmentation method requires an image to have an identity orientation matrix. </p>
+
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #e6e600; border-left: 6px solid #e6e600">
+The VTK version used by SimVascular does not writte a <b>.vti</b> file with an orientation matrix. Image <b>.vti</b> files
+written by SimVascular must therefore be reoriented to have an identity orientation matrix when used for segmentation.
+</div>
+
+<p><br>
+The directory containing the input image data should be organized as follows</p>
 
 <pre><code>image_dir
      |__ patient_id (optional)
@@ -795,15 +314,20 @@ The directory containing the input image data should be organized as follows:</p
          |__ ...
 </code></pre>
 </section>
-  <section id="seg-pre-trained-models" class="subgroup"><h2>Download Pre-Trained Models</h2>
+  <section id="seg-pre-trained-models" class="subgroup"><h2>Pre-Trained Models</h2>
 
-<p>We used the image and ground truth data provided by <a href='https://zmiclab.github.io/projects/mmwhs/'>MMWHS</a> to train our models. Our segmentation models were trained simultaneously on CT and MR data and trained weights are <a href='https://drive.google.com/open?id=162Xr5OezSZL-0K3aoYO7WnHWuGTEXkkj'>here</a>.</p>
+<p>We used the image and ground truth data provided by <a href='https://zmiclab.github.io/projects/mmwhs/'>MMWHS</a> to train our models.
+Our segmentation models were trained simultaneously on CT and MR data. The trained weight data can be downloade from 
+<a href='https://drive.google.com/open?id=162Xr5OezSZL-0K3aoYO7WnHWuGTEXkkj'>here</a>.</p>
 </section>
-  <section id="seg-predict" class="subgroup"><h2>Predict Segmentations From Image Data</h2>
+  <section id="seg-predict" class="subgroup"><h2>Segmenting Image Data</h2>
 
-<h3>Prediction Using SimVascular Python Shell</h3>
+<h3>Segmenting using the SimVascular Python shell</h3>
 
-<p>To generate segmentations for 3D CT or MR image volumes, we can use SimVascular&rsquo;s Python Shell to run the prediction script. The SimVascular Python Shell can be invoked from the terminal according to the following instruction: <a href='http://simvascular.github.io/docsPythonInterface.html#python_shell' target='_blank' class='url'>http://simvascular.github.io/docsPythonInterface.html#python<em>shell</a>. The prediction script <code>prediction.py</code> can be found here in SimVascular&rsquo;s source code: Python/site-packages/sv</em>auto<em>lv</em>modeling/segmentation/prediction.py</p>
+<p>3D CT or MR image volumes can be segmented within the SimVascular
+<a href='http://simvascular.github.io/docsPythonInterface.html#python_shell'> Python Shell </a> using the
+<a href="https://github.com/SimVascular/SimVascular/blob/master/Python/site-packages/sv_auto_lv_modeling/segmentation/prediction.py">
+prediction.py </a> Python script. For example</p>
 
 <pre><code class='language-shell' lang='shell'>
     data_path=/path/to/data
@@ -824,11 +348,11 @@ The directory containing the input image data should be organized as follows:</p
         --modality ct # ct or mr
 </code></pre>
 
-<p>A shell script (<code>Python/site-packages/sv<em>auto</em>lv_modeling/segmentation.sh</code>) is provided for ease of use.</p>
+<h3>Segmenting using the SimVascular GUI Python Console</h3>
 
-<h3>Prediction Using SimVascular Python Console</h3>
-
-<p>We can also use the Python console in SimVascular GUI to run the prediction script. Within the Python plugin, we can use the <strong>Text Editor</strong> mode and enter the following lines to create a Python script.</p>
+<p>Image segmentation can also be performed from within the SimVascular GUI
+<a href='http://simvascular.github.io/docsPythonInterface.html#console'> Python console </a>.
+Use the Python console <strong>Text Editor</strong> mode to enter the following Python commands </p>
 
 <pre><code class='language-python' lang='python'>
     from auto_lv.auto_lv import Segmentation
@@ -842,83 +366,94 @@ The directory containing the input image data should be organized as follows:</p
     seg.set_view ([2])
     seg.generate_segmentation()
 </code></pre>
+
+<p>and execute them.</p>
 </section>
-  <section id="seg-visualize" class="subgroup"><h2>Visualize Segmentation Results</h2>
+  <section id="seg-visualize" class="subgroup"><h2>Visualizing Segmentation Results</h2>
 
-<p>We can use either SimVascular or Paraview (for .vti files) to visualize the segmentation results. In SimVascular, we can right-click <strong>Images</strong> and chose <strong>Add/Replace Image</strong> to visualize the image and the segmentation data. The following two pictures show an example of CT image and the segmentaion results.</p>
+<p>Segmentation results can be visualized using SimVascular by first creating a SimVascular project. The segmentation results <b>.vti</b> file 
+is then added as an image by right-clicking <strong>Images</strong> under the <b>SV Data Manager</b> and selecting the 
+<strong>Add/Replace Image</strong> menu item. The following two pictures show an example of CT image and the segmentation results.</p>
 
-<p>documentation/1d_simulation/tool/images/
 <figure>
   <img class="svImg svImgMd" src="documentation/simcardio/cardiacModeling/images/images.png">
-  <figcaption class="svCaption" >Example CT image data.</figcaption>
-</figure></p>
+  <figcaption class="svCaption"> CT image data. </figcaption>
+</figure>
 
 <figure>
   <img class="svImg svImgMd" src="documentation/simcardio/cardiacModeling/images/segmentation.png">
-  <figcaption class="svCaption" >Segmentation results of the CT image data.</figcaption>
+  <figcaption class="svCaption"> Segmentation results of the CT image data. </figcaption>
 </figure>
+
+<p>Segmentation results can be visualized using ParaView. </p>
 </section>
 
-  <section id="auto-meshing" class="subgroup"><h1>Automatic LV Mesh Generation For Cardiac Flow Simulations</h1>
-</section>
-  <section id="mesh-intro" class="subgroup"><h2>Introduction</h2>
+  <section id="mesh-intro" class="subgroup"><h1>Mesh Generation</h1>
 
-<p>One application of the <strong>SimVascular Automatic Cardiac Segmentation</strong> tool is to generate left venticle (LV) meshes from the segmentation results. We can use these meshes to perform computational fluid dynamics (CFD) modeling of LV flow combined with patient medical imaging data.  A typical LV model construction pipeline usually starts with segmentation of the LV by manual delineation followed by mesh generation and registration techniques using separate software tools. In SimVascular, we have included an <strong>Automatic LV Mesh Generation</strong> tool to automate each of these steps to generate simulation-ready meshes with no or few human efforts.</p>
+<p>The <strong>Cardiac Geometric Modeling Tool</strong> can be used to generate left ventricle (LV) meshes from
+segmentation results. These meshes can then be used CFD modeling of LV flow combined with patient medical imaging data. 
+The <strong>LV Mesh Generation</strong> tool is used to automatically generate meshes for simulation. It takes as input a 
+segmentation and outputs reconstructed LV surface meshes. </p>
 
-<p>The <strong>Automatic LV Mesh Generation</strong> tool takes in the generated segmentation and output reconstructed LV surface meshes for CFD simulations. Besides we also provide Python scripts for registering the surface meshes to compute wall motion using <a href='https://simpleelastix.github.io/'>SimpleElastix</a>. These registered surface meshes can also be interpolated to obtain sufficient temporal resolution.</p>
+<p>Python scripts are provided for extracting a series of surfaces representing heart wall motion by registering surface meshes 
+to time-resolved imaging data using the <a href='https://simpleelastix.github.io/'>SimpleElastix</a> medical image registration software.
+These time-series surface meshes can also be interpolated temporally to obtain the resolution needed for simulations.</p>
 </section>
-  <section id="mesh-lv-surface" class="subgroup"><h2>Construct LV Surface Meshes with Tagged Boundary Faces</h2>
+  <section id="mesh-lv-surface" class="subgroup"><h2>Constructing LV Surface Meshes</h2>
 
 <h3>Using SimVascular Python Shell</h3>
 
-<ul>
-    <li>Similarly, we can use SimVascular&rsquo;s Python Shell to run the prediction script. The SimVascular Python Shell can be invoked from the terminal according to the following instruction: <a href='http://simvascular.github.io/docsPythonInterface.html#python_shell' target='_blank' class='url'>http://simvascular.github.io/docsPythonInterface.html#python_shell</a>. The surface generation script <code>surface_main.py</code> can be found here in SimVascular&rsquo;s source code: Python/site-packages/sv_auto_lv_modeling/modeling/surface_main.py
-        <pre><code class='language-shell' lang='shell'>
-            # Path to SimVascular exectuable
-            data_path=/path/to/data
-            sv_python_dir=/usr/local/bin
-            script_dir=SimVascular/Python/site-packages/sv_auto_lv_modeling
-            # Path to the segmentation results
-            p_id=WS01
-            input_dir=$data_path/02-Segmnts/$p_id
-            # Path to the outputed surface meshes
-            output_dir=$data_path/03-Surfaces/$p_id
-            model_script=$script_dir/modeling/surface_main.py
-            # Construct LV surface meshes with tagged boundary faces
-            ${sv_python_dir}/simvascular --python \
-                -- ${model_script} \
-                --input_dir ${input_dir} \
-                --output_dir ${output_dir} \
-                --edge_size 3.5 # maximum edge size for the mesh
-        </code></pre>
-    </li>
-</ul>
+<p>The SimVascular
+<a href='http://simvascular.github.io/docsPythonInterface.html#python_shell'> Python Shell </a>
+can be used to run the 
+<a href="https://github.com/SimVascular/SimVascular/tree/master/Python/site-packages/sv_auto_lv_modeling/modeling/surface_main.py"> 
+surface_main.py </a> Python surface generation script using the following commands</p>
+
+<pre><code class='language-shell' lang='shell'>
+  # Path to SimVascular executable
+  data_path=/path/to/data
+  sv_python_dir=/usr/local/bin
+  script_dir=SimVascular/Python/site-packages/sv_auto_lv_modeling
+  # Path to the segmentation results
+  p_id=WS01
+  input_dir=$data_path/02-Segmnts/$p_id
+  # Path to the outputed surface meshes
+  output_dir=$data_path/03-Surfaces/$p_id
+  model_script=$script_dir/modeling/surface_main.py
+  # Construct LV surface meshes with tagged boundary faces
+  ${sv_python_dir}/simvascular --python \
+      -- ${model_script} \
+      --input_dir ${input_dir} \
+      --output_dir ${output_dir} \
+      --edge_size 3.5 # maximum edge size for the mesh
+</code></pre>
 
 <h3>Using SimVascular Python Console</h3>
 
-<ul>
-    <li>We can also use the Python console in SimVascular GUI to run the prediction script. Within the Python plugin, we can use the <strong>Text Editor</strong> mode and enter the following lines to create a Python script.
-        <pre><code class='language-python' lang='python'>from auto_lv.auto_lv import Modeling
-            data_path='/path/to/data'
-            surf = Modeling()
-            surf.set_segmentation_directory(data_path+'/02-Segmnts/WS01')
-            surf.set_output_directory (data_path+'/03-Surfaces/WS01')
-            surf.set_max_edge_size (3.5)
-            surf.generate_lv_modes ()
-        </code></pre>
-    </li>
-</ul>
+<p>The SimVascular GUI <a href='http://simvascular.github.io/docsPythonInterface.html#console'> Python Console </a>
+can be used for surface generation. Use the Python console <strong>Text Editor</strong> mode to enter the following Python commands </p>
+
+<pre><code class='language-python' lang='python'>from sv_auto_lv_modeling.auto_lv import Modeling
+    data_path='/path/to/data'
+    surf = Modeling()
+    surf.set_segmentation_directory(data_path+'/02-Segmnts/WS01')
+    surf.set_output_directory (data_path+'/03-Surfaces/WS01')
+    surf.set_max_edge_size (3.5)
+    surf.generate_lv_modes ()
+</code></pre>
 
 <figure>
   <img class="svImg svImgMd" src="documentation/simcardio/cardiacModeling/images/surface.png">
   <figcaption class="svCaption" >Automatically created LV meshes at diastole and systole.</figcaption>
 </figure>
 </section>
-  <section id="mesh-volume" class="subgroup"><h2>Volumetric Meshing using SimVascular</h2>
+  <section id="mesh-volume" class="subgroup"><h2>Volumetric Meshing</h2>
 
 <h3>Using SimVascular Python Shell</h3>
 
-<p>The volumetric meshing script <code>volume<em>mesh</em>main.py</code> can be found here in SimVascular&rsquo;s source code: Python/site-packages/sv<em>auto</em>lv<em>modeling/modeling/volume</em>mesh_main.py</p>
+<p>The volumetric meshing script 
+<a href="https://github.com/SimVascular/SimVascular/tree/master/Python/site-packages/sv_auto_lv_modeling/modeling/volume_mesh_main.py"> 
+volume_mesh_main.py </a> is used to generate a finite element mesh.</p>
 
 <pre><code class='language-shell' lang='shell'>
     # Path to SimVascular exectuable
@@ -943,12 +478,12 @@ The directory containing the input image data should be organized as follows:</p
         --edge_size 3.5
 </code></pre>
 
-<h3>Using SimVascular Python Console</h3>
+<h3>Using the SimVascular Python Console</h3>
 
 <p>Within the Python plugin, we can use the <strong>Text Editor</strong> mode and enter the following lines to create a Python script.</p>
 
 <pre><code class='language-python' lang='python'>
-    from auto_lv.auto_lv import VolumeMesh
+    from sv_auto_lv_modeling.auto_lv import VolumeMesh
     data_path='/path/to/data'
     vol = VolumeMesh()
     vol.set_output_directory (data_path+'/05-VolMesh/WS01')
@@ -959,9 +494,22 @@ The directory containing the input image data should be organized as follows:</p
 </section>
   <section id="mesh-register" class="subgroup"><h2>Mesh Registration</h2>
 
-<p>We can simulate the LV flow over time by tracking the deformation of the heart from time-resolved imaging and imposes this motion to the fluidic domains inside the heart, which leads to a deforming-domain CFD problem. To be able to track the deformation of the generated LV mesh over time, we need to building point-corresponded LV meshes from segmentations at all time frames. We generate a surface mesh at one time frame and propagated to the others using the displacement field obtained from registering the corresponding segmentations.</p>
+<p>We can simulate the LV flow over time by tracking the deformation of the heart from time-resolved imaging and impose this motion 
+to the fluid domains inside the heart, which leads to a deforming-domain CFD problem. To be able to track the deformation of the 
+generated LV mesh over time, we need to building point-corresponded LV meshes from segmentations at all time frames. We generate a 
+surface mesh at one time frame and propagated to the others using the displacement field obtained from registering the corresponding 
+segmentations.</p>
 
-<p>We will need <a href='https://github.com/SuperElastix/SimpleElastix'>SimpleElastix</a> to perform the registration. One commit that is compatible with our code is  8244e0001f4137514b0f545f1e846910b3dd7769. The registration script <code>elastix<em>main.py</code> can be found here in SimVascular&rsquo;s source code: Python/site-packages/sv</em>auto<em>lv</em>modeling/modeling/elastix_main.py</p>
+<p>The 
+<a href="https://github.com/SimVascular/SimVascular/blob/master/Python/site-packages/sv_auto_lv_modeling/modeling/elastix_main.py">
+elastix_main.py </a> script is used to perform the registration. It uses uses the
+<a href='https://github.com/SuperElastix/SimpleElastix'>SimpleElastix</a> software for registration.</p>
+
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #e6e600; border-left: 6px solid #e6e600">
+For code compatiblty you will need to use <b>SimpleElastix</b> commit 8244e0001f4137514b0f545f1e846910b3dd7769. 
+</div>
+
+<p><br></p>
 
 <pre><code class='language-shell' lang='shell'>
     # Use SimpleElastix to register surface meshes
@@ -994,9 +542,16 @@ The directory containing the input image data should be organized as follows:</p
         --edge_size 3.5
 </code></pre>
 </section>
-  <section id="mesh-motion" class="subgroup"><h2>Compute Mesh Motion from Registered Meshes</h2>
+  <section id="mesh-motion" class="subgroup"><h2>Mesh Motion</h2>
 
-<p>Once we have registered meshes, we can then compute the displacement on each mesh vertex over the whole cardiac cycle. As the temporal resolution of time-series image data is usually not high enough for CFD simulations, we can apply cublic spline interpolation to the registered meshes to obtain finer and smooth mesh displacements. We provide a Python script to interpolate the meshes, compute the mesh motion, and write out a <code>.dat</code> file for each boundary face that can used in svFSI to set up the displacement boundary conditions. The interpolation script <code>interpolation.py</code> can be found here in SimVascular&rsquo;s source code: Python/site-packages/sv<em>auto</em>lv_modeling/modeling/svfsi/interpolation.py.</p>
+<p>Once meshes have been registered the displacement of each mesh vertex over the whole cardiac cycle can be computed. 
+The series of registered meshes are interpolated using cubic splines to obtain mesh displacements with a temporal resolution 
+suitable for simulations. </p>
+
+<p>The 
+<a href="https://github.com/SimVascular/SimVascular/blob/master/Python/site-packages/sv_auto_lv_modeling/modeling/elastix_main.py">
+interpolation.py </a> script is used to interpolate meshes and compute the mesh motion. It writes out a <b>.dat</b> file for each 
+boundary face that can used in svFSI to set up the displacement boundary conditions</p>
 
 <pre><code class='language-shell' lang='shell'>
     # Generate motion.dat File for svFSI
@@ -1011,7 +566,7 @@ The directory containing the input image data should be organized as follows:</p
     # Path to the registered surface meshes
     input_dir=$data_path/04-SurfReg/$p_id
 
-    # Path to the outputed volumetric meshes
+    # Path to the outputted volumetric meshes
     output_dir=$data_path/05-VolMesh/$p_id
 
     # Number of interpolations between adjacent phases
@@ -1020,7 +575,7 @@ The directory containing the input image data should be organized as follows:</p
     # Number of cardiac cycles
     cyc=1
 
-    # Cycle duriation in seconds
+    # Cycle duration in seconds
     period=1.25
 
     # Write boundary conditions for FSI simulations
@@ -1036,6 +591,15 @@ The directory containing the input image data should be organized as follows:</p
 <p><br><br><br><br></p>
 </section>
 
+  <section id="refs" class="subgroup"><h1>References</h1>
+
+<p><a id="ref-1"> <a href="https://doi.org/10.1115/1.4048032">
+[1] Kong, F., and Shadden, S. C. (2020). <strong>Automating Model Generation for Image-based Cardiac Flow Simulation</strong>. 
+ASME. J Biomech Eng. </a> </p>
+
+<p><br><br><br><br><br></p>
+</section>
+
 
 <section id="cep-modeling" class="group"><h1>Cardiac Electrophysiology Simulation Guide</h1>
 </section>
@@ -1046,44 +610,34 @@ The directory containing the input image data should be organized as follows:</p
   <section id="cep-theory" class="subgroup"><h2>Mathematical Model of Cardiac Electrophysiology</h2>
 
 <p>The propagation of electrical signal in the heart is governed by a reaction-diffusion like equation,</p>
-<pre class="highlight plaintext"><code>\begin{equation}
-    \begin{split}
-    &amp; \frac{\partial V}{\partial t} + \frac{I_{ion} - I_{app}(t)}{C_m}  = \nabla \cdot\left( \mathbf{D}\nabla V \right) \\
-    &amp;~~~~~~~~~~~~~~~~~~\mathrm{in~} \Omega^E\times(0,T] \nonumber\\
-    &amp;~~(\mathbf{D}\nabla V) \cdot \mathbf{N}=0 \mathrm{~on~} \partial\Omega^E\times(0,T]
-    \end{split}
-\end{equation}
-</code></pre>
 
-<p>$V$ is the local transmembrane potential. $C<em>m$ is the local membrane capacitance per unit area. $I</em>{ion}$ and $I_{app}$ are the ionic current flux (current per unit area) and applied external current flux, respectively. Here, $\mathbf{D}$ dictates the propagation velocity of the electrical signal and has the similar physical meaning as the diffusivity. It is calculated as</p>
-<pre class="highlight plaintext"><code>\begin{equation}
-    \mathbf{D} =\frac{\sigma}{\chi C_m}
-\end{equation}
-</code></pre>
+<p>$$\frac{\partial V}{\partial t} + \frac{I_{ion} - I_{app}(t)}{C_m}  = \nabla \cdot\left( \mathbf{D}\nabla V \right) $$ 
+$$ \mathrm{in~} \Omega^E\times(0,T] \nonumber$$
+$$(\mathbf{D}\nabla V) \cdot \mathbf{N}=0 \mathrm{~on~} \partial\Omega^E\times(0,T]$$</p>
+
+<p>$V$ is the local transmembrane potential. $C_m$ is the local membrane capacitance per unit area. $I_{ion}$ and $I_{app}$ are the ionic current flux (current per unit area) and applied external current flux, respectively. Here, $\mathbf{D}$ dictates the propagation velocity of the electrical signal and has the similar physical meaning as the diffusivity. It is calculated as</p>
+
+<p>$$
+\mathbf{D} =\frac{\sigma}{\chi C_m}
+$$</p>
 
 <p>$\sigma$ is the conductivity tensor and has the unit $S/m$. $\chi$ is the ratio of membrane area over tissue volume. Then, $\mathbf{D}$ is a tensor with the dimension $Length^2/Time$.</p>
 
 <p>The above equation is the mono-domain description of the cardiac electrophysiology, i.e. we don&rsquo;t solve the intra- and extra-cellular electrical signal propagation separately. The mono-domain and multi-domain conductivities are connected through the following relation,</p>
-<pre class="highlight plaintext"><code>\begin{equation}
-    \sigma = \frac{\sigma_i\sigma_e}{\sigma_i + \sigma_e}.
-\end{equation}
-</code></pre>
 
-<p>where $\sigma<em>i$ and $\sigma</em>e$ are the intra- and extra-cellular conductivity tensors <a href="#ref-1">[1]</a>. It is commonly assumed that the conductivity is transversely isotropic,</p>
-<pre class="highlight plaintext"><code>\begin{equation}
-    \mathbf{\sigma} = \sigma_f \mathbf{f}\otimes \mathbf{f} + \sigma_s (\mathbf{I}-\mathbf{f}\otimes \mathbf{f}).
-\end{equation}
-</code></pre>
+<p>$$  \sigma = \frac{\sigma_i\sigma_e}{\sigma_i + \sigma_e} $$</p>
 
-<p>where $\sigma<em>f$ and $\sigma</em>s$ are the conductivities along the fiber direction and in the transverse plane. $\mathbf{f}$ is the fiber direction vector.</p>
+<p>where $\sigma_i$ and $\sigma_e$ are the intra- and extra-cellular conductivity tensors <a href="#ref-1">[1]</a>. It is commonly assumed that the conductivity is transversely isotropic,</p>
+
+<p>$$ \mathbf{\sigma} = \sigma_f \mathbf{f}\otimes \mathbf{f} + \sigma_s (\mathbf{I}-\mathbf{f}\otimes \mathbf{f}) $$</p>
+
+<p>where $\sigma_f$ and $\sigma_s$ are the conductivities along the fiber direction and in the transverse plane. $\mathbf{f}$ is the fiber direction vector.</p>
 
 <p>In <strong>svFSI</strong>, we directly specify $\mathbf{D}$ in the input file. We choose a slightly different form to enforce the transverse isotropy of the conductivity tensor,</p>
-<pre class="highlight plaintext"><code>\begin{equation}
-    \mathbf{D} = D_{iso}\mathbf{I} + \sum_{n=1}^{nsd}D_{ani,n}\mathbf{fN}_n\otimes\mathbf{fN}_n
-\end{equation}
-</code></pre>
 
-<p>Here, $nsd$ is the dimension, and $\mathbf{fN<em>n}$ is the local orthonormal coordinate system built by fiber direction and sheet direction. To connect with the previous expression, we have $D</em>f=D<em>{iso}+D</em>{ani}$ and $D<em>s=D</em>{iso}$.</p>
+<p>$$  \mathbf{D} = D_{iso}\mathbf{I} + \sum_{n=1}^{nsd}D_{ani,n}\mathbf{fN}_n\otimes\mathbf{fN}_n $$</p>
+
+<p>Here, $nsd$ is the dimension, and $\mathbf{fN_n}$ is the local orthonormal coordinate system built by fiber direction and sheet direction. To connect with the previous expression, we have $D_f=D_{iso}+D_{ani}$ and $D_s=D_{iso}$.</p>
 </section>
   <section id="cep-activation-models" class="subgroup"><h2>Cellular Activation Models</h2>
 
@@ -1094,10 +648,8 @@ The directory containing the input image data should be organized as follows:</p
 <p>Between cardiac myocytes, the propagation of the electrical signal is enabled by the transmembrane motion of different ions, such as $K^+$, $Na^+$ and $Ca^{2+}$ during depolarization and repolarization of the myocytes. Cellular biophysics-based activation models are designed to capture these ionic movements. One of the popular biophysics-based ionic models, the TTP model <a href="#ref-3">[3]</a> is implemented in <strong>svFSI</strong>. Here, we will briefly illustrate the ionic currents involved in the TTP model.</p>
 
 <p>In the TTP model, the ionic current is expressed as</p>
-<pre class="highlight plaintext"><code>\begin{equation}
-    I_{ion} = I_{Na} + I_{Kl} + I_{to} + I_{Kr} + I_{Ks} + I_{CaL} + I_{NaCa} + I_{NaK} + I_{pCa} + I_{pK} + I_{bCa} + I_{bNa}
-\end{equation}
-</code></pre>
+
+<p>$$  I_{ion} = I_{Na} + I_{Kl} + I_{to} + I_{Kr} + I_{Ks} + I_{CaL} + I_{NaCa} + I_{NaK} + I_{pCa} + I_{pK} + I_{bCa} + I_{bNa} $$</p>
 
 <p>The governing equations for each current can be found in <a href="#ref-3">[3]</a>.</p>
 
@@ -1124,30 +676,27 @@ The directory containing the input image data should be organized as follows:</p
 <h3>Phenomenological Models</h3>
 
 <p>Phenomenological models are derived based on some observations of the full ion model <a href="#ref-4">[4]</a>. Instead of following the transmembrane ionic currents, they use an oscillation system with a fast ($V$) and a slow ($r$) variable to mimic the behaviors of the action potentials. The oscillators, without considering the diffusion term, are modeled as</p>
-<pre class="highlight plaintext"><code>\begin{align}
-    \frac{\mathrm{d}V}{\mathrm{d}t}=f^{V}(V,r)\\
-    \frac{\mathrm{d}r}{\mathrm{d}t}=f^{r}(V,r)
-\end{align}
-</code></pre>
+
+<p>$$ \frac{\mathrm{d}V}{\mathrm{d}t}=f^{V}(V,r)  $$
+$$ \frac{\mathrm{d}r}{\mathrm{d}t}=f^{r}(V,r)  $$</p>
 
 <p>Note that this set of equations describes the electrophysiology in a single cardiac myocyte, and the choice of $f^V$ and $f^r$ will determine if this is a pacemaker cell or a non-pacemaker cell.</p>
 
-<p>The FitzHugh-Nagumo (FN) model describes the pacemaker cells with
-    \begin{align}
-        f^V&amp;=c[V(V-\alpha)(1-V)-r]\
-        f^r&amp;= V-br+a
-    \end{align}</p>
+<p>The FitzHugh-Nagumo (FN) model describes the pacemaker cells with</p>
+
+<p>$$  f^V = c[V(V-\alpha)(1-V)-r] $$
+$$  f^r = V-br+a $$</p>
 
 <figure>
   <img class="svImg svImgMd" src="documentation/simcardio/electrophysiology/images/FN_model.png">
   <figcaption class="svCaption" >Action potential calculated from FitzHugh-Nagumo model.</figcaption>
 </figure>
 
-<p>The Aliev-Panfilov (AP) model describes the non-pacemaker cells with
-    \begin{align}
-        f^V&amp;=cV(V-\alpha)(1-V)-Vr\
-        f^r&amp;= \left( \gamma+\frac{\mu<em>1r}{\mu</em>2+V}\right)[-r-cV(V-b-1)]
-    \end{align}</p>
+<p>The Aliev-Panfilov (AP) model describes the non-pacemaker cells with</p>
+
+<p>$$  f^V = cV(V-\alpha)(1-V)-Vr $$</p>
+
+<p>$$  f^r = \left( \gamma+\frac{\mu_1r}{\mu_2+V}\right)[-r-cV(V-b-1)] $$</p>
 
 <figure>
   <img class="svImg svImgMd" src="documentation/simcardio/electrophysiology/images/AP_model.png">
@@ -1155,11 +704,10 @@ The directory containing the input image data should be organized as follows:</p
 </figure>
 
 <p>Note that $V$ and $t$ are non-dimensional values here. The following equations are used to recover the physiological action potential and time:</p>
-<pre class="highlight plaintext"><code>\begin{align}
-    \mathrm{FitzHugh-Nagumo model}&amp;: V^{fhn}=(65V-35)mV; ~~ t^{fhn} = (220t) ms \\
-    \mathrm{Aliev-Panfilov model}&amp;: V^{ap}=(100V-80)mV; ~~ t^{ap} = (12.9t) ms
-\end{align}
-</code></pre>
+
+<p>$$  \mathrm{FitzHugh-Nagumo model}: V^{fhn}=(65V-35)mV; ~~ t^{fhn} = (220t) ms $$</p>
+
+<p>$$  \mathrm{Aliev-Panfilov model}: V^{ap}=(100V-80)mV; ~~ t^{ap} = (12.9t) ms  $$</p>
 
 <p>Another class of phenomenological models exists that include additional variables to account for intra-cellular calcium kinetics. One such model is the Bueno-Orovio (BO) model <a href="#ref-5">[5]</a> that can serve as a trade-off between the complex TTP model and the simplified phenomenological AP model.</p>
 
@@ -2072,7 +1620,7 @@ $$</p>
 
 <p>$^\dagger$ These models are not available for ustruct.</p>
 </section>
-  <section id="mechanics-refs" class="subgroup"><h1>Reference</h1>
+  <section id="mechanics-refs" class="subgroup"><h1>References</h1>
 
 <p><a id="ref-1"> <a href="https://www.wiley.com/en-us/Nonlinear+Solid+Mechanics%3A+A+Continuum+Approach+for+Engineering-p-9780471823193">
 [1] Holzapfel, G. A. (2002). <strong>Nonlinear solid mechanics: a continuum approach for engineering science</strong>. Wiley. </a></a></p>
