@@ -1,4 +1,4 @@
-### Modeling Pipeline
+## Modeling Pipeline
 
 The SimVascular image-based modeling pipeline comprises the following steps 
 
@@ -13,10 +13,10 @@ The SimVascular image-based modeling pipeline comprises the following steps
 </ol> 
 <br>
 
-Each step in the pipeline uses data created by the preceding step. For example, the <i>Segmentation</i> step uses path geometry created
+Each step in the pipeline uses data created by the preceding steps. For example, the <i>Segmentation</i> step uses path geometry created
 in the <i>Path planning</i> step to position and orient 2D image slices used to segment a vessel lumen.
 
-A visual representation of the pipeline steps (Fig. 1) provides a sense of the primarily geometric data created in each step 
+A visual representation of the pipeline steps (Fig. 1) provides a sense of the (primarily geometric) data created in each step 
 <br> <br>
 
 <figure>

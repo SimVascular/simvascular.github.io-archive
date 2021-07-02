@@ -1,12 +1,25 @@
-## Data Manager
 
-Data Manager is normally located on the left side of the main window. It lists and organize all the loaded data in a tree structure. After data is loaded from a file, a data node (representing the data) shows in Data Manager.
+<h2 id="data_manager"> Data Manager </h2>
 
-To open a file (loading data into Data Manager):
+The <i> Data Manager </i> is used to view a <i>Project</i> as a hierarchy of <i>Tools</i> and <i>Data Nodes </i>
+representing individual <i>Tool</i> data: images, paths, segmentations, models, meshes, and simulation jobs. The <i> Data Manager  </i>
+provides an interface to interactively manage adding/removing <i>Tools</i> and changing some of the properties used to
+display the geometric data created by a <i>Tool</i> (e.g. color).
 
-	Menu: File → Open File...
+The <i> Data Manager  </i> view of the
+<a href="https://simtk.org/frs/download_confirm.php/file/5113/DemoProject.zip?group_id=930"> Demo Project </a>
+created following the steps demonstrated in the <a href="#tutorial"> Tutorial</a> section is shown in Fig. 4
 
-<font color="red">**Attention:** </font> If you load a file by "Open File", the data is loaded into Data Manager but not into a SimVascular Project. Therefore, SimVascular's project management doesn't apply to it. But you are still able to use various tools with the data.
+<figure>
+  <img class="svImg svImgSm"  src="documentation/quickguide/imgs/demo-data-manager.png">
+  <figcaption class="svCaption">Fig. 4 &nbsp An example of a <i>Project</i> displayed in the <i>Data Manager</i>.
+      Instances of <i>Tools</i> added to the <i>Project</i> (e.g. aorta) are shown below the core <b>Images</b>, <b>Paths</b>,
+      <b>Segmentations</b>, <b>Models</b>, <b>Meshes</b>, <b>Simulations</b>, <b>svFSI</b>, and
+      <b>ROMSimulations</b> <b>Tool</b> names.
+  </figcaption>
+</figure>
+
+
 
 To show/hide data (in Display):
 

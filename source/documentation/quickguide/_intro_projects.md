@@ -1,4 +1,4 @@
-###Projects
+##Projects
 
 The <i>Tools</i> that comprise a SimVascular pipeline and the data they create are organized as a SimVascular <i>Project</i>.
 <i>Tools</i> are added to a <i>Project</i> interactively using the GUI. Multiple instances of most <i>Tools</i> can be

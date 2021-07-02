@@ -1,4 +1,4 @@
-###Tools 
+##Tools 
 
 The SimVascular application provides a set of core <i>Tools</i> (aka plugins) implementing methods for each step in the 
 SimVascular image-based modeling pipeline. The follow lists each core <i>Tool</i> name and primary function

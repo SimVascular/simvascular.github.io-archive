@@ -1,19 +1,13 @@
-# Getting Started 
 
-###Introduction
+<h1 href="#introduction"> Introduction </h1>
 
-This guide provides begining users with the basic knowledge needed to get started using SimVascular. 
-The <a href="#introduction"> Introduction </a> describes important SimVascular concepts, its GUI and basic functionality. 
-A <a href="#tutorial"> Tutorial</a>  then follows demonstrating the steps in the SimVascular image-based modeling pipeline, 
-from medical image data segmentation to patient specific blood flow simulation. A model of an aorta and two iliac 
-arteries is created from medical imaging data.  A finite element mesh is then generated from the model and used in a 
-CFD simulation to simulate blood flow in the arteries. 
+SimVascular is an interactive application used to created patient-specific geometric models of human vasculature from 3D medical
+imaging data aquired for a specific anatomical region. These models are then used as the basis for blood flow simulations using 
+various numerical methods. The sequence of steps used by SimVascular to do this is called the image-based modeling pipeline. 
 
-Another useful resource for learning how to use SimVascular are the 
-<a href="https://www.youtube.com/playlist?list=PL1CBZ8Wh-xvSKUsuBA4MM4Jba-psVdxXT">SimVascular Online Tutorials</a>. This series 
-of recent videos demonstrate all the steps in the modeling pipeline presented in the <a href="#tutorial"> Tutorial</a> below. 
-
-Images taken of the 
-<a href="https://simtk.org/frs/download_confirm.php/file/5113/DemoProject.zip?group_id=930"> Demo Project </a>
-are used to illustrate certain concepts throughout the guide.
+The SimVascular graphical user interface (GUI) is used to interactively manage each step in the image-based modeling pipeline. 
+The <a href="#gui"> GUI </a> provides different graphical elements (e.g. buttons) used to input the data required to generate 
+the output (e.g. geometric model) of each step. The display of image and geometical data in a grapics window can be interactively
+controlled using the mouse. Information from image and geometical data can also be queried using the mouse and allows selecting,
+for example, a point in 3D space
 
