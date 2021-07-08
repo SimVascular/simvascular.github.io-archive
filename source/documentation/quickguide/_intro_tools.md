@@ -21,4 +21,6 @@ The geometry created by each <i>Tool</i> is typically stored in <a href="https:/
 VTP and VTU <a href="https://vtk.org/wp-content/uploads/2015/04/file-formats.pdf"> VTK File Formats </a>.
 
 Each <i>Tool</i> has a panel containing GUI components (i.e. widgets) used to specify the parameters that control tool behavior. 
+A <i>Tool</i> panel is displayed using the <a href="#data_manager"> Data Manager </a>.
+
 

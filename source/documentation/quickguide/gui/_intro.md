@@ -17,14 +17,14 @@ The following table lists the widgets used by the SimVascular GUI
     <td> Button </td>
     <td> A rectangular region that typically displays a text label describing its action. 
          A button performs an action when pressed (clicked on)</td>
-    <td><img src="documentation/quickguide/imgs/gui-button.png" width="100" height="25"> </td>
+    <td><img src="documentation/quickguide/gui/images/gui-button.png" width="100" height="25"> </td>
   </tr>
 
   <tr>
     <td> Checkbox </td>
     <td> A rectangular region that permits the user to make a binary choice, i.e. a choice between one of two possible mutually 
          exclusive options </td>
-    <td><img src="documentation/quickguide/imgs/gui-check-box.png" width="100" height="20"> </td>
+    <td><img src="documentation/quickguide/gui/images/gui-check-box.png" width="100" height="20"> </td>
   </tr>
 
   <tr>
@@ -32,71 +32,71 @@ The following table lists the widgets used by the SimVascular GUI
   <tr>
     <td> ComboBox </td>
     <td> A popup window that asks a user for input. </td>
-    <td> <img src="documentation/quickguide/imgs/gui-combo-box.png" width="100" height="30"> </td>
+    <td> <img src="documentation/quickguide/gui/images/gui-combo-box.png" width="100" height="30"> </td>
   </tr>
 
   <tr>
     <td> DialogBox </td>
     <td> A popup window that asks a user for input. </td>
-    <td> <img src="documentation/quickguide/imgs/gui-dialog.png" width="150" height="125">  </td>
+    <td> <img src="documentation/quickguide/gui/images/gui-dialog.png" width="150" height="125">  </td>
   </tr>
 
   <tr>
     <td> Icon </td>
     <td> A small graphical representation of a <i>Tool</i> or file. </td>
-    <td> <img src="documentation/quickguide/imgs/gui-icon.png" width="50" height="40">  </td>
+    <td> <img src="documentation/quickguide/gui/images/gui-icon.png" width="50" height="40">  </td>
   </tr>
 
   <tr>
     <td> Menu </td> 
     <td> A list of choices offered to the user for selection. </td> 
-    <td> <img src="documentation/quickguide/imgs/gui-menu.png" width="100" height="150">  </td>
+    <td> <img src="documentation/quickguide/gui/images/gui-menu.png" width="100" height="150">  </td>
   </tr>
 
   <tr>
     <td> Menubar </td> 
     <td> A thin, horizontal bar containing the text labels for a group of menus. 
-    <td> <img src="documentation/quickguide/imgs/gui-menu-bar.png" width="200" height="20"> </td>
+    <td> <img src="documentation/quickguide/gui/images/gui-menu-bar.png" width="200" height="20"> </td>
   </tr>
 
   <tr>
     <td> Slider </td> 
     <td> A horizontal bar used to set a value by moving an indicator on the bar horizontally. 
          Values can also be entered in the text box. </td>
-    <td> <img src="documentation/quickguide/imgs/gui-slider.png" width="400" height="25">  </td>
+    <td> <img src="documentation/quickguide/gui/images/gui-slider.png" width="400" height="25">  </td>
   </tr>
 
   <tr>
     <td> Spinbox </td> 
     <td> A rectangular region used to choose a value by clicking the up/down buttons or pressing up/down on the keyboard 
          to increase/decrease the value currently displayed.
-    <td> <img src="documentation/quickguide/imgs/gui-spin-box.png" width="200" height="25">  </td>
+    <td> <img src="documentation/quickguide/gui/images/gui-spin-box.png" width="200" height="25">  </td>
   </tr>
 
   <tr>
     <td> Table </td> 
     <td> A rectangular region that arranges data (e.g. text or other widges) into rows and columns of cells. 
          Data can be modified by selecting a cell in the table. </td>
-    <td> <img src="documentation/quickguide/imgs/gui-table.png" width="300" height="200">  </td>
+    <td> <img src="documentation/quickguide/gui/images/gui-table.png" width="300" height="200">  </td>
   </tr>
 
   <tr>
     <td> Textbox </td> 
     <td> A rectangular region used to entry string, interger or float values. </td>
-    <td> <img src="documentation/quickguide/imgs/gui-text-box.png" width="130" height="24">  </td>
+    <td> <img src="documentation/quickguide/gui/images/gui-text-box.png" width="130" height="24">  </td>
   </tr>
 
   <tr>
     <td> Toolbar </td> 
     <td> A row of buttons at the top of window that controls software functions. </td>
-    <td> <img src="documentation/quickguide/imgs/gui-tool-bar.png" width="250" height="20">  </td>
+    <td> <img src="documentation/quickguide/gui/images/gui-tool-bar.png" width="250" height="20">  </td>
   </tr>
 
   <tr>
     <td> Toolbox </td> 
     <td> An area of a <i>Tool</i> panel that contains multiple pages of GUI widgets identified by a section 
          of rectangles with text at the Toolbox bottom. <br> Selecting a rectangle shows another page. </td>
-    <td> <img src="documentation/quickguide/imgs/gui-tool-box.png" width="200" height="300">  </td>
+    <td> <img src="documentation/quickguide/gui/images/gui-tool-box.png" width="200" height="300">  </td>
   </tr>
 
 </table>
@@ -107,7 +107,7 @@ The SimVascular main window GUI is composed of a _Menubar_, _Toolbar_, _Data Man
 An additional _Tool Panel_ is displayed on the right side of the window when a <i>Tool</i> is active.
 
 <figure>
-  <img class="svImg svImgLg"  src="documentation/quickguide/imgs/mainwindow.png"> 
+  <img class="svImg svImgLg"  src="documentation/quickguide/gui/images/mainwindow.png"> 
   <figcaption class="svCaption">Fig. 3 &nbsp The SimVascular GUI layout</figcaption>
 </figure>
 
@@ -124,7 +124,7 @@ The SimVascular GUI may look slightly different on MacOS, Ubuntu and Windows pla
 The <i>Menubar</i> contains _File_, _Edit_, _Tools_, _Window_ and _Help_ menu items. 
 
 <figure>
-  <img class="svImg svImgMd"  src="documentation/quickguide/imgs/menus.png"> 
+  <img class="svImg svImgMd"  src="documentation/quickguide/gui/images/menus.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -154,10 +154,10 @@ The other menu items are mostly MITK tools that are not very useful.
 <h2 id="gui_toolbar"> Toolbar </h2>
 
 The Toolbar is composed of three sections. The first section contains icons used to save a <i>Project</i>, undo an operation, hide/show
-the <i>Image Navagator</i> and toggle the <b>A</b>xis, <b>S</b>agital and <b>C</b>oronal image slice planes.
+the <i>Image Navagator</i> and toggle the <b>A</b>xial, <b>S</b>agital and <b>C</b>oronal image slice planes.
 
 <figure>
-  <img class="svImg svImgMd"  src="documentation/quickguide/imgs/toolbar-1.png"> 
+  <img class="svImg svImgMd"  src="documentation/quickguide/gui/images/toolbar-1.png"> 
   <figcaption class="svCaption">The first Toolbar section </figcaption>
 </figure>
 
@@ -168,32 +168,32 @@ the <i>Image Navagator</i> and toggle the <b>A</b>xis, <b>S</b>agital and <b>C</
   </tr>
 
   <tr>
-    <td> <img src="documentation/quickguide/imgs/gui-save-icon.png" width="40" height="35"> </td>
+    <td> <img src="documentation/quickguide/gui/images/gui-save-icon.png" width="40" height="35"> </td>
     <td> Save the Project. </td>
   </tr>
 
   <tr>
-    <td> <img src="documentation/quickguide/imgs/gui-undo-icon.png" width="75" height="32"> </td>
+    <td> <img src="documentation/quickguide/gui/images/gui-undo-icon.png" width="75" height="32"> </td>
     <td> Undo an operation. </td>
   </tr>
 
   <tr>
-    <td> <img src="documentation/quickguide/imgs/gui-img-nav-icon.png" width="45" height="40"> </td>
+    <td> <img src="documentation/quickguide/gui/images/gui-img-nav-icon.png" width="45" height="40"> </td>
     <td> Hide/show the <i>Image Navagator</i>. </td>
   </tr>
 
   <tr>
-    <td> <img src="documentation/quickguide/imgs/gui-a-plane-icon.png" width="40" height="40"> </td>
+    <td> <img src="documentation/quickguide/gui/images/gui-a-plane-icon.png" width="40" height="40"> </td>
     <td> Hide/show the axial image slice plane. </td>
   </tr>
 
   <tr>
-    <td> <img src="documentation/quickguide/imgs/gui-s-plane-icon.png" width="40" height="40"> </td>
+    <td> <img src="documentation/quickguide/gui/images/gui-s-plane-icon.png" width="40" height="40"> </td>
     <td> Hide/show the sagital image slice plane. </td>
   </tr>
 
   <tr>
-    <td> <img src="documentation/quickguide/imgs/gui-c-plane-icon.png" width="40" height="40"> </td>
+    <td> <img src="documentation/quickguide/gui/images/gui-c-plane-icon.png" width="40" height="40"> </td>
     <td> Hide/show the coronal image slice plane. </td>
   </tr>
 
@@ -211,14 +211,14 @@ saving the data will be lost.
 The second section duplicates the _Tools_ menu using icons. 
 
 <figure>
-  <img class="svImg svImgMd"  src="documentation/quickguide/imgs/toolbar-2.png"> 
+  <img class="svImg svImgMd"  src="documentation/quickguide/gui/images/toolbar-2.png"> 
   <figcaption class="svCaption"> The second Toolbar section</figcaption>
 </figure>
 
 The third second section duplicates the _Tools_ menu using icons. 
 
 <figure>
-  <img class="svImg svImgMd"  src="documentation/quickguide/imgs/toolbar-3.png"> 
+  <img class="svImg svImgMd"  src="documentation/quickguide/gui/images/toolbar-3.png"> 
   <figcaption class="svCaption"> The third Toolbar section</figcaption>
 </figure>
 

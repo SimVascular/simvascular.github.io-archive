@@ -2,22 +2,54 @@
 <h2 id="data_manager"> Data Manager </h2>
 
 The <i> Data Manager </i> is used to view a <i>Project</i> as a hierarchy of <i>Tools</i> and <i>Data Nodes </i>
-representing individual <i>Tool</i> data: images, paths, segmentations, models, meshes, and simulation jobs. The <i> Data Manager  </i>
-provides an interface to interactively manage adding/removing <i>Tools</i> and changing some of the properties used to
-display the geometric data created by a <i>Tool</i> (e.g. color).
+representing the data of a <i>Tool</i> instance: images, paths, segmentations, models, meshes, and simulation jobs. 
+Most of the <i>Tools</i> produce geometry that can be interactively viewed in the graphics widows of the 
+<a href="#display"> Display </a> area of the main window. The <i> Data Manager  </i> provides an interface to interactively 
+manage adding/removing <i>Tools</i> and changing some of the properties used to display the geometric data created by a 
+<i>Tool</i> (e.g. color).
 
+When creating a new <i>Project</i> the <i> Data Manager </i> displays a list of <i>Tool</i> names (Fig. 4).
+
+<figure>
+  <img class="svImg svImgSm"  src="documentation/quickguide/imgs/data-manager-new-project.png">
+  <figcaption class="svCaption">Fig. 4 &nbsp The <i>Data Manager</i> of a new <i>Project</i> listing 
+      the core <b>Images</b>, <b>Paths</b>, <b>Segmentations</b>, <b>Models</b>, <b>Meshes</b>, <b>Simulations</b>, 
+      <b>svFSI</b>, and <b>ROMSimulations</b> <b>Tool</b> names.
+  </figcaption>
+</figure>
+
+Adding a new <i>Tool</i> to the <i>Project</i> creates a new <i>Data Nodes </i> under the approrite <i>Tool</i> name.
 The <i> Data Manager  </i> view of the
 <a href="https://simtk.org/frs/download_confirm.php/file/5113/DemoProject.zip?group_id=930"> Demo Project </a>
-created following the steps demonstrated in the <a href="#tutorial"> Tutorial</a> section is shown in Fig. 4
+created following the steps demonstrated in the <a href="#tutorial"> Tutorial</a> section is shown in Fig. 5.
 
 <figure>
   <img class="svImg svImgSm"  src="documentation/quickguide/imgs/demo-data-manager.png">
-  <figcaption class="svCaption">Fig. 4 &nbsp An example of a <i>Project</i> displayed in the <i>Data Manager</i>.
+  <figcaption class="svCaption">Fig. 5 &nbsp An example of a <i>Project</i> displayed in the <i>Data Manager</i>.
       Instances of <i>Tools</i> added to the <i>Project</i> (e.g. aorta) are shown below the core <b>Images</b>, <b>Paths</b>,
       <b>Segmentations</b>, <b>Models</b>, <b>Meshes</b>, <b>Simulations</b>, <b>svFSI</b>, and
       <b>ROMSimulations</b> <b>Tool</b> names.
   </figcaption>
 </figure>
+
+The <i> Data Manager  </i> hierarchy in Fig 5. shows that the following <i>Tools</i> are defined for the <i>Project</i>
+
+<ul style="list-style-type:none;">
+  <li> <b>Images</b> - A single <i>Tool</i> named <b>sample_data-cm</b>
+  <li> <b>Paths</b> - Two <i>Tools</i> named <b>aorta</b> and <b>right_iliac</b>.
+  <li> <b>Segmentations</b> - Two <i>Tools</i> named <b>aorta</b> and <b>right_iliac</b>
+  <li> <b>Models</b> - A single <i>Tool</i> named <b>demo</b>
+  <li> <b>Meshes</b> - A single <i>Tool</i> named <b>demomesh</b>
+  <li> <b>Simulations</b> - A single <i>Tool</i> named <b>demojob</b>
+</ul>
+<br>
+
+
+<h3 id="data_manager_menu"> Data Manager Menus </h3>
+
+
+
+
 
 
 
