@@ -1,7 +1,7 @@
 ##Tools 
 
 The SimVascular application provides a set of core <i>Tools</i> (aka plugins) implementing methods for each step in the 
-SimVascular image-based modeling pipeline. The follow lists each core <i>Tool</i> name and primary function
+SimVascular image-based modeling pipeline. The follow lists each core <i>Tool</i> type and primary function
 
 <ol>
   <li> <b>Paths</b> - Interactively creates paths based on image data 
@@ -15,12 +15,12 @@ SimVascular image-based modeling pipeline. The follow lists each core <i>Tool</i
 
 <i>Tools</i> typically use data from other tools to perform their functions. For example, the <i>Segmentations Tool</i> uses 
 paths created by the <i>Paths Tool</i> to position and orient 2D slices in the 3D image volume. The data used by a 
-<i>Tools</i> is specified by the user.
+<i>Tool</i> is specified by the user.
 
 The geometry created by each <i>Tool</i> is typically stored in <a href="https://vtk.org"> Visualization Toolkit (VTK) </a> 
 VTP and VTU <a href="https://vtk.org/wp-content/uploads/2015/04/file-formats.pdf"> VTK File Formats </a>.
 
-Each <i>Tool</i> has a panel containing GUI components (i.e. widgets) used to specify the parameters that control tool behavior. 
+Each <i>Tool</i> has a panel containing GUI controls (i.e. widgets) used to specify the parameters that control tool behavior. 
 A <i>Tool</i> panel is displayed using the <a href="#data_manager"> Data Manager </a>.
 
 

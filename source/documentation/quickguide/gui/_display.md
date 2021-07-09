@@ -27,11 +27,11 @@ structures defined as
 
 <h3 id="navigation"> Navigation </h3>
 
-The location of the principal planes is represented by a pair of crosshairs the 2D view windows. Selecting a point with the left 
+The principal planes slice is represented by a pair of crosshairs the 2D view windows. Selecting a point with the left 
 mouse button in a 2D window centers the crosshair on that point. Pressing the right mouse button and moving the mouse zooms 
-in and out. Scrolling the mouse wheel changes the location of the principal plane for which the mouse cursor is in. 
+in and out. Scrolling the mouse wheel changes the principal plane slice for which the mouse cursor is in. 
 
-Changing the principal planes locations changes the values displayed in the <a href="#image_navigator"> Image Navigator </a>
+Changing the principal planes slice changes the values displayed in the <a href="#image_navigator"> Image Navigator </a>
 and vice versa.
 
 The funcion of the mouse buttons depends on the window the mouse cursor is in.
@@ -55,7 +55,7 @@ The funcion of the mouse buttons depends on the window the mouse cursor is in.
 
   <tr>
     <td> Mouse Wheel Scrolling </td>
-    <td> Changes the location of the principal plane 
+    <td> Changes the principal plane slice
   </tr>
 
 </table>
@@ -244,57 +244,57 @@ Selecting the <i>Image Window Level</i> tool with the right mouse buttton pops u
 <table class="table table-bordered" style="width:100%">
   <caption> <b> Image Window Level Tool Menu </b> </caption>
   <tr>
-    <th> Menu Item </th>
+    <th> Menu Option </th>
     <th> Description </th>
   </tr>
 
   <tr>
-    <td> <b> Hide Scale </b> </td>
+    <td> Hide Scale </td>
     <td> Hide the <i>Image Windowing</i> tool scale  </td>
   </tr>
 
   <tr>
-    <td> <b> Set Slider Fixed </b> </td>
+    <td> Set Slider Fixed  </td>
     <td> Disables modifying the <i>window width</i> and <i>window center</i>. </td>
   </tr>
   
   <tr>
-    <td> <b> Use whole image grey values </b> </td>
+    <td> Use whole image grey values  </td>
     <td> Set the <i>Image Windowing</i> tool use the entire range of image values. </td>
   </tr>
 
   <tr>
-    <td> <b> Use optimized levelwindow</b> </td>
+    <td> Use optimized levelwindow </td>
     <td> Set the <i>Image Windowing</i> tool to use a range of image values that optimizes contrast and brightness. </td>
   </tr>
   
   <tr>
-    <td> <b> Set Maximum Window</b> </td>
+    <td> Set Maximum Window </td>
     <td> N/A </td>
   </tr>
   
   <tr>
-    <td> <b> Default Level/Window</b> </td>
+    <td> Default Level/Window </td>
     <td> N/A </td>
   </tr>
   
   <tr>
-    <td> <b> Change Scale Range </b> </td>
+    <td>     Change Scale Range   </td>
     <td> Displays a popup window used to manually change the upper and lower  <i>window width</i> bounds. </td>
   </tr>
   
   <tr>
-    <td> <b> Default Scale Range </b> </td>
+    <td>     Default Scale Range  </td>
     <td> Resets the upper and lower <i>window width</i> bounds to their default values. </td>
   </tr>
   
   <tr>
-    <td> <b> Presets </b> </td>
+    <td>     Presets      </td>
     <td> Displays a menu of preset upper and lower <i>window width</i> bounds for various tissues aquired using CT. </td>
   </tr>
 
   <tr>
-    <td> <b> Images </b> </td>
+    <td>     Images      </td>
     <td> N/A </td>
   </tr>
 </table>

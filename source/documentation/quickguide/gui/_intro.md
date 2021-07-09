@@ -1,14 +1,14 @@
 <h1 id="gui"> Graphical User Interface </h1>
 
 The SimVascular GUI provides an interface for interactively managing the input of data needed for each step in the 
-image-based modeling pipeline. The GUI provides different graphical elements (aka widgets) used to input data values 
+image-based modeling pipeline. The GUI provides different graphical controls (aka widgets) used to input data values 
 and methods to interact and query image and geometical data in a graphics window.
 
-The following table lists the widgets used by the SimVascular GUI
+The following table lists the controls used by the SimVascular GUI
 
 <table class="table table-bordered" style="width:100%">
   <tr>
-    <th> Widget </th>
+    <th> Control </th>
     <th> Descriptiton </th>
     <th> Example </th>
   </tr>
@@ -28,10 +28,8 @@ The following table lists the widgets used by the SimVascular GUI
   </tr>
 
   <tr>
-
-  <tr>
     <td> ComboBox </td>
-    <td> A popup window that asks a user for input. </td>
+    <td> A drop-down list that allows the user to select a value from the list. </td>
     <td> <img src="documentation/quickguide/gui/images/gui-combo-box.png" width="100" height="30"> </td>
   </tr>
 
@@ -54,7 +52,7 @@ The following table lists the widgets used by the SimVascular GUI
   </tr>
 
   <tr>
-    <td> Menubar </td> 
+    <td> MenuBar </td> 
     <td> A thin, horizontal bar containing the text labels for a group of menus. 
     <td> <img src="documentation/quickguide/gui/images/gui-menu-bar.png" width="200" height="20"> </td>
   </tr>
@@ -67,7 +65,7 @@ The following table lists the widgets used by the SimVascular GUI
   </tr>
 
   <tr>
-    <td> Spinbox </td> 
+    <td> SpinBox </td> 
     <td> A rectangular region used to choose a value by clicking the up/down buttons or pressing up/down on the keyboard 
          to increase/decrease the value currently displayed.
     <td> <img src="documentation/quickguide/gui/images/gui-spin-box.png" width="200" height="25">  </td>
@@ -81,19 +79,19 @@ The following table lists the widgets used by the SimVascular GUI
   </tr>
 
   <tr>
-    <td> Textbox </td> 
+    <td> TextBox </td> 
     <td> A rectangular region used to entry string, interger or float values. </td>
     <td> <img src="documentation/quickguide/gui/images/gui-text-box.png" width="130" height="24">  </td>
   </tr>
 
   <tr>
-    <td> Toolbar </td> 
+    <td> ToolBar </td> 
     <td> A row of buttons at the top of window that controls software functions. </td>
     <td> <img src="documentation/quickguide/gui/images/gui-tool-bar.png" width="250" height="20">  </td>
   </tr>
 
   <tr>
-    <td> Toolbox </td> 
+    <td> ToolBox </td> 
     <td> An area of a <i>Tool</i> panel that contains multiple pages of GUI widgets identified by a section 
          of rectangles with text at the Toolbox bottom. <br> Selecting a rectangle shows another page. </td>
     <td> <img src="documentation/quickguide/gui/images/gui-tool-box.png" width="200" height="300">  </td>
@@ -103,7 +101,7 @@ The following table lists the widgets used by the SimVascular GUI
 
 <br> <br>
 
-The SimVascular main window GUI is composed of a _Menubar_, _Toolbar_, _Data Manager_, _Image Navagator_ and _Display_. 
+The SimVascular main window GUI is composed of a _MenuBar_, _ToolBar_, _Data Manager_, _Image Navagator_ and _Display_. 
 An additional _Tool Panel_ is displayed on the right side of the window when a <i>Tool</i> is active.
 
 <figure>
@@ -119,9 +117,9 @@ The SimVascular GUI may look slightly different on MacOS, Ubuntu and Windows pla
 <br> <br>
 
 
-<h2 id="gui_menubar"> Menubar </h2>
+<h2 id="gui_menubar"> MenuBar </h2>
 
-The <i>Menubar</i> contains _File_, _Edit_, _Tools_, _Window_ and _Help_ menu items. 
+The <i>MenuBar</i> contains _File_, _Edit_, _Tools_, _Window_ and _Help_ menu items. 
 
 <figure>
   <img class="svImg svImgMd"  src="documentation/quickguide/gui/images/menus.png"> 
@@ -151,14 +149,14 @@ The <i>Python Console</i> menu item opens a panel used to execute Python scripts
 The other menu items are mostly MITK tools that are not very useful. 
 
 <br>
-<h2 id="gui_toolbar"> Toolbar </h2>
+<h2 id="gui_toolbar"> ToolBar </h2>
 
-The Toolbar is composed of three sections. The first section contains icons used to save a <i>Project</i>, undo an operation, hide/show
-the <i>Image Navagator</i> and toggle the <b>A</b>xial, <b>S</b>agital and <b>C</b>oronal image slice planes.
+The <i>ToolBar</i> is composed of three sections. The first section contains icons used to save a <i>Project</i>, undo an operation, hide/show
+the <i>Image Navagator</i> and toggle the <b>A</b>xial, <b>S</b>agital and <b>C</b>oronal image scan slices.
 
 <figure>
   <img class="svImg svImgMd"  src="documentation/quickguide/gui/images/toolbar-1.png"> 
-  <figcaption class="svCaption">The first Toolbar section </figcaption>
+  <figcaption class="svCaption">The first ToolBar section </figcaption>
 </figure>
 
 <table class="table table-bordered" style="width:100%">
@@ -184,17 +182,17 @@ the <i>Image Navagator</i> and toggle the <b>A</b>xial, <b>S</b>agital and <b>C<
 
   <tr>
     <td> <img src="documentation/quickguide/gui/images/gui-a-plane-icon.png" width="40" height="40"> </td>
-    <td> Hide/show the axial image slice plane. </td>
+    <td> Hide/show the axial image scan slice. </td>
   </tr>
 
   <tr>
     <td> <img src="documentation/quickguide/gui/images/gui-s-plane-icon.png" width="40" height="40"> </td>
-    <td> Hide/show the sagital image slice plane. </td>
+    <td> Hide/show the sagital image scan slice. </td>
   </tr>
 
   <tr>
     <td> <img src="documentation/quickguide/gui/images/gui-c-plane-icon.png" width="40" height="40"> </td>
-    <td> Hide/show the coronal image slice plane. </td>
+    <td> Hide/show the coronal image scan slice. </td>
   </tr>
 
 
@@ -212,13 +210,13 @@ The second section duplicates the _Tools_ menu using icons.
 
 <figure>
   <img class="svImg svImgMd"  src="documentation/quickguide/gui/images/toolbar-2.png"> 
-  <figcaption class="svCaption"> The second Toolbar section</figcaption>
+  <figcaption class="svCaption"> The second ToolBar section</figcaption>
 </figure>
 
 The third second section duplicates the _Tools_ menu using icons. 
 
 <figure>
   <img class="svImg svImgMd"  src="documentation/quickguide/gui/images/toolbar-3.png"> 
-  <figcaption class="svCaption"> The third Toolbar section</figcaption>
+  <figcaption class="svCaption"> The third ToolBar section</figcaption>
 </figure>
 

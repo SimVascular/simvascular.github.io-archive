@@ -11,12 +11,12 @@ two types
 
 <ol>
   <li> <b>Geometry Data</b> - The geometry created by the <i>Tool</i> stored in VTK VTP and VTU format files. 
-  <li> <b>GUI State Data</b> - The values of the <i>Tool</i> panel GUI widgets stored in an XML format file. 
+  <li> <b>GUI State Data</b> - The values of the <i>Tool</i> panel GUI controls stored in an XML format file. 
 </ol>
 <br>
 
 An example <i>Project</i> directory is shown in Fig. 2. The .msh, .mdl, .pth, .ctgr and .sjb files are XML format files
-storing GUI widget values.
+storing values for all GUI controls.
 
 <figure>
   <img class="svImg svImgSm"  src="documentation/quickguide/imgs/project-dir.png">
@@ -29,12 +29,12 @@ storing GUI widget values.
 
 The GUI <i> Data Manager  </i> is used to view a <i>Project</i> as a hierarchy of <i>Tools</i> and <i>Data Nodes </i>
 representing individual <i>Tool</i> data: images, paths, segmentations, models, meshes, and simulation jobs. The <i> Data Manager  </i>
-provides a GUI interface to interactively manage adding/removing <i>Tools</i> and changing some of the properties used to
+provides an interface to interactively manage adding/removing <i>Tool</i> instances and changing some of the properties used to
 display the geometric data created by a <i>Tool</i> (e.g. color). 
 
 The <i> Data Manager  </i> view of the 
 <a href="https://simtk.org/frs/download_confirm.php/file/5113/DemoProject.zip?group_id=930"> Demo Project </a> 
-created following the steps demonstrated in the tutorial section is shown in Fig. 2
+created following the steps demonstrated in the tutorial section is shown in Fig. 3.
 
 <figure>
   <img class="svImg svImgSm"  src="documentation/quickguide/gui/images/demo-data-manager.png">
