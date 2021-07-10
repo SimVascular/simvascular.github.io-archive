@@ -119,7 +119,7 @@ The <i> Data Manager  </i> has two GUI controls that are selected with the left 
 <br>
 
 
-<h3 id="data_manager_menu"> Data Manager Menus </h3>
+<h3 id="data_manager_menus"> Data Manager Menus </h3>
 
 The <i> Data Manager  </i> menus used to manage <i>Tools</i> are opened using the right mouse button. Selecting a <i>Tool</i> type
 opens a menu containing options common to all <i>Tool</i> types and options specialized for a particular <i>Tool</i> type. 
@@ -201,12 +201,14 @@ Specialized options are located at the bottom of a menu and are separated from t
     <td> Paste</td>
     <td> Duplicate the copied data node in a folder in <i>Data Manager</i> </td>
   </tr>
-
 </table>
+<br>
 
+
+The following table lists each <i>Tool</i> type with a brief description of each of its specialized menu options.
 
 <table class="table table-bordered" style="width:100%">
-  <caption> <b> Data Manager Tool Type Common Menu Options</b> </caption>
+  <caption> <b> Data Manager Tool Type Specialized Menu Options</b> </caption>
   <tr>
     <th> Tool Type </th>
     <th> Menu </th>
@@ -217,7 +219,7 @@ Specialized options are located at the bottom of a menu and are separated from t
     <td> Images </td>
     <td> <img src="documentation/quickguide/gui/images/data-manager-image-type-menu.png" width="150" height="200"> </td>
     <td> 
-      <i>Add/Replace Image</i> - 
+      <i>Add/Replace Image</i> - Add or replace the image data for the <i>Project</i>. Image data can be DICOM or VTK VTI files.
     </td> 
   </tr>
 
@@ -225,23 +227,74 @@ Specialized options are located at the bottom of a menu and are separated from t
     <td> Paths </td>
     <td> <img src="documentation/quickguide/gui/images/data-manager-paths-type-menu.png" width="150" height="200"> </td>
     <td>
-      <i> Create Path </i> - <br>
-      <i> Import Paths </i> - <br>
-      <i> Export All as Legacy Paths </i> -
+      <i> Create Path </i> - Create an instance of a <i>Paths</i> tool. <br>
+                             Paths are created from <i>Image</i> tool data.  <br>
+      <i> Import Paths </i> - Create an instance of a <i>Paths</i> tool from a SimVascular .pth or legacy .paths file. <br>
+      <i> Export All as Legacy Paths </i> - N/A
     </td> 
   </tr>
-
 
   <tr>
     <td> Segmentations </td>
     <td> <img src="documentation/quickguide/gui/images/data-manager-seg-type-menu.png" width="150" height="200"> </td>
     <td>
-      <i> Create Contour Group </i> - <br>
-      <i> Import Segmentations </i> - <br>
-      <i> Import Legacy Segmentations </i> - <br>
-      <i> Export All as Legacy Segmentations </i> -
+      <i> Create Contour Group </i> - Create an instance of a <i>Segmentations</i> tool. 
+                                      Segmantations are created using geometry from a <i>Paths</i> tool.  <br>
+      <i> Import Segmentations </i> - Create an instance of a <i>Segmentations</i> tool from a SimVascular .ctgr file. <br>
+      <i> Import Legacy Segmentations </i> - N/A <br>
+      <i> Export All as Legacy Segmentations </i> - N/A
     </td>
   </tr>
 
+  <tr>
+    <td> Models </td>
+    <td> <img src="documentation/quickguide/gui/images/data-manager-models-type-menu.png" width="150" height="200"> </td>
+    <td>
+      <i> Create Model </i> - Create an instance of a <i>Models</i> tool. 
+                              A model is created using segmentation geometry from one or more <i>Segmentations</i> tools. <br>
+      <i> Import Solid Model </i> - Create an instance of a <i>Models</i> tool from a solid model file. 
+                                    Supported file formats: VTP, STL and STEP.  <br>
+    </td>
+  </tr>
 
+  <tr>
+    <td> Meshes </td>
+    <td> <img src="documentation/quickguide/gui/images/data-manager-meshes-type-menu.png" width="150" height="200"> </td>
+    <td>
+      <i> Create Mesh </i> - Create an instance of a <i>Meshes</i> tool. 
+                             A mesh is created using a model from a <i>Models</i> tool. <br>
+    </td>
+  </tr>
+
+  <tr>
+    <td> Simulations </td> 
+    <td> <img src="documentation/quickguide/gui/images/data-manager-sims-type-menu.png" width="150" height="200"> </td>
+    <td>
+      <i> Create Simulation job </i> - Create an instance of a <i>Simulations</i> tool.     
+                             A CFD simulation job is created using a model from a <i>Models</i> tool and a mesh from 
+                             a  <i>Meshes</i> tool. <br>
+    </td>
+  </tr>
+
+  <tr>
+    <td> svFSI </td>
+    <td> <img src="documentation/quickguide/gui/images/data-manager-fsi-type-menu.png" width="150" height="200"> </td>
+    <td>
+      <i> Create svFSI job </i> - Create an instance of a <i>svFSI</i> tool.
+                                  A multi-physics simulation job is created using a model from a <i>Models</i> tool and 
+                                  a mesh from a <i>Meshes</i> tool. <br>
+    </td>
+  </tr>
+
+  <tr>
+    <td> ROMSimulations </td>
+    <td> <img src="documentation/quickguide/gui/images/data-manager-rom-type-menu.png" width="150" height="200"> </td>
+    <td>
+      <i> Create ROM Simulation job </i> - Create an instance of a <i>ROMSimulation</i> tool.
+                                           A reduced-orde model (ROM) simulation job is created using a model from a 
+                                           <i>Models</i> tool.
+    </td>
+  </tr>
 </table>
+
+
