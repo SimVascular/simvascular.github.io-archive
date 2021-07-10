@@ -14,7 +14,7 @@ SimVascular image-based modeling pipeline. The follow lists each core <i>Tool</i
 </ol> 
 
 One or more instances of these <i>Tool</i> types are created to implement an image-based modeling pipeline for a particular
-application.
+application. An instance of a <i>Tool</i> is called a <i>Data Node</i>.
 
 <i>Tools</i> typically use data from other tools to perform their functions. For example, the <i>Segmentations Tool</i> uses 
 paths created by the <i>Paths Tool</i> to position and orient 2D slices in the 3D image volume. The data used by a 
