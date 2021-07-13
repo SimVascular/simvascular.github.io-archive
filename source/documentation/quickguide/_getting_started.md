@@ -16,7 +16,7 @@ Input files for all of the solver applications can be created and optionally exe
 
 The <a href="#introduction"> Introduction </a> section describes important SimVascular concepts. 
 The following <a href="#gui"> GUI </a> section then describes the SimVascular graphical user interface (GUI) and its basic functionality. 
-The last <a href="#tutorial"> Tutorial</a> section demonstrating the steps in the SimVascular image-based modeling pipeline, 
+The last <a href="#tutorial"> Tutorial</a> section demonstrates the steps in the SimVascular image-based modeling pipeline, 
 from medical image data segmentation to patient-specific blood flow simulation. A model of an aorta and two iliac 
 arteries is created from medical imaging data.  A finite element mesh is then generated from the model and used in a 
 CFD simulation to simulate blood flow in the arteries. 
