@@ -2,8 +2,9 @@
 
 This section demonstrates how to use the SimVascular image-based modeling pipeline to create a patient-specific geometric model 
 of the human vasculature and perform a finite element computational fluid dynamics (CFD) simulation of blood flow in that model.
+A model of an aorta with left and right iliac vessels is created from an MR image volume.
 
-The following <i>Tool</i> types are used to create an anatomic model from image data and to simulate blood flow in it 
+The following <i>Tool</i> types are used to create an anatomic model from image data and then simulate blood flow in it 
 
 <ol>
   <li> <b>Images</b> - Read in image data 

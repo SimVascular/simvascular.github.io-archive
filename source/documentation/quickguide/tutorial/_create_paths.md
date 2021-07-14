@@ -1,18 +1,34 @@
 <h2 id="tutorial_create_paths"> Create Vessel Paths </h2>
 
-A vessel path defines the centerline of a vessel lumen. Paths are later used for 2D segmentation.
+A path defines the approximate centerline of a vessel lumen. 
 
+Paths are used to create a framework from which is constructed a model of the vascular anatomy.
+ 
+
+Paths are later used by the <i>Segmentations</i> <i>Tool</i> 
+to segment vessel lumens. 
+
+
+An instance of a <i>Paths Tool</i> is first created. Path points are then interactively
+added using the mouse. 
+
+Two paths are created: one defining the main aorta and left iliac, and another for the right iliac.
+
+<h3 id="tutorial_create_paths_1"> Create an instance of a <i>Paths Tool</i> for the aorta/left iliac </h3>
+
+Create an instance of a <i>Paths Tool</i> named <b>aorta</b> used to define path geometry for the main aorta 
+and left iliac vessels. 
 
 <table class="table table-bordered" style="width:100%">
-  <caption> Creating vessel paths </caption>
+  <caption> Create a <i>Paths Tool</i> instance named <b>aorta</b> </caption>
   <tr>
-    <th> GUI Action </th>
+    <th> GUI </th>
     <th> Descriptiton </th>
   </tr>
 
   <tr>
     <td><img src="documentation/quickguide/tutorial/images/create-path-1.png" width="512" height="360"> </td>
-    <td> Select the <i>Paths<i> <i>Tool</i> in the <i>Data Manager</i> with the right mouse button. <br><br>
+    <td> Select the <i>Paths</i> <i>Tool</i> in the <i>Data Manager</i> with the right mouse button. <br><br>
          Select the <b>Create Path</b> menu option.
     </td>
   </tr>
@@ -22,15 +38,10 @@ A vessel path defines the centerline of a vessel lumen. Paths are later used for
         <img src="documentation/quickguide/tutorial/images/create-path-3.png" width="512" height="360"> 
     </td>
     <td> A <b>Create New Path</b> <i>DiaglogBox</i> appears. <br><br>
-
          Enter <b>aorta</b> for the path name in the <b>Path Name:</b> <i>TextBox</i> <br><br>
-
          From the <b>Subdivision type</b> <i>ComboBox</i> select <b>Spacing Based</b>. <br><br>
-
          An <i>Information Popup</i> appears; press the <b>OK</b> <i>Button</i>. <br><br>
-
          Press the <b>Create New Path</b> <i>DiaglogBox</i> <b>OK</b> <i>Button</i>. <br><br>
-
          A <i>Data Node</i> named <b>aorta</b> (an instance of a <i>Paths<i> <i>Tool</i>) is created under the
          <i>Data Manager</i> <i>Paths<i> <i>Tool</i> type.
     </td>
@@ -38,11 +49,87 @@ A vessel path defines the centerline of a vessel lumen. Paths are later used for
 
   <tr>
     <td><img src="documentation/quickguide/tutorial/images/create-path-4.png" width="512" height="360"> </td>
-    <td> Double-click on the <b>aorta</b> <i>Data Node</i> with the left mouse button to bring up its <i>Tool Panel</i>. 
+    <td> Double-click on the <i>Data Manager</i> <b>Paths / aorta</b> <i>Data Node</i> with the left mouse button to bring 
+         up the <i>SV Path Planning Panel</i>. <br><br>
+         Placing the mouse cursor over each GUI control in the <i>SV Path Planning Panel</i> displays a brief description
+         exlaining what the conrol does.<br><br>
+         Some important controls are <br><br>
+         <ul style="list-style-type:none;">
+             <li> <img src="documentation/quickguide/tutorial/images/path-add-button.png" width="62" height="15"> - Add a path point at the 
+                  current crosshairs location. <br><br>
+             </li>
+             <li> <img src="documentation/quickguide/tutorial/images/path-del-button.png" width="62" height="15"> - Delete the currently 
+                  selected path point.
+             </li>
+         </ul>
     </td>
   </tr>
 
-
 </table>
 
+
+<br>
+<h3 id="tutorial_create_paths_2"> Create the aorta/left iliac path </i> </h3>
+
+The goal here is to create a set of points representing a path from the start of the aorta to the end of
+the left iliac. Path points are added interactively by positioning crosshairs in the three 2D views to select
+the approximate center of a vessel lumen. 
+
+The crosshairs are moved using the left mouse button. 
+
+<table class="table table-bordered" style="width:100%">
+  <caption> Add path points using the <b>aorta</b> <i>Paths Tool</i> </caption>
+  <tr>
+    <th> GUI </th>
+    <th> Descriptiton </th>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-path-5.png" width="512" height="360"> </td>
+    <td> Using the left mouse button move the crosshairs in the <i>Sagittal 2D View</i> to the top of the aorta. <br><br>
+         Press the <b>Add</b> buttton in the <i>SV Path Planning Panel</i>. <br><br>
+         The seleced path point is shown as a red marker in the 2D views and as a blue cube in the 3D view.<br><br>
+         The coordinates of the point are shown in the <i>SV Path Planning Panel</i> <b>Control Point List</b> <i>Table</i>. 
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-path-6.png" width="512" height="360"> </td>
+    <td> Select the the <i>Data Manager</i> <b>Paths / aorta</b> <i>Data Node</i> with the right mouse button to display
+         the <i>Data Node</i> menu. <br><br>
+         The menu options specialized for <i>Path Tool</i> <i>Data Nodes</i> are <br><br>
+         <ul style="list-style-type:none;">
+           <li> <b>Point 2D Size</b> - Set the size in image units of the 2D markers used to show path points in 2D views <br><br>
+           <li> <b>Point 3D Size</b> - Set the size in image units of the 3D markers used to show path points in the 3D view <br><br>
+         </ul>
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-path-7.png" width="512" height="360"> </td>
+    <td> Create several more path points using the left mouse button to move the crosshairs in the 2D views and 
+         pressing the <b>Add</b> buttton. <br><br>
+         The coordinates of the path points are shown in the <i>SV Path Planning Panel</i> <b>Control Point List</b> <i>Table</i>. <br><br>
+         Switch the view to a single 3D view. <br><br>
+         The path points are shown as blue cubes. Move the mouse cursor over a path point selects it: the path point marker turns red 
+         and the point is highlighted in <i>SV Path Planning Panel</i> <b>Control Point List</b> <i>Table</i>.
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-path-8.png" width="512" height="360"> </td>
+    <td> 
+         Selecting a path point from the <i>SV Path Planning Panel</i> <b>Control Point List</b> <i>Table</i>
+         positions the crosshairs and moves the image scan slices so that they intersect that point, like they were 
+         when the point was added. <br<br>
+    </td>
+  </tr>
+</table>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
