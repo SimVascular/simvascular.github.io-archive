@@ -12,12 +12,12 @@ to segment vessel lumens.
 An instance of a <i>Paths Tool</i> is first created. Path points are then interactively
 added using the mouse. 
 
-Two paths are created: one defining the main aorta and left iliac, and another for the right iliac.
+Two paths are created: one defining the main aorta and right iliac, and another for the left iliac.
 
-<h3 id="tutorial_create_paths_1"> Create an instance of a <i>Paths Tool</i> for the aorta/left iliac </h3>
+<h3 id="tutorial_create_paths_1"> Create an instance of a <i>Paths Tool</i> for the aorta/right iliac </h3>
 
 Create an instance of a <i>Paths Tool</i> named <b>aorta</b> used to define path geometry for the main aorta 
-and left iliac vessels. 
+and right iliac vessels. 
 
 <table class="table table-bordered" style="width:100%">
   <caption> Create a <i>Paths Tool</i> instance named <b>aorta</b> </caption>
@@ -35,14 +35,19 @@ and left iliac vessels.
 
   <tr>
     <td><img src="documentation/quickguide/tutorial/images/create-path-2.png" width="512" height="360"> <br><br>
-        <img src="documentation/quickguide/tutorial/images/create-path-3.png" width="512" height="360"> 
     </td>
     <td> A <b>Create New Path</b> <i>DiaglogBox</i> appears. <br><br>
          Enter <b>aorta</b> for the path name in the <b>Path Name:</b> <i>TextBox</i> <br><br>
          From the <b>Subdivision type</b> <i>ComboBox</i> select <b>Spacing Based</b>. <br><br>
          An <i>Information Popup</i> appears; press the <b>OK</b> <i>Button</i>. <br><br>
          Press the <b>Create New Path</b> <i>DiaglogBox</i> <b>OK</b> <i>Button</i>. <br><br>
-         A <i>Data Node</i> named <b>aorta</b> (an instance of a <i>Paths<i> <i>Tool</i>) is created under the
+    </td>
+  </tr>
+
+  <tr>
+    <td> <img src="documentation/quickguide/tutorial/images/create-path-3.png" width="512" height="360">
+    </td>
+    <td> A <i>Data Node</i> named <b>aorta</b> (an instance of a <i>Paths<i> <i>Tool</i>) is created under the
          <i>Data Manager</i> <i>Paths<i> <i>Tool</i> type.
     </td>
   </tr>
@@ -69,13 +74,13 @@ and left iliac vessels.
 
 
 <br>
-<h3 id="tutorial_create_paths_2"> Create the aorta/left iliac path </i> </h3>
+<h3 id="tutorial_create_paths_2"> Create the aorta/right iliac path </i> </h3>
 
-The goal here is to create a set of points representing a path from the start of the aorta to the end of
-the left iliac. Path points are added interactively by positioning crosshairs in the three 2D views to select
-the approximate center of a vessel lumen. 
+This section demonstrates how to create a set of points representing a path from the start of the aorta to the 
+end of the right iliac arteries. Path points are added interactively by positioning crosshairs in the three 2D 
+views to select the approximate center of a vessel lumen. 
 
-The crosshairs are moved using the left mouse button. 
+The crosshairs are moved using the left mouse button or the <a href="#image_navigator"><i>Image Navigator</i></a>. 
 
 <table class="table table-bordered" style="width:100%">
   <caption> Add path points using the <b>aorta</b> <i>Paths Tool</i> </caption>
@@ -112,7 +117,10 @@ The crosshairs are moved using the left mouse button.
          The coordinates of the path points are shown in the <i>SV Path Planning Panel</i> <b>Control Point List</b> <i>Table</i>. <br><br>
          Switch the view to a single 3D view. <br><br>
          The path points are shown as blue cubes. Move the mouse cursor over a path point selects it: the path point marker turns red 
-         and the point is highlighted in <i>SV Path Planning Panel</i> <b>Control Point List</b> <i>Table</i>.
+         and the point is highlighted in <i>SV Path Planning Panel</i> <b>Control Point List</b> <i>Table</i>. <br><br>
+
+         Press the <img src="documentation/quickguide/gui/images/gui-save-icon.png" width="20" height="17"> icon in the 
+         <i>ToolBar</i> to save the <i>Project</i>. <br><br>
     </td>
   </tr>
 
@@ -120,13 +128,112 @@ The crosshairs are moved using the left mouse button.
     <td><img src="documentation/quickguide/tutorial/images/create-path-8.png" width="512" height="360"> </td>
     <td> 
          Selecting a path point from the <i>SV Path Planning Panel</i> <b>Control Point List</b> <i>Table</i>
-         positions the crosshairs and moves the image scan slices so that they intersect that point, like they were 
-         when the point was added. <br<br>
+         positions the crosshairs and moves the image scan slices so that they intersect at that point, the location 
+         they had when the point was added. <br<br>
     </td>
   </tr>
 </table>
 
 <br>
+<h3 id="tutorial_create_paths_3"> Create an instance of a <i>Paths Tool</i> for the left iliac </h3>
+
+Create an instance of a <i>Paths Tool</i> named <b>left-iliac</b> used to define path geometry from the 
+aorta/right iliac bifurcation to the end of the left iliac. 
+
+<table class="table table-bordered" style="width:100%">
+  <caption> Create a <i>Paths Tool</i> instance named <b>left-iliac</b> </caption>
+  <tr>
+    <th> GUI </th>
+    <th> Descriptiton </th>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-path-9.png" width="512" height="360"> </td>
+    <td> Select the <i>Paths</i> <i>Tool</i> in the <i>Data Manager</i> with the right mouse button. <br><br>
+         Select the <b>Create Path</b> menu option.
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-path-10.png" width="512" height="360"> <br><br>
+    </td>
+    <td> A <b>Create New Path</b> <i>DiaglogBox</i> appears. <br><br>
+         Enter <b>left-iliac</b> for the path name in the <b>Path Name:</b> <i>TextBox</i> <br><br>
+         From the <b>Subdivision type</b> <i>ComboBox</i> select <b>Spacing Based</b>. <br><br>
+         An <i>Information Popup</i> appears; press the <b>OK</b> <i>Button</i>. <br><br>
+         Press the <b>Create New Path</b> <i>DiaglogBox</i> <b>OK</b> <i>Button</i>. <br><br>
+    </td>
+  </tr>
+
+  <tr>
+    <td> <img src="documentation/quickguide/tutorial/images/create-path-11.png" width="512" height="360">
+    </td>
+    <td> A <i>Data Node</i> named <b>left-iliac</b> (an instance of a <i>Paths<i> <i>Tool</i>) is created under the
+         <i>Data Manager</i> <i>Paths<i> <i>Tool</i> type.
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-path-12.png" width="512" height="360"> </td>
+    <td> Double-click on the <i>Data Manager</i> <b>Paths / left-iliac</b> <i>Data Node</i> with the left mouse button to bring 
+         up the <i>SV Path Planning Panel</i>. <br><br>
+         Placing the mouse cursor over each GUI control in the <i>SV Path Planning Panel</i> displays a brief description
+         exlaining what the control does.<br><br>
+    </td>
+  </tr>
+</table>
+
+<br>
+<h3 id="tutorial_create_paths_4"> Create the left iliac path </i> </h3>
+
+This section demonstrates how to create a set of points representing a path from the aorta/right iliac bifurcation
+to the end of the left iliac. Path points are added interactively by positioning crosshairs in the three 2D views to 
+select the approximate center of a vessel lumen.
+
+The crosshairs are moved using the left mouse button.
+
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #d0d0d0; border-left: 6px solid #d0d0d0">
+It is important to place the first path point inside of the aorta. This is needed to produce a valid solid model
+when then left iliac is joined with the aorta.
+</div>
+<br>
+
+<table class="table table-bordered" style="width:100%">
+  <caption> Add path points using the <b>left-iliac</b> <i>Paths Tool</i> </caption>
+  <tr>
+    <th> GUI </th>
+    <th> Descriptiton </th>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-path-13.png" width="512" height="360"> </td>
+    <td> Using the left mouse button move the crosshairs to a point iniside the aorta near were it branches into the left 
+         and right iliacs. <br><br> 
+         Press the <b>Add</b> buttton in the <i>SV Path Planning Panel</i>. <br><br>
+         The coordinates of the point are shown in the <i>SV Path Planning Panel</i> <b>Control Point List</b> <i>Table</i>.
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-path-14.png" width="512" height="360"> </td>
+    <td> Create several more path points using the left mouse button to move the crosshairs in the 2D views and
+         pressing the <b>Add</b> buttton. <br><br>
+         The coordinates of the path points are shown in the <i>SV Path Planning Panel</i> <b>Control Point List</b> <i>Table</i>. <br><br>
+         Switch the view to a single 3D view. <br><br>
+         The path points are shown as blue cubes. Move the mouse cursor over a path point selects it: the path point marker turns red
+         and the point is highlighted in <i>SV Path Planning Panel</i> <b>Control Point List</b> <i>Table</i>. <br><br>
+
+         Press the <img src="documentation/quickguide/gui/images/gui-save-icon.png" width="20" height="17"> icon in the
+         <i>ToolBar</i> to save the <i>Project</i>. <br><br>
+    </td>
+  </tr>
+
+
+
+
+</table> 
+
+
 <br>
 <br>
 <br>
