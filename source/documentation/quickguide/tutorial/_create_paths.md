@@ -58,7 +58,7 @@ and right iliac vessels.
          up the <i>SV Path Planning Panel</i>. <br><br>
          Placing the mouse cursor over each GUI control in the <i>SV Path Planning Panel</i> displays a brief description
          exlaining what the conrol does.<br><br>
-         Some important controls are <br><br>
+         Some GUI controls: <br><br>
          <ul style="list-style-type:none;">
              <li> <img src="documentation/quickguide/tutorial/images/path-add-button.png" width="62" height="15"> - Add a path point at the 
                   current crosshairs location. <br><br>

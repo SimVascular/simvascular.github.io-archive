@@ -3,8 +3,26 @@
 Segmentation involves identifying vessel lumen boundaries from imaging data using various image processing
 methods. These boundaries are represented by closed curves and form the basis for solid model construction.
 
+SimVascular supports several methods used to manually define lumen boundaries. These methods are useful
+when image contrast is poor and lumen boundaries are not well defined by variations in image intensity.
+
+<ul style="list-style-type:none;">
+  <li> <b>Circle</b> - Interactively select a center and radius, or input radius, to define a circle. </li>
+  <li> <b>Ellipse</b> - Interactively select a center and two axis, or axes radii, to define an ellipse. </li>
+  <li> <b>Polygon</b> - Interactively select a set of points defining a polygon. </li>
+  <li> <b>SplinePoly</b> - Interactively select a set of points defining an interpolating smooth curve (spline). </li>
+</ul>
+
+SimVascular supports several methods used to automatically extract lumen boundaries based on variations in image intensity
+values.
+<ul style="list-style-type:none;">
+  <li> <b>Level Set</b> - Use image intensity and gradient to evlove a curve to the edge of a lumen boundary. </li>
+  <li> <b>Threshold</b> - Use an image intensity value to define a boundary. </li>
+</ul>
+
 Paths created by <i>Paths Tools</i> are used to extract a series of 2D image slices from the image volume.
-Segmentation is then performed on each slice to extract a lumen boundary. 
+Segmentation is then performed on each slice to extract a lumen boundary. Image points and intensity values used 
+for segmentation are interactively selected from a 2D image using the <b>left mouse button</b>.
 
 In SimVascular, a series of segmentations along a <i>Path</i> is called a <i>Contour Group</i>.
 
@@ -49,8 +67,8 @@ for the main aorta and right iliac vessels.
     <td><img src="documentation/quickguide/tutorial/images/create-seg-4.png" width="512" height="360"> </td>
     <td> Close the <i>SV Path Planning Panel</i> by selected the <b>X</b> in its <i>Tab</i>. <br><br>
          Double-click on the <i>Data Manager</i> <b>Segmentations / aorta</b> <i>Data Node</i> with the left mouse 
-         button to bring up the <i>SV 2D Segmentation Panel</i>. The <i>Display</i> layout is changed to 2D views on the left 
-         and one 3D view on the right. <br><br>
+         button to bring up the <i>SV 2D Segmentation Panel</i>. The <i>Display</i> layout is changed to two 2D views 
+         on the left and one 3D view on the right. <br><br>
 
          The 3D view displays geometry from any <i>Tool</i> that is selected to be visible using the 
          <img src="documentation/quickguide/tutorial/images/visible-toggle-box.png" width="20" height="18"> control. 
@@ -63,23 +81,31 @@ for the main aorta and right iliac vessels.
          <br> <br>
 
          The upper left 2D view displays the 2D image slice; the lower the gradient of the 2D image slice used to visualize image edges.
-         Image points and pixel values used for segmentation are interactively selected from the 2D views using the left mouse button.
+         Image points and intensity values used for segmentation are interactively selected from the 2D views using the left mouse 
+         button.
     </td>
   </tr>
 
   <tr>
     <td><img src="documentation/quickguide/tutorial/images/create-seg-4.png" width="512" height="360"> </td>
     <td> 
-        Some important GUI controls: <br><br>
+        Some GUI controls: <br><br>
         <ul style="list-style-type:none;">
            <li> <img src="documentation/quickguide/tutorial/images/seg-gui-loft.png" width="90" height="21"> - Show the surface that
-             passes through the segmentation geometry. </li> <br>
-           <li> <img src="documentation/quickguide/tutorial/images/seg-gui-reslice.png" width="230" height="24"> - Move the slice 
+             passes through segmentation curves. </li> <br>
+           <li> <img src="documentation/quickguide/tutorial/images/seg-gui-reslice.png" width="230" height="24"> - Move the image slice 
              plane along a <i>Path</i>. </li><br>
            <li> <img src="documentation/quickguide/tutorial/images/seg-gui-size.png" width="52" height="25"> - Set the size of the 
-             slice plane. 
+             image slice plane. </li><br>
+           <li> <img src="documentation/quickguide/tutorial/images/seg-gui-delete.png" width="100" height="25"> - Delete the selected 
+             segmentation. </li><br> 
+           <li> <img src="documentation/quickguide/tutorial/images/seg-gui-copy.png" width="100" height="25"> - Make a copy of the 
+             selected segmentation. </li><br>
+           <li> <img src="documentation/quickguide/tutorial/images/seg-gui-paste.png" width="100" height="25"> - Create a new 
+             segmentation at the current path location (slice plane location) from a copy of a segmentation. </li><br>
         </ul>
 
+        <br>
         Segmentation methods: <br><br>
         <ul style="list-style-type:none;">
           <li> <img src="documentation/quickguide/tutorial/images/seg-gui-levelset.png" width="103" height="27"> &nbsp 
@@ -92,8 +118,100 @@ for the main aorta and right iliac vessels.
         </ul>
     </td>
   </tr>
-
 </table>
+
+<br>
+<h3 id="tutorial_create_segs_2"> Create segmentations for the aorta/right iliac </h3>
+
+This section demonstrates how to create a set of segmentations from the start of the aorta to the end of the right iliac arteries
+using the <i>Level Set</i> segmentation method.
+
+<table class="table table-bordered" style="width:100%">
+  <caption> Create level set segmentations using the <b>aorta</b> <i>Segmentations Tool</i> </caption>
+  <tr>
+    <th> GUI </th>
+    <th> Descriptiton </th>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-aorta-seg-1.png" width="512" height="360"> </td>
+    <td> In the <i>Segmentations</i> <i>Tool</i> <i>Panel</i> select the 
+         <img src="documentation/quickguide/tutorial/images/seg-gui-levelset.png" width="50" height="18"> button. 
+         <br> <br>
+         The <b>LevelSet</b> sub-panel is displayed containing GUI controls used to set parameters controling the
+         level set computation (<b>Stage 1</b> and <b>Stage 2</b>) and the resulting contour geometry. Select the
+         <b>Convert to Spline</b> <i>CheckBox</i> to represent the level set contour as a smooth interpolating
+         spline.
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-aorta-seg-2.png" width="512" height="360"> </td>
+    <td> Select the <img src="documentation/quickguide/tutorial/images/seg-gui-levelset.png" width="50" height="18"> 
+         button again to perform a level set segmentation on the 2D image. 
+         <br> <br>
+         The level set contour is displayed in all three views as a closed red curve segmenting the vessel lumen from 
+         surrounding tissue. 
+
+         <br><br>
+         The contour is added to the <b>Contour List</b> <i>Table</i> as <b>0:SplinePolygon,LevelSet</b>, where <i>0</i> is 
+         the contour ID, <i>SplinePolygon</i> is geometric representation and <i>LevelSet</i> the segmentation method. 
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-aorta-seg-3.png" width="400" height="375"> </td>
+    <td> The upper left <i>Axial</i> view shows the level set contour as a closed red curve with square green markers
+         enclosing a straight red line with two green markers located in the contour center.
+         <br><br>
+         The blue and yellow markers in the center of the contour represent the location of a point on a path from 
+         which the 2D image is extracted. 
+         <br><br>
+         The 10 green markers represent the control points use to control the shape of the interpolating spline. Moving
+         a control point alters the shape of the level set contour. The number of control points is changed using the 
+         <b>Ctrl. No.</b> <i>TextBox</i>. 
+         <br><br>
+         The straight red line with two green markers is the <b>Contor Manipulator</b>. 
+         The center control point is used to translate the contour center in the 2D image plane. The outer control point 
+         is used to contract/expand the contour. 
+         <br><br>
+         Positioning the mouse cursor over a control point highlights it in red. It can then be moved with the left mouse 
+         button. 
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-aorta-seg-4.png" width="512" height="360"> </td>
+    <td> Segmentations for the entire aorta/right iliac are created by moving the 2D slice plane to a new position along 
+         the <b>aorta</b> <i>Path</i> using the <b>Reslice</b> <i>Slider</i> and selecting the 
+         <img src="documentation/quickguide/tutorial/images/seg-gui-levelset.png" width="50" height="18"> button.
+         <br><br>
+         Press the <img src="documentation/quickguide/gui/images/gui-save-icon.png" width="40" height="35">
+         icon in the  <i>ToolBar</i> to save the <i>Project</i>. <br><br>
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-aorta-seg-5.png" width="512" height="360"> </td>
+    <td> Contours can be selected from the <b>Contour List:</b> <i>Table</i> or from the 3D view using the left 
+         mouse button. 
+         <br><br>
+         Once selected, a contour can be modified (e.g. change its segmentation method or parameters), copied/pasted, or deleted. 
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-aorta-seg-6.png" width="512" height="360"> </td>
+    <td> The surface passing through the contours is visualized by selecting the <b>Lofting Preview</b> <i>CheckBox</i>.
+         <br><br>
+         This is the surface that will eventually be used to create a solid model so any surface features that would 
+         lead to a poor model (e.g. overlappiing regions) should be identified and fixed.
+    </td>
+  </tr>
+
+
+</table> 
+
 
 <br>
 <br>

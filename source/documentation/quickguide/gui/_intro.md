@@ -21,7 +21,7 @@ The following table lists the controls used by the SimVascular GUI
   </tr>
 
   <tr>
-    <td> Checkbox </td>
+    <td> CheckBox </td>
     <td> A rectangular region that permits the user to make a binary choice, i.e. a choice between one of two possible mutually 
          exclusive options </td>
     <td><img src="documentation/quickguide/gui/images/gui-check-box.png" width="100" height="20"> </td>

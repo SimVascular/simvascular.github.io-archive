@@ -45,7 +45,7 @@ The funcion of the mouse buttons depends on the window the mouse cursor is in.
 
   <tr>
     <td> Left </td>
-    <td> Moves the crosshairs </td>
+    <td> Moves the crosshairs, select image points and pixel values </td>
   </tr>
 
   <tr>
