@@ -208,10 +208,132 @@ using the <i>Level Set</i> segmentation method.
          lead to a poor model (e.g. overlappiing regions) should be identified and fixed.
     </td>
   </tr>
-
-
 </table> 
 
+
+<br>
+<h3 id="tutorial_create_segs_3"> Create an instance of a <i>Segmentations Tool</i> for the left iliac </h3>
+
+Create an instance of a <i>Segmentations Tool</i> named <b>left-iliac</b> used to define a <i>Contour Group</i>
+for the aorta/right iliac bifurcation to the end of the left iliac artery.
+
+<table class="table table-bordered" style="width:100%">
+  <caption> Create a <i>Segmentations Tool</i> instance named <b>left-iliac</b> </caption>
+  <tr>
+    <th> GUI </th>
+    <th> Descriptiton </th>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-seg-6.png" width="512" height="360"> </td>
+    <td> Select the <i>Segmentations</i> <i>Tool</i> in the <i>Data Manager</i> with the right mouse button. <br><br>
+         Select the <b>Create Contour Group</b> menu option.
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-seg-7.png" width="512" height="360"> <br><br>
+    </td>
+    <td> A <b>Create Contour Group</b> <i>DiaglogBox</i> appears. <br><br>
+         Select <b>left-iliac</b> for the <i>Path</i> name from the <b>Select Path:</b> <i>ComboBox</i> <br><br>
+         Enter <b>left-iliac</b> for the <i>Contour Group</i> name in the <b>Group Name:</b> <i>TextBox</i> <br><br>
+         Press the <b>Create Contour Group</b> <i>DiaglogBox</i> <b>OK</b> <i>Button</i>. <br><br>
+    </td>
+  </tr>
+
+  <tr>
+    <td> <img src="documentation/quickguide/tutorial/images/create-seg-8.png" width="512" height="360">
+    </td>
+    <td> A <i>Data Node</i> named <b>left-iliac</b> (an instance of a <i>Segmentations Tool</i>) is created under the
+         <i>Data Manager</i> <i>Segmentations Tool</i> type.
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-seg-9.png" width="512" height="360"> </td>
+    <td> Double-click on the <i>Data Manager</i> <b>Segmentations / left-iliac</b> <i>Data Node</i> with the left mouse
+         button to bring up the <i>SV 2D Segmentation Panel</i>. The <i>Display</i> layout is changed to two 2D views
+         on the left and one 3D view on the right. <br><br>
+
+         The red rectangular region
+         <img src="documentation/quickguide/tutorial/images/create-seg-5.png" width="32" height="21">
+         in the 3D view displays the 2D image slice extracted from the image volume. The slice is positioned and oriented
+         using <b>left-iliac</b> <i>Path</i> geometry. The slice is moved along a <i>Path</i> using the <b>Reslice</b> <i>Slider</i>.
+         <br> <br>
+
+         The upper left 2D view displays the 2D image slice; the lower the gradient of the 2D image slice used to visualize image edges.
+         Image points and intensity values used for segmentation are interactively selected from the 2D views using the left mouse
+         button.
+    </td>
+  </tr>
+</table> 
+
+
+<br> 
+<h3 id="tutorial_create_segs_4"> Create segmentations for the left iliac </h3>
+This section demonstrates how to create a set of segmentations from the aorta/right iliac bifurcation to the end of the left iliac artery.
+using the <i>Level Set</i> segmentation method.
+
+<table class="table table-bordered" style="width:100%">
+  <caption> Create level set segmentations using the <b>left-iliac</b> <i>Segmentations Tool</i> </caption>
+  <tr>
+    <th> GUI </th>
+    <th> Descriptiton </th>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-left-iliac-seg-1.png" width="512" height="360"> </td>
+    <td> In the <i>Segmentations</i> <i>Tool</i> <i>Panel</i> select the
+         <img src="documentation/quickguide/tutorial/images/seg-gui-levelset.png" width="50" height="18"> button.
+         <br> <br>
+         The <b>LevelSet</b> sub-panel is displayed containing GUI controls used to set parameters controling the
+         level set computation (<b>Stage 1</b> and <b>Stage 2</b>) and the resulting contour geometry. Select the
+         <b>Convert to Spline</b> <i>CheckBox</i> to represent the level set contour as a smooth interpolating
+         spline.
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-left-iliac-seg-2.png" width="512" height="360"> </td>
+    <td> Segmentations for the entire left iliac are created by moving the 2D slice plane to a new position along
+         the <b>left-iliac</b> <i>Path</i> using the <b>Reslice</b> <i>Slider</i> and selecting the
+         <img src="documentation/quickguide/tutorial/images/seg-gui-levelset.png" width="50" height="18"> button.
+         <br><br>
+         Press the <img src="documentation/quickguide/gui/images/gui-save-icon.png" width="40" height="35">
+         icon in the  <i>ToolBar</i> to save the <i>Project</i>. <br><br>
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-left-iliac-seg-3.png" width="512" height="360"> </td>
+    <td> The surface passing through the contours is visualized by selecting the <b>Lofting Preview</b> <i>CheckBox</i>.
+         <br><br>
+         This is the surface that will eventually be used to create a solid model so any surface features that would
+         lead to a poor model (e.g. overlappiing regions) should be identified and fixed.
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-left-iliac-seg-4.png" width="512" height="360"> </td>
+    <td> Select the <b>Lofted</b> box under the <i>Data Manager</i> <b>Segmentations / aorta</b> <i>Data Node</i>
+         to visualize both the </b>aorta</b> and <b>left-iliac</b> lofted surfaces.
+         <br><br>
+         The first part of the <b>left-iliac</b> surface does not completely fit in the </b>aorta</b>. This could cause
+         problems when creating a model or generating a finite element mesh.
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-left-iliac-seg-5.png" width="512" height="360"> </td>
+    <td> Select the outer control point of the <b>Contor Manipulator</b> to reduce the size of the first contour until
+         it completely fits in the </b>aorta</b>.
+
+         <br><br>
+         Press the <img src="documentation/quickguide/gui/images/gui-save-icon.png" width="40" height="35">
+         icon in the  <i>ToolBar</i> to save the <i>Project</i>. <br><br>
+    </td>
+  </tr>
+</table> 
 
 <br>
 <br>
