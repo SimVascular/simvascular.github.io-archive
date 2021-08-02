@@ -318,8 +318,9 @@ using the <i>Level Set</i> segmentation method.
     <td> Select the <b>Lofted</b> box under the <i>Data Manager</i> <b>Segmentations / aorta</b> <i>Data Node</i>
          to visualize both the </b>aorta</b> and <b>left-iliac</b> lofted surfaces.
          <br><br>
-         The first part of the <b>left-iliac</b> surface does not completely fit in the </b>aorta</b>. This could cause
-         problems when creating a model or generating a finite element mesh.
+         The upper left 2D <i>Axial</i> view displays the intersection of the 2D slice plane with the two surfaces as white lines. 
+         This shows that the <b>left-iliac</b> surface does not completely fit in the </b>aorta</b>. This could later cause problems 
+         when creating a model or generating a finite element mesh.
     </td>
   </tr>
 
@@ -334,13 +335,3 @@ using the <i>Level Set</i> segmentation method.
     </td>
   </tr>
 </table> 
-
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-
-
