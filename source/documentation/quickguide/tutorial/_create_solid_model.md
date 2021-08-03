@@ -27,6 +27,8 @@ SimVascular has two solid modelers
 The <b>PolyData</b> solid model is the one most often used to build models.
 
 The following sections demonstrate how to create a <i>PolyData</i> solid model from the <b>aorta</b> and <b>left-iliac</b> segmentations. 
+A detailed discusion about modeling can be found in the SimVascular
+<a href="http://simvascular.github.io/docsModelGuide.html">Modeling Guide</a> documentation.
 
 <h3 id="tutorial_create_segs_1"> Create an instance of a <i>Models Tool</i> for the aorta and iliacs </h3>
 

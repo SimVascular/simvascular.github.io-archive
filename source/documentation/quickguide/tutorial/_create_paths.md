@@ -227,16 +227,5 @@ when then left iliac is joined with the aorta.
          <i>ToolBar</i> to save the <i>Project</i>. <br><br>
     </td>
   </tr>
-
-
-
-
 </table> 
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
 
