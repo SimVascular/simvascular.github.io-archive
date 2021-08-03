@@ -3,6 +3,17 @@ The continuous volume enclosed by a solid model of vascular anatomy is subdivide
 generation software. This finite element mesh is used by the SimVascular <i>svSolver</i> and <i>svFsi</i> computational fluid 
 dynamics programs to simulate blood flow in a vascular network.
 
+A good mesh is integral to finite element CFD simulation techniques. It enables computers to numerically solve the 
+underlying governing fluid equations and simulate the physical effects. The mesh quality influences the accuracy, convergence, 
+and speed of the simulation process.
+
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #d0d0d0; border-left: 6px solid #d0d0d0">
+<i>Modeling</i> and <i>Meshing</i> are typically the most time consuming steps in the image-based modeling pipeline.
+It often takes multiple iterations between the <i>Modeling</i> and <i>Meshes Tools</i> to obtain a model that can
+be succesfully meshed and suitable for a CFD simulation.
+</div>
+
+<br>
 The following sections demonstrate how to create a finite element mesh from the <b>aorta-iliacs</b> <i>PolyData</i> solid model 
 using the <i>TetGen</i> mesh generation software.
 
@@ -96,14 +107,6 @@ Create an instance of a <i>Meshes Tool</i> named <b>aorta-iliacs</b> used to cre
 <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #e6e600; border-left: 6px solid #e6e600">
 When opening a <i>Project</i> SimVascular does not automatically read in and display <i>Meshes Tool</i> meshes.
 A mesh must be manually loaded by right clicking on a <i>Data Manager</i> Meshes Data Node</i> and selecting the
-<b>Load/Unload Volue mesh</b> menu option.
+<b>Load/Unload Volue Mesh</b> menu option.
 </div>
 
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
