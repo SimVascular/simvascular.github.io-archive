@@ -239,7 +239,7 @@ The following table lists each <i>Tool</i> type with a brief description of each
     <td> <img src="documentation/quickguide/gui/images/data-manager-seg-type-menu.png" width="150" height="200"> </td>
     <td>
       <i> Create Contour Group </i> - Create an instance of a <i>Segmentations</i> tool. 
-                                      Segmantations are created using geometry from a <i>Paths</i> tool.  <br>
+                                      Segmentations are created using geometry from a <i>Paths</i> tool.  <br>
       <i> Import Segmentations </i> - Create an instance of a <i>Segmentations</i> tool from a SimVascular .ctgr file. <br>
       <i> Import Legacy Segmentations </i> - N/A <br>
       <i> Export All as Legacy Segmentations </i> - N/A
@@ -291,7 +291,7 @@ The following table lists each <i>Tool</i> type with a brief description of each
     <td> <img src="documentation/quickguide/gui/images/data-manager-rom-type-menu.png" width="150" height="200"> </td>
     <td>
       <i> Create ROM Simulation job </i> - Create an instance of a <i>ROMSimulation</i> tool.
-                                           A reduced-orde model (ROM) simulation job is created using a model from a 
+                                           A reduced-order model (ROM) simulation job is created using a model from a 
                                            <i>Models</i> tool.
     </td>
   </tr>

@@ -2,14 +2,14 @@
 
 The SimVascular GUI provides an interface for interactively managing the input of data needed for each step in the 
 image-based modeling pipeline. The GUI provides different graphical controls (aka widgets) used to input data values 
-and methods to interact and query image and geometical data in a graphics window.
+and methods to interact and query image and geometrical data in a graphics window.
 
 The following table lists the controls used by the SimVascular GUI
 
 <table class="table table-bordered" style="width:100%">
   <tr>
     <th> Control </th>
-    <th> Descriptiton </th>
+    <th> Description </th>
     <th> Example </th>
   </tr>
 
@@ -91,14 +91,14 @@ The following table lists the controls used by the SimVascular GUI
 
   <tr>
     <td> Table </td> 
-    <td> A rectangular region that arranges data (e.g. text or other widges) into rows and columns of cells. 
+    <td> A rectangular region that arranges data (e.g. text or other widgets) into rows and columns of cells. 
          Data can be modified by selecting a cell in the table. </td>
     <td> <img src="documentation/quickguide/gui/images/gui-table.png" width="300" height="200">  </td>
   </tr>
 
   <tr>
     <td> TextBox </td> 
-    <td> A rectangular region used to entry string, interger or float values. </td>
+    <td> A rectangular region used to entry string, integer or float values. </td>
     <td> <img src="documentation/quickguide/gui/images/gui-text-box.png" width="130" height="24">  </td>
   </tr>
 
@@ -119,7 +119,7 @@ The following table lists the controls used by the SimVascular GUI
 
 <br> <br>
 
-The SimVascular main window GUI is composed of a _MenuBar_, _ToolBar_, _Data Manager_, _Image Navagator_ and _Display_. 
+The SimVascular main window GUI is composed of a _MenuBar_, _ToolBar_, _Data Manager_, _Image Navigator_ and _Display_. 
 An additional _Tool Panel_ is displayed on the right side of the window when a <i>Tool</i> is active.
 
 <figure>

@@ -12,7 +12,7 @@ Changing the principal planes scan slice changes the changes the location of the
   <caption> <b> Image Navigator Controls </b> </caption>
   <tr>
     <th> Control </th>
-    <th> Descriptiton </th>
+    <th> Description </th>
   </tr>
 
   <tr>

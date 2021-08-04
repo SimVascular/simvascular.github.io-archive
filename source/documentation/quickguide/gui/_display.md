@@ -34,7 +34,7 @@ in and out. Scrolling the mouse wheel changes the principal plane slice for whic
 Changing the principal planes slice changes the values displayed in the <a href="#image_navigator"> Image Navigator </a>
 and vice versa.
 
-The funcion of the mouse buttons depends on the window the mouse cursor is in.
+The function of the mouse buttons depends on the window the mouse cursor is in.
 
 <table class="table table-bordered" style="width:100%">
   <caption> <b> 2D View </b> </caption>
@@ -94,13 +94,13 @@ the mouse cursor.
 
 The three icons 
 <img src="documentation/quickguide/gui/images/display_icon_menu.png" width="70" height="30"> </td> displayed in the upper right 
-corner each window provides options to cusomize the view and crosshair behavior when selected using the left mouse button. 
+corner each window provides options to customize the view and crosshair behavior when selected using the left mouse button. 
 
 <table class="table table-bordered" style="width:100%">
   <tr>
     <th> Icon </th>
     <th> Menu or Action </th>
-    <th> Descriptiton </th>
+    <th> Description </th>
   </tr>
 
   <tr>
@@ -112,12 +112,12 @@ corner each window provides options to cusomize the view and crosshair behavior 
       <ul style="list-style-type:none;"> 
         <li> <b> Reset view </b> - Resets 1) crosshairs to their default position and 2) viewing transformations (e.g. rotations) </li>
         <li> <b> Show crosshair </b> - Select to toggle showing crosshairs </li>
-        <li> <b> No crosshair rotation </b> - Select to toggle using crosshairs to position planes orthoganal to image axes </li>
+        <li> <b> No crosshair rotation </b> - Select to toggle using crosshairs to position planes orthogonal to image axes </li>
         <li> <b> Crosshair rotation </b> - Select to toggle using crosshairs to rotate two planes </li>
         <li> <b> Coupled crosshair rotation </b> - Select to toggle using crosshairs to rotate planes both planes </li>
         <li> <b> Swivel mode </b> - Select to toggle using crosshairs to rotate planes in about all three axes </li>
         <li> <img src="documentation/quickguide/gui/images/window-ts-slider.png" width="140" height="30"> 
-             - The <b>T</b>hicker <b>S</b>lices slider controls how many slices around the current one are used for a maximum intensity projection </li>
+             - The <b>T</b>thicker <b>S</b>slices slider controls how many slices around the current one are used for a maximum intensity projection </li>
 
       </ul> 
     </td>

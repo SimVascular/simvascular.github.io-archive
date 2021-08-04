@@ -1,7 +1,7 @@
 <h2 id="gui_toolbar"> ToolBar </h2>
 
 The <i>ToolBar</i> is composed of three sections. The first section contains icons used to save a <i>Project</i>, undo an operation, hide/show
-the <i>Image Navagator</i> and toggle the <b>A</b>xial, <b>S</b>agital and <b>C</b>oronal image scan slices.
+the <i>Image Navigator</i> and toggle the <b>A</b>xial, <b>S</b>agittal and <b>C</b>oronal image scan slices.
 
 <figure>
   <img class="svImg svImgMd"  src="documentation/quickguide/gui/images/toolbar-1.png"> 
@@ -26,7 +26,7 @@ the <i>Image Navagator</i> and toggle the <b>A</b>xial, <b>S</b>agital and <b>C<
 
   <tr>
     <td> <img src="documentation/quickguide/gui/images/gui-img-nav-icon.png" width="45" height="40"> </td>
-    <td> Hide/show the <i>Image Navagator</i>. </td>
+    <td> Hide/show the <i>Image Navigator</i>. </td>
   </tr>
 
   <tr>
@@ -36,7 +36,7 @@ the <i>Image Navagator</i> and toggle the <b>A</b>xial, <b>S</b>agital and <b>C<
 
   <tr>
     <td> <img src="documentation/quickguide/gui/images/gui-s-plane-icon.png" width="40" height="40"> </td>
-    <td> Hide/show the sagital image scan slice. </td>
+    <td> Hide/show the sagittal image scan slice. </td>
   </tr>
 
   <tr>

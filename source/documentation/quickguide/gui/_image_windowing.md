@@ -1,8 +1,8 @@
 <br>
 <h2 id="image_windowing"> Image Windowing </h2>
 
-The <i>Image Windowing</i> tool is used to adjust image brightness and contrast using a techniqued called <i>Windowing</i>, 
-also known as grey-level mapping, contrast stretching, histogram modification or contrast enhancement.
+The <i>Image Windowing</i> tool is used to adjust image brightness and contrast using a technique called <i>Windowing</i>, 
+also known as gray-level mapping, contrast stretching, histogram modification or contrast enhancement.
 <i>Windowing</i> manipulates the image greyscale component using image values to change the appearance of the 
 image to highlight particular structures. The image brightness is adjusted by changing the <i>window center</i>. 
 The image contrast is adjusted by changing the <i>window width</i>. 
@@ -52,14 +52,14 @@ The <i>window width</i> is changed non-uniformly about the <i>window center</i> 
   </tr>
 
   <tr>
-    <td> Reduce the <i>window width</i> uniformally around the <i>window center</i> by placing the mouse cursor in the upper 
+    <td> Reduce the <i>window width</i> uniformly around the <i>window center</i> by placing the mouse cursor in the upper 
          boundary of the <i>Image Windowing</i> tool blue region holding and mouse button down while moving the mouse cursor down 
     </td>
     <td> <img src="documentation/quickguide/gui/images/image-window-level-demo-4.png" width="612" height="410"> </td>
   </tr>
 
   <tr>
-    <td> Reduce the <i>window width</i> non-uniformally around the <i>window center</i> by placing the mouse cursor in the upper 
+    <td> Reduce the <i>window width</i> non-informally around the <i>window center</i> by placing the mouse cursor in the upper 
          boundary of the <i>Image Windowing</i> tool blue region holding and pressing shift-left mouse button down while 
          moving the mouse cursor down 
     </td>
@@ -70,7 +70,7 @@ The <i>window width</i> is changed non-uniformly about the <i>window center</i> 
 <br>
 
 
-Selecting the <i>Image Window Level</i> tool with the right mouse buttton pops up the following menu 
+Selecting the <i>Image Window Level</i> tool with the right mouse button pops up the following menu 
 
 <figure>
   <img class="svImg svImgSm"  src="documentation/quickguide/gui/images/image-window-level-menu-1.png"> 
@@ -126,7 +126,7 @@ Selecting the <i>Image Window Level</i> tool with the right mouse buttton pops u
   
   <tr>
     <td>     Presets      </td>
-    <td> Displays a menu of preset upper and lower <i>window width</i> bounds for various tissues aquired using CT. </td>
+    <td> Displays a menu of preset upper and lower <i>window width</i> bounds for various tissues acquired using CT. </td>
   </tr>
 
   <tr>

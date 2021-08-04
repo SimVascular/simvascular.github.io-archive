@@ -1,12 +1,12 @@
 <h2 id="tutorial_create_simulation">Create CFD Simulation</h2>
 
-Computaional fluid dynamics (CFD) simulations permit detailed analyses of blood flow and pressure in patient-specific 
+Computational fluid dynamics (CFD) simulations permit detailed analyses of blood flow and pressure in patient-specific 
 models of the human vasculature. CFD solvers used for such simulations must accommodate the sophisticated boundary 
 conditions, physiologic models and physics specific to cardiovascular modeling.
 
 The <i>Simulations Tool</i> has functionality to assign boundary conditions, material properties, and set parameters for the 
 SimVascular <i>svSolver</i> CFD solver. <i>svSolver</i> can be run through the GUI for testing a simulation setup. However, 
-for simulating physiological relvant time scales the simulation files are generated on a desktop and copied to a high performance 
+for simulating physiological relevant time scales the simulation files are generated on a desktop and copied to a high performance 
 computing (HPC) cluster and run there. 
 
 <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #e6e600; border-left: 6px solid #e6e600">
@@ -18,13 +18,13 @@ complete.
 
 <br>
 <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #e6e600; border-left: 6px solid #e6e600">
-The <i>svSolver</i> CFD solver does not use any predefined units. All values used for pyhical parameters (e.g. fluid densiity)
-and boundary condions must be consistant with the spatial dimensions of the finite element mesh.
+The <i>svSolver</i> CFD solver does not use any predefined units. All values used for poetical parameters (e.g. fluid density)
+and boundary conditions must be consistent with the spatial dimensions of the finite element mesh.
 </div>
 
 <br>
 The following sections demonstrate how to setup a CFD simulation for <i>svSolver</i> using the <b>aorta-iliacs</b> finite 
-element mesh. A detailed discusion about CFD simulations can be found in the SimVascular
+element mesh. A detailed discussion about CFD simulations can be found in the SimVascular
 <a href="http://simvascular.github.io/docsFlowSolver.html">Simulation Guide</a> documentation.
 
 <h3 id="tutorial_create_simulation_1"> Create an instance of a <i>Simulations Tool</i> for the <b>aorta-iliacs</b> model.  </h3>
@@ -36,7 +36,7 @@ in the main aorta and iliac vessels.
   <caption> Create a <i>Simulations Tool</i> instance named <b>aorta-iliacs</b> </caption>
   <tr>
     <th> GUI </th>
-    <th> Descriptiton </th>
+    <th> Description </th>
   </tr>
 
   <tr>
@@ -77,7 +77,7 @@ in the main aorta and iliac vessels.
     <td> <i>SV Simulation Panel</i> is a <i>ToolBox</i> containing multiple pages of GUI widgets identified by a section of 
          rectangles with text at the <i>Toolbox</i> bottom. Selecting a rectangle shows another page of GUI widgets.
          <br><br>
-         The <i>ToolBox</i> <b>Basic Parameters</b> page is used to set fluid phyisical parameters and initial conditions (ICs). Use the
+         The <i>ToolBox</i> <b>Basic Parameters</b> page is used to set fluid physical parameters and initial conditions (ICs). Use the
          default parameters values. 
          <br><br>
          Select the <i>ToolBox</i> <b>Inlet and Outlet BCs</b> page. 
@@ -106,7 +106,7 @@ The left and right iliac outlets are set to a resistance boundary condition with
   <caption> Create inlet and outlet boundary conditions </caption>
   <tr>
     <th> GUI </th>
-    <th> Descriptiton </th>
+    <th> Description </th>
   </tr>
 
  <tr>
@@ -116,7 +116,7 @@ The left and right iliac outlets are set to a resistance boundary condition with
          The <b>Name / BC Type / Values</b> <i>Table</i> contains the name of all <i>Model</i> <i>Faces</i> that have a <b>cap</b> 
          </i>Face Type</i> (set in the <i>Models Tool</i>).
          <br><br>
-         To set the inlet velocy boundary condition double click with the left mouse button on <b>cap_aorta</b> in the <b>Name</b> column. 
+         To set the inlet velocity boundary condition double click with the left mouse button on <b>cap_aorta</b> in the <b>Name</b> column. 
     </td>
   </tr>
 
@@ -145,7 +145,7 @@ The left and right iliac outlets are set to a resistance boundary condition with
     <td><img src="documentation/quickguide/tutorial/images/create-simulation-8.png" width="512" height="360"> </td>
     <td> A <b>Set Inlet/Outlet BCs</b> <i>DialogBox</i> appears.
         <br><br>
-        From the <b>BC Tyep:</b> <i>ComboBox</i> select <b>Resistance</b>.
+        From the <b>BC Type:</b> <i>ComboBox</i> select <b>Resistance</b>.
         <br><br>
         Enter <b>16000</b> into the <b>Resistance:</b> <i>TextBox</i>
         <br><br>
@@ -166,7 +166,7 @@ The left and right iliac outlets are set to a resistance boundary condition with
     <td><img src="documentation/quickguide/tutorial/images/create-simulation-10.png" width="512" height="360"> </td>
     <td> A <b>Set Inlet/Outlet BCs</b> <i>DialogBox</i> appears.
         <br><br>
-        From the <b>BC Tyep:</b> <i>ComboBox</i> select <b>Resistance</b>.
+        From the <b>BC Type:</b> <i>ComboBox</i> select <b>Resistance</b>.
         <br><br>
         Enter <b>16000</b> into the <b>Resistance:</b> <i>TextBox</i>
         <br><br>
@@ -193,19 +193,19 @@ This section demonstrates how to set the simulation solver parameters.
 The number of simulation time steps and time step size determines the simulation physical time. A simulation for 500 time steps 
 using a time step size of 0.001 simulates a physical time = (500 time steps) x (0.001 time step size) = 0.5 seconds.
 
-The value of the time step size is an important factor contributing to the stability, convergence, and reliabilty of a simulation.
+The value of the time step size is an important factor contributing to the stability, convergence, and reliability of a simulation.
 The value of the time step size depends on the size of the finite element mesh and type and values used for boundary conditions.
 
 <table class="table table-bordered" style="width:100%">
   <caption> Set solver parameters </caption>
   <tr>
     <th> GUI </th>
-    <th> Descriptiton </th>
+    <th> Description </th>
   </tr>
 
  <tr>
     <td><img src="documentation/quickguide/tutorial/images/create-simulation-12.png" width="512" height="360"> </td>
-    <td> The <i>ToolBox</i> <b>Solver Parameters</b> page is used to set the parameters controling <i>svSolver</i>
+    <td> The <i>ToolBox</i> <b>Solver Parameters</b> page is used to set the parameters controlling <i>svSolver</i>
          solution and output. Parameter values are entered by clicking with the left mouse button on the appropriate
          <i>TextBox</i>. 
          <br><br>
@@ -231,7 +231,7 @@ This section demonstrates how run the simulation.
 
 The <i>svSolver</i> program can be run as a single process using one processor (core) or in parallel using two or more processors.
 <i>svSolver</i> uses the <i>Open MPI</i> implementation of the Message Passing Interface (MPI) to run in parallel. The <i>Open MPI</i>
-libraries mut be installed in order to run <i>svSolver</i> in parallel. In this demonstration the <i>svSolver</i> program is run 
+libraries must be installed in order to run <i>svSolver</i> in parallel. In this demonstration the <i>svSolver</i> program is run 
 on a single processor.
 
 <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #d0d0d0; border-left: 6px solid #d0d0d0">
@@ -245,7 +245,7 @@ platforms it must be installed using a separate <i>svSolver</i> installer downlo
   <caption> Run the simulation</caption>
   <tr>
     <th> GUI </th>
-    <th> Descriptiton </th>
+    <th> Description </th>
   </tr>
 
   <tr>
@@ -260,7 +260,7 @@ platforms it must be installed using a separate <i>svSolver</i> installer downlo
 
   <tr>
     <td><img src="documentation/quickguide/tutorial/images/create-simulation-14.png" width="512" height="360"> </td>
-    <td> An <i>InformationPopup</i> appears showing that the simiulation files have been created.
+    <td> An <i>InformationPopup</i> appears showing that the simulation files have been created.
          <br><br>
          Press the <i>InformationPopup</i> <b>OK</b> <i>Button</i>. 
          <br><br>
@@ -270,14 +270,14 @@ platforms it must be installed using a separate <i>svSolver</i> installer downlo
          <br><br>
          <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #d0d0d0; border-left: 6px solid #d0d0d0">
          The <i>svSolver</i> program can be run in parallel by selecting the <b>Use MPI</b> <i>CheckBox</i> and setting the 
-         <b>Number of Procssors</b> <i>Slider</i> to 2 or larger.
+         <b>Number of Processors</b> <i>Slider</i> to 2 or larger.
          </div> 
     </td>
   </tr>
 
   <tr>
     <td><img src="documentation/quickguide/tutorial/images/create-simulation-15.png" width="512" height="360"> </td>
-    <td> An <i>InformationPopup</i> appears showing that the simiulation has sucessfully finished.
+    <td> An <i>InformationPopup</i> appears showing that the simulation has successfully finished.
          <br><br>
          Press the <i>InformationPopup</i> <b>Show Details</b> <i>Button</i>.                             
     </td>
@@ -285,7 +285,7 @@ platforms it must be installed using a separate <i>svSolver</i> installer downlo
 
   <tr>
     <td><img src="documentation/quickguide/tutorial/images/create-simulation-16.png" width="512" height="360"> </td>
-    <td> A <i>ScrollingTextBox</i> appears showing the simiulation history: time step, CPU time in seconds, 
+    <td> A <i>ScrollingTextBox</i> appears showing the simulation history: time step, CPU time in seconds, 
          measure of the nonlinear residual, etc.
          <br><br>
          Press the <i>InformationPopup</i> <b>Show Details</b> <i>Button</i>.                             
@@ -305,7 +305,7 @@ This section demonstrates how to convert the simulation results into VTK format 
   <caption> Convert simulation results </caption>
   <tr>
     <th> GUI </th>
-    <th> Descriptiton </th>
+    <th> Description </th>
   </tr>
 
   <tr>
@@ -340,7 +340,7 @@ This section demonstrates how to convert the simulation results into VTK format 
 
   <tr>
     <td><img src="documentation/quickguide/tutorial/images/create-simulation-19.png" width="512" height="360"> </td>
-    <td> An <i>InformationPopup</i> appears showing that the simiulation results files have been converted.
+    <td> An <i>InformationPopup</i> appears showing that the simulation results files have been converted.
          <br><br>
          Select the <i>InformationPopup</i> <b>OK</b> <i>Button</i>. 
          <br><br>
@@ -358,7 +358,7 @@ This section demonstrates how to convert the simulation results into VTK format 
          </pre>
          The <b>.vtp</b> files are VTK format files contain results for the mesh surface.  
          The <b>.vtu</b> files are VTK format files contain results for the mesh volume.  
-         The <b>.text</b> files are text files containg velocity and pressue results averaged over inlet and outlet <i>Faces</i>.
+         The <b>.text</b> files are text files containing velocity and pressure results averaged over inlet and outlet <i>Faces</i>.
     </td>
   </tr>
 

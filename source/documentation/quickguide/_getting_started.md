@@ -1,17 +1,17 @@
 # Getting Started 
 
-This document provides begining users with the basic knowledge needed to get started using the SimVascular suite of software
+This document provides beginning users with the basic knowledge needed to get started using the SimVascular suite of software
 applications. The SimVascular suite comprises the following applications
 
 <ul style="list-style-type:none;">
   <li> <b> SimVascular </b> - Interactive image-based modeling pipeline application </li>
-  <li> <b> svZeroDSolver </b> - 0D (limped paramater) solver </li>
+  <li> <b> svZeroDSolver </b> - 0D (limped parameter) solver </li>
   <li> <b> svOneDSolver </b> - 1D fluids solver </li>
   <li> <b> svSolver </b> - Computational fluid dynamics (CFD) </li>
   <li> <b> svFSI </b> - Coupled fluid-solid solver </li>
 </ul>
 
-Throughout this document the interactive image-based modeling pipeline application is refered to as just SimVascular.
+Throughout this document the interactive image-based modeling pipeline application is referred to as just SimVascular.
 Input files for all of the solver applications can be created and optionally executed from the SimVascular GUI.
 
 The <a href="#introduction"> Introduction </a> section describes important SimVascular concepts. 

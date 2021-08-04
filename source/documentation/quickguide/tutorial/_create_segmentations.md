@@ -16,7 +16,7 @@ when image contrast is poor and lumen boundaries are not well defined by variati
 SimVascular supports several methods used to automatically extract lumen boundaries based on variations in image intensity
 values.
 <ul style="list-style-type:none;">
-  <li> <b>Level Set</b> - Use image intensity and gradient to evlove a curve to the edge of a lumen boundary. </li>
+  <li> <b>Level Set</b> - Use image intensity and gradient to evolve a curve to the edge of a lumen boundary. </li>
   <li> <b>Threshold</b> - Use an image intensity value to define a boundary. </li>
 </ul>
 
@@ -35,7 +35,7 @@ for the main aorta and right iliac vessels.
   <caption> Create a <i>Segmentations Tool</i> instance named <b>aorta</b> </caption>
   <tr>
     <th> GUI </th>
-    <th> Descriptiton </th>
+    <th> Description </th>
   </tr>
 
   <tr>
@@ -130,7 +130,7 @@ using the <i>Level Set</i> segmentation method.
   <caption> Create level set segmentations using the <b>aorta</b> <i>Segmentations Tool</i> </caption>
   <tr>
     <th> GUI </th>
-    <th> Descriptiton </th>
+    <th> Description </th>
   </tr>
 
   <tr>
@@ -138,7 +138,7 @@ using the <i>Level Set</i> segmentation method.
     <td> In the <i>Segmentations</i> <i>Tool</i> <i>Panel</i> select the 
          <img src="documentation/quickguide/tutorial/images/seg-gui-levelset.png" width="50" height="18"> button. 
          <br> <br>
-         The <b>LevelSet</b> sub-panel is displayed containing GUI controls used to set parameters controling the
+         The <b>LevelSet</b> sub-panel is displayed containing GUI controls used to set parameters controlling the
          level set computation (<b>Stage 1</b> and <b>Stage 2</b>) and the resulting contour geometry. Select the
          <b>Convert to Spline</b> <i>CheckBox</i> to represent the level set contour as a smooth interpolating
          spline.
@@ -171,7 +171,7 @@ using the <i>Level Set</i> segmentation method.
          a control point alters the shape of the level set contour. The number of control points is changed using the 
          <b>Ctrl. No.</b> <i>TextBox</i>. 
          <br><br>
-         The straight red line with two green markers is the <b>Contor Manipulator</b>. 
+         The straight red line with two green markers is the <b>Contour Manipulator</b>. 
          The center control point is used to translate the contour center in the 2D image plane. The outer control point 
          is used to contract/expand the contour. 
          <br><br>
@@ -205,7 +205,7 @@ using the <i>Level Set</i> segmentation method.
     <td> The surface passing through the contours is visualized by selecting the <b>Lofting Preview</b> <i>CheckBox</i>.
          <br><br>
          This is the surface that will eventually be used to create a solid model so any surface features that would 
-         lead to a poor model (e.g. overlappiing regions) should be identified and fixed.
+         lead to a poor model (e.g. overlapping regions) should be identified and fixed.
     </td>
   </tr>
 </table> 
@@ -221,7 +221,7 @@ for the aorta/right iliac bifurcation to the end of the left iliac artery.
   <caption> Create a <i>Segmentations Tool</i> instance named <b>left-iliac</b> </caption>
   <tr>
     <th> GUI </th>
-    <th> Descriptiton </th>
+    <th> Description </th>
   </tr>
 
   <tr>
@@ -278,7 +278,7 @@ using the <i>Level Set</i> segmentation method.
   <caption> Create level set segmentations using the <b>left-iliac</b> <i>Segmentations Tool</i> </caption>
   <tr>
     <th> GUI </th>
-    <th> Descriptiton </th>
+    <th> Description </th>
   </tr>
 
   <tr>
@@ -286,7 +286,7 @@ using the <i>Level Set</i> segmentation method.
     <td> In the <i>Segmentations</i> <i>Tool</i> <i>Panel</i> select the
          <img src="documentation/quickguide/tutorial/images/seg-gui-levelset.png" width="50" height="18"> button.
          <br> <br>
-         The <b>LevelSet</b> sub-panel is displayed containing GUI controls used to set parameters controling the
+         The <b>LevelSet</b> sub-panel is displayed containing GUI controls used to set parameters controlling the
          level set computation (<b>Stage 1</b> and <b>Stage 2</b>) and the resulting contour geometry. Select the
          <b>Convert to Spline</b> <i>CheckBox</i> to represent the level set contour as a smooth interpolating
          spline.
@@ -309,7 +309,7 @@ using the <i>Level Set</i> segmentation method.
     <td> The surface passing through the contours is visualized by selecting the <b>Lofting Preview</b> <i>CheckBox</i>.
          <br><br>
          This is the surface that will eventually be used to create a solid model so any surface features that would
-         lead to a poor model (e.g. overlappiing regions) should be identified and fixed.
+         lead to a poor model (e.g. overlapping regions) should be identified and fixed.
     </td>
   </tr>
 
@@ -326,7 +326,7 @@ using the <i>Level Set</i> segmentation method.
 
   <tr>
     <td><img src="documentation/quickguide/tutorial/images/create-left-iliac-seg-5.png" width="512" height="360"> </td>
-    <td> Select the outer control point of the <b>Contor Manipulator</b> to reduce the size of the first contour until
+    <td> Select the outer control point of the <b>Contour Manipulator</b> to reduce the size of the first contour until
          it completely fits in the </b>aorta</b>.
 
          <br><br>

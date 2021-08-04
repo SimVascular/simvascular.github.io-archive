@@ -9,7 +9,7 @@ directory on disk using the location and name provided by the user when creating
   <caption> Creating a <i>Project</i> </caption>
   <tr>
     <th> GUI Action </th>
-    <th> Descriptiton </th>
+    <th> Description </th>
   </tr>
 
   <tr>
@@ -19,7 +19,7 @@ directory on disk using the location and name provided by the user when creating
 
   <tr>
     <td><img src="documentation/quickguide/tutorial/images/create-proj-2.png" width="512" height="360"> </td>
-    <td> Enter <b>Tutoral</b> for the <i>Project</i> name in the <b>Project Name</b> <i>TextBox</i>. <br><br>
+    <td> Enter <b>Tutorial</b> for the <i>Project</i> name in the <b>Project Name</b> <i>TextBox</i>. <br><br>
          Enter <b>/Users/Shared</b> for the name of the directory to store the project in the <b>Create in:</b> <i>TextBox</i>. <br><br>
          Press the <b>OK</b> <i>Button</i>.
     </td>

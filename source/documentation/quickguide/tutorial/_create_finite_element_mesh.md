@@ -10,12 +10,12 @@ and speed of the simulation process.
 <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #d0d0d0; border-left: 6px solid #d0d0d0">
 <i>Modeling</i> and <i>Meshing</i> are typically the most time consuming steps in the image-based modeling pipeline.
 It often takes multiple iterations between the <i>Modeling</i> and <i>Meshes Tools</i> to obtain a model that can
-be succesfully meshed and suitable for a CFD simulation.
+be successfully meshed and suitable for a CFD simulation.
 </div>
 
 <br>
 The following sections demonstrate how to create a finite element mesh from the <b>aorta-iliacs</b> <i>PolyData</i> solid model 
-using the <i>TetGen</i> mesh generation software. A detailed discusion about mesh generation can be found in the SimVascular
+using the <i>TetGen</i> mesh generation software. A detailed discussion about mesh generation can be found in the SimVascular
 <a href="http://simvascular.github.io/docsMeshing.html">Meshing Guide</a> documentation.
 
 <h3 id="tutorial_create_mesh_1"> Create an instance of a <i>Meshes Tool</i> for the <b>aorta-iliacs</b> model.  </h3>
@@ -26,7 +26,7 @@ Create an instance of a <i>Meshes Tool</i> named <b>aorta-iliacs</b> used to cre
   <caption> Create a <i>Meshes Tool</i> instance named <b>aorta-iliacs</b> </caption>
   <tr>
     <th> GUI </th>
-    <th> Descriptiton </th>
+    <th> Description </th>
   </tr>
 
   <tr>
@@ -81,7 +81,7 @@ The section demonstrates how to generate a finite element mesh from the <b>aorta
   <caption> Generate a mesh from the <b>aorta-iliacs</b> model </caption>
   <tr>
     <th> GUI </th>
-    <th> Descriptiton </th>
+    <th> Description </th>
   </tr>
 
   <tr>
@@ -90,16 +90,16 @@ The section demonstrates how to generate a finite element mesh from the <b>aorta
          <br><br>
          <ul style="list-style-type:none;">
            <li> <img src="documentation/quickguide/tutorial/images/mesh-gui-info.png" width="86" height="24"> - Displays a 
-                <i>InformationPopup</i> showing the number of elements generated for the currrent mesh. </li> <br>
+                <i>InformationPopup</i> showing the number of elements generated for the current mesh. </li> <br>
            <li> <img src="documentation/quickguide/tutorial/images/mesh-gui-run.png" width="90" height="23"> - Run the mesh generator. 
                 </li> <br>
            <li> <img src="documentation/quickguide/tutorial/images/mesh-gui-estimate.png" width="73" height="25"> - Estimate the element
                 size used to control mesh resolution. </li> <br>
          </ul>
          <br><br>
-         Select the <img src="documentation/quickguide/tutorial/images/mesh-gui-estimate.png" width="73" height="25"> <i>Buttton</i>.
+         Select the <img src="documentation/quickguide/tutorial/images/mesh-gui-estimate.png" width="73" height="25"> <i>Button</i>.
          <br><br>
-         Select the <img src="documentation/quickguide/tutorial/images/mesh-gui-run.png" width="90" height="23"> <i>Buttton</i>.
+         Select the <img src="documentation/quickguide/tutorial/images/mesh-gui-run.png" width="90" height="23"> <i>Button</i>.
          <br><br>
          Select the <b>Yes</b> <i>Button</i> on the <i>QuestionPopup</i> asking to continue.
     </td>
@@ -120,6 +120,6 @@ The section demonstrates how to generate a finite element mesh from the <b>aorta
 <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #e6e600; border-left: 6px solid #e6e600">
 When opening a <i>Project</i> SimVascular does not automatically read in and display <i>Meshes Tool</i> meshes.
 A mesh must be manually loaded by right clicking on a <i>Data Manager</i> Meshes Data Node</i> and selecting the
-<b>Load/Unload Volue Mesh</b> menu option.
+<b>Load/Unload Volume Mesh</b> menu option.
 </div>
 

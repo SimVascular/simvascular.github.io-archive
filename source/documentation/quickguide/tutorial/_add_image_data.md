@@ -6,7 +6,7 @@ Image data is added to the <i>Project</i> using the <i>Data Manager</i> <i>Image
   <caption> Adding image data to a <i>Project</i> </caption>
   <tr>
     <th> GUI </th>
-    <th> Descriptiton </th>
+    <th> Description </th>
   </tr>
 
   <tr>
@@ -43,7 +43,7 @@ Image data is added to the <i>Project</i> using the <i>Data Manager</i> <i>Image
 
   <tr>
     <td><img src="documentation/quickguide/tutorial/images/add-image-5.png" width="512" height="360"> </td>
-    <td> Press the <b>OK</b> <i>Button</i> to use the default 0.1 scalaing factor. <br><br>
+    <td> Press the <b>OK</b> <i>Button</i> to use the default 0.1 scaling factor. <br><br>
          The image is scaled by 0.1. <br><br>
 
          <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #e6e600; border-left: 6px solid #e6e600">

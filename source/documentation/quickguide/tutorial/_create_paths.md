@@ -17,7 +17,7 @@ and right iliac vessels.
   <caption> Create a <i>Paths Tool</i> instance named <b>aorta</b> </caption>
   <tr>
     <th> GUI </th>
-    <th> Descriptiton </th>
+    <th> Description </th>
   </tr>
 
   <tr>
@@ -51,7 +51,7 @@ and right iliac vessels.
     <td> Double-click on the <i>Data Manager</i> <b>Paths / aorta</b> <i>Data Node</i> with the left mouse button to bring 
          up the <i>SV Path Planning Panel</i>. <br><br>
          Placing the mouse cursor over each GUI control in the <i>SV Path Planning Panel</i> displays a brief description
-         exlaining what the conrol does.<br><br>
+         explaining what the control does.<br><br>
          Some GUI controls: <br><br>
          <ul style="list-style-type:none;">
              <li> <img src="documentation/quickguide/tutorial/images/path-add-button.png" width="62" height="15"> - Add a <i>Path</i> point 
@@ -80,14 +80,14 @@ The crosshairs are moved using the left mouse button or the <a href="#image_navi
   <caption> Add <i>Path</i> points using the <b>aorta</b> <i>Paths Tool</i> </caption>
   <tr>
     <th> GUI </th>
-    <th> Descriptiton </th>
+    <th> Description </th>
   </tr>
 
   <tr>
     <td><img src="documentation/quickguide/tutorial/images/create-path-5.png" width="512" height="360"> </td>
     <td> Using the left mouse button move the crosshairs in the <i>Sagittal 2D View</i> to the top of the aorta. <br><br>
-         Press the <b>Add</b> buttton in the <i>SV Path Planning Panel</i>. <br><br>
-         The seleced <i>Path</i> point is shown as a red marker in the 2D views and as a blue cube in the 3D view.<br><br>
+         Press the <b>Add</b> button in the <i>SV Path Planning Panel</i>. <br><br>
+         The selected <i>Path</i> point is shown as a red marker in the 2D views and as a blue cube in the 3D view.<br><br>
          The coordinates of the point are shown in the <i>SV Path Planning Panel</i> <b>Control Point List</b> <i>Table</i>. 
     </td>
   </tr>
@@ -107,7 +107,7 @@ The crosshairs are moved using the left mouse button or the <a href="#image_navi
   <tr>
     <td><img src="documentation/quickguide/tutorial/images/create-path-7.png" width="512" height="360"> </td>
     <td> Create several more <i>Path</i> points using the left mouse button to move the crosshairs in the 2D views and 
-         pressing the <b>Add</b> buttton. <br><br>
+         pressing the <b>Add</b> button. <br><br>
          The coordinates of the <i>Path</i> points are shown in the <i>SV Path Planning Panel</i> <b>Control Point List</b> <i>Table</i>. <br><br>
          Switch the view to a single 3D view. <br><br>
          The <i>Path</i> points are shown as blue cubes. Move the mouse cursor over a <i>Path</i> point selects it: the <i>Path</i> point 
@@ -140,7 +140,7 @@ aorta/right iliac bifurcation to the end of the left iliac.
   <caption> Create a <i>Paths Tool</i> instance named <b>left-iliac</b> </caption>
   <tr>
     <th> GUI </th>
-    <th> Descriptiton </th>
+    <th> Description </th>
   </tr>
 
   <tr>
@@ -174,7 +174,7 @@ aorta/right iliac bifurcation to the end of the left iliac.
     <td> Double-click on the <i>Data Manager</i> <b>Paths / left-iliac</b> <i>Data Node</i> with the left mouse button to bring 
          up the <i>SV Path Planning Panel</i>. <br><br>
          Placing the mouse cursor over each GUI control in the <i>SV Path Planning Panel</i> displays a brief description
-         exlaining what the control does.<br><br>
+         explaining what the control does.<br><br>
     </td>
   </tr>
 </table>
@@ -198,14 +198,14 @@ when then left iliac is joined with the aorta.
   <caption> Add <i>Path</i> points using the <b>left-iliac</b> <i>Paths Tool</i> </caption>
   <tr>
     <th> GUI </th>
-    <th> Descriptiton </th>
+    <th> Description </th>
   </tr>
 
   <tr>
     <td><img src="documentation/quickguide/tutorial/images/create-path-13.png" width="512" height="360"> </td>
-    <td> Using the left mouse button move the crosshairs to a point iniside the aorta near were it branches into the left 
+    <td> Using the left mouse button move the crosshairs to a point inside the aorta near were it branches into the left 
          and right iliacs. <br><br> 
-         Press the <b>Add</b> buttton in the <i>SV Path Planning Panel</i>. <br><br>
+         Press the <b>Add</b> button in the <i>SV Path Planning Panel</i>. <br><br>
          The coordinates of the point are shown in the <i>SV Path Planning Panel</i> <b>Control Point List</b> <i>Table</i>.
     </td>
   </tr>
@@ -213,7 +213,7 @@ when then left iliac is joined with the aorta.
   <tr>
     <td><img src="documentation/quickguide/tutorial/images/create-path-14.png" width="512" height="360"> </td>
     <td> Create several more <i>Path</i> points using the left mouse button to move the crosshairs in the 2D views and
-         pressing the <b>Add</b> buttton. <br><br>
+         pressing the <b>Add</b> button. <br><br>
          The coordinates of the <i>Path</i> points are shown in the <i>SV Path Planning Panel</i> <b>Control Point List</b> <i>Table</i>. <br><br>
          Switch the view to a single 3D view. <br><br>
          The <i>Path</i> points are shown as blue cubes. Move the mouse cursor over a <i>Path</i> point selects it: the <i>Path</i> point 
