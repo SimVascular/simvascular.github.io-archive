@@ -20,7 +20,7 @@ A visual representation of the pipeline steps (Fig. 1) provides a sense of the (
 <br> <br>
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/quickguide/imgs/sv-pipeline.png">
+  <img class="svImg svImgXl"  src="documentation/quickguide/images/sv-pipeline.png">
   <figcaption class="svCaption">Fig. 1 &nbsp The SimVascular image-based modeling pipeline</figcaption>
 </figure>
 

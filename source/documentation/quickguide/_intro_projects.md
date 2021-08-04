@@ -19,7 +19,7 @@ An example <i>Project</i> directory is shown in Fig. 2. The .msh, .mdl, .pth, .c
 storing values for all GUI controls.
 
 <figure>
-  <img class="svImg svImgSm"  src="documentation/quickguide/imgs/project-dir.png">
+  <img class="svImg svImgSm"  src="documentation/quickguide/images/project-dir.png">
   <figcaption class="svCaption">Fig. 2 &nbsp An example of a <i>Project</i> directory showing core <i>Tool</i> 
       <b>Images</b>, <b>Segmentations</b>, <b>Models</b>, <b>Meshes</b>, <b>Simulations</b>, <b>svFSI</b>, and 
       <b>ROMSimulations</b> sub-directories. The data for each <i>Tool</i> instance (e.g. aorta) are shown under each
