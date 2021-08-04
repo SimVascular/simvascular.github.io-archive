@@ -1,4 +1,4 @@
-<h2 id="tutorial_create_simulation">Create Simulation</h2>
+<h2 id="tutorial_create_simulation">Create CFD Simulation</h2>
 
 Computaional fluid dynamics (CFD) simulations permit detailed analyses of blood flow and pressure in patient-specific 
 models of the human vasculature. CFD solvers used for such simulations must accommodate the sophisticated boundary 
@@ -29,7 +29,8 @@ element mesh. A detailed discusion about CFD simulations can be found in the Sim
 
 <h3 id="tutorial_create_simulation_1"> Create an instance of a <i>Simulations Tool</i> for the <b>aorta-iliacs</b> model.  </h3>
 
-Create an instance of a <i>Simulations Tool</i> named <b>aorta-iliacs</b> used to create a model for the main aorta and iliac vessels. 
+Create an instance of a <i>Simulations Tool</i> named <b>aorta-iliacs</b> used to create a CFD simulation of blood flow 
+in the main aorta and iliac vessels. 
 
 <table class="table table-bordered" style="width:100%">
   <caption> Create a <i>Simulations Tool</i> instance named <b>aorta-iliacs</b> </caption>
@@ -259,9 +260,9 @@ platforms it must be installed using a separate <i>svSolver</i> installer downlo
 
   <tr>
     <td><img src="documentation/quickguide/tutorial/images/create-simulation-14.png" width="512" height="360"> </td>
-    <td> A <i>DiaglogBox</i> appears showing that the simiulation files have been created.
+    <td> An <i>InformationPopup</i> appears showing that the simiulation files have been created.
          <br><br>
-         Press the <i>DiaglogBox</i> <b>OK</b> <i>Button</i>. 
+         Press the <i>InformationPopup</i> <b>OK</b> <i>Button</i>. 
          <br><br>
          Press the <b>Run Simulation</b> <i>Button</i>. 
          <br><br>
@@ -276,9 +277,9 @@ platforms it must be installed using a separate <i>svSolver</i> installer downlo
 
   <tr>
     <td><img src="documentation/quickguide/tutorial/images/create-simulation-15.png" width="512" height="360"> </td>
-    <td> A <i>DiaglogBox</i> appears showing that the simiulation has sucessfully finished.
+    <td> An <i>InformationPopup</i> appears showing that the simiulation has sucessfully finished.
          <br><br>
-         Press the <i>DiaglogBox</i> <b>Show Details</b> <i>Button</i>.                             
+         Press the <i>InformationPopup</i> <b>Show Details</b> <i>Button</i>.                             
     </td>
   </tr>
 
@@ -287,9 +288,9 @@ platforms it must be installed using a separate <i>svSolver</i> installer downlo
     <td> A <i>ScrollingTextBox</i> appears showing the simiulation history: time step, CPU time in seconds, 
          measure of the nonlinear residual, etc.
          <br><br>
-         Press the <i>DiaglogBox</i> <b>Show Details</b> <i>Button</i>.                             
+         Press the <i>InformationPopup</i> <b>Show Details</b> <i>Button</i>.                             
          <br><br>
-         Press the <i>DiaglogBox</i> <b>OK</b> <i>Button</i>.                             
+         Press the <i>InformationPopup</i> <b>OK</b> <i>Button</i>.                             
          <br><br>
          Select the <i>ToolBox</i> <b>Convert Results</b> page.
     </td>
@@ -298,8 +299,7 @@ platforms it must be installed using a separate <i>svSolver</i> installer downlo
 
 <br>
 <h3 id="tutorial_create_simulation_5"> Convert simulation results.  </h3>
-This section demonstrates how convert the simulation results into VTK format files for visualization.
-
+This section demonstrates how to convert the simulation results into VTK format files for visualization.
 
 <table class="table table-bordered" style="width:100%">
   <caption> Convert simulation results </caption>
@@ -340,9 +340,9 @@ This section demonstrates how convert the simulation results into VTK format fil
 
   <tr>
     <td><img src="documentation/quickguide/tutorial/images/create-simulation-19.png" width="512" height="360"> </td>
-    <td> A <i>DiaglogBox</i> appears showing that the simiulation results files have been converted.
+    <td> An <i>InformationPopup</i> appears showing that the simiulation results files have been converted.
          <br><br>
-         Select the <i>DiaglogBox</i> <b>OK</b> <i>Button</i>. 
+         Select the <i>InformationPopup</i> <b>OK</b> <i>Button</i>. 
          <br><br>
          Converted simulation results have been written to <b>Tutorial/Simulations/aorta-iliacs/aorta-iliacs-converted-results</b>.
          <pre>

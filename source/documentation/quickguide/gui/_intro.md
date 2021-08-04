@@ -40,9 +40,21 @@ The following table lists the controls used by the SimVascular GUI
   </tr>
 
   <tr>
+    <td> FileBrowser </td>
+    <td> A popup window used to select a file or directory. </td>
+    <td> <img src="documentation/quickguide/gui/images/gui-file-browser.png" width="345" height="186">  </td>
+  </tr>
+
+  <tr>
     <td> Icon </td>
     <td> A small graphical representation of a <i>Tool</i> or file. </td>
     <td> <img src="documentation/quickguide/gui/images/gui-icon.png" width="50" height="40">  </td>
+  </tr>
+
+  <tr>
+    <td> InformationPopup </td>
+    <td> A popup window that provides information to the user. </td>
+    <td> <img src="documentation/quickguide/gui/images/gui-info-popup.png" width="234" height="134">  </td>
   </tr>
 
   <tr>
@@ -55,6 +67,12 @@ The following table lists the controls used by the SimVascular GUI
     <td> MenuBar </td> 
     <td> A thin, horizontal bar containing the text labels for a group of menus. 
     <td> <img src="documentation/quickguide/gui/images/gui-menu-bar.png" width="200" height="20"> </td>
+  </tr>
+
+  <tr>
+    <td> QuestionPopup </td>
+    <td> A popup window that asks the user to respond to a yes/no question. </td>
+    <td> <img src="documentation/quickguide/gui/images/gui-quest-popup.png" width="234" height="134">  </td>
   </tr>
 
   <tr>

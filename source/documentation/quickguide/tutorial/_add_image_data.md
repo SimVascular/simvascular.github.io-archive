@@ -31,13 +31,13 @@ Image data is added to the <i>Project</i> using the <i>Data Manager</i> <i>Image
 
   <tr>
     <td><img src="documentation/quickguide/tutorial/images/add-image-3.png" width="512" height="360"> </td>
-    <td> Press the <b>Yes</b> <i>Button</i> from the <i>DialogBox</i>. <br><br>
+    <td> Press the <b>Yes</b> <i>Button</i> in the <i>QuestionPopup</i>. <br><br>
     </td> 
   </tr>
 
   <tr>
     <td><img src="documentation/quickguide/tutorial/images/add-image-4.png" width="512" height="360"> </td>
-    <td> Press the <b>Yes</b> <i>Button</i> from the <i>DialogBox</i> to scale the image. <br><br>
+    <td> Press the <b>Yes</b> <i>Button</i> in the <i>QuestionPopup</i> to scale the image. <br><br>
     </td> 
   </tr>
 

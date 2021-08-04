@@ -30,7 +30,8 @@ The following sections demonstrate how to create a <i>PolyData</i> solid model f
 A detailed discusion about modeling can be found in the SimVascular
 <a href="http://simvascular.github.io/docsModelGuide.html">Modeling Guide</a> documentation.
 
-<h3 id="tutorial_create_segs_1"> Create an instance of a <i>Models Tool</i> for the aorta and iliacs </h3>
+
+<h3 id="tutorial_create_model_1"> Create an instance of a <i>Models Tool</i> for the aorta and iliacs </h3>
 
 Create an instance of a <i>Models Tool</i> named <b>aorta-iliacs</b> used to create a model for the main aorta and iliac vessels. 
 
@@ -115,6 +116,19 @@ Create an instance of a <i>Models Tool</i> named <b>aorta-iliacs</b> used to cre
     <td> Select the <img src="documentation/quickguide/tutorial/images/3d-view-icon.png" width="13" height="12"> 
          icon in the <i>3D View</i> to change the <i>Display</i> layout to a single 3D view. 
     </td>
+  </tr>
+</table> 
+
+
+<br>
+<h3 id="tutorial_create_model_2"> Create a solid model of the aorta and iliacs </h3>
+This section demonstrates how to create a <i>PolyData</i> solid model from the <b>aorta</b> and <b>left-iliac</b> segmentations. 
+
+<table class="table table-bordered" style="width:100%">
+  <caption> Create a solid model </caption>
+  <tr>
+    <th> GUI </th>
+    <th> Descriptiton </th>
   </tr>
 
   <tr>

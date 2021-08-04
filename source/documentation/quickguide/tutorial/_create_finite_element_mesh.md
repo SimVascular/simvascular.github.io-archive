@@ -71,6 +71,18 @@ Create an instance of a <i>Meshes Tool</i> named <b>aorta-iliacs</b> used to cre
          button to bring up the <i>SV Meshing Panel</i>. 
     </td>
   </tr>
+</table> 
+
+<br>
+<h3 id="tutorial_create_mesh_2"> Generate a finite element meshes from the <b>aorta-iliacs</b> model.</h3>
+The section demonstrates how to generate a finite element mesh from the <b>aorta-iliacs</b> <i>PolyData</i> solid model.
+
+<table class="table table-bordered" style="width:100%">
+  <caption> Generate a mesh from the <b>aorta-iliacs</b> model </caption>
+  <tr>
+    <th> GUI </th>
+    <th> Descriptiton </th>
+  </tr>
 
   <tr>
     <td><img src="documentation/quickguide/tutorial/images/create-mesh-4.png" width="512" height="360"> </td>
@@ -78,7 +90,7 @@ Create an instance of a <i>Meshes Tool</i> named <b>aorta-iliacs</b> used to cre
          <br><br>
          <ul style="list-style-type:none;">
            <li> <img src="documentation/quickguide/tutorial/images/mesh-gui-info.png" width="86" height="24"> - Displays a 
-                <i>DiaglogBox</i> showing the number of elements generated for the currrent mesh. </li> <br>
+                <i>InformationPopup</i> showing the number of elements generated for the currrent mesh. </li> <br>
            <li> <img src="documentation/quickguide/tutorial/images/mesh-gui-run.png" width="90" height="23"> - Run the mesh generator. 
                 </li> <br>
            <li> <img src="documentation/quickguide/tutorial/images/mesh-gui-estimate.png" width="73" height="25"> - Estimate the element
@@ -89,15 +101,15 @@ Create an instance of a <i>Meshes Tool</i> named <b>aorta-iliacs</b> used to cre
          <br><br>
          Select the <img src="documentation/quickguide/tutorial/images/mesh-gui-run.png" width="90" height="23"> <i>Buttton</i>.
          <br><br>
-         Select the <b>Yes</b> <i>Button</i> on the <i>DiaglogBox</i> asking to continue.
+         Select the <b>Yes</b> <i>Button</i> on the <i>QuestionPopup</i> asking to continue.
     </td>
   </tr>
 
   <tr>
     <td><img src="documentation/quickguide/tutorial/images/create-mesh-5.png" width="512" height="360"> </td>
-    <td> A <i>DiaglogBox</i> is displayed showing the number of elements generated.
+    <td> A <i>InformationPopup</i> is displayed showing the number of elements generated.
          <br><br>
-         Press the <i>DiaglogBox</i> <b>OK</b> <i>Button</i>.
+         Press the <i>InformationPopup</i> <b>OK</b> <i>Button</i>.
          <br><br>
          Press the <img src="documentation/quickguide/gui/images/gui-save-icon.png" width="40" height="35">
          icon in the <i>ToolBar</i> to save the <i>Project</i>.
