@@ -1,6 +1,6 @@
 ## Solver Parameters
 
-There are many parameters for flow solver, but you are only required to set explicitly a few of them. Advanced paramters are optional. To check out the meaning of all the parameters, refer to [appendix](docsFlowSolver.html#solverinp).
+There are many parameters for flow solver, but you are only required to set explicitly a few of them. Advanced parameters are optional. To check out the meaning of all the parameters, refer to [appendix](docsFlowSolver.html#solverinp).
 
 	Number of Timesteps: 200
 	Time Step Size: 0.03

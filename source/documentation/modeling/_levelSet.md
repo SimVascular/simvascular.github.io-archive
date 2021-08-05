@@ -17,7 +17,7 @@ These parameters control the growth and stop criteria of the first stage levelse
 
 ##### Advanced Features
 
-+ **Exponent Factor Rise and Fall** affect the speed of of the level set when rising on an image gradient, or falling.  A ratio of 1:2 is reccomended.
++ **Exponent Factor Rise and Fall** affect the speed of of the level set when rising on an image gradient, or falling.  A ratio of 1:2 is recommended.
 + **Max Iterations** specifies the maximum number of iterations that can be complete before levelset is halted.
 + **Max Error** specifies the maximum RMS error for the levelset stop criteria.
 
@@ -25,8 +25,8 @@ These parameters control the growth and stop criteria of the first stage levelse
 
 Stage 2 level set is intended to provide a smooth, accurate contour based on the results of stage 1.
 
-+ **Blur** parameters control the image blur on the feature image and the advection image. Similar to what discussed for stage 1, inceasing this value on images subject to a significant noise level may improve the accuracy of the resulting segmentation. Increased image blur will decrease precision, for this reason it is recommended that blur settings be lower in stage 2 than in stage 1.
-+ **Kupp** and **Klow** specifies the maximum tolerable curvature. Unlike stage 1, where there is a equilbrium curvature, stage 2 has a specific allowable range for curvature.  When the curvature is too low the level set will grow/shrink the front to obtain a allowable curvature. <font color="orange">**WARNING:**</font> If Klow is set too high, it may result in overshoot.
++ **Blur** parameters control the image blur on the feature image and the advection image. Similar to what discussed for stage 1, increasing this value on images subject to a significant noise level may improve the accuracy of the resulting segmentation. Increased image blur will decrease precision, for this reason it is recommended that blur settings be lower in stage 2 than in stage 1.
++ **Kupp** and **Klow** specifies the maximum tolerable curvature. Unlike stage 1, where there is a equilibrium curvature, stage 2 has a specific allowable range for curvature.  When the curvature is too low the level set will grow/shrink the front to obtain a allowable curvature. <font color="orange">**WARNING:**</font> If Klow is set too high, it may result in overshoot.
 
 ##### Advanced Features
 
@@ -81,7 +81,7 @@ Now let's try to create contours in batch model using levelset.
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-Three more contours are created for reslice positions: 180,210,240,270,300,330,...,600. After batch segmentation, it is good practice to quicly check through them paying attention to possibly unclosed and inaccuate segmentations.
+Three more contours are created for reslice positions: 180,210,240,270,300,330,...,600. After batch segmentation, it is good practice to quickly check through them paying attention to possibly open and inaccurate segmentations.
 
 Here are some helpful hints for checking out your contours that you have created in batch mode:
 

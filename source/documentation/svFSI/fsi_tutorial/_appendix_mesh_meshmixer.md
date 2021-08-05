@@ -2,7 +2,7 @@ In this appendix section, we discuss an alternative method for producing a wall 
 
 ##Creating the mesh for ALE simulations using Meshmixer
 
-To run an FSI simulation we need a mesh for both the structural domain and the fluid domain. These two meshes must have their interficial nodes coincide exactly in order to satisfy the interficial conditions that result from conservation of mass and momentum. The coincident nodes of the fluid mesh are mapped onto the corresponding nodes on the structural mesh and the solution of velocity, displacement, pressure, etc. are treated as equal in the structural and fluid domains.
+To run an FSI simulation we need a mesh for both the structural domain and the fluid domain. These two meshes must have their interfacial nodes coincide exactly in order to satisfy the interfacial conditions that result from conservation of mass and momentum. The coincident nodes of the fluid mesh are mapped onto the corresponding nodes on the structural mesh and the solution of velocity, displacement, pressure, etc. are treated as equal in the structural and fluid domains.
 
 We will now go through the procedure to create such a mesh step by step.
 

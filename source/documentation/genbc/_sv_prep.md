@@ -56,7 +56,7 @@ the **.svpre** file using the **set\_surface\_id\_vtp** command
 </figure>
 
 We need to manually modify the **solver.inp** file to use GenBC. Edit the **solver.inp** file with a text editor and scroll down to 
-the section right below **Step Construction**. You wil see following three commands for Resistance boundary conditions
+the section right below **Step Construction**. You will see following three commands for Resistance boundary conditions
 
 	Number of Resistance Surfaces: 1
 	List of Resistance Surfaces: 3
@@ -70,7 +70,7 @@ command add
 	Find the GenBC Inside the Running Directory: True
 	Number of Timesteps for GenBC Initialization: 0
 
-We next add commands identifyibng the inlet Dirichlet surfaces
+We next add commands identifying the inlet Dirichlet surfaces
 
 	Number of Dirichlet Surfaces: 1
 	List of Dirichlet Surfaces: 2
@@ -79,7 +79,7 @@ The **Number of Dirichlet Surfaces** command specifies the total number of caps 
 defined for GenBC. The **List of Dirichlet Surfaces** is a space-delimited list surface IDs for the Dirichlet boundary conditions.
 For the cylinder model the **inlet** is assigned ID 2. 
 
-We now add a similar commandes for surfaces with Neumann boundary conditios 
+We now add a similar commands for surfaces with Neumann boundary conditions 
 
 	Number of Neumann Surfaces: 1    
 	List of Neumann Surfaces: 3 

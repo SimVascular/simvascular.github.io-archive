@@ -26,7 +26,7 @@ To create a circle (manually):
 	A dialog pops up.
 	Provide values in the suggested format.
 
-The circular coutour has only two control points, one is for shifting and the other is for changing radius.
+The circular contour has only two control points, one is for shifting and the other is for changing radius.
 
 ####Ellipse
 
@@ -51,13 +51,13 @@ To create an ellipse (manually):
 	A dialog pops up.
 	Provide values in the suggested format.
 
-The elliptical coutour has four control points. The two points on the contour line are for adjusting the orientation and size of the major and minor axes.
+The elliptical contour has four control points. The two points on the contour line are for adjusting the orientation and size of the major and minor axes.
 
 
 
 ####Spline Polygon
 
-A spline polyon is composed of multiple points and the adjacent points are connected by a closed spline.
+A spline polygon is composed of multiple points and the adjacent points are connected by a closed spline.
 
 To create a polygon with a spline (interactively):
 

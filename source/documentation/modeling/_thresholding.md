@@ -10,7 +10,7 @@ Now let's use the threshold method to create and add contours to the group.
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-The top new panel is to set a preset threshold value. The other new panel is for postprocessing and batch segmentation.
+The top new panel is to set a preset threshold value. The other new panel is for post-processing and batch segmentation.
 
 To create a contour using Threshold (interactively):
 

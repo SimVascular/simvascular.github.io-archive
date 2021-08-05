@@ -12,7 +12,7 @@ elastix_main.py </a> script is used to perform the registration. It uses uses th
 <a href='https://github.com/SuperElastix/SimpleElastix'>SimpleElastix</a> software for registration.
 
 <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #e6e600; border-left: 6px solid #e6e600">
-For code compatiblty you will need to use <b>SimpleElastix</b> commit 8244e0001f4137514b0f545f1e846910b3dd7769. 
+For code compatibility you will need to use <b>SimpleElastix</b> commit 8244e0001f4137514b0f545f1e846910b3dd7769. 
 </div>
 <br>
 

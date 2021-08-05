@@ -59,16 +59,16 @@ This section lists the available **svPre** commands, the associated parameters a
 <tr>
   <td>zero_pressure_vtp</td>
   <td>(file name)</td>
-  <td>Zero pressure boundary condition will be appied on the element faces provided by the given vtp file</td>
+  <td>Zero pressure boundary condition will be applied on the element faces provided by the given vtp file</td>
 </tr>
 <tr>
   <td>pressure_vtp</td>
   <td>(file name) (double)</td>
-  <td>Prescribed pressure boundary condition will be appied on the element faces provided by the given vtp file</td>
+  <td>Prescribed pressure boundary condition will be applied on the element faces provided by the given vtp file</td>
 </tr>
 </table>
 
-#### Creat BCT file for Inlet
+#### Create BCT file for Inlet
 
 <table class="table table-bordered">
 <thead>
@@ -337,7 +337,7 @@ blood</td>
 <tr>
   <td>wall_displacements_write_vtp</td>
   <td>(file name)</td>
-  <td>Write the displacment to the specified vtp file (displacement.vtp if a file name not provided) for review.</td>
+  <td>Write the displacement to the specified vtp file (displacement.vtp if a file name not provided) for review.</td>
 </tr>
 <tr>
   <td>append_displacements</td>
@@ -364,7 +364,7 @@ blood</td>
 <tr>
   <td>solve_varwall_thickness</td>
   <td>(none)</td>
-  <td>Solve the Laplace problem and determines a variable thinkness distribution in the wall.</td>
+  <td>Solve the Laplace problem and determines a variable thinness distribution in the wall.</td>
 </tr>
 <tr>
   <td>set_surface_E_vtp</td>

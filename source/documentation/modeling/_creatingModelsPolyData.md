@@ -30,11 +30,11 @@ Now a new data node “demo” for the model is created under the data node "Mod
 **Union (Boolean) groups to create model:**
 
 	Click the button "Create Model..."
-	A dialog pops up, showing all avaiable groups
-	Toggle on the checkboxs in the column "Use" for the groups you want
+	A dialog pops up, showing all available groups
+	Toggle on the check boxes in the column "Use" for the groups you want
 	You can also use the table menu to decide whether to use some groups 
 	Number of Sampling Points: (optional for PolyData models)
-	Use Uniform Lofting Parameters (Optional): if no, SimVascular uses the parameters you selected for each group during segmentation; if yes, SimVascular uses the same paramters for all the gourps to create the model.
+	Use Uniform Lofting Parameters (Optional): if no, SimVascular uses the parameters you selected for each group during segmentation; if yes, SimVascular uses the same parameters for all the groups to create the model.
 	Click "OK"
 
 <figure>
@@ -43,7 +43,7 @@ Now a new data node “demo” for the model is created under the data node "Mod
 </figure>
 
 <font color="red">**HELPFUL HINT:** </font> 
-At the end of the Boolean operation, the model is created. The status bar will display the number of free edges and bad cells on the surfaces. Bad cells are denoted by triangles that have more than one neighbor which should not be possible if you have a valid 3D surface. If these numbers are not zero, please report this occurence to the SimVascular development team.
+At the end of the Boolean operation, the model is created. The status bar will display the number of free edges and bad cells on the surfaces. Bad cells are denoted by triangles that have more than one neighbor which should not be possible if you have a valid 3D surface. If these numbers are not zero, please report this occurrence to the SimVascular development team.
 
 
 <figure>
@@ -69,7 +69,7 @@ To union 2D/3D segmentations:
 	All 2D/3D segmentations are listed in the popup dialog
 	Choose those that you would like to union
 
-**More options availale in Data Manager for visualization**
+**More options available in Data Manager for visualization**
 
 Right click the model "demo" in Data Manager, the menu pops up with more options for the model.
 

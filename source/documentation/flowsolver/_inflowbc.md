@@ -1,6 +1,6 @@
 ## Inlet Boundary Condition Specification
 
-Let's first create a simple file to provide inlet flow rates before seting inlet boundary condition. Your problem may have more that one inflow wave form file. In this case, we only have a single flow file (called steady.flow). We put the file in a subfolder "flow-files" under the project folder in the disk.
+Let's first create a simple file to provide inlet flow rates before setting inlet boundary condition. Your problem may have more that one inflow wave form file. In this case, we only have a single flow file (called steady.flow). We put the file in a sub-folder "flow-files" under the project folder in the disk.
 
 The format of the **steady.flow** file is as follows:
 

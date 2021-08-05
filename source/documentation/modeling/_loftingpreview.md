@@ -9,9 +9,9 @@ To check the quality of the contour group, which later will be lofted to create 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-A new data node named "Lofted" for the lofted surface is added under the data node "aorta" for the group. As you add/remove/modify contours, the surface will be udpated automatically.
+A new data node named "Lofted" for the lofted surface is added under the data node "aorta" for the group. As you add/remove/modify contours, the surface will be updated automatically.
 
-<font color="red">**HELPFUL HINT:**</font> This step is especially important for discrete (PolyData) modelling later.If the lofted surface doesn't match the vessle you are modeling, you can change some paramters to improve it.
+<font color="red">**HELPFUL HINT:**</font> This step is especially important for discrete (PolyData) modeling later.If the lofted surface doesn't match the vessel you are modeling, you can change some parameters to improve it.
 
 There are several methods parameters you can change for lofting, or you can just use the default settings.
 
@@ -58,7 +58,7 @@ This is because the segmentations in this region are close together and not quit
 
 Lofting preview can also provides a good way to check the quality of the junction between two vessels. In this example, we have two groups: aorta, right\_iliac. Similarly, follow the instruction above to create a path and contour group for right_iliac. 
 
-Here, for better visualiztion, change the color of the lofted surface of aorta to blue, change the opacity of the image to about 0.6.
+Here, for better visualization, change the color of the lofted surface of aorta to blue, change the opacity of the image to about 0.6.
 
 Now let's check the first contour of right\_iliac. You may find that the first segmentation of right\_iliac looks something like this:
 

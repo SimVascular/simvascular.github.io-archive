@@ -22,7 +22,7 @@ prediction.py </a> Python script. For example
         --image $image_dir \
         --output $output_dir \
         --model $weight_dir \
-        --view  0 1 2 \ # 0 for axial, 1 for coronal, 2 for sagital
+        --view  0 1 2 \ # 0 for axial, 1 for coronal, 2 for sagittal
         --modality ct # ct or mr
 </code></pre>
 

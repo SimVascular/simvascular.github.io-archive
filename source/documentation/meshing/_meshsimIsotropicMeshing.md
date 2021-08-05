@@ -21,4 +21,4 @@ If the mesh is not displayed, clear the window by selecting "Actor"→"Delete Al
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-Now try to change the "Global Max Edge Size" value to generate a mesh with more elements. Note that as you specify lower global max edge size values, SimVasxcular will take longer to generate the mesh. The software might appear as not responding, but should still be working. 
+Now try to change the "Global Max Edge Size" value to generate a mesh with more elements. Note that as you specify lower global max edge size values, SimVascular will take longer to generate the mesh. The software might appear as not responding, but should still be working. 

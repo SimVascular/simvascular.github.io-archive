@@ -39,7 +39,7 @@ To create data files:
 	Choose Mesh: cylinder
 	Click the button "Create Data Files for Simulation"
 
-Different from Example 3, the step also solves variable thickness or Young’s modulus, and assign them to the wall, instead of giving uniform thickness or Young’s modulus. varwallprop.vtp and displacment.vtp are created, which show the thickness and Young's modulus, and initial displacement, respectively:
+Different from Example 3, the step also solves variable thickness or Young’s modulus, and assign them to the wall, instead of giving uniform thickness or Young’s modulus. varwallprop.vtp and displacement.vtp are created, which show the thickness and Young's modulus, and initial displacement, respectively:
 
 <figure>
   <img class="svImg svImgLg" src="documentation/flowsolver/imgs/varwallprop_paraview.png">
@@ -49,7 +49,7 @@ Different from Example 3, the step also solves variable thickness or Young’s m
 
 <figure>
   <img class="svImg svImgLg" src="documentation/flowsolver/imgs/disp_varwall_paraview.png">
-  <figcaption class="svCaption" >Initila Displacement in displacement.vtp </figcaption>
+  <figcaption class="svCaption" >Initial Displacement in displacement.vtp </figcaption>
 </figure>
 
 Similarly to Example 3, run the job and convert the results.

@@ -1,6 +1,6 @@
 ##Create the fluid domain mesh
 
-When making the mesh for the fluid domain, we need to ensure that the nodes at the interface between the structural and fluid domains coincide. We will thus use the surface mesh of the inner wall of the solid domain that we just created in the previous step. You will find it in the exported mesh in the subdirectory “mesh-surfaces” of your exported solid mesh. If you used the suggested naming convention from the previous step, this inner wall will be named “wall_inner”.
+When making the mesh for the fluid domain, we need to ensure that the nodes at the interface between the structural and fluid domains coincide. We will thus use the surface mesh of the inner wall of the solid domain that we just created in the previous step. You will find it in the exported mesh in the sub-directory “mesh-surfaces” of your exported solid mesh. If you used the suggested naming convention from the previous step, this inner wall will be named “wall_inner”.
 
 1. Import the interfacial mesh of the solid domain by right-clicking "Models" in the SV Data Manager, then click "Import Solid Model". Select the surface representing the interface between the structural and fluid domains (i.e. the "inner wall" of your structural domain mesh). Rename it as you wish.
 

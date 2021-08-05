@@ -265,7 +265,7 @@ SimVascular toolbar to open the **3D Level Set Tool** panel. Select the <i>Seeds
 
 <br>
 <b>Step 3 - Create a start seed at the top of the aorta</b> <br>
-Move the crosshairs in the 2D Saggital window to the top of the aorta, then move the crosshairs in the 2D Axial window to
+Move the crosshairs in the 2D Sagittal window to the top of the aorta, then move the crosshairs in the 2D Axial window to
 the center of the aorta. Press the <i>S</i> key to create a start seed; it is displayed as a green sphere.
 <figure>
 <img class="svImg svImgXl" src="documentation/modeling/imgs/3d-level-set/example-1/fig-3.png">
@@ -273,7 +273,7 @@ the center of the aorta. Press the <i>S</i> key to create a start seed; it is di
 
 <br>
 <b>Step 4 - Create end seeds for the left and right iliacs</b> <br>
-Move the crosshairs in the 2D Saggital window down until the iliac arteries can be seen in the 2D Axial window. Move the crosshairs 
+Move the crosshairs in the 2D Sagittal window down until the iliac arteries can be seen in the 2D Axial window. Move the crosshairs 
 in the 2D Axial window to the center of the left iliac and press the <i>E</i> key to create an end seed.  
 Move the crosshairs in the 2D Axial window to the center of the right iliac and press the <i>E</i> key to create another end seed.
 The end seeds are displayed as a red spheres.

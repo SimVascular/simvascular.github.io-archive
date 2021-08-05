@@ -36,13 +36,13 @@ This section discusses the options available in the **solver.inp** file.
   <td>Time Varying Boundary Conditions From File</td>
   <td>(True)</td>
   <td>True,False</td>
-  <td>If the <b>bct.dat</b> file was created containg prescribed velocity at the inlet (this will be the case for most simulations), this option should be set to <b>True</b>.</td>
+  <td>If the <b>bct.dat</b> file was created containing prescribed velocity at the inlet (this will be the case for most simulations), this option should be set to <b>True</b>.</td>
 </tr>
 <tr>
   <td>BCT File Type</td>
   <td>(DAT) </td>
   <td>DAT,VTP</td>
-  <td>This entry tells the solver to read inflwo boundary conditions from <b>bct.dat</b> or <b>bct.vtp</b>.</td>
+  <td>This entry tells the solver to read inflow boundary conditions from <b>bct.dat</b> or <b>bct.vtp</b>.</td>
 </tr>
 <tr>
   <td>Number of BCT Files</td>
@@ -214,7 +214,7 @@ This section discusses the options available in the **solver.inp** file.
   <td>Apply Wall Deformation</td>
   <td>(False)</td>
   <td>True,False</td>
-  <td>Decide whether to udpate wall coordinates for deformable wall during wall stress calculation</td>
+  <td>Decide whether to update wall coordinates for deformable wall during wall stress calculation</td>
 </tr>
 </table>
 
@@ -244,7 +244,7 @@ This section discusses the options available in the **solver.inp** file.
   <td>Maximum Number of Iterations for svLS NS Solver</td>
   <td>(1)</td>
   <td>(integer)</td>
-  <td>Maximum number of iterations for the full Navier-Stokes solver. Use 10 for pulsatible flow, or deformable wall casese</td>
+  <td>Maximum number of iterations for the full Navier-Stokes solver. Use 10 for pulsatile flow, or deformable wall cases</td>
 </tr>
 <tr>
   <td>Maximum Number of Iterations for svLS Momentum Loop</td>
@@ -266,7 +266,7 @@ This section discusses the options available in the **solver.inp** file.
 </tr>
 </table>
 
-**WARNING:** For simulations of deformable vessels these defaults may need to be changed to 10,20,400, respectvely. 
+**WARNING:** For simulations of deformable vessels these defaults may need to be changed to 10,20,400, respectively. 
 
 #### Discretization Control
 
@@ -317,7 +317,7 @@ This section discusses the options available in the **solver.inp** file.
 </tr>
 </table>
 
-#### Cardiovascular Modelling Parameters
+#### Cardiovascular Modeling Parameters
 
 <table class="table table-bordered">
 <thead>
@@ -588,7 +588,7 @@ This section discusses the options available in the **solver.inp** file.
   <td>Thickness of Vessel Wall</td>
   <td>NO DEFAULT</td>
   <td>(double)</td>
-  <td>Uniform thinkness of the vessel wall material</td>
+  <td>Uniform thickness of the vessel wall material</td>
 </tr>
 <tr>
   <td>Young Mod of Vessel Wall</td>

@@ -20,8 +20,8 @@ Now a new data node “demo2” for the model is created under the data node "Mo
 **Union (Boolean) groups to create model:**
 
 	Click the button "Create Model..."
-	A dialog pops up, showing all avaiable groups
-	Toggle on the checkboxs in the column "Use" for the groups you want
+	A dialog pops up, showing all available groups
+	Toggle on the check boxes in the column "Use" for the groups you want
 	You can also use the table menu to decide whether to use some groups 
 	Number of Sampling Points: 20 (default)
 	Click "OK"
@@ -50,7 +50,7 @@ This can work as well. However, you will notice that you may find a slight “bu
 
 **Convert to PolyData Model**
 
-Sometimes, you may want to convert an analytic model to a PolyData model. In this way, you are able to use varisou face/global/local operation to continue edit the model surface.
+Sometimes, you may want to convert an analytic model to a PolyData model. In this way, you are able to use various face/global/local operation to continue edit the model surface.
 
 	Click the button "Convert to PolyData..."
 	Provide a name in the popup dialog

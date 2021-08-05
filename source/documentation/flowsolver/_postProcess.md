@@ -34,7 +34,7 @@ After converting is done, there are also four text files created in the exported
 Other options are also provided:
 
 - **As Single File**, this options combines all the results at different time steps into a single \*.vtp or \*.vtu file. 
-- **Last Step to restart.x.0**, this options combines all the resart files of the last step (200) to a single restart file restart.200.0. which can be used to start a new simulation after renamed as restart.0.1.
+- **Last Step to restart.x.0**, this options combines all the restart files of the last step (200) to a single restart file restart.200.0. which can be used to start a new simulation after renamed as restart.0.1.
  
 ### Visualizing the results in ParaView
 

@@ -48,7 +48,7 @@ We need an additional **rcrt.dat** file containing the RCR parameters that set t
 the outflow face. Copt this file from the **simulation-files** folder to here. 
 
 
-the presover solver script (svpre) is needed to be modified by treating the inlet as a Neunmann face (see steady_rcr.svpre). Thus, to prepare a simulation with a prescribed pressure waveform, we run the presolver with the modified presolver script to generate geombc.dat and restart.0.1 files with surfaces properly tagged. Then we complie the GenBC files (user defined Fortran files) before calling the flow solver.
+the presover solver script (svpre) is needed to be modified by treating the inlet as a Neunmann face (see steady_rcr.svpre). Thus, to prepare a simulation with a prescribed pressure waveform, we run the presolver with the modified presolver script to generate geombc.dat and restart.0.1 files with surfaces properly tagged. Then we compile the GenBC files (user defined Fortran files) before calling the flow solver.
 
-Note that apart from potentially increased computational cost and numerical instability (which might be insignificant), prescribing a pressure waveform doesn't necessarily make flow simulations better agree with clinical target values. So extra adjustments are often needed in order to match target pressures and flow. Don't forget to check resulting inflow when the Nuemann BC (pre-defined pressure or a lumped parameter model defined pressure) is applied to the inlet.
+Note that apart from potentially increased computational cost and numerical instability (which might be insignificant), prescribing a pressure waveform doesn't necessarily make flow simulations better agree with clinical target values. So extra adjustments are often needed in order to match target pressures and flow. Don't forget to check resulting inflow when the Neumann BC (pre-defined pressure or a lumped parameter model defined pressure) is applied to the inlet.
 

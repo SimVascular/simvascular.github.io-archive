@@ -1,6 +1,6 @@
 ### Creating a Path ###
 
-The goal of this exercise is to create a path for the abdominal aorta and the left common and external iliac.  As you will see, you need to create a path (centerline) for each vessel of interest. In **SimVascular**, a path contains two ordered sets of points. One set is "Control Points"; the other set is "Path Points" which define a vessle and are calculated using a spline based on the control points.
+The goal of this exercise is to create a path for the abdominal aorta and the left common and external iliac.  As you will see, you need to create a path (centerline) for each vessel of interest. In **SimVascular**, a path contains two ordered sets of points. One set is "Control Points"; the other set is "Path Points" which define a vessel and are calculated using a spline based on the control points.
 
 <figure>
   <img class="svImg svImgMd"  src="documentation/modeling/imgs/path_planning/pathdefinition.png"> 
@@ -30,7 +30,7 @@ The goal of this exercise is to create a path for the abdominal aorta and the le
 
 There are three options for Subdivision Type. Each option uses a different way to calculate the number (n) of path points between two adjacent control points. Assume the total number of control points is Nc.
 
-**Total Number** (Np): appoximate total number of path points. n=[(Np-1)/(Nc-1)]-1; the actual total number of path ponts Npa=(n+1)*(Nc-1)+1 <br>
+**Total Number** (Np): appoximate total number of path points. n=[(Np-1)/(Nc-1)]-1; the actual total number of path points Npa=(n+1)*(Nc-1)+1 <br>
 
 **Subdivision Number** (Ns): n=Ns-1; Npa=(n+1)*(Nc-1)+1 <br>
 
@@ -43,9 +43,9 @@ Now a new data node “aorta” for the path is created under the data node “P
 	Adding Mode: Smart
 	Move the cursor to Axial view in Display
 	Move the slice to position 475: by scrolling center mouse button or moving Axial slider (in Image Navigator) to 475
-	Right press and move to zoom in to enlarge the vessel cross secton
+	Right press and move to zoom in to enlarge the vessel cross section
 	Method 1: Click at the center of the vessel; Ctrl+A or click the button "Add Smart"
-	Method 2(interactive): Move the cursor to the center of the vessle; Ctrl + Left Click
+	Method 2(interactive): Move the cursor to the center of the vessel; Ctrl + Left Click
 
 A control point is added for the path and should appear under the Control Point List. In Display, the point is shown as a blue or red point, depending on if the point is selected. 
 
@@ -54,7 +54,7 @@ A control point is added for the path and should appear under the Control Point 
 	Move the cursor to the control point; it becomes red(selected) if not selected yet
 	Left press on the point and move 
 
-<font color="red">**HELPFUL HINT:** </font>  Use the three 2D views at the same time to check if the contrl point is really located at the ceter of the vessel.
+<font color="red">**HELPFUL HINT:** </font>  Use the three 2D views at the same time to check if the control point is really located at the center of the vessel.
 
 <font color="red">**HELPFUL HINT:** </font>  The control points may look too large or small in 2D/3D-view windows. You can change the size, to do it:
 	
@@ -86,7 +86,7 @@ Normally SimVascular will insert a control to the path in the right order, but s
 	Before: add the point just before the selected point
 	After: add the point just after the selected point
 
-You can also add a point by manually inputing coordiantes:
+You can also add a point by manually inputting coordinates:
 
 	Click the button "Add Manually"
 	Input coordinates in the popup dialog using the suggested format
@@ -120,12 +120,12 @@ To adjust the position of a control point in the reslice:
 	Move the cursor to the control point in a 2D view 
 	Left press on the point and move 
 
-To add a new control pointin the reslice:
+To add a new control point in the reslice:
 
 	Move the cursor to a 2D view in Display
 	Move the cursor to the center of the vessle; Shift+Left Click
 
-Everytime a point is changed/added, the reslice will updated according the changed path.
+Every time a point is changed/added, the reslice will updated according the changed path.
 
 
 You can change the type of path after created. 

@@ -1,6 +1,6 @@
 #Downloading SimVascular#
 
-1. Go to  <a href="https://simtk.org/project/xml/downloads.xml?group_id=188" target="_blank">SimVascular download webpage</a>.
+1. Go to  <a href="https://simtk.org/project/xml/downloads.xml?group_id=188" target="_blank">SimVascular download web page</a>.
 
 2. Login to SimTK. If you don't have a SimTK account you will need to create one.
 

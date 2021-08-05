@@ -2,11 +2,11 @@ In this appendix section, we discuss how to build svFSI from source.
 
 ##Building svFSI from source
 
-The source code for svFSI includes a build system in cmake. To build from source, one needs compilers for c,c++, fortran, an MPI compiler and runtime, and the lapack and blas libraries. LAPACK and BLAS must be installed in a standard location, which cmake will find automatically. For example, on OSX to install using the package manager brew (see <span>https://brew.sh/</span>) one might run
+The source code for svFSI includes a build system in cmake. To build from source, one needs compilers for c,c++, Fortran, an MPI compiler and runtime, and the lapack and blas libraries. LAPACK and BLAS must be installed in a standard location, which cmake will find automatically. For example, on OSX to install using the package manager brew (see <span>https://brew.sh/</span>) one might run
 
     brew install cmake gcc open-mpi lapack 
 
-or, on ubuntu, to install using apt-get run sudo apt-get install to add the following packages:
+or, on Ubuntu, to install using apt-get run sudo apt-get install to add the following packages:
 
     cmake
     cmake-curses-gui
@@ -36,7 +36,7 @@ This will automatically search for compilers. Follow instructions if necessary. 
 
     make 
 
-This will place the solver binary, called "svFSI" in a directory called svFSI\_build/svFSI-build/bin. This will also create a script svFSI\_build/svFSI-build/mysvfsi. If non-defuault compilers were passed to cmake, then runtime errors can occur, especially relating to libraries. If this occurs, try using the script, which will set paths appropriately. 
+This will place the solver binary, called "svFSI" in a directory called svFSI\_build/svFSI-build/bin. This will also create a script svFSI\_build/svFSI-build/mysvfsi. If non-default compilers were passed to cmake, then runtime errors can occur, especially relating to libraries. If this occurs, try using the script, which will set paths appropriately. 
 
 - Optional Trilinos package
 
@@ -78,7 +78,7 @@ This will create a directories lib/cmake/Trilinos and inside them a file called 
 
     lib/cmake/Trilinos/TrilinosConfig.cmake
 
-If this directory does not exist or is empty, then an error has occured. 
+If this directory does not exist or is empty, then an error has occurred. 
 
 In the svFSI cmake source, change the SV_USE_TRILINOS option to on. This can be found in svFSI/Code/CMake/SimVascularOptions.cmake. 
 
@@ -92,7 +92,7 @@ Run make.
 
     make 
 
-If Trilinos is found you should see output that says "Found Trilinos!" and displays the associated variables. The output should look something like this, wherein the elipsis contain many libraries and packages. 
+If Trilinos is found you should see output that says "Found Trilinos!" and displays the associated variables. The output should look something like this, wherein the ellipsis contain many libraries and packages. 
 
     Found Trilinos!  Here are the details: 
        Trilinos_DIR = ~/Trilinos_build/lib/cmake/Trilinos
@@ -184,7 +184,7 @@ as in
 
         export SV_CUSTOM_PLUGINS=$SV_CUSTOM_PLUGINS:org_sv_gui_qt_svfsi
 
-Finally, if running on linux also set  
+Finally, if running on Linux also set  
 
         LD_LIBRARY_PATH
 
