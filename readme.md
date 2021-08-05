@@ -12,6 +12,7 @@ You should first fork **simvascular.github.io** to your own repository and then 
 
 ```
 $ git clone https://github.com/ktbolt/simvascular.github.io
+$ cd simvascular.github.io
 $ git remote add upstream https://github.com/SimVascular/simvascular.github.io
 $ git remote -v
 origin	https://github.com/ktbolt/simvascular.github.io (fetch)
