@@ -14,7 +14,6 @@ The <a href="https://simtk.org/plugins/phpBB/indexPhpbb.php?group_id=188&pluginn
 resource for seeking answers for specific questions. Searching the <i>Forum</i> can be very helpful for providing tips and solutions
 to any SimVascular quirks and limitations.
 
-Functionality not supported by the SimVascular GUI may be implemented using the <a href="http://simvascular.github.io/docsPythonInterface.html">Python API</a>). 
-
+Functionality not supported by the SimVascular GUI may be implemented using the <a href="http://simvascular.github.io/docsPythonInterface.html">Python API</a>. 
 
 <br> <br> 
