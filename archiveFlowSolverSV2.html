@@ -172,9 +172,9 @@
 <p>Building on the above features, the Marsden lab at UCSD has added additional key functionality enabling efficient and stable solutions with models of the circulatory physiology:</p>
 
 <ul>
-<li><p><a href="/docsRefs.html#refSec2"><strong>Backflow stabilization.</strong></a> This problem usually arises in large vessels that are exposed to backflow in 3D and 2D flow simulations. This phenomenon may be a cause of divergence of the numerical scheme due to bulk reversal of the flow through an outlet, localized areas of flow reversal or use of a boundary 0D circulation model. </p></li>
-<li><p>Custom and efficient <a href="/docsRefs.html#refSec3"><strong>linear solver.</strong></a> Accurate simulation of blood flow in vessels require the repeated solution of linear systems of equations with millions of unknowns. Moreover, use of closed-loop boundary models significantly increases the degree of coupling between boundary degrees of freedoms. The <strong>svLS</strong> linear solver is designed to efficiently handle large cardiovascular simulations with arbitrary boundary conditions and reduce solution times. </p></li>
-<li><p>Multiscale Coupling for <a href="/docsRefs.html#refSec2"><strong>closed loop boundary conditions.</strong></a>  Coupling a three-dimensional finite element solver with a 0D lumped circulation model drastically improves the possibility of realistically simulate patient-specific hemodynamics and phisiology.</p></li>
+<li><p><a href="docsRefs.html#refSec2"><strong>Backflow stabilization.</strong></a> This problem usually arises in large vessels that are exposed to backflow in 3D and 2D flow simulations. This phenomenon may be a cause of divergence of the numerical scheme due to bulk reversal of the flow through an outlet, localized areas of flow reversal or use of a boundary 0D circulation model. </p></li>
+<li><p>Custom and efficient <a href="docsRefs.html#refSec3"><strong>linear solver.</strong></a> Accurate simulation of blood flow in vessels require the repeated solution of linear systems of equations with millions of unknowns. Moreover, use of closed-loop boundary models significantly increases the degree of coupling between boundary degrees of freedoms. The <strong>svLS</strong> linear solver is designed to efficiently handle large cardiovascular simulations with arbitrary boundary conditions and reduce solution times. </p></li>
+<li><p>Multiscale Coupling for <a href="docsRefs.html#refSec2"><strong>closed loop boundary conditions.</strong></a>  Coupling a three-dimensional finite element solver with a 0D lumped circulation model drastically improves the possibility of realistically simulate patient-specific hemodynamics and phisiology.</p></li>
 </ul>
 
 <h3>About this guide</h3>
@@ -191,7 +191,7 @@
 
 <h3>Theory and Implementation</h3>
 
-<p>The theory and implementation details are not covered in this document. For more information about those details, please refer to our <a href="/docsRefs.html">publications page</a>.</p>
+<p>The theory and implementation details are not covered in this document. For more information about those details, please refer to our <a href="docsRefs.html">publications page</a>.</p>
 </section>
     <section id="solverSec2" class="group"><h2>Overview</h2>
 
@@ -340,7 +340,7 @@ $$</p>
 </figure>
 
 <ul>
-<li><p><strong>Coronary boundary conditions</strong>. These conditions simulate what happens at the coronary outlets. The implementation in the <strong>svSolver</strong> follows the derivations in <a href="/docsRefs.html#refSec2">this paper</a>.</p></li>
+<li><p><strong>Coronary boundary conditions</strong>. These conditions simulate what happens at the coronary outlets. The implementation in the <strong>svSolver</strong> follows the derivations in <a href="docsRefs.html#refSec2">this paper</a>.</p></li>
 <li><p><strong>Closed-loop boundary circulation model</strong>. The capability of coupling a 3D finite element model with a lumped parameter model is built into the <strong>svSolver</strong>. Documentation on this feature will be available with later releases of the code. </p></li>
 </ul>
 
@@ -2874,7 +2874,7 @@ The physical meaning of these constants is related to the resistances and capaci
   <figcaption class="svCaption" >Circuit visualization for coronary boundary condition</figcaption>
 </figure>
 
-<p>The following expressions are used in <a href="/docsRefs.html#refSec2">this paper</a>.</p>
+<p>The following expressions are used in <a href="docsRefs.html#refSec2">this paper</a>.</p>
 
 <p>$$
 p_0 = 1,\quad

@@ -53,9 +53,8 @@
                       <b><span class="fa fa-user"></span> User Guides</b>
                     </a>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/SimVascular/SimVascular/wiki/user_simvascular_software_suite_install"><b><span class="fa fa-sign-in fa-rotate-90"></span> Installation</b></a></li>
                       <li role="presentation" class="divider"></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsQuickGuide.html"><b><span class="icon ion-ios7-bolt"></span> Quick Guide</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsQuickGuide.html"><b><span class="icon ion-ios7-bolt"></span> Getting Started</b></a></li>
                       <li role="presentation" class="divider"></li>
                       <li role="presentation"><a role="menuitem" tabindex="-1" href="docsModelGuide.html"><b><span class="icon ion-settings"></span> Modeling</b></a></li>
                       <li role="presentation"><a role="menuitem" tabindex="-1" href="docsMeshing.html"><b><span class="icon ion-ios7-keypad"></span> Meshing</b></a></li>
@@ -65,6 +64,7 @@
                       <li role="presentation"><a role="menuitem" tabindex="-1" href="docsROMSimulation.html"><b><span class="icon ion-plus-round"></span> ROM Simulation</b></a></li>
                       <li role="presentation"><a role="menuitem" tabindex="-1" href="docsGenBC.html"><b><span class="icon ion-refresh"></span> GenBC</b></a></li>
                       <li role="presentation"><a role="menuitem" tabindex="-1" href="docsPythonInterface.html"><b><span class="icon ion-refresh"></span> Python Interface</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsReferences.html"><b><span class="icon ion-refresh"></span> References </b></a></li>
                     </ul>
                   </li>
 
@@ -148,39 +148,47 @@
     <!-- ONE COLUMN OF SPACE -->
     <nav class="hidden-xs hidden-sm col-md-2 col-lg-2 bs-docs-sidebar">
 
-
         <ul id="sidebar" class="nav nav-stacked fixed manQuickGuide"> <!--Nav Bar -->
-<p><h3>Quick Guide</h3></p>
-<li><a href="#intro">Introduction</a></li>
-<li><a href="#guilayout">GUI Layout</a></li>
-<li><a href="#datamanager">Data Manager</a></li>
-<li><a href="#dicom">DICOM Images</a></li>
-<li><a href="#display">Display</a></li>
-<li><a href="#imagenavigator">Image Navigator</a></li>
-<li><a href="#volumerendering">Volume Rendering</a></li>
-<li><a href="#projectmanagement">Project Management</a></li>
-<li><a href="#modeling">Geometric Modelling</a>
+<p><h3>Getting Started</h3></p>
+
+<li><a href="#intro">Introduction</a>
   <ul class="nav nav-stacked">
-	<li><a href="#path">Creating a Path</a></li>
-	<li><a href="#segmentation">2D Segmentation</a></li>
-	<li><a href="#3dsegmentation">3D Segmentation</a></li>
-	<li><a href="#polydata">Creating a Model (with PolyData)</a></li>
-	<li><a href="#parasolid">Creating a Model (with <br> OpenCASCADE or Parasolid)</a></li>
+      <li><a href="#intro_pipeline">Modeling Pipeline</a></li>
+      <li><a href="#intro_tools">Tools</a></li>
+      <li><a href="#intro_projects">Projects</a></li>
+      <li><a href="#intro_mitk">MITK Framework</a></li>
   </ul>                
 </li>
-<li><a href="#meshing">Meshing</a>
+
+<li><a href="#gui_intro">Graphical User Interface</a>
   <ul class="nav nav-stacked">
-	<li><a href="#tetgen">Meshing Using TetGen</a></li>
-	<!-- <li><a href="#meshsim">Meshing Using MeshSim</a></li> -->
+      <li><a href="#menubar">MenuBar</a></li>
+      <li><a href="#toolbar">ToolBar</a></li>
+      <li><a href="#gui_display">Display</a></li>
+      <li><a href="#image_windowing">Image Windowing</a></li>
+      <li><a href="#gui_data_manager">Data Manager</a></li>
+      <li><a href="#gui_tool_panel">Tool Panel</a></li>
+      <li><a href="#gui_image_navigator">Image Navigator</a></li>
   </ul>                
 </li>
-<li><a href="#simulation">Simulation</a></li>
-<li><a href="#results">Visualizing Results</a></li>
+
+<li><a href="#tutorial_intro">Tutorial</a>
+  <ul class="nav nav-stacked">
+      <li><a href="#tutorial_starting_simvascular">Starting SimVascular</a></li>
+      <li><a href="#tutorial_create_project">Create a Project</a></li>
+      <li><a href="#tutorial_add_image_data">Add Image Data</a></li>
+      <li><a href="#tutorial_create_paths">Create Vessel Paths</a></li>
+      <li><a href="#tutorial_create_segmentations">Create Segmentations</a></li>
+      <li><a href="#tutorial_create_solid_model">Create Solid Model</a></li>
+      <li><a href="#tutorial_create_finite_element_mesh">Create Finite Element Mesh</a></li>
+      <li><a href="#tutorial_create_simulation">Create CFD Simulation</a></li>
+      <li><a href="#tutorial_summary">Summary</a></li>
+  </ul>                
+</li>
 
 <h3>Download</h3>
 <a href="https://simtk.org/frs/download_confirm.php/file/5113/DemoProject.zip?group_id=930">Demo Project</a>
 </ul>
-
 
 
 
@@ -198,795 +206,2645 @@
 
       <!-- ACTUAL CONTENT -->
 
+        <div class="manQuickGuide"><section id="getting_started" class="group"><h1>Getting Started</h1>
 
-        <div class="manQuickGuide"><section id="intro" class="group"><h1>Quick Guide</h1>
+<p>This document provides beginning users with the basic knowledge needed to get started using the SimVascular suite of software
+applications. The SimVascular software suite comprises the following applications</p>
 
-<p><strong>Quick Guide</strong>, as a brief tutorial, introduces the GUI and commonly used functions, and teaches users how to visualize medical imaging data, create a model, generate mesh and run simulation with SimVascular for a simple case. It only covers very basic steps for cardiovascular modeling/simulation pipeline.</p>
+<ul style="list-style-type:none;">
+  <li> <b> SimVascular </b> - Interactive image-based modeling pipeline application </li>
+  <li> <b> svZeroDSolver </b> - 0D (lumped parameter) solver </li>
+  <li> <b> svOneDSolver </b> - 1D fluids solver </li>
+  <li> <b> svSolver </b> - Computational fluid dynamics (CFD) solver </li>
+  <li> <b> svFSI </b> - Coupled fluid-solid solver </li>
+</ul>
 
-<h2>Introduction</h2>
+<p>Throughout this document the interactive image-based modeling pipeline application is referred to as just SimVascular.
+Input files for all of the solver applications can be created and optionally executed from the SimVascular GUI.</p>
 
-<!-- After learning with this guide, you can check other guides for more explanation/details and advanced options: [**Imaging Guide**](docsImageGuide.html), [**Modeling Guide**](docsModelGuide.html), [**Meshing Guide**](docsMeshing.html), and **Solver Guide**([**svPre**](docsPresolver.html), [**svSolver**](docsFlowSolver.html)). -->
+<p>The <a href="#introduction"> Introduction </a> section describes important SimVascular concepts. 
+The following <a href="#gui"> GUI </a> section then describes the SimVascular graphical user interface (GUI) and its basic functionality. 
+The <a href="#tutorial"> Tutorial</a> section demonstrates the steps in the SimVascular image-based modeling pipeline, 
+from medical image data segmentation to patient-specific blood flow simulation. A model of an aorta and two iliac 
+arteries is created from medical imaging data.  A finite element mesh is then generated from the model and used in a 
+CFD simulation of blood flow in the aorta and iliac arteries. </p>
 
-<p>Once <strong>SimVascular</strong> has launched, you will see the following main window as below. Please first read Welcome page on the righ part of the main window. Click &ldquo;Welcome Tutorial&rdquo; to learn the main window layout and basic usage of Data Manager, Image Navigator, Display, etc. </p>
+<p>Another useful resource for learning how to use SimVascular are the 
+<a href="https://www.youtube.com/playlist?list=PL1CBZ8Wh-xvSKUsuBA4MM4Jba-psVdxXT">SimVascular Online Tutorials</a>. This series 
+of recent videos demonstrate all the steps in the modeling pipeline presented in the <a href="#tutorial"> Tutorial</a> below. </p>
 
-<figure>
-  <img class="svImg svImgXl"  src="documentation/quickguide/imgs/mainwindow_firsttime.png"> 
-  <figcaption class="svCaption" ></figcaption>
-</figure>
+<p>Images taken of the 
+<a href="https://simtk.org/frs/download_confirm.php/file/5113/DemoProject.zip?group_id=930"> Demo Project </a>
+are used to illustrate certain concepts throughout this document.</p>
 </section>
 
-<section id="guilayout" class="group"><h2>GUI Layout</h2>
+<section id="intro" class="group"><h1 href="#introduction"> Introduction </h1>
 
-<p>The SimVascualr main window is composed of a title, a menubar and toolbars (on the top), a status bar (on the bottom), and tool panels (in the middle). Each tool panel is a container which can include several tools. <strong>You can click a tab to show the corresponding tool, or drag-drop a tag to another place to relocate the tool.</strong></p>
+<p>SimVascular is an interactive application used to created patient-specific geometric models of human vasculature from 3D medical
+imaging data acquired for a specific anatomical region. These models are then used as the basis for blood flow simulations using 
+various numerical methods. The sequence of steps used by SimVascular to do this is called the <i>image-based modeling pipeline</i>. </p>
 
-<figure>
-  <img class="svImg svImgXl"  src="documentation/quickguide/imgs/mainwindow.png"> 
-  <figcaption class="svCaption" ></figcaption>
-</figure>
+<p>The SimVascular graphical user interface (GUI) is used to interactively manage each step in the image-based modeling pipeline. 
+The <a href="#gui"> GUI </a> provides different graphical controls (e.g. buttons) used to input the data required to generate 
+the output (e.g. geometric model) of each step. The display of image and geometrical data in a graphics window can be interactively
+controlled using the mouse. Information from image and geometrical data can also be queried using the mouse and allows selecting,
+for example, a point in 3D space</p>
+</section>
+<section id="intro_pipeline" class="group"><h2>Modeling Pipeline</h2>
 
-<p>The window title shows the names and versions of major external packages used by SimVascular. The status bar shows useful information for users, like the cursor location on the image, messages and process of data operations, computer memory usage, etc.</p>
+<p>The SimVascular image-based modeling pipeline comprises the following steps </p>
+
+<ol>
+  <li> <b>Image visualization</b> - Identify anatomic features in the imaging data </li>
+  <li> <b>Path planning</b> - Vessel centerlines geometry is created using 2D image slices to identify vessel lumens </li>
+  <li> <b>Segmentation</b> - Vessel lumens are segmented from 2D slice probes of 3D image data oriented perpendicular to positions along paths</li>
+  <li> <b>Modeling</b> - A geometric model of a vessel is created by generating a surface fitted to groups of 2D segmentations. Individual
+       vessels are then joined together to form a complete 3D solid model of vascular anatomy. </li>
+  <li> <b>Meshing</b> - A finite element mesh is generated from the 3D solid model </li>
+  <li> <b>Simulation</b> - Perform a finite element computational fluid dynamics (CFD) simulation of blood flow in the vascular anatomy</li> 
+</ol> 
 
 <p><br></p>
 
-<h3>Menubar</h3>
+<p>Each step in the pipeline uses data created by the preceding steps. For example, the <i>Segmentation</i> step uses path geometry created
+in the <i>Path planning</i> step to position and orient 2D image slices used to segment a vessel lumen.</p>
 
-<p>The menubar contains menus to acces all functions and tools. The tools specially for cardiovascular modeling/simulation pipeline are listed on the top of Menu &ldquo;Tools&rdquo;.</p>
+<p>A visual representation of the pipeline steps (Fig. 1) provides a sense of the (primarily geometric) data created in each step.
+<br> <br></p>
 
 <figure>
-  <img class="svImg svImgMd"  src="documentation/quickguide/imgs/menus.png"> 
-  <figcaption class="svCaption" ></figcaption>
+  <img class="svImg svImgXl"  src="documentation/quickguide/images/sv-pipeline.png">
+  <figcaption class="svCaption">Fig. 1 &nbsp The SimVascular image-based modeling pipeline</figcaption>
 </figure>
-<pre class="highlight plaintext"><code>Change tool settings: Menu -&gt; Windows -&gt; Preferences...
+</section>
+<section id="intro_tools" class="group"><h2 id="intro_tools"> Tools </h2>
 
-Switch between the preset GUI layouts (Perspectives): Menu -&gt; Windows -&gt; Open Perspective
-</code></pre>
+<p>The SimVascular application provides a set of core <i>Tools</i> (aka plugins) implementing methods for each step in the 
+SimVascular image-based modeling pipeline. The follow lists each core <i>Tool</i> type and primary function</p>
+
+<ol>
+  <li> <b>Paths</b> - Interactively creates paths based on image data 
+  <li> <b>Segmentations</b> - Segments 2D slices along path geometry using various segmentation techniques
+  <li> <b>Models</b> - Generates surface and solid models from segmentations 
+  <li> <b>Meshes</b> - Generates a finite element mesh from a solid model
+  <li> <b>Simulations</b> - Performs a CFD simulation 
+  <li> <b>svFSI</b> - Performs a coupled fluid-solid interaction simulation 
+  <li> <b>ROMSimulations</b> - Performs a reduced-order model (ROM) simulation 
+</ol> 
+
+<p>One or more instances of these <i>Tool</i> types are created to implement an image-based modeling pipeline for a particular
+application. An instance of a <i>Tool</i> is called a <i>Data Node</i>.</p>
+
+<p><i>Tools</i> typically use data from other tools to perform their functions. For example, the <i>Segmentations Tool</i> uses 
+paths created by the <i>Paths Tool</i> to position and orient 2D slices in the 3D image volume. The data used by a 
+<i>Tool</i> is specified by the user.</p>
+
+<p>The geometry created by each <i>Tool</i> is typically stored in <a href="https://vtk.org"> Visualization Toolkit (VTK) </a> 
+VTP and VTU <a href="https://vtk.org/wp-content/uploads/2015/04/file-formats.pdf"> VTK File Formats </a>.</p>
+
+<p>Each <i>Tool</i> has a panel containing GUI controls (i.e. widgets) used to specify the parameters that control tool behavior. 
+A <i>Tool</i> panel is displayed using the <a href="#data_manager"> Data Manager </a>.</p>
+
+<p><br>
+<h3 id="intro_tools_instances"> Creating Tool Instances</h3>
+An instance of a particular <i>Tool</i> type is created using options selected from <a href="#data_manager_menus">Data Manager Menus</a>. 
+Some <i>Tool</i> instances can be created in two ways based on the source of the data used by the <i>Tool</i> </p>
+
+<ol>
+  <li> <b>Internal</b> - Data used by the <i>Tool</i> is obtained from another <i>Tool</i>.<br><br> 
+                         Example: A <i>Models Tool</i> uses segmentations created by a <i>Segmentations Tool</i>.  </li> <br>
+
+  <li> <b>External</b> - Data used by the <i>Tool</i> is read in (imported) from a file.  The instances of <i>Paths</i>, 
+                         <i>Segmentations</i> and <i>Models</i> <i>Tools</i> can be created by reading data from a file. <br><br>
+                         Example: <i>Models Tool</i> geometry is read in from a VTK VTP file.</li> 
+
+</ol>
+</section>
+<section id="intro_projects" class="group"><h2>Projects</h2>
+
+<p>The <i>Tools</i> that comprise a SimVascular pipeline and the data they create are organized as a SimVascular <i>Project</i>.
+<i>Tools</i> are added to a <i>Project</i> interactively using the GUI. Multiple instances of most <i>Tools</i> can be
+added to a <i>Project</i>. </p>
+
+<p>A SimVascular <i>Project</i> is stored in a directory on disk using the location and name provided by the user when creating a <i>Project</i>.
+The <i>Project</i> directory contains sub-directories for each core <i>Tool</i>. Each <i>Tool</i> sub-directory in turn stores data
+created by each <i>Tool</i> instance in files named by the instance. The data stored in <i>Tool</i> sub-directories are typically of
+two types</p>
+
+<ol>
+  <li> <b>Geometry Data</b> - The geometry created by the <i>Tool</i> stored in VTK VTP and VTU format files. 
+  <li> <b>GUI State Data</b> - The values of the <i>Tool</i> panel GUI controls stored in an XML format file. 
+</ol>
 
 <p><br></p>
 
-<h3>Toolbars</h3>
-
-<p>There are three toolbars shown as below. They give quick access to various functions and tools.  </p>
+<p>An example <i>Project</i> directory is shown in Fig. 2. The .msh, .mdl, .pth, .ctgr and .sjb files are XML format files
+storing values for all GUI controls.</p>
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/quickguide/imgs/toolbars.png"> 
+  <img class="svImg svImgSm"  src="documentation/quickguide/images/project-dir.png">
+  <figcaption class="svCaption">Fig. 2 &nbsp An example of a <i>Project</i> directory showing core <i>Tool</i> 
+      <b>Images</b>, <b>Segmentations</b>, <b>Models</b>, <b>Meshes</b>, <b>Simulations</b>, <b>svFSI</b>, and 
+      <b>ROMSimulations</b> sub-directories. The data for each <i>Tool</i> instance (e.g. aorta) are shown under each
+      <i>Tool</i> sub-directory.
+  </figcaption>
+</figure>
+
+<p>The GUI <i> Data Manager  </i> is used to view a <i>Project</i> as a hierarchy of <i>Tools</i> and <i>Data Nodes </i>
+representing individual <i>Tool</i> data: images, paths, segmentations, models, meshes, and simulation jobs. The <i> Data Manager  </i>
+provides an interface to interactively manage adding/removing <i>Tool</i> instances and changing some of the properties used to
+display the geometric data created by a <i>Tool</i> (e.g. color). </p>
+
+<p>The <i> Data Manager  </i> view of the 
+<a href="https://simtk.org/frs/download_confirm.php/file/5113/DemoProject.zip?group_id=930"> Demo Project </a> 
+created following the steps demonstrated in the tutorial section is shown in Fig. 3.</p>
+
+<figure>
+  <img class="svImg svImgSm"  src="documentation/quickguide/gui/images/demo-data-manager.png">
+  <figcaption class="svCaption">Fig. 3 &nbsp An example of a <i>Project</i> displayed in the <i>Data Manager</i>. 
+      Instances of <i>Tools</i> added to the <i>Project</i> (e.g. aorta) are shown below the core <b>Images</b>, <b>Paths</b>, 
+      <b>Segmentations</b>, <b>Models</b>, <b>Meshes</b>, <b>Simulations</b>, <b>svFSI</b>, and 
+      <b>ROMSimulations</b> <b>Tool</b> names.
+  </figcaption>
+</figure>
+
+<p>A more complete discussion of the <i> Data Manager  </i> is given below.
+<br></p>
+</section>
+<section id="intro_mitk" class="group"><h2>MITK Framework</h2>
+
+<p>The SimVascular application uses the <a href="https://www.mitk.org/"> Medical Imaging Interaction Toolkit (MITK)</a>
+framework for medical imaging applications incorporating a plugin architecture. Standard <i>MITK</i> tools have been 
+incorporated into SimVascular: a graphics display window with three orthographic 2D views and one 3D view, 
+image file readers (e.g. DICOM), an image navigator tool for displaying 2D image planes, image processing, and volume rendering.</p>
+
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #e6e600; border-left: 6px solid #e6e600">
+<i>MITK</i> <i>Tools</i> (e.g. image processing) are not integrated with SimVascular <i>Tools</i>. This means that data created by 
+<i>MITK</i> <i>Tools</i> is not accessible from SimVascular <i>Tools</i>. <i>MITK</i> <i>Tools</i> are therefore of limited use in 
+the SimVascular modeling pipeline.
+</div>
+</section>
+
+<section id="gui_intro" class="group"><h1 id="gui"> Graphical User Interface </h1>
+
+<p>The SimVascular GUI provides an interface for interactively managing the input of data needed for each step in the 
+image-based modeling pipeline. The GUI provides different graphical controls (aka widgets) used to input data values 
+and methods to interact with and query image and geometrical data in a graphics window.</p>
+
+<p>The following table lists the controls used by the SimVascular GUI</p>
+
+<table class="table table-bordered" style="width:100%">
+  <tr>
+    <th> Control </th>
+    <th> Description </th>
+    <th> Example </th>
+  </tr>
+
+  <tr>
+    <td> Button </td>
+    <td> A rectangular region that typically displays a text label describing its action. 
+         A button performs an action when pressed (clicked on)</td>
+    <td><img src="documentation/quickguide/gui/images/gui-button.png" width="100" height="25"> </td>
+  </tr>
+
+  <tr>
+    <td> CheckBox </td>
+    <td> A rectangular region that permits the user to make a binary choice, i.e. a choice between one of two possible mutually 
+         exclusive options </td>
+    <td><img src="documentation/quickguide/gui/images/gui-check-box.png" width="100" height="20"> </td>
+  </tr>
+
+  <tr>
+    <td> ComboBox </td>
+    <td> A drop-down list that allows the user to select a value from the list. </td>
+    <td> <img src="documentation/quickguide/gui/images/gui-combo-box.png" width="100" height="30"> </td>
+  </tr>
+
+  <tr>
+    <td> DialogBox </td>
+    <td> A popup window that asks a user for input. </td>
+    <td> <img src="documentation/quickguide/gui/images/gui-dialog.png" width="150" height="125">  </td>
+  </tr>
+
+  <tr>
+    <td> FileBrowser </td>
+    <td> A popup window used to select a file or directory. </td>
+    <td> <img src="documentation/quickguide/gui/images/gui-file-browser.png" width="345" height="186">  </td>
+  </tr>
+
+  <tr>
+    <td> Icon </td>
+    <td> A small graphical representation of a <i>Tool</i> or file. </td>
+    <td> <img src="documentation/quickguide/gui/images/gui-icon.png" width="50" height="40">  </td>
+  </tr>
+
+  <tr>
+    <td> InformationPopup </td>
+    <td> A popup window that provides information to the user. </td>
+    <td> <img src="documentation/quickguide/gui/images/gui-info-popup.png" width="234" height="134">  </td>
+  </tr>
+
+  <tr>
+    <td> Menu </td> 
+    <td> A list of choices offered to the user for selection. </td> 
+    <td> <img src="documentation/quickguide/gui/images/gui-menu.png" width="100" height="150">  </td>
+  </tr>
+
+  <tr>
+    <td> MenuBar </td> 
+    <td> A thin, horizontal bar containing the text labels for a group of menus. 
+    <td> <img src="documentation/quickguide/gui/images/gui-menu-bar.png" width="200" height="20"> </td>
+  </tr>
+
+  <tr>
+    <td> QuestionPopup </td>
+    <td> A popup window that asks the user to respond to a yes/no question. </td>
+    <td> <img src="documentation/quickguide/gui/images/gui-quest-popup.png" width="234" height="134">  </td>
+  </tr>
+
+  <tr>
+    <td> Slider </td> 
+    <td> A horizontal bar used to set a value by moving an indicator on the bar horizontally. 
+         Values can also be entered in the text box. </td>
+    <td> <img src="documentation/quickguide/gui/images/gui-slider.png" width="400" height="25">  </td>
+  </tr>
+
+  <tr>
+    <td> SpinBox </td> 
+    <td> A rectangular region used to choose a value by clicking the up/down buttons or pressing up/down on the keyboard 
+         to increase/decrease the value currently displayed.
+    <td> <img src="documentation/quickguide/gui/images/gui-spin-box.png" width="200" height="25">  </td>
+  </tr>
+
+  <tr>
+    <td> Table </td> 
+    <td> A rectangular region that arranges data (e.g. text or other widgets) into rows and columns of cells. 
+         Data can be modified by selecting a cell in the table. </td>
+    <td> <img src="documentation/quickguide/gui/images/gui-table.png" width="300" height="200">  </td>
+  </tr>
+
+  <tr>
+    <td> TextBox </td> 
+    <td> A rectangular region used to entry string, integer or float values. </td>
+    <td> <img src="documentation/quickguide/gui/images/gui-text-box.png" width="130" height="24">  </td>
+  </tr>
+
+  <tr>
+    <td> ToolBar </td> 
+    <td> A row of buttons at the top of window that controls software functions. </td>
+    <td> <img src="documentation/quickguide/gui/images/gui-tool-bar.png" width="250" height="20">  </td>
+  </tr>
+
+  <tr>
+    <td> ToolBox </td> 
+    <td> An area of a <i>Tool</i> panel that contains multiple pages of GUI widgets identified by a section 
+         of rectangles with text at the Toolbox bottom. <br> Selecting a rectangle shows another page. </td>
+    <td> <img src="documentation/quickguide/gui/images/gui-tool-box.png" width="200" height="300">  </td>
+  </tr>
+
+</table>
+
+<p><br> <br></p>
+
+<p>The SimVascular main window GUI is composed of a <em>MenuBar</em>, <em>ToolBar</em>, <em>Data Manager</em>, <em>Image Navigator</em> and <em>Display</em>. 
+An additional <em>Tool Panel</em> is displayed on the right side of the window when a <i>Tool</i> is active.</p>
+
+<figure>
+  <img class="svImg svImgLg"  src="documentation/quickguide/gui/images/mainwindow.png"> 
+  <figcaption class="svCaption">Fig. 4 &nbsp The SimVascular GUI layout</figcaption>
+</figure>
+
+<p><br></p>
+
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #d0d0d0; border-left: 6px solid #d0d0d0">
+The SimVascular GUI may look slightly different on MacOS, Ubuntu and Windows platforms.
+</div>
+
+<p><br> <br></p>
+</section>
+<section id="menubar" class="group"><h2 id="gui_menubar"> MenuBar </h2>
+
+<p>The <i>MenuBar</i> contains <em>File</em>, <em>Edit</em>, <em>Tools</em>, <em>Window</em> and <em>Help</em> menu items. </p>
+
+<figure>
+  <img class="svImg svImgMd"  src="documentation/quickguide/gui/images/menus.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-<h3>Status Bar</h3>
+<h3 id="gui_menubar_file"> File Menu </h3>
 
-<p>The status bar is a convenient location which provides some useful information about the data you are working on or the status/progress of some ongoing data operation, crosshair center coordiantes, memory usage, etc.</p>
+<p>The <em>File</em> menu is used to create, open and save SimVascular <em>Projects</em>. Creating or opening a <em>Project</em> is typically the first
+step when using SimVascular.</p>
+
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #e6e600; border-left: 6px solid #e6e600">
+It is not recommended to use the <i>Open File</i> menu item because it is used to read files (e.g. image files) outside of 
+a SimVascular <i>Project</i>. The data read in from the file can therefore not be used by any SimVascular tools (e.g. Segmentations). 
+</div>
+
+<p><br></p>
+
+<h3 id="gui_menubar_tools"> Tools Menu </h3>
+
+<p>The <em>Tools</em> menu is used to add a SimVascular <i>Tool</i> to the <i>Tool Panel</i>. It This does not add a new <i>Tool</i> 
+to the <i>Project</i>. The <i>Level Set</i> menu item creates a level set segmentation <i>Tool</i> 
+(see <a href="http://simvascular.github.io/docsModelGuide.html#modeling3DSeg"> 3D Level Set Segmentation </a>). 
+The <i>Python Console</i> menu item opens a panel used to execute Python scripts. 
+(see <a href="http://simvascular.github.io/docsPythonInterface.html#console"> Python Console </a>). 
+The other menu items are mostly MITK tools that are typically not often used. </p>
+</section>
+<section id="toolbar" class="group"><h2 id="gui_toolbar"> ToolBar </h2>
+
+<p>The <i>ToolBar</i> is composed of three sections. The first section contains icons used to save a <i>Project</i>, undo an operation, hide/show
+the <i>Image Navigator</i> and toggle the <b>A</b>xial, <b>S</b>agittal and <b>C</b>oronal image scan slices.</p>
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/quickguide/imgs/statusbar.png"> 
-  <figcaption class="svCaption" ></figcaption>
+  <img class="svImg svImgMd"  src="documentation/quickguide/gui/images/toolbar-1.png"> 
+  <figcaption class="svCaption">The first ToolBar section </figcaption>
+</figure>
+
+<table class="table table-bordered" style="width:100%">
+  <tr>
+    <th> Icon </th>
+    <th> Description </th>
+  </tr>
+
+  <tr>
+    <td> <img src="documentation/quickguide/gui/images/gui-save-icon.png" width="40" height="35"> </td>
+    <td> Save the Project. </td>
+  </tr>
+
+  <tr>
+    <td> <img src="documentation/quickguide/gui/images/gui-undo-icon.png" width="75" height="32"> </td>
+    <td> Undo an operation. </td>
+  </tr>
+
+  <tr>
+    <td> <img src="documentation/quickguide/gui/images/gui-img-nav-icon.png" width="45" height="40"> </td>
+    <td> Hide/show the <i>Image Navigator</i>. </td>
+  </tr>
+
+  <tr>
+    <td> <img src="documentation/quickguide/gui/images/gui-a-plane-icon.png" width="40" height="40"> </td>
+    <td> Hide/show the axial image scan slice. </td>
+  </tr>
+
+  <tr>
+    <td> <img src="documentation/quickguide/gui/images/gui-s-plane-icon.png" width="40" height="40"> </td>
+    <td> Hide/show the sagittal image scan slice. </td>
+  </tr>
+
+  <tr>
+    <td> <img src="documentation/quickguide/gui/images/gui-c-plane-icon.png" width="40" height="40"> </td>
+    <td> Hide/show the coronal image scan slice. </td>
+  </tr>
+
+
+</table> 
+
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #e6e600; border-left: 6px solid #e6e600">
+SimVascular does not automatically save data created by a <i>Tool</i> to the <i>Project</i>. If a <i>Project</i> is closed without
+being saved all newly added data will be lost. 
+</div>
+
+<p><br></p>
+
+<p>The second section duplicates the <em>Tools</em> menu using icons. </p>
+
+<figure>
+  <img class="svImg svImgMd"  src="documentation/quickguide/gui/images/toolbar-2.png"> 
+  <figcaption class="svCaption"> The second ToolBar section</figcaption>
+</figure>
+
+<p>The third second section duplicates the <em>Tools</em> menu using icons. </p>
+
+<figure>
+  <img class="svImg svImgMd"  src="documentation/quickguide/gui/images/toolbar-3.png"> 
+  <figcaption class="svCaption"> The third ToolBar section</figcaption>
 </figure>
 </section>
-<section id="datamanager" class="group"><h2>Data Manager</h2>
+<section id="gui_display" class="group"><h2 id="display"> Display </h2>
 
-<p>Data Manager is normally located on the left side of the main window. It lists and organize all the loaded data in a tree structure. After data is loaded from a file, a data node (representing the data) shows in Data Manager.</p>
+<p>The GUI main window <i>Display</i> area uses a four-window view to display 2D and 3D views of image and geometry data as
+the standard layout. The four-window view provides an interactive environment to view geometry data created by <i>Tools</i> in 
+context with medical image data. This enables matching geometric data (e.g. models) to anatomical features present in the imaging data.</p>
 
-<p>To open a file (loading data into Data Manager):</p>
-<pre class="highlight plaintext"><code>Menu: File → Open File...
-</code></pre>
-
-<p><font color="red"><strong>Attention:</strong> </font> If you load a file by &ldquo;Open File&rdquo;, the data is loaded into Data Manager but not into a SimVascular Project. Therefore, SimVascular&rsquo;s project management doesn&rsquo;t apply to it. But you are still able to use various tools with the data.</p>
-
-<p>To show/hide data (in Display):</p>
-<pre class="highlight plaintext"><code>Toggle on/off the checkbox next to the corresponding data node in Data Manager
-</code></pre>
-
-<p>When you right click the data node, a menu pops up. It gives you many functions to deal with data nodes. Some functions are only available to data nodes in a certain type.</p>
-
-<figure>
-  <img class="svImg svImgSm"  src="documentation/quickguide/imgs/datamanagermenu.png"> 
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<p>The functions for all types of data include:</p>
-
-<p><strong>Global Reinit:</strong> Reset 2D/3D views of Display using the maximum Cartesian space of all the data nodes in Data Manager <br>
-<strong>Save&hellip;:</strong> Save the selected data node to a file <br>
-<strong>Reinit:</strong>  Reset 2D/3D views of Display using the Cartesian space of the selected data node in Data Manager <br>
-<strong>Show only selected nodes:</strong>  Show the selected data nodes in Display <br>
-<strong>Toggle visibility:</strong>  show ( or hide) the selected data nodes in Display if they are hidden (or visible) <br>
-<strong>Details:</strong> show more information about the selected data node in a popup dialog, such as dimensions, spacing, etc. <br>
-<strong>Remove:</strong> remove the data node from Data Manager <br>
-<strong>Opacity:</strong> change the opacity of the selected data node <br>
-<strong>Color:</strong> click the color button to change the color of the selected data node <br>
-<strong>Rename:</strong> Rename the selected data node<br>
-<strong>Copy:</strong> copy the selected data node <br>
-<strong>Paste:</strong> duplicate the copied data node in a folder in Data Manager <br></p>
-
-<p>As shown in the figure above, the functions only for images include:</p>
-
-<p><strong>Texture Interpolation:</strong> Smoothes the image, so that no single pixels are visible anymore. <br>
-<strong>Colormap:</strong> Change the colormap for the image <br></p>
-</section>
-<section id="dicom" class="group"><h2>DICOM Images</h2>
-
-<p>SimVascular provides several ways to load dicom images.</p>
-
-<p>The simplest way is:</p>
-<pre class="highlight plaintext"><code>Menu: File → Open File...
-Select one of dicom image
-SimVascular automatically loads all the images from the same folder
-</code></pre>
-
-<p>The advanced way (providing more info) is to use the tool &ldquo;MITK DICOM Browser&rdquo; <img src="documentation/quickguide/imgs/dicom.png"></p>
-<pre class="highlight plaintext"><code>Toolbar: MITK DICOM Browser
-Go to tab: "Import"
-Click "Scan directory" and select the directory which inlucdes dicome images
-Some info is listed in the tables
-Select an item in one of the tables
-Click "Add to local storage" to add the selected one to the local storage
-Click "View" to add the selected on to Data Manager, which enable you to see the image in Display.
-</code></pre>
-
-<figure>
-  <img class="svImg svImgMd"  src="documentation/quickguide/imgs/dicomplugin.png"> 
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-</section>
-<section id="display" class="group"><h2>Display</h2>
-
-<p>Display is a multi-window tool to show data in 2D/3D views, normally located on the right side of the main window. There are three 2D views and one 3D view. Typically imaging data is a set of scalar values (e.g. integers ranging from 0 to 4096) defined on a structured 3D grid. Note that this data may be acquired in 2D slices and resampled in some fashion. The most common use for (diagnostic) medical imaging data is for visualization. For example, a vascular surgeon may acquire image data on a patient suspected of having vascular disease. Traditionally, most surgeons and radiologists look at sets of 2D slices of image data acquired in a 3D volume. This requires the person to create a mental image of the patient’s 3D anatomy.</p>
+<p>The layout of the <i>Display</i> windows and its GUI components are shown in Fig. 5.</p>
 
 <figure>
   <img class="svImg svImgMd"  src="documentation/quickguide/imgs/display.png"> 
-  <figcaption class="svCaption" ></figcaption>
+  <figcaption class="svCaption"> Fig. 5 &nbsp The standard four-window view comprising three 2D and one 3D views.
 </figure>
 
-<p>The demo data we are using are magnetic resonance images of the aorta and the iliac bifurcation.</p>
+<p>The three 2D views represent the principal planes used in medical imaging to describe the location of anatomical 
+structures defined as </p>
 
-<figure>
-  <img class="svImg svImgMd"  src="documentation/quickguide/imgs/sampleimage.jpg"> 
-  <figcaption class="svCaption" ></figcaption>
-</figure>
+<ul style="list-style-type:none;">
 
-<p>Place your mouse within the 2D View windows in Display. You should find that:</p>
-<pre class="highlight plaintext"><code>Left Mouse Button: moves the crosshairs.
-Right Mouse Button: zooms the 2D view
-Center Mouse Button (scrolling): navigates to a certain image slice
-</code></pre>
+  <li> <b>axial</b> - Divides the body into top and bottom sections. Upper left 2D window. </li>
 
-<p>Place your mouse within the 3D View window in Display. You should find that the:</p>
-<pre class="highlight plaintext"><code>Left Mouse Button: rotates the 3D volume
-Right Mouse Button: zooms the 3D volume
-Center Mouse Button (or ‘shift’ + left mouse button): translates the 3D volume
-</code></pre>
+  <li> <b>coronal</b> - Divides the body into back and front, or posterior and anterior, sections. Upper right 2D window. </li>
 
-<p>When you move the cursor to a window, a icon menu shows up. The menu for the first icon is shown as below. From this  menu, you can show/hide crosshair, or enable/disable crosshair rotation (change image slice orientation).</p>
+  <li> <b>sagittal</b> - Divides the body into left and right sections. Lower left 2D window. </li>
 
-<figure>
-  <img class="svImg svImgSm"  src="documentation/quickguide/imgs/displaymenu1.png"> 
-  <figcaption class="svCaption" ></figcaption>
-</figure>
+</ul>
 
-<p>The second icon is to switch between single-window layout and multi-window layout. The menu for the first icon is shown as below, providing various options to change the layout.</p>
+<p><br></p>
 
-<figure>
-  <img class="svImg svImgSm"  src="documentation/quickguide/imgs/displaymenu2.png"> 
-  <figcaption class="svCaption" ></figcaption>
-</figure>
+<h3 id="navigation"> Navigation </h3>
 
-<h3>Window Level</h3>
+<p>The principal planes slice is represented by a pair of crosshairs the 2D view windows. Selecting a point with the left 
+mouse button in a 2D view centers the crosshair on that point. Pressing the right mouse button and moving the mouse zooms 
+in and out. Scrolling the mouse wheel changes the principal plane slice for which the mouse cursor is in. </p>
 
-<p>The right widget in Display is for “window leveling”, which is a very common technique in viewing image data. Window leveling basically creates a non-linear color mapping function to help distinguish features in the image data. Specifically, the “window” value actually defines the center of the color range, while the level defines the width of the “band” around the center.  For example, the default color map of “[1 166]” corresponds to values of window = 83 and level = 164 as seen in the following color lookup table:</p>
+<p>Changing the principal planes slice changes the values displayed in the <a href="#image_navigator"> Image Navigator </a>
+and vice versa.</p>
 
-<table class="table table-bordered">
-<tr>
-  <th>Scalar value</th>
-  <th>Color</th>
-</tr>
-<tr>
-  <td>1    (window – 0.5*level)</td>
-  <td>Black  (0)</td>
-</tr>
-<tr>
-  <td>83  (window)</td>
-  <td>Gray  (0.5)</td>
-</tr>
-<tr>
-  <td>165  (window + 0.5*level)</td>
-  <td>White  (1)</td>
-</tr>
+<p>The function of the mouse buttons depends on the window the mouse cursor is in.</p>
+
+<table class="table table-bordered" style="width:100%">
+  <caption> <b> 2D View </b> </caption>
+  <tr>
+    <th> Mouse Button </th>
+    <th> Function </th>
+  </tr>
+
+  <tr>
+    <td> Left </td>
+    <td> Moves the crosshairs, select image points and pixel values </td>
+  </tr>
+
+  <tr>
+    <td> Right </td>
+    <td> Zooms the 2D view 
+  </tr>
+
+  <tr>
+    <td> Mouse Wheel Scrolling </td>
+    <td> Changes the principal plane slice
+  </tr>
+
 </table>
 
-<p>Graphically, this is what window leveling does:</p>
-
-<figure>
-  <img class="svImg svImgLg"  src="documentation/quickguide/imgs/windowlevel.jpg"> 
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<p>By changing the window and level values, you can change the brightness and contrast of the image.</p>
-<pre class="highlight plaintext"><code>Change window value: move the vertical slider or modify the value in the first text field
-Change level value: change the length of the slider or modify the value in the second text field
-</code></pre>
-
-<p>To access more options for window level:</p>
-<pre class="highlight plaintext"><code>Right click at the window level widege, a menu pops up.
-</code></pre>
-
-<figure>
-  <img class="svImg svImgSm"  src="documentation/quickguide/imgs/windowlevelmenu.png"> 
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-</section>
-<section id="imagenavigator" class="group"><h2>Image Navigator</h2>
-
-<p>Image Navigator is normally located on the left-bottom of the main window. The volume dataset we are using for this demo is 512 x 64 x 512 voxels. You can change the location of each slice plane by moving the sliders in Image Navigator. The “Sagittal” refers to left/right direction; “Coronal” refers to posterior/anterior direction; “Axial” refers to inferior/superior direction. </p>
-
-<figure>
-  <img class="svImg svImgSm"  src="documentation/quickguide/imgs/imagenavigator.png"> 
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-</section>
-<section id="volumerendering" class="group"><h2>Volume Rendering</h2>
-
-<p>An additional technique gaining popularity is known as 3D volume rendering. The user defines an opacity transfer function (which can be non-linear) and uses ray casting (or hardware acceleration) to render the 3D volume. It should be noted that 3D volume rendering is the most computationally intensive method of visualizing imaging data and usually requires very high-end graphics cards for decent performance.</p>
-
-<p>Doule click the image data node and the tool &ldquo;Volume Visualization&rdquo; shows up. To see the image&rsquo;s volume rendering:</p>
-<pre class="highlight plaintext"><code>Toggle on the checkbox "Volumerendering"
-Choose a preset or click the tab "Threshold" or "Bell" to create a custom transfer function.
-</code></pre>
-
-<figure>
-  <img class="svImg svImgXl"  src="documentation/quickguide/imgs/volumerendering.png"> 
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<p><font color="red"><strong>HELPFUL HINT:</strong> </font> Move the cursor inside the tool, there will be tooltip showing to tell users how to use certain functions.</p>
-</section>
-
-<section id="projectmanagement" class="group"><h2>Project Management</h2>
-
-<p>To work on a modeling/simualtion case, it is required to create a SimVascular (SV) Project first. The project can organize, manage, save all the required data. </p>
-
-<p><strong>To create a project:</strong></p>
-<pre class="highlight plaintext"><code>Menu: File → Create SV Project...
-Provide a name for the new project
-Provde a diretory/folder in which the project will be created
-Click the button “OK”
-</code></pre>
-
-<figure>
-  <img class="svImg svImgMd" src="documentation/quickguide/imgs/newprojectdialog.png"> 
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<p>A new project is created in Data Manager as below. It has no actual data so far. Later, data will be added or created under those data nodes according to data types.</p>
-
-<figure>
-  <img class="svImg svImgSm" src="documentation/quickguide/imgs/emptyproject.png"> 
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<p>If you add/remove data nodes, or change data of a data node inside a SV project, you need to save those changes to the underlying files.</p>
-
-<p><strong>To save SV projects:</strong></p>
-<pre class="highlight plaintext"><code>Method 1: Toolbar -&gt; Save SV Projects
-Method 2: Menu -&gt; File -&gt; Save Sv Projects
-</code></pre>
-
-<p>You can close a project with exiting SimVascular. Make sure you save the project before closing it. After closing a project, it&rsquo;s removed from Data Manager.</p>
-
-<p><strong>To close a SV project:</strong></p>
-<pre class="highlight plaintext"><code>Right click the data node of a SV project in Data Manager
-Click "Close SV Project" in the popup menu
-</code></pre>
-
-<p><strong>Undo/Redo is implemented for data changes.</strong> To restore the data to the previous state, apply Undo/Redo.</p>
-<pre class="highlight plaintext"><code>Undo: Ctrl+Z
-Redo: Ctrl+Y
-</code></pre>
-
-<h3>Add Image to Project</h3>
-
-<p><strong>To use an image for a project, the image is required to be added to the project.</strong></p>
-
-<p><strong>To add a image to a project:</strong></p>
-<pre class="highlight plaintext"><code>Right click the data node "Images" in the project "SVProject" in Data Manager
-Click "Add/Replace Image" in the popup menu
-Choose an image and click "Open"
-"Do you want to copy the image as vti into the project?" Choose Yes or No
-If Yes, "Do you want to scale the image (for unit conversion)?": for instance, 0.1 if from mm to cm.
-</code></pre>
-
-<p>Then the image is added under the data node &ldquo;Images&rdquo;. At the same time, the image is shown in Display. If you choose to copy the image to the project, the project is portable and you can transfer the project to another computer and continue working on it.</p>
-
-<p><font color="red"><strong>HELPFUL HINT:</strong> </font> If you want to add a series of DICOM images to the project, just choose one of them, SimVascular will load all the images in the same folder.</p>
-</section>
-
-<section id="modeling" class="group"><h2>Geometric Modeling</h2>
-
-<p>To create 3-D models, paths along the vessels of interest need to be specified first. 2D segmentations (contours) are then generated along each of the paths. Using these segmentations, a separate solid model is created for each vessel, and these are all unioned together to create the final model. </p>
-
-<figure>
-  <img class="svImg svImgMd"  src="documentation/quickguide/imgs/modelingflowchart.jpg"> 
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-</section>
-<section id="path" class="subgroup"><h3>Creating a Path</h3>
-
-<p>To create a geometric model for a vessel, you need to first create a path, which you can regard as a centerline of the vessel. </p>
-<pre class="highlight plaintext"><code>Right click the data node "Paths" in the project "SVProject" in Data Manager
-Click "Create Path" in the popup menu
-Path Name: aorta
-Subdivision Type: choose "Spacing Based"
-The minimum image spacing is automatically filled for "Spacing"
-</code></pre>
-
-<p>A new path &ldquo;aorta&rdquo; is created under the data node &ldquo;Paths&rdquo; in Data Manager. Double click the data node &ldquo;aorta&rdquo; and the tool &ldquo;SV Path Planning&rdquo; shows up. The new path is empty and has no points so far. To add a control point:</p>
-<pre class="highlight plaintext"><code>Image Navigator: Axial slider: 475
-Place the curson into the Axial 2D View in display
-Right press and move to zoom in
-Method 1: Click at the center of the vessel; Ctrl+A or click the button "Add"
-Method 2(interactive): Move the cursor to the center of the vessle; Ctrl + Left Click
-</code></pre>
-
-<p>A control point is added for the path and should appear under the Control Point List. In Display, the point is shown as a blue or red point, depending on if the point is selected. To interactively move the point:</p>
-<pre class="highlight plaintext"><code>Move the cursor to the control point, it becomes red(selected) if not selected yet
-Left press on the point and move 
-</code></pre>
-
-<figure>
-  <img class="svImg svImgXl"  src="documentation/quickguide/imgs/addpoint.png"> 
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<p>Continue to move down the aorta inferiorly in the Axial 2D View in increments of 25-50 using the Axial slider in Image Navigator, similarly, add the center points to the path. When you reach the bifurcation (the aorta splits into the two iliac arteries), continue your path down the LEFT iliac artery. At the same you can see the path in the 3D View.</p>
-
-<figure>
-  <img class="svImg svImgXl"  src="documentation/quickguide/imgs/addpoint2.png"> 
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<p><font color="red"><strong>Delete a control point</strong> </font> in the path</p>
-<pre class="highlight plaintext"><code>Method 1: select the one you want to remove in the Control Point List and click the button "Delete"
-Method 2(interactive): Move the cursor to the point you want to remove and Ctrl + Right Click
-</code></pre>
-
-<p>Build your path down as far as possible (you should be able to get to around Axial slider position 10 before things get harder to see. </p>
-
-<p><font color="red"><strong>Save SV Projects:</strong> </font> When the data in the project change, remember to save the project by:</p>
-<pre class="highlight plaintext"><code>Click "Save SV Projects" on the tool bar
-</code></pre>
-
-<p>The path will be saved to a file inside the project folder.</p>
-</section>
-<section id="segmentation" class="subgroup"><h3>2-D Segmentation</h3>
-
-<p>Along the path we created, a group of contours of the aorta vessel wall can be defined based on the imaging data. First, create a contour group.</p>
-<pre class="highlight plaintext"><code>Right click the data node "Segmentations" in the project "SVProject" in Data Manager
-Click "Create Contour Group" in the popup menu
-Select Path: aorta
-Group Name: use the path name by default
-</code></pre>
-
-<p>A new group &ldquo;aorta&rdquo; is created under the data node &ldquo;Segmentations&rdquo; in Data Manager. Double click the group data node &ldquo;aorta&rdquo; and the tool &ldquo;SV 2D Segmentation&rdquo; shows up. The window layout of Display changes. The left top view shows image reslice in intensity; the left bottom view shows in gradient magnitude; the right 3D view shows image intensity on the probe plane (the red square) perpendicular to the path. The new group is empty ans has no contours so far. To add create and add a contour point:</p>
-<pre class="highlight plaintext"><code>Click the button "LevelSet"; LevelSet parameter panel appears
-Use the default parameter values in the panel
-Toggle on "Convert to Spline"; Ctrl No. (12) is the number of control points you want the along contour line    
-Click the button "LevelSet" again
-</code></pre>
-
-<p>A contour is created/added for the group and should appear under the Contour List. In Display, the countour is shown in red with 12 green control points on the contour line. Two more control points are inside the contour, one for shifting and the other for scaling.</p>
-
-<figure>
-  <img class="svImg svImgXl"  src="documentation/quickguide/imgs/2dsegmentation.png"> 
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<p>To interactively modify the contour:</p>
-<pre class="highlight plaintext"><code>Move the cursor to a control point, it becomes red(selected)
-Left press on the point and move 
-</code></pre>
-
-<p>Continue to move along the path in increments of about 5-25 using the “Reslice&quot; slider until approximately 285, and define and add contours to the group. You may wish to additionally smooth certain contours, then select the contour and click the button &ldquo;Smooth&rdquo;. Values between 6 and 10 for Fourier number are appropriate for this section of the aorta.
-If a contour is abnormal because the probe plane is at the vessel bifurcation region, just delete this contour and move down the path to get a better contour.</p>
-
-<p><font color="red"><strong>HELPFUL HINT:</strong> </font> When a contour is selected, some geoetry info about this contour is shown in the status bar on the bottom of the main window. The info includes area, perimeter, and the center point coordinates.</p>
-
-<p>To speed up modeling, <strong>SimVascular</strong> can perform batch segmentations.  To perform batch segmentation:</p>
-<pre class="highlight plaintext"><code>Toggle on "Batch Mode"
-Enter "10:30:600" in List.
-Click the button "LevelSet"
-</code></pre>
-
-<p>A number of new contours are created (at reslice positions: 10, 40, 70, 100&hellip;) and added to the group. If some are abnormal, just delete them.</p>
-
-<p>To checkout the group quality for lofting:</p>
-<pre class="highlight plaintext"><code>Toggle on "Lofting Preview"
-</code></pre>
-
-<p>A new data node &ldquo;Lofted&rdquo; for lofting face is created under this group in Data Manager</p>
-
-<figure>
-  <img class="svImg svImgXl"  src="documentation/quickguide/imgs/batchlofting.png"> 
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<p><font color="red"><strong>HELPFUL HINT:</strong> </font> When the data in the project change, remember to save the project by:</p>
-<pre class="highlight plaintext"><code>Click "Save SV Projects" on the tool bar
-</code></pre>
-
-<p>The contour will be saved to a file inside the project folder.</p>
-
-<p>Similarly, we create a path and a group of contours for the right iliac artery. Make sure the path is connected to aorta path (first node is between last two nodes of aorta path)</p>
-</section>
-<section id="3dsegmentation" class="subgroup"><h3>3-D Segmentation</h3>
-
-<p>Besides 2D segmentation, you can also use 3D segmetation, which is faster and better to capture the geometry of vessels, especially for aneurysms, junctions, region. etc. First, let&rsquo;s create a 3D segmentation (empty).</p>
-<pre class="highlight plaintext"><code>Right click the data node "Segmentations" in the project "SVProject" in Data Manager
-Click "Create 3D Segmentation" in the popup menu
-Name: seg3d 
-</code></pre>
-
-<p>A new 3D segmentation &ldquo;seg3d&rdquo; is created under the data node &ldquo;Segmentations&rdquo; in Data Manager. Double click the 3D segmentation node &ldquo;seg3d&rdquo; and the tool &ldquo;SV 3D Segmentation&rdquo; shows up. The method used here is colliding fronts. You need place seed for using this method.</p>
-<pre class="highlight plaintext"><code>Place a starting seed: move image slices using Image Navigator; move the cursor to a proper location in the 3D window:  press 's' to place
-Place an end seed: similary, but use: press 'e' to place
-</code></pre>
-
-<p>To create a 3D segmentation:</p>
-<pre class="highlight plaintext"><code>Place a starting seed (in green) in the upper aorta
-Place a ending seed (in blue) in the bottom of left and right iliac artery, respectively. 
-Threshold Values: choose the lower value as 65 and the upper value as the maximum
-Click the button "Segment"
-</code></pre>
-
-<figure>
-  <img class="svImg svImgXl"  src="documentation/quickguide/imgs/3dsegmentation.png"> 
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<p>A 3D segmentation with two branches is created and shown in Display. </p>
-
-<figure>
-  <img class="svImg svImgSm"  src="documentation/quickguide/imgs/3dsegmentation2.png"> 
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<p>Later we can create a PolyData model using this segmentation and smooth it to get a nice surface.</p>
-
-<p>You can move or delete the seed and re-segment.</p>
-<pre class="highlight plaintext"><code>Move Seed: move the cursor to the seed, press the left mouse button and drag the seed.
-Delete seed: move the cursor to the seed, press key "Delete"
-</code></pre>
-</section>
-<section id="polydata" class="subgroup"><h3>Creating a Model (with PolyData)</h3>
-
-<p>With the two groups of contour segmentation (aorta and right_iliac), we are now able to create a model for the aorta with two branch vessels using PolyData.</p>
-<pre class="highlight plaintext"><code>Right click the data node "Models" in the project "SVProject" in Data Manager
-Click "Create Model" in the popup menu
-Model Type: PolyData
-Model Name: demo
-</code></pre>
-
-<p>A new PolyData model &ldquo;demo&rdquo; is created under the data node &ldquo;Models&rdquo; in Data Manager. Double click the model data node &ldquo;demo&quot;and the tool &quot;SV Modeling&rdquo; shows up. The new model is empty so far. To loft and create the actual model:</p>
-<pre class="highlight plaintext"><code>Click the button "Create Model..."
-Choose and use "aorta" and "right_iliac" in the dialog
-Number of Sampling Points: 40 (optional for PolyData)
-Click the button "OK"
-</code></pre>
-
-<figure>
-  <img class="svImg svImgXl"  src="documentation/quickguide/imgs/modellofting.png"> 
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<p>All the faces of the model are listed under “Face List” tab. Double click a face name to change it and change face type in (wall,cap).  For the inlet and outlets, we change the names as: <em>inflow_aorta</em>, <em>outflow_aorta</em> and <em>outflow_right_iliac</em>. Click a face in the table and the face will highlighted in Display. To select/hightlight a face interactively from 3D view:</p>
-<pre class="highlight plaintext"><code>Move the cursor on a face in 3D View
-Press key "S"
-</code></pre>
-
-<figure>
-  <img class="svImg svImgLg"  src="documentation/quickguide/imgs/highlightface.png"> 
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<p><font color="red"><strong>HELPFUL HINT:</strong> </font> When a face is selected, some geoetry info (area) about this face is shown in the status bar on the bottom of the main window. </p>
-
-<p>Different colors can be assigned to those faces.</p>
-<pre class="highlight plaintext"><code>Double click the table cell in the column "C" in the table.
-Select:wq
-</code></pre>
-
-<p>a color for the corresponding face.</p>
-
-<figure>
-  <img class="svImg svImgLg"  src="documentation/quickguide/imgs/facecolor.png"> 
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<p><font color="red"><strong>HELPFUL HINT:</strong> </font> When the data in the project change, remember to save the project by:</p>
-<pre class="highlight plaintext"><code>Click "Save SV Projects" on the tool bar
-</code></pre>
-
-<p>The model will be saved to files inside the project folder.</p>
-</section>
-<section id="parasolid" class="subgroup"><h3>Creating a Model (with OpenCASCADE or Parasolid)</h3>
-
-<p>With the two groups of contour segmentation (aorta and right_iliac), we are also able to create a model for the aorta with two branch vessels using OpenCASCADE or Parasolid, besides PolyData.</p>
-<pre class="highlight plaintext"><code>Right click the data node "Models" in the project "SVProject" in Data Manager
-Click "Create Model" in the popup menu
-Model Type: OpenCASCADE (or Parasolid)
-Model Name: demo2
-</code></pre>
-
-<p>A new OpenCASCADE model &ldquo;demo2&rdquo; is created under the data node &ldquo;Models&rdquo; in Data Manager. Double click the model data node &ldquo;demo2&quot;and the tool &quot;SV Modeling&rdquo; shows up. The new model is empty so far. To loft and create the actual model:</p>
-<pre class="highlight plaintext"><code>Click the button "Create Model..."
-Choose and use "aorta" and "right_iliac" in the dialog
-Number of Sampling Points: 20 (default)
-Click the button "OK"
-</code></pre>
-
-<p>To get smoother surface for the mode, click the button &ldquo;Change Facet Size..&rdquo; and give a smaller size.</p>
-
-<figure>
-  <img class="svImg svImgLg"  src="documentation/quickguide/imgs/occtlofting.png"> 
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<p>To blend faces:</p>
-<pre class="highlight plaintext"><code>Click the tab "Blend"
-Set radius for the face pair as 0.2
-Click the button "Blend Faces"
-</code></pre>
-
-<figure>
-  <img class="svImg svImgLg"  src="documentation/quickguide/imgs/occtblending.png"> 
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<p><font color="red"><strong>HELPFUL HINT:</strong> </font> When the data in the project change, remember to save the project by:</p>
-<pre class="highlight plaintext"><code>Click "Save SV Projects" on the tool bar
-</code></pre>
-
-<p>The model will be saved to files inside the project folder.</p>
-</section>
-<section id="meshing" class="group"><h2>Meshing</h2>
-
-<p>Discretization, also known as grid or mesh generation, is defined as the process of breaking up a physical domain into smaller sub-domains (usually called elements). Discretization is necessary in order to facilitate the numerical solution of partial differential equations. <strong>SimVascular</strong> provide two ways for meshing.</p>
-</section>
-<section id="tetgen" class="subgroup"><h3>Meshing Using TetGen</h3>
-
-<p>With the solid model &ldquo;demo&rdquo; (or &ldquo;demo2&rdquo;) ready, we are now able to create a mesh for this model using TetGen.</p>
-<pre class="highlight plaintext"><code>Right click the data node "Meshes" in the project "SVProject" in Data Manager
-Click "Create Mesh" in the popup menu
-Select Model: demo (or demo2)
-Mesh Type: TetGen
-Mesh Name: demomesh
-</code></pre>
-
-<p>A new TetGen mesh &ldquo;demomesh&rdquo; is created under the data node &ldquo;Meshes&rdquo; in Data Manager. Double click the mesh data node &ldquo;demomesh&quot;and the tool &quot;SV Meshing&rdquo; shows up. The new model is empty so far. To create the actual mesh:</p>
-<pre class="highlight plaintext"><code>Click the button "Estimate" to provide estimated value for "Global Max Edge Size"
-Use the default parameter values
-Click the button "Run Mesher"
-</code></pre>
-
-<p><font color="red"><strong>HELPFUL HINT:</strong> </font> The estimated edge size is about half of the radius of the smallest cap in the model.</p>
-
-<figure>
-  <img class="svImg svImgXl"  src="documentation/quickguide/imgs/tetgenmesh.png"> 
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<p>Now the mesh is created for the model as above.</p>
-
-<p><font color="red"><strong>HELPFUL HINT:</strong> </font> When the data in the project change, remember to save the project by:</p>
-<pre class="highlight plaintext"><code>Click "Save SV Projects" on the tool bar
-</code></pre>
-
-<p>The mesh will be saved to files inside the project folder.</p>
-</section>
-<!-- <section id="meshsim" class="subgroup"><h3>Meshing Using MeshSim</h3>
-<pre class="highlight plaintext"><code>Tab: MeshSim → Mesh
-Type: Parasolid
-File: demo.xmt_txt
-Global Max Edge Size: 0.3  (absolute)
-Click “Run Mesher”
-“Creating mesh can take a long time. Continue anyway?”: "Yes"
-“Use currently selected meshing options?...”: "Yes"
-</code></pre>
-
-<figure>
-  <img class="svImg svImgXl"  src="documentation/quickguide/imgs/meshsim1.jpg"> 
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<p>Now the mesh is created for the model as below.</p>
-
-<figure>
-  <img class="svImg svImgXl"  src="documentation/quickguide/imgs/meshsim2.jpg"> 
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<p>To output mesh data files (later used for simulation):</p>
-<pre class="highlight plaintext"><code>Click “Write Files”
-</code></pre>
-
-<p>All mesh data files are in the folder <em>mesh-complete</em> under the project folder <em>demo</em>.</p>
-
-<p><font color="red"><strong>HELPFUL HINT:</strong> </font>   You can check more details on <a href="/docsMeshing.html#meshSec2">MeshSim meshing in the Meshing Guide</a>.  </p>
-</section> -->
-<section id="simulation" class="group"><h2>Simulation</h2>
-
-<p>Now we’ll use <strong>SimVascular/Solver</strong> for three-dimensional blood flow numerical simulations (solving Navier-Stokes equations in an arbitrary domain). </p>
-
-<p>With the model &ldquo;demo&rdquo; and the mesh &ldquo;demomesh&rdquo; ready, we are now able to create a job for blood flow simulation.</p>
-<pre class="highlight plaintext"><code>Right click the data node "Simulations" in the project "SVProject" in Data Manager
-Click "Create Simulation Job" in the popup menu
-Select Model: demo
-Job Name: demojob
-</code></pre>
-
-<p>A new job &ldquo;demojob&rdquo; is created under the data node &ldquo;Simulations&rdquo; in Data Manager. Double click the job data node &ldquo;demojob&quot;and the tool &quot;SV Simulation&rdquo; shows up. Now we start to set parameters for the job</p>
-
-<h3>Basic Parameters</h3>
-
-<p>Basic paramters include fluid material properties, cardiac cycle period and initial conditions. Just use the defult values.</p>
-
-<figure>
-  <img class="svImg svImgXl"  src="documentation/quickguide/imgs/basic.png"> 
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<h3>Inlet and Outlet Bcs</h3>
-
-<p>Click &ldquo;Inlets and Outlet BC&rdquo; and the parameter table appears. This model has one inlet &ldquo;inflow_aorta&rdquo; and two outlets &ldquo;outflow_right_iliac&rdquo;, &ldquo;outflow_aorta&rdquo;. Let&rsquo;s set boundary conditions for those faces.</p>
-
-<p>For the inlet: inflow_aorta, we need to prepare a file &ldquo;steady.flow&rdquo; first. It contains the data for the flow rate with respect to time. Here we assume the flow rate is constant.</p>
-
-<p><strong>steady.flow</strong></p>
-<pre class="highlight plaintext"><code>0.0 -100
-1.0 -100
-</code></pre>
-
-<p>To set BC for the inlet:</p>
-<pre class="highlight plaintext"><code>Right click on its line (first line on the table)
-Click "Set BC" on the popup menu; a setting dialog shows
-BC Type: Prescribed Velocities
-Analytic Shape: parabolic
-Point Number: 2 (for constant flow rate, 20 for pulsatile flow rate)
-Fourier Modes: 1 (for constant flow rate, 10 for pulsatile flow rate)
-Period: optional (provide if it's different from the value in Basic Parameters)
-Click the button "..." to select the file "steady.flow for its flow rate
-Click the button "OK"
-</code></pre>
-
-<figure>
-  <img class="svImg svImgSm"  src="documentation/quickguide/imgs/inletbc.png"> 
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<p>To set BC for the outlets (outflow_right_iliac, outflow_aorta):</p>
-<pre class="highlight plaintext"><code>Double click the column "BC Type" on the table
-Choose "Resistance"
-Double click the column "Values" on the table
-Assign 16000
-</code></pre>
-
-<figure>
-  <img class="svImg svImgSm"  src="documentation/quickguide/imgs/outletbc.png"> 
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<p><font color="red"><strong>HELPFUL HINT:</strong> </font> When a cap is selected, some geometry info (area) about this cap is shown in the status bar on the bottom of the main window. </p>
-
-<h3>Wall Properties</h3>
-<pre class="highlight plaintext"><code>Type: Rigid
-</code></pre>
-
-<h3>Solver Parameters</h3>
-
-<p>There are many parameters for flow solver, but only a few is required to set explicitly. Advanced paramters are optional.</p>
-<pre class="highlight plaintext"><code>Number of Timesteps: 100
-Time Step Size: 0.0004
-Number of Timesteps between Restarts: 10
-Step Construction : 2 # standard two iterations, enough for constant  problems.
-</code></pre>
-
-<figure>
-  <img class="svImg svImgSm"  src="documentation/quickguide/imgs/solverparameters.png"> 
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<p><font color="red"><strong>HELPFUL HINT:</strong> </font> Step Construction together with Time Step Size and the quality of the spatial discretization given by the finite element mesh, will completely determine the performance of the linear solver of equations. The better chosen these parameters are, the faster and more accurately our simulation will run.</p>
-
-<h3>Running Simulation</h3>
-
-<p>To run simualtion:</p>
-<pre class="highlight plaintext"><code>Click the button "Create Data Files for Simulation"
-Number of Processes: give the number of cores you need
-Click the button "Run Simulation"
-</code></pre>
-
-<figure>
-  <img class="svImg svImgSm"  src="documentation/quickguide/imgs/runjob.png"> 
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<p>After the simulation is completed, all the simulation result files restart.*<em>.</em>* are in the folder [proj_path]/Simulations/demojob.</p>
-
-<p><font color="red"><strong>HELPFUL HINT:</strong> </font>  If you choose more than one processors, for example, 8 processors are used. <strong>SimVascular</strong> will create a new folder <em>8-procs_case</em> in the folder [proj<em>path]/Simulations/demojob. All the simulation result files restart.*.* are in the folder 8-procs</em>_case.</p>
-
-<h4>Runnning Simulation at Computer Clusters</h4>
-
-<p>You can also export the required data files and upload to a computer cluster to run the simulation. </p>
-
-<p>To export the files:</p>
-<pre class="highlight plaintext"><code>Make sure you have created data files for this job.
-Right click on the job node "demojob" in Data Manager
-Click "Export Data Files"
-Select a directory
-</code></pre>
-
-<p>A folder &ldquo;demojob-sim-files&rdquo; is created, which contains the required files to run the simulation. </p>
-
-<p>To run the simulation at the cluster:</p>
-<pre class="highlight plaintext"><code>Make sure SimVascular flow solver is available on the cluster.
-Upload the folder "demojob-sim-files" to the cluster
-Login the cluster
-Go to the folder "demojob-sim-files"
-Run "mpiexec -n [number of processes] [solver path]/svsolver" or you need create/submit a job file as required by the cluster to run the simulation
-</code></pre>
-
-<p>During the simualtion, result files are saved at the folder &ldquo;demojob-sim-files/[number of processes]]-procs_case/&rdquo;. You can download the files back to your computer and convert them to vtp/vtu files.</p>
-
-<h3>Convert Results</h3>
-
-<p>To convert the simulation result files to .vtp and .vtu files, which we can use to show the results in ParaView.</p>
-<pre class="highlight plaintext"><code>Result Dir:  [proj_path]/Simulations/demojob/*8-procs_\_case* or Click the button "..." to select a directory
-Start: 10
-Stop: 100
-Increment: 10
-Click the button "Convert ..."
-Select a directory for exporting (in this example: [proj_path]/Simulations/demojob/)
-</code></pre>
-
-<figure>
-  <img class="svImg svImgSm"  src="documentation/quickguide/imgs/convertresults.png"> 
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<p>Since it is a steady case, only the last time step is needed. A new folder &ldquo;demojob-converted-results&rdquo; is created and contains the output files all_results_00010.vtp,&hellip;, all_results_00100.vtp, all_results_00010.vtu, &hellip;, all_results_00100.vtu, average_results.vtp.</p>
-</section>
-<section id="results" class="group"><h2>Visualizing Results</h2>
-
-<p>Launch ParaView.</p>
-<pre class="highlight plaintext"><code>Open the file "all_results_00100.vtu" with ParaView.
-Click the button “Apply”
-</code></pre>
-
-<figure>
-  <img class="svImg svImgXl"  src="documentation/quickguide/imgs/result1.png"> 
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<p>The pressure result is displayed in the display window.  In order to visualize the velocities in the lumen, we need to use a volume render visualization technique.</p>
-
-<p>To do this, we must calculate the scalar quantity representing the magnitude of the velocity. </p>
-<pre class="highlight plaintext"><code>Click the calculator tool button
-Result Array Name: vel mag (cm/s)
-Enter "mag(velocity)" just above the calculator pane
-Click the button “Apply”
-Representation: Volume
-</code></pre>
-
-<figure>
-  <img class="svImg svImgXl"  src="documentation/quickguide/imgs/result2.png"> 
-  <figcaption class="svCaption" ></figcaption>
-</figure>
-
-<p>You should get a similar volume rendering result as the figure above. Click the button “Edit” to get different visual effects.
-<br>
-<br>
-<br>
-<br></p>
-</section>
+<table class="table table-bordered" style="width:100%">
+  <caption> <b> 3D View </b> </caption>
+  <tr>
+    <th> Mouse Button </th>
+    <th> Function </th>
+  </tr>
+  <tr>
+    <td> Left </td>
+    <td> Rotates the 3D view </td>
+  </tr>
+
+  <tr>
+    <td> Right </td>
+    <td> Zooms the 3D view 
+  </tr>
+
+  <tr>
+    <td> Shift-left </td>
+    <td> Translates the 3D view 
+  </tr>
+
+</table>
+
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #d0d0d0; border-left: 6px solid #d0d0d0">
+Pressing the <b>F</b> key in the 3D view changes the center of rotation and zoom to be the point under 
+the mouse cursor. 
 </div>
 
+<p><br>
+<h3 id="window_menus"> Window Menus</h3></p>
+
+<p>The three icons 
+<img src="documentation/quickguide/gui/images/display_icon_menu.png" width="70" height="30"> </td> displayed in the upper right 
+corner each window provides options to customize the view and crosshair behavior when selected using the left mouse button. </p>
+
+<table class="table table-bordered" style="width:100%">
+  <tr>
+    <th> Icon </th>
+    <th> Menu or Action </th>
+    <th> Description </th>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/gui/images/window-icon-1.png" width="28" height="24"> </td>
+    <td>
+       <img src="documentation/quickguide/gui/images/window-menu-1.png" width="180" height="180"> 
+    </td>
+    <td> 
+      <ul style="list-style-type:none;"> 
+        <li> <b> Reset view </b> - Resets 1) crosshairs to their default position and 2) viewing transformations (e.g. rotations) </li>
+        <li> <b> Show crosshair </b> - Select to toggle showing crosshairs </li>
+        <li> <b> No crosshair rotation </b> - Select to toggle using crosshairs to position planes orthogonal to image axes </li>
+        <li> <b> Crosshair rotation </b> - Select to toggle using crosshairs to rotate two planes </li>
+        <li> <b> Coupled crosshair rotation </b> - Select to toggle using crosshairs to rotate planes both planes </li>
+        <li> <b> Swivel mode </b> - Select to toggle using crosshairs to rotate planes in about all three axes </li>
+        <li> <img src="documentation/quickguide/gui/images/window-ts-slider.png" width="140" height="30"> 
+             - The <b>T</b>thicker <b>S</b>slices slider controls how many slices around the current one are used for a maximum intensity projection </li>
+
+      </ul> 
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/gui/images/window-icon-2.png" width="28" height="24"> </td>
+    <td> Changes the view layout </td>
+    <td> The view is changed to a full-screen layout for the window and plane the mouse cursor is in
+         When selected it changes to <img src="documentation/quickguide/gui/images/window-icon-4.png" width="28" height="24">
+     </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/gui/images/window-icon-4.png" width="28" height="24"> </td>
+    <td> Changes the view layout </td>
+    <td> Expands the corresponding window to full screen within the four window view </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/gui/images/window-icon-3.png" width="28" height="24"> </td>
+    <td>
+       <img src="documentation/quickguide/gui/images/window-menu-2.png" width="180" height="180"> 
+    </td>
+    <td> 
+      <ul style="list-style-type:none;"> 
+        <li> <b> standard layout </b> - Resets the display to the four-window view  </li>
+        <li> <b> 2D images top, 3D bottom </b> - Sets the display to all three 2D views on top of the 3D view
+        <li> <b> 2D images top, 3D right </b> - Sets the display to all 2D and 3D views on top 
+        <li> <b> Big 3D </b> - Sets the display to a single 3D view
+        <li> <b> Axial plane </b> - Sets the display to a single 2D axial plane view
+        <li> <b> Sagittal plane </b> - Sets the display to a single 2D sagittal plane view
+        <li> <b> Coronal plane </b> - Sets the display to a single 2D coronal plane view
+        <li> <b> Coronal top, 3D bottom </b> - Sets the display to the 2D coronal view on top of the 3D view 
+        <li> <b> Coronal left, 3D right </b> - Sets the display to the 2D coronal view to the left of the 3D view 
+        <li> <b> Sagittal top, Coronal n 3D bottom </b> - Sets the display to the 2D sagittal view on top of the coronal and 3D view 
+        <li> <b> Axial n Sagittal left, 3D right </b> - Sets the display to the 2D axial and sagittal views on top and 3D view right
+        <li> <b> Axial n 3D left, Sagittal right </b> - Sets the display to the 2D axial and 3D view to the left of the sagittal view
+    </td>
+  </tr>
+
+</table>
+</section>
+<section id="image_windowing" class="group"><p><br>
+<h2 id="image_windowing"> Image Windowing </h2></p>
+
+<p>The <i>Image Windowing</i> tool is used to adjust image brightness and contrast using a technique called <i>Windowing</i>, 
+also known as gray-level mapping, contrast stretching, histogram modification or contrast enhancement.
+<i>Windowing</i> manipulates the image greyscale component using image values to change the appearance of the 
+image to highlight particular structures. The image brightness is adjusted by changing the <i>window center</i>. 
+The image contrast is adjusted by changing the <i>window width</i>. </p>
+
+<p>A blue region in the <i>Image Windowing</i> tool shows then <i>window center</i> and <i>window width</i>.</p>
+
+<figure>
+  <img class="svImg svImgXs"  src="documentation/quickguide/gui/images/image-window-level-tool.png" style="width:2%">
+  <figcaption class="svCaption"> The <b>Image Windowing</b> tool. The <b>window width</b> and <b>window center</b> is 
+      represented using a blue region within the tool. The two text boxes at the bottom of the tool show the 
+      <b>window center</b> (upper box) and the <b>window width</b> (lower box).
+  </figcaption>
+</figure>
+
+<p>The <i>window center</i> is changed by selecting the center of the <i>Image Windowing</i> tool blue region with the 
+left mouse button and moving up or down. </p>
+
+<p>The <i>window width</i> is changed uniformly about the <i>window center</i> by selecting either end of the 
+<i>Image Windowing</i> tool blue region with the left mouse button and moving up or down. </p>
+
+<p>The <i>window width</i> is changed non-uniformly about the <i>window center</i> by selecting either end of the 
+<i>Image Windowing</i> tool blue region with using shift-left mouse button and moving up or down. </p>
+
+<table class="table table-bordered" style="width:100%">
+  <caption> <b> Adjusting image brightness and contrast </b> </caption>
+  <tr>
+    <th> Operation </th>
+    <th> Result </th>
+  </tr>
+
+  <tr>
+    <td> No operation, original image brightness and contrast </td>
+    <td> <img src="documentation/quickguide/gui/images/image-window-level-demo-1.png" width="612" height="410"> </td>
+  </tr>
+
+  <tr>
+    <td> Move the <i>window center</i> up by placing the mouse cursor in the center of the <i>Image Windowing</i> tool 
+         blue region holding the left mouse button down while moving the mouse cursor up </td>
+    <td> <img src="documentation/quickguide/gui/images/image-window-level-demo-2.png" width="612" height="410"> </td>
+  </tr>
+
+  <tr>
+    <td> Move the <i>window center</i> down by placing the mouse cursor in the center of the <i>Image Windowing</i> tool
+         blue region holding the left mouse button down while moving the mouse cursor down 
+    </td>
+    <td> <img src="documentation/quickguide/gui/images/image-window-level-demo-3.png" width="612" height="410"> </td>
+  </tr>
+
+  <tr>
+    <td> Reduce the <i>window width</i> uniformly around the <i>window center</i> by placing the mouse cursor in the upper 
+         boundary of the <i>Image Windowing</i> tool blue region holding and mouse button down while moving the mouse cursor down 
+    </td>
+    <td> <img src="documentation/quickguide/gui/images/image-window-level-demo-4.png" width="612" height="410"> </td>
+  </tr>
+
+  <tr>
+    <td> Reduce the <i>window width</i> non-informally around the <i>window center</i> by placing the mouse cursor in the upper 
+         boundary of the <i>Image Windowing</i> tool blue region holding and pressing shift-left mouse button down while 
+         moving the mouse cursor down 
+    </td>
+    <td> <img src="documentation/quickguide/gui/images/image-window-level-demo-5.png" width="612" height="410"> </td>
+  </tr>
+
+</table>
+
+<p><br></p>
+
+<p>Selecting the <i>Image Window Level</i> tool with the right mouse button pops up the following menu </p>
+
+<figure>
+  <img class="svImg svImgSm"  src="documentation/quickguide/gui/images/image-window-level-menu-1.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<table class="table table-bordered" style="width:100%">
+  <caption> <b> Image Window Level Tool Menu </b> </caption>
+  <tr>
+    <th> Menu Option </th>
+    <th> Description </th>
+  </tr>
+
+  <tr>
+    <td> Hide Scale </td>
+    <td> Hide the <i>Image Windowing</i> tool scale  </td>
+  </tr>
+
+  <tr>
+    <td> Set Slider Fixed  </td>
+    <td> Disables modifying the <i>window width</i> and <i>window center</i>. </td>
+  </tr>
+  
+  <tr>
+    <td> Use whole image grey values  </td>
+    <td> Set the <i>Image Windowing</i> tool use the entire range of image values. </td>
+  </tr>
+
+  <tr>
+    <td> Use optimized levelwindow </td>
+    <td> Set the <i>Image Windowing</i> tool to use a range of image values that optimizes contrast and brightness. </td>
+  </tr>
+  
+  <tr>
+    <td> Set Maximum Window </td>
+    <td> N/A </td>
+  </tr>
+  
+  <tr>
+    <td> Default Level/Window </td>
+    <td> N/A </td>
+  </tr>
+  
+  <tr>
+    <td>     Change Scale Range   </td>
+    <td> Displays a popup window used to manually change the upper and lower  <i>window width</i> bounds. </td>
+  </tr>
+  
+  <tr>
+    <td>     Default Scale Range  </td>
+    <td> Resets the upper and lower <i>window width</i> bounds to their default values. </td>
+  </tr>
+  
+  <tr>
+    <td>     Presets      </td>
+    <td> Displays a menu of preset upper and lower <i>window width</i> bounds for various tissues acquired using CT. </td>
+  </tr>
+
+  <tr>
+    <td>     Images      </td>
+    <td> N/A </td>
+  </tr>
+</table>
+</section>
+<section id="gui_data_manager" class="group"><h2 id="data_manager"> Data Manager </h2>
+
+<p>The <i> Data Manager </i> is used to view a <i>Project</i> as a hierarchy of <i>Tools</i> and <i>Data Nodes </i>
+representing the data created by <i>Tool</i> instances: images, paths, segmentations, models, meshes, and simulation jobs. 
+Most of the <i>Tools</i> produce geometry that can be interactively viewed in the 2D and 3D views of the 
+<a href="#display"> Display </a> area of the main window. The <i> Data Manager  </i> provides an interface to interactively 
+manage adding/removing <i>Tool</i> instances and changing some of the properties used to display the geometric data created by a 
+<i>Tool</i> (e.g. color).</p>
+
+<p>When creating a new <i>Project</i> the <i> Data Manager </i> displays a list of core <i>Tool Types</i> (Fig. 6).</p>
+
+<figure>
+  <img class="svImg svImgSm"  src="documentation/quickguide/gui/images/data-manager-new-project.png">
+  <figcaption class="svCaption">Fig. 6 &nbsp The <i>Data Manager</i> of a new <i>Project</i> listing 
+      the core <b>Images</b>, <b>Paths</b>, <b>Segmentations</b>, <b>Models</b>, <b>Meshes</b>, <b>Simulations</b>, 
+      <b>svFSI</b>, and <b>ROMSimulations</b> <b>Tool Types</b>.
+  </figcaption>
+</figure>
+
+<p>Adding a new <i>Tool</i> to the <i>Project</i> creates a new <i>Data Node </i> under the appropriate <i>Tool Type</i>.
+The <i> Data Manager  </i> view of the
+<a href="https://simtk.org/frs/download_confirm.php/file/5113/DemoProject.zip?group_id=930"> Demo Project </a>
+created following the steps demonstrated in the <a href="#tutorial"> Tutorial</a> section is shown in Fig. 7.</p>
+
+<figure>
+  <img class="svImg svImgSm"  src="documentation/quickguide/gui/images/demo-data-manager.png">
+  <figcaption class="svCaption">Fig. 7 &nbsp An example of a <i>Project</i> displayed in the <i>Data Manager</i>.
+      Instances of <i>Tools</i> added to the <i>Project</i> (e.g. <b>aorta</b>) are shown below the core <b>Images</b>, <b>Paths</b>,
+      <b>Segmentations</b>, <b>Models</b>, <b>Meshes</b>, <b>Simulations</b>, <b>svFSI</b>, and
+      <b>ROMSimulations</b> <b>Tool Types</b>.
+  </figcaption>
+</figure>
+
+<p>The <i> Data Manager  </i> hierarchy shown in Fig 7. indicates that the following <i>Tool</i> instances are defined for the 
+<i>Project</i> as one or more  <i>Data Nodes</i></p>
+
+<ul style="list-style-type:none;">
+  <li> <b>Images</b> - A single <i>Tool</i> instance named <b>sample_data-cm</b>
+  <li> <b>Paths</b> - Two <i>Tool</i> instances named <b>aorta</b> and <b>right_iliac</b>.
+  <li> <b>Segmentations</b> - Two <i>Tool</i> instances named <b>aorta</b> and <b>right_iliac</b>
+  <li> <b>Models</b> - A single <i>Tool</i> instance named <b>demo</b>
+  <li> <b>Meshes</b> - A single <i>Tool</i> named <b>demomesh</b>
+  <li> <b>Simulations</b> - A single <i>Tool</i> instance named <b>demojob</b>
+</ul>
+
+<p><br></p>
+
+<h3 id="data_manager_interaction"> Interacting with the Data Manager </h3>
+
+<p>Interaction with the <i> Data Manager  </i> is performed using the mouse. The resulting action depends on if a
+<i>Tool Type</i> or a <i>Data Nodes</i> is selected. The mouse buttons have the following functions </p>
+
+<table class="table table-bordered" style="width:100%">
+  <caption> <b> Data Manager mouse button function </b> </caption>
+  <tr>
+    <th> Mouse Button </th>
+    <th> Function </th>
+  </tr>
+
+  <tr>
+    <td> Left </td>
+    <td> Used to select GUI controls to manage <i>Tool</i> data visibility and expand/collapse <i>Tool</i> hierarchy </td>
+  </tr>
+
+  <tr>
+    <td> Left, double click </td>
+    <td> 
+      <b> <i>Tool Type</i></b> - Expand/collapse <i>Tool</i> <i>Data Nodes</i> <br><br>
+      <b> <i>Tool</i> <i>Data Node</i> </b> - Brings up the <i>Tool</i> panel  </td>
+     </td>
+  </tr>
+
+  <tr>
+    <td> Right </td>
+    <td> Opens a <i>Data Manager</i> menu
+  </tr>
+
+</table>
+
+<p><br></p>
+
+<p>The <i> Data Manager  </i> has two GUI controls that are selected with the left mouse button</p>
+
+<table class="table table-bordered" style="width:100%">
+  <caption> <b> Data Manager mouse button function </b> </caption>
+  <tr>
+    <th> Control </th>
+    <th> Function </th>
+    <th> Example </th>
+  </tr>
+
+  <tr>
+    <td> 
+      <img src="documentation/quickguide/gui/images/data-manager-gui-control-arrow-1.png" width="30" height="22">
+    </td>
+    <td> Selecting the arrow toggles the display of the <i>Tool</i> instances. <br><br>
+         Double clicking on a <i>Tool Type</i> performs the same function.
+    </td>
+    <td> 
+      <b> Toggle off</b><img src="documentation/quickguide/gui/images/data-manager-gui-control-arrow-2.png" width="160" height="23"> <br> <br>
+      <b> Toggle on</b> <img src="documentation/quickguide/gui/images/data-manager-gui-control-arrow-3.png" width="160" height="70">
+    </td>
+  </tr>
+
+  <tr>
+    <td> 
+      <img src="documentation/quickguide/gui/images/data-manager-gui-control-box-1.png" width="30" height="22">
+    </td>
+    <td> Selecting the CheckBox toggles the display of <i>Tool</i> geometry in the <i>Display</i>. 
+         The CheckBox changes to blue when on. <br> <br>
+         Selecting the box for a <i>Tool Type</i> toggles the display for all instances of that <i>Tool</i>.
+    </td>
+    <td> 
+      <b> Toggle off</b><img src="documentation/quickguide/gui/images/data-manager-gui-control-box-3.png" width="160" height="70"> <br> <br>
+      <b> Toggle on</b> <img src="documentation/quickguide/gui/images/data-manager-gui-control-box-2.png" width="160" height="70">
+    </td>
+  </tr>
+</table> 
+
+<p><br></p>
+
+<h3 id="data_manager_menus"> Data Manager Menus </h3>
+
+<p>The <i> Data Manager  </i> menus used to manage <i>Tools</i> are opened using the right mouse button. Selecting a <i>Tool Type</i>
+opens a menu containing options common to all <i>Tool Types</i> and additional options specialized for a particular <i>Tool Type</i>. 
+Specialized options are located at the bottom of a menu and are separated from the common options by a line (Fig 8.).</p>
+
+<figure>
+  <img class="svImg svImgLg"  src="documentation/quickguide/gui/images/data-manager-type-menu.png"> 
+  <figcaption class="svCaption"> Fig. 8 &nbsp The menu for a <b>Paths</b> Tool Type showing common options in the top portion
+                                 of the menu (<b>Global Reinit</b> through <b>Paste</b>) and specialized options (<b>Create Path</b>,
+                                 <b>Import Paths</b> and <b>Export All as Legacy Paths</b>) separated from them by a line. 
+  </figcaption>
+</figure>
+
+<p><br></p>
+
+<table class="table table-bordered" style="width:100%">
+  <caption> <b> Data Manager Tool Type Common Menu Options</b> </caption>
+  <tr>
+    <th> Menu Option </th>
+    <th> Description </th>
+  </tr>
+
+  <tr>
+    <td>Global Reinit</td>
+    <td>Reset 2D/3D views of the <i>Display</i> using the maximum Cartesian space of all the <i>Data Nodes</i> in the <i>Data Manager</i> </td>
+  </tr>
+
+  <tr>
+    <td> Save &hellip; </td>
+    <td> Save the selected <i>Data Node</i> to a file </td>
+  </tr>
+
+  <tr>
+    <td> Reinit </td>
+    <td> Reset 2D/3D views of the <i>Display</i> using the Cartesian space of the selected <i>Data Node</i> in the <i>Data Manager</i> </td>
+  </tr>
+
+  <tr>
+    <td> Show only selected nodes </td>
+    <td> Show the selected <i>Data Nodes</i> in the <i>Display</i> </td>
+  </tr>
+
+  <tr>
+    <td> Toggle visibility </td>
+    <td> Show ( or hide) the selected <i>Data Nodes</i> in the <i>Display</i> if they are hidden (or visible) </td>
+  </tr>
+
+  <tr>
+    <td> Details</td>
+    <td> Show more information about the selected <i>Data Node</i> in a popup dialog, such as dimensions, spacing, etc. </td>
+  </tr>
+
+  <tr>
+    <td> Remove</td>
+    <td> Remove the <i>Data Node</i> from the <i>Data Manager</i> </td>
+  </tr>
+
+  <tr>
+    <td> Opacity</td>
+    <td> Change the opacity of the selected <i>Data Node</i> </td>
+  </tr>
+
+  <tr>
+    <td> Color</td>
+    <td> Selecting the colored <i>Button</i> brings a color palette used to change the color of the selected <i>Data Node</i> </td>
+  </tr>
+
+ <tr>
+    <td> Rename</td>
+    <td> Rename the selected <i>Data Node</i> </td>
+  </tr>
+
+ <tr>
+    <td> Copy</td>
+    <td> Copy the selected <i>Data Node</i> </td>
+  </tr>
+
+ <tr>
+    <td> Paste</td>
+    <td> Duplicate the copied <i>Data Node</i> in a folder in <i>Data Manager</i> </td>
+  </tr>
+</table>
+
+<p><br></p>
+
+<p>The following table lists each <i>Tool Type</i> with a brief description of each of its specialized menu options.</p>
+
+<table class="table table-bordered" style="width:100%">
+  <caption> <b> Data Manager Tool Type Specialized Menu Options</b> </caption>
+  <tr>
+    <th> Tool Type </th>
+    <th> Menu </th>
+    <th> Description </th>
+  </tr>
+
+  <tr>
+    <td> Images </td>
+    <td> <img src="documentation/quickguide/gui/images/data-manager-image-type-menu.png" width="150" height="200"> </td>
+    <td> 
+      <i>Add/Replace Image</i> - Add or replace the image volume data for the <i>Project</i>. Image data can be DICOM or VTK VTI files.
+      <br><br>
+      <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #e6e600; border-left: 6px solid #e6e600"> 
+      A <i>Project</i> can contain only a single image volume. Adding new image volume replaces the current one.
+      </div>
+    </td> 
+  </tr>
+
+  <tr>
+    <td> Paths </td>
+    <td> <img src="documentation/quickguide/gui/images/data-manager-paths-type-menu.png" width="150" height="200"> </td>
+    <td>
+      <i> Create Path </i> - Create an instance of a <i>Paths</i> tool. <i>Paths</i> are then created from <i>Image</i> tool data.<br>
+      <i> Import Paths </i> - Create an instance of a <i>Paths</i> tool from a <i>Path</i> data contained in SimVascular .pth or legacy .paths file. <br>
+      <i> Export All as Legacy Paths </i> - N/A
+    </td> 
+  </tr>
+
+  <tr>
+    <td> Segmentations </td>
+    <td> <img src="documentation/quickguide/gui/images/data-manager-seg-type-menu.png" width="150" height="200"> </td>
+    <td>
+      <i> Create Contour Group </i> - Create an instance of a <i>Segmentations</i> tool. <i>Segmentations</i> are created using geometry from a <i>Paths</i> tool.  <br>
+      <i> Import Segmentations </i> - Create an instance of a <i>Segmentations</i> tool from the data contained in a SimVascular .ctgr file. <br>
+      <i> Import Legacy Segmentations </i> - N/A <br>
+      <i> Export All as Legacy Segmentations </i> - N/A
+    </td>
+  </tr>
+
+  <tr>
+    <td> Models </td>
+    <td> <img src="documentation/quickguide/gui/images/data-manager-models-type-menu.png" width="150" height="200"> </td>
+    <td>
+      <i> Create Model </i> - Create an instance of a <i>Models</i> tool. 
+                              A <i>Model</i> is created using segmentation geometry from one or more <i>Segmentations</i> tools. <br>
+      <i> Import Solid Model </i> - Create an instance of a <i>Models</i> tool from a solid model file. 
+                                    Supported file formats: VTP, STL and STEP.  <br>
+      <br><br>
+      <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #d0d0d0; border-left: 6px solid #d0d0d0">
+      A model can be imported into a <i>Project</i> without an image volume. After importing the model select the
+      <b>Global Reinit</b> <i>Data Manager Menu</i> option to view the model.  
+      </div>
+
+    </td>
+  </tr>
+
+  <tr>
+    <td> Meshes </td>
+    <td> <img src="documentation/quickguide/gui/images/data-manager-meshes-type-menu.png" width="150" height="200"> </td>
+    <td>
+      <i> Create Mesh </i> - Create an instance of a <i>Meshes</i> tool. 
+                             A mesh is created using a model from a <i>Models</i> tool. <br>
+      <br>
+      <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #e6e600; border-left: 6px solid #e6e600">
+      A mesh cannot be imported into a <i>Project</i>.
+      </div>
+
+    </td>
+  </tr>
+
+  <tr>
+    <td> Simulations </td> 
+    <td> <img src="documentation/quickguide/gui/images/data-manager-sims-type-menu.png" width="150" height="200"> </td>
+    <td>
+      <i> Create Simulation job </i> - Create an instance of a <i>Simulations</i> tool.     
+                             A CFD simulation job is created using a model from a <i>Models</i> tool and a mesh from 
+                             a  <i>Meshes</i> tool. <br>
+    </td>
+  </tr>
+
+  <tr>
+    <td> svFSI </td>
+    <td> <img src="documentation/quickguide/gui/images/data-manager-fsi-type-menu.png" width="150" height="200"> </td>
+    <td>
+      <i> Create svFSI job </i> - Create an instance of a <i>svFSI</i> tool.
+                                  A multi-physics simulation job is created using a model from a <i>Models</i> tool and 
+                                  a mesh from a <i>Meshes</i> tool. <br>
+    </td>
+  </tr>
+
+  <tr>
+    <td> ROMSimulations </td>
+    <td> <img src="documentation/quickguide/gui/images/data-manager-rom-type-menu.png" width="150" height="200"> </td>
+    <td>
+      <i> Create ROM Simulation job </i> - Create an instance of a <i>ROMSimulation</i> tool.
+                                           A reduced-order model (ROM) simulation job is created using a model from a 
+                                           <i>Models</i> tool.
+    </td>
+  </tr>
+</table>
+</section>
+<section id="gui_tool_panel" class="group"><h2 id="tool_panel"> Tool Panel </h2>
+
+<p>The <i>Tool Panel</i> is a rectangular region located to the far right the SimVascular main window used to display GUI controls 
+for a <i> Tool</i>. A <i>Tool Panel</i> is made visible by double-clicking with the mouse left button on a <i>Data Node</i> in 
+the <a href="#data_manager_interaction">Data Manager</a> (Fig. 9). </p>
+
+<figure>
+  <img class="svImg svImgMd"  src="documentation/quickguide/gui/images/tool-panel-paths.png">
+  <figcaption class="svCaption"> Fig. 9 &nbsp Selecting the <b>aorta</b> Data Node makes visible its Tool Panel.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>Double-clicking on another <i>Data Node</i> makes its <i>Tool Panel</i> visible. Multiple <i>Tool Panel</i> are organized
+using a GUI <i>Tab</i> controls (Fig. 10).</p>
+
+<figure>
+  <img class="svImg svImgMd"  src="documentation/quickguide/gui/images/tool-panel-paths-models.png">
+  <figcaption class="svCaption"> Fig. 10 &nbsp Selecting the <b>demo</b> Data Node makes visible its Tool Panel.</figcaption>
+</figure>
+
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #d0d0d0; border-left: 6px solid #d0d0d0">
+Selecting the <i>Tab</i> control <img src="documentation/quickguide/gui/images/tool-panel-tab-1.png" width="50" height="10"> 
+makes the <i>SV Path Planning</i> <i>Tool Panel</i> visible but inactive (greyed-out). Double-clicking on a <i>Paths</i> 
+<i>Data Node</i> will make its <i>Tool Panel</i> visible and active in that space. Thus the <i>Tab</i> controls are just a
+place holder for <i>Tool Panels</i>.
+</div>
+
+<p><br></p>
+
+<p>Selecting the <b>X</b> in the <i>Tab</i> control <img src="documentation/quickguide/gui/images/tool-panel-tab.png" width="50" height="10"> 
+with the left mouse button removes the <i>SV Modeling</i> <i>Tool Panel</i>.</p>
+
+<p><i>Tool Panels</i> may be visible when starting SimVascular. The last <i>Tool Panels</i> visible (active) when SimVascular was closed 
+are displayed inactive (greyed-out). (Fig. 11).</p>
+
+<figure>
+  <img class="svImg svImgMd"  src="documentation/quickguide/gui/images/tool-panel-ghosts.png">
+  <figcaption class="svCaption"> Fig. 11 &nbsp SimVascular at start-up contains a greyed-out Tool Panel.</figcaption>
+</figure>
+</section>
+<section id="gui_image_navigator" class="group"><h2 id="image_navigator"> Image Navigator </h2>
+
+<p><i>Image Navigator</i> tool uses <i>Sliders</i> and <i>Spinboxes</i> to set the scan slice for each sagittal, coronal and axial planes.
+Changing the principal planes scan slice changes the changes the location of the crosshairs in the 2D views and vice versa.  </p>
+
+<figure>
+  <img class="svImg svImgSm"  src="documentation/quickguide/gui/images/image-navigator.png"> 
+  <figcaption class="svCaption" ></figcaption>
+</figure>
+
+<table class="table table-bordered" style="width:100%">
+  <caption> <b> Image Navigator Controls </b> </caption>
+  <tr>
+    <th> Control </th>
+    <th> Description </th>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/gui/images/image-navigator-sbox-1.png" width="63" height="27"> </td>
+    <td> Changes the sagittal plane scan slice using image coordinates </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/gui/images/image-navigator-sbox-2.png" width="63" height="27"> </td>
+    <td> Changes the coronal plane scan slice using image coordinates </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/gui/images/image-navigator-sbox-3.png" width="63" height="27"> </td>
+    <td> Changes the axial plane scan slice using image coordinates </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/gui/images/image-navigator-slider-1.png" width="250" height="27"> </td>
+    <td> Changes the axial plane scan slice using image slice number </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/gui/images/image-navigator-slider-2.png" width="245" height="22"> </td>
+    <td> Changes the sagittal plane scan slice using image slice number </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/gui/images/image-navigator-slider-3.png" width="245" height="22"> </td>
+    <td> Changes the coronal plane scan slice using image slice number </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/gui/images/image-navigator-time.png" width="245" height="22"> </td>
+    <td> Changes the time step for time-resolved image data. </td>
+  </tr>
+</table>
+
+<p><br>
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #e6e600; border-left: 6px solid #e6e600">
+SimVascular does not support time-resolved image data.
+</div></p>
+
+<p><br>
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #e6e600; border-left: 6px solid #e6e600">
+Although the <i>Image Navigator</i> label <b>Loc: (mm)</b> implies image units are in mm, SimVascular does not have
+any explicit units. Units are only important when specifying simulation parameters and data.
+</div></p>
+</section>
+
+<section id="tutorial_intro" class="group"><h1 id="tutorial"> Tutorial </h1>
+
+<p>This section demonstrates how to use the SimVascular image-based modeling pipeline to create a patient-specific geometric model 
+of the human vasculature and perform a finite element computational fluid dynamics (CFD) simulation of blood flow for that model.
+A model of an aorta with left and right iliac arteries is created from an MR image volume.</p>
+
+<p>The following lists the sections in this tutorial </p>
+
+<ol>
+
+  <li> <a href="#tutorial_starting_simvascular">Starting SimVascular</a>  
+
+  <li> <a href="#tutorial_create_project">Create a Project</a> 
+
+  <li> <a href="#tutorial_add_image_data">Add Image Data</a> 
+
+  <li> <a href="#tutorial_create_paths">Create Vessel Paths</a> 
+    <ol type="i">
+      <li> <a href="#tutorial_create_paths_1">Create an instance of a <i>Paths Tool</i> for the aorta/right iliac </a>
+      <li> <a href="#tutorial_create_paths_2"> Create the aorta/right iliac path </a>
+      <li> <a href="#tutorial_create_paths_3"> Create an instance of a <i>Paths Tool</i> for the left iliac </a>
+      <li> <a href="#tutorial_create_paths_4"> Create the left iliac path </a>
+    </ol>
+
+  <li> <a href="#tutorial_create_segmentations">Create Segmentations</a> 
+    <ol type="i">
+      <li> <a href="#tutorial_create_segs_1">Create an instance of a <i>Segmentations Tool</i> for the aorta/right iliac </a>
+      <li> <a href="#tutorial_create_segs_2">Create segmentations for the aorta/right iliac </a>
+      <li> <a href="#tutorial_create_segs_3">Create an instance of a <i>Segmentations Tool</i> for the left iliac </a>
+      <li> <a href="#tutorial_create_segs_4">Create segmentations for the left iliac </a>
+    </ol>
+
+  <li> <a href="#tutorial_create_model">Create Solid Model</a> 
+    <ol type="i">
+      <li> <a href="#tutorial_create_model_1">Create an instance of a <i>Models Tool</i> for the aorta and iliacs </a>
+      <li> <a href="#tutorial_create_model_2">Create a solid model of the aorta and iliacs </a>
+    </ol>
+
+  <li> <a href="#tutorial_create_finite_element_mesh">Create Finite Element Mesh</a> 
+    <ol type="i">
+      <li> <a href="#tutorial_create_mesh_1">Create an instance of a <i>Meshes Tool</i> for the <b>aorta-iliacs</b> model.</a>
+      <li> <a href="#tutorial_create_mesh_2"> Generate a finite element mesh from the <b>aorta-iliacs</b> model.</a>
+    </ol>
+
+  <li> <a href="#tutorial_create_simulation">Create CFD Simulation</a> 
+    <ol type="i">
+      <li> <a href="#tutorial_create_simulation_1"> Create an instance of a <i>Simulations Tool</i> for the <b>aorta-iliacs</b> model.</a>
+      <li> <a href="#tutorial_create_simulation_2"> Set inlet and outlet boundary conditions.</a> 
+      <li> <a href="#tutorial_create_simulation_3"> Set solver parameters. </a> 
+      <li> <a href="#tutorial_create_simulation_4"> Run the simulation. </a> 
+      <li> <a href="#tutorial_create_simulation_5"> Convert simulation results. </a> 
+    </ol>
+
+</ol>
+
+<p><br>
+The <a href="https://simtk.org/frs/download_confirm.php/latestzip/2256/SimVascularTutorialProject-latest.zip?group_id=930"> SimVascular Tutorial Project </a>
+is a complete SimVascular project containing the data created by each of these steps. It also includes a <i>OSMSC0110-aorta</i> directory 
+containing DICOM image data used in the tutorial.</p>
+</section>
+<section id="tutorial_starting_simvascular" class="group"><h2 id="tutorial_starting_simvascular"> Starting SimVascular </h2>
+
+<p>Once SimVascular has been <a href="https://github.com/SimVascular/SimVascular/wiki/wiki_for_users">Installed</a> it is started
+by selecting the <img src="documentation/quickguide/tutorial/images/sv-start-icon.png" width="18" height="18"> icon from a 
+platform&rsquo;s list of applications (Fig. 1). </p>
+
+<figure>
+  <img class="svImg svImgLg"  src="documentation/quickguide/tutorial/images/sv-start.png">
+  <figcaption class="svCaption"> Fig. 1 &nbsp Starting the SimVascular application. </figcaption>
+</figure>
+
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #d0d0d0; border-left: 6px solid #d0d0d0">
+The SimVascular GUI may look slightly different on MacOS, Ubuntu and Windows platforms.
+</div>
+
+<p><br>
+On Ubuntu and Windows a terminal is created for SimVascular to run in. Messages output from some SimVascular computations 
+(e.g. meshing) are written to the terminal. On MacOS no terminal is created so no SimVascular output can be seen.</p>
+
+<p>SimVascular can also be started from the command line in a terminal using the path to the installation directory. The path
+includes the SimVascular build date <i>YYYY-MM-DD</i> on Ubuntu and Windows.</p>
+
+<table class="table table-bordered" style="width:100%">
+  <caption> Starting SimVascular from the command line</caption>
+  <tr>
+    <th> Platform </th>
+    <th> Command </th>
+  </tr>
+
+  <tr>
+    <td> MacOS </td>
+    <td> /Applications/SimVascular.app/Contents/Resources/simvascular </td>
+  </tr>
+
+  <tr>
+    <td> Ubuntu </td>
+    <td> /usr/local/sv/simvascular/YYYY-MM-DD/simvascular </td>
+  </tr>
+
+  <tr>
+    <td> Windows (Power Shell) </td>
+    <td> &&ldquo;C:\Program Files\SimVascular\SimVascular\YYYY-MM-DD\sv.bat&rdquo; </td>
+  </tr>
+
+</table>
+</section>
+<section id="tutorial_create_project" class="group"><h2 id="tutorial_create_project"> Create a Project </h2>
+
+<p>A SimVascular <i>Project</i> is a directory (folder) on disk used to organized and store data created by <i>Tool</i> 
+instances that comprise a SimVascular pipeline. The <i>Project</i> directory location and name is provided by the user 
+when creating the <i>Project</i>.</p>
+
+<table class="table table-bordered" style="width:100%">
+  <caption> Creating a <i>Project</i> </caption>
+  <tr>
+    <th> GUI Action </th>
+    <th> Description </th>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-proj-1.png" width="512" height="360"> </td>
+    <td> Select the <i>MenuBar<i> <b>File</b> / <b>Create SV Project</b> option </td> 
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-proj-2.png" width="512" height="360"> </td>
+    <td> Enter <b>Tutorial</b> for the <i>Project</i> name in the <b>Project Name</b> <i>TextBox</i>. 
+         <br><br>
+         Enter the name of the directory to store the <i>Project</i> in the <b>Create in:</b> <i>TextBox</i>. 
+         <br><br>
+         Press the <b>OK</b> <i>Button</i>.
+         <br><br>
+         <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #d0d0d0; border-left: 6px solid #d0d0d0">
+         The tutorial uses the <b>/Users/Shared</b> directory to store the <i>Project</i>. 
+         </div> 
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-proj-3.png" width="512" height="360"> </td>
+    <td> The <i>Data Manager</i> displays a list of core <i>Tool</i> types for the <i>Project</i> named <b>Tutorial</b>. <br><br>
+         A directory named <b>/Users/Shared/Tutorial</b> is created containing the <b>Images</b>, <b>Segmentations</b>, <b>Models</b>, 
+         <b>Meshes</b>, <b>Simulations</b>, <b>svFSI</b>, and <b>ROMSimulations</b> core <i>Tool</i> sub-directories. 
+    </td>
+  </tr>
+</table>
+</section>
+<section id="tutorial_add_image_data" class="group"><h2 id="tutorial_add_image_data"> Add Image Data </h2>
+
+<p>Image data is added to the <i>Project</i> using the <i>Data Manager</i> <i>Images</i> <i>Tool</i>.</p>
+
+<table class="table table-bordered" style="width:100%">
+  <caption> Adding image data to a <i>Project</i> </caption>
+  <tr>
+    <th> GUI </th>
+    <th> Description </th>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/add-image-1.png" width="512" height="360"> </td>
+    <td> Select the <i>Images<i> <i>Tool</i> in the <i>Data Manager</i> with the right mouse button. 
+         <br><br>
+         Select the <b>Add/Replace image</b> menu option. 
+         <br><br>
+         <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #e6e600; border-left: 6px solid #e6e600"> 
+         Only one image may be displayed in SimVascular. Adding another image will overwrite the current image. 
+         </div>
+    </td> 
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/add-image-2.png" width="512" height="360"> </td>
+    <td> Select the I.002.dcm file from the <i>File Browser</i>. 
+         <br><br>
+         Press the <b>Open</b> <i>Button</i>. 
+         <br><br>
+         The series of DICOM files are read in. <br><br>
+    </td> 
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/add-image-3.png" width="512" height="360"> </td>
+    <td> Press the <b>Yes</b> <i>Button</i> in the <i>QuestionPopup</i> to store the image data as a VTK VTI file. 
+    </td> 
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/add-image-4.png" width="512" height="360"> </td>
+    <td> Press the <b>Yes</b> <i>Button</i> in the <i>QuestionPopup</i> to scale the image. <br><br>
+    </td> 
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/add-image-5.png" width="512" height="360"> </td>
+    <td> Press the <b>OK</b> <i>Button</i> to use the default 0.1 scaling factor. 
+         <br><br>
+         The image is scaled by 0.1. 
+         <br><br>
+         <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #e6e600; border-left: 6px solid #e6e600">
+         SimVascular does not have any explicit units. However, the geometry created in the pipeline does depend on the
+         image scale: a smaller scale creates smaller geometry. This is only important when performing simulations: the model 
+         size must match the units used for certain simulation parameters and data (e.g. inlet flow rate). 
+         </div>
+    </td> 
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/add-image-6.png" width="512" height="360"> </td>
+    <td> Enter <b>aorta</b> for the image name in the <b>Image Name:</b> <i>TextBox</i> <br><br>
+         Press the <b>OK</b> <i>Button</i>.
+    </td> 
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/add-image-7.png" width="512" height="360"> </td>
+    <td> The image is displayed in the standard four-window view layout. <br><br>
+         Press the <img src="documentation/quickguide/gui/images/gui-save-icon.png" width="40" height="35"> 
+         icon in the  <i>ToolBar</i> to save the <i>Project</i>. <br><br>
+         The image volume is saved as a VTK VTI file named <b>aorta.vti</b> in the <i>Project&rsquo;s</i> <i>Images</i> directory.
+    </td> 
+  </tr>
+
+</table>
+</section>
+<section id="tutorial_create_paths" class="group"><h2 id="tutorial_create_paths"> Create Vessel Paths </h2>
+
+<p>Creating an anatomic model based on medical image data requires constructing the geometry of a region of interest
+using image segmentation. SimVascular uses approximate vessel centerlines called a <i>Paths</i> to identify 
+an anatomical regions of interest within an image volume. <i>Paths</i> are later used by the <i>Segmentations</i> <i>Tool</i> 
+to construct a model of the vascular anatomy using a series segmentations generated from 2D image cross sections. </p>
+
+<p>The following sections demonstrate how to create a path defining the main aorta and right iliac, and another for the left iliac.
+A detailed discussion about creating paths can be found in the SimVascular
+<a href="http://simvascular.github.io/docsModelGuide.html#modelingPathPlanning.html">Modeling Guide / Path Planning</a> documentation.</p>
+
+<h3 id="tutorial_create_paths_1"> Create an instance of a <i>Paths Tool</i> for the aorta/right iliac </h3>
+
+<p>Create an instance of a <i>Paths Tool</i> named <b>aorta</b> used to define <i>Path</i> geometry for the main aorta 
+and right iliac vessels. </p>
+
+<table class="table table-bordered" style="width:100%">
+  <caption> Create a <i>Paths Tool</i> instance named <b>aorta</b> </caption>
+  <tr>
+    <th> GUI </th>
+    <th> Description </th>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-path-1.png" width="512" height="360"> </td>
+    <td> Select the <i>Paths</i> <i>Tool</i> in the <i>Data Manager</i> with the right mouse button. <br><br>
+         Select the <b>Create Path</b> menu option.
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-path-2.png" width="512" height="360"> <br><br>
+    </td>
+    <td> A <b>Create New Path</b> <i>DiaglogBox</i> appears. <br><br>
+         Enter <b>aorta</b> for the <i>Path</i> name in the <b>Path Name:</b> <i>TextBox</i> <br><br>
+         From the <b>Subdivision type</b> <i>ComboBox</i> select <b>Spacing Based</b>. <br><br>
+         An <i>Information Popup</i> appears; press the <b>OK</b> <i>Button</i>. <br><br>
+         Press the <b>Create New Path</b> <i>DiaglogBox</i> <b>OK</b> <i>Button</i>. <br><br>
+    </td>
+  </tr>
+
+  <tr>
+    <td> <img src="documentation/quickguide/tutorial/images/create-path-3.png" width="512" height="360">
+    </td>
+    <td> A <i>Data Node</i> named <b>aorta</b> (an instance of a <i>Paths<i> <i>Tool</i>) is created under the
+         <i>Data Manager</i> <i>Paths<i> <i>Tool Type</i>.
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-path-4.png" width="512" height="360"> </td>
+    <td> Double-click on the <i>Data Manager</i> <b>Paths / aorta</b> <i>Data Node</i> with the left mouse button to bring 
+         up the <i>SV Path Planning Panel</i>. <br><br>
+         Placing the mouse cursor over each GUI control in the <i>SV Path Planning Panel</i> displays a brief description
+         explaining what the control does.<br><br>
+         Some GUI controls: <br><br>
+         <ul style="list-style-type:none;">
+             <li> <img src="documentation/quickguide/tutorial/images/path-add-button.png" width="62" height="15"> - Add a <i>Path</i> point 
+                  at the current crosshairs location. <br><br>
+             </li>
+             <li> <img src="documentation/quickguide/tutorial/images/path-del-button.png" width="62" height="15"> - Delete the currently 
+                  selected <i>Path</i> point.
+             </li>
+         </ul>
+    </td>
+  </tr>
+
+</table>
+
+<p><br>
+<h3 id="tutorial_create_paths_2"> Create the aorta/right iliac <i>Path</i> </i> </h3></p>
+
+<p>This section demonstrates how to create a set of points representing <i>Path</i> from the start of the aorta to the 
+end of the right iliac arteries. Path points are added interactively by positioning crosshairs in the three 2D 
+views to select the approximate center of a vessel lumen. </p>
+
+<p>The crosshairs are moved using the left mouse button or the <a href="#image_navigator"><i>Image Navigator</i></a>. </p>
+
+<table class="table table-bordered" style="width:100%">
+  <caption> Add <i>Path</i> points using the <b>aorta</b> <i>Paths Tool</i> </caption>
+  <tr>
+    <th> GUI </th>
+    <th> Description </th>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-path-5.png" width="512" height="360"> </td>
+    <td> Using the left mouse button move the crosshairs in the <i>Sagittal 2D View</i> to the top of the aorta. <br><br>
+         Press the <b>Add</b> <i>Button</i> in the <i>SV Path Planning Panel</i>. <br><br>
+         The selected <i>Path</i> point is shown as a red marker in the 2D views and as a blue cube in the 3D view.<br><br>
+         The coordinates of the point are shown in the <i>SV Path Planning Panel</i> <b>Control Point List</b> <i>Table</i>. 
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-path-6.png" width="512" height="360"> </td>
+    <td> Select the the <i>Data Manager</i> <b>Paths / aorta</b> <i>Data Node</i> with the right mouse button to display
+         the <i>Data Node</i> menu. <br><br>
+         The menu options specialized for <i>Path Tool</i> <i>Data Nodes</i> are <br><br>
+         <ul style="list-style-type:none;">
+           <li> <b>Point 2D Size</b> - Set the size in image units of the 2D markers used to show <i>Path</i> points in 2D views <br><br>
+           <li> <b>Point 3D Size</b> - Set the size in image units of the 3D markers used to show <i>Path</i> points in the 3D view <br><br>
+         </ul>
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-path-7.png" width="512" height="360"> </td>
+    <td> Create several more <i>Path</i> points using the left mouse button to move the crosshairs in the 2D views and 
+         pressing the <b>Add</b>  <i>Button</i>. <br><br>
+         The coordinates of the <i>Path</i> points are shown in the <i>SV Path Planning Panel</i> <b>Control Point List</b> <i>Table</i>. <br><br>
+         Switch the view to a single 3D view. <br><br>
+         The <i>Path</i> points are shown as blue cubes. Move the mouse cursor over a <i>Path</i> point selects it: the <i>Path</i> point 
+         marker turns red and the point is highlighted in <i>SV Path Planning Panel</i> <b>Control Point List</b> <i>Table</i>. <br><br>
+
+         Press the <img src="documentation/quickguide/gui/images/gui-save-icon.png" width="20" height="17"> icon in the 
+         <i>ToolBar</i> to save the <i>Project</i>. <br><br>
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-path-8.png" width="512" height="360"> </td>
+    <td> 
+         Selecting a <i>Path</i> point from the <i>SV Path Planning Panel</i> <b>Control Point List</b> <i>Table</i>
+         positions the crosshairs and moves the image scan slices so that they intersect at that point, the location 
+         they had when the point was added. 
+         <br<br>
+         New <i>Path</i> points may be inserted at any location along the path. 
+    </td>
+  </tr>
+</table>
+
+<p><br>
+<h3 id="tutorial_create_paths_3"> Create an instance of a <i>Paths Tool</i> for the left iliac </h3></p>
+
+<p>Create an instance of a <i>Paths Tool</i> named <b>left-iliac</b> used to define <i>Path</i> geometry from the 
+aorta/right iliac bifurcation to the end of the left iliac. </p>
+
+<table class="table table-bordered" style="width:100%">
+  <caption> Create a <i>Paths Tool</i> instance named <b>left-iliac</b> </caption>
+  <tr>
+    <th> GUI </th>
+    <th> Description </th>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-path-9.png" width="512" height="360"> </td>
+    <td> Select the <i>Paths</i> <i>Tool</i> in the <i>Data Manager</i> with the right mouse button. <br><br>
+         Select the <b>Create Path</b> menu option.
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-path-10.png" width="512" height="360"> <br><br>
+    </td>
+    <td> A <b>Create New Path</b> <i>DiaglogBox</i> appears. <br><br>
+         Enter <b>left-iliac</b> for the <i>Path</i> name in the <b>Path Name:</b> <i>TextBox</i> <br><br>
+         From the <b>Subdivision type</b> <i>ComboBox</i> select <b>Spacing Based</b>. <br><br>
+         An <i>Information Popup</i> appears; press the <b>OK</b> <i>Button</i>. <br><br>
+         Press the <b>Create New Path</b> <i>DiaglogBox</i> <b>OK</b> <i>Button</i>. <br><br>
+    </td>
+  </tr>
+
+  <tr>
+    <td> <img src="documentation/quickguide/tutorial/images/create-path-11.png" width="512" height="360">
+    </td>
+    <td> A <i>Data Node</i> named <b>left-iliac</b> (an instance of a <i>Paths<i> <i>Tool</i>) is created under the
+         <i>Data Manager</i> <i>Paths<i> <i>Tool Type</i>.
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-path-12.png" width="512" height="360"> </td>
+    <td> Double-click on the <i>Data Manager</i> <b>Paths / left-iliac</b> <i>Data Node</i> with the left mouse button to bring 
+         up the <i>SV Path Planning Panel</i>. <br><br>
+         Placing the mouse cursor over each GUI control in the <i>SV Path Planning Panel</i> displays a brief description
+         explaining what the control does.<br><br>
+    </td>
+  </tr>
+</table>
+
+<p><br>
+<h3 id="tutorial_create_paths_4"> Create the left iliac <i>Path</i> </h3></p>
+
+<p>This section demonstrates how to create a set of points representing a <i>Path</i> from the aorta/right iliac bifurcation
+to the end of the left iliac. Path points are added interactively by positioning crosshairs in the three 2D views to 
+select the approximate center of a vessel lumen.</p>
+
+<p>The crosshairs are moved using the left mouse button.</p>
+
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #d0d0d0; border-left: 6px solid #d0d0d0">
+It is important to place the first <i>Path</i> point inside of the aorta. This is needed to produce a valid solid model
+when then left iliac is joined with the aorta.
+</div>
+
+<p><br></p>
+
+<table class="table table-bordered" style="width:100%">
+  <caption> Add <i>Path</i> points using the <b>left-iliac</b> <i>Paths Tool</i> </caption>
+  <tr>
+    <th> GUI </th>
+    <th> Description </th>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-path-13.png" width="512" height="360"> </td>
+    <td> Using the left mouse button move the crosshairs to a point inside the aorta near were it branches into the left 
+         and right iliacs. <br><br> 
+         Press the <b>Add</b> <i>Button</i> in the <i>SV Path Planning Panel</i>. <br><br>
+         The coordinates of the point are shown in the <i>SV Path Planning Panel</i> <b>Control Point List</b> <i>Table</i>.
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-path-14.png" width="512" height="360"> </td>
+    <td> Create several more <i>Path</i> points using the left mouse button to move the crosshairs in the 2D views and
+         pressing the <b>Add</b> <i>Button</i>. <br><br>
+         The coordinates of the <i>Path</i> points are shown in the <i>SV Path Planning Panel</i> <b>Control Point List</b> <i>Table</i>. <br><br>
+         Switch the view to a single 3D view. <br><br>
+         The <i>Path</i> points are shown as blue cubes. Move the mouse cursor over a <i>Path</i> point selects it: the <i>Path</i> point 
+         marker turns red and the point is highlighted in <i>SV Path Planning Panel</i> <b>Control Point List</b> <i>Table</i>. <br><br>
+
+         Press the <img src="documentation/quickguide/gui/images/gui-save-icon.png" width="20" height="17"> icon in the
+         <i>ToolBar</i> to save the <i>Project</i>. <br><br>
+    </td>
+  </tr>
+</table> 
+</section>
+<section id="tutorial_create_segmentations" class="group"><h2 id="tutorial_create_segmentations"> Create Segmentations </h2>
+
+<p>Segmentation involves identifying vessel lumen boundaries from imaging data using various image processing
+methods. These boundaries are represented by closed curves and form the basis for solid model construction.</p>
+
+<p>SimVascular supports several methods used to manually define lumen boundaries. These methods are useful
+when image contrast is poor and lumen boundaries are not well defined by variations in image intensity.</p>
+
+<ul style="list-style-type:none;">
+  <li> <b>Circle</b> - Interactively select a center and radius, or input radius, to define a circle. </li>
+  <li> <b>Ellipse</b> - Interactively select a center and two axis, or axes radii, to define an ellipse. </li>
+  <li> <b>Polygon</b> - Interactively select a set of points defining a polygon. </li>
+  <li> <b>SplinePoly</b> - Interactively select a set of points defining an interpolating smooth curve (spline). </li>
+</ul>
+
+<p>SimVascular supports several methods used to automatically extract lumen boundaries based on variations in image intensity
+values.
+<ul style="list-style-type:none;">
+  <li> <b>Level Set</b> - Use image intensity and gradient to evolve a curve to the edge of a lumen boundary. </li>
+  <li> <b>Threshold</b> - Use an image intensity value to define a boundary. </li>
+</ul></p>
+
+<p>Paths created by <i>Paths Tools</i> are used to extract a series of 2D image slices from the image volume.
+Segmentation is then performed on each slice to extract a lumen boundary. Image points and intensity values used 
+for segmentation are interactively selected from a 2D image using the <b>left mouse button</b>.</p>
+
+<p>In SimVascular, a series of segmentations along a <i>Path</i> is called a <i>Contour Group</i>.</p>
+
+<p>The following sections demonstrate how to create segmentations using the <b>aorta</b> and <b>left-iliac</b> <i>Paths</i>.
+A detailed discussion about segmentation can be found in the SimVascular
+<a href="http://simvascular.github.io/docsModelGuide.html#modelingSegmentation.html">Modeling Guide / Segmentation</a> documentation.</p>
+
+<h3 id="tutorial_create_segs_1"> Create an instance of a <i>Segmentations Tool</i> for the aorta/right iliac </h3>
+
+<p>Create an instance of a <i>Segmentations Tool</i> named <b>aorta</b> used to define a <i>Contour Group</i> 
+for the main aorta and right iliac vessels. </p>
+
+<table class="table table-bordered" style="width:100%">
+  <caption> Create a <i>Segmentations Tool</i> instance named <b>aorta</b> </caption>
+  <tr>
+    <th> GUI </th>
+    <th> Description </th>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-seg-1.png" width="512" height="360"> </td>
+    <td> Select the <i>Segmentations</i> <i>Tool</i> in the <i>Data Manager</i> with the right mouse button. <br><br>
+         Select the <b>Create Contour Group</b> menu option.
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-seg-2.png" width="512" height="360"> <br><br>
+    </td>
+    <td> A <b>Create Contour Group</b> <i>DiaglogBox</i> appears. <br><br>
+         Select <b>aorta</b> for the <i>Path</i> name from the <b>Select Path:</b> <i>ComboBox</i> <br><br>
+         Enter <b>aorta</b> for the <i>Contour Group</i> name in the <b>Group Name:</b> <i>TextBox</i> <br><br>
+         Press the <b>Create Contour Group</b> <i>DiaglogBox</i> <b>OK</b> <i>Button</i>. <br><br>
+    </td>
+  </tr>
+
+  <tr>
+    <td> <img src="documentation/quickguide/tutorial/images/create-seg-3.png" width="512" height="360">
+    </td>
+    <td> A <i>Data Node</i> named <b>aorta</b> (an instance of a <i>Segmentations Tool</i>) is created under the
+         <i>Data Manager</i> <i>Segmentations Tool Type</i>.
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-seg-4.png" width="512" height="360"> </td>
+    <td> Close the <i>SV Path Planning Panel</i> by selected the <b>X</b> in its <i>Tab</i>. <br><br>
+         Double-click on the <i>Data Manager</i> <b>Segmentations / aorta</b> <i>Data Node</i> with the left mouse 
+         button to bring up the <i>SV 2D Segmentation Panel</i>. The <i>Display</i> layout is changed to two 2D views 
+         on the left and one 3D view on the right. <br><br>
+
+         The 3D view displays geometry from any <i>Tool</i> that is selected to be visible using the 
+         <img src="documentation/quickguide/tutorial/images/visible-toggle-box.png" width="20" height="18"> control. 
+         The <b>aorta</b> and <b>left-iliac</b> paths are shown as yellow lines with blue markers. 
+
+         The red rectangular region 
+         <img src="documentation/quickguide/tutorial/images/create-seg-5.png" width="32" height="21"> 
+         in the 3D view displays the 2D image slice extracted from the image volume. The slice is positioned and oriented 
+         using <b>aorta</b> <i>Path</i> geometry. The slice is moved along a <i>Path</i> using the <b>Reslice</b> <i>Slider</i>.
+         <br> <br>
+
+         The upper left 2D view displays the 2D image slice; the lower the gradient of the 2D image slice used to visualize image edges.
+         Image points and intensity values used for segmentation are interactively selected from the 2D views using the left mouse 
+         button.
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-seg-4.png" width="512" height="360"> </td>
+    <td> 
+        Some GUI controls: <br><br>
+        <ul style="list-style-type:none;">
+           <li> <img src="documentation/quickguide/tutorial/images/seg-gui-loft.png" width="90" height="21"> - Show the surface that
+             passes through segmentation curves. </li> <br>
+           <li> <img src="documentation/quickguide/tutorial/images/seg-gui-reslice.png" width="230" height="24"> - Move the image slice 
+             plane along a <i>Path</i>. </li><br>
+           <li> <img src="documentation/quickguide/tutorial/images/seg-gui-size.png" width="52" height="25"> - Set the size of the 
+             image slice plane. </li><br>
+           <li> <img src="documentation/quickguide/tutorial/images/seg-gui-delete.png" width="100" height="25"> - Delete the selected 
+             segmentation. </li><br> 
+           <li> <img src="documentation/quickguide/tutorial/images/seg-gui-copy.png" width="100" height="25"> - Make a copy of the 
+             selected segmentation. </li><br>
+           <li> <img src="documentation/quickguide/tutorial/images/seg-gui-paste.png" width="100" height="25"> - Create a new 
+             segmentation at the current path location (slice plane location) from a copy of a segmentation. </li><br>
+        </ul>
+
+        <br>
+        Segmentation methods: <br><br>
+        <ul style="list-style-type:none;">
+          <li> <img src="documentation/quickguide/tutorial/images/seg-gui-levelset.png" width="103" height="27"> &nbsp 
+               <img src="documentation/quickguide/tutorial/images/seg-gui-threshold.png" width="103" height="27"> &nbsp 
+               <img src="documentation/quickguide/tutorial/images/seg-gui-circle.png" width="103" height="27"> </li><br>
+          <li> <img src="documentation/quickguide/tutorial/images/seg-gui-ellipse.png" width="103" height="27"> &nbsp 
+               <img src="documentation/quickguide/tutorial/images/seg-gui-spline.png" width="103" height="27"> &nbsp 
+               <img src="documentation/quickguide/tutorial/images/seg-gui-polygon.png" width="103" height="27"> &nbsp 
+          </li>
+        </ul>
+    </td>
+  </tr>
+</table>
+
+<p><br>
+<h3 id="tutorial_create_segs_2"> Create segmentations for the aorta/right iliac </h3></p>
+
+<p>This section demonstrates how to create a set of segmentations from the start of the aorta to the end of the right iliac arteries
+using the <i>Level Set</i> segmentation method.</p>
+
+<table class="table table-bordered" style="width:100%">
+  <caption> Create level set segmentations using the <b>aorta</b> <i>Segmentations Tool</i> </caption>
+  <tr>
+    <th> GUI </th>
+    <th> Description </th>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-aorta-seg-1.png" width="512" height="360"> </td>
+    <td> In the <i>Segmentations</i> <i>Tool</i> <i>Panel</i> select the 
+         <img src="documentation/quickguide/tutorial/images/seg-gui-levelset.png" width="50" height="18"> <i>Button</i>. 
+         <br> <br>
+         The <b>LevelSet</b> sub-panel is displayed containing GUI controls used to set parameters controlling the
+         level set computation (<b>Stage 1</b> and <b>Stage 2</b>) and the resulting contour geometry. Select the
+         <b>Convert to Spline</b> <i>CheckBox</i> to represent the level set contour as a smooth interpolating
+         spline.
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-aorta-seg-2.png" width="512" height="360"> </td>
+    <td> Select the <img src="documentation/quickguide/tutorial/images/seg-gui-levelset.png" width="50" height="18"> 
+         <i>Button</i> again to perform a level set segmentation on the 2D image. 
+         <br> <br>
+         The level set contour is displayed in all three views as a closed red curve segmenting the vessel lumen from 
+         surrounding tissue. 
+
+         <br><br>
+         The contour is added to the <b>Contour List</b> <i>Table</i> as <b>0:SplinePolygon,LevelSet</b>, where <i>0</i> is 
+         the contour ID, <i>SplinePolygon</i> is geometric representation and <i>LevelSet</i> the segmentation method. 
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-aorta-seg-3.png" width="400" height="375"> </td>
+    <td> The upper left <i>Axial</i> view shows the level set contour as a closed red curve with square green markers
+         enclosing a straight red line with two green markers located in the contour center.
+         <br><br>
+         The blue and yellow markers in the center of the contour represent the location of a point on a path from 
+         which the 2D image is extracted. 
+         <br><br>
+         The 10 green markers represent the control points use to control the shape of the interpolating spline. Moving
+         a control point alters the shape of the level set contour. The number of control points is changed using the 
+         <b>Ctrl. No.</b> <i>TextBox</i>. 
+         <br><br>
+         The straight red line with two green markers is the <b>Contour Manipulator</b>. 
+         The center control point is used to translate the contour center in the 2D image plane. The outer control point 
+         is used to contract/expand the contour. 
+         <br><br>
+         Positioning the mouse cursor over a control point highlights it in red. It can then be moved with the left mouse 
+         button. 
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-aorta-seg-4.png" width="512" height="360"> </td>
+    <td> Segmentations for the entire aorta/right iliac are created by moving the 2D slice plane to a new position along 
+         the <b>aorta</b> <i>Path</i> using the <b>Reslice</b> <i>Slider</i> and selecting the 
+         <img src="documentation/quickguide/tutorial/images/seg-gui-levelset.png" width="50" height="18"> <i>Button</i>.
+         <br><br>
+         Press the <img src="documentation/quickguide/gui/images/gui-save-icon.png" width="40" height="35">
+         icon in the  <i>ToolBar</i> to save the <i>Project</i>. <br><br>
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-aorta-seg-5.png" width="512" height="360"> </td>
+    <td> Contours can be selected from the <b>Contour List:</b> <i>Table</i> or from the 3D view using the left 
+         mouse button. 
+         <br><br>
+         Once selected, a contour can be modified (e.g. change its segmentation method or parameters), copied/pasted, or deleted. 
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-aorta-seg-6.png" width="512" height="360"> </td>
+    <td> The surface passing through the contours is visualized by selecting the <b>Lofting Preview</b> <i>CheckBox</i>.
+         <br><br>
+         This is the surface that will eventually be used to create a solid model so any surface features that would 
+         lead to a poor model (e.g. overlapping regions) should be identified and fixed.
+    </td>
+  </tr>
+</table> 
+
+<p><br>
+<h3 id="tutorial_create_segs_3"> Create an instance of a <i>Segmentations Tool</i> for the left iliac </h3></p>
+
+<p>Create an instance of a <i>Segmentations Tool</i> named <b>left-iliac</b> used to define a <i>Contour Group</i>
+for the aorta/right iliac bifurcation to the end of the left iliac artery.</p>
+
+<table class="table table-bordered" style="width:100%">
+  <caption> Create a <i>Segmentations Tool</i> instance named <b>left-iliac</b> </caption>
+  <tr>
+    <th> GUI </th>
+    <th> Description </th>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-seg-6.png" width="512" height="360"> </td>
+    <td> Select the <i>Segmentations</i> <i>Tool</i> in the <i>Data Manager</i> with the right mouse button. <br><br>
+         Select the <b>Create Contour Group</b> menu option.
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-seg-7.png" width="512" height="360"> <br><br>
+    </td>
+    <td> A <b>Create Contour Group</b> <i>DiaglogBox</i> appears. <br><br>
+         Select <b>left-iliac</b> for the <i>Path</i> name from the <b>Select Path:</b> <i>ComboBox</i> <br><br>
+         Enter <b>left-iliac</b> for the <i>Contour Group</i> name in the <b>Group Name:</b> <i>TextBox</i> <br><br>
+         Press the <b>Create Contour Group</b> <i>DiaglogBox</i> <b>OK</b> <i>Button</i>. <br><br>
+    </td>
+  </tr>
+
+  <tr>
+    <td> <img src="documentation/quickguide/tutorial/images/create-seg-8.png" width="512" height="360">
+    </td>
+    <td> A <i>Data Node</i> named <b>left-iliac</b> (an instance of a <i>Segmentations Tool</i>) is created under the
+         <i>Data Manager</i> <i>Segmentations Tool Type</i>.
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-seg-9.png" width="512" height="360"> </td>
+    <td> Double-click on the <i>Data Manager</i> <b>Segmentations / left-iliac</b> <i>Data Node</i> with the left mouse
+         button to bring up the <i>SV 2D Segmentation Panel</i>. The <i>Display</i> layout is changed to two 2D views
+         on the left and one 3D view on the right. <br><br>
+
+         The red rectangular region
+         <img src="documentation/quickguide/tutorial/images/create-seg-5.png" width="32" height="21">
+         in the 3D view displays the 2D image slice extracted from the image volume. The slice is positioned and oriented
+         using <b>left-iliac</b> <i>Path</i> geometry. The slice is moved along a <i>Path</i> using the <b>Reslice</b> <i>Slider</i>.
+         <br> <br>
+
+         The upper left 2D view displays the 2D image slice; the lower the gradient of the 2D image slice used to visualize image edges.
+         Image points and intensity values used for segmentation are interactively selected from the 2D views using the left mouse
+         button.
+    </td>
+  </tr>
+</table> 
+
+<p><br> 
+<h3 id="tutorial_create_segs_4"> Create segmentations for the left iliac </h3>
+This section demonstrates how to create a set of segmentations from the aorta/right iliac bifurcation to the end of the left iliac artery.
+using the <i>Level Set</i> segmentation method.</p>
+
+<table class="table table-bordered" style="width:100%">
+  <caption> Create level set segmentations using the <b>left-iliac</b> <i>Segmentations Tool</i> </caption>
+  <tr>
+    <th> GUI </th>
+    <th> Description </th>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-left-iliac-seg-1.png" width="512" height="360"> </td>
+    <td> In the <i>Segmentations</i> <i>Tool</i> <i>Panel</i> select the
+         <img src="documentation/quickguide/tutorial/images/seg-gui-levelset.png" width="50" height="18"> <i>Button</i>.
+         <br> <br>
+         The <b>LevelSet</b> sub-panel is displayed containing GUI controls used to set parameters controlling the
+         level set computation (<b>Stage 1</b> and <b>Stage 2</b>) and the resulting contour geometry. Select the
+         <b>Convert to Spline</b> <i>CheckBox</i> to represent the level set contour as a smooth interpolating
+         spline.
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-left-iliac-seg-2.png" width="512" height="360"> </td>
+    <td> Segmentations for the entire left iliac are created by moving the 2D slice plane to a new position along
+         the <b>left-iliac</b> <i>Path</i> using the <b>Reslice</b> <i>Slider</i> and selecting the
+         <img src="documentation/quickguide/tutorial/images/seg-gui-levelset.png" width="50" height="18"> <i>Button</i>.
+         <br><br>
+         Press the <img src="documentation/quickguide/gui/images/gui-save-icon.png" width="40" height="35">
+         icon in the  <i>ToolBar</i> to save the <i>Project</i>. <br><br>
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-left-iliac-seg-3.png" width="512" height="360"> </td>
+    <td> The surface passing through the contours is visualized by selecting the <b>Lofting Preview</b> <i>CheckBox</i>.
+         <br><br>
+         This is the surface that will eventually be used to create a solid model so any surface features that would
+         lead to a poor model (e.g. overlapping regions) should be identified and fixed.
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-left-iliac-seg-4.png" width="512" height="360"> </td>
+    <td> Select the <b>Lofted</b> box under the <i>Data Manager</i> <b>Segmentations / aorta</b> <i>Data Node</i>
+         to visualize both the </b>aorta</b> and <b>left-iliac</b> lofted surfaces.
+         <br><br>
+         The upper left 2D <i>Axial</i> view displays the intersection of the 2D slice plane with the two surfaces as white lines. 
+         This shows that the <b>left-iliac</b> surface does not completely fit in the </b>aorta</b>. This could later cause problems 
+         when creating a model or generating a finite element mesh.
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-left-iliac-seg-5.png" width="512" height="360"> </td>
+    <td> Select the outer control point of the <b>Contour Manipulator</b> to reduce the size of the first contour until
+         it completely fits in the </b>aorta</b>.
+
+         <br><br>
+         Press the <img src="documentation/quickguide/gui/images/gui-save-icon.png" width="40" height="35">
+         icon in the  <i>ToolBar</i> to save the <i>Project</i>. <br><br>
+    </td>
+  </tr>
+</table> 
+</section>
+<section id="tutorial_create_solid_model" class="group"><h2 id="tutorial_create_model">Create Solid Model</h2>
+
+<p>A solid model is used as a geometric representation of a volume of vascular anatomy. It is created by joining together 
+vessel surfaces fitted to groups of 2D segmentations. A solid model provides the geometric information 
+needed to generate a finite element volumetric mesh.</p>
+
+<p>A solid model represents a volume in space by a set of faces with well-defined boundary connected to form a closed surface.
+The solid model boundary faces are defined geometrically to be either polygonal or NURBS surfaces.</p>
+
+<p>The lofted surface created from groups of 2D segmentations is a surface with open ends and is therefore not a solid. It is converted
+into a solid model by attaching planar surfaces (caps) to its open ends to form a closed surface. </p>
+
+<p>SimVascular assigns a <i>Face Type</i> to each face in the solid model</p>
+
+<ul style="list-style-type:none;">
+  <li> <b>wall</b> - A lofted surface representing the vessel wall.
+  <li> <b>cap</b> - The planar surface caps used to form a closed surface. These are Used to assign inlet and outlet boundary conditions 
+       for simulations. 
+</ul>
+
+<p>SimVascular has two solid modelers</p>
+
+<ul style="list-style-type:none;">
+  <li> <b>PolyData</b> - Faces are represented as a surface composed of triangles 
+  <li> <b>OpenCASCADE</b> - Faces are represented as a NURBS surface
+</ul>
+
+<p>The <b>PolyData</b> is the solid modeler most often used to build solid models. </p>
+
+<p>The following sections demonstrate how to create a <i>PolyData</i> solid model from the <b>aorta</b> and <b>left-iliac</b> segmentations. 
+A detailed discussion about modeling can be found in the SimVascular
+<a href="http://simvascular.github.io/docsModelGuide.html">Modeling Guide</a> documentation.</p>
+
+<h3 id="tutorial_create_model_1"> Create an instance of a <i>Models Tool</i> for the aorta and iliacs </h3>
+
+<p>Create an instance of a <i>Models Tool</i> named <b>aorta-iliacs</b> used to create a model for the main aorta and iliac vessels. </p>
+
+<table class="table table-bordered" style="width:100%">
+  <caption> Create a <i>Models Tool</i> instance named <b>aorta-iliacs</b> </caption>
+  <tr>
+    <th> GUI </th>
+    <th> Description </th>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-model-1.png" width="512" height="360"> </td>
+    <td> Select the <i>Models</i> <i>Tool</i> in the <i>Data Manager</i> with the right mouse button. 
+         <br><br>
+         Select the <b>Create Model</b> menu option.
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-model-2.png" width="512" height="360"> <br><br>
+    </td>
+    <td> A <b>Create New Model</b> <i>DiaglogBox</i> appears. 
+         <br><br>
+         The <b>Model Type:</b> <i>ComboBox</i> is used to select the solid modeler. Leave it on <b>PolyData</b>.
+         <br><br>
+         Enter <b>aorta-iliacs</b> for the <i>Model</i> name in the <b>Model Name:</b> <i>TextBox</i> 
+         <br><br>
+         Press the <b>Create New Model</b> <i>DiaglogBox</i> <b>OK</b> <i>Button</i>. <br><br>
+         <br><br>
+    </td>
+  </tr>
+
+  <tr>
+    <td> <img src="documentation/quickguide/tutorial/images/create-model-3.png" width="512" height="360"> </td>
+    <td> A <i>Data Node</i> named <b>aorta-iliacs</b> (an instance of a <i>Models Tool</i>) is created under the
+         <i>Data Manager</i> <i>Models Tool Type</i>.
+    </td>
+  </tr>
+
+  <tr>
+    <td> <img src="documentation/quickguide/tutorial/images/create-model-4.png" width="512" height="360"> </td>
+    <td> Select the <b>Lofted</b> <i>CheckBox</i> to toggle off the visibility of the lofted surfaces for 
+         both the <b>aorta</b> and <b>left-iliac</b> <i>Segmentations Data Nodes</i>.
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-model-5.png" width="512" height="360"> </td>
+    <td> Close the <i>SV 2D Segmentation Panel</i> by selected the <b>X</b> in its <i>Tab</i>. 
+         <br><br>
+         Double-click on the <i>Data Manager</i> <b>Models / aorta-iliacs</b> <i>Data Node</i> with the left mouse
+         button to bring up the <i>SV Modeling Panel</i>. 
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-model-5.png" width="512" height="360"> </td>
+    <td> Some GUI controls: <br><br>
+         <ul style="list-style-type:none;">
+           <li> <img src="documentation/quickguide/tutorial/images/model-gui-delete.png" width="114" height="25"> - Delete the selected
+                face(s). </li> <br>
+
+           <li> <img src="documentation/quickguide/tutorial/images/model-gui-fill-holes.png" width="114" height="25"> - Fill holes in the
+                surface with faces. </li> <br>
+
+           <li> <img src="documentation/quickguide/tutorial/images/model-gui-est-size.png" width="114" height="25"> - Estimate a good
+                size triangle edge size used to remesh the model&rsquo;s triangular surface.  </li> <br>
+
+           <li> <img src="documentation/quickguide/tutorial/images/model-gui-size.png" width="114" height="25"> - The 
+                triangle edge size <i>TextBox</i> used to remesh the model&rsquo;s triangular surface. </li> <br>
+
+           <li> <img src="documentation/quickguide/tutorial/images/model-gui-remesh.png" width="114" height="25"> - Remesh the model&rsquo;s 
+                triangular surface mesh using the traingle edge size given in the <i>TextBox</i>. </li> <br>
+         </ul>
+
+    </td>
+  </tr>
+
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-model-6.png" width="512" height="360"> </td>
+    <td> Select the <img src="documentation/quickguide/tutorial/images/3d-view-icon.png" width="13" height="12"> 
+         icon in the <i>3D View</i> to change the <i>Display</i> layout to a single 3D view. 
+    </td>
+  </tr>
+</table> 
+
+<p><br>
+<h3 id="tutorial_create_model_2"> Create a solid model of the aorta and iliacs </h3>
+This section demonstrates how to create a <i>PolyData</i> solid model from the <b>aorta</b> and <b>left-iliac</b> segmentations. </p>
+
+<table class="table table-bordered" style="width:100%">
+  <caption> Create a solid model </caption>
+  <tr>
+    <th> GUI </th>
+    <th> Description </th>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-model-7.png" width="512" height="360"> </td>
+    <td> Select the <img src="documentation/quickguide/tutorial/images/model-gui-create-model.png" width="114" height="25"> 
+         <i>Button</i> in the upper right of the <i>SV Modeling Panel</i>. 
+
+         <br><br>
+         A <b>Create Solid Model</b> <i>DiaglogBox</i> appears. This displays the names of the <b>aorta</b> and <b>left-iliac</b> 
+         <i>Segmentations Data Nodes</i> with a <i>CheckBox</i>. The <i>CheckBox</i>s are used to select the segmentation
+         lofted surfaces that will be joined together to create a solid model.
+
+         <br><br>
+         Select the <i>CheckBox</i> for the <b>aorta</b> and <b>left-iliac</b> segmentations. 
+
+         <br><br>
+         Press the <b>Create Solid Model</b> <i>DiaglogBox</i> <b>OK</b> <i>Button</i>. 
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-model-8.png" width="512" height="360"> </td>
+    <td>The solid model has been constructed and is shown in the <i>3D View</i>. 
+        <br><br>
+        Select <img src="documentation/quickguide/gui/images/gui-a-plane-icon.png" width="20" height="20">, 
+        <img src="documentation/quickguide/gui/images/gui-s-plane-icon.png" width="20" height="20">, and 
+        <img src="documentation/quickguide/gui/images/gui-c-plane-icon.png" width="20" height="20"> icons to hide the
+        axial,  sagittal, and, coronal image scan slices. 
+        <br><br>
+        Press the <img src="documentation/quickguide/gui/images/gui-save-icon.png" width="40" height="35">
+        icon in the  <i>ToolBar</i> to save the <i>Project</i>. 
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-model-9.png" width="512" height="360"> </td>
+    <td> The <b>Face List</b> <i>Table</i> lists the four <i>Faces</i> created by joining the <b>aorta</b> and 
+         <b>left-iliac</b> segmentations into a complete solid model. 
+       
+        <br><br>
+        The <b>Face List</b> <i>Table</i> columns define <i>Face</i> attributes
+          <ul style="list-style-type:none;">
+            <li> <b>Name</b> - The <i>Face</i> name. This name is later used in <i>Meshes</i> and <i>Simulation Tools</i>. </li>
+            <li> <b>Type</b> - The <i>Face Type</i>: <b>wall</b> or <b>cap</b>. </li>
+            <li> <b>V</b> - The <i>Face</i> visibility.  </li>
+            <li> <b>C</b> - The <i>Face</i> color.  </li>
+          </ul> 
+        Each of these attributes can be changed by double-clicking the left mouse button on the appropriate row for the <b>Face</b> 
+        and column for the specific attribute.
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-model-10.png" width="512" height="360"> </td>
+     <td> Select the <i>Data Manager</i> <i>Paths</i> and <i>Segmentations</i> <i>CheckBox</i> to toggle off the visibility of 
+          all paths and segmentation geometry. 
+    </td>
+  </tr>
+
+</table>
+</section>
+<section id="tutorial_create_finite_element_mesh" class="group"><h2 id="tutorial_create_finite_element_mesh">Create Finite Element Mesh</h2>
+
+<p>The continuous volume enclosed by a solid model of vascular anatomy is subdivided into discrete tetrahedral elements using mesh 
+generation software. This finite element mesh is used by the SimVascular <i>svSolver</i> and <i>svFsi</i> computational fluid 
+dynamics programs to simulate blood flow in a vascular network.</p>
+
+<p>A good mesh is integral to finite element CFD simulation techniques. It enables computers to numerically solve the 
+underlying governing fluid equations and simulate physical effects. The mesh quality influences the accuracy, convergence, 
+and speed of the simulation process.</p>
+
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #d0d0d0; border-left: 6px solid #d0d0d0">
+<i>Modeling</i> and <i>Meshing</i> are typically the most time consuming steps in the image-based modeling pipeline.
+It often takes multiple iterations between the <i>Modeling</i> and <i>Meshes Tools</i> to obtain a model that can
+be successfully meshed and suitable for a CFD simulation.
+</div>
+
+<p><br>
+The following sections demonstrate how to create a finite element mesh from the <b>aorta-iliacs</b> <i>PolyData</i> solid model 
+using the <i>TetGen</i> mesh generation software. A detailed discussion about mesh generation can be found in the SimVascular
+<a href="http://simvascular.github.io/docsMeshing.html">Meshing Guide</a> documentation.</p>
+
+<h3 id="tutorial_create_mesh_1"> Create an instance of a <i>Meshes Tool</i> for the <b>aorta-iliacs</b> model.  </h3>
+
+<p>Create an instance of a <i>Meshes Tool</i> named <b>aorta-iliacs</b> used to create a model for the main aorta and iliac vessels. </p>
+
+<table class="table table-bordered" style="width:100%">
+  <caption> Create a <i>Meshes Tool</i> instance named <b>aorta-iliacs</b> </caption>
+  <tr>
+    <th> GUI </th>
+    <th> Description </th>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-mesh-1.png" width="512" height="360"> </td>
+    <td> Select the <i>Meshes</i> <i>Tool</i> in the <i>Data Manager</i> with the right mouse button. 
+         <br><br>
+         Select the <b>Create Mesh</b> menu option.
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-mesh-2.png" width="512" height="360"> <br><br>
+    </td>
+    <td> A <b>Create Mesh</b> <i>DiaglogBox</i> appears. 
+         <br><br>
+         The <b>Select Model:</b> <i>ComboBox</i> is used to select a model. Leave it on <b>aorta-iliacs</b>.
+         <br><br>
+         The <b>Mesh Type:</b> <i>ComboBox</i> is used to select the mesh generator. Leave it on <b>TetGen</b>.
+         <br><br>
+         Don&rsquo;t enter anything in the <i>Mesh Name:</i> <i>TextBox</i>; by default it will use the <b>aorta-iliacs</b> model 
+         name for the mesh.
+         <br><br>
+         Press the <b>Create Mesh</b> <i>DiaglogBox</i> <b>OK</b> <i>Button</i>. <br><br>
+         <br><br>
+    </td>
+  </tr>
+
+  <tr>
+    <td> <img src="documentation/quickguide/tutorial/images/create-mesh-3.png" width="512" height="360"> </td>
+    <td> A <i>Data Node</i> named <b>aorta-iliacs</b> (an instance of a <i>Meshes Tool</i>) is created under the
+         <i>Data Manager</i> <i>Meshes Tool</i> type.
+
+         <br><br>
+         Select the <i>Data Manager</i> <i>Models</i> <i>CheckBox</i> to toggle off the visibility of the solid model segmentation geometry.
+
+         <br><br>
+         Close the <i>SV Modeling Panel</i> by selected the <b>X</b> in its <i>Tab</i>. 
+
+         <br><br>
+         Double-click on the <i>Data Manager</i> <b>Meshes / aorta-iliacs</b> <i>Data Node</i> with the left mouse
+         button to bring up the <i>SV Meshing Panel</i>. 
+    </td>
+  </tr>
+</table> 
+
+<p><br>
+<h3 id="tutorial_create_mesh_2"> Generate a finite element meshes from the <b>aorta-iliacs</b> model.</h3>
+The section demonstrates how to generate a finite element mesh from the <b>aorta-iliacs</b> <i>PolyData</i> solid model.</p>
+
+<table class="table table-bordered" style="width:100%">
+  <caption> Generate a mesh from the <b>aorta-iliacs</b> model </caption>
+  <tr>
+    <th> GUI </th>
+    <th> Description </th>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-mesh-4.png" width="512" height="360"> </td>
+    <td> Some GUI controls: 
+         <br><br>
+         <ul style="list-style-type:none;">
+           <li> <img src="documentation/quickguide/tutorial/images/mesh-gui-info.png" width="86" height="24"> - Displays a 
+                <i>InformationPopup</i> showing the number of elements generated for the current mesh. </li> <br>
+           <li> <img src="documentation/quickguide/tutorial/images/mesh-gui-run.png" width="90" height="23"> - Run the mesh generator. 
+                </li> <br>
+           <li> <img src="documentation/quickguide/tutorial/images/mesh-gui-estimate.png" width="73" height="25"> - Estimate the element
+                size used to control mesh resolution. </li> <br>
+         </ul>
+         <br><br>
+         Select the <img src="documentation/quickguide/tutorial/images/mesh-gui-estimate.png" width="73" height="25"> <i>Button</i>.
+         <br><br>
+         Select the <img src="documentation/quickguide/tutorial/images/mesh-gui-run.png" width="90" height="23"> <i>Button</i>.
+         <br><br>
+         Select the <b>Yes</b> <i>Button</i> on the <i>QuestionPopup</i> asking to continue.
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-mesh-5.png" width="512" height="360"> </td>
+    <td> A <i>InformationPopup</i> is displayed showing the number of elements generated.
+         <br><br>
+         Press the <i>InformationPopup</i> <b>OK</b> <i>Button</i>.
+         <br><br>
+         Press the <img src="documentation/quickguide/gui/images/gui-save-icon.png" width="40" height="35">
+         icon in the <i>ToolBar</i> to save the <i>Project</i>.
+    </td>
+  </tr>
+</table>
+
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #e6e600; border-left: 6px solid #e6e600">
+When opening a <i>Project</i> SimVascular does not automatically read in and display <i>Meshes Tool</i> meshes.
+A mesh must be manually loaded by right clicking on a <i>Data Manager</i> Meshes Data Node</i> and selecting the
+<b>Load/Unload Volume Mesh</b> menu option.
+</div>
+</section>
+<section id="tutorial_create_simulation" class="group"><h2 id="tutorial_create_simulation">Create CFD Simulation</h2>
+
+<p>Computational fluid dynamics (CFD) simulations permit detailed analyses of blood flow and pressure in patient-specific 
+models of the human vasculature. CFD solvers used for such simulations must accommodate the sophisticated boundary 
+conditions, physiologic models and physics specific to cardiovascular modeling.</p>
+
+<p>The <i>Simulations Tool</i> has functionality to assign boundary conditions, material properties, and set parameters for the 
+SimVascular <i>svSolver</i> CFD solver. <i>svSolver</i> can be run through the GUI for testing a simulation setup. However, 
+for simulating physiological relevant time scales the simulation files are generated on a desktop, copied to a high performance 
+computing (HPC) cluster, and run in parallel there. </p>
+
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #e6e600; border-left: 6px solid #e6e600">
+The computational cost of the numerical solution of the governing fluid equations used in CFD is quite large. 
+Running CFD simulations on a typical laptop/desktop (4-8 cores) is practical for only a few hundreds of time steps. 
+For a large mesh of a million or more elements it could still take a significant amount of time for a simulation to 
+complete.
+</div>
+
+<p><br>
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #e6e600; border-left: 6px solid #e6e600">
+The <i>svSolver</i> CFD solver does not use any predefined units. All values used for physical parameters (e.g. fluid density)
+and boundary conditions must be consistent with the spatial dimensions of the finite element mesh.
+</div></p>
+
+<p><br>
+The following sections demonstrate how to setup a CFD simulation for <i>svSolver</i> using the <b>aorta-iliacs</b> solid model
+and finite element mesh. A detailed discussion about CFD simulations can be found in the SimVascular
+<a href="http://simvascular.github.io/docsFlowSolver.html">Simulation Guide</a> documentation.</p>
+
+<h3 id="tutorial_create_simulation_1"> Create an instance of a <i>Simulations Tool</i> for the <b>aorta-iliacs</b> model.  </h3>
+
+<p>Create an instance of a <i>Simulations Tool</i> named <b>aorta-iliacs</b> used to create a CFD simulation of blood flow 
+in the main aorta and iliac vessels. </p>
+
+<table class="table table-bordered" style="width:100%">
+  <caption> Create a <i>Simulations Tool</i> instance named <b>aorta-iliacs</b> </caption>
+  <tr>
+    <th> GUI </th>
+    <th> Description </th>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-simulation-1.png" width="512" height="360"> </td>
+    <td> Select the <i>Simulations</i> <i>Tool</i> in the <i>Data Manager</i> with the right mouse button. 
+         <br><br>
+         Select the <b>Create Simulation job</b> menu option.
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-simulation-2.png" width="512" height="360"> <br><br>
+    </td>
+    <td> A <b>Create Simulation Job</b> <i>DiaglogBox</i> appears. 
+         <br><br>
+         The <b>Select Model:</b> <i>ComboBox</i> is used to select a model. Leave it on <b>aorta-iliacs</b>.
+         <br><br>
+         Enter <b>aorta-iliacs</b> in the <b>Job Name:</b> <i>TextBox</i>.
+         <br><br>
+         Press the <b>Create Simulation Job</b> <i>DiaglogBox</i> <b>OK</b> <i>Button</i>. 
+         <br><br>
+         <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #d0d0d0; border-left: 6px solid #d0d0d0">
+         A solid model is first selected for the simulation because it identifies the <i>Faces</i> used to define boundary
+         conditions. A mesh generated from the model is later selected. Note that several different meshes can be generated
+         from the same solid model using different meshing parameters (e.g. edge size).
+         </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td> <img src="documentation/quickguide/tutorial/images/create-simulation-3.png" width="512" height="360"> </td>
+    <td> A <i>Data Node</i> named <b>aorta-iliacs</b> (an instance of a <i>Simulations Tool</i>) is created under the
+         <i>Data Manager</i> <i>Simulations Tool</i> type.
+         <br><br>
+         Close the <i>SV Modeling Panel</i> by selected the <b>X</b> in its <i>Tab</i>. 
+         <br><br>
+         Double-click on the <i>Data Manager</i> <b>Simulations / aorta-iliacs</b> <i>Data Node</i> with the left mouse
+         button to bring up the <i>SV Simulation Panel</i>. 
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-simulation-4.png" width="512" height="360"> </td>
+    <td> <i>SV Simulation Panel</i> is a <i>ToolBox</i> containing multiple pages of GUI widgets identified by a section of 
+         rectangles with text at the <i>Toolbox</i> bottom. Selecting a rectangle shows another page of GUI widgets.
+         <br><br>
+         The <i>ToolBox</i> <b>Basic Parameters</b> page is used to set fluid physical parameters and initial conditions (ICs). Use the
+         default parameters values. 
+         <br><br>
+         Select the <i>ToolBox</i> <b>Inlet and Outlet BCs</b> page. 
+    </td>
+  </tr>
+</table>
+
+<p><br>
+<h3 id="tutorial_create_simulation_2"> Set inlet and outlet boundary conditions.  </h3>
+This section demonstrates how to set the simulation inlet and outlet boundary conditions. The centimeter–gram–second (CGS) system of 
+units is used. </p>
+
+<p>The inlet boundary condition is a steady velocity profile with values given in the <b>steady.flow</b> file. </p>
+
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #d0d0d0; border-left: 6px solid #d0d0d0">
+0.0 -100<br>
+1.0 -100
+</div>
+
+<p>which is interpreted as a constant inlet volumetric flow rate of 100 cc/s over the time interval [0.0, 1.0] seconds.</p>
+
+<p>The left and right iliac outlets are set to a resistance boundary condition with a value of 16000 dynes·s/cm<sup>5</sup>.</p>
+
+<table class="table table-bordered" style="width:100%">
+  <caption> Create inlet and outlet boundary conditions </caption>
+  <tr>
+    <th> GUI </th>
+    <th> Description </th>
+  </tr>
+
+ <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-simulation-5.png" width="512" height="360"> </td>
+    <td> The <i>ToolBox</i> <b>Inlet and Outlet BCs</b> page is used to set boundary conditions for the mesh inlet and outlet faces.
+         <br><br>
+         The <b>Name / BC Type / Values</b> <i>Table</i> contains the name of all <i>Model</i> <i>Faces</i> that have a <b>cap</b> 
+         </i>Face Type</i> (set in the <i>Models Tool</i>).
+         <br><br>
+         To set the inlet velocity boundary condition double click with the left mouse button on <b>cap_aorta</b> in the <b>Name</b> column. 
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-simulation-6.png" width="512" height="360"> </td>
+    <td> A <b>Set Inlet/Outlet BCs</b> <i>DialogBox</i> appears.
+         <br><br>
+         Select the <b>Flow rate (from File) </b> <img src="documentation/quickguide/tutorial/images/simulation-gui-flow-file.png" width="22" height="20"> icon to bring up a <i>FileBrowser</i>.
+         <br><br>
+         Select the <b>steady.flow</b> file from the <b>Tutorial/flow-files</b> directory. 
+         <br><br>
+         Press the <b><b>Set Inlet/Outlet BCs</b> <i>DiaglogBox</i> <b>OK</b> <i>Button</i>. 
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-simulation-7.png" width="512" height="360"> </td>
+    <td> The <b>cap_aorta</b> boundary condition <b>BC Type</b> is now set to <b>Proscribed Velocities</b>. 
+         <br><br>
+         To set the outlet boundary condition for the left iliac double click with the left mouse button on <b>cap_left-iliac</b> in 
+         the <b>Name</b> column. 
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-simulation-8.png" width="512" height="360"> </td>
+    <td> A <b>Set Inlet/Outlet BCs</b> <i>DialogBox</i> appears.
+        <br><br>
+        From the <b>BC Type:</b> <i>ComboBox</i> select <b>Resistance</b>.
+        <br><br>
+        Enter <b>16000</b> into the <b>Resistance:</b> <i>TextBox</i>
+        <br><br>
+        Press the <b>Set Inlet/Outlet BCs</b> <i>DiaglogBox</i> <b>OK</b> <i>Button</i>. 
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-simulation-9.png" width="512" height="360"> </td>
+    <td> The <b>cap_left-iliac</b> boundary condition <b>BC Type</b> is now set to <b>Resistance</b>.
+         <br><br>
+         To set the outlet boundary condition for the right iliac double click with the left mouse button on <b>cap_aorta_2</b> in
+         the <b>Name</b> column.
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-simulation-10.png" width="512" height="360"> </td>
+    <td> A <b>Set Inlet/Outlet BCs</b> <i>DialogBox</i> appears.
+        <br><br>
+        From the <b>BC Type:</b> <i>ComboBox</i> select <b>Resistance</b>.
+        <br><br>
+        Enter <b>16000</b> into the <b>Resistance:</b> <i>TextBox</i>
+        <br><br>
+        Press the <b>Set Inlet/Outlet BCs</b> <i>DiaglogBox</i> <b>OK</b> <i>Button</i>.   
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-simulation-11.png" width="512" height="360"> </td>
+    <td> The <b>cap_aorta_2</b> boundary condition <b>BC Type</b> is now set to <b>Resistance</b>.
+         <br><br>
+         Press the <img src="documentation/quickguide/gui/images/gui-save-icon.png" width="40" height="35">
+         icon in the  <i>ToolBar</i> to save the <i>Project</i>.
+         <br><br>
+         Select the <i>ToolBox</i> <b>Solver Parameters</b> page.
+    </td>
+  </tr>
+</table>
+
+<p><br>
+<h3 id="tutorial_create_simulation_3"> Set solver parameters.  </h3>
+This section demonstrates how to set the simulation solver parameters. </p>
+
+<p>The number of simulation time steps and time step size determines the simulation physical time. A simulation for 500 time steps 
+using a time step size of 0.001 simulates a physical time = (500 time steps) x (0.001 time step size) = 0.5 seconds.</p>
+
+<p>The value of the time step size is an important factor contributing to the stability, convergence, and reliability of a simulation.
+The value of the time step size depends on the size of the finite element mesh and type and values used for boundary conditions.</p>
+
+<p>A detailed discussion about solver parameters can be found in the SimVascular
+<a href="http://simvascular.github.io/docsFlowSolver.html#solverparameters">Simulation Guide / Solver Parameters</a> documentation.</p>
+
+<table class="table table-bordered" style="width:100%">
+  <caption> Set solver parameters </caption>
+  <tr>
+    <th> GUI </th>
+    <th> Description </th>
+  </tr>
+
+ <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-simulation-12.png" width="512" height="360"> </td>
+    <td> The <i>ToolBox</i> <b>Solver Parameters</b> page is used to set the parameters controlling <i>svSolver</i>
+         solution and output. Parameter values are entered by clicking with the left mouse button on the appropriate
+         <i>TextBox</i>. 
+         <br><br>
+         The set the parameters as follows <br><br>
+         <ul style="list-style-type:none;">
+           <li> <b>Number of Timesteps</b> - The number of time steps to run the simulation. 
+                Enter <b>500</b> </li> <br>
+           <li> <b>Time Step Size</b> - The incremental change in time for which the governing equations are being solved. 
+                Enter <b>0.001</b> </li> <br>
+           <li> <b>Number of Timesteps between Restarts</b> - The frequency with which to save simulation results. For example,
+                save results every 100 time steps.
+                Enter <b>100</b> </li> <br>
+         </ul>
+         <br>
+         Select the <i>ToolBox</i> <b>Create Files and Run Simulation</b> page.
+    </td>
+  </tr>
+</table>
+
+<p><br>
+<h3 id="tutorial_create_simulation_4"> Run the simulation.  </h3>
+This section demonstrates how run the simulation.</p>
+
+<p>The <i>svSolver</i> program can be run as a single process using one processor (core) or in parallel using two or more processors.
+<i>svSolver</i> uses the <i>Open MPI</i> implementation of the Message Passing Interface (MPI) to run in parallel. The <i>Open MPI</i>
+libraries must be installed in order to run <i>svSolver</i> in parallel. In this demonstration the <i>svSolver</i> program is run 
+on a single processor.</p>
+
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #d0d0d0; border-left: 6px solid #d0d0d0">
+The SimVascular <i>svSolver</i> program is included in the Windows SimVascular application installer. For MacOS and Ubuntu 
+platforms it must be installed using a separate <i>svSolver</i> installer downloaded from 
+<a href="https://simtk.org/frs/?group_id=188"> SimTK </a>
+</div>
+
+<p><br>
+<table class="table table-bordered" style="width:100%">
+  <caption> Run the simulation</caption>
+  <tr>
+    <th> GUI </th>
+    <th> Description </th>
+  </tr></p>
+
+<p><tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-simulation-13.png" width="512" height="360"> </td>
+    <td> The <i>ToolBox</i> <b>Create Files and Run Simulation</b> page is used to run <i>svSolver</i>.
+         <br><br>
+         Select the <b>aorta-iliacs</b> from the <b>Choose Mesh:</b> <i>ComboBox</i>. 
+         <br><br>
+         Select the <b>Create Data Files for Simulation</b> <i>Button</i>. 
+    </td>
+  </tr></p>
+
+<p><tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-simulation-14.png" width="512" height="360"> </td>
+    <td> An <i>InformationPopup</i> appears showing that the simulation files have been created.
+         <br><br>
+         Press the <i>InformationPopup</i> <b>OK</b> <i>Button</i>. 
+         <br><br>
+         Press the <b>Run Simulation</b> <i>Button</i>. 
+         <br><br>
+         The <i>svSolver</i> program is run on a single processor and should take several minutes to complete.
+         <br><br>
+         <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #d0d0d0; border-left: 6px solid #d0d0d0">
+         The <i>svSolver</i> program can be run in parallel by selecting the <b>Use MPI</b> <i>CheckBox</i> and setting the 
+         <b>Number of Processors</b> <i>Slider</i> to 2 or larger.
+         </div> 
+    </td>
+  </tr></p>
+
+<p><tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-simulation-15.png" width="512" height="360"> </td>
+    <td> An <i>InformationPopup</i> appears showing that the simulation has successfully finished.
+         <br><br>
+         Press the <i>InformationPopup</i> <b>Show Details</b> <i>Button</i>.<br>
+    </td>
+  </tr></p>
+
+<p><tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-simulation-16.png" width="512" height="360"> </td>
+    <td> A <i>ScrollingTextBox</i> appears showing the simulation history: time step, CPU time in seconds, 
+         measure of the nonlinear residual, etc.
+         <br><br>
+         Press the <i>InformationPopup</i> <b>Show Details</b> <i>Button</i>.<br>
+         <br><br>
+         Press the <i>InformationPopup</i> <b>OK</b> <i>Button</i>.<br>
+         <br><br>
+         Select the <i>ToolBox</i> <b>Convert Results</b> page.
+    </td>
+  </tr>
+</table></p>
+
+<p><br>
+<h3 id="tutorial_create_simulation_5"> Convert simulation results.  </h3>
+This section demonstrates how to convert the simulation results into VTK format files for visualization. </p>
+
+<table class="table table-bordered" style="width:100%">
+  <caption> Convert simulation results </caption>
+  <tr>
+    <th> GUI </th>
+    <th> Description </th>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-simulation-17.png" width="512" height="360"> </td>
+    <td> The <i>ToolBox</i> <b>Convert Results</b> page is used to convert <i>svSolver</i> results files into VTK format files.
+         <br><br>
+         GUI controls:
+         <br><br>
+         <ul style="list-style-type:none;">
+           <li> <img src="documentation/quickguide/tutorial/images/simulation-gui-results-dir.png" width="245" height="32"> - Displays
+                the simulation results directory. Use the 
+                <img src="documentation/quickguide/tutorial/images/simulation-gui-flow-file.png" width="22" height="20"> icon to bring up
+                a <i>FileBrowser</i> to change the directory.</li><br>
+            <li> <img src="documentation/quickguide/tutorial/images/simulation-gui-start-stop.png" width="245" height="20"> - <i>TextBoxes</i> 
+            to enter the start, stop and increment time step range used to convert simulation results files. Enter <b>0</b>, <b>500</b> 
+            and <b>100</b>.</li>
+         </ul>
+         <br>
+         Select the <b>Convert &hellip;</b> <i>Button</i>.
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-simulation-18.png" width="512" height="360"> </td>
+    <td> A <i>FileBrowser</i> appears. 
+         <br><br>
+         Navigate to the <b>Tutorial/Simulations/aorta-iliacs</b> directory.
+         <br><br>
+         Select the <i>FileBrowser</i> <b>Open</b> <i>Button</i>. 
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="documentation/quickguide/tutorial/images/create-simulation-19.png" width="512" height="360"> </td>
+    <td> An <i>InformationPopup</i> appears showing that the simulation results files have been converted.
+         <br><br>
+         Select the <i>InformationPopup</i> <b>OK</b> <i>Button</i>. 
+         <br><br>
+         Converted simulation results have been written to <b>Tutorial/Simulations/aorta-iliacs/aorta-iliacs-converted-results</b>.
+         <pre>
+         all_results-averages-from_cm-to-mmHg-L_per_min.txt all_results_00200.vtu
+         all_results-averages.txt               all_results_00300.vtp
+         all_results-flows.txt                  all_results_00300.vtu
+         all_results-pressures.txt              all_results_00400.vtp
+         all_results_00000.vtp                  all_results_00400.vtu
+         all_results_00000.vtu                  all_results_00500.vtp
+         all_results_00100.vtp                  all_results_00500.vtu
+         all_results_00100.vtu                  average_result.vtp
+         all_results_00200.vtp
+         </pre>
+         The <b>.vtp</b> files are VTK format files contain results for the mesh surface.  
+         The <b>.vtu</b> files are VTK format files contain results for the mesh volume.  
+         The <b>.text</b> files are text files containing velocity and pressure results averaged over inlet and outlet <i>Faces</i>.
+         <br><br>
+         The VTK format files can be visualized using <a href="https://www.paraview.org/">ParaView</a>.
+    </td>
+  </tr>
+</table>
+</section>
+<section id="tutorial_summary" class="group"><h2 id="tutorial_summary">Summary</h2>
+
+<p>This <i>Tutorial</i> has demonstrated how to use the SimVascular image-based modeling pipeline to create patient-specific geometric 
+models suitable for CFD blood flow simulations. It should provide a foundation for creating custom models and performing simulations 
+applicable to a variety of research areas.</p>
+
+<p>The SimVascular <i>User Guides</i> and <i>Clinical Cases</i> documentation provides more detailed information about all the
+topics covered in this <i>Tutorial</i>. </p>
+
+<p>The <a href="https://www.youtube.com/playlist?list=PL1CBZ8Wh-xvSKUsuBA4MM4Jba-psVdxXT">SimVascular Online Tutorials</a> video series
+provides live demonstrations by experienced users building models and setting up simulations for different applications.</p>
+
+<p>The <a href="https://simtk.org/plugins/phpBB/indexPhpbb.php?group_id=188&pluginname=phpBB">SimVascular Forum</a> is an additional 
+resource for seeking answers for specific questions. Searching the <i>Forum</i> can be very helpful for providing tips and solutions
+to any SimVascular quirks and limitations.</p>
+
+<p>Functionality not supported by the SimVascular GUI may be implemented using the <a href="http://simvascular.github.io/docsPythonInterface.html">Python API</a>). </p>
+
+<p><br> <br> </p>
+</section>
+
+</div>
 
 
 

@@ -53,9 +53,8 @@
                       <b><span class="fa fa-user"></span> User Guides</b>
                     </a>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/SimVascular/SimVascular/wiki/user_simvascular_software_suite_install"><b><span class="fa fa-sign-in fa-rotate-90"></span> Installation</b></a></li>
                       <li role="presentation" class="divider"></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsQuickGuide.html"><b><span class="icon ion-ios7-bolt"></span> Quick Guide</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsQuickGuide.html"><b><span class="icon ion-ios7-bolt"></span> Getting Started</b></a></li>
                       <li role="presentation" class="divider"></li>
                       <li role="presentation"><a role="menuitem" tabindex="-1" href="docsModelGuide.html"><b><span class="icon ion-settings"></span> Modeling</b></a></li>
                       <li role="presentation"><a role="menuitem" tabindex="-1" href="docsMeshing.html"><b><span class="icon ion-ios7-keypad"></span> Meshing</b></a></li>
@@ -65,6 +64,7 @@
                       <li role="presentation"><a role="menuitem" tabindex="-1" href="docsROMSimulation.html"><b><span class="icon ion-plus-round"></span> ROM Simulation</b></a></li>
                       <li role="presentation"><a role="menuitem" tabindex="-1" href="docsGenBC.html"><b><span class="icon ion-refresh"></span> GenBC</b></a></li>
                       <li role="presentation"><a role="menuitem" tabindex="-1" href="docsPythonInterface.html"><b><span class="icon ion-refresh"></span> Python Interface</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsReferences.html"><b><span class="icon ion-refresh"></span> References </b></a></li>
                     </ul>
                   </li>
 
@@ -148,15 +148,6 @@
     <!-- ONE COLUMN OF SPACE -->
     <nav class="hidden-xs hidden-sm col-md-2 col-lg-2 bs-docs-sidebar">
 
-        <ul id="sidebar" class="nav nav-stacked fixed manInstallation"> <!--Nav Bar -->
-<p><h3>Installation</h3></p>
-<li><a href="#installationDownload">Download</a></li>
-<li><a href="#installationWindows">Windows</a></li>
-<li><a href="#installationMac">Mac</a>
-<li><a href="#installationLinux">Linux</a>
-</ul>
-
-
 
 
 
@@ -173,236 +164,6 @@
     <div class="col-xs-10 col-sm-10 col-md-9 col-lg-9" id="manualContent">
 
       <!-- ACTUAL CONTENT -->
-
-        <div class="manInstallation"><section id="installationDownload" class="group"><h1>Downloading SimVascular</h1>
-
-<ol>
-<li><p>Go to  <a href="https://simtk.org/project/xml/downloads.xml?group_id=188" target="_blank">SimVascular download webpage</a>.</p></li>
-<li><p>Login to SimTK. If you don&rsquo;t have a SimTK account you will need to create one.</p></li>
-<li><p>From the SimVascular <strong>Download links</strong> menu select the installer for your operating system and version.</p></li>
-<li><p>List your intended use for the software and agree to the license agreement.</p></li>
-<li><p>You may also download <strong>svSolver</strong> and <strong>svFSI</strong> solvers from this same web page.</p></li>
-</ol>
-
-<p>Note: SimVascular is not guaranteed to work if installed on operating system versions not listed in the <strong>Download links</strong> menu.</p>
-</section>
-<section id="installationWindows" class="group"><h1>Installation Instructions for Windows</h1>
-
-<p><br></p>
-
-<h3>Supported Versions</h3>
-<pre class="highlight plaintext"><code>Windows 10 64-bit 
-</code></pre>
-
-<p><br></p>
-
-<h3>Installing SimVascular</h3>
-
-<ol>
-<li>Download the SimVascular Windows installer from <a href="https://simtk.org/frs/index.php?group_id=188">SimTK</a>.</li>
-</ol>
-
-<p><br></p>
-
-<h3>Installing svSolver</h3>
-
-<ol>
-<li><p>Download the svSolver Windows installer from <a href="https://simtk.org/frs/index.php?group_id=188">SimTK</a>.</p></li>
-<li><p>The solver is installed at C:\Program Files\SimVascular\svSolver\yyyy-mm-dd.</p></li>
-</ol>
-</section>
-<section id="installationMac" class="group"><h1>Installation Instructions for Apple OS X</h1>
-
-<p><br></p>
-
-<h3>Supported Versions</h3>
-
-<p>Mac OS X versions 10.11 or higher.</p>
-<pre class="highlight plaintext"><code>SimVascular is compiled on MacOS 10.11 and should be compatible with newer versions of MacOS. 
-</code></pre>
-
-<p><br></p>
-
-<h3>Installing SimVascular</h3>
-
-<ol>
-<li><p>Download the SimVascular MacOS installer from <a href="https://simtk.org/frs/index.php?group_id=188">SimTK</a>.</p></li>
-<li><p>Double-click on the downloaded installation (.dmg) file.</p></li>
-<li><p>Agree to the terms of service.</p></li>
-<li><p>Drag the SimVascular application to the Applications folder.</p>
-
-<figure>
-  <img class="svImg svImgXl"  src="documentation/installation/imgs/macDrag.png"> 
-  <figcaption class="svCaption" ></figcaption>
-</figure></li>
-<li><p>Launch SimVascular through your Applications folder or Launchpad.</p>
-<pre class="highlight plaintext"><code>SimVascular is not a registered app with Apple so when you open it a warning dialog is displayed stating “SimVascular can’t be opened because it is from an unidentified developer.”. You can then open SimVascular by going to 'System Preferences&gt;Security &amp; Privacy&gt;General' and click on “Open Anyway”.        
-</code></pre></li>
-<li><p>Setup SimVascular to run from a terminal. (optional)</p>
-<pre class="highlight plaintext"><code>sudo /Applications/SimVascular.app/Contents/Resources/setup-symlinks.sh
-
-This creates a script called 'simvascular' in /usr/local/bin/ that can be executed from the command line.
-</code></pre></li>
-</ol>
-
-<p><br></p>
-
-<h3>Installing svSolver</h3>
-
-<ol>
-<li><p>Download the svSolver MacOS installer.</p></li>
-<li><p>Double-click on the downloaded installation (.pkg) file.</p></li>
-<li><p>Follow the instructions.</p></li>
-<li><p>The solver is installed in /usr/local/sv/svsolver/yyyy-mm-dd</p></li>
-</ol>
-
-<h3>Installing MPI</h3>
-<pre class="highlight plaintext"><code>svSolver uses MPICH implementation of MPI. To install MPI type the follow command in a terminal window
-
-    brew install mpich2
-
-Note that some applications may install a different implementation (e.g. Open MPI) of MPI. This may interfere with the MPI version needed by the svSolver or cause the solver not to execute correctly.
-</code></pre>
-</section>
-<section id="installationLinux" class="group"><h1>Installation Instructions for Linux</h1>
-
-<p><br></p>
-
-<h3>Supported Versions</h3>
-
-<p>Ubuntu 14.04</p>
-<pre class="highlight plaintext"><code>SimVascular requires a newer version of GLIBCXX than is shipped with Ubuntu 14.
-</code></pre>
-
-<p>Ubuntu 16.04 and 18.04</p>
-<pre class="highlight plaintext"><code>No system updates should be required.
-</code></pre>
-
-<p>Red Hat 7 / CentOS 7</p>
-<pre class="highlight plaintext"><code>Red Hat 7 releases are considered alpha with very limited testing.
-
-CentOS 7 requires an updated compiler.
-</code></pre>
-
-<p><br></p>
-
-<h3>Installing SimVascular on Ubuntu 14.04</h3>
-
-<ol>
-<li><p>Download the SimVascular Ubuntu installer from <a href="https://simtk.org/frs/index.php?group_id=188">SimTK</a>. </p></li>
-<li><p>Double-click on the downloaded installation (.deb) file.</p>
-<pre class="highlight plaintext"><code>SimVascular is installed in /usr/local/sv/simvascular/yyyy-mm-dd, where yyyy-mm-dd represents the SimVascular release date (e.g. 2018-11-25).
-</code></pre></li>
-<li><p>Install the gcc-4.9 compiler to get a newer version of GLIBCXX.</p>
-<pre class="highlight plaintext"><code>% sudo add-apt-repository ppa:ubuntu-toolchain-r/test
-% sudo apt-get update
-% sudo apt-get install gcc-4.9 g++-4.9
-</code></pre></li>
-<li><p>To launch SimVascular:</p>
-<pre class="highlight plaintext"><code>Go to Unity Dash and search for "SimVascular"
-Click the SimVascular icon.
-</code></pre></li>
-<li><p>Setup SimVascular to run from a terminal. (optional)</p>
-<pre class="highlight plaintext"><code>sudo bash /usr/local/sv/simvascular/yyyy-mm-dd/setup-symlinks.sh
-
-This creates a script called 'simvascular' in /usr/local/bin/ that can be executed from the command line.
-</code></pre></li>
-</ol>
-
-<h3>Installing SimVascular on Ubuntu 16.04 and 18.04</h3>
-
-<ol>
-<li><p>Download the SimVascular Ubuntu installer from <a href="https://simtk.org/frs/index.php?group_id=188">SimTK</a>. </p></li>
-<li><p>Double-click on the downloaded installation (.deb) file.</p>
-<pre class="highlight plaintext"><code>SimVascular is installed in /usr/local/sv/simvascular/yyyy-mm-dd, where yyyy-mm-dd represents the SimVascular release date (e.g. 2018-11-25).
-</code></pre></li>
-<li><p>To launch SimVascular:</p>
-<pre class="highlight plaintext"><code>Go to Unity Dash and search for "SimVascular"
-Click the SimVascular icon.
-</code></pre></li>
-<li><p>Setup SimVascular to run from a terminal. (optional)</p>
-<pre class="highlight plaintext"><code>sudo bash /usr/local/sv/simvascular/yyyy-mm-dd/setup-symlinks.sh
-
-This creates a script called 'simvascular' in /usr/local/bin/ that can be executed from the command line.
-</code></pre></li>
-</ol>
-
-<h3>Installing SimVascular on CentOS 7</h3>
-
-<ol>
-<li><p>Download the SimVascular CentOS installer from <a href="https://simtk.org/frs/index.php?group_id=188">SimTK</a>. </p>
-<pre class="highlight plaintext"><code>The intaller is a .tar.gz file that is manually installed.
-</code></pre></li>
-<li><p>Create a /usr/local/package directory if it does not already exist.</p>
-<pre class="highlight plaintext"><code>% su root
-
-% cd /usr/local
-
-% mkdir package
-</code></pre></li>
-<li><p>Untar the contents of the installer .tar.gz file to the SimVascular application directory.</p>
-<pre class="highlight plaintext"><code>% tar xzvf ~/Downloads/SimVascular-centos7-x64.Nov.25-2018.tar.gz
-
-SimVascular is installed in /usr/local/package/simvascular/2018-11-25
-</code></pre></li>
-<li><p>Execute a shell script to setup SimVascular to run from the command line.</p>
-<pre class="highlight plaintext"><code>% /usr/local/package/simvascular/2018-11-25/post-install.sh
-
-        This creates a 'simvascular' script file in /usr/local/bin.
-</code></pre></li>
-<li><p>Launch SimVascular </p>
-<pre class="highlight plaintext"><code>% simvascular
-</code></pre></li>
-</ol>
-
-<p><br></p>
-
-<h4>Note</h4>
-<pre class="highlight plaintext"><code>SimVascular may fail to launch if certain shared libraries are missing from your computer. Missing libraries can be installed using "sudo apt-get install [missing lib name]". The following commands can be used to install some libraries commonly missing from standard Ubuntu distributions:
-
-    sudo apt-get install libgstreamer0.10-0
-    sudo apt-get install libgstreamer-plugins-base0.10-dev
-    sudo apt-get install libxss
-    sudo apt-get install libxmu-dev (for OpenCASCADE)
-    sudo apt-get install libxi-dev  (for OpenCASCADE)
-</code></pre>
-
-<p><br></p>
-
-<h3>Installing svSolver</h3>
-
-<ol>
-<li><p>Download the svSolver Ubuntu installer.</p></li>
-<li><p>Double-click on the downloaded installation (.deb) file.</p></li>
-<li><p>The solver is installed in /usr/local/sv/svsolver/yyyy-mm-dd</p></li>
-</ol>
-
-<h3>Installing svFSI</h3>
-
-<ol>
-<li><p>Download the svFSI Ubuntu installer.</p></li>
-<li><p>Double-click on the downloaded installation (.deb) file.</p></li>
-<li><p>The solver is installed in /usr/local/sv/svfsi/yyyy-mm-dd</p></li>
-</ol>
-
-<h3>Installing MPI</h3>
-<pre class="highlight plaintext"><code>Both svSolver and svFSI use MPI. 
-
-For Ubuntu 14:      
-    sudo apt-get install libmpich2-dev
-
-For Ubuntu 16:
-    sudo apt-get install libmpich-dev
-
-Note that some applications may install a different implementation (e.g. Open MPI) of MPI. This may interfere with the MPI version needed by the svSolver or cause the solver not to execute correctly.
-</code></pre>
-
-<p><br>
-<br>
-<br></p>
-</section>
-</div>
-
 
 
 
