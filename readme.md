@@ -8,11 +8,11 @@ The source of the SimVascular website documentation is stored in the **source** 
 
 The documentation markdown files in the **source** branch are used to generate the SimVascular website html files using the **ruby** programming language. These html files are then pushed to the **master** branch. The SimVascular website will automatically detect the changed **master** branch and update itself. DO NOT edit the **master** branch files!
 
-You should first fork **simvascular.github.io** to your own repository and then sync it with https://github.com/ktbolt/simvascular.github.io. For example, after forking to **https://github.com/ktbolt/simvascular.github.io**
+You should first fork **simvascular.github.io** to your own repository and then sync it with https://github.com/SimVascular/simvascular.github.io. For example, after forking to **https://github.com/ktbolt/simvascular.github.io**
 
 ```
 $ git clone https://github.com/ktbolt/simvascular.github.io
-$ git remote add upstream https://github.com/ktbolt/simvascular.github.io
+$ git remote add upstream https://github.com/SimVascular/simvascular.github.io
 $ git remote -v
 origin	https://github.com/ktbolt/simvascular.github.io (fetch)
 origin	https://github.com/ktbolt/simvascular.github.io (push)
@@ -22,7 +22,7 @@ upstream	https://github.com/SimVascular/simvascular.github.io (push)
 
 Be sure to pull in any changes to the remote **source** branch
 ```
-$ git remote fetch upstream
+$ git fetch upstream
 $ git checkout source
 $ git merge upstream/source
 $ git push origin source
