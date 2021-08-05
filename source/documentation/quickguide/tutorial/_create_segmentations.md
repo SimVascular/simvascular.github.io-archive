@@ -26,6 +26,10 @@ for segmentation are interactively selected from a 2D image using the <b>left mo
 
 In SimVascular, a series of segmentations along a <i>Path</i> is called a <i>Contour Group</i>.
 
+The following sections demonstrate how to create segmentations using the <b>aorta</b> and <b>left-iliac</b> <i>Paths</i>.
+A detailed discussion about segmentation can be found in the SimVascular
+<a href="http://simvascular.github.io/docsModelGuide.html#modelingSegmentation.html">Modeling Guide / Segmentation</a> documentation.
+
 <h3 id="tutorial_create_segs_1"> Create an instance of a <i>Segmentations Tool</i> for the aorta/right iliac </h3>
 
 Create an instance of a <i>Segmentations Tool</i> named <b>aorta</b> used to define a <i>Contour Group</i> 
@@ -59,7 +63,7 @@ for the main aorta and right iliac vessels.
     <td> <img src="documentation/quickguide/tutorial/images/create-seg-3.png" width="512" height="360">
     </td>
     <td> A <i>Data Node</i> named <b>aorta</b> (an instance of a <i>Segmentations Tool</i>) is created under the
-         <i>Data Manager</i> <i>Segmentations Tool</i> type.
+         <i>Data Manager</i> <i>Segmentations Tool Type</i>.
     </td>
   </tr>
 
@@ -136,7 +140,7 @@ using the <i>Level Set</i> segmentation method.
   <tr>
     <td><img src="documentation/quickguide/tutorial/images/create-aorta-seg-1.png" width="512" height="360"> </td>
     <td> In the <i>Segmentations</i> <i>Tool</i> <i>Panel</i> select the 
-         <img src="documentation/quickguide/tutorial/images/seg-gui-levelset.png" width="50" height="18"> button. 
+         <img src="documentation/quickguide/tutorial/images/seg-gui-levelset.png" width="50" height="18"> <i>Button</i>. 
          <br> <br>
          The <b>LevelSet</b> sub-panel is displayed containing GUI controls used to set parameters controlling the
          level set computation (<b>Stage 1</b> and <b>Stage 2</b>) and the resulting contour geometry. Select the
@@ -148,7 +152,7 @@ using the <i>Level Set</i> segmentation method.
   <tr>
     <td><img src="documentation/quickguide/tutorial/images/create-aorta-seg-2.png" width="512" height="360"> </td>
     <td> Select the <img src="documentation/quickguide/tutorial/images/seg-gui-levelset.png" width="50" height="18"> 
-         button again to perform a level set segmentation on the 2D image. 
+         <i>Button</i> again to perform a level set segmentation on the 2D image. 
          <br> <br>
          The level set contour is displayed in all three views as a closed red curve segmenting the vessel lumen from 
          surrounding tissue. 
@@ -184,7 +188,7 @@ using the <i>Level Set</i> segmentation method.
     <td><img src="documentation/quickguide/tutorial/images/create-aorta-seg-4.png" width="512" height="360"> </td>
     <td> Segmentations for the entire aorta/right iliac are created by moving the 2D slice plane to a new position along 
          the <b>aorta</b> <i>Path</i> using the <b>Reslice</b> <i>Slider</i> and selecting the 
-         <img src="documentation/quickguide/tutorial/images/seg-gui-levelset.png" width="50" height="18"> button.
+         <img src="documentation/quickguide/tutorial/images/seg-gui-levelset.png" width="50" height="18"> <i>Button</i>.
          <br><br>
          Press the <img src="documentation/quickguide/gui/images/gui-save-icon.png" width="40" height="35">
          icon in the  <i>ToolBar</i> to save the <i>Project</i>. <br><br>
@@ -245,7 +249,7 @@ for the aorta/right iliac bifurcation to the end of the left iliac artery.
     <td> <img src="documentation/quickguide/tutorial/images/create-seg-8.png" width="512" height="360">
     </td>
     <td> A <i>Data Node</i> named <b>left-iliac</b> (an instance of a <i>Segmentations Tool</i>) is created under the
-         <i>Data Manager</i> <i>Segmentations Tool</i> type.
+         <i>Data Manager</i> <i>Segmentations Tool Type</i>.
     </td>
   </tr>
 
@@ -284,7 +288,7 @@ using the <i>Level Set</i> segmentation method.
   <tr>
     <td><img src="documentation/quickguide/tutorial/images/create-left-iliac-seg-1.png" width="512" height="360"> </td>
     <td> In the <i>Segmentations</i> <i>Tool</i> <i>Panel</i> select the
-         <img src="documentation/quickguide/tutorial/images/seg-gui-levelset.png" width="50" height="18"> button.
+         <img src="documentation/quickguide/tutorial/images/seg-gui-levelset.png" width="50" height="18"> <i>Button</i>.
          <br> <br>
          The <b>LevelSet</b> sub-panel is displayed containing GUI controls used to set parameters controlling the
          level set computation (<b>Stage 1</b> and <b>Stage 2</b>) and the resulting contour geometry. Select the
@@ -297,7 +301,7 @@ using the <i>Level Set</i> segmentation method.
     <td><img src="documentation/quickguide/tutorial/images/create-left-iliac-seg-2.png" width="512" height="360"> </td>
     <td> Segmentations for the entire left iliac are created by moving the 2D slice plane to a new position along
          the <b>left-iliac</b> <i>Path</i> using the <b>Reslice</b> <i>Slider</i> and selecting the
-         <img src="documentation/quickguide/tutorial/images/seg-gui-levelset.png" width="50" height="18"> button.
+         <img src="documentation/quickguide/tutorial/images/seg-gui-levelset.png" width="50" height="18"> <i>Button</i>.
          <br><br>
          Press the <img src="documentation/quickguide/gui/images/gui-save-icon.png" width="40" height="35">
          icon in the  <i>ToolBar</i> to save the <i>Project</i>. <br><br>

@@ -11,27 +11,29 @@ Image data is added to the <i>Project</i> using the <i>Data Manager</i> <i>Image
 
   <tr>
     <td><img src="documentation/quickguide/tutorial/images/add-image-1.png" width="512" height="360"> </td>
-    <td> Select the <i>Images<i> <i>Tool</i> in the <i>Data Manager</i> with the right mouse button. <br><br>
+    <td> Select the <i>Images<i> <i>Tool</i> in the <i>Data Manager</i> with the right mouse button. 
+         <br><br>
          Select the <b>Add/Replace image</b> menu option. 
+         <br><br>
+         <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #e6e600; border-left: 6px solid #e6e600"> 
+         Only one image may be displayed in SimVascular. Adding another image will overwrite the current image. 
+         </div>
     </td> 
   </tr>
 
   <tr>
     <td><img src="documentation/quickguide/tutorial/images/add-image-2.png" width="512" height="360"> </td>
-    <td> Select the I.002.dcm file from the <i>File Browser</i>. <br><br>
-         Press the <b>Open</b> <i>Button</i>. <br><br>
+    <td> Select the I.002.dcm file from the <i>File Browser</i>. 
+         <br><br>
+         Press the <b>Open</b> <i>Button</i>. 
+         <br><br>
          The series of DICOM files are read in. <br><br>
-
-         <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #d0d0d0; border-left: 6px solid #d0d0d0">
-         Only one image may be displayed in SimVascular. Adding another image will overwrite the current image. 
-         </div>
-
     </td> 
   </tr>
 
   <tr>
     <td><img src="documentation/quickguide/tutorial/images/add-image-3.png" width="512" height="360"> </td>
-    <td> Press the <b>Yes</b> <i>Button</i> in the <i>QuestionPopup</i>. <br><br>
+    <td> Press the <b>Yes</b> <i>Button</i> in the <i>QuestionPopup</i> to store the image data as a VTK VTI file. 
     </td> 
   </tr>
 
@@ -43,9 +45,10 @@ Image data is added to the <i>Project</i> using the <i>Data Manager</i> <i>Image
 
   <tr>
     <td><img src="documentation/quickguide/tutorial/images/add-image-5.png" width="512" height="360"> </td>
-    <td> Press the <b>OK</b> <i>Button</i> to use the default 0.1 scaling factor. <br><br>
-         The image is scaled by 0.1. <br><br>
-
+    <td> Press the <b>OK</b> <i>Button</i> to use the default 0.1 scaling factor. 
+         <br><br>
+         The image is scaled by 0.1. 
+         <br><br>
          <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #e6e600; border-left: 6px solid #e6e600">
          SimVascular does not have any explicit units. However, the geometry created in the pipeline does depend on the
          image scale: a smaller scale creates smaller geometry. This is only important when performing simulations: the model 

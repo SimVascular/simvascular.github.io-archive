@@ -49,8 +49,8 @@ the <i>Image Navigator</i> and toggle the <b>A</b>xial, <b>S</b>agittal and <b>C
 
 
 <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #e6e600; border-left: 6px solid #e6e600">
-SimVascular does not automatically save data created by a <i>Tool</i> to the project. If a project is closed without
-saving the data will be lost. 
+SimVascular does not automatically save data created by a <i>Tool</i> to the <i>Project</i>. If a <i>Project</i> is closed without
+being saved all newly added data will be lost. 
 </div>
 <br>
 

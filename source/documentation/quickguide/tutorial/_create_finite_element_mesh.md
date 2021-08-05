@@ -4,7 +4,7 @@ generation software. This finite element mesh is used by the SimVascular <i>svSo
 dynamics programs to simulate blood flow in a vascular network.
 
 A good mesh is integral to finite element CFD simulation techniques. It enables computers to numerically solve the 
-underlying governing fluid equations and simulate the physical effects. The mesh quality influences the accuracy, convergence, 
+underlying governing fluid equations and simulate physical effects. The mesh quality influences the accuracy, convergence, 
 and speed of the simulation process.
 
 <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #d0d0d0; border-left: 6px solid #d0d0d0">
@@ -41,14 +41,13 @@ Create an instance of a <i>Meshes Tool</i> named <b>aorta-iliacs</b> used to cre
     <td><img src="documentation/quickguide/tutorial/images/create-mesh-2.png" width="512" height="360"> <br><br>
     </td>
     <td> A <b>Create Mesh</b> <i>DiaglogBox</i> appears. 
-
          <br><br>
          The <b>Select Model:</b> <i>ComboBox</i> is used to select a model. Leave it on <b>aorta-iliacs</b>.
-
+         <br><br>
          The <b>Mesh Type:</b> <i>ComboBox</i> is used to select the mesh generator. Leave it on <b>TetGen</b>.
          <br><br>
-
-         Don't enter anything in the <i>Mesh Name:</i> <i>TextBox</i> to use the <b>aorta-iliacs</b> model name for the mesh.
+         Don't enter anything in the <i>Mesh Name:</i> <i>TextBox</i>; by default it will use the <b>aorta-iliacs</b> model 
+         name for the mesh.
          <br><br>
          Press the <b>Create Mesh</b> <i>DiaglogBox</i> <b>OK</b> <i>Button</i>. <br><br>
          <br><br>

@@ -22,9 +22,9 @@ a SimVascular <i>Project</i>. The data read in from the file can therefore not b
 
 <h3 id="gui_menubar_tools"> Tools Menu </h3>
 
-The _Tools_ menu is used to used to add a SimVascular <i>Tool</i> to the <i>Tool Panel</i>. It This does not add a new <i>Tool</i> 
+The _Tools_ menu is used to add a SimVascular <i>Tool</i> to the <i>Tool Panel</i>. It This does not add a new <i>Tool</i> 
 to the <i>Project</i>. The <i>Level Set</i> menu item creates a level set segmentation <i>Tool</i> 
 (see <a href="http://simvascular.github.io/docsModelGuide.html#modeling3DSeg"> 3D Level Set Segmentation </a>). 
 The <i>Python Console</i> menu item opens a panel used to execute Python scripts. 
 (see <a href="http://simvascular.github.io/docsPythonInterface.html#console"> Python Console </a>). 
-The other menu items are mostly MITK tools that are not very useful. 
+The other menu items are mostly MITK tools that are typically not often used. 

@@ -1,4 +1,4 @@
-<h2 id="tutorial_starting_simvascular"> Starting Simvascular </h2>
+<h2 id="tutorial_starting_simvascular"> Starting SimVascular </h2>
 
 Once SimVascular has been <a href="https://github.com/SimVascular/SimVascular/wiki/wiki_for_users">Installed</a> it is started
 by selecting the <img src="documentation/quickguide/tutorial/images/sv-start-icon.png" width="18" height="18"> icon from a 
@@ -14,11 +14,11 @@ The SimVascular GUI may look slightly different on MacOS, Ubuntu and Windows pla
 </div>
 
 <br>
-On Ubunu and Windows a terminal is created for SimVascular to run in. Messages output from some SimVascular computations 
+On Ubuntu and Windows a terminal is created for SimVascular to run in. Messages output from some SimVascular computations 
 (e.g. meshing) are written to the terminal. On MacOS no terminal is created so no SimVascular output can be seen.
 
 SimVascular can also be started from the command line in a terminal using the path to the installation directory. The path
-includes the SimVascular build date <i>YYYY-MM-DD</i> on Ubunu and Windows.
+includes the SimVascular build date <i>YYYY-MM-DD</i> on Ubuntu and Windows.
 
 <table class="table table-bordered" style="width:100%">
   <caption> Starting SimVascular from the command line</caption>

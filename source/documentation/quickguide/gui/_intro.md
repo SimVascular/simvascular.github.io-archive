@@ -2,7 +2,7 @@
 
 The SimVascular GUI provides an interface for interactively managing the input of data needed for each step in the 
 image-based modeling pipeline. The GUI provides different graphical controls (aka widgets) used to input data values 
-and methods to interact and query image and geometrical data in a graphics window.
+and methods to interact with and query image and geometrical data in a graphics window.
 
 The following table lists the controls used by the SimVascular GUI
 
@@ -124,7 +124,7 @@ An additional _Tool Panel_ is displayed on the right side of the window when a <
 
 <figure>
   <img class="svImg svImgLg"  src="documentation/quickguide/gui/images/mainwindow.png"> 
-  <figcaption class="svCaption">Fig. 3 &nbsp The SimVascular GUI layout</figcaption>
+  <figcaption class="svCaption">Fig. 4 &nbsp The SimVascular GUI layout</figcaption>
 </figure>
 
 <br>

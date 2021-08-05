@@ -1,9 +1,8 @@
 <h2 id="tutorial_create_project"> Create a Project </h2>
 
-A SimVascular <i>Project</i> is a directory (folder) on disk used to organized and store the data created by <i>Tools</i> 
-instances that comprise a SimVascular pipeline.
-
-directory on disk using the location and name provided by the user when creating a Project
+A SimVascular <i>Project</i> is a directory (folder) on disk used to organized and store data created by <i>Tool</i> 
+instances that comprise a SimVascular pipeline. The <i>Project</i> directory location and name is provided by the user 
+when creating the <i>Project</i>.
 
 <table class="table table-bordered" style="width:100%">
   <caption> Creating a <i>Project</i> </caption>
@@ -19,9 +18,15 @@ directory on disk using the location and name provided by the user when creating
 
   <tr>
     <td><img src="documentation/quickguide/tutorial/images/create-proj-2.png" width="512" height="360"> </td>
-    <td> Enter <b>Tutorial</b> for the <i>Project</i> name in the <b>Project Name</b> <i>TextBox</i>. <br><br>
-         Enter <b>/Users/Shared</b> for the name of the directory to store the project in the <b>Create in:</b> <i>TextBox</i>. <br><br>
+    <td> Enter <b>Tutorial</b> for the <i>Project</i> name in the <b>Project Name</b> <i>TextBox</i>. 
+         <br><br>
+         Enter the name of the directory to store the <i>Project</i> in the <b>Create in:</b> <i>TextBox</i>. 
+         <br><br>
          Press the <b>OK</b> <i>Button</i>.
+         <br><br>
+         <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #d0d0d0; border-left: 6px solid #d0d0d0">
+         The tutorial uses the <b>/Users/Shared</b> directory to store the <i>Project</i>. 
+         </div> 
     </td>
   </tr>
 

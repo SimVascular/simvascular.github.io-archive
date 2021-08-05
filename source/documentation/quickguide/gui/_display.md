@@ -4,11 +4,11 @@ The GUI main window <i>Display</i> area uses a four-window view to display 2D an
 the standard layout. The four-window view provides an interactive environment to view geometry data created by <i>Tools</i> in 
 context with medical image data. This enables matching geometric data (e.g. models) to anatomical features present in the imaging data.
 
-The layout of the <i>Display</i> windows and its GUI components are shown in Fig. 6.
+The layout of the <i>Display</i> windows and its GUI components are shown in Fig. 5.
 
 <figure>
   <img class="svImg svImgMd"  src="documentation/quickguide/imgs/display.png"> 
-  <figcaption class="svCaption"> Fig. 6 &nbsp </figcaption>
+  <figcaption class="svCaption"> Fig. 5 &nbsp The standard four-window view comprising three 2D and one 3D views.
 </figure>
 
 The three 2D views represent the principal planes used in medical imaging to describe the location of anatomical 
@@ -28,7 +28,7 @@ structures defined as
 <h3 id="navigation"> Navigation </h3>
 
 The principal planes slice is represented by a pair of crosshairs the 2D view windows. Selecting a point with the left 
-mouse button in a 2D window centers the crosshair on that point. Pressing the right mouse button and moving the mouse zooms 
+mouse button in a 2D view centers the crosshair on that point. Pressing the right mouse button and moving the mouse zooms 
 in and out. Scrolling the mouse wheel changes the principal plane slice for which the mouse cursor is in. 
 
 Changing the principal planes slice changes the values displayed in the <a href="#image_navigator"> Image Navigator </a>

@@ -1,15 +1,14 @@
 <h1 id="tutorial"> Tutorial </h1>
 
 This section demonstrates how to use the SimVascular image-based modeling pipeline to create a patient-specific geometric model 
-of the human vasculature and perform a finite element computational fluid dynamics (CFD) simulation of blood flow in that model.
+of the human vasculature and perform a finite element computational fluid dynamics (CFD) simulation of blood flow for that model.
 A model of an aorta with left and right iliac arteries is created from an MR image volume.
 
-The following lists the sections in this tutorial used to demonstrate how to use SimVascular to create an anatomic model from 
-image data and perform a blood flow simulation for it.
+The following lists the sections in this tutorial 
 
 <ol>
 
-  <li> <a href="#tutorial_starting_simvascular">Starting Simvascular</a>  
+  <li> <a href="#tutorial_starting_simvascular">Starting SimVascular</a>  
 
   <li> <a href="#tutorial_create_project">Create a Project</a> 
 
@@ -55,7 +54,8 @@ image data and perform a blood flow simulation for it.
 </ol>
 
 
-The <a href="https://simtk.org/frs/download_confirm.php/file/5113/DemoProject.zip?group_id=930"> Demo Project </a>
-is a complete SimVascular project containing the data created by each of these steps. 
-
+<br>
+The <a href="https://simtk.org/frs/download_confirm.php/latestzip/2256/SimVascularTutorialProject-latest.zip?group_id=930"> SimVascular Tutorial Project </a>
+is a complete SimVascular project containing the data created by each of these steps. It also includes a <i>OSMSC0110-aorta</i> directory 
+containing DICOM image data used in the tutorial.
 

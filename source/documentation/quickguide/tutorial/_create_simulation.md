@@ -6,8 +6,8 @@ conditions, physiologic models and physics specific to cardiovascular modeling.
 
 The <i>Simulations Tool</i> has functionality to assign boundary conditions, material properties, and set parameters for the 
 SimVascular <i>svSolver</i> CFD solver. <i>svSolver</i> can be run through the GUI for testing a simulation setup. However, 
-for simulating physiological relevant time scales the simulation files are generated on a desktop and copied to a high performance 
-computing (HPC) cluster and run there. 
+for simulating physiological relevant time scales the simulation files are generated on a desktop, copied to a high performance 
+computing (HPC) cluster, and run in parallel there. 
 
 <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #e6e600; border-left: 6px solid #e6e600">
 The computational cost of the numerical solution of the governing fluid equations used in CFD is quite large. 
@@ -18,13 +18,13 @@ complete.
 
 <br>
 <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #e6e600; border-left: 6px solid #e6e600">
-The <i>svSolver</i> CFD solver does not use any predefined units. All values used for poetical parameters (e.g. fluid density)
+The <i>svSolver</i> CFD solver does not use any predefined units. All values used for physical parameters (e.g. fluid density)
 and boundary conditions must be consistent with the spatial dimensions of the finite element mesh.
 </div>
 
 <br>
-The following sections demonstrate how to setup a CFD simulation for <i>svSolver</i> using the <b>aorta-iliacs</b> finite 
-element mesh. A detailed discussion about CFD simulations can be found in the SimVascular
+The following sections demonstrate how to setup a CFD simulation for <i>svSolver</i> using the <b>aorta-iliacs</b> solid model
+and finite element mesh. A detailed discussion about CFD simulations can be found in the SimVascular
 <a href="http://simvascular.github.io/docsFlowSolver.html">Simulation Guide</a> documentation.
 
 <h3 id="tutorial_create_simulation_1"> Create an instance of a <i>Simulations Tool</i> for the <b>aorta-iliacs</b> model.  </h3>
@@ -57,6 +57,12 @@ in the main aorta and iliac vessels.
          Enter <b>aorta-iliacs</b> in the <b>Job Name:</b> <i>TextBox</i>.
          <br><br>
          Press the <b>Create Simulation Job</b> <i>DiaglogBox</i> <b>OK</b> <i>Button</i>. 
+         <br><br>
+         <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #d0d0d0; border-left: 6px solid #d0d0d0">
+         A solid model is first selected for the simulation because it identifies the <i>Faces</i> used to define boundary
+         conditions. A mesh generated from the model is later selected. Note that several different meshes can be generated
+         from the same solid model using different meshing parameters (e.g. edge size).
+         </div>
     </td>
   </tr>
 
@@ -90,8 +96,7 @@ in the main aorta and iliac vessels.
 This section demonstrates how to set the simulation inlet and outlet boundary conditions. The centimeter–gram–second (CGS) system of 
 units is used. 
 
-The inlet boundary condition is a steady velocity profile with values given in the 
-<a href="documentation/quickguide/tutorial/steady.flow" download> steady.flow</a> file
+The inlet boundary condition is a steady velocity profile with values given in the <b>steady.flow</b> file. 
 
 <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #d0d0d0; border-left: 6px solid #d0d0d0">
 0.0 -100<br>
@@ -196,6 +201,10 @@ using a time step size of 0.001 simulates a physical time = (500 time steps) x (
 The value of the time step size is an important factor contributing to the stability, convergence, and reliability of a simulation.
 The value of the time step size depends on the size of the finite element mesh and type and values used for boundary conditions.
 
+A detailed discussion about solver parameters can be found in the SimVascular
+<a href="http://simvascular.github.io/docsFlowSolver.html#solverparameters">Simulation Guide / Solver Parameters</a> documentation.
+
+
 <table class="table table-bordered" style="width:100%">
   <caption> Set solver parameters </caption>
   <tr>
@@ -299,7 +308,7 @@ platforms it must be installed using a separate <i>svSolver</i> installer downlo
 
 <br>
 <h3 id="tutorial_create_simulation_5"> Convert simulation results.  </h3>
-This section demonstrates how to convert the simulation results into VTK format files for visualization.
+This section demonstrates how to convert the simulation results into VTK format files for visualization. 
 
 <table class="table table-bordered" style="width:100%">
   <caption> Convert simulation results </caption>
@@ -359,14 +368,8 @@ This section demonstrates how to convert the simulation results into VTK format 
          The <b>.vtp</b> files are VTK format files contain results for the mesh surface.  
          The <b>.vtu</b> files are VTK format files contain results for the mesh volume.  
          The <b>.text</b> files are text files containing velocity and pressure results averaged over inlet and outlet <i>Faces</i>.
+         <br><br>
+         The VTK format files can be visualized using <a href="https://www.paraview.org/">ParaView</a>.
     </td>
   </tr>
-
 </table>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>

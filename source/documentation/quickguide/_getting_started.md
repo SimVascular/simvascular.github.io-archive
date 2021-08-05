@@ -1,13 +1,13 @@
 # Getting Started 
 
 This document provides beginning users with the basic knowledge needed to get started using the SimVascular suite of software
-applications. The SimVascular suite comprises the following applications
+applications. The SimVascular software suite comprises the following applications
 
 <ul style="list-style-type:none;">
   <li> <b> SimVascular </b> - Interactive image-based modeling pipeline application </li>
-  <li> <b> svZeroDSolver </b> - 0D (limped parameter) solver </li>
+  <li> <b> svZeroDSolver </b> - 0D (lumped parameter) solver </li>
   <li> <b> svOneDSolver </b> - 1D fluids solver </li>
-  <li> <b> svSolver </b> - Computational fluid dynamics (CFD) </li>
+  <li> <b> svSolver </b> - Computational fluid dynamics (CFD) solver </li>
   <li> <b> svFSI </b> - Coupled fluid-solid solver </li>
 </ul>
 
@@ -16,10 +16,10 @@ Input files for all of the solver applications can be created and optionally exe
 
 The <a href="#introduction"> Introduction </a> section describes important SimVascular concepts. 
 The following <a href="#gui"> GUI </a> section then describes the SimVascular graphical user interface (GUI) and its basic functionality. 
-The last <a href="#tutorial"> Tutorial</a> section demonstrates the steps in the SimVascular image-based modeling pipeline, 
+The <a href="#tutorial"> Tutorial</a> section demonstrates the steps in the SimVascular image-based modeling pipeline, 
 from medical image data segmentation to patient-specific blood flow simulation. A model of an aorta and two iliac 
 arteries is created from medical imaging data.  A finite element mesh is then generated from the model and used in a 
-CFD simulation to simulate blood flow in the arteries. 
+CFD simulation of blood flow in the aorta and iliac arteries. 
 
 Another useful resource for learning how to use SimVascular are the 
 <a href="https://www.youtube.com/playlist?list=PL1CBZ8Wh-xvSKUsuBA4MM4Jba-psVdxXT">SimVascular Online Tutorials</a>. This series 

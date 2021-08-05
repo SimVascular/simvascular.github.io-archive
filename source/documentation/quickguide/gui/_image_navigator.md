@@ -58,8 +58,8 @@ SimVascular does not support time-resolved image data.
 
 <br>
 <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #e6e600; border-left: 6px solid #e6e600">
-Although the <i>Image Navigator</i> label <b>Loc: (mm)</b> implies image units are in mm SimVascular does not have
-any explicit units. Units are only important when specifying certain simulation parameters and data.
+Although the <i>Image Navigator</i> label <b>Loc: (mm)</b> implies image units are in mm, SimVascular does not have
+any explicit units. Units are only important when specifying simulation parameters and data.
 </div>
 
 
