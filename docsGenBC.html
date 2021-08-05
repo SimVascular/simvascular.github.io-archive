@@ -187,7 +187,7 @@
 
 <h2>What is GenBC?</h2>
 
-<p>GenBC provides a framework to programmmatically define custom inflow and outflow boundary conditions for a CFD simulation. The framework 
+<p>GenBC provides a framework to programmatically define custom inflow and outflow boundary conditions for a CFD simulation. The framework 
 allows users to create an arbitrary lumped parameter network (LPN) layout suitable for their application. Some common examples include a 
 lumped parameter heart model that models contraction of the heart chambers to use as an inlet boundary condition, sophisticated models of 
 the downstream circulation for various areas of the body such as the legs and upper body, or a closed-loop formulation where all outflow 
@@ -280,7 +280,7 @@ the <strong>.svpre</strong> file using the <strong>set_surface_id_vtp</strong> c
 </figure>
 
 <p>We need to manually modify the <strong>solver.inp</strong> file to use GenBC. Edit the <strong>solver.inp</strong> file with a text editor and scroll down to 
-the section right below <strong>Step Construction</strong>. You wil see following three commands for Resistance boundary conditions</p>
+the section right below <strong>Step Construction</strong>. You will see following three commands for Resistance boundary conditions</p>
 <pre class="highlight plaintext"><code>Number of Resistance Surfaces: 1
 List of Resistance Surfaces: 3
 Resistance Values: 0
@@ -294,7 +294,7 @@ command add </p>
 Number of Timesteps for GenBC Initialization: 0
 </code></pre>
 
-<p>We next add commands identifyibng the inlet Dirichlet surfaces</p>
+<p>We next add commands identifying the inlet Dirichlet surfaces</p>
 <pre class="highlight plaintext"><code>Number of Dirichlet Surfaces: 1
 List of Dirichlet Surfaces: 2
 </code></pre>
@@ -303,7 +303,7 @@ List of Dirichlet Surfaces: 2
 defined for GenBC. The <strong>List of Dirichlet Surfaces</strong> is a space-delimited list surface IDs for the Dirichlet boundary conditions.
 For the cylinder model the <strong>inlet</strong> is assigned ID 2. </p>
 
-<p>We now add a similar commandes for surfaces with Neumann boundary conditios </p>
+<p>We now add a similar commands for surfaces with Neumann boundary conditions </p>
 <pre class="highlight plaintext"><code>Number of Neumann Surfaces: 1    
 List of Neumann Surfaces: 3 
 </code></pre>
@@ -416,7 +416,7 @@ Copy the executable to the project <strong>Simulations</strong> <strong>cyl_sim<
 <h2>Running a flow simulation and checking results</h2>
 
 <p>Now navigate to the  <strong>Simulations</strong> <strong>cyl_sim</strong> folder. You can now run the svSolver program. Once the simulation starts it will 
-creaate a file named <strong>AllData</strong>. This is an output file produced by GenBC which contains the values of the state variables as a 
+create a file named <strong>AllData</strong>. This is an output file produced by GenBC which contains the values of the state variables as a 
 function of time and the additional Xprint outputs we specified earlier.</p>
 </section>
 <section id="pressure_waveform" class="group"><h2>Prescribing a pressure waveform as an inlet boundary condition</h2>
@@ -466,9 +466,9 @@ to the <strong>cyl_pres</strong> folder. Inside this folder are the following fi
 <p>We need an additional <strong>rcrt.dat</strong> file containing the RCR parameters that set the relationship between flow and pressure on 
 the outflow face. Copt this file from the <strong>simulation-files</strong> folder to here. </p>
 
-<p>the presover solver script (svpre) is needed to be modified by treating the inlet as a Neunmann face (see steady_rcr.svpre). Thus, to prepare a simulation with a prescribed pressure waveform, we run the presolver with the modified presolver script to generate geombc.dat and restart.0.1 files with surfaces properly tagged. Then we complie the GenBC files (user defined Fortran files) before calling the flow solver.</p>
+<p>the presover solver script (svpre) is needed to be modified by treating the inlet as a Neunmann face (see steady_rcr.svpre). Thus, to prepare a simulation with a prescribed pressure waveform, we run the presolver with the modified presolver script to generate geombc.dat and restart.0.1 files with surfaces properly tagged. Then we compile the GenBC files (user defined Fortran files) before calling the flow solver.</p>
 
-<p>Note that apart from potentially increased computational cost and numerical instability (which might be insignificant), prescribing a pressure waveform doesn&rsquo;t necessarily make flow simulations better agree with clinical target values. So extra adjustments are often needed in order to match target pressures and flow. Don&rsquo;t forget to check resulting inflow when the Nuemann BC (pre-defined pressure or a lumped parameter model defined pressure) is applied to the inlet.</p>
+<p>Note that apart from potentially increased computational cost and numerical instability (which might be insignificant), prescribing a pressure waveform doesn&rsquo;t necessarily make flow simulations better agree with clinical target values. So extra adjustments are often needed in order to match target pressures and flow. Don&rsquo;t forget to check resulting inflow when the Neumann BC (pre-defined pressure or a lumped parameter model defined pressure) is applied to the inlet.</p>
 </section>
 </div>
 

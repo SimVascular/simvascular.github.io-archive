@@ -224,7 +224,7 @@
 <ul>
 <li><p><a href="docsRefs.html#refSec2"><strong>Backflow stabilization.</strong></a> This problem usually arises in large vessels that are exposed to backflow in 3D and 2D flow simulations. This phenomenon may be a cause of divergence of the numerical scheme due to bulk reversal of the flow through an outlet, localized areas of flow reversal or use of a boundary 0D circulation model. </p></li>
 <li><p>Custom and efficient <a href="docsRefs.html#refSec3"><strong>linear solver.</strong></a> Accurate simulation of blood flow in vessels require the repeated solution of linear systems of equations with millions of unknowns. Moreover, use of closed-loop boundary models significantly increases the degree of coupling between boundary degrees of freedoms. The <strong>svLS</strong> linear solver is designed to efficiently handle large cardiovascular simulations with arbitrary boundary conditions and reduce solution times. </p></li>
-<li><p>Multiscale Coupling for <a href="docsRefs.html#refSec2"><strong>closed loop boundary conditions.</strong></a>  Coupling a three-dimensional finite element solver with a 0D lumped circulation model drastically improves the possibility of realistically simulate patient-specific hemodynamics and phisiology.</p></li>
+<li><p>Multiscale Coupling for <a href="docsRefs.html#refSec2"><strong>closed loop boundary conditions.</strong></a>  Coupling a three-dimensional finite element solver with a 0D lumped circulation model drastically improves the possibility of realistically simulate patient-specific hemodynamics and physiology.</p></li>
 </ul>
 
 <h3>About this guide</h3>
@@ -236,7 +236,7 @@
 <li>setting mechanical properties for vessel walls (if deformable)</li>
 <li>setting parameters for flowsolver</li>
 <li>running the flow solver</li>
-<li>converting and analyzing the simualtion results </li>
+<li>converting and analyzing the simulation results </li>
 </ol>
 
 <p>In addition, this tutorial will show you a number of good practices that are important to observe during the simulation process. We will do this considering very simple geometry (a straight cylinder) to illustrate different points in a simple way.</p>
@@ -271,8 +271,8 @@
 
 <ul>
 <li><strong>mesh-complete.mesh.vtu</strong>, vtu file containing the solid mesh generated with TetGen.</li>
-<li><strong>mesh-complete.exterior.vtp</strong>, vtp file containig all the exterior elements of the mesh generated with TetGen.</li>
-<li><strong>walls_combined.vtp</strong>, vtp file containing all surface elements assigned to the wall, possibily combined from various surfaces. </li>
+<li><strong>mesh-complete.exterior.vtp</strong>, vtp file containing all the exterior elements of the mesh generated with TetGen.</li>
+<li><strong>walls_combined.vtp</strong>, vtp file containing all surface elements assigned to the wall, possibly combined from various surfaces. </li>
 </ul>
 
 <p>in the <strong>mesh-complete/mesh-surfaces/</strong> folder:</p>
@@ -462,7 +462,7 @@ $$</p>
 </section>
     <section id="creatingjob" class="group"><h2>Creating a Job for Simulation</h2>
 
-<p>Let&rsquo;s try Example 1. The files for Example 1 can be found from the link on the left &ldquo;Cylinder Example&rdquo;. Download and open the project. Now we assume you alread have the model and mesh for it.</p>
+<p>Let&rsquo;s try Example 1. The files for Example 1 can be found from the link on the left &ldquo;Cylinder Example&rdquo;. Download and open the project. Now we assume you already have the model and mesh for it.</p>
 
 <p><strong>To create a simulation job (empty):</strong></p>
 <pre class="highlight plaintext"><code>Right click the data node "Simulations" in the SV project in Data Manager
@@ -486,7 +486,7 @@ Click "OK"
 </section>
     <section id="basic" class="group"><h2>Basic Parameters</h2>
 
-<p>Basic parameters include fluid material properties, and initial conditions, which are some basic infor to be used for Presolver and Flowsolver. Here we use the defult values (in CSG units). Initial pressure is &ldquo;0&rdquo;. Initial velocities (vx, vy, vz) is &ldquo;0 0 0&rdquo;.</p>
+<p>Basic parameters include fluid material properties, and initial conditions, which are some basic information to be used for Presolver and Flowsolver. Here we use the default values (in CSG units). Initial pressure is &ldquo;0&rdquo;. Initial velocities (vx, vy, vz) is &ldquo;0 0 0&rdquo;.</p>
 
 <figure>
   <img class="svImg svImgXl"  src="documentation/flowsolver/imgs/basic.png"> 
@@ -495,7 +495,7 @@ Click "OK"
 </section>
     <section id="inflowbc" class="subgroup"><h2>Inlet Boundary Condition Specification</h2>
 
-<p>Let&rsquo;s first create a simple file to provide inlet flow rates before seting inlet boundary condition. Your problem may have more that one inflow wave form file. In this case, we only have a single flow file (called steady.flow). We put the file in a subfolder &ldquo;flow-files&rdquo; under the project folder in the disk.</p>
+<p>Let&rsquo;s first create a simple file to provide inlet flow rates before setting inlet boundary condition. Your problem may have more that one inflow wave form file. In this case, we only have a single flow file (called steady.flow). We put the file in a sub-folder &ldquo;flow-files&rdquo; under the project folder in the disk.</p>
 
 <p>The format of the <strong>steady.flow</strong> file is as follows:</p>
 <pre class="highlight plaintext"><code># Time (sec) Flow (cc/sec)
@@ -656,7 +656,7 @@ Type: Rigid
 </section>
     <section id="solverparameters" class="subgroup"><h2>Solver Parameters</h2>
 
-<p>There are many parameters for flow solver, but you are only required to set explicitly a few of them. Advanced paramters are optional. To check out the meaning of all the parameters, refer to <a href="/docsFlowSolver.html#solverinp">appendix</a>.</p>
+<p>There are many parameters for flow solver, but you are only required to set explicitly a few of them. Advanced parameters are optional. To check out the meaning of all the parameters, refer to <a href="/docsFlowSolver.html#solverinp">appendix</a>.</p>
 <pre class="highlight plaintext"><code>Number of Timesteps: 200
 Time Step Size: 0.03
 Number of Timesteps between Restarts: 10
@@ -712,7 +712,7 @@ $$</p>
 </section>
     <section id="creatingdata" class="subgroup"><h2>Creating Data Files for Simulation</h2>
 
-<p>Before running simualtion, you need to create some required data files for presolver and flowsolver.</p>
+<p>Before running simulation, you need to create some required data files for presolver and flowsolver.</p>
 
 <p>For Presolver:</p>
 
@@ -734,15 +734,15 @@ $$</p>
 
 <p><strong>Impedance Boundary Condition simulations:</strong></p>
 
-<p>In addition to the five standard files (geombc.dat.1, restart.0.1, numstart.dat, bct.dat, solver.inp), we will need to provide impedance functions in the time domain for each impedance outlet, as well as a history of flow rates for each outlet. We will have therefore two additional ascii files: <strong>impt.dat</strong> (containing the impedance functions for each of the outlets), and <strong>Qhistor.dat</strong> (containing the flow rate history). A detailed description is <a href="#impbcfile">here</a>.</p>
+<p>In addition to the five standard files (geombc.dat.1, restart.0.1, numstart.dat, bct.dat, solver.inp), we will need to provide impedance functions in the time domain for each impedance outlet, as well as a history of flow rates for each outlet. We will have therefore two additional ASCII files: <strong>impt.dat</strong> (containing the impedance functions for each of the outlets), and <strong>Qhistor.dat</strong> (containing the flow rate history). A detailed description is <a href="#impbcfile">here</a>.</p>
 
 <p><strong>RCR Boundary Condition simulations:</strong></p>
 
-<p>In addition to the five standard files (geombc.dat.1, restart.0.1, numstart.dat, bct.dat, solver.inp), we will need to provide the RCR parameters in a ascii file that will set the relationship between flow and pressure on each outflow face. This is done by defining a file named <strong>rcrt.dat</strong> containing such parameters. A detailed description is <a href="#rcrtfile">here</a>.</p>
+<p>In addition to the five standard files (geombc.dat.1, restart.0.1, numstart.dat, bct.dat, solver.inp), we will need to provide the RCR parameters in a ASCII file that will set the relationship between flow and pressure on each outflow face. This is done by defining a file named <strong>rcrt.dat</strong> containing such parameters. A detailed description is <a href="#rcrtfile">here</a>.</p>
 
 <p><strong>Coronary Boundary Condition simulations:</strong></p>
 
-<p>In addition to the five standard files (geombc.dat.1, restart.0.1, numstart.dat, bct.dat, solver.inp), we will need to provide the coronary model parameters in a ascii file that will set the relationship between flow and pressure on each outflow face. This is done by defining a file named <strong>cort.dat</strong> containing such parameters. A detailed description is <a href="#cortfile">here</a>.</p>
+<p>In addition to the five standard files (geombc.dat.1, restart.0.1, numstart.dat, bct.dat, solver.inp), we will need to provide the coronary model parameters in a ASCII file that will set the relationship between flow and pressure on each outflow face. This is done by defining a file named <strong>cort.dat</strong> containing such parameters. A detailed description is <a href="#cortfile">here</a>.</p>
 
 <p><strong>Closed-loop boundary conditions:</strong></p>
 
@@ -783,9 +783,9 @@ For flowsolver
     cort.dat (if applicable)
 </code></pre>
 </section>
-    <section id="runningjob" class="subgroup"><h2>Running Simualtion Jobs</h2>
+    <section id="runningjob" class="subgroup"><h2>Running Simulation Jobs</h2>
 
-<p>Before running simualtion, you may need to click the button &ldquo;Import Extra Files into Job&rdquo; to add extra file into the simualtion job. In this example, we don&rsquo;t need importint extra files</p>
+<p>Before running simulation, you may need to click the button &ldquo;Import Extra Files into Job&rdquo; to add extra file into the simulation job. In this example, we don&rsquo;t need important extra files</p>
 
 <p><strong>To run a simulation job:</strong></p>
 <pre class="highlight plaintext"><code>Number of Processes: 8 (select the maximum number in your case)
@@ -798,14 +798,14 @@ Click the button  "Run Job"
 restart.0.1 =&gt; restart.0.1, restart.0.2, ..., restart.0.8
 </code></pre>
 
-<p>During the job running, the progress of simualtion is shown at &ldquo;Job Status&rdquo; and the status bar at the the bottom of the main window:</p>
+<p>During the job running, the progress of simulation is shown at &ldquo;Job Status&rdquo; and the status bar at the the bottom of the main window:</p>
 
 <figure>
   <img class="svImg scImgMd" src="documentation/flowsolver/imgs/simulationstatus.png">
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-<p>It shows the name of th running job, the percentage completed, and more info: [current time step] [time used(s)] [nonlinear residual] [logarithm of the redisual change] &hellip;</p>
+<p>It shows the name of the running job, the percentage completed, and more info: [current time step] [time used(s)] [nonlinear residual] [logarithm of the residual change] &hellip;</p>
 
 <p>During the job running, you can terminate it before it finishes. To stop the simulation:</p>
 <pre class="highlight plaintext"><code>Right click the job data node "steady" at Data Manager
@@ -1102,7 +1102,7 @@ Click "Stop Simulation" in the popup menu
 <li><p><strong>g: &gt; a – b | c&gt;</strong></p></li>
 <li><p>a: block where the maximum residual happens (each block has 255 elements by default).</p></li>
 <li><p>b: node in the block with the maximum error.</p></li>
-<li><p>c: logarithmic measure of the ratio between the maximum residusl and the average residual: want this number to be as small as possible: it will be an
+<li><p>c: logarithmic measure of the ratio between the maximum residual and the average residual: want this number to be as small as possible: it will be an
 indicator of the spatial uniformity of the residual.</p></li>
 <li><p><strong>h: [a-b]</strong> </p></li>
 <li><p>a: number of Krylov vectors used in the pre-conditioner solver. </p></li>
@@ -1117,7 +1117,7 @@ indicator of the spatial uniformity of the residual.</p></li>
 
 <p>As the simulation is completed, we are now ready to look at the restart files containing the solution. We&rsquo;ll convert these files to generate the visualization files. We explain that process in the following section.</p>
 
-<h3>Running Simualtion Jobs at Clusters</h3>
+<h3>Running Simulation Jobs at Clusters</h3>
 
 <p>You can also export the required data files and upload to a computer cluster to run the simulation. Make sure SimVascular flow solver is available in the cluster.</p>
 
@@ -1128,7 +1128,7 @@ Click "Export Data Files"
 Select a directory for exporting.
 </code></pre>
 
-<p>A new folder &ldquo;steady-sim-files&rdquo; is created, which includes the requied files by flowsolver</p>
+<p>A new folder &ldquo;steady-sim-files&rdquo; is created, which includes the required files by flowsolver</p>
 
 <p>To run the simulation at the cluster:</p>
 <pre class="highlight plaintext"><code>Make sure SimVascular flow solver is available on the cluster.
@@ -1138,7 +1138,7 @@ Go to the folder "steady-sim-files"
 Run "mpiexec -n [number of processes] [solver path]/svsolver" or you need create/submit a job file as required by the cluster to run the simulation
 </code></pre>
 
-<p>During the simualtion, result files are saved at the folder &ldquo;steady-sim-files/[number of processes]]-procs_case/&rdquo;. You can download the files back to your computer and convert them to vtp/vtu files.</p>
+<p>During the simulation, result files are saved at the folder &ldquo;steady-sim-files/[number of processes]]-procs_case/&rdquo;. You can download the files back to your computer and convert them to vtp/vtu files.</p>
 </section>
 
     <section id="postprocess" class="group"><h2>Post-processing</h2>
@@ -1174,7 +1174,7 @@ Run "mpiexec -n [number of processes] [solver path]/svsolver" or you need create
 
 <ul>
 <li><strong>As Single File</strong>, this options combines all the results at different time steps into a single *.vtp or *.vtu file. </li>
-<li><strong>Last Step to restart.x.0</strong>, this options combines all the resart files of the last step (200) to a single restart file restart.200.0. which can be used to start a new simulation after renamed as restart.0.1.</li>
+<li><strong>Last Step to restart.x.0</strong>, this options combines all the restart files of the last step (200) to a single restart file restart.200.0. which can be used to start a new simulation after renamed as restart.0.1.</li>
 </ul>
 
 <h3>Visualizing the results in ParaView</h3>
@@ -1337,11 +1337,11 @@ Choose Mesh: cylinder
 Click the button "Create Data Files for Simulation"
 </code></pre>
 
-<p>Different from Example 2, the step also solves initial displacement, write the initial displacment to a vtp file &ldquo;displacement.vtp&rdquo; to review the solution, and finaly append it to restar.0.1 we just copied from restart.500.0 of Example 2.</p>
+<p>Different from Example 2, the step also solves initial displacement, write the initial displacement to a vtp file &ldquo;displacement.vtp&rdquo; to review the solution, and finally append it to restar.0.1 we just copied from restart.500.0 of Example 2.</p>
 
 <figure>
   <img class="svImg svImgLg" src="documentation/flowsolver/imgs/disp_paraview.png">
-  <figcaption class="svCaption" >Initila Displacement from displacement.vtp </figcaption>
+  <figcaption class="svCaption" >Initial Displacement from displacement.vtp </figcaption>
 </figure>
 
 <p>Similarly to Example 2, run the job and convert the results.</p>
@@ -1387,7 +1387,7 @@ Choose Mesh: cylinder
 Click the button "Create Data Files for Simulation"
 </code></pre>
 
-<p>Different from Example 3, the step also solves variable thickness or Young’s modulus, and assign them to the wall, instead of giving uniform thickness or Young’s modulus. varwallprop.vtp and displacment.vtp are created, which show the thickness and Young&rsquo;s modulus, and initial displacement, respectively:</p>
+<p>Different from Example 3, the step also solves variable thickness or Young’s modulus, and assign them to the wall, instead of giving uniform thickness or Young’s modulus. varwallprop.vtp and displacement.vtp are created, which show the thickness and Young&rsquo;s modulus, and initial displacement, respectively:</p>
 
 <figure>
   <img class="svImg svImgLg" src="documentation/flowsolver/imgs/varwallprop_paraview.png">
@@ -1396,7 +1396,7 @@ Click the button "Create Data Files for Simulation"
 
 <figure>
   <img class="svImg svImgLg" src="documentation/flowsolver/imgs/disp_varwall_paraview.png">
-  <figcaption class="svCaption" >Initila Displacement in displacement.vtp </figcaption>
+  <figcaption class="svCaption" >Initial Displacement in displacement.vtp </figcaption>
 </figure>
 
 <p>Similarly to Example 3, run the job and convert the results.</p>
@@ -1406,7 +1406,7 @@ Click the button "Create Data Files for Simulation"
 
 <p>In this section, more details are provided for solver configuration, presolver commands, solver.inp and other files for running various simulations. </p>
 </section>
-    <section id="solverconfiguration" class="subgroup"><h3>Configurating Solvers (Optional)</h3>
+    <section id="solverconfiguration" class="subgroup"><h3>Configuring Solvers (Optional)</h3>
 
 <p>SimVascular solvers(presolver, flowsolver, postsolver) are used as individual executable programs. They are called by SV Simulation tool to create data files, run simulation, and convert results to files in VTK formats. Normally those solvers are installed separately. However, SimVascular can automatically find those solvers. In case your SimVascular can&rsquo;t find them, or you want to use different solvers, you need to explicitly tell SimVascular where to find or how to use them.</p>
 <pre class="highlight plaintext"><code>Goto Menu: Preferences -&gt; SimVascular Simulation
@@ -1528,16 +1528,16 @@ Flowsolver (without mpi): C:\Program Files (x86)\SimVascular\svSolver\Release\xx
 <tr>
   <td>zero_pressure_vtp</td>
   <td>(file name)</td>
-  <td>Zero pressure boundary condition will be appied on the element faces provided by the given vtp file</td>
+  <td>Zero pressure boundary condition will be applied on the element faces provided by the given vtp file</td>
 </tr>
 <tr>
   <td>pressure_vtp</td>
   <td>(file name) (double)</td>
-  <td>Prescribed pressure boundary condition will be appied on the element faces provided by the given vtp file</td>
+  <td>Prescribed pressure boundary condition will be applied on the element faces provided by the given vtp file</td>
 </tr>
 </table>
 
-<h4>Creat BCT file for Inlet</h4>
+<h4>Create BCT file for Inlet</h4>
 
 <table class="table table-bordered">
 <thead>
@@ -1806,7 +1806,7 @@ blood</td>
 <tr>
   <td>wall_displacements_write_vtp</td>
   <td>(file name)</td>
-  <td>Write the displacment to the specified vtp file (displacement.vtp if a file name not provided) for review.</td>
+  <td>Write the displacement to the specified vtp file (displacement.vtp if a file name not provided) for review.</td>
 </tr>
 <tr>
   <td>append_displacements</td>
@@ -1833,7 +1833,7 @@ blood</td>
 <tr>
   <td>solve_varwall_thickness</td>
   <td>(none)</td>
-  <td>Solve the Laplace problem and determines a variable thinkness distribution in the wall.</td>
+  <td>Solve the Laplace problem and determines a variable thinness distribution in the wall.</td>
 </tr>
 <tr>
   <td>set_surface_E_vtp</td>
@@ -1941,13 +1941,13 @@ vx1 vy1 vz1 t1
   <td>Time Varying Boundary Conditions From File</td>
   <td>(True)</td>
   <td>True,False</td>
-  <td>If the <b>bct.dat</b> file was created containg prescribed velocity at the inlet (this will be the case for most simulations), this option should be set to <b>True</b>.</td>
+  <td>If the <b>bct.dat</b> file was created containing prescribed velocity at the inlet (this will be the case for most simulations), this option should be set to <b>True</b>.</td>
 </tr>
 <tr>
   <td>BCT File Type</td>
   <td>(DAT) </td>
   <td>DAT,VTP</td>
-  <td>This entry tells the solver to read inflwo boundary conditions from <b>bct.dat</b> or <b>bct.vtp</b>.</td>
+  <td>This entry tells the solver to read inflow boundary conditions from <b>bct.dat</b> or <b>bct.vtp</b>.</td>
 </tr>
 <tr>
   <td>Number of BCT Files</td>
@@ -2119,7 +2119,7 @@ vx1 vy1 vz1 t1
   <td>Apply Wall Deformation</td>
   <td>(False)</td>
   <td>True,False</td>
-  <td>Decide whether to udpate wall coordinates for deformable wall during wall stress calculation</td>
+  <td>Decide whether to update wall coordinates for deformable wall during wall stress calculation</td>
 </tr>
 </table>
 
@@ -2149,7 +2149,7 @@ vx1 vy1 vz1 t1
   <td>Maximum Number of Iterations for svLS NS Solver</td>
   <td>(1)</td>
   <td>(integer)</td>
-  <td>Maximum number of iterations for the full Navier-Stokes solver. Use 10 for pulsatible flow, or deformable wall casese</td>
+  <td>Maximum number of iterations for the full Navier-Stokes solver. Use 10 for pulsatile flow, or deformable wall cases</td>
 </tr>
 <tr>
   <td>Maximum Number of Iterations for svLS Momentum Loop</td>
@@ -2171,7 +2171,7 @@ vx1 vy1 vz1 t1
 </tr>
 </table>
 
-<p><strong>WARNING:</strong> For simulations of deformable vessels these defaults may need to be changed to 10,20,400, respectvely. </p>
+<p><strong>WARNING:</strong> For simulations of deformable vessels these defaults may need to be changed to 10,20,400, respectively. </p>
 
 <h4>Discretization Control</h4>
 
@@ -2222,7 +2222,7 @@ vx1 vy1 vz1 t1
 </tr>
 </table>
 
-<h4>Cardiovascular Modelling Parameters</h4>
+<h4>Cardiovascular Modeling Parameters</h4>
 
 <table class="table table-bordered">
 <thead>
@@ -2493,7 +2493,7 @@ vx1 vy1 vz1 t1
   <td>Thickness of Vessel Wall</td>
   <td>NO DEFAULT</td>
   <td>(double)</td>
-  <td>Uniform thinkness of the vessel wall material</td>
+  <td>Uniform thickness of the vessel wall material</td>
 </tr>
 <tr>
   <td>Young Mod of Vessel Wall</td>
@@ -2557,7 +2557,7 @@ vx1 vy1 vz1 t1
 </section>
     <section id="impbcfile" class="subgroup"><h3>Format of Impedance boundary condition file</h3>
 
-<p>Impedance boundary conditions are defined through the <strong>Qhistor.dat</strong> file where the flow rate time history at each face is specifiedd and the <strong>impt.dat</strong> files containing impedance data. These two files must be present in the folder with all others solver files when executing <strong>svSolver</strong>. </p>
+<p>Impedance boundary conditions are defined through the <strong>Qhistor.dat</strong> file where the flow rate time history at each face is specified and the <strong>impt.dat</strong> files containing impedance data. These two files must be present in the folder with all others solver files when executing <strong>svSolver</strong>. </p>
 
 <p>The <strong>Qhistor.dat</strong> file has the following format:</p>
 <pre class="highlight plaintext"><code>totTS

@@ -286,7 +286,7 @@ Click the button "Run Mesher"
 Click "Yes" to continue 
 </code></pre>
 
-<p>It may take a while fo meshing, which depends on the size of model and the estimated global max edge size. When your mesh has completed, the mesh shows in the 3D-view window of Display and a dialog pops up to show some mesh info (like the number of points, elements, faces, etc.). To see the mesh easier, hide the model temporarily.</p>
+<p>It may take a while for meshing, which depends on the size of model and the estimated global max edge size. When your mesh has completed, the mesh shows in the 3D-view window of Display and a dialog pops up to show some mesh info (like the number of points, elements, faces, etc.). To see the mesh easier, hide the model temporarily.</p>
 
 <p><font color="red"><strong>HELPFUL HINT:</strong> </font> The estimated edge size is about half of the radius of the smallest cap in the model.</p>
 
@@ -302,7 +302,7 @@ Click "Yes" to continue
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-<p>Now try to change the &ldquo;Global Max Edge Size&rdquo; value to generate a mesh with more elements. Note that as you specify lower global max edge size values, SimVasxcular will take longer to generate the mesh. The software might appear as not responding, but should still be working. </p>
+<p>Now try to change the &ldquo;Global Max Edge Size&rdquo; value to generate a mesh with more elements. Note that as you specify lower global max edge size values, SimVascular will take longer to generate the mesh. The software might appear as not responding, but should still be working. </p>
 
 <p><font color="red"><strong>HELPFUL HINT:</strong> </font> There is an option for faster meshing, to use it:</p>
 <pre class="highlight plaintext"><code>Toggle on "Fast Meshing"
@@ -335,7 +335,7 @@ Click the button "Run Mesher"
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-<p><font color="red"><strong>WARNNING:</strong> </font> Fast Meshing is automatically disabled if using boundary layer meshing. </p>
+<p><font color="red"><strong>WARNING:</strong> </font> Fast Meshing is automatically disabled if using boundary layer meshing. </p>
 
 <p>The mesh generated will have the boundary layer mesh on the specified region. Zooming in, you can see that the number of layers in the volumetric mesh is four. The boundary layer extends all the way down the length of the surface named wall, and each layer is 0.8 of the previous layer.</p>
 
@@ -343,14 +343,14 @@ Click the button "Run Mesher"
 </section>
 <section id="tetgetnradiusbased" class="group"><h2>Radius Based Meshing</h2>
 
-<p>When models contain surfaces of very different size scales, it is often desirable to scale the size of the mesh with the size of the vessel of the model. Radius-based mehsing will compute the centerlines and find the distance to these centerlines prior to meshing. These values will be normalized by the smallest value and then multiplied by the global max edge size given.</p>
+<p>When models contain surfaces of very different size scales, it is often desirable to scale the size of the mesh with the size of the vessel of the model. Radius-based meshing will compute the centerlines and find the distance to these centerlines prior to meshing. These values will be normalized by the smallest value and then multiplied by the global max edge size given.</p>
 <pre class="highlight plaintext"><code>Toggle on the checkbox "Radius-Based Meshing".
 Click the button "Run Mesher".
 </code></pre>
 
-<p><font color="red"><strong>WARNNING:</strong> </font> Fast Meshing is automatically disabled if using radius based meshing. </p>
+<p><font color="red"><strong>WARNING:</strong> </font> Fast Meshing is automatically disabled if using radius based meshing. </p>
 
-<p>Note that a majority of our model has vessels of very similar size. In this case, a radius-based mesh does not do much; however, there are other models where this is a very desirable feature. The operation takes a bit long, so you can also try to change local meshing size introduced in the following section to reach the same goal. If you don&rsquo;t use this operation, remember to turn it off before runing mesher.</p>
+<p>Note that a majority of our model has vessels of very similar size. In this case, a radius-based mesh does not do much; however, there are other models where this is a very desirable feature. The operation takes a bit long, so you can also try to change local meshing size introduced in the following section to reach the same goal. If you don&rsquo;t use this operation, remember to turn it off before running mesher.</p>
 </section>
 <section id="tetgenlocalmeshing" class="group"><h2>Local Mesh Size Application</h2>
 
@@ -392,7 +392,7 @@ Click the button "Run Mesher"
 <p><font color="red"><strong>HELPFUL HINT:</strong> </font> 
 If you have multiple regions of interest for mesh refinement, you can move the sphere to another region, then add it to the table. If you want to adjust a sphere which is already added in the table, just select the sphere in the table. A red sphere will appear in its corresponding region in the 3D-view window. You can also set size or delete spheres from the table menu.</p>
 
-<p>You can combine boundary layer, spherical refinment and local size to create a full mesh again.</p>
+<p>You can combine boundary layer, spherical refinement and local size to create a full mesh again.</p>
 
 <p><strong>When you are satisfied with the mesh, click the tool button  “Save SV Project ” to save the mesh.</strong></p>
 </section>
@@ -476,7 +476,7 @@ Select a directory and Click "Choose"
 
 <p>It may be the case where TetGen cannot mesh the given PolyData and it will crash. This could be for a number of reasons including an open surface or intersecting facets. 
 In most cases, TetGen is able to detect the error, and it outputs information about the event to the terminal. If you have built SimVascular from source, look for the error code in the output to the terminal.
-If you have not built from source, the best option is to try a smaller mesh edge size. It is likeley that the edge size specified is too large for certain parts of the model.</p>
+If you have not built from source, the best option is to try a smaller mesh edge size. It is likely that the edge size specified is too large for certain parts of the model.</p>
 
 <table><thead>
 <tr>
@@ -513,7 +513,7 @@ If you have not built from source, the best option is to try a smaller mesh edge
 
 <p>After creating a mesh in SimVascular, you can view the surface and make a visual inspection of the surface of the mesh. However, this is based purely on your idea of a &ldquo;quality&rdquo; mesh, and you can only see the surface of a volume mesh. In order to inspect a mesh more closely, we use open source software ParaView. ParaView contains filters to identify multiple quality measure such as volume and aspect ration. </p>
 
-<p>To visualize and inspect a mesh in paraview, follow the steps below:</p>
+<p>To visualize and inspect a mesh in ParaView, follow the steps below:</p>
 
 <p>1) Download, Install, and Run ParaView. Go to File-&gt;Open-&gt;Choose the vtu file generated when saving the mesh.</p>
 
@@ -524,7 +524,7 @@ If you have not built from source, the best option is to try a smaller mesh edge
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-<p>3) Adjust the paramters of the Filter in the Properties tab on the left hand side of the ParaView screen.</p>
+<p>3) Adjust the parameters of the Filter in the Properties tab on the left hand side of the ParaView screen.</p>
 
 <p>4) Change Tet Quality Measure to the new desired mesh. Here we select Volume:</p>
 
@@ -542,7 +542,7 @@ If you have not built from source, the best option is to try a smaller mesh edge
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-<p>7) Apply any other qulity type to visualize the range and values of the corresponding metric. 
+<p>7) Apply any other quality type to visualize the range and values of the corresponding metric. 
 <br>
 <br>
 <br>
