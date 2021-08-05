@@ -24,8 +24,8 @@ These files are:
 in the **mesh-complete/** folder: 
 
 - **mesh-complete.mesh.vtu**, vtu file containing the solid mesh generated with TetGen.
-- **mesh-complete.exterior.vtp**, vtp file containig all the exterior elements of the mesh generated with TetGen.
-- **walls_combined.vtp**, vtp file containing all surface elements assigned to the wall, possibily combined from various surfaces. 
+- **mesh-complete.exterior.vtp**, vtp file containing all the exterior elements of the mesh generated with TetGen.
+- **walls_combined.vtp**, vtp file containing all surface elements assigned to the wall, possibly combined from various surfaces. 
 
 in the **mesh-complete/mesh-surfaces/** folder:
 

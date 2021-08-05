@@ -6,6 +6,6 @@ data to extract heart wall motion that can be later used in multi-physics simula
 
 The **Cardiac Geometric Modeling Tool** is implemented as the 
 <a href="https://github.com/SimVascular/SimVascular/tree/master/Python/site-packages/sv_auto_lv_modeling"> 
-<b>sv\_auto\_lv\_modeling</b> </a> Python package included with the SimVascualar
+<b>sv\_auto\_lv\_modeling</b> </a> Python package included with the SimVascular
 application.
 

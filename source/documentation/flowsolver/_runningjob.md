@@ -1,6 +1,6 @@
-## Running Simualtion Jobs
+## Running Simulation Jobs
 
-Before running simualtion, you may need to click the button "Import Extra Files into Job" to add extra file into the simualtion job. In this example, we don't need importint extra files
+Before running simulation, you may need to click the button "Import Extra Files into Job" to add extra file into the simulation job. In this example, we don't need important extra files
 
 **To run a simulation job:**
 
@@ -15,14 +15,14 @@ geombc.dat.1 => geombc.dat.1, geombc.dat.2, ..., geombc.dat.8
 restart.0.1 => restart.0.1, restart.0.2, ..., restart.0.8
 ~~~
 
-During the job running, the progress of simualtion is shown at "Job Status" and the status bar at the the bottom of the main window:
+During the job running, the progress of simulation is shown at "Job Status" and the status bar at the the bottom of the main window:
 
 <figure>
   <img class="svImg scImgMd" src="documentation/flowsolver/imgs/simulationstatus.png">
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-It shows the name of th running job, the percentage completed, and more info: [current time step] [time used(s)] [nonlinear residual] [logarithm of the redisual change] ...
+It shows the name of the running job, the percentage completed, and more info: [current time step] [time used(s)] [nonlinear residual] [logarithm of the residual change] ...
 
 During the job running, you can terminate it before it finishes. To stop the simulation:
 
@@ -324,7 +324,7 @@ After the simulation is finished. A dialog pops up to inform that the job is don
 - **g: &gt; a – b | c&gt;**
 + a: block where the maximum residual happens (each block has 255 elements by default).
 + b: node in the block with the maximum error.
-+ c: logarithmic measure of the ratio between the maximum residusl and the average residual: want this number to be as small as possible: it will be an
++ c: logarithmic measure of the ratio between the maximum residual and the average residual: want this number to be as small as possible: it will be an
 indicator of the spatial uniformity of the residual.
 
 - **h: [a-b]** 
@@ -339,7 +339,7 @@ Sometimes you want to continue the finished simulation job. Make use the same nu
 
 As the simulation is completed, we are now ready to look at the restart files containing the solution. We'll convert these files to generate the visualization files. We explain that process in the following section.
 
-### Running Simualtion Jobs at Clusters
+### Running Simulation Jobs at Clusters
 
 You can also export the required data files and upload to a computer cluster to run the simulation. Make sure SimVascular flow solver is available in the cluster.
 
@@ -350,7 +350,7 @@ To export the files:
 	Click "Export Data Files"
 	Select a directory for exporting.
 
-A new folder "steady-sim-files" is created, which includes the requied files by flowsolver
+A new folder "steady-sim-files" is created, which includes the required files by flowsolver
 
 To run the simulation at the cluster:
 
@@ -360,4 +360,4 @@ To run the simulation at the cluster:
 	Go to the folder "steady-sim-files"
 	Run "mpiexec -n [number of processes] [solver path]/svsolver" or you need create/submit a job file as required by the cluster to run the simulation
 
-During the simualtion, result files are saved at the folder "steady-sim-files/[number of processes]]-procs_case/". You can download the files back to your computer and convert them to vtp/vtu files.
+During the simulation, result files are saved at the folder "steady-sim-files/[number of processes]]-procs_case/". You can download the files back to your computer and convert them to vtp/vtu files.

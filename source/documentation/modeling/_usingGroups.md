@@ -28,7 +28,7 @@ Groups are used to organize the 2D segmentations or contours that you create.  Y
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-Now a new data node “aorta” for the contour group is created under the data node "Segmentations" in Data Manager. Double click the data node “aorta" and the tool "SV 2D Segmentation” automatically shows up. The new group is empty and has no coutours so far. At the same time, the layout of Display is changed, which has tree windows, and the image is resliced along the path. The left top window shows image reslices in intensity; the left bottom one shows reslices in the magnitude of intensity gradient; the right one shows intensity probe in 3D view. You can move the slider "Reslice:" to change reslice position. Click the button "Size” to change the reslice size to make the whole vessel cross section is inside the reslice.
+Now a new data node “aorta” for the contour group is created under the data node "Segmentations" in Data Manager. Double click the data node “aorta" and the tool "SV 2D Segmentation” automatically shows up. The new group is empty and has no contours so far. At the same time, the layout of Display is changed, which has tree windows, and the image is resliced along the path. The left top window shows image reslices in intensity; the left bottom one shows reslices in the magnitude of intensity gradient; the right one shows intensity probe in 3D view. You can move the slider "Reslice:" to change reslice position. Click the button "Size” to change the reslice size to make the whole vessel cross section is inside the reslice.
 
 <figure>
   <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/emptygroup.png"> 

@@ -2,7 +2,7 @@
 
 **Face Names and Types**
 
-After the model is created, face informations are listed in a table in the tab "Face List", like name, type, visibility(V),color( C),opacity(O). You can change the properties in the table. 
+After the model is created, face information are listed in a table in the tab "Face List", like name, type, visibility(V),color( C),opacity(O). You can change the properties in the table. 
 
 	Name: double click the name; input a new name in the text field
 	Type: double click the type; select a type (like "wall", "cap") from the combo box
@@ -40,11 +40,11 @@ Select faces (interactively):
 	Select faces
 	To combine them to one face: Face Ops -> button "Combine"
 	To delete them: Face Opts -> button "Delete"
-	To delete them(interactively): Make sure the cursor is in the Dislay Window; press key "Delete"
+	To delete them(interactively): Make sure the cursor is in the Display Window; press key "Delete"
 
 **Filling Holes with Ids:**
 
-After deleting some faces of the model, it may be desirable to keep the current names of the other surfaces in the model. In this case, click the button "Fill Holes w. IDs" and this will fill in the holes of the model. For each new surface created, a new name be assigned. Please rename it and assign a corret type for it.
+After deleting some faces of the model, it may be desirable to keep the current names of the other surfaces in the model. In this case, click the button "Fill Holes w. IDs" and this will fill in the holes of the model. For each new surface created, a new name be assigned. Please rename it and assign a correct type for it.
 
 **Remeshing Faces:**
 

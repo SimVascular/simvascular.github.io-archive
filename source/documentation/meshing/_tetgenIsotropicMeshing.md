@@ -6,7 +6,7 @@ To generate an isotropic mesh, we either need to specify a desired number of ele
 	Click the button "Run Mesher"
 	Click "Yes" to continue	
 
-It may take a while fo meshing, which depends on the size of model and the estimated global max edge size. When your mesh has completed, the mesh shows in the 3D-view window of Display and a dialog pops up to show some mesh info (like the number of points, elements, faces, etc.). To see the mesh easier, hide the model temporarily.
+It may take a while for meshing, which depends on the size of model and the estimated global max edge size. When your mesh has completed, the mesh shows in the 3D-view window of Display and a dialog pops up to show some mesh info (like the number of points, elements, faces, etc.). To see the mesh easier, hide the model temporarily.
 
 <font color="red">**HELPFUL HINT:** </font> The estimated edge size is about half of the radius of the smallest cap in the model.
 
@@ -22,7 +22,7 @@ If you zoom in, you will be able to see the individual mesh elements.
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-Now try to change the "Global Max Edge Size" value to generate a mesh with more elements. Note that as you specify lower global max edge size values, SimVasxcular will take longer to generate the mesh. The software might appear as not responding, but should still be working. 
+Now try to change the "Global Max Edge Size" value to generate a mesh with more elements. Note that as you specify lower global max edge size values, SimVascular will take longer to generate the mesh. The software might appear as not responding, but should still be working. 
 
 <font color="red">**HELPFUL HINT:** </font> There is an option for faster meshing, to use it:
 

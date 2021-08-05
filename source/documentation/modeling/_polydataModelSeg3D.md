@@ -16,8 +16,8 @@ Now a new data node “model_from_3dseg” for the model is created under the da
 **Use 3D segmentation to create model:**
 
 	Click the button "Create Model..."
-	A dialog pops up, showing all avaiable groups
-	Toggle on the checkboxs in the column "Use" for the 3D segmentation you want
+	A dialog pops up, showing all available groups
+	Toggle on the check boxes in the column "Use" for the 3D segmentation you want
 	Click "OK"
 
 <figure>
@@ -34,7 +34,7 @@ After the model is created, you should now be able to see one face named as "wal
 
 **Trim and Fill**
 
-	Trim -> use a plane or box to trim the vessle, try to make the cutting plane perpendicular to the vessel
+	Trim -> use a plane or box to trim the vessel, try to make the cutting plane perpendicular to the vessel
 	Global Ops ->  Fill Holes w/o ID
 
 **Extract Faces**
@@ -45,7 +45,7 @@ After the model is created, you should now be able to see one face named as "wal
 **Remesh**
 If you show the model edges, the surface mesh may be too fine or not desirable to you. You can do remeshing:
 
-	Global Ops -> Remesh -> Click "Estimate Size" or prive a proper value, click the button "Remesh"
+	Global Ops -> Remesh -> Click "Estimate Size" or provide a proper value, click the button "Remesh"
 
 **Extract Centerlines**
 

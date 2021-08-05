@@ -4,7 +4,7 @@ This tutorial demonstrates how to use the General Boundary Conditions (GenBC) fr
 
 ## What is GenBC?
 
-GenBC provides a framework to programmmatically define custom inflow and outflow boundary conditions for a CFD simulation. The framework 
+GenBC provides a framework to programmatically define custom inflow and outflow boundary conditions for a CFD simulation. The framework 
 allows users to create an arbitrary lumped parameter network (LPN) layout suitable for their application. Some common examples include a 
 lumped parameter heart model that models contraction of the heart chambers to use as an inlet boundary condition, sophisticated models of 
 the downstream circulation for various areas of the body such as the legs and upper body, or a closed-loop formulation where all outflow 

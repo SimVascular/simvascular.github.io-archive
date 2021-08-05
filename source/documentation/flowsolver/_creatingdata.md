@@ -1,6 +1,6 @@
 ## Creating Data Files for Simulation
 
-Before running simualtion, you need to create some required data files for presolver and flowsolver.
+Before running simulation, you need to create some required data files for presolver and flowsolver.
 
 For Presolver:
 
@@ -18,15 +18,15 @@ These five files are the bare minimum we need to run an analysis. However, if we
 
 **Impedance Boundary Condition simulations:**
 
-In addition to the five standard files (geombc.dat.1, restart.0.1, numstart.dat, bct.dat, solver.inp), we will need to provide impedance functions in the time domain for each impedance outlet, as well as a history of flow rates for each outlet. We will have therefore two additional ascii files: **impt.dat** (containing the impedance functions for each of the outlets), and **Qhistor.dat** (containing the flow rate history). A detailed description is [here](#impbcfile).
+In addition to the five standard files (geombc.dat.1, restart.0.1, numstart.dat, bct.dat, solver.inp), we will need to provide impedance functions in the time domain for each impedance outlet, as well as a history of flow rates for each outlet. We will have therefore two additional ASCII files: **impt.dat** (containing the impedance functions for each of the outlets), and **Qhistor.dat** (containing the flow rate history). A detailed description is [here](#impbcfile).
 
 **RCR Boundary Condition simulations:**
 
-In addition to the five standard files (geombc.dat.1, restart.0.1, numstart.dat, bct.dat, solver.inp), we will need to provide the RCR parameters in a ascii file that will set the relationship between flow and pressure on each outflow face. This is done by defining a file named **rcrt.dat** containing such parameters. A detailed description is [here](#rcrtfile).
+In addition to the five standard files (geombc.dat.1, restart.0.1, numstart.dat, bct.dat, solver.inp), we will need to provide the RCR parameters in a ASCII file that will set the relationship between flow and pressure on each outflow face. This is done by defining a file named **rcrt.dat** containing such parameters. A detailed description is [here](#rcrtfile).
 
 **Coronary Boundary Condition simulations:**
 
-In addition to the five standard files (geombc.dat.1, restart.0.1, numstart.dat, bct.dat, solver.inp), we will need to provide the coronary model parameters in a ascii file that will set the relationship between flow and pressure on each outflow face. This is done by defining a file named **cort.dat** containing such parameters. A detailed description is [here](#cortfile).
+In addition to the five standard files (geombc.dat.1, restart.0.1, numstart.dat, bct.dat, solver.inp), we will need to provide the coronary model parameters in a ASCII file that will set the relationship between flow and pressure on each outflow face. This is done by defining a file named **cort.dat** containing such parameters. A detailed description is [here](#cortfile).
 
 **Closed-loop boundary conditions:**
 

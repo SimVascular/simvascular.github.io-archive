@@ -1,7 +1,7 @@
 ## TetGen Errors
 It may be the case where TetGen cannot mesh the given PolyData and it will crash. This could be for a number of reasons including an open surface or intersecting facets. 
 In most cases, TetGen is able to detect the error, and it outputs information about the event to the terminal. If you have built SimVascular from source, look for the error code in the output to the terminal.
-If you have not built from source, the best option is to try a smaller mesh edge size. It is likeley that the edge size specified is too large for certain parts of the model.
+If you have not built from source, the best option is to try a smaller mesh edge size. It is likely that the edge size specified is too large for certain parts of the model.
 
 |Code |Message |Description |
 |---|---|---|

@@ -42,11 +42,11 @@ To create data files:
 	Choose Mesh: cylinder
 	Click the button "Create Data Files for Simulation"
 
-Different from Example 2, the step also solves initial displacement, write the initial displacment to a vtp file "displacement.vtp" to review the solution, and finaly append it to restar.0.1 we just copied from restart.500.0 of Example 2.
+Different from Example 2, the step also solves initial displacement, write the initial displacement to a vtp file "displacement.vtp" to review the solution, and finally append it to restar.0.1 we just copied from restart.500.0 of Example 2.
 
 <figure>
   <img class="svImg svImgLg" src="documentation/flowsolver/imgs/disp_paraview.png">
-  <figcaption class="svCaption" >Initila Displacement from displacement.vtp </figcaption>
+  <figcaption class="svCaption" >Initial Displacement from displacement.vtp </figcaption>
 </figure>
 
 Similarly to Example 2, run the job and convert the results.

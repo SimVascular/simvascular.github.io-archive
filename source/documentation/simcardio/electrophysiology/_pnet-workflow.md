@@ -44,7 +44,7 @@ We now mesh the model before adding the Purkinje network tool. Create a new mesh
 
 <figure>
     <img class="svImg svImgMd" src="documentation/simcardio/electrophysiology/images/mesh-stats.png">
-    <figcaption class="svCaption" >Once the mesh is succesfully generated, the mesh stats window pops up.</figcaption>
+    <figcaption class="svCaption" >Once the mesh is successfully generated, the mesh stats window pops up.</figcaption>
 </figure>
 
 
@@ -70,7 +70,7 @@ First, activate the Purkinje Network tool on the SimVascular toolbar that brings
     <figcaption class="svCaption" >Activate Purkinje tool by clicking the Purkinje Network icon shown on the toolbar.</figcaption>
 </figure>
 
-A mesh face is selected by moving the mouse cursor over a face and pressing the <strong>s</strong> key. Select the endocardium face you want to generate the Purkinje network on. The selected face mesh is highlighed in yellow and its name is displayed in the Mesh Surface text box.
+A mesh face is selected by moving the mouse cursor over a face and pressing the <strong>s</strong> key. Select the endocardium face you want to generate the Purkinje network on. The selected face mesh is highlighted in yellow and its name is displayed in the Mesh Surface text box.
 
 <figure>
     <img class="svImg svImgMd" src="documentation/simcardio/electrophysiology/images/select-surface.png">
@@ -96,7 +96,7 @@ Adjust the control parameters of the Purkinje network and generate by selecting 
     <figcaption class="svCaption" >Purkinje network is overlaid on the mesh in the Display window.</figcaption>
 </figure>
 
-The network is saved in .vtu format under the Purkinje-Network subfolder of the project directory. Additionally you can find the .txt files that contain the information of end nodes, position coordinates, and network connectivity under the same folder. Further details about the contents of each file is provided <a href="#output">below</a>.
+The network is saved in .vtu format under the Purkinje-Network sub-folder of the project directory. Additionally you can find the .txt files that contain the information of end nodes, position coordinates, and network connectivity under the same folder. Further details about the contents of each file is provided <a href="#output">below</a>.
 
 <figure>
     <img class="svImg svImgMd" src="documentation/simcardio/electrophysiology/images/purkinje-paraview.png">
@@ -105,7 +105,7 @@ The network is saved in .vtu format under the Purkinje-Network subfolder of the 
 
 
 ###Output Description
-The Purkinje Network tool writes a set of files in the Purkinje-Network subfolder within the SimVascular project directory. The files are prefixed with the name of the selected face. The files and their contents are described below:
+The Purkinje Network tool writes a set of files in the Purkinje-Network sub-folder within the SimVascular project directory. The files are prefixed with the name of the selected face. The files and their contents are described below:
 
 <ul>
     <li> <code> <font color="black"> FACENAME.vtp </font> </code> - triangular surface on which the network is generated. </li>

@@ -16,7 +16,7 @@ The MeshSim tab includes all of the operations to run a mesh with the commercial
 1. Mesh: This is for basic meshing parameters involving surface and volumetric meshing.
 2. Advanced Mesh Options: This is for advanced meshing techniques like local mesh refinement and boundary layer meshing.
 3. Adapt: This is for anisotropic and isotropic adaptive meshing.
-4. MeshSim Licenses: This is for checking and installing licenses in order to use the commerical package MeshSim.
+4. MeshSim Licenses: This is for checking and installing licenses in order to use the commercial package MeshSim.
 5. DiscreteModel: This is for creating a Discrete Model (.dsm), which MeshSim can then be used to mesh when using the Discrete Kernel.
 
 ### Mesh Tab
@@ -57,7 +57,7 @@ Button or Widget Functionality:
 
 ### Advanced Mesh Options Tab
 
-The Advanced Mesh Options Tab has the componenets to create a more advanced mesh such as a boundary layer mesh or a mesh with local refinement.
+The Advanced Mesh Options Tab has the components to create a more advanced mesh such as a boundary layer mesh or a mesh with local refinement.
 
 <figure>
   <img class="svImg svImgLg" src="documentation/meshing/img/MeshSim_AdvancedMeshOptions.png">
@@ -74,7 +74,7 @@ To add local size meshing and boundary layer meshing, select a face in the 3D vi
 	* Type: Select the mesh edge size type and apply it to the selected part of the model. 
 		- Local Max Edge Size: Specify maximum edge size for selected part of the model. If this local edge size is coarser than the global edge size, the global edge size will be used. 
 		- Local Max Curvature Size: Specify maximum curvature size for selected part of the model. See **Curvature** section below for description.
-		- Local Min Curvature Size: Specify minimum curvature size for selected patt of the model. If this local curvature size is larger than the global curvature minimum, the global minimum curvature will be used.
+		- Local Min Curvature Size: Specify minimum curvature size for selected part of the model. If this local curvature size is larger than the global curvature minimum, the global minimum curvature will be used.
 	* Size Type: Select absolute or relative
 		- Absolute - is used to specify a number based on the dimensions of the model. 
 		- Relative - is a number between 0 and 1. The actual mesh size will be calculated by multiplying the length of the largest edge of the coordinate-aligned bounding box of the entity by the given parameter.
@@ -141,7 +141,7 @@ There are found different types of boundary layer meshing and can be applied on 
 </figure>
 
 ##### Surface Options
-	* Generate Surface Mesh: Generate a surface mesh if this optiion is selected (Default ON). If this option is not selected, it will not do a surface remeshing before created a volumetric mesh.
+	* Generate Surface Mesh: Generate a surface mesh if this option is selected (Default ON). If this option is not selected, it will not do a surface remeshing before created a volumetric mesh.
 	* Optimize Surface Mesh: Specify whether or not optimization is to be used (Default ON). Turning off optimization will result in a mesh that will not meet any specified shape metric for the mesh. 
 	* Fix Surface Mesh: This currently has no functionality.
 	* Constrain Surface: This also has no functionality currently.

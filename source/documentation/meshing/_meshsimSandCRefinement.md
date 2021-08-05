@@ -77,5 +77,5 @@ The mesh near the desired area should now be refined as desired as shown below:
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-You can now go back and do a full mesh combining local mesh refinement, a boundary layer, and spherical or cylindrical refinment. 
+You can now go back and do a full mesh combining local mesh refinement, a boundary layer, and spherical or cylindrical refinement. 
 

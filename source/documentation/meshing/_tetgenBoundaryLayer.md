@@ -23,7 +23,7 @@ We will now generate a boundary layer mesh from a solid model.
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-<font color="red">**WARNNING:** </font> Fast Meshing is automatically disabled if using boundary layer meshing. 
+<font color="red">**WARNING:** </font> Fast Meshing is automatically disabled if using boundary layer meshing. 
 
 The mesh generated will have the boundary layer mesh on the specified region. Zooming in, you can see that the number of layers in the volumetric mesh is four. The boundary layer extends all the way down the length of the surface named wall, and each layer is 0.8 of the previous layer.
 

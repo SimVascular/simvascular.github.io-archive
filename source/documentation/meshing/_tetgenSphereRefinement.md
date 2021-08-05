@@ -20,7 +20,7 @@ We will now refine a region with a sphere from a model of an Aorta.
 <font color="red">**HELPFUL HINT:** </font> 
 If you have multiple regions of interest for mesh refinement, you can move the sphere to another region, then add it to the table. If you want to adjust a sphere which is already added in the table, just select the sphere in the table. A red sphere will appear in its corresponding region in the 3D-view window. You can also set size or delete spheres from the table menu.
 
-You can combine boundary layer, spherical refinment and local size to create a full mesh again.
+You can combine boundary layer, spherical refinement and local size to create a full mesh again.
 
 
 **When you are satisfied with the mesh, click the tool button  “Save SV Project ” to save the mesh.**

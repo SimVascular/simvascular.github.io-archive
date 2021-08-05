@@ -1,6 +1,6 @@
 ### Global/Local Operations ###
 
-Besides face operations, SimVascular provides more options to modify and improve solid model, such as global and local operations. **The main diference between them is that global operations apply to the whole model surface while local operations only apply to the selected faces, regions, or cells.**
+Besides face operations, SimVascular provides more options to modify and improve solid model, such as global and local operations. **The main difference between them is that global operations apply to the whole model surface while local operations only apply to the selected faces, regions, or cells.**
 
 **Local Selection/Deleting**
 

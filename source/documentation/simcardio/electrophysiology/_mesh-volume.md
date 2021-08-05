@@ -5,7 +5,7 @@
 The volumetric meshing script <code>volume_mesh_main.py</code> can be found here in SimVascular&#39;s source code: Python/site-packages/sv_auto_lv_modeling/modeling/volume_mesh_main.py
 
 <pre><code class='language-shell' lang='shell'>
-    # Path to SimVascular exectuable
+    # Path to SimVascular executable
     data_path=/path/to/data
     sv_python_dir=/usr/local/bin
     script_dir=SimVascular/Python/site-packages/sv_auto_lv_modeling
@@ -14,7 +14,7 @@ The volumetric meshing script <code>volume_mesh_main.py</code> can be found here
     # Path to the surface meshes
     input_dir=$data_path/04-SurfReg/$p_id
 
-    # Path to the outputed volume meshes
+    # Path to the outputted volume meshes
     output_dir=$data_path/05-VolMesh/$p_id
     volume_mesh_script=$script_dir/modeling/volume_mesh_main.py
 
