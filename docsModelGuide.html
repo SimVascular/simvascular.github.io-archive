@@ -241,7 +241,7 @@ SimVascular is one system that allows users to generate geometric models from me
 </section>
 <section id="modelingCreatingPath" class="subgroup"><h3>Creating a Path</h3>
 
-<p>The goal of this exercise is to create a path for the abdominal aorta and the left common and external iliac.  As you will see, you need to create a path (centerline) for each vessel of interest. In <strong>SimVascular</strong>, a path contains two ordered sets of points. One set is &ldquo;Control Points&rdquo;; the other set is &ldquo;Path Points&rdquo; which define a vessle and are calculated using a spline based on the control points.</p>
+<p>The goal of this exercise is to create a path for the abdominal aorta and the left common and external iliac.  As you will see, you need to create a path (centerline) for each vessel of interest. In <strong>SimVascular</strong>, a path contains two ordered sets of points. One set is &ldquo;Control Points&rdquo;; the other set is &ldquo;Path Points&rdquo; which define a vessel and are calculated using a spline based on the control points.</p>
 
 <figure>
   <img class="svImg svImgMd"  src="documentation/modeling/imgs/path_planning/pathdefinition.png"> 
@@ -268,7 +268,7 @@ Click "OK"
 
 <p>There are three options for Subdivision Type. Each option uses a different way to calculate the number (n) of path points between two adjacent control points. Assume the total number of control points is Nc.</p>
 
-<p><strong>Total Number</strong> (Np): appoximate total number of path points. n=[(Np-1)/(Nc-1)]-1; the actual total number of path ponts Npa=(n+1)*(Nc-1)+1 <br></p>
+<p><strong>Total Number</strong> (Np): appoximate total number of path points. n=[(Np-1)/(Nc-1)]-1; the actual total number of path points Npa=(n+1)*(Nc-1)+1 <br></p>
 
 <p><strong>Subdivision Number</strong> (Ns): n=Ns-1; Npa=(n+1)*(Nc-1)+1 <br></p>
 
@@ -280,9 +280,9 @@ Click "OK"
 <pre class="highlight plaintext"><code>Adding Mode: Smart
 Move the cursor to Axial view in Display
 Move the slice to position 475: by scrolling center mouse button or moving Axial slider (in Image Navigator) to 475
-Right press and move to zoom in to enlarge the vessel cross secton
+Right press and move to zoom in to enlarge the vessel cross section
 Method 1: Click at the center of the vessel; Ctrl+A or click the button "Add Smart"
-Method 2(interactive): Move the cursor to the center of the vessle; Ctrl + Left Click
+Method 2(interactive): Move the cursor to the center of the vessel; Ctrl + Left Click
 </code></pre>
 
 <p>A control point is added for the path and should appear under the Control Point List. In Display, the point is shown as a blue or red point, depending on if the point is selected. </p>
@@ -292,7 +292,7 @@ Method 2(interactive): Move the cursor to the center of the vessle; Ctrl + Left 
 Left press on the point and move 
 </code></pre>
 
-<p><font color="red"><strong>HELPFUL HINT:</strong> </font>  Use the three 2D views at the same time to check if the contrl point is really located at the ceter of the vessel.</p>
+<p><font color="red"><strong>HELPFUL HINT:</strong> </font>  Use the three 2D views at the same time to check if the control point is really located at the center of the vessel.</p>
 
 <p><font color="red"><strong>HELPFUL HINT:</strong> </font>  The control points may look too large or small in 2D/3D-view windows. You can change the size, to do it:</p>
 <pre class="highlight plaintext"><code>Select all the paths you want to change in Data Manager
@@ -324,7 +324,7 @@ Before: add the point just before the selected point
 After: add the point just after the selected point
 </code></pre>
 
-<p>You can also add a point by manually inputing coordiantes:</p>
+<p>You can also add a point by manually inputting coordinates:</p>
 <pre class="highlight plaintext"><code>Click the button "Add Manually"
 Input coordinates in the popup dialog using the suggested format
 Click "OK"
@@ -358,12 +358,12 @@ Move the cursor to the control point in a 2D view
 Left press on the point and move 
 </code></pre>
 
-<p>To add a new control pointin the reslice:</p>
+<p>To add a new control point in the reslice:</p>
 <pre class="highlight plaintext"><code>Move the cursor to a 2D view in Display
 Move the cursor to the center of the vessle; Shift+Left Click
 </code></pre>
 
-<p>Everytime a point is changed/added, the reslice will updated according the changed path.</p>
+<p>Every time a point is changed/added, the reslice will updated according the changed path.</p>
 
 <p>You can change the type of path after created. </p>
 <pre class="highlight plaintext"><code>Click the button "Change"
@@ -480,7 +480,7 @@ Click "OK"
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-<p>Now a new data node “aorta” for the contour group is created under the data node &ldquo;Segmentations&rdquo; in Data Manager. Double click the data node “aorta&quot; and the tool &ldquo;SV 2D Segmentation” automatically shows up. The new group is empty and has no coutours so far. At the same time, the layout of Display is changed, which has tree windows, and the image is resliced along the path. The left top window shows image reslices in intensity; the left bottom one shows reslices in the magnitude of intensity gradient; the right one shows intensity probe in 3D view. You can move the slider &quot;Reslice:&rdquo; to change reslice position. Click the button &ldquo;Size” to change the reslice size to make the whole vessel cross section is inside the reslice.</p>
+<p>Now a new data node “aorta” for the contour group is created under the data node &ldquo;Segmentations&rdquo; in Data Manager. Double click the data node “aorta&quot; and the tool &ldquo;SV 2D Segmentation” automatically shows up. The new group is empty and has no contours so far. At the same time, the layout of Display is changed, which has tree windows, and the image is resliced along the path. The left top window shows image reslices in intensity; the left bottom one shows reslices in the magnitude of intensity gradient; the right one shows intensity probe in 3D view. You can move the slider &quot;Reslice:&rdquo; to change reslice position. Click the button &ldquo;Size” to change the reslice size to make the whole vessel cross section is inside the reslice.</p>
 
 <figure>
   <img class="svImg svImgXl"  src="documentation/modeling/imgs/segmentation/emptygroup.png"> 
@@ -499,7 +499,7 @@ Two new panels show inside the tool
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-<p>The top new panel is to set a preset threshold value. The other new panel is for postprocessing and batch segmentation.</p>
+<p>The top new panel is to set a preset threshold value. The other new panel is for post-processing and batch segmentation.</p>
 
 <p>To create a contour using Threshold (interactively):</p>
 <pre class="highlight plaintext"><code>Make sure toggle off the checkbox "Preset"  
@@ -639,7 +639,7 @@ Click the button "Threshold"
 <h5>Advanced Features</h5>
 
 <ul>
-<li><strong>Exponent Factor Rise and Fall</strong> affect the speed of of the level set when rising on an image gradient, or falling.  A ratio of 1:2 is reccomended.</li>
+<li><strong>Exponent Factor Rise and Fall</strong> affect the speed of of the level set when rising on an image gradient, or falling.  A ratio of 1:2 is recommended.</li>
 <li><strong>Max Iterations</strong> specifies the maximum number of iterations that can be complete before levelset is halted.</li>
 <li><strong>Max Error</strong> specifies the maximum RMS error for the levelset stop criteria.</li>
 </ul>
@@ -649,8 +649,8 @@ Click the button "Threshold"
 <p>Stage 2 level set is intended to provide a smooth, accurate contour based on the results of stage 1.</p>
 
 <ul>
-<li><strong>Blur</strong> parameters control the image blur on the feature image and the advection image. Similar to what discussed for stage 1, inceasing this value on images subject to a significant noise level may improve the accuracy of the resulting segmentation. Increased image blur will decrease precision, for this reason it is recommended that blur settings be lower in stage 2 than in stage 1.</li>
-<li><strong>Kupp</strong> and <strong>Klow</strong> specifies the maximum tolerable curvature. Unlike stage 1, where there is a equilbrium curvature, stage 2 has a specific allowable range for curvature.  When the curvature is too low the level set will grow/shrink the front to obtain a allowable curvature. <font color="orange"><strong>WARNING:</strong></font> If Klow is set too high, it may result in overshoot.</li>
+<li><strong>Blur</strong> parameters control the image blur on the feature image and the advection image. Similar to what discussed for stage 1, increasing this value on images subject to a significant noise level may improve the accuracy of the resulting segmentation. Increased image blur will decrease precision, for this reason it is recommended that blur settings be lower in stage 2 than in stage 1.</li>
+<li><strong>Kupp</strong> and <strong>Klow</strong> specifies the maximum tolerable curvature. Unlike stage 1, where there is a equilibrium curvature, stage 2 has a specific allowable range for curvature.  When the curvature is too low the level set will grow/shrink the front to obtain a allowable curvature. <font color="orange"><strong>WARNING:</strong></font> If Klow is set too high, it may result in overshoot.</li>
 </ul>
 
 <h5>Advanced Features</h5>
@@ -706,7 +706,7 @@ Click the button "LevelSet"
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-<p>Three more contours are created for reslice positions: 180,210,240,270,300,330,&hellip;,600. After batch segmentation, it is good practice to quicly check through them paying attention to possibly unclosed and inaccuate segmentations.</p>
+<p>Three more contours are created for reslice positions: 180,210,240,270,300,330,&hellip;,600. After batch segmentation, it is good practice to quickly check through them paying attention to possibly open and inaccurate segmentations.</p>
 
 <p>Here are some helpful hints for checking out your contours that you have created in batch mode:</p>
 
@@ -798,7 +798,7 @@ A dialog pops up.
 Provide values in the suggested format.
 </code></pre>
 
-<p>The circular coutour has only two control points, one is for shifting and the other is for changing radius.</p>
+<p>The circular contour has only two control points, one is for shifting and the other is for changing radius.</p>
 
 <h4>Ellipse</h4>
 
@@ -823,11 +823,11 @@ A dialog pops up.
 Provide values in the suggested format.
 </code></pre>
 
-<p>The elliptical coutour has four control points. The two points on the contour line are for adjusting the orientation and size of the major and minor axes.</p>
+<p>The elliptical contour has four control points. The two points on the contour line are for adjusting the orientation and size of the major and minor axes.</p>
 
 <h4>Spline Polygon</h4>
 
-<p>A spline polyon is composed of multiple points and the adjacent points are connected by a closed spline.</p>
+<p>A spline polygon is composed of multiple points and the adjacent points are connected by a closed spline.</p>
 
 <p>To create a polygon with a spline (interactively):</p>
 <pre class="highlight plaintext"><code>Click the button "SplinePoly"
@@ -1126,7 +1126,7 @@ SimVascular toolbar to open the <strong>3D Level Set Tool</strong> panel. Select
 
 <p><br>
 <b>Step 3 - Create a start seed at the top of the aorta</b> <br>
-Move the crosshairs in the 2D Saggital window to the top of the aorta, then move the crosshairs in the 2D Axial window to
+Move the crosshairs in the 2D Sagittal window to the top of the aorta, then move the crosshairs in the 2D Axial window to
 the center of the aorta. Press the <i>S</i> key to create a start seed; it is displayed as a green sphere.
 <figure>
 <img class="svImg svImgXl" src="documentation/modeling/imgs/3d-level-set/example-1/fig-3.png">
@@ -1134,7 +1134,7 @@ the center of the aorta. Press the <i>S</i> key to create a start seed; it is di
 
 <p><br>
 <b>Step 4 - Create end seeds for the left and right iliacs</b> <br>
-Move the crosshairs in the 2D Saggital window down until the iliac arteries can be seen in the 2D Axial window. Move the crosshairs 
+Move the crosshairs in the 2D Sagittal window down until the iliac arteries can be seen in the 2D Axial window. Move the crosshairs 
 in the 2D Axial window to the center of the left iliac and press the <i>E</i> key to create an end seed.<br>
 Move the crosshairs in the 2D Axial window to the center of the right iliac and press the <i>E</i> key to create another end seed.
 The end seeds are displayed as a red spheres.
@@ -1233,9 +1233,9 @@ Click the button "Paste".
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-<p>A new data node named &ldquo;Lofted&rdquo; for the lofted surface is added under the data node &ldquo;aorta&rdquo; for the group. As you add/remove/modify contours, the surface will be udpated automatically.</p>
+<p>A new data node named &ldquo;Lofted&rdquo; for the lofted surface is added under the data node &ldquo;aorta&rdquo; for the group. As you add/remove/modify contours, the surface will be updated automatically.</p>
 
-<p><font color="red"><strong>HELPFUL HINT:</strong></font> This step is especially important for discrete (PolyData) modelling later.If the lofted surface doesn&rsquo;t match the vessle you are modeling, you can change some paramters to improve it.</p>
+<p><font color="red"><strong>HELPFUL HINT:</strong></font> This step is especially important for discrete (PolyData) modeling later.If the lofted surface doesn&rsquo;t match the vessel you are modeling, you can change some parameters to improve it.</p>
 
 <p>There are several methods parameters you can change for lofting, or you can just use the default settings.</p>
 <pre class="highlight plaintext"><code>Click the button "Lofting Parameters..."
@@ -1282,7 +1282,7 @@ Here are a few suggestions for fixing common problems:</p>
 
 <p>Lofting preview can also provides a good way to check the quality of the junction between two vessels. In this example, we have two groups: aorta, right_iliac. Similarly, follow the instruction above to create a path and contour group for right_iliac. </p>
 
-<p>Here, for better visualiztion, change the color of the lofted surface of aorta to blue, change the opacity of the image to about 0.6.</p>
+<p>Here, for better visualization, change the color of the lofted surface of aorta to blue, change the opacity of the image to about 0.6.</p>
 
 <p>Now let&rsquo;s check the first contour of right_iliac. You may find that the first segmentation of right_iliac looks something like this:</p>
 
@@ -1320,9 +1320,9 @@ Select a directory you would like to save, and click the “Choose” button.
 
 <p>In the Segmentation section, it was shown how to create individual 2-D segmentations along a particular vessel path. It is worthwhile to reinforce at this point the distinction between visualizing geometry and utilizing geometry for numerical simulation. If you were to graphically display all the segmentations that you created in the previous exercise, your mind may “connect the dots” and create a 3-D mental image of the geometry. However, we need to create a 3-D solid model that the computer can understand.</p>
 
-<p>Fortunately for us, an ordered relationship between some of the curves is known. That is, for each path we have an ordered set of curves defining the geometry for the given vessel. These sets are the groups that we have used to organize the segmentations. All of the segmentations are associated with one and only one vessel. This motivates a two-stage process to create a solid model. First, a “lofted” solid is created for each branch. This results in a collection of solid branches. Second, a boolean addition (union) is performed of the individual branches. The result is then a single bounded solid region representing the blood flow domain.</p>
+<p>Fortunately for us, an ordered relationship between some of the curves is known. That is, for each path we have an ordered set of curves defining the geometry for the given vessel. These sets are the groups that we have used to organize the segmentations. All of the segmentations are associated with one and only one vessel. This motivates a two-stage process to create a solid model. First, a “lofted” solid is created for each branch. This results in a collection of solid branches. Second, a Boolean addition (union) is performed of the individual branches. The result is then a single bounded solid region representing the blood flow domain.</p>
 
-<p>The PolyData software combines the created set of groups an ordered Boolean Addition. Each group of segmentations respresents a vessel and these are placed in a ordered list. The first of these ordered groups of segmentations is lofted with the second and each subsequent group is lofted to this growing union until the model is complete.</p>
+<p>The PolyData software combines the created set of groups an ordered Boolean Addition. Each group of segmentations represents a vessel and these are placed in a ordered list. The first of these ordered groups of segmentations is lofted with the second and each subsequent group is lofted to this growing union until the model is complete.</p>
 
 <p><strong>Preparing for Modeling:</strong></p>
 
@@ -1331,10 +1331,10 @@ Select a directory you would like to save, and click the “Choose” button.
 <ol>
 <li><p>Has been created from smooth, overlapping paths: a jagged or bumpy path can lead to segmentations with greatly differing angles making it difficult to combine them in a Boolean Addition. A path that is too short may cause a gap resulting in some segmentations not being joined at all</p></li>
 <li><p>Has reasonably spaced segmentations: too many segmentations can result in a jagged solid or many ridges and could cause problems when attempting to mesh. There should be enough to get the general shape and curves of the vessel, with segmentations denser around curves and more spread out when the shape is essentially a straight cylinder.</p></li>
-<li><p>Has smooth transistions between groups: two vessels being joined should share a common space. The first segmentation on a branch vessel should be completely contained by the solid model to be created by the main vessel. For example, the first segmentation for right iliac should be contained completely by the aorta. If not, a ledge could be created, complicating future steps.</p></li>
+<li><p>Has smooth transitions between groups: two vessels being joined should share a common space. The first segmentation on a branch vessel should be completely contained by the solid model to be created by the main vessel. For example, the first segmentation for right iliac should be contained completely by the aorta. If not, a ledge could be created, complicating future steps.</p></li>
 </ol>
 
-<p><strong>Besides 2D segmentations, SimVascular is also able to use 3D segmetnation or union 2D and 3D segmentations together to create a complete solid model.</strong></p>
+<p><strong>Besides 2D segmentations, SimVascular is also able to use 3D segmentation or union 2D and 3D segmentations together to create a complete solid model.</strong></p>
 </section>
 <section id="modelingCreatingModelsPolyData" class="subgroup"><h3>Creating a PolyData Model from 2D Segmentations</h3>
 
@@ -1367,11 +1367,11 @@ Click "OK"
 
 <p><strong>Union (Boolean) groups to create model:</strong></p>
 <pre class="highlight plaintext"><code>Click the button "Create Model..."
-A dialog pops up, showing all avaiable groups
-Toggle on the checkboxs in the column "Use" for the groups you want
+A dialog pops up, showing all available groups
+Toggle on the check boxes in the column "Use" for the groups you want
 You can also use the table menu to decide whether to use some groups 
 Number of Sampling Points: (optional for PolyData models)
-Use Uniform Lofting Parameters (Optional): if no, SimVascular uses the parameters you selected for each group during segmentation; if yes, SimVascular uses the same paramters for all the gourps to create the model.
+Use Uniform Lofting Parameters (Optional): if no, SimVascular uses the parameters you selected for each group during segmentation; if yes, SimVascular uses the same parameters for all the groups to create the model.
 Click "OK"
 </code></pre>
 
@@ -1381,7 +1381,7 @@ Click "OK"
 </figure>
 
 <p><font color="red"><strong>HELPFUL HINT:</strong> </font> 
-At the end of the Boolean operation, the model is created. The status bar will display the number of free edges and bad cells on the surfaces. Bad cells are denoted by triangles that have more than one neighbor which should not be possible if you have a valid 3D surface. If these numbers are not zero, please report this occurence to the SimVascular development team.</p>
+At the end of the Boolean operation, the model is created. The status bar will display the number of free edges and bad cells on the surfaces. Bad cells are denoted by triangles that have more than one neighbor which should not be possible if you have a valid 3D surface. If these numbers are not zero, please report this occurrence to the SimVascular development team.</p>
 
 <figure>
   <img class="svImg svImgLg"  src="documentation/modeling/imgs/polydata/polydatamodel.png"> 
@@ -1405,7 +1405,7 @@ All 2D/3D segmentations are listed in the popup dialog
 Choose those that you would like to union
 </code></pre>
 
-<p><strong>More options availale in Data Manager for visualization</strong></p>
+<p><strong>More options available in Data Manager for visualization</strong></p>
 
 <p>Right click the model &ldquo;demo&rdquo; in Data Manager, the menu pops up with more options for the model.</p>
 <pre class="highlight plaintext"><code>Show/Hide Edges: show/hide edges on the model surface
@@ -1430,7 +1430,7 @@ Provide a file and Save
 
 <p><strong>Face Names and Types</strong></p>
 
-<p>After the model is created, face informations are listed in a table in the tab &ldquo;Face List&rdquo;, like name, type, visibility(V),color( C),opacity(O). You can change the properties in the table. </p>
+<p>After the model is created, face information are listed in a table in the tab &ldquo;Face List&rdquo;, like name, type, visibility(V),color( C),opacity(O). You can change the properties in the table. </p>
 <pre class="highlight plaintext"><code>Name: double click the name; input a new name in the text field
 Type: double click the type; select a type (like "wall", "cap") from the combo box
 V: double click the eye icon to show/hide the face in Display
@@ -1467,12 +1467,12 @@ Deselect all faces: move the cursor outside of the surface, press "S"s
 <pre class="highlight plaintext"><code>Select faces
 To combine them to one face: Face Ops -&gt; button "Combine"
 To delete them: Face Opts -&gt; button "Delete"
-To delete them(interactively): Make sure the cursor is in the Dislay Window; press key "Delete"
+To delete them(interactively): Make sure the cursor is in the Display Window; press key "Delete"
 </code></pre>
 
 <p><strong>Filling Holes with Ids:</strong></p>
 
-<p>After deleting some faces of the model, it may be desirable to keep the current names of the other surfaces in the model. In this case, click the button &ldquo;Fill Holes w. IDs&rdquo; and this will fill in the holes of the model. For each new surface created, a new name be assigned. Please rename it and assign a corret type for it.</p>
+<p>After deleting some faces of the model, it may be desirable to keep the current names of the other surfaces in the model. In this case, click the button &ldquo;Fill Holes w. IDs&rdquo; and this will fill in the holes of the model. For each new surface created, a new name be assigned. Please rename it and assign a correct type for it.</p>
 
 <p><strong>Remeshing Faces:</strong></p>
 
@@ -1502,7 +1502,7 @@ Click the button "Extract Faces"
 </section>
 <section id="modelingEditingPolyData" class="subgroup"><h3>Global/Local Operations</h3>
 
-<p>Besides face operations, SimVascular provides more options to modify and improve solid model, such as global and local operations. <strong>The main diference between them is that global operations apply to the whole model surface while local operations only apply to the selected faces, regions, or cells.</strong></p>
+<p>Besides face operations, SimVascular provides more options to modify and improve solid model, such as global and local operations. <strong>The main difference between them is that global operations apply to the whole model surface while local operations only apply to the selected faces, regions, or cells.</strong></p>
 
 <p><strong>Local Selection/Deleting</strong></p>
 
@@ -1645,9 +1645,9 @@ Provide a file name and type you would like to save, and click the “Save” bu
 
 <p>In the previous section, it was shown how to create individual 2-D segmentations along a particular vessel path.  It is worthwhile to reinforce at this point the distinction between visualizing geometry and utilizing geometry for numerical simulation.  If you were to graphically display all the segmentations that you created in the previous exercise, your mind may “connect the dots” and create a 3-D mental image of the geometry.  However, we need to create a 3-D solid model that the computer can understand.</p>
 
-<p>Fortunately for us, an ordered relationship between some of the curves is known.  That is, for each path we have an ordered set of curves defining the geometry for the given vessel.  These sets are the groups that we have used to organize the segmentations. All of the segmentations are associated with one and only one vessel.  This motivates a two-stage process to create a solid model.  First, a “lofted” solid is created for each branch.  This results in a collection of solid branches.  Second, a boolean addition (union) is performed of the individual branches.  The result is then a single bounded solid region representing the blood flow domain.</p>
+<p>Fortunately for us, an ordered relationship between some of the curves is known.  That is, for each path we have an ordered set of curves defining the geometry for the given vessel.  These sets are the groups that we have used to organize the segmentations. All of the segmentations are associated with one and only one vessel.  This motivates a two-stage process to create a solid model.  First, a “lofted” solid is created for each branch.  This results in a collection of solid branches.  Second, a Boolean addition (union) is performed of the individual branches.  The result is then a single bounded solid region representing the blood flow domain.</p>
 
-<p>In this section we will explore two steps to create an analytic model, <strong>using OpenCASCADE or Parasolid</strong>. In <a href="#modelingCreatingModelsAnalytic">Section: Creating Solid Models</a>, we will perform a boolean addition to create a single solid model. <a href="#modelingBlendingAnalytic">Section: Blending the Junction of Two Vessels</a> shows you how to smooth out the intersection between vessels. <strong>The avaibility of OpenCASCADE or Parasolid depends on your SimVascular version.</strong></p>
+<p>In this section we will explore two steps to create an analytic model, <strong>using OpenCASCADE or Parasolid</strong>. In <a href="#modelingCreatingModelsAnalytic">Section: Creating Solid Models</a>, we will perform a Boolean addition to create a single solid model. <a href="#modelingBlendingAnalytic">Section: Blending the Junction of Two Vessels</a> shows you how to smooth out the intersection between vessels. <strong>The availability of OpenCASCADE or Parasolid depends on your SimVascular version.</strong></p>
 
 <p><font color="red"><strong>HELPFUL HINT:</strong> </font> You can only use Parasolid to generate a model if you have paid for a Parasolid license and have the licensed portion of the software. </p>
 </section>
@@ -1672,8 +1672,8 @@ Click "OK"
 
 <p><strong>Union (Boolean) groups to create model:</strong></p>
 <pre class="highlight plaintext"><code>Click the button "Create Model..."
-A dialog pops up, showing all avaiable groups
-Toggle on the checkboxs in the column "Use" for the groups you want
+A dialog pops up, showing all available groups
+Toggle on the check boxes in the column "Use" for the groups you want
 You can also use the table menu to decide whether to use some groups 
 Number of Sampling Points: 20 (default)
 Click "OK"
@@ -1703,7 +1703,7 @@ Because your first segmentation of right_iliac should be housed completely withi
 
 <p><strong>Convert to PolyData Model</strong></p>
 
-<p>Sometimes, you may want to convert an analytic model to a PolyData model. In this way, you are able to use varisou face/global/local operation to continue edit the model surface.</p>
+<p>Sometimes, you may want to convert an analytic model to a PolyData model. In this way, you are able to use various face/global/local operation to continue edit the model surface.</p>
 <pre class="highlight plaintext"><code>Click the button "Convert to PolyData..."
 Provide a name in the popup dialog
 Click "OK"

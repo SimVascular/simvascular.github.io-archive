@@ -252,15 +252,15 @@
 
         <div class="manSimCardio"><section id="intro" class="group"><h1>Introduction</h1>
 
-<p>Human heart is an intrinsic multiphysics system. It&rsquo;s normal function requires synchronization and coupling of cardiac electrophysiology, tissue (myocardium) mechanics, and hemodynamics. Among the three physics, cardiac mechanics plays a central role, as it serves as the bridge between electrophysiology and blood flow. In a physiological setting, the myocardial cells (myocytes) in the heart tissue initiate and propagate an electrical impulse (action potential) that travels through the heart and drives the contraction of the cardiac muscle, which, in turn, propels the blood to sustain whole body circulation.</p>
+<p>Human heart is an intrinsic multi-physics system. It&rsquo;s normal function requires synchronization and coupling of cardiac electrophysiology, tissue (myocardium) mechanics, and hemodynamics. Among the three physics, cardiac mechanics plays a central role, as it serves as the bridge between electrophysiology and blood flow. In a physiological setting, the myocardial cells (myocytes) in the heart tissue initiate and propagate an electrical impulse (action potential) that travels through the heart and drives the contraction of the cardiac muscle, which, in turn, propels the blood to sustain whole body circulation.</p>
 
-<p>The SimVascular <strong>SimCardio</strong> software suite includes a machine learning-based tool to automatically segment heart chambers from medical data and create patient-specific cardiac models, a finite element solver for performing multiphysics cardiac simulations, and python-based plugins to interactively create cardiac models, Purkinje network and set solver parameters from within the main SimVascular GUI application. While some of the interactive plugins are under development, the software allows flexibility to use scripting and perform simulations on high performance clusters.</p>
+<p>The SimVascular <strong>SimCardio</strong> software suite includes a machine learning-based tool to automatically segment heart chambers from medical data and create patient-specific cardiac models, a finite element solver for performing multi-physics cardiac simulations, and python-based plugins to interactively create cardiac models, Purkinje network and set solver parameters from within the main SimVascular GUI application. While some of the interactive plugins are under development, the software allows flexibility to use scripting and perform simulations on high performance clusters.</p>
 
 <h3>Cardiac Segmentation and Geometric Modeling</h3>
 
-<p>The SimVascular <strong>Cardiac Image Segmentation Tool</strong> uses pre-trained deep neural network models to automaticall generate segmentations for major cardiac structures, the four heart chambers, aorta and pulmonary arteries. The automatic cardiac segmentation tool utilized an ensemble of two-dimensional (2D) convolutional neural networks (CNNs) for automatic segmentation of cardiac structures from three-dimensional (3D) patient images and demonstrated state-of-the-art performance than prior approaches when evaluated on a benchmark dataset containing both magnetic resonance (MR) and computed tomography(CT) scans. This tool can be used from both the SimVascular&rsquo;s Python plugin in the GUI or from the command line version of the SimVascular Python.</p>
+<p>The SimVascular <strong>Cardiac Image Segmentation Tool</strong> uses pre-trained deep neural network models to automatically generate segmentations for major cardiac structures, the four heart chambers, aorta and pulmonary arteries. The automatic cardiac segmentation tool utilized an ensemble of two-dimensional (2D) convolutional neural networks (CNNs) for automatic segmentation of cardiac structures from three-dimensional (3D) patient images and demonstrated state-of-the-art performance than prior approaches when evaluated on a benchmark dataset containing both magnetic resonance (MR) and computed tomography(CT) scans. This tool can be used from both the SimVascular&rsquo;s Python plugin in the GUI or from the command line version of the SimVascular Python.</p>
 
-<h3>Multiphysics Finite Element Solver</h3>
+<h3>Multi-physics Finite Element Solver</h3>
 
 <p><strong>svFSI</strong> is a new multi-physics finite element solver designed for computational modeling of the whole heart dynamics. As the next generation underlining solver for the <strong>SimVascular</strong> software, <strong>svFSI</strong> is capable of simulating myocardial electrical activity using state-of-the-art cellular activation models, employ nonlinear hyperelastic material models to simulate tissue mechanics and activation coupling strategies, and perform large deformation fluid-structure interaction (FSI) to simulate the dynamics between the heart tissue and blood flow. <strong>svFSI</strong> could also be used to perform blood flow simulations by imposing the ventricular wall motion extracted from medical image data.</p>
 
@@ -277,7 +277,7 @@ data to extract heart wall motion that can be later used in multi-physics simula
 
 <p>The <strong>Cardiac Geometric Modeling Tool</strong> is implemented as the 
 <a href="https://github.com/SimVascular/SimVascular/tree/master/Python/site-packages/sv_auto_lv_modeling"> 
-<b>sv_auto_lv_modeling</b> </a> Python package included with the SimVascualar
+<b>sv_auto_lv_modeling</b> </a> Python package included with the SimVascular
 application.</p>
 </section>
   <section id="seg-intro" class="subgroup"><h1>Automated Image Segmentation</h1>
@@ -296,7 +296,7 @@ environment. </p>
 The segmentation method requires an image to have an identity orientation matrix. </p>
 
 <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #e6e600; border-left: 6px solid #e6e600">
-The VTK version used by SimVascular does not writte a <b>.vti</b> file with an orientation matrix. Image <b>.vti</b> files
+The VTK version used by SimVascular does not written a <b>.vti</b> file with an orientation matrix. Image <b>.vti</b> files
 written by SimVascular must therefore be reoriented to have an identity orientation matrix when used for segmentation.
 </div>
 
@@ -314,7 +314,7 @@ The directory containing the input image data should be organized as follows</p>
   <section id="seg-pre-trained-models" class="subgroup"><h2>Pre-Trained Models</h2>
 
 <p>We used the image and ground truth data provided by <a href='https://zmiclab.github.io/projects/mmwhs/'>MMWHS</a> to train our models.
-Our segmentation models were trained simultaneously on CT and MR data. The trained weight data can be downloade from 
+Our segmentation models were trained simultaneously on CT and MR data. The trained weight data can be downloaded from 
 <a href='https://drive.google.com/open?id=162Xr5OezSZL-0K3aoYO7WnHWuGTEXkkj'>here</a>.</p>
 </section>
   <section id="seg-predict" class="subgroup"><h2>Segmenting Image Data</h2>
@@ -341,7 +341,7 @@ prediction.py </a> Python script. For example</p>
         --image $image_dir \
         --output $output_dir \
         --model $weight_dir \
-        --view  0 1 2 \ # 0 for axial, 1 for coronal, 2 for sagital
+        --view  0 1 2 \ # 0 for axial, 1 for coronal, 2 for sagittal
         --modality ct # ct or mr
 </code></pre>
 
@@ -453,7 +453,7 @@ can be used for surface generation. Use the Python console <strong>Text Editor</
 volume_mesh_main.py </a> is used to generate a finite element mesh.</p>
 
 <pre><code class='language-shell' lang='shell'>
-    # Path to SimVascular exectuable
+    # Path to SimVascular executable
     data_path=/path/to/data
     sv_python_dir=/usr/local/bin
     script_dir=SimVascular/Python/site-packages/sv_auto_lv_modeling
@@ -462,7 +462,7 @@ volume_mesh_main.py </a> is used to generate a finite element mesh.</p>
     # Path to the surface meshes
     input_dir=$data_path/04-SurfReg/$p_id
 
-    # Path to the outputed volume meshes
+    # Path to the outputted volume meshes
     output_dir=$data_path/05-VolMesh/$p_id
     volume_mesh_script=$script_dir/modeling/volume_mesh_main.py
 
@@ -503,7 +503,7 @@ elastix_main.py </a> script is used to perform the registration. It uses uses th
 <a href='https://github.com/SuperElastix/SimpleElastix'>SimpleElastix</a> software for registration.</p>
 
 <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #e6e600; border-left: 6px solid #e6e600">
-For code compatiblty you will need to use <b>SimpleElastix</b> commit 8244e0001f4137514b0f545f1e846910b3dd7769. 
+For code compatibility you will need to use <b>SimpleElastix</b> commit 8244e0001f4137514b0f545f1e846910b3dd7769. 
 </div>
 
 <p><br></p>
@@ -806,7 +806,7 @@ $$  f^r = V-br+a $$</p>
 
 <figure>
     <img class="svImg svImgMd" src="documentation/simcardio/electrophysiology/images/mesh-stats.png">
-    <figcaption class="svCaption" >Once the mesh is succesfully generated, the mesh stats window pops up.</figcaption>
+    <figcaption class="svCaption" >Once the mesh is successfully generated, the mesh stats window pops up.</figcaption>
 </figure>
 
 <h3>Plugin workflow</h3>
@@ -832,7 +832,7 @@ $$  f^r = V-br+a $$</p>
     <figcaption class="svCaption" >Activate Purkinje tool by clicking the Purkinje Network icon shown on the toolbar.</figcaption>
 </figure>
 
-<p>A mesh face is selected by moving the mouse cursor over a face and pressing the <strong>s</strong> key. Select the endocardium face you want to generate the Purkinje network on. The selected face mesh is highlighed in yellow and its name is displayed in the Mesh Surface text box.</p>
+<p>A mesh face is selected by moving the mouse cursor over a face and pressing the <strong>s</strong> key. Select the endocardium face you want to generate the Purkinje network on. The selected face mesh is highlighted in yellow and its name is displayed in the Mesh Surface text box.</p>
 
 <figure>
     <img class="svImg svImgMd" src="documentation/simcardio/electrophysiology/images/select-surface.png">
@@ -858,7 +858,7 @@ $$  f^r = V-br+a $$</p>
     <figcaption class="svCaption" >Purkinje network is overlaid on the mesh in the Display window.</figcaption>
 </figure>
 
-<p>The network is saved in .vtu format under the Purkinje-Network subfolder of the project directory. Additionally you can find the .txt files that contain the information of end nodes, position coordinates, and network connectivity under the same folder. Further details about the contents of each file is provided <a href="#output">below</a>.</p>
+<p>The network is saved in .vtu format under the Purkinje-Network sub-folder of the project directory. Additionally you can find the .txt files that contain the information of end nodes, position coordinates, and network connectivity under the same folder. Further details about the contents of each file is provided <a href="#output">below</a>.</p>
 
 <figure>
     <img class="svImg svImgMd" src="documentation/simcardio/electrophysiology/images/purkinje-paraview.png">
@@ -867,7 +867,7 @@ $$  f^r = V-br+a $$</p>
 
 <h3>Output Description</h3>
 
-<p>The Purkinje Network tool writes a set of files in the Purkinje-Network subfolder within the SimVascular project directory. The files are prefixed with the name of the selected face. The files and their contents are described below:</p>
+<p>The Purkinje Network tool writes a set of files in the Purkinje-Network sub-folder within the SimVascular project directory. The files are prefixed with the name of the selected face. The files and their contents are described below:</p>
 
 <ul>
     <li> <code> <font color="black"> FACENAME.vtp </font> </code> - triangular surface on which the network is generated. </li>
