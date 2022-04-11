@@ -58,8 +58,11 @@ genbc/
 installation/
 meshing/
 modeling/
+python_interface/
 quickguide/
-refs/
+references/
+rom_simulation/
+simcardio/
 svFSI/
 ```
 The documentation markdown files for the **Clinical Case Studies** are located in subdirectories under the *simvascular.github.io/source/clinical* directory
