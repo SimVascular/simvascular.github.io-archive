@@ -7,7 +7,7 @@ In this step, we will import the fluid geometry into Meshmixer and utilize Meshm
 When you open Meshmixer, you should see a button called ``Import'' that appears near the middle of the screen with a plus sign (+). Click this and select the fluid domain .stl that you created in the last step. After importing, you should see your fluid domain model appear in the main window as shown below.
 
 <figure>
-  <img class="svImg svImgLg" src="documentation/svFSI/fsi_tutorial/imgs/opening_meshmixer.png">
+  <img class="svImg svImgLg" src="documentation/simcardio/fsi/imgs/opening_meshmixer.png">
   <figcaption class="svCaption" >Opening Meshmixer and importing a fluid model.</figcaption>
 </figure>
 
@@ -20,7 +20,7 @@ A couple notes to keep in mind before modifying the geometry of your fluid geome
 a. Sculpting in Meshmixer
 
 <figure>
-  <img class="svImg svImgLg" src="documentation/svFSI/fsi_tutorial/imgs/sculpting_figure.png">
+  <img class="svImg svImgLg" src="documentation/simcardio/fsi/imgs/sculpting_figure.png">
   <figcaption class="svCaption" >Using the sculpting tool in Meshmixer.</figcaption>
 </figure>
 
@@ -31,7 +31,7 @@ Below that is a button for  "Brushes", which allows you to select the sculpting 
 b. Local remeshing in Meshmixer
 
 <figure>
-  <img class="svImg svImgLg" src="documentation/svFSI/fsi_tutorial/imgs/using_remeshing.png">
+  <img class="svImg svImgLg" src="documentation/simcardio/fsi/imgs/using_remeshing.png">
   <figcaption class="svCaption" >Using the remeshing tool in Meshmixer.</figcaption>
 </figure>
 
@@ -44,7 +44,7 @@ Once you get a remesh you are satisfied with, click the ``Accept'' button at the
 c. Local Smoothing in Meshmixer
 
 <figure>
-  <img class="svImg svImgLg" src="documentation/svFSI/fsi_tutorial/imgs/using_smoothing.png">
+  <img class="svImg svImgLg" src="documentation/simcardio/fsi/imgs/using_smoothing.png">
   <figcaption class="svCaption" >Using the smoothing tool in Meshmixer.</figcaption>
 </figure>
 
@@ -60,19 +60,19 @@ After the fluid domain surface has been sufficiently smoothed at all sharp corne
    b. Choose Edit > Extrude
 
    <figure>
-      <img class="svImg svImgMd" src="documentation/svFSI/fsi_tutorial/imgs/MM_fig_Extrude1.png">
+      <img class="svImg svImgMd" src="documentation/simcardio/fsi/imgs/MM_fig_Extrude1.png">
    </figure>
 
    c. Choose your offset and the offset direction "normal". This will extrude the wall in normal direction by your given offset. The offset will correspond to the thickness of the vessel wall. Typically, the thickness of the vessel wall is determined by the size of the vessels you are modeling. This information can often be found in the literature, but in the absence of such data, setting the thickness to 10\% of the mean vessel diameter is a reasonable first approximation. If you prefer to have a variable thickness along the vessel, simply restrict your selection to the region you want to extrude by a given thickness. If you like the offset, hit "Accept".
 
    <figure>
-      <img class="svImg svImgSm" src="documentation/svFSI/fsi_tutorial/imgs/MM_fig_Extrude2.png">
+      <img class="svImg svImgSm" src="documentation/simcardio/fsi/imgs/MM_fig_Extrude2.png">
    </figure>
 
    d. If you do a plane cut of your model now it should look something like this:
 
    <figure>
-      <img class="svImg svImgMd" src="documentation/svFSI/fsi_tutorial/imgs/MM_fig_Extrude_Planecut1.png">
+      <img class="svImg svImgMd" src="documentation/simcardio/fsi/imgs/MM_fig_Extrude_Planecut1.png">
    </figure>
 
    In green you can see the surface of the fluid, and in purple the extruded surface.
@@ -100,12 +100,12 @@ We will now outline a general recipe for extruding a fluid geometry to produce a
 Below is an example of how a bifurcation looks before and after applying the above smoothing procedure. This example did not require much manual sculpting. But some bifurcations that produce sharp corners might require additional sculpting to ensure a smooth surface.
 
 <figure>
-  <img class="svImg svImgLg" src="documentation/svFSI/fsi_tutorial/imgs/model_treatment_process.png">
+  <img class="svImg svImgLg" src="documentation/simcardio/fsi/imgs/model_treatment_process.png">
   <figcaption class="svCaption" >Smoothing bifurcations.</figcaption>
 </figure>
 
 The solid model for the structural domain is finished. Export it as an stl file.
 
 <figure>
-  <img class="svImg svImgSm" src="documentation/svFSI/fsi_tutorial/imgs/SV_Export_as_stl1.png">
+  <img class="svImg svImgSm" src="documentation/simcardio/fsi/imgs/SV_Export_as_stl1.png">
 </figure>
