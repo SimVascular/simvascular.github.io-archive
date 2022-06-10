@@ -1,0 +1,3 @@
+##Installation
+
+The source code of <strong>svFSI</strong> is available on <a href="https://github.com/SimVascular/svFSI">GitHub</a> as part of the SimVascular project and the precompiled installers can be downloaded from <a href="https://simtk.org/projects/simvascular#">SimTK</a> website. A variety of examples are also available on <a href="https://github.com/SimVascular/svFSI-Tests">GitHub</a> for the users to get started quickly on using the solver. We recommend users to navigate through all the examples under a particular physics to educate themselves with the variety of options that the solver could accommodate. We also recommend users to use the existing input files as templates and make suitable modifications that meet their needs.
