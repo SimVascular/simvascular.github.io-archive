@@ -15,7 +15,7 @@ We now need to fill the inlet and outlet holes and name them so we can apply bou
 Filling the inlet and outlet holes produced geometry on those surfaces, but it does not have a mesh appropriate for computational modeling. We thus need to remesh them. Make sure you are under the “Face Ops” tab by clicking “Face Ops” on the right side of the screen. Clicking the blue “Remesh” button should reveal the Remeshing dialogue, which asks you to select an appropriate size of the elements. The element size you select should reflect the kind of accuracy and cost you would like to use in the FSI simulation. A good starting point is to use the same size that you used for the structural domain solid mesh, though they do not have to be equal. Remesh each of the inlet and outlet faces but DO NOT remesh the wall interface. This will ensure that the nodes still coincide with the structural domain nodes after this remeshing.
 
 <figure>
-  <img class="svImg svImgLg" src="documentation/svFSI/fsi_tutorial/imgs/remesh_caps.png">
+  <img class="svImg svImgLg" src="documentation/svfsi/fsi/imgs/remesh_caps.png">
   <figcaption class="svCaption" >Remeshing inlet and outlets of fluid domain.</figcaption>
 </figure>
 
@@ -24,7 +24,7 @@ Filling the inlet and outlet holes produced geometry on those surfaces, but it d
 In the SimVascular DataManager right click “Meshes” and create a new mesh from the fluid model. This time, it is REQUIRED to toggle off the option “Surface mesh”. This is important, because it will keep the surface nodes exactly where they are. This way the nodes on the fluid interface will coincide with the nodes on structural interface. Choose your refinement to be consistent with the size of the elements you chose for the wall and caps, then run the mesher. Once it finishes, right-click your fluid mesh and click "Export Mesh-Complete". You are done!
 
 <figure>
-  <img class="svImg svImgLg" src="documentation/svFSI/fsi_tutorial/imgs/meshing_final_pic.png">
+  <img class="svImg svImgLg" src="documentation/svfsi/fsi/imgs/meshing_final_pic.png">
   <figcaption class="svCaption" >Creating fluid domain mesh.</figcaption>
 </figure>
 

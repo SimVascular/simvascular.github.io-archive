@@ -5,7 +5,7 @@ The plugin provides a GUI with which to create input files for your svFSI simula
 Initiate a job by pressing “New Job.” Click the job in the SV Data Manager, and ensure that it appears in the plugin window. The “Domains” panel allows one to add meshes to the simulation for the different physical domains. Click “Add Mesh-Complete” and select the fluid mesh. You should see three faces appear, one for in the inlet, outlet and fluid-solid interface. Ensure that the button for “fluid” is selected.
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/svFSI/fsi_tutorial/imgs/domains_panel.png">
+  <img class="svImg svImgMd" src="documentation/svfsi/fsi/imgs/domains_panel.png">
   <figcaption class="svCaption" >The domains panel.</figcaption>
 </figure>
 
@@ -14,7 +14,7 @@ Click “Add Mesh-Complete” and select the solid mesh. You should see four fac
 The next panel “Physics,” which allows one to select the appropriate differential equations for your problem. Select “FSI” for a coupled fluid-structure interaction simulation and click the right arrow. This will also add “Mesh Motion,” based on the ALE method, to the domains. In the list of added equations, click “FSI” to set fluid-structure parameters. Suppose for now that we are working in CGS units. Set fluid density to 1.06 g/cm$^{3}$, viscosity to 0.04 g/(cm s), solid density to 1.06 g/cm$^{3}$, Set the elastic modulus to a nominal value of $7e7$ dynes/cm$^{2}$ (See <span>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4009743/</span>). We expect the artery wall to be nearly incompressible, and set the Poisson ratio to 0.49. Finally, select a “nHK” for a neo-Hookean solid.
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/svFSI/fsi_tutorial/imgs/physics_panel.png">
+  <img class="svImg svImgMd" src="documentation/svfsi/fsi/imgs/physics_panel.png">
   <figcaption class="svCaption" >The physics panel.</figcaption>
 </figure>
 
@@ -25,14 +25,14 @@ The next tab is “output.” Select a quantity such as “WSS” for wall sheer
 The next tab is “boundary conditions.” Select “add,” which brings up a boundary condition menu. From there, select the type of boundary condition and other parameters accordingly. Set the lumen inlet to be a constant value Dirichlet condition of -10 cm$^{3}$/s. Select “impose flux” and a parabolic profile. Set the lumen outlet to be a constant value Neumann condition with value zero, corresponding to zero applied traction at the outlet. Set the annulus inlet and outlet to be zero Dirichlet boundary conditions, corresponding to zero displacement, which will hold them in place through the simulation. Set the annulus outer wall to a zero Neumann condition, which specifies no applied traction on the outer boundary of the physical domain.
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/svFSI/fsi_tutorial/imgs/dirichlet_bc.png">
+  <img class="svImg svImgMd" src="documentation/svfsi/fsi/imgs/dirichlet_bc.png">
   <figcaption class="svCaption" >Setting a Dirichlet boundary condition.</figcaption>
 </figure>
 
 To couple the fluid and solid at their interface, set a Dirichlet boundary condition on “interface\_solid.” Under options, select “projection” and pick the face “interface\_fluid.” Do not apply a separate boundary condition for “interface\_fluid,” as the coupling will handle the updates. (Note that one must click Dirichlet or Neumann to get the projection box to appear. Such a condition is not added to the input file.)
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/svFSI/fsi_tutorial/imgs/projection_bc.png">
+  <img class="svImg svImgMd" src="documentation/svfsi/fsi/imgs/projection_bc.png">
   <figcaption class="svCaption" >Setting a projection boundary condition at the fluid/solid interface.</figcaption>
 </figure>
 
@@ -45,7 +45,7 @@ A number of linear solver parameters are available; the default should suffice f
 The “Simulation Parameters” panel allows specification of general parameters for the solver. First, set the desired time step and number of steps. The value of the time step depends on your desired resolution in time and the maximum stable time step for your problem, which is determined by the spatial resolution of the mesh, underlying physics and choice of spatial discretization. The option “start from a previous simulation” allows restarting from a previous simulation. This is useful if there was a problem, or one simply wants to run the simulation for longer without re-running the first set of time steps. Under “Save simulation results,” the value start determines the first time step that is output. Increment determines how often output files are saved. Set this to one to output every time step, or to a larger value to only save a subset of the steps.
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/svFSI/fsi_tutorial/imgs/simulation_panel.png">
+  <img class="svImg svImgMd" src="documentation/svfsi/fsi/imgs/simulation_panel.png">
   <figcaption class="svCaption" >The simulation panel.</figcaption>
 </figure>
 

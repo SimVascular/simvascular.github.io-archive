@@ -7,7 +7,7 @@ Similar to the way we create the mesh for the fluid domain in SimVascular (see: 
 Right-click on the "Models" button and choose "Import solid Model", then select the .stl model you just exported from Meshmixer:
 
 <figure>
-  <img class="svImg svImgLg" src="documentation/svFSI/fsi_tutorial/imgs/importing_solid_into_SV.png">
+  <img class="svImg svImgLg" src="documentation/svfsi/fsi/imgs/importing_solid_into_SV.png">
   <figcaption class="svCaption" >Importing .stl model into SimVascular.</figcaption>
 </figure>
 
@@ -26,7 +26,7 @@ This situation most likely happens due to poor quality triangles being produced 
 You will want separate faces for each of the inlets and outlet perimeters, as well as a separate face for the inner wall and a separate face for the outer wall. This is so that we can apply boundary conditions on all of these faces. Clicking on each face in your Face List should highlight their locations in your structural model in yellow. Do this for each face to confirm their location and to confirm that all faces are accounted for.
 
 <figure>
-  <img class="svImg svImgLg" src="documentation/svFSI/fsi_tutorial/imgs/extracting_faces.png">
+  <img class="svImg svImgLg" src="documentation/svfsi/fsi/imgs/extracting_faces.png">
   <figcaption class="svCaption" >Extracting faces in SimVascular.</figcaption>
 </figure>
 
@@ -35,7 +35,7 @@ You will want separate faces for each of the inlets and outlet perimeters, as we
 Right-click on “Meshes” in the Data Manager Window and select “Create mesh”, then choose the structural domain model. If you double click on the newly created mesh item, the “mesh interactor” should open up. If the surface mesh of your structural model from Meshmixer was of a good spatial resolution, and quality, you may want to toggle off the option “Surface remeshing” (this will also speed up the meshing step, especially for larger models).
 
 <figure>
-  <img class="svImg svImgLg" src="documentation/svFSI/fsi_tutorial/imgs/creating_structural_mesh.png">
+  <img class="svImg svImgLg" src="documentation/svfsi/fsi/imgs/creating_structural_mesh.png">
   <figcaption class="svCaption" >Creating volumetric solid mesh.</figcaption>
 </figure>
 

@@ -47,7 +47,7 @@ activate :syntax
 
 # DOCS
 
-["Installation", "QuickGuide", "ModelGuide", "Meshing", "FlowSolver", "svFSI",  "SimCardio", "ROMSimulation", "GenBC", "PythonInterface", "References", "Compile"].each do |name|
+["Installation", "QuickGuide", "ModelGuide", "Meshing", "FlowSolver", "svFSI", "svFSI-FSI", "SimCardio", "ROMSimulation", "GenBC", "PythonInterface", "References", "Compile"].each do |name|
   proxy "/docs#{name}.html", "/docsTemplate.html", :locals => { :man_name => name }, :ignore => true
 end
 
