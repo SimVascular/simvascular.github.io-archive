@@ -91,8 +91,20 @@ title: SimVascular Docs
         <div class="mansvFSI"><%= partial "documentation/svfsi_content" %></div>
       <% end %>
 
+      <% if man_name == "svFSI-Fluid" %>
+        <div class="mansvFSI-Fluid"><%= partial "documentation/svfsi/fluid_content" %></div>
+      <% end %>
+
+      <% if man_name == "svFSI-Structure" %>
+        <div class="mansvFSI-Structure"><%= partial "documentation/svfsi/structure_content" %></div>
+      <% end %>
+
       <% if man_name == "svFSI-FSI" %>
         <div class="mansvFSI-FSI"><%= partial "documentation/svfsi/fsi_content" %></div>
+      <% end %>
+
+      <% if man_name == "svFSI-CEP" %>
+        <div class="mansvFSI-CEP"><%= partial "documentation/svfsi/cep_content" %></div>
       <% end %>
 
       <% if man_name == "SimCardio" %>
