@@ -61,7 +61,7 @@ The content for the home page **Our Team** section is stored in the **_team.erb*
 
 The team member biographies are stored in markdown files located in the *simvascular.github.io/source/homepage/team_members* directory. To view changes made to the team picture you must stop and restart the middleman web server. 
 
-### Create new documentation page
+### Creating new documentation page
 
 Source files of documentation are stored in [source/documentation](./source/documentation/). To create a new page, you first need to create markdown files that contain the content of the page (e.g. [rom_simulation](./source/documentation/rom_simulation)) along with necessary Ruby files (e.g. [_rom_simulation_TOC.erb](./source/documentation/_rom_simulation_TOC.erb) and [_rom_simulation_content.erb](./source/documentation/_rom_simulation_content.erb)).
 

@@ -28,8 +28,20 @@ title: SimVascular Docs
         <ul id="sidebar" class="nav nav-stacked fixed mansvFSI"> <%= partial "documentation/svfsi_TOC" %></ul>
       <% end %>
 
+      <% if man_name == "svFSI-Fluid" %>
+        <ul id="sidebar" class="nav nav-stacked fixed mansvFSI-Fluid"> <%= partial "documentation/svfsi/fluid_TOC" %></ul>
+      <% end %>
+      
+      <% if man_name == "svFSI-Structure" %>
+        <ul id="sidebar" class="nav nav-stacked fixed mansvFSI-Structure"> <%= partial "documentation/svfsi/structure_TOC" %></ul>
+      <% end %>
+
       <% if man_name == "svFSI-FSI" %>
         <ul id="sidebar" class="nav nav-stacked fixed mansvFSI-FSI"> <%= partial "documentation/svfsi/fsi_TOC" %></ul>
+      <% end %>
+
+      <% if man_name == "svFSI-CEP" %>
+        <ul id="sidebar" class="nav nav-stacked fixed mansvFSI-CEP"> <%= partial "documentation/svfsi/cep_TOC" %></ul>
       <% end %>
 
       <% if man_name == "SimCardio" %>
