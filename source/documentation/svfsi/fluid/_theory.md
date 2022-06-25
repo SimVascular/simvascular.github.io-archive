@@ -1,2 +1,2 @@
-## Theory
+## Non-Newtonian flow
 
