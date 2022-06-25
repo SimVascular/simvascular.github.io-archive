@@ -19,8 +19,6 @@ If you have any questions or suggestions, please feel free to contact us through
 - Contribute your code to **svFSI**, please submit a pull request through GitHub.
 - Share your novel applications of **svFSI** with the community, please consider contribute your case to [svFSI-Tests](https://github.com/SimVascular/svFSI-Tests).
 
+<p><br/><br/><br/><br/><br/></p>
 
-&nbsp;
 
-
-&nbsp;
