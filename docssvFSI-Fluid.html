@@ -154,9 +154,10 @@
 
 
         <ul id="sidebar" class="nav nav-stacked fixed mansvFSI-Fluid"> <!--Nav Bar -->
-<p><h3>Fluid Tutorial</h3></p>
+<p><h3>Fluid</h3></p>
 <li><a href="#intro">Introduction</a></li>
 <li><a href="#theory">Theory</a></li>
+<li><a href="#input">Input file format</a></li>
 <li><a href="#ref">Reference</a></li>
 </ul>
       
@@ -177,6 +178,78 @@
 
 
 
+
+
+
+        <div class="mansvFSI-Fluid"><section id="intro" class="group"><h2>Introduction</h2>
+
+<p>Modeling of cardiovascular flow is the main function of <strong>SimVascular</strong>. Currently, the default flow solver of <strong>SimVasculr</strong> is <a href="https://simvascular.github.io/archiveFlowSolverSV2.html"><strong>svSolver</strong></a>. All of the features in <strong>svSolver</strong> exists in <strong>svFSI</strong> including RCR boundary condition, Coupled Momentum Method, GenBC etc. Also, we have carefully tested the new solver to make sure it produce the same results as <strong>svSolver</strong>. In this section, we won&rsquo;t dwell on the similarities between these two solvers, and instead will focus two new features in flow simulation in <strong>svFSI</strong>, i.e., non-Newtonian flow model and simulation of prescribed motion.</p>
+</section>
+<section id="theory" class="group"><h2>Non-Newtonian flow</h2>
+
+<p>Currently, <strong>svFSI</strong> supports three viscosity models: Newtonian, Carreau-Yasuda and Casson <a href="#ref-1">[1]</a>.</p>
+
+<figure>
+  <img class="svImg svImgSm" src="documentation/svfsi/fluid/imgs/non-newtonian.png" style="width:70%">
+  <figcaption class="svCaption" >Non-Newtonian viscosity model<a href="#ref-1">[1]</a>.</figcaption>
+</figure>
+
+<p>Carreau-Yassuda model is defined as</p>
+
+<p>$$\eta=\eta_\infty + (\eta_0 - \eta_\infty) \left[ 1 + \left( \lambda\dot(\gamma)^a \right) \right]^{\frac{n-1}{a}}$$</p>
+
+<p>Here:
+<ul>
+    <li>$\eta_\infty$: limiting high shear-rateviscosity;</li>
+    <li>$\eta_0$: limiting low shear-rate viscosity;</li>
+    <li>$\lambda$: shear-rate tensor multiplier;</li>
+    <li>$\dot{\gamma}$: shear rate;</li>
+    <li>$a$: shear-rate tensor exponent;</li>
+    <li>$n$: power-law index.</li>
+</ul> </p>
+
+<p>Casson model is defined as</p>
+
+<p>$$\eta=\frac{1}{\dot{\gamma}}\left[ k_0 ( c ) + k_1 ( c )\sqrt{\dot{\gamma}} \right]^2$$</p>
+
+<p>Here, $k_0 ( c )$ and $k_1 ( c )$ are functions of the hematocrit $c$. </p>
+</section>
+<section id="input" class="group"><h2>Input file format</h2>
+
+<p>The input file <code>svFSI.inp</code> follows the master input file <a href="./svFSI_master.inp"><code>svFSI_master.inp</code></a> as a template. Some specific input options are discussed below:</p>
+
+<p>For Newtonian fluid:</p>
+<pre class="highlight plaintext"><code>   Viscosity: Constant {
+      Vsalue: 0.04
+   }
+</code></pre>
+
+<p>For Casson fluid</p>
+<pre class="highlight plaintext"><code>   Viscosity: Cassons {
+      Asymptotic viscosity parameter: 0.3953
+      Yield stress parameter: 0.22803
+      Low shear-rate threshold: 0.5
+   }
+</code></pre>
+
+<p>For Carreau-Yasuda fluid</p>
+<pre class="highlight plaintext"><code>   Viscosity: Carreau-Yasuda {
+      Limiting high shear-rate viscosity: 0.022
+      Limiting low shear-rate viscosity: 0.22
+      Shear-rate tensor multiplier (lamda): 0.11
+      Shear-rate tensor exponent (a): 0.644
+      Power-law index (n): 0.392
+   }
+</code></pre>
+</section>
+<section id="ref" class="group"><h2>Reference</h2>
+
+<p><a id="ref-1"> <a href="https://doi.org/10.1063/1.2772250">
+[1] Boyd, Joshua, James M. Buick, and Simon Green. <strong>Analysis of the Casson and Carreau-Yasuda Non-Newtonian Blood Models in Steady and Oscillatory Flows Using the Lattice Boltzmann Method</strong> Physics of Fluids 19, no. 9 (September 2007): 093103..  </a></a></p>
+
+<p><br><br><br><br><br></p>
+</section>
+</div>
 
 
 

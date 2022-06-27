@@ -157,9 +157,10 @@
 
 
         <ul id="sidebar" class="nav nav-stacked fixed mansvFSI-CEP"> <!--Nav Bar -->
-<p><h3>Fluid Tutorial</h3></p>
+<p><h3>Electrophysiology</h3></p>
 <li><a href="#intro">Introduction</a></li>
 <li><a href="#theory">Theory</a></li>
+<li><a href="#example">Example</a></li>
 <li><a href="#ref">Reference</a></li>
 </ul>
 
@@ -180,6 +181,298 @@
 
 
 
+
+
+
+        <div class="mansvFSI-CEP"><section id="intro" class="group"><h2>Introduction</h2>
+
+<p>The electrical activity in a heart is initiated at the sinoatrial node, which is located at the right atrium of the heart. A small cluster of pacemaker cells periodically emits electrical signals into the heart’s conduction system. These signals first travel at a high speed through a network of special cells that allows the signals to reach the whole heart rapidly. Finally, they travel into the ventricular muscles, and cause the entire heart to contract almost simultaneously. The electrical signals travel between cells through a process called depolarization, during which voltage-sensitive protein channels on the cell membrane open to allow positively charged ions to move in and out of the cell, leading to ionic currents.</p>
+</section>
+<section id="theory" class="group"><h2>Mathematical Model of Cardiac Electrophysiology</h2>
+
+<p>The propagation of electrical signal in the heart is governed by a reaction-diffusion like equation,</p>
+
+<p>$$\frac{\partial V}{\partial t} + \frac{I_{ion} - I_{app}(t)}{C_m}  = \nabla \cdot\left( \mathbf{D}\nabla V \right) $$ 
+$$ \mathrm{in~} \Omega^E\times(0,T] \nonumber$$
+$$(\mathbf{D}\nabla V) \cdot \mathbf{N}=0 \mathrm{~on~} \partial\Omega^E\times(0,T]$$</p>
+
+<p>$V$ is the local transmembrane potential. $C_m$ is the local membrane capacitance per unit area. $I_{ion}$ and $I_{app}$ are the ionic current flux (current per unit area) and applied external current flux, respectively. Here, $\mathbf{D}$ dictates the propagation velocity of the electrical signal and has the similar physical meaning as the diffusivity. It is calculated as</p>
+
+<p>$$
+\mathbf{D} =\frac{\sigma}{\chi C_m}
+$$</p>
+
+<p>$\sigma$ is the conductivity tensor and has the unit $S/m$. $\chi$ is the ratio of membrane area over tissue volume. Then, $\mathbf{D}$ is a tensor with the dimension $Length^2/Time$.</p>
+
+<p>The above equation is the mono-domain description of the cardiac electrophysiology, i.e. we don&rsquo;t solve the intra- and extra-cellular electrical signal propagation separately. The mono-domain and multi-domain conductivities are connected through the following relation,</p>
+
+<p>$$  \sigma = \frac{\sigma_i\sigma_e}{\sigma_i + \sigma_e} $$</p>
+
+<p>where $\sigma_i$ and $\sigma_e$ are the intra- and extra-cellular conductivity tensors <a href="#ref-1">[1]</a>. It is commonly assumed that the conductivity is transversely isotropic,</p>
+
+<p>$$ \mathbf{\sigma} = \sigma_f \mathbf{f}\otimes \mathbf{f} + \sigma_s (\mathbf{I}-\mathbf{f}\otimes \mathbf{f}) $$</p>
+
+<p>where $\sigma_f$ and $\sigma_s$ are the conductivities along the fiber direction and in the transverse plane. $\mathbf{f}$ is the fiber direction vector.</p>
+
+<p>In <strong>svFSI</strong>, we directly specify $\mathbf{D}$ in the input file. We choose a slightly different form to enforce the transverse isotropy of the conductivity tensor,</p>
+
+<p>$$  \mathbf{D} = D_{iso}\mathbf{I} + \sum_{n=1}^{nsd}D_{ani,n}\mathbf{fN}_n\otimes\mathbf{fN}_n $$</p>
+
+<p>Here, $nsd$ is the dimension, and $\mathbf{fN_n}$ is the local orthonormal coordinate system built by fiber direction and sheet direction. To connect with the previous expression, we have $D_f=D_{iso}+D_{ani}$ and $D_s=D_{iso}$.</p>
+
+<h2>Cellular Activation Models</h2>
+
+<p>Depending on how the depolarization and repolarization within a single cardiac myocyte is described, the electrophysiology models can be roughly divided into two categories: biophysics-based ionic models (such as the ten Tusscher-Panfilov (TTP) model<a href="#ref-2">[2]</a><a href="#ref-3">[3]</a>), and phenomenological models (such as the Aliev-Panfilov (AP), Fitzhugh-Nagumo (FN) models<a href="#ref-4">[4]</a>).</p>
+
+<h3>Biophysics-based Ionic Models</h3>
+
+<p>Between cardiac myocytes, the propagation of the electrical signal is enabled by the transmembrane motion of different ions, such as $K^+$, $Na^+$ and $Ca^{2+}$ during depolarization and repolarization of the myocytes. Cellular biophysics-based activation models are designed to capture these ionic movements. One of the popular biophysics-based ionic models, the TTP model <a href="#ref-3">[3]</a> is implemented in <strong>svFSI</strong>. Here, we will briefly illustrate the ionic currents involved in the TTP model.</p>
+
+<p>In the TTP model, the ionic current is expressed as</p>
+
+<p>$$  I_{ion} = I_{Na} + I_{Kl} + I_{to} + I_{Kr} + I_{Ks} + I_{CaL} + I_{NaCa} + I_{NaK} + I_{pCa} + I_{pK} + I_{bCa} + I_{bNa} $$</p>
+
+<p>The governing equations for each current can be found in <a href="#ref-3">[3]</a>.</p>
+
+<p>Since, intracellular calcium concentration is the driving factor behind excitation-contraction coupling, we focus on the calcium dynamics here. In the TTP model,the following calcium concentrations are included:</p>
+
+<ul>
+  <li> $Ca_{itotal}$: total (free+buffered) cytoplasmic $Ca^{2+}$ concentration.</li>
+  <li> $Ca_{SRtotal}$: total SR $Ca^{2+}$ concentration.</li>
+  <li> $Ca_{SStotal}$: total dyadic space $Ca^{2+}$ concentration.</li>
+  <li> $Ca_i$: free cytoplasmic $Ca^{2+}$ concentration.</li>
+  <li> $Ca_{SR}$: free SR $Ca^{2+}$ concentration.</li>
+  <li> $Ca_{SS}$: free dyadic space $Ca^{2+}$ concentration.</li>
+</ul>
+
+<p>Sarcoplasmic reticulum (SR) is a membrane structure within the muscle cell, whose main function is to store $Ca^{2+}$. Dyadic space is the region bounded by the T-tubule and SR. $Ca^{2+}$ ions are considered buffered if they are bound to negatively charged proteins (called buffers). Otherwise they are considered free. The action potential transmitted through the gap junction cause the current myocyte to depolarize. The depolarization opens the L-type (long-lasting) Ca channel located on the surface membrane. A small amount of $Ca^{2+}$ enters the myocyte due to potential, leading to a sharp increase of $Ca^{2+}$ in the dyadic space, which is a small region. This increase triggers the SR to release a large amount of $Ca^{2+}$ (calcium-induced calcium release) to enable the excitation-contraction. During diastole, calcium is removed from the cytoplasm through two ways. Ca is pumped (1) back into the SR and (2) out of the cell, mainly by the sodium-calcium exchange (NCX).</p>
+
+<p>For the TTP model in <strong>svFSI</strong>, the following units have to be used: time in [ms], length [mm], amount of substance [mmol], voltage [mV]. Mass can be in [g].</p>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/simcardio/electrophysiology/images/Calcium.png">
+  <figcaption class="svCaption" >Structures involved in $Ca^{2+}$ cycling<a href="#ref-6">[6]</a>.</figcaption>
+</figure>
+
+<h3>Phenomenological Models</h3>
+
+<p>Phenomenological models are derived based on some observations of the full ion model <a href="#ref-4">[4]</a>. Instead of following the transmembrane ionic currents, they use an oscillation system with a fast ($V$) and a slow ($r$) variable to mimic the behaviors of the action potentials. The oscillators, without considering the diffusion term, are modeled as</p>
+
+<p>$$ \frac{\mathrm{d}V}{\mathrm{d}t}=f^{V}(V,r)  $$
+$$ \frac{\mathrm{d}r}{\mathrm{d}t}=f^{r}(V,r)  $$</p>
+
+<p>Note that this set of equations describes the electrophysiology in a single cardiac myocyte, and the choice of $f^V$ and $f^r$ will determine if this is a pacemaker cell or a non-pacemaker cell.</p>
+
+<p>The FitzHugh-Nagumo (FN) model describes the pacemaker cells with</p>
+
+<p>$$  f^V = c[V(V-\alpha)(1-V)-r] $$
+$$  f^r = V-br+a $$</p>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/simcardio/electrophysiology/images/FN_model.png">
+  <figcaption class="svCaption" >Action potential calculated from FitzHugh-Nagumo model.</figcaption>
+</figure>
+
+<p>The Aliev-Panfilov (AP) model describes the non-pacemaker cells with</p>
+
+<p>$$  f^V = cV(V-\alpha)(1-V)-Vr $$</p>
+
+<p>$$  f^r = \left( \gamma+\frac{\mu_1r}{\mu_2+V}\right)[-r-cV(V-b-1)] $$</p>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/simcardio/electrophysiology/images/AP_model.png">
+  <figcaption class="svCaption" >Action potential calculated from Aliev-Panfilov model.</figcaption>
+</figure>
+
+<p>Note that $V$ and $t$ are non-dimensional values here. The following equations are used to recover the physiological action potential and time:</p>
+
+<p>$$  \mathrm{FitzHugh-Nagumo model}: V^{fhn}=(65V-35)mV; ~~ t^{fhn} = (220t) ms $$</p>
+
+<p>$$  \mathrm{Aliev-Panfilov model}: V^{ap}=(100V-80)mV; ~~ t^{ap} = (12.9t) ms  $$</p>
+
+<p>Another class of phenomenological models exists that include additional variables to account for intra-cellular calcium kinetics. One such model is the Bueno-Orovio (BO) model <a href="#ref-5">[5]</a> that can serve as a trade-off between the complex TTP model and the simplified phenomenological AP model.</p>
+
+<h3>Activation Models Available in svFSI</h3>
+
+<p>The following table provides a summary of all the available electrophysiology models in <strong>svFSI</strong>.</p>
+
+<p><table class="table table-bordered">
+    <caption>Available cardiac electrophysiology models.</caption>
+    <thead>
+    <tr>
+      <th>Electrophysiology Model</th>
+      <th>Input Keyword</th>
+    </tr>
+    </thead>
+    <tr>
+      <td>Aliev-Panfilov model<a href="#ref-4">[4]</td>
+      <td>&ldquo;ap&rdquo;, &ldquo;aliev-panfilov&rdquo;</td>
+    </tr>
+    <tr>
+      <td>Fitzhugh-Nagumo model<a href="#ref-4">[4]</a></td>
+      <td>&ldquo;fn&rdquo;, &ldquo;fitzhugh-nagumo&rdquo;</td>
+    </tr>
+    <tr>
+      <td>Bueno-Orovio-Cherry-Fenton model<a href="#ref-5">[5]</a></td>
+      <td>&ldquo;bo&rdquo;, &ldquo;bueno-orovio&rdquo;</td>
+    </tr>
+    <tr>
+      <td>tenTusscher-Panfilov model<a href="#ref-3">[3]</a></td>
+      <td>&ldquo;ttp&rdquo;, &ldquo;tentusscher-panfilov&rdquo;</td>
+    </tr>
+  </table></p>
+</section>
+<section id="example" class="group"><h2>Examples</h2>
+
+<p>In this section, we will provide two examples of cardiac electrophysiology modeling. The first example is a widely used benchmark test, activation of a block of cardiac tissue <a href="#ref-1">[1]</a>. The second example is the propagation of action potential in the Purkinje fibers. More examples are available on <a href="https://github.com/SimVascular/svFSI-Tests/tree/master/08-cep">GitHub</a>.</p>
+
+<h2>Activation of a Myocardial Block</h2>
+
+<p>The computational domain is a rectangular block, with dimensions of $3\times 7\times 20 mm$. A small cluster of cells located at one corner of the block (marked as S) will recive an initial stimulus, and the TTP model is used to model the activation of the rest of the domain. The entire simulation set-up along with results can be found on <a href="https://github.com/SimVascular/svFSI-Tests/tree/master/08-cep/03-benchmark_tTP">GitHub</a>.</p>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/simcardio/electrophysiology/images/cuboid.png">
+  <figcaption class="svCaption" >Computational domain of example 1.[reference]</figcaption>
+</figure>
+
+<p>Here is the breakdown of the input file for this study.</p>
+
+<pre class="highlight plaintext"><code>
+    # File svFSI.inp
+    #----------------------------------------------------------------
+    # General simulation parameters
+
+    Continue previous simulation: f
+    Number of spatial dimensions: 3
+    Number of time steps: 100000
+    Time step size: 0.01
+    Spectral radius of infinite time step: 0.50
+    Searched file name to trigger stop: STOP_SIM
+    
+    Save results to VTK format: 1
+    Name prefix of saved VTK files: result
+    Increment in saving VTK files: 100
+    Start saving after time step: 1
+    
+    Increment in saving restart files: 100
+    Convert BIN to VTK format: 0
+    
+    Verbose: 1
+    Warning: 1
+    Debug: 0
+    
+    #----------------------------------------------------------------
+    # Mesh data
+    Add mesh: msh {
+       Mesh file path):   mesh/h0.1/mesh-complete.mesh.vtu
+       Add face: X0 {
+          Face file path: mesh/h0.1/mesh-surfaces/X0.vtp
+       }
+       Add face: X1 {
+          Face file path: mesh/h0.1/mesh-surfaces/X1.vtp
+       }
+       Add face: Y0 {
+          Face file path: mesh/h0.1/mesh-surfaces/Y0.vtp
+       }
+       Add face: Y1 {
+          Face file path: mesh/h0.1/mesh-surfaces/Y1.vtp
+       }
+       Add face: Z0 {
+          Face file path: mesh/h0.1/mesh-surfaces/Z0.vtp
+       }
+       Add face: Z1 {
+          Face file path: mesh/h0.1/mesh-surfaces/Z1.vtp
+       }
+    
+       Fiber direction: (1, 0, 0)
+    
+       # Here we also need to supply a domain information to separate
+       # pacemaker cells and non-pacemaker cells. domain_info.dat
+       # is a plaintext file store the domain ID of each element.
+       # id == 1: non-pacemaker cells
+       # id == 2: pacemaker cells (recivies stimulus)
+       Domain file path: mesh/h0.1/domain_info.dat
+    }
+    
+    #----------------------------------------------------------------
+    # Equations
+    Add equation: CEP {
+       Coupled: 1
+       Min iterations: 1
+       Max iterations: 5
+       Tolerance: 1e-6
+    
+       # Here domain id == 1 are non-pacemaker cells
+       Domain: 1 {
+          Electrophysiology model: TTP
+          Conductivity (iso): 0.012571
+          Conductivity (ani): 0.082715
+          ODE solver: RK
+       }
+    
+       # Here domain id == 2 are pacemaker cells
+       Domain: 2 {
+          Electrophysiology model: TTP
+          Conductivity (iso): 0.012571
+          Conductivity (ani): 0.082715
+          # Stimulus to initiate the depolarization process
+          Stimulus: Istim {
+             Amplitude: -35.714
+             Start time: 0.0
+             Duration: 2.0
+             Cycle length: 10000.0
+          }
+          ODE solver: RK
+       }
+    
+       Output: Spatial {
+          Action_potential: t
+       }
+    
+       LS type: GMRES
+       {
+          Max iterations:      100
+          Tolerance:           1D-6
+          Krylov space dimension: 50
+       }
+    }
+</code></pre>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/simcardio/electrophysiology/images/ttp_cuboid.gif">
+  <figcaption class="svCaption" >Activation of the cuboid.</figcaption>
+</figure>
+</section>
+<section id="ref" class="group"><h2>References</h2>
+
+<p><a id="ref-1"> <a href="https://doi.org/10.1098/rsta.2011.0139">
+[1] Niederer, S. A., Kerfoot, E., Benson, A. P., Bernabeu, M. O., Bernus, O., Bradley, C., Cherry, E. M., Clayton, R., Fenton, F. H., Garny, A., Heidenreich, E., Land, S., Maleckar, M., Pathmanathan, P., Plank, G., Rodriguez, J. F., Roy, I., Sachse, F. B., Seemann, G., … Smith, N. P. (2011). <strong>Verification of cardiac tissue electrophysiology simulators using an N-version benchmark.</strong> Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences, 369(1954), 4331–4351.  </a></a></p>
+
+<p><a id="ref-2"> <a href="https://doi.org/10.1152/ajpheart.00794.2003">
+[2] ten Tusscher, K. H. W. J., Noble, D., Noble, P. J., & Panfilov, A. V. (2004). <strong>A model for human ventricular tissue.</strong> American Journal of Physiology-Heart and Circulatory Physiology, 286(4), H1573–H1589.  </a></a></p>
+
+<p><a id="ref-3"> <a href="https://doi.org/10.1152/ajpheart.00109.2006">
+[3] ten Tusscher, K. H. W. J., & Panfilov, A. V. (2006). <strong>Alternans and spiral breakup in a human ventricular tissue model.</strong> American Journal of Physiology-Heart and Circulatory Physiology, 291(3), H1088–H1100.</a></a></p>
+
+<p><a id="ref-4"> <a href="https://doi.org/10.1002/nme.2571">
+[4] Göktepe, S., & Kuhl, E. (2009). <strong>Computational modeling of cardiac electrophysiology: A novel finite element approach.</strong> International Journal for Numerical Methods in Engineering, 79(2), 156–178.</a></a></p>
+
+<p><a id="ref-5"> <a href="https://doi.org/10.1016/j.jtbi.2008.03.029">
+[5] Bueno-Orovio, A., Cherry, E. M., & Fenton, F. H. (2008). <strong>Minimal model for human ventricular action potentials in tissue.</strong> Journal of Theoretical Biology, 253(3), 544–560.</a></a></p>
+
+<p><a id="ref-6"> <a href="https://doi.org/10.1146/annurev.physiol.70.113006.100455">
+[6] Bers, D. M. (2008). <strong>Calcium Cycling and Signaling in Cardiac Myocytes.</strong> Annual Review of Physiology, 70(1), 23–49.</a></a></p>
+
+<p><a id="ref-7">
+[7] Dubin, D., (1996). <strong>Rapid Interpretation of EKG&rsquo;s</strong>. Cover Publishing Company, Tampa, Florida.</a></p>
+
+<p><a id="ref-8"> <a href="http://dx.doi.org/10.1016/j.jbiomech.2015.12.025">
+[8] Sahli Costabal, F., Hurtado, D. E., & Kuhl, E. (2016). <strong>Generating Purkinje networks in the human heart.</strong> Journal of Biomechanics, 49(12), 2455–2465. https://doi.org/10.1016/j.jbiomech.2015.12.025</a></a>
+</p>
+
+<p><br/><br/><br/><br/><br/></p>
+</section>
+</div>
 
 
 

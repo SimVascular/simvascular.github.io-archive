@@ -156,12 +156,11 @@
       
 
         <ul id="sidebar" class="nav nav-stacked fixed mansvFSI-FSI"> <!--Nav Bar -->
-<p><h3>svFSI Tutorial</h3></p>
+<p><h3>Fluid-Structure <br> Interaction</h3></p>
 <li><a href="#intro">Introduction</a></li>
 <li><a href="#wall_mesh">Creating FSI meshes</a></li>
 <li><a href="#svFSI_simulation">Setting up an svFSI <br> simulation</a></li>
 <li><a href="#sim_results">Example simulation results</a></li>
-<li><a href="#app_source_build">Appendix: Building svFSI from source</a></li>
 <li><a href="#app_meshmixer">Appendix: Making wall mesh with <br> Meshmixer</a>
   <ul class="nav nav-stacked">
     <li><a href="#app_fluid_geometry">Creating the fluid geometry</a></li>
@@ -186,6 +185,8 @@
     <div class="col-xs-10 col-sm-10 col-md-9 col-lg-9" id="manualContent">
 
       <!-- ACTUAL CONTENT -->
+
+
 
 
 
@@ -356,206 +357,6 @@
   <img class="svImg svImgMd" src="documentation/svfsi/fsi/imgs/cylinder_displacements.png">
   <figcaption class="svCaption" >Cylinder displacements.</figcaption>
 </figure>
-</section>
-<section id="app_source_build" class="group"><p>In this appendix section, we discuss how to build svFSI from source.</p>
-
-<h2>Building svFSI from source</h2>
-
-<p>The source code for svFSI includes a build system in cmake. To build from source, one needs compilers for c,c++, Fortran, an MPI compiler and runtime, and the lapack and blas libraries. LAPACK and BLAS must be installed in a standard location, which cmake will find automatically. For example, on OSX to install using the package manager brew (see <span>https://brew.sh/</span>) one might run</p>
-<pre class="highlight plaintext"><code>brew install cmake gcc open-mpi lapack 
-</code></pre>
-
-<p>or, on Ubuntu, to install using apt-get run sudo apt-get install to add the following packages:</p>
-<pre class="highlight plaintext"><code>cmake
-cmake-curses-gui
-cmake-gui
-gcc 
-gfortran
-libopenmpi-dev
-libblas-dev
-liblapack-dev
-git
-</code></pre>
-
-<p>We recommend letting cmake find the default compilers for easy of building.</p>
-
-<p>To build the svFSI solver, download the source code from</p>
-<pre class="highlight plaintext"><code>https://github.com/simvascular/svFSI
-</code></pre>
-
-<p>to a directory of your choosing. Make a build directory and go there.</p>
-<pre class="highlight plaintext"><code>mkdir svFSI\_build &amp;&amp; cd svFSI\_build 
-</code></pre>
-
-<p>Initiate the cmake terminal interface to generate makefiles.</p>
-<pre class="highlight plaintext"><code>ccmake ../svFSI 
-</code></pre>
-
-<p>This will automatically search for compilers. Follow instructions if necessary. Push “c” for configure repeatedly until cmake presents the option “g” for generate. Hit “g” to create makefiles and exit. Run make:</p>
-<pre class="highlight plaintext"><code>make 
-</code></pre>
-
-<p>This will place the solver binary, called &ldquo;svFSI&rdquo; in a directory called svFSI_build/svFSI-build/bin. This will also create a script svFSI_build/svFSI-build/mysvfsi. If non-default compilers were passed to cmake, then runtime errors can occur, especially relating to libraries. If this occurs, try using the script, which will set paths appropriately. </p>
-
-<ul>
-<li>Optional Trilinos package</li>
-</ul>
-
-<p>The svFSI solver contains its own linear solver. Optionally, the advanced user may link to the Trilinos package. To accomplish this, the user must build Trilinos using cmake, then provide a path and change a single flag. Before building svFSI, download the Trininos source from github. </p>
-<pre class="highlight plaintext"><code>git clone https://github.com/trilinos/Trilinos.git
-</code></pre>
-
-<p>We recommend compiling the following branch, with which we have tested Trilinos. </p>
-<pre class="highlight plaintext"><code>git checkout remotes/origin/trilinos-release-12-10-branch
-</code></pre>
-
-<p>Make a build directory and go there.</p>
-<pre class="highlight plaintext"><code>mkdir Trilinos\_build &amp;&amp; cd Trilinos\_build 
-</code></pre>
-
-<p>Run the cmake GUI to build Trilinos. </p>
-<pre class="highlight plaintext"><code>ccmake -DCMAKE_BUILD_TYPE=RELEASE \
-      -DCMAKE_INSTALL_PREFIX:PATH=~/Trilinos_build \
-      -DTPL_ENABLE_MPI:BOOL=ON \
-      -DTrilinos_ENABLE_Amesos:BOOL=ON \
-      -DTrilinos_ENABLE_AztecOO:BOOL=ON \
-      -DTrilinos_ENABLE_Epetra:BOOL=ON \
-      -DTrilinos_ENABLE_Ifpack:BOOL=ON \
-      -DTrilinos_ENABLE_ML:Bool=ON \
-      -DTrilinos_ENABLE_MueLu:Bool=ON \
-      -DTrilinos_ENABLE_TESTS:BOOL=OFF \
-      ../Trilinos
-</code></pre>
-
-<p>Note that CMAKE<em>INSTALL</em>PREFIX should point to your build directory. Run make to build the Trilinos source </p>
-<pre class="highlight plaintext"><code>make 
-</code></pre>
-
-<p>Run make install to place header and library files </p>
-<pre class="highlight plaintext"><code>make install 
-</code></pre>
-
-<p>This will create a directories lib/cmake/Trilinos and inside them a file called TrilinosConfig.cmake</p>
-<pre class="highlight plaintext"><code>lib/cmake/Trilinos/TrilinosConfig.cmake
-</code></pre>
-
-<p>If this directory does not exist or is empty, then an error has occurred. </p>
-
-<p>In the svFSI cmake source, change the SV<em>USE</em>TRILINOS option to on. This can be found in svFSI/Code/CMake/SimVascularOptions.cmake. </p>
-<pre class="highlight plaintext"><code>option(SV_USE_TRILINOS "Use Trilinos Library with svFSI" ON)
-</code></pre>
-
-<p>Now, when compiling svFSI, add </p>
-<pre class="highlight plaintext"><code>ccmake -DCMAKE_PREFIX_PATH=~/Trilinos_build/lib/cmake/Trilinos  ../svFSI
-</code></pre>
-
-<p>Run make. </p>
-<pre class="highlight plaintext"><code>make 
-</code></pre>
-
-<p>If Trilinos is found you should see output that says &ldquo;Found Trilinos!&rdquo; and displays the associated variables. The output should look something like this, wherein the ellipsis contain many libraries and packages. </p>
-<pre class="highlight plaintext"><code>Found Trilinos!  Here are the details: 
-   Trilinos_DIR = ~/Trilinos_build/lib/cmake/Trilinos
-   Trilinos_VERSION = 12.10.1
-   Trilinos_PACKAGE_LIST = MueLu;
-   ...
-   Trilinos_INCLUDE_DIRS = /Users/alex/sfw/Trilinos_build/include
-   Trilinos_TPL_LIST = DLlib;LAPACK;BLAS;MPI;Pthread
-   Trilinos_TPL_INCLUDE_DIRS = 
-   Trilinos_TPL_LIBRARIES = /usr/lib/libdl.dylib
-   ...
-   Trilinos_BUILD_SHARED_LIBS = FALSE
-   Trilinos_CXX_COMPILER = /usr/local/bin/mpicxx
-   Trilinos_C_COMPILER = /usr/local/bin/mpicc
-   Trilinos_Fortran_COMPILER = /usr/local/bin/mpif90
-   Trilinos_CXX_COMPILER_FLAGS =  -std=c++11 -O3 -DNDEBUG
-   Trilinos_C_COMPILER_FLAGS =  -O3 -DNDEBUG
-   Trilinos_Fortran_COMPILER_FLAGS =  -O3
-   Trilinos_LINKER = /usr/bin/ld
-   Trilinos_EXTRA_LD_FLAGS = 
-   Trilinos_AR = /usr/bin/ar
-End of Trilinos details
-
-Setting WITH_TRILINOS to true
-</code></pre>
-
-<p>If these are filled in, then cmake has found Trilinos and it will be linked. The Trilinos linear solvers are then available for use. In the linear solver options there are now the following Trilinos options for preconditioners. </p>
-<pre class="highlight plaintext"><code>Trilinos-Diagonal
-Trilinos-BlockJacobi 
-Trilinos-ILU
-Trilinos-ILUT
-Trilinos-IC
-Trilinos-ML
-</code></pre>
-
-<p>This will automatically set the Trilinos linear solvers to be called, rather than the svFSILS linear solvers. The three options are GMRES,BICG,CG. There is currently no option to call Trilinos without a preconditioner. If one wishes to use the simplest possible preconditioning with Trilinos, use Trilinos-Diagonal. </p>
-
-<p>For example, set </p>
-<pre class="highlight plaintext"><code>LS type: GMRES
-{
-  Preconditioner: Trilinos-ILU
-  Tolerance:           1D-3
-  Krylov space dimension: 200
-}
-</code></pre>
-
-<ul>
-<li>Plugin installation</li>
-</ul>
-
-<p>To build the svFSI plugin, download the source code from</p>
-<pre class="highlight plaintext"><code>    https://github.com/SimVascular/SimVascular-Plugin-svFSI
-</code></pre>
-
-<p>to a directory of your choosing. (Note that this repo is currently private, and the plugin is included with SimVascular). The plugin source code should not be in your SimVascular directory tree. Make a build directory and go there.</p>
-<pre class="highlight plaintext"><code>    mkdir SimVascular-Plugin-svFSI_build &amp;&amp; cd SimVascular-Plugin-svFSI_build 
-</code></pre>
-
-<p>Initiate the cmake terminal interface to generate makefiles.</p>
-<pre class="highlight plaintext"><code>    ccmake ../SimVascular-Plugin-svFSI
-</code></pre>
-
-<p>This will automatically search for compilers. Follow instructions if necessary. Push “c” for configure repeatedly until cmake presents the option “g” for generate. Hit “g” to create makefiles and exit. Run make:</p>
-<pre class="highlight plaintext"><code>    make 
-</code></pre>
-
-<p>This will build the plugin. If passed, there should be a directory</p>
-<pre class="highlight plaintext"><code>    SimVascular-Plugin-svFSI/build/lib/plugins
-</code></pre>
-
-<p>Add that directory to the environment variable</p>
-<pre class="highlight plaintext"><code>    SV_PLUGIN_PATH
-</code></pre>
-
-<p>for example</p>
-<pre class="highlight plaintext"><code>    export SV_PLUGIN_PATH=$SV_PLUGIN_PATH:~/SimVascular-Plugin-svFSI_build/lib/plugins
-</code></pre>
-
-<p>That directory should contain a library file, a “.dylib” on mac. It should follow the naming convention</p>
-<pre class="highlight plaintext"><code>    libNAME.extension 
-</code></pre>
-
-<p>For example,</p>
-<pre class="highlight plaintext"><code>    liborg_sv_gui_qt_svfsi.dylib
-</code></pre>
-
-<p>Strip the “lib” prefix and the file extension, then add it to the variable</p>
-<pre class="highlight plaintext"><code>    SV_CUSTOM_PLUGINS 
-</code></pre>
-
-<p>as in</p>
-<pre class="highlight plaintext"><code>    export SV_CUSTOM_PLUGINS=$SV_CUSTOM_PLUGINS:org_sv_gui_qt_svfsi
-</code></pre>
-
-<p>Finally, if running on Linux also set  </p>
-<pre class="highlight plaintext"><code>    LD_LIBRARY_PATH
-</code></pre>
-
-<p>For example, </p>
-<pre class="highlight plaintext"><code>    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/SimVascular-Plugin-svFSI_build/lib/plugins
-</code></pre>
-
-<p>SimVascular will look for these variables in the current environment, and assuming that everything has passed, load the plugin without any additional information. It is a good idea to use the same compilers for anything you build, which cmake will do be default if also building SimVascular from source. These instructions are generic for SimVascular plugin, and work for plugins other that the svFSI plugin.\</p>
 </section>
 <section id="app_meshmixer" class="group"><p>In this appendix section, we discuss an alternative method for producing a wall mesh using the software Meshmixer. For users with highly complex geometrical models with a large number of bifurcations, this method provides a higher degree of flexibility and robustness, at the cost of a higher number of steps and higher complexity.</p>
 
@@ -973,6 +774,7 @@ to 120-procs/.remesh_tmp.dir/lumen_21.vtu.</li>
 </code></pre>
 </section>
 </div>
+
 
 
 
