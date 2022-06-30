@@ -1,4 +1,4 @@
-## Examples - Activation of a Myocardial Block
+## Example - Activation of a Myocardial Block
 
 In this section, we will provide a example of cardiac electrophysiology modeling. This example is a widely used benchmark test, activation of a block of cardiac tissue <a href="#ref-1">[1]</a>. More examples are available on <a href="https://github.com/SimVascular/svFSI-Tests/tree/master/08-cep">GitHub</a>.
 

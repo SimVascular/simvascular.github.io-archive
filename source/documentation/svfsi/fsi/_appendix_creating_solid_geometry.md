@@ -63,7 +63,7 @@ In this step, we will import the fluid geometry into Meshmixer and utilize Meshm
           <img class="svImg svImgMd" src="documentation/svfsi/fsi/imgs/MM_fig_Extrude1.png">
       </figure>
 
-      c. Choose your offset and the offset direction "normal". This will extrude the wall in normal direction by your given offset. The offset will correspond to the thickness of the vessel wall. Typically, the thickness of the vessel wall is determined by the size of the vessels you are modeling. This information can often be found in the literature, but in the absence of such data, setting the thickness to 10\% of the mean vessel diameter is a reasonable first approximation. If you prefer to have a variable thickness along the vessel, simply restrict your selection to the region you want to extrude by a given thickness. If you like the offset, hit "Accept".
+      c. Choose your offset and the offset direction "normal". This will extrude the wall in normal direction by your given offset. The offset will correspond to the thickness of the vessel wall. Typically, the thickness of the vessel wall is determined by the size of the vessels you are modeling. This information can often be found in the literature, but in the absence of such data, setting the thickness to 10% of the mean vessel diameter is a reasonable first approximation. If you prefer to have a variable thickness along the vessel, simply restrict your selection to the region you want to extrude by a given thickness. If you like the offset, hit "Accept".
 
       <figure>
           <img class="svImg svImgSm" src="documentation/svfsi/fsi/imgs/MM_fig_Extrude2.png">
