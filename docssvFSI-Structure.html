@@ -155,28 +155,20 @@
 
       
         <ul id="sidebar" class="nav nav-stacked fixed mansvFSI-Structure"> <!--Nav Bar -->
-<p><h3>Structure</h3></p>
-<li><a href="#intro">Cardiac Mechanics <br> Modeling</a>
+<p><h4>Cardiac Mechanics <br> Modeling using svFSI</h4></p>
+<li><a href="#intro">Introduction</a></li>
+<li><a href="#mesh-gen">Mesh generation</a></li>
+<li><a href="#solver-input">Input file</a></li>
+
+<li><a href="#theory">Theory & Implementation</a>
   <ul class="nav nav-stacked">
-    <li><a href="#solve">Solve Cardiac Mechanics <br> with svFSI</a>
-      <ul class="nav nav-stacked">
-        <li><a href="#obtain-svFSI">Obtain svFSI</a></li>
-        <li><a href="#mesh-gen">Model Construction & <br> Mesh Generation</a></li>
-        <li><a href="#fiber-gen">Fiber Generation</a></li>
-        <li><a href="#solver-input">Input File</a></li>
-        <li><a href="#simulation">Run Simulation</a></li>
-      </ul>
-    </li>
-    <li><a href="#theory">svFSI Structure Solver</a>
-      <ul class="nav nav-stacked">
-        <li><a href="#kinematics">Kinematics</a></li>
-        <li><a href="#struct">STRUCT: displacement- <br> based elastodynamics</a></li>
-        <li><a href="#ustruct">uSTRUCT: mixed formu- <br> lation elastodynamics</a></li>
-        <li><a href="#material-models">Material Models</a></li>
-      </ul>
-    </li>
-    <li><a href="#arefs">References</a></li>
+    <li><a href="#kinematics">Kinematics</a></li>
+    <li><a href="#struct">STRUCT: displacement- <br> based elastodynamics</a></li>
+    <li><a href="#ustruct">uSTRUCT: mixed formu- <br> lation elastodynamics</a></li>
+    <li><a href="#material-models">Material models</a></li>
   </ul>
+</li>
+<li><a href="#refs">References</a></li>
 </li>
 
 </ul>
@@ -202,73 +194,16 @@
 
 
         <div class="mansvFSI-Structure">
-<section id="modeling" class="group"><h1>Cardiac Mechanics Modeling</h1>
+<section id="intro" class="group"><h2>Cardiac Mechanics Modeling using <strong>svFSI</strong></h2>
 
-<p>Human heart is an intrinsic multiphysics system. It&rsquo;s normal function requires synchronization and coupling of cardiac electrophysiology, tissue (myocardium) mechanics, and hemodynamics. Among the three physics, cardiac mechanics plays a central role, as it serves as the bridge between electrophysiology and blood flow. In a physiological setting, the myocardial cells (myocytes) in the heart tissue initiate and propagate an electrical impulse (action potential) that travels through the heart and drives the contraction of the cardiac muscle, which, in turn, propels the blood to sustain whole body circulation.</p>
-
-<p><strong>svFSI</strong> is a new multi-physics finite element solver designed for computational modeling of the whole heart dynamics. As the next generation underlining solver for the <strong>SimVascular</strong> software, <strong>svFSI</strong> is capable of simulating myocardial electrical activity using state-of-the-art cellular activation models, employ nonlinear hyperelastic material models to simulate tissue mechanics and activation coupling strategies, and perform large deformation fluid-structure interaction (FSI) to simulate the dynamics between heart tissue and blood flow. <strong>svFSI</strong> is compatible with several mesh formats and can read a wide range of 2D and 3D element types. The methods employed are widely popular among the scientific community and continue to evolve through research and development. The solver is parallelized using MPI for inter-process communication and was demonstrated to scale efficiently on large supercomputing clusters. ParMETIS is used for partitioning the computational domains. Simulation results are outputted into VTK format that can be easily visualized in the free software <a href="https://www.paraview.org"> Paraview</a>. In this document, we focus on demonstrating <strong>svFSI</strong>&lsquo;s capability of cardiac mechanics modeling.</p>
+<p>Modeling cardiac mechanics is a challenging task as the heart muscle is a complex fibrous structure that is predominantly incompressible <a href="#ref-1">[1]</a>, and undergoes large deformation during a cardiac cycle. <strong>svFSI</strong> is designed specifically to tackles all these challenges. It has a robust implementation of nonlinear FEM for large deformation problems and several advanced fiber-reinforced hyperelastic material models. In the following sections, we will demonstrate <strong>svFSI</strong>&lsquo;s capability in modeling cardiac mechanics using the benchmark example from Land et al. <a href="#ref-2">[2]</a>, i.e., the passive inflation of an idealized left ventricle. The complete example can be downloaded from <a href="https://github.com/SimVascular/svFSI-Tests/tree/master/05-struct/02-LV-Guccione-passive">here</a> and you can find the accompanying YouTube tutorial <a href="https://www.youtube.com/watch?v=Jm3VSi6Aci8&amp;list=PL1CBZ8Wh-xvRnux0eMmbZPbx-C078Qzqu&amp;index=2">here</a>. We will also briefly explain the theory and implementation of nonlinear continuum mechanics in <strong>svFSI</strong>.</p>
 </section>
-<section id="solve" class="subgroup"><h1>Solve Cardiac Mechanics with svFSI</h1>
+<section id="mesh-gen" class="group"><h2>Mesh Generation</h2>
 
-<p>Solving cardiac mechanics is a challenging task as the heart muscle is a complex fibrous structure that is predominantly incompressible <a href="#ref-1">[1]</a>, and undergoes large deformation during a cardiac cycle. In the following sections, we will introduce the workflow of modeling cardiac mechanics in <strong>svFSI</strong> using the benchmark example from Land et al. <a href="#ref-2">[2]</a>, i.e., the passive inflation of an idealized left ventricle.</p>
-</section>
-<section id="obtain-svFSI" class="subgroup"><h2>Obtain svFSI</h2>
+<p>Mesh generation for cardiac mechanics modeling are quite standard and can be achieved following the general guide <a href="http://simvascular.github.io/docssvFSI.html#mesh">here</a>.</p>
 
-<p>The source code of <strong>svFSI</strong> is publicly released through <a href="https://github.com/SimVascular/svFSI">
-GitHub</a>, and many new features are introduced frequently. Users are encouraged to download the most recent version and test it on their problems. <strong>svFSI</strong> is built through a CMake system and a short build guide is provided <a href="https://github.com/SimVascular/svFSI/blob/master/README.md"> here</a>. In addition to the source code, pre-built binary files are also available through <a href="https://simtk.org/frs/?group_id=188#">SimTK</a>. Here users can download <strong>svFSI</strong> binary for Ubuntu or MacOS.</p>
-
-<p>The <strong>svFSI</strong> executable (either built from source or downloaded from SimTK) is not packaged into each SimVascular release, so users have to manually add its path to <strong>SimVascular</strong> GUI. The location is under <code>Window</code> -&gt; <code>Preference</code> -&gt; <code>svFSI Simulation</code>.</p>
-
-<figure>
-  <img class="svImg svImgMd" src="documentation/simcardio/mechanics/images/path_to_binary.png">
-  <figcaption class="svCaption" >Set up path to **svFSI** solver in SimVascular.</figcaption>
-</figure>
-</section>
-<section id="mesh-gen" class="subgroup"><h2>Model Construction &amp; Mesh Generation</h2>
-
-<p><strong>SimVascular</strong> GUI provides a complete pipeline that includes model construction, mesh generation, problem configuration, input file generation, and numerical simulation. Although the model construction and mesh generation have been discussed extensively in other parts of the <strong>SimVascular</strong> user guides, we will go over them briefly in this subsection for the sake of completeness.</p>
-
-<p>First, we create a SV Project called LV_Inflation. In cardiovascular modeling, computational models are usually generated from medical images. However, as we are using an idealized ventricular geometry here, we can directly import the model into the <code>SV Data Manager</code> by right clicking <code>Models</code> and selecting <code>Import Solid Model</code>. The solid model can be a surface mesh stored in either stl or vtp format.</p>
-
-<figure>
-  <img class="svImg svImgMd" src="documentation/simcardio/mechanics/images/import_model.png">
-  <figcaption class="svCaption" >Import solid model for mesh generation.</figcaption>
-</figure>
-
-<p>We could name the new model LV. When asked if you would like to extract faces from the model, click yes and accept the default separation angle (50 degree). Oftentimes, the imported model is not centered in the field of view. One can right click on the model and click <code>Global Reinit</code> to recenter the geometry. Double click the model name to open the <code>SV Modeling</code> window and rename each face corresponding to its physiological interpretation (base - LV basal plane; endo - endocardium; epi - epicardium) and set each of these face types as wall. You may also change the color of each face to distinguish them in the Display window.</p>
-
-<figure>
-  <img class="svImg svImgMd" src="documentation/simcardio/mechanics/images/faces.png">
-  <figcaption class="svCaption" >Extract faces from the imported model.</figcaption>
-</figure>
-
-<p>Next we will generate an unstructured mesh from this idealized LV model. In the <code>SV Data Manager</code>, right click <code>Meshes</code> and select <code>Create Mesh</code>. Accepting the default options will create a mesh object named LV. Double click the mesh object to open the <code>SV Meshing</code> configuration window. The most import parameter here is <code>Global Max Edge Size</code>, which controls the size of the elements. We will set this value to 2.0 and run the mesher. A relatively coarse mesh will be generated. Users can reduce the <code>Global Max Edge Size</code> if a finer mesh is desired. </p>
-
-<figure>
-  <img class="svImg svImgMd" src="documentation/simcardio/mechanics/images/Mesher.png">
-  <figcaption class="svCaption" >Meshing configuration.</figcaption>
-</figure>
-
-<p>To convert the generated mesh to the svFSI-ready format, right click the mesh object, LV, and select <code>Export Mesh Complete</code>.</p>
-
-<figure>
-  <img class="svImg svImgMd" src="documentation/simcardio/mechanics/images/export_mesh.png">
-  <figcaption class="svCaption" >Export the complete mesh.</figcaption>
-</figure>
-
-<p>Open the destination folder to find the mesh files contained in a folder called &amp;ltmesh object name&amp;gt-mesh-complete (LV-mesh-complete in this case). In this folder, the vtu file (mesh-complete.mesh.vtu) contains the volume mesh of the ventricle. The surface (boundary) mesh files could be found in the subfolder mesh-surfaces in vtp format. This set of vtk files defines the computational domain of this problem and can be visualized in Paraview.</p>
-
-<figure>
-  <img class="svImg svImgMd" src="documentation/simcardio/mechanics/images/mesh_folder.png">
-  <figcaption class="svCaption" >Layout of the mesh folder.</figcaption>
-</figure>
-</section>
-<section id="fiber-gen" class="subgroup"><h2>Generation of Fiber Distribution</h2>
-
-<p>The heart wall is a composite of layers (or sheets) of parallel myocytes, which are the predominant fiber types. These fiber and sheet directions enable defining a local orthonormal coordinate system inside the cardiac muscle. This local coordinate system is crucial for using a structurally-based constitutive relation for the cardiac muscle <a href="#ref-9">[9]</a>. For 3D problems, the users are required to prescribe fiber and sheet directions in the computational domain for certain constitutive relations. Users are provided an option to define a constant fiber direction through the following input directives,</p>
-
-<pre class="highlight plaintext"><code>
-# Fiber direction
+<p>On the other hand, the heart wall is a composite of layers (or sheets) of parallel myocytes, which are the predominant fiber types. These fiber and sheet directions enable defining a local orthonormal coordinate system inside the cardiac muscle. This local coordinate system is crucial for using a structurally-based constitutive relation for the cardiac muscle <a href="#ref-9">[9]</a>. For 3D problems, the users are required to prescribe fiber and sheet directions in the computational domain for certain constitutive relations. Users are provided an option to define a constant fiber direction through the following input directives,</p>
+<pre class="highlight plaintext"><code># Fiber direction
 Fiber direction: (1.0, 0.0, 0.0)
 
 # Sheet direction
@@ -276,9 +211,7 @@ Fiber direction: (0.0, 1.0, 0.0)
 </code></pre>
 
 <p><strong>svFSI</strong> also supports specifying distributed fiber and sheet direction generated by rule-based methods <a href="#ref-3">[3]</a> through the following input commands,</p>
-
-<pre class="highlight plaintext"><code>
-# Fiber direction
+<pre class="highlight plaintext"><code># Fiber direction
 Fiber direction file path: fibersLong.vtu
 
 # Sheet direction
@@ -287,12 +220,10 @@ Fiber direction file path: fibersSheet.vtu
 
 <p>In the latter approach, the vtu file should have the local coordinate system stored as a vector with the name &ldquo;FIB_DIR&rdquo; at the centroid of each element. An example is provided <a href="https://github.com/SimVascular/svFSI-Tests/blob/master/06-ustruct/03-LV-Guccione-active/mesh/P1/fibersLong.vtu">here</a>.</p>
 </section>
-<section id="solver-input" class="subgroup"><h2>Input File</h2>
+<section id="solver-input" class="group"><h2>Input File</h2>
 
 <p><strong>svFSI</strong> requires a plain-text input file to specify simulation parameters. An overview of the syntax could be found <a href=https://sites.google.com/site/memt63/tools/MUPFES/mupfes-scripting>here</a>. The <strong>SimVascular</strong> GUI currently supports limited input configurations. To access more advanced functions of <strong>svFSI</strong>, users are recommended to create their own input file by modifying existing <a href="https://github.com/SimVascular/svFSI-Tests">templates</a>. Below is a template of the input file for modeling passive inflation of a left ventricle,</p>
-
-<pre class="highlight plaintext"><code>
-# File svFSI.inp
+<pre class="highlight plaintext"><code># File svFSI.inp
 #----------------------------------------------------------------
 # General simulation parameters
 
@@ -320,15 +251,15 @@ Debug: 0
 # domains and fiber distributions
 
 Add mesh: msh {
-   Mesh file path:    &ltpath to mesh-complete folder&gt/mesh-complete.mesh.vtu
+   Mesh file path:    &lt;path to mesh-complete folder&gt;/mesh-complete.mesh.vtu
    Add face: endo {
-      Face file path: &ltpath to mesh-complete folder&gt/mesh-surfaces/endo.vtp
+      Face file path: &lt;path to mesh-complete folder&gt;/mesh-surfaces/endo.vtp
    }
    Add face: epi {
-      Face file path: &ltpath to mesh-complete folder&gt/mesh-surfaces/epi.vtp
+      Face file path: &lt;path to mesh-complete folder&gt;/mesh-surfaces/epi.vtp
    }
    Add face: base {
-      Face file path: &ltpath to mesh-complete folder&gt/mesh-surfaces/base.vtp
+      Face file path: &lt;path to mesh-complete folder&gt;/mesh-surfaces/base.vtp
    }
    Fiber direction: (1.0, 0.0, 0.0)
    Fiber direction: (0.0, 1.0, 0.0)
@@ -416,7 +347,7 @@ Add equation: ustruct {
    Add BC: endo {
       Type: Neu
       Time dependence: Unsteady
-      Temporal values file path: &ltpath to load.dat file&gt
+      Temporal values file path: &lt;path to load.dat file&gt;
       Ramp function: t
       Follower pressure load: t
    }
@@ -424,29 +355,18 @@ Add equation: ustruct {
 </code></pre>
 
 <p>The applied load on the endocardial surface is provided in a file, load.dat, defining the ramp function. In this file, the first line specifies that there are two data points and the value will change linearly. The second and third line specify the time and the value at that time. Note that for a ramp function, the code expects data at two time points only. Should the simulation go beyond the last time stamp (t=1.0 in the current example), a constant value equal to the last extrema (1.0e4) will be applied.</p>
-
-<pre class="highlight plaintext"><code>
-2    1
+<pre class="highlight plaintext"><code>2    1
 0.0  0.0
 1.0  1.0e4
 # content of load.dat
 </code></pre>
 </section>
-<section id="simulation" class="subgroup"><h2>Run Simulation</h2>
 
-<p>Though we can run the simulation through the GUI. It currently does not support some advanced features. Hence, we will use the aforementioned input file to directly run the simulation in terminals. The MPI run can be initiated through the following command
-<pre class="highlight plaintext"><code>
-mpiexec -np {number of MPI processes}  {path to svFSI executable}  {path to the input file}
-</code></pre></p>
-
-<p><strong>Please remember to change the path to mesh folder and path to the load.dat in the input file according to your local configuration.</strong>  <strong>svFSI</strong>  will create a results directory called n-procs, where n is the number of MPI processes for the simulation. This directory will have vtu files that contain all the requested output fields and a log file called histor.dat.</p>
-</section>
-
-<section id="theory" class="subgroup"><h1>svFSI Nonlinear Mechanics Solver</h1>
+<section id="theory" class="group"><h2>Theory and Implementation</h2>
 
 <p>This section briefly explains the theory and implementation of the nonlinear solid dynamics solver in <strong>svFSI</strong>. Two types of formulations are provided in <strong>svFSI</strong> for modeling solid mechanics: STRUCT and uSTRUCT. STRUCT uses a pure displacement-based formulation of the balance laws (mass and momentum conservation principles), while uSTRUCT uses a mixed (velocity-pressure) formulation of the governing equations. The latter approach uses either a stabilized equal-order discretization for velocity and pressure function spaces, or the inf-sup-conforming Taylor-Hood-type finite element discretization.</p>
 </section>
-<section id="kinematics" class="subgroup"><h2>Kinematics</h2>
+<section id="kinematics" class="subgroup"><h3>Kinematics</h3>
 
 <p>During a cardiac cycle, the heart undergoes large deformations which can no longer be described by linear elasticity. Since the domain is continuously deforming, we introduce the concepts of a reference configuration (denoted $\Omega_{0}$) and a current configuration (denoted $\Omega_{t}$). The reference configuration is fixed for all times, and often refers to the initial geometry when $t=0$. We will use the vector $\mathbf{X}$ to denote the physical coordinates of the geometry in the reference configuration, and define the following relation:</p>
 
@@ -460,7 +380,7 @@ mpiexec -np {number of MPI processes}  {path to svFSI executable}  {path to the 
 
 <p>where $\ddot{\mathbf{u}}$ refers to the structural acceleration and the time derivative operator, $d^{2} / d t^{2}$, is applied on the reference configuration. $\mathbf{F}$ denotes the deformation gradient tensor and $J$ is the the determinant of $\mathbf{F}$ tensor that denotes the Jacobian of the transformation. $\mathbf{C}$ is the Cauchy-Green deformation tensor while $\mathbf{E}$ is the Green-Lagrange strain tensor.</p>
 </section>
-<section id="struct" class="subgroup"><h2>STRUCT: displacement-based nonlinear elastodynamics</h2>
+<section id="struct" class="subgroup"><h3>STRUCT: displacement-based nonlinear elastodynamics</h3>
 
 <p>The STRUCT equation solves equations for nonlinear structural dynamics using finite element formulation. We start with the function spaces and weak form. We require that the trial and weighting functions satisfy their respective properties on the current domain. The strong form of the momentum balance is</p>
 
@@ -487,7 +407,7 @@ $$ \mathbf{S_{iso}}^{nHK} = \mu J^{-2/3} \left(\mathbf{I} - \frac{1}{3} \operato
 
 <p>where $\mathbf{I}$ is the identity matrix. For the Neo-Hookean and other hyperelastic constitutive models, the $\mathbf{S}$ tensor is computed as $\mathbf{S} = \mathbf{S_{iso}} + \mathbf{S_{vol}}$, where $\mathbf{S_{vol}} = p J \mathbf{C}^{-1}$, and $p$ is the hydrostatic pressure computed based on the chosen dilational strain-energy function. See the section on <a href="#material-model">Material models</a> and the corresponding references for the available dilational penalty models in <strong>svFSI</strong> .</p>
 </section>
-<section id="ustruct" class="subgroup"><h2>uSTRUCT: mixed formulation nonlinear elastodynamics</h2>
+<section id="ustruct" class="subgroup"><h3>uSTRUCT: mixed formulation nonlinear elastodynamics</h3>
 
 <p><strong>svFSI</strong> allows solving nonlinear elastodynamics using a mixed formulation where the structure&rsquo;s velocity and pressure are the unknown degrees of freedom <a href="#ref-4">[4]</a>. Two variants are available within this feature: (a) first, a novel variational multiscale stabilized (VMS) formulation that allows equal-order interpolation of velocity and pressure bases using a unified framework <a href="#ref-4">[4]</a>; (b) second, using the classical inf-sup stable Taylor-Hood type elements where the velocity basis is derived from a function space that is one order higher relative to the pressure basis. In the displacement-based formulation, a hyperelastic material model assumes the existence of a Helmholtz free energy potential. However, uSTRUCT postulates hyperelasticity using Gibbs free energy potential <a href="#ref-4">[4]</a> and takes the following additive decoupled form as,
 $$
@@ -537,7 +457,7 @@ $$</p>
 
 <p>where, $\Delta x^e$ is the diameter of the circumscribing sphere of the tetrahedral element, $c_m$ and $c_c$ are two non-dimensional parameters, and $c$ is the maximum wave speed in the solid body. For compressible materials, $c$ is the bulk wave speed. Assuming isotropic small-strain linear elastic material, the bulk wave speed can be approximated as, $c=\sqrt{ \left( \lambda+2\mu \right) / \rho_0}$, where $\lambda$ and $\mu$ are the Lame&rsquo;s parameters. For incompressible materials, $c = \sqrt{\frac{\mu}{\rho_0}}$ is the shear wave speed. Further details about the formulation, finite element discretization and time integration could be found in Liu et al. <a href="#ref-4">[4]</a>.</p>
 </section>
-<section id="material-models" class="subgroup"><h2>Material Models</h2>
+<section id="material-models" class="subgroup"><h3>Material models</h3>
 
 <p>Below is the list of available material constitutive models in <strong>svFSI</strong> :</p>
 
@@ -603,7 +523,7 @@ $$</p>
 
 <p>$^\dagger$ These models are not available for ustruct.</p>
 </section>
-<section id="refs" class="subgroup"><h1>References</h1>
+<section id="refs" class="subgroup"><h2>References</h2>
 
 <p><a id="ref-1"> <a href="https://www.wiley.com/en-us/Nonlinear+Solid+Mechanics%3A+A+Continuum+Approach+for+Engineering-p-9780471823193">
 [1] Holzapfel, G. A. (2002). <strong>Nonlinear solid mechanics: a continuum approach for engineering science</strong>. Wiley. </a></a></p>

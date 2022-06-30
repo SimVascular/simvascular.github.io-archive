@@ -154,10 +154,23 @@
 
 
         <ul id="sidebar" class="nav nav-stacked fixed mansvFSI-Fluid"> <!--Nav Bar -->
-<p><h3>Fluid</h3></p>
+<p><h4>Hemodynamics <br> Modeling <br> using svFSI</h4></p>
 <li><a href="#intro">Introduction</a></li>
-<li><a href="#theory">Theory</a></li>
-<li><a href="#input">Input file format</a></li>
+
+<li><a href="#nn">Non-Newtonian flow</a>
+  <ul class="nav nav-stacked">
+    <li><a href="#nn_theory">Viscosity models</a></li>
+    <li><a href="#nn_input">Input file</a></li>
+  </ul>
+</li>
+
+<li><a href="#pres">Prescribed wall motion</a>
+  <ul class="nav nav-stacked">
+    <li><a href="#pres_wall">Wall motion</a></li>
+    <li><a href="#pres_input">Input file</a></li>
+  </ul>
+</li>
+
 <li><a href="#ref">Reference</a></li>
 </ul>
       
@@ -181,13 +194,18 @@
 
 
 
-        <div class="mansvFSI-Fluid"><section id="intro" class="group"><h2>Introduction</h2>
+        <div class="mansvFSI-Fluid"><section id="intro" class="group"><h2>Hemodynamics Modeling using <strong>svFSI</strong></h2>
 
-<p>Modeling of cardiovascular flow is the main function of <strong>SimVascular</strong>. Currently, the default flow solver of <strong>SimVasculr</strong> is <a href="https://simvascular.github.io/archiveFlowSolverSV2.html"><strong>svSolver</strong></a>. All of the features in <strong>svSolver</strong> exists in <strong>svFSI</strong> including RCR boundary condition, Coupled Momentum Method, GenBC etc. Also, we have carefully tested the new solver to make sure it produce the same results as <strong>svSolver</strong>. In this section, we won&rsquo;t dwell on the similarities between these two solvers, and instead will focus two new features in flow simulation in <strong>svFSI</strong>, i.e., non-Newtonian flow model and simulation of prescribed motion.</p>
+<p>Modeling of cardiovascular flow is the main function of <strong>SimVascular</strong>. Currently, the default flow solver of <strong>SimVasculr</strong> is <a href="https://simvascular.github.io/archiveFlowSolverSV2.html"><strong>svSolver</strong></a>. All of the features in <strong>svSolver</strong> exists in <strong>svFSI</strong> including RCR boundary condition, Coupled Momentum Method, GenBC etc. Also, we have carefully tested the new solver to make sure it produce the same results as <strong>svSolver</strong>. In this section, we won&rsquo;t dwell on the similarities between these two solvers, and instead will focus two new features in flow simulation using <strong>svFSI</strong>, i.e., non-Newtonian flow model and simulation of prescribed motion.</p>
 </section>
-<section id="theory" class="group"><h2>Non-Newtonian flow</h2>
 
-<p>Currently, <strong>svFSI</strong> supports three viscosity models: Newtonian, Carreau-Yasuda and Casson <a href="#ref-1">[1]</a>.</p>
+<section id="nn" class="group"><h2>Non-Newtonian flow</h2>
+
+<p>Blood is a complex mixture that consists of plasma, blood cells and platelets. The blood viscosity is a complicated subject. It is strongly dependent on several factors such as temperature, hematocrit and, especially, the shear rate. From experimental studies, it is determined that the blood behaves like Newtonian flow at high shear rate ($&gt;100 s^{-1}$). In most large arteries such as aorta, coronary arteries, the shear rate is well above this number and blood can be treated as a Newtonian fluid, that is the viscosity is a constant. On the other hand, when the shear rate is below this threshold, blood presents strong shear thinning behavior, i.e. the viscosity decreases with increasing shear rate. Many viscosity models have been proposed to represent this non-Newtonian behavior <a href="#ref-1">[1]</a>.</p>
+</section>
+<section id="nn_theory" class="subgroup"><h3>Viscosity models</h3>
+
+<p>Currently, <strong>svFSI</strong> supports three viscosity models: Newtonian, Carreau-Yasuda and Casson <a href="#ref-2">[2]</a>.</p>
 
 <figure>
   <img class="svImg svImgSm" src="documentation/svfsi/fluid/imgs/non-newtonian.png" style="width:70%">
@@ -214,9 +232,9 @@
 
 <p>Here, $k_0 ( c )$ and $k_1 ( c )$ are functions of the hematocrit $c$. </p>
 </section>
-<section id="input" class="group"><h2>Input file format</h2>
+<section id="nn_input" class="subgroup"><h3>Input file</h3>
 
-<p>The input file <code>svFSI.inp</code> follows the master input file <a href="./svFSI_master.inp"><code>svFSI_master.inp</code></a> as a template. Some specific input options are discussed below:</p>
+<p>The input file mostly follows the master input file <a href="./svFSI_master.inp"><code>svFSI_master.inp</code></a>. Some specific input options are discussed below:</p>
 
 <p>For Newtonian fluid:</p>
 <pre class="highlight plaintext"><code>   Viscosity: Constant {
@@ -242,10 +260,177 @@
    }
 </code></pre>
 </section>
+
+<section id="pres" class="group"><h2>Simulations with prescribed wall motion</h2>
+
+<p>In this section, we discuss how to set up a simulation with prescribed wall motion. For example, one may wish to extract the motion of the walls of the ventricle from CT/MR scans, and reconstruct the flow fields by solving the Navier-Stokes equations. This is accomplished by computing the displacement trajectory of the endocardial surface and prescribed it as the boundary condition. This must be done offline by the user for their specific problem. This is typically done for a small subset of the total times, and displacements between the specified times are prescribed by using a piece-wise linear interpolant. Some researchers refer to this method as the one-way coupled fluid-structure interaction modeling. But since only fluid equation is solved here, we categorize it as flow simulation. </p>
+</section>
+<section id="pres_wall" class="subgroup"><h3>Wall motion</h3>
+
+<p>There are many established pipelines to obtain the wall motion from CT/MR scans<a href="#ref-3">[3-5]</a>. Here, we would recommend using the <a href="http://simvascular.github.io/docsSimCardio.html#automatic-cardiac-modeling">cardiac geometric modeling tool</a> developed in the <strong>SimCardio</strong> project.</p>
+
+<p>For the wall motion file, the file format is as follows. First, specify the dimension of the problem (three), the number of times at which to specify the displacements, and the number of vertices in the moving wall mesh. Then specify the times at which the displacements occur. Next, for each vertex, specify its index and then the prescribed displacements for each time. Note that in the case of multiple moving faces, these numbers may not start at one for any given face, as indexing is global. If a vertex is on an edge between two faces, it should have the same index and displacement fields, specified redundantly in both files.</p>
+<pre class="highlight plaintext"><code>Dimension n_times m_vertices
+t_1
+t_2
+...
+t_n
+vertex_1_index
+displacement_1_vertex_1
+displacement_2_vertex_1
+...
+displacement_n_vertex_1
+vertex_2_index 
+displacement_1_vertex_2
+displacement_2_vertex_2
+...
+displacement_n_vertex_2
+... 
+</code></pre>
+
+<p>For example,</p>
+<pre class="highlight plaintext"><code>3   21   14907
+0.000000
+3.800E-2
+7.600E-2
+1.140E-1
+1.520E-1
+1.900E-1
+2.280E-1
+2.660E-1
+3.040E-1
+3.419E-1
+3.800E-1
+4.180E-1
+4.560E-1
+4.940E-1
+5.320E-1
+5.699E-1
+6.080E-1
+6.460E-1
+6.839E-1
+7.220E-1
+7.600E-1
+1
+0.000000   0.000000   0.000000   
+2.800E-1   -8.99E-2   -1.00E-2   
+8.799E-1   -2.09E-1   -8.10E-1   
+1.339999   -1.59E-1   -1.43000   
+1.509999   7.000E-2   -1.59000   
+1.310000   3.100E-1   -1.52000   
+1.069999   5.100E-1   -1.41000   
+1.009999   6.000E-1   -1.28000   
+9.699E-1   3.600E-1   -1.10000   
+1.049999   -1.09E-1   -8.80E-1   
+1.169999   -6.69E-1   -7.60E-1   
+1.169999   -1.17999   -7.90E-1   
+1.129999   -1.31999   -9.69E-1   
+1.049999   -1.25999   -1.34000   
+1.000000   -9.39E-1   -1.64000   
+9.899E-1   -4.29E-1   -1.96000   
+1.000000   3.000E-2   -2.15000   
+9.299E-1   3.600E-1   -1.90000   
+6.599E-1   4.200E-1   -1.14000   
+1.999E-1   1.500E-1   -3.50E-1   
+0.000000   0.000000   0.000000   
+2
+0.000000   0.000000   0.000000   
+2.700E-1   -8.99E-2   0.000000   
+8.500E-1   -1.99E-1   -6.80E-1   
+1.280000   -1.59E-1   -1.16999   
+1.430000   5.000E-2   -1.28000   
+1.230000   2.599E-1   -1.19999   
+1.010000   4.499E-1   -1.09000   
+9.500E-1   5.099E-1   -9.69E-1   
+9.100E-1   2.400E-1   -8.19E-1   
+1.000000   -2.59E-1   -6.70E-1   
+1.120000   -8.29E-1   -5.69E-1   
+1.130000   -1.31999   -5.89E-1   
+1.090000   -1.44999   -7.50E-1   
+1.000000   -1.36000   -1.06999   
+9.400E-1   -1.00999   -1.31000   
+9.300E-1   -4.69E-1   -1.56999   
+9.500E-1   0.000000   -1.72999   
+8.900E-1   3.299E-1   -1.53999   
+6.200E-1   3.999E-1   -9.39E-1   
+1.900E-1   1.399E-1   -2.90E-1   
+0.000000   0.000000   0.000000  
+... 
+</code></pre>
+
+<p>Note that in this example, we wish the mesh motion to be periodic in time, and thus the final displacement is zero.</p>
+</section>
+<section id="pres_input" class="subgroup"><h3>Input file</h3>
+
+<p>To set up the input file, set the equation to be FSI to allow the mesh to move under the ALE framework, even though there is not necessarily a structure. For the moving wall, add the motion file when specifying the wall boundary condition, and turn on the option “Impose on state variable integral”.</p>
+<pre class="highlight plaintext"><code>    Add BC: moving_wall {
+        Type: Dirichlet 
+        Time dependence: General
+        Temporal and spatial values file path: wall_motion.dat
+        Profile: Flat
+        Zero out perimeter: 1
+        Impose flux: 0
+        #---------------- Add this line to the moving boundary face -----------
+        Impose on state variable integral: 1
+    }
+</code></pre>
+
+<p>It is recommended to include remeshing if the wall motion is such that the domain undergoes large changes. For example, set</p>
+<pre class="highlight plaintext"><code>    Remesher: Tetgen {
+        Max edge size: lumen { val: 3.0 }
+        Min dihedral angle: 10.0
+        Max radius ratio: 1.1
+        Remesh frequency: 100
+        Frequency for copying data: 1  
+    }
+</code></pre>
+
+<p>The max edge size should be consistent with the original mesh size.</p>
+
+<p>Under the mesh equation, we similarly add the motion file.</p>
+<pre class="highlight plaintext"><code>    Add equation: mesh {
+        Coupled: 1
+        Min iterations: 1
+        Max iterations: 8
+        Tolerance: 1e-3
+        Residual dB reduction: -20
+        Poisson ratio: 0
+        Output: Spatial {
+            Displacement: t
+        }
+
+        #---------- Add the BC for the moving_wall to the mesh equation as well ------
+        Add BC: moving_wall {
+            Type: Dirichlet 
+            Time dependence: General
+            Temporal and spatial values file path: wall_motion.dat
+            Profile: Flat
+            Zero out perimeter: 1
+            Impose flux: 0
+            #---------------- Add this line to the moving boundary face -----------
+            Impose on state variable integral: 1
+    }
+</code></pre>
+
+<p>Follow this <a href="http://simvascular.github.io/docssvFSI.html#app_restart_after_remesh">instruction</a> if you need to restart your simulation after stoppage.</p>
+</section>
+
 <section id="ref" class="group"><h2>Reference</h2>
 
-<p><a id="ref-1"> <a href="https://doi.org/10.1063/1.2772250">
-[1] Boyd, Joshua, James M. Buick, and Simon Green. <strong>Analysis of the Casson and Carreau-Yasuda Non-Newtonian Blood Models in Steady and Oscillatory Flows Using the Lattice Boltzmann Method</strong> Physics of Fluids 19, no. 9 (September 2007): 093103..  </a></a></p>
+<p><a id="ref-1">
+[1] Chandran KB, Rittgers SE, Yoganathan AP. <strong>Biofluid mechanics: the human circulation.</strong> CRC press; 2006 Nov 15.  </a></a></p>
+
+<p><a id="ref-2"> <a href="https://doi.org/10.1063/1.2772250">
+[2] Boyd, Joshua, James M. Buick, and Simon Green. <strong>Analysis of the Casson and Carreau-Yasuda Non-Newtonian Blood Models in Steady and Oscillatory Flows Using the Lattice Boltzmann Method</strong>. Physics of Fluids 19, no. 9 (September 2007): 093103.  </a></a></p>
+
+<p><a id="ref-3"> 
+[3] Vedula V, Lee J, Xu H, Kuo CC, Hsiai TK, Marsden AL.<strong> A method to quantify mechanobiologic forces during zebrafish cardiac development using 4-D light sheet imaging and computational modeling.</strong> PLoS computational biology. 2017 Oct 30;13(10):e1005828.</a></a></p>
+
+<p><a id="ref-4"> 
+[4] Mittal R, Seo JH, Vedula V, Choi YJ, Liu H, Huang HH, Jain S, Younes L, Abraham T, George RT. <strong>Computational modeling of cardiac hemodynamics: current status and future outlook.</strong> Journal of Computational Physics. 2016 Jan 15;305:1065-82.  </a></a></p>
+
+<p><a id="ref-5"> <a href="https://doi.org/10.1115/1.4048032">
+[5] Kong, F., and Shadden, S. C. (2020). **Automating Model Generation for Image-based Cardiac Flow Simulation**. ASME. J Biomech Eng. </a> </p>
 
 <p><br><br><br><br><br></p>
 </section>

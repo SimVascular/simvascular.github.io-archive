@@ -157,9 +157,14 @@
 
 
         <ul id="sidebar" class="nav nav-stacked fixed mansvFSI-CEP"> <!--Nav Bar -->
-<p><h3>Electrophysiology</h3></p>
+<p><h4>Electrophysiology <br> Modeling using svFSI</h4></p>
 <li><a href="#intro">Introduction</a></li>
-<li><a href="#theory">Theory</a></li>
+<li><a href="#theory">Theory & Implementation</a>
+    <ul class="nav nav-stacked">
+        <li><a href="#propagation">Propagation model</a></li>
+        <li><a href="#activation">Cellular activation <br> models</a></li>
+    </ul>
+</li>
 <li><a href="#example">Example</a></li>
 <li><a href="#ref">Reference</a></li>
 </ul>
@@ -184,11 +189,14 @@
 
 
 
-        <div class="mansvFSI-CEP"><section id="intro" class="group"><h2>Introduction</h2>
+        <div class="mansvFSI-CEP"><section id="intro" class="group"><h2>Cardiac Electrophysiology Simulation using <strong>svFSI</strong></h2>
 
 <p>The electrical activity in a heart is initiated at the sinoatrial node, which is located at the right atrium of the heart. A small cluster of pacemaker cells periodically emits electrical signals into the heart’s conduction system. These signals first travel at a high speed through a network of special cells that allows the signals to reach the whole heart rapidly. Finally, they travel into the ventricular muscles, and cause the entire heart to contract almost simultaneously. The electrical signals travel between cells through a process called depolarization, during which voltage-sensitive protein channels on the cell membrane open to allow positively charged ions to move in and out of the cell, leading to ionic currents.</p>
 </section>
+
 <section id="theory" class="group"><h2>Mathematical Model of Cardiac Electrophysiology</h2>
+</section>
+<section id="propagation" class="subgroup"><h3>Propagation model</h3>
 
 <p>The propagation of electrical signal in the heart is governed by a reaction-diffusion like equation,</p>
 
@@ -219,12 +227,14 @@ $$</p>
 <p>$$  \mathbf{D} = D_{iso}\mathbf{I} + \sum_{n=1}^{nsd}D_{ani,n}\mathbf{fN}_n\otimes\mathbf{fN}_n $$</p>
 
 <p>Here, $nsd$ is the dimension, and $\mathbf{fN_n}$ is the local orthonormal coordinate system built by fiber direction and sheet direction. To connect with the previous expression, we have $D_f=D_{iso}+D_{ani}$ and $D_s=D_{iso}$.</p>
-
-<h2>Cellular Activation Models</h2>
+</section>
+<section id="activation" class="subgroup"><h3>Cellular activation models</h3>
 
 <p>Depending on how the depolarization and repolarization within a single cardiac myocyte is described, the electrophysiology models can be roughly divided into two categories: biophysics-based ionic models (such as the ten Tusscher-Panfilov (TTP) model<a href="#ref-2">[2]</a><a href="#ref-3">[3]</a>), and phenomenological models (such as the Aliev-Panfilov (AP), Fitzhugh-Nagumo (FN) models<a href="#ref-4">[4]</a>).</p>
 
-<h3>Biophysics-based Ionic Models</h3>
+<p><br/></p>
+
+<h4>Biophysics-based ionic models</h4>
 
 <p>Between cardiac myocytes, the propagation of the electrical signal is enabled by the transmembrane motion of different ions, such as $K^+$, $Na^+$ and $Ca^{2+}$ during depolarization and repolarization of the myocytes. Cellular biophysics-based activation models are designed to capture these ionic movements. One of the popular biophysics-based ionic models, the TTP model <a href="#ref-3">[3]</a> is implemented in <strong>svFSI</strong>. Here, we will briefly illustrate the ionic currents involved in the TTP model.</p>
 
@@ -250,11 +260,13 @@ $$</p>
 <p>For the TTP model in <strong>svFSI</strong>, the following units have to be used: time in [ms], length [mm], amount of substance [mmol], voltage [mV]. Mass can be in [g].</p>
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/simcardio/electrophysiology/images/Calcium.png">
+  <img class="svImg svImgMd" src="documentation/svfsi/cep/imgs/Calcium.png">
   <figcaption class="svCaption" >Structures involved in $Ca^{2+}$ cycling<a href="#ref-6">[6]</a>.</figcaption>
 </figure>
 
-<h3>Phenomenological Models</h3>
+<p><br/></p>
+
+<h4>Phenomenological models</h4>
 
 <p>Phenomenological models are derived based on some observations of the full ion model <a href="#ref-4">[4]</a>. Instead of following the transmembrane ionic currents, they use an oscillation system with a fast ($V$) and a slow ($r$) variable to mimic the behaviors of the action potentials. The oscillators, without considering the diffusion term, are modeled as</p>
 
@@ -269,7 +281,7 @@ $$ \frac{\mathrm{d}r}{\mathrm{d}t}=f^{r}(V,r)  $$</p>
 $$  f^r = V-br+a $$</p>
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/simcardio/electrophysiology/images/FN_model.png">
+  <img class="svImg svImgMd" src="documentation/svfsi/cep/imgs/FN_model.png">
   <figcaption class="svCaption" >Action potential calculated from FitzHugh-Nagumo model.</figcaption>
 </figure>
 
@@ -280,7 +292,7 @@ $$  f^r = V-br+a $$</p>
 <p>$$  f^r = \left( \gamma+\frac{\mu_1r}{\mu_2+V}\right)[-r-cV(V-b-1)] $$</p>
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/simcardio/electrophysiology/images/AP_model.png">
+  <img class="svImg svImgMd" src="documentation/svfsi/cep/imgs/AP_model.png">
   <figcaption class="svCaption" >Action potential calculated from Aliev-Panfilov model.</figcaption>
 </figure>
 
@@ -292,7 +304,9 @@ $$  f^r = V-br+a $$</p>
 
 <p>Another class of phenomenological models exists that include additional variables to account for intra-cellular calcium kinetics. One such model is the Bueno-Orovio (BO) model <a href="#ref-5">[5]</a> that can serve as a trade-off between the complex TTP model and the simplified phenomenological AP model.</p>
 
-<h3>Activation Models Available in svFSI</h3>
+<p><br/></p>
+
+<h4>Activation models available in svFSI</h4>
 
 <p>The following table provides a summary of all the available electrophysiology models in <strong>svFSI</strong>.</p>
 
@@ -322,124 +336,121 @@ $$  f^r = V-br+a $$</p>
     </tr>
   </table></p>
 </section>
-<section id="example" class="group"><h2>Examples</h2>
 
-<p>In this section, we will provide two examples of cardiac electrophysiology modeling. The first example is a widely used benchmark test, activation of a block of cardiac tissue <a href="#ref-1">[1]</a>. The second example is the propagation of action potential in the Purkinje fibers. More examples are available on <a href="https://github.com/SimVascular/svFSI-Tests/tree/master/08-cep">GitHub</a>.</p>
+<section id="example" class="group"><h2>Example - Activation of a Myocardial Block</h2>
 
-<h2>Activation of a Myocardial Block</h2>
+<p>In this section, we will provide a example of cardiac electrophysiology modeling. This example is a widely used benchmark test, activation of a block of cardiac tissue <a href="#ref-1">[1]</a>. More examples are available on <a href="https://github.com/SimVascular/svFSI-Tests/tree/master/08-cep">GitHub</a>.</p>
 
 <p>The computational domain is a rectangular block, with dimensions of $3\times 7\times 20 mm$. A small cluster of cells located at one corner of the block (marked as S) will recive an initial stimulus, and the TTP model is used to model the activation of the rest of the domain. The entire simulation set-up along with results can be found on <a href="https://github.com/SimVascular/svFSI-Tests/tree/master/08-cep/03-benchmark_tTP">GitHub</a>.</p>
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/simcardio/electrophysiology/images/cuboid.png">
+  <img class="svImg svImgMd" src="documentation/svfsi/cep/imgs/cuboid.png">
   <figcaption class="svCaption" >Computational domain of example 1.[reference]</figcaption>
 </figure>
 
 <p>Here is the breakdown of the input file for this study.</p>
+<pre class="highlight plaintext"><code># File svFSI.inp
+#----------------------------------------------------------------
+# General simulation parameters
 
-<pre class="highlight plaintext"><code>
-    # File svFSI.inp
-    #----------------------------------------------------------------
-    # General simulation parameters
+Continue previous simulation: f
+Number of spatial dimensions: 3
+Number of time steps: 100000
+Time step size: 0.01
+Spectral radius of infinite time step: 0.50
+Searched file name to trigger stop: STOP_SIM
 
-    Continue previous simulation: f
-    Number of spatial dimensions: 3
-    Number of time steps: 100000
-    Time step size: 0.01
-    Spectral radius of infinite time step: 0.50
-    Searched file name to trigger stop: STOP_SIM
-    
-    Save results to VTK format: 1
-    Name prefix of saved VTK files: result
-    Increment in saving VTK files: 100
-    Start saving after time step: 1
-    
-    Increment in saving restart files: 100
-    Convert BIN to VTK format: 0
-    
-    Verbose: 1
-    Warning: 1
-    Debug: 0
-    
-    #----------------------------------------------------------------
-    # Mesh data
-    Add mesh: msh {
-       Mesh file path):   mesh/h0.1/mesh-complete.mesh.vtu
-       Add face: X0 {
-          Face file path: mesh/h0.1/mesh-surfaces/X0.vtp
-       }
-       Add face: X1 {
-          Face file path: mesh/h0.1/mesh-surfaces/X1.vtp
-       }
-       Add face: Y0 {
-          Face file path: mesh/h0.1/mesh-surfaces/Y0.vtp
-       }
-       Add face: Y1 {
-          Face file path: mesh/h0.1/mesh-surfaces/Y1.vtp
-       }
-       Add face: Z0 {
-          Face file path: mesh/h0.1/mesh-surfaces/Z0.vtp
-       }
-       Add face: Z1 {
-          Face file path: mesh/h0.1/mesh-surfaces/Z1.vtp
-       }
-    
-       Fiber direction: (1, 0, 0)
-    
-       # Here we also need to supply a domain information to separate
-       # pacemaker cells and non-pacemaker cells. domain_info.dat
-       # is a plaintext file store the domain ID of each element.
-       # id == 1: non-pacemaker cells
-       # id == 2: pacemaker cells (recivies stimulus)
-       Domain file path: mesh/h0.1/domain_info.dat
-    }
-    
-    #----------------------------------------------------------------
-    # Equations
-    Add equation: CEP {
-       Coupled: 1
-       Min iterations: 1
-       Max iterations: 5
-       Tolerance: 1e-6
-    
-       # Here domain id == 1 are non-pacemaker cells
-       Domain: 1 {
-          Electrophysiology model: TTP
-          Conductivity (iso): 0.012571
-          Conductivity (ani): 0.082715
-          ODE solver: RK
-       }
-    
-       # Here domain id == 2 are pacemaker cells
-       Domain: 2 {
-          Electrophysiology model: TTP
-          Conductivity (iso): 0.012571
-          Conductivity (ani): 0.082715
-          # Stimulus to initiate the depolarization process
-          Stimulus: Istim {
-             Amplitude: -35.714
-             Start time: 0.0
-             Duration: 2.0
-             Cycle length: 10000.0
-          }
-          ODE solver: RK
-       }
-    
-       Output: Spatial {
-          Action_potential: t
-       }
-    
-       LS type: GMRES
-       {
-          Max iterations:      100
-          Tolerance:           1D-6
-          Krylov space dimension: 50
-       }
-    }
+Save results to VTK format: 1
+Name prefix of saved VTK files: result
+Increment in saving VTK files: 100
+Start saving after time step: 1
+
+Increment in saving restart files: 100
+Convert BIN to VTK format: 0
+
+Verbose: 1
+Warning: 1
+Debug: 0
+
+#----------------------------------------------------------------
+# Mesh data
+Add mesh: msh {
+   Mesh file path):   mesh/h0.1/mesh-complete.mesh.vtu
+   Add face: X0 {
+      Face file path: mesh/h0.1/mesh-surfaces/X0.vtp
+   }
+   Add face: X1 {
+      Face file path: mesh/h0.1/mesh-surfaces/X1.vtp
+   }
+   Add face: Y0 {
+      Face file path: mesh/h0.1/mesh-surfaces/Y0.vtp
+   }
+   Add face: Y1 {
+      Face file path: mesh/h0.1/mesh-surfaces/Y1.vtp
+   }
+   Add face: Z0 {
+      Face file path: mesh/h0.1/mesh-surfaces/Z0.vtp
+   }
+   Add face: Z1 {
+      Face file path: mesh/h0.1/mesh-surfaces/Z1.vtp
+   }
+
+   Fiber direction: (1, 0, 0)
+
+   # Here we also need to supply a domain information to separate
+   # pacemaker cells and non-pacemaker cells. domain_info.dat
+   # is a plaintext file store the domain ID of each element.
+   # id == 1: non-pacemaker cells
+   # id == 2: pacemaker cells (recivies stimulus)
+   Domain file path: mesh/h0.1/domain_info.dat
+}
+
+#----------------------------------------------------------------
+# Equations
+Add equation: CEP {
+   Coupled: 1
+   Min iterations: 1
+   Max iterations: 5
+   Tolerance: 1e-6
+
+   # Here domain id == 1 are non-pacemaker cells
+   Domain: 1 {
+      Electrophysiology model: TTP
+      Conductivity (iso): 0.012571
+      Conductivity (ani): 0.082715
+      ODE solver: RK
+   }
+
+   # Here domain id == 2 are pacemaker cells
+   Domain: 2 {
+      Electrophysiology model: TTP
+      Conductivity (iso): 0.012571
+      Conductivity (ani): 0.082715
+      # Stimulus to initiate the depolarization process
+      Stimulus: Istim {
+         Amplitude: -35.714
+         Start time: 0.0
+         Duration: 2.0
+         Cycle length: 10000.0
+      }
+      ODE solver: RK
+   }
+
+   Output: Spatial {
+      Action_potential: t
+   }
+
+   LS type: GMRES
+   {
+      Max iterations:      100
+      Tolerance:           1D-6
+      Krylov space dimension: 50
+   }
+}
 </code></pre>
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/simcardio/electrophysiology/images/ttp_cuboid.gif">
+  <img class="svImg svImgMd" src="documentation/svfsi/cep/imgs/ttp_cuboid.gif">
   <figcaption class="svCaption" >Activation of the cuboid.</figcaption>
 </figure>
 </section>
@@ -462,13 +473,6 @@ $$  f^r = V-br+a $$</p>
 
 <p><a id="ref-6"> <a href="https://doi.org/10.1146/annurev.physiol.70.113006.100455">
 [6] Bers, D. M. (2008). <strong>Calcium Cycling and Signaling in Cardiac Myocytes.</strong> Annual Review of Physiology, 70(1), 23–49.</a></a></p>
-
-<p><a id="ref-7">
-[7] Dubin, D., (1996). <strong>Rapid Interpretation of EKG&rsquo;s</strong>. Cover Publishing Company, Tampa, Florida.</a></p>
-
-<p><a id="ref-8"> <a href="http://dx.doi.org/10.1016/j.jbiomech.2015.12.025">
-[8] Sahli Costabal, F., Hurtado, D. E., & Kuhl, E. (2016). <strong>Generating Purkinje networks in the human heart.</strong> Journal of Biomechanics, 49(12), 2455–2465. https://doi.org/10.1016/j.jbiomech.2015.12.025</a></a>
-</p>
 
 <p><br/><br/><br/><br/><br/></p>
 </section>
