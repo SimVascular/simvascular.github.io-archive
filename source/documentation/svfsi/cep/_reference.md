@@ -18,12 +18,5 @@
 <p><a id="ref-6"> <a href="https://doi.org/10.1146/annurev.physiol.70.113006.100455">
 [6] Bers, D. M. (2008). <strong>Calcium Cycling and Signaling in Cardiac Myocytes.</strong> Annual Review of Physiology, 70(1), 23–49.</a></a></p>
 
-<p><a id="ref-7">
-[7] Dubin, D., (1996). <strong>Rapid Interpretation of EKG's</strong>. Cover Publishing Company, Tampa, Florida.</a></p>
-
-<p><a id="ref-8"> <a href="http://dx.doi.org/10.1016/j.jbiomech.2015.12.025">
-[8] Sahli Costabal, F., Hurtado, D. E., & Kuhl, E. (2016). <strong>Generating Purkinje networks in the human heart.</strong> Journal of Biomechanics, 49(12), 2455–2465. https://doi.org/10.1016/j.jbiomech.2015.12.025</a></a>
-</p>
-
 <p><br/><br/><br/><br/><br/></p>
 
