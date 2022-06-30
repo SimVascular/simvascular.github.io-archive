@@ -55,3 +55,5 @@ Under the mesh equation, we similarly add the motion file.
             Impose on state variable integral: 1
     }
 ```
+
+Follow this [instruction](http://simvascular.github.io/docssvFSI.html#app_restart_after_remesh) if you need to restart your simulation after stoppage.

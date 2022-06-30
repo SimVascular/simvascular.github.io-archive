@@ -1,4 +1,4 @@
-##Overview / Introduction
+## Fluid-Structure Interaction Modeling using **svFSI**
 
 <figure>
   <img class="svImg svImgMd" src="documentation/svfsi/fsi/imgs/Picture1.png">

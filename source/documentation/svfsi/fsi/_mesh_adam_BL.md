@@ -1,4 +1,4 @@
-##Creating the mesh for ALE simulations
+## Creating the mesh for ALE simulations
 
 To run an FSI simulation we need a mesh for both the structural domain and the fluid domain. These two meshes must have their interface nodes coincide exactly in order to satisfy the interfacial conditions that result from conservation of mass and momentum. The coincident nodes of the fluid mesh are mapped onto the corresponding nodes on the structural mesh and the solution of velocity, displacement, pressure, etc. are treated as equal in the structural and fluid domains.
 

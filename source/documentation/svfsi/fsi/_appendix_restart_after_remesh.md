@@ -1,6 +1,6 @@
-##Restarting a simulation after re-meshing
+## Appendix: Restarting a simulation after re-meshing
 
-If a simulation is to be restarted after re-meshing has occurred, the new mesh must be added to the input file. SVFSI will create a directory called n-procs, where n is the number of MPI tasks for the simulation, and we will refer to this as the run directory.
+If a simulation is to be restarted after re-meshing has occurred, the new mesh must be added to the input file. svFSI will create a directory called n-procs, where n is the number of MPI tasks for the simulation, and we will refer to this as the run directory.
 
 1.  In the run directory, find the stFile\_n.bin. Make a symbolic link:
 
@@ -28,3 +28,6 @@ If a simulation is to be restarted after re-meshing has occurred, the new mesh m
     4.  Update the final time if desired.
 
 4.  Run the simulation again.
+
+<p><br/><br/><br/><br/><br/></p>
+

@@ -1,4 +1,4 @@
-##Example simulation results
+## Example simulation results
 
 In this section, we show some example simulation results using the provided cylinder model. We will simply inflate the cylinder using a ramp for the pressure with a resistance outlet. Because the velocities and pressures in the domain are usually initialized to zero, it can be a good idea to slowly ramp up the pressure to avoid any sudden jump conditions that could produce oscillations. We apply a resistance boundary condition at the outlet to ensure a physiologic amount of flow. Below shows the inlet pressure vs. time, showing that we will ramp up slowly from 0 pressure to 80 mmHg over the course of a second.
 
