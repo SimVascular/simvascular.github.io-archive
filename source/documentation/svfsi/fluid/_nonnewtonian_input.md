@@ -1,5 +1,5 @@
-## Input file format
-The input file `svFSI.inp` follows the master input file [`svFSI_master.inp`](./svFSI_master.inp) as a template. Some specific input options are discussed below:
+### Input file format
+The input file mostly follows the master input file [`svFSI_master.inp`](./svFSI_master.inp). Some specific input options are discussed below:
 
 For Newtonian fluid:
 

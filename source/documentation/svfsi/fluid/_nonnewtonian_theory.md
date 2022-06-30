@@ -1,6 +1,6 @@
-## Non-Newtonian flow
+### Viscosity models
 
-Currently, **svFSI** supports three viscosity models: Newtonian, Carreau-Yasuda and Casson <a href="#ref-1">[1]</a>.
+Currently, **svFSI** supports three viscosity models: Newtonian, Carreau-Yasuda and Casson <a href="#ref-2">[2]</a>.
 
 <figure>
   <img class="svImg svImgSm" src="documentation/svfsi/fluid/imgs/non-newtonian.png" style="width:70%">
