@@ -1,13 +1,16 @@
 ##Input file format
 
-**svFSI** uses plain-text input file. This input file will defined the physics solved, mesh, linear solver, bounary conditions and general simulation parameters. 
+**svFSI** uses plain-text input file. This input file will define the physics solved, mesh, linear solver, boundary conditions and general simulation parameters. 
 
-Structurally, all input files are composed of three parts
-1. General simulaiton parameters, such as time step size, format of results, location of results etc.
-2. Mesh information, such as volumetric mesh, surface mesh, scaling factor etc
-3. Equations. In this part, users will define the physics solved (fluid, strucutre, electrophysiology etc.), boundary conditions, linear solver etc.
+Structurally, all input files are composed of three parts: 
 
-Here, we use the input file for a 2D channel flow *(add line)* as an exmaple to demonstrate the structure of the input files.
+1. General simulation parameters, such as time step size, format of results, location of results etc.
+
+2. Mesh information, such as volumetric mesh, surface mesh, scaling factor etc.
+
+3. Equations. In this part, users will define the physics solved (fluid, structure, electrophysiology etc.), boundary conditions, linear solver etc.
+
+Here, we use the input file for [the 3D pipe flow with RCR boundary condition](https://github.com/SimVascular/svFSI-Tests/blob/master/04-fluid/01-pipe3D_RCR/svFSI.inp) as an example to demonstrate the structure of the input files.
 
 ```
 #----------------------------------------------------------------
@@ -93,10 +96,6 @@ Add equation: fluid {
    Add BC: lumen_outlet {
       Type: Neu
 
-      ## Resistance BC
-      #Time dependence: Resistance #RCR
-      #Value: 1225
-
       ## RCR BC
       Time dependence: RCR
       RCR values: (121.0, 1.5D-4, 1212.0)
@@ -111,5 +110,5 @@ Add equation: fluid {
 }
 ```
 
-A comprehensive input template is provided [here]_(link to input), which contains all the available parameters and their meanings. It might seem very daunting to generate your own input file from scratch, and it is not recommended to do so. We maintain a large collection of examples for all the major functionalities of **svFSI**, which you can use to generate your own input file.
+A comprehensive input template is provided [here](https://github.com/SimVascular/svFSI-Tests/blob/master/svFSI_master.inp), which contains all the available parameters and their meanings. It might seem very daunting to generate your own input file from scratch, and it is not recommended to do so. We maintain a large collection of [examples](https://github.com/SimVascular/svFSI-Tests) for all the major functionalities of **svFSI**, which you can use to generate your own input file.
 
