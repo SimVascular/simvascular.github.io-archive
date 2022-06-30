@@ -1,4 +1,4 @@
-# References #
+## References
 
 <a id="ref-1"> <a href="https://www.wiley.com/en-us/Nonlinear+Solid+Mechanics%3A+A+Continuum+Approach+for+Engineering-p-9780471823193">
 [1] Holzapfel, G. A. (2002). **Nonlinear solid mechanics: a continuum approach for engineering science**. Wiley. </a></a>
