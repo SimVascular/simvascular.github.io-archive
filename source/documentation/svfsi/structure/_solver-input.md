@@ -2,7 +2,7 @@
 
 **svFSI** requires a plain-text input file to specify simulation parameters. An overview of the syntax could be found <a href=https://sites.google.com/site/memt63/tools/MUPFES/mupfes-scripting>here</a>. The **SimVascular** GUI currently supports limited input configurations. To access more advanced functions of **svFSI**, users are recommended to create their own input file by modifying existing <a href="https://github.com/SimVascular/svFSI-Tests">templates</a>. Below is a template of the input file for modeling passive inflation of a left ventricle,
 
-<pre class="highlight plaintext"><code>
+```
 # File svFSI.inp
 #----------------------------------------------------------------
 # General simulation parameters
@@ -31,15 +31,15 @@ Debug: 0
 # domains and fiber distributions
 
 Add mesh: msh {
-   Mesh file path:    &ltpath to mesh-complete folder&gt/mesh-complete.mesh.vtu
+   Mesh file path:    <path to mesh-complete folder>/mesh-complete.mesh.vtu
    Add face: endo {
-      Face file path: &ltpath to mesh-complete folder&gt/mesh-surfaces/endo.vtp
+      Face file path: <path to mesh-complete folder>/mesh-surfaces/endo.vtp
    }
    Add face: epi {
-      Face file path: &ltpath to mesh-complete folder&gt/mesh-surfaces/epi.vtp
+      Face file path: <path to mesh-complete folder>/mesh-surfaces/epi.vtp
    }
    Add face: base {
-      Face file path: &ltpath to mesh-complete folder&gt/mesh-surfaces/base.vtp
+      Face file path: <path to mesh-complete folder>/mesh-surfaces/base.vtp
    }
    Fiber direction: (1.0, 0.0, 0.0)
    Fiber direction: (0.0, 1.0, 0.0)
@@ -127,19 +127,19 @@ Add equation: ustruct {
    Add BC: endo {
       Type: Neu
       Time dependence: Unsteady
-      Temporal values file path: &ltpath to load.dat file&gt
+      Temporal values file path: <path to load.dat file>
       Ramp function: t
       Follower pressure load: t
    }
 }
-</code></pre>
+```
 
 The applied load on the endocardial surface is provided in a file, load.dat, defining the ramp function. In this file, the first line specifies that there are two data points and the value will change linearly. The second and third line specify the time and the value at that time. Note that for a ramp function, the code expects data at two time points only. Should the simulation go beyond the last time stamp (t=1.0 in the current example), a constant value equal to the last extrema (1.0e4) will be applied.
 
-<pre class="highlight plaintext"><code>
+```
 2    1
 0.0  0.0
 1.0  1.0e4
 # content of load.dat
-</code></pre>
+```
 

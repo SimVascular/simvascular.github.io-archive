@@ -1,4 +1,4 @@
-## STRUCT: displacement-based nonlinear elastodynamics ##
+### STRUCT: displacement-based nonlinear elastodynamics
 
 
 The STRUCT equation solves equations for nonlinear structural dynamics using finite element formulation. We start with the function spaces and weak form. We require that the trial and weighting functions satisfy their respective properties on the current domain. The strong form of the momentum balance is

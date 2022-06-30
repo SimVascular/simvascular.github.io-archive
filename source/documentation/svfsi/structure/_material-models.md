@@ -1,4 +1,4 @@
-## Material Models ##
+### Material models
 
 Below is the list of available material constitutive models in **svFSI** :
 

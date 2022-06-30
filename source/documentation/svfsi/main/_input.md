@@ -1,6 +1,6 @@
 ##Input file format
 
-**svFSI** uses plain-text input file. This input file will define the physics solved, mesh, linear solver, boundary conditions and general simulation parameters. 
+**svFSI** uses plain-text input file. This input file will define the physics solved, mesh, linear solver, boundary conditions and general simulation parameters. An overview of the syntax could be found <a href=https://sites.google.com/site/memt63/tools/MUPFES/mupfes-scripting>here</a>. A comprehensive input template is provided [here](https://github.com/SimVascular/svFSI-Tests/blob/master/svFSI_master.inp), which contains all the available parameters and their meanings. The **SimVascular** GUI currently supports limited input configurations. To access more advanced functions of **svFSI**, users are recommended to create their own input file by modifying existing <a href="https://github.com/SimVascular/svFSI-Tests">templates</a>.
 
 Structurally, all input files are composed of three parts: 
 
@@ -109,6 +109,3 @@ Add equation: fluid {
    }
 }
 ```
-
-A comprehensive input template is provided [here](https://github.com/SimVascular/svFSI-Tests/blob/master/svFSI_master.inp), which contains all the available parameters and their meanings. It might seem very daunting to generate your own input file from scratch, and it is not recommended to do so. We maintain a large collection of [examples](https://github.com/SimVascular/svFSI-Tests) for all the major functionalities of **svFSI**, which you can use to generate your own input file.
-

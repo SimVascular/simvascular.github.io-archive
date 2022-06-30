@@ -1,4 +1,4 @@
-## Kinematics ##
+### Kinematics
 
 During a cardiac cycle, the heart undergoes large deformations which can no longer be described by linear elasticity. Since the domain is continuously deforming, we introduce the concepts of a reference configuration (denoted $\Omega\_{0}$) and a current configuration (denoted $\Omega\_{t}$). The reference configuration is fixed for all times, and often refers to the initial geometry when $t=0$. We will use the vector $\mathbf{X}$ to denote the physical coordinates of the geometry in the reference configuration, and define the following relation:
 

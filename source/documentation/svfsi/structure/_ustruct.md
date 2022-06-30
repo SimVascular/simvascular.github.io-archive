@@ -1,4 +1,4 @@
-## uSTRUCT: mixed formulation nonlinear elastodynamics ##
+### uSTRUCT: mixed formulation nonlinear elastodynamics
 
 **svFSI** allows solving nonlinear elastodynamics using a mixed formulation where the structure's velocity and pressure are the unknown degrees of freedom <a href="#ref-4">[4]</a>. Two variants are available within this feature: (a) first, a novel variational multiscale stabilized (VMS) formulation that allows equal-order interpolation of velocity and pressure bases using a unified framework <a href="#ref-4">[4]</a>; (b) second, using the classical inf-sup stable Taylor-Hood type elements where the velocity basis is derived from a function space that is one order higher relative to the pressure basis. In the displacement-based formulation, a hyperelastic material model assumes the existence of a Helmholtz free energy potential. However, uSTRUCT postulates hyperelasticity using Gibbs free energy potential <a href="#ref-4">[4]</a> and takes the following additive decoupled form as,
 $$
