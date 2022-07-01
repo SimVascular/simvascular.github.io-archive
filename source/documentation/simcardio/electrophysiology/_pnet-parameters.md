@@ -1,4 +1,4 @@
-## Network Control Parameters ##
+## Network Control Parameters
 
 The Purkinje network is generated using a Python script. The inputs to the script include a triangular surface, the network starting point, a second point defining the direction of the first network branch, and the parameters used to control the shape, density and spread of the network <a href="#ref-2">[2]</a>. These parameters are described below:
 

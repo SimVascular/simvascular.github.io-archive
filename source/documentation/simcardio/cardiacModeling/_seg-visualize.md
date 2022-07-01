@@ -1,4 +1,4 @@
-## Visualizing Segmentation Results ##
+### Visualizing Segmentation Results
 
 Segmentation results can be visualized using SimVascular by first creating a SimVascular project. The segmentation results <b>.vti</b> file 
 is then added as an image by right-clicking <strong>Images</strong> under the <b>SV Data Manager</b> and selecting the 

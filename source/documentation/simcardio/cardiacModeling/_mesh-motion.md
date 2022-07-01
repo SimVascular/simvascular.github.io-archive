@@ -1,4 +1,4 @@
-## Mesh Motion 
+### Mesh Motion 
 
 Once meshes have been registered the displacement of each mesh vertex over the whole cardiac cycle can be computed. 
 The series of registered meshes are interpolated using cubic splines to obtain mesh displacements with a temporal resolution 

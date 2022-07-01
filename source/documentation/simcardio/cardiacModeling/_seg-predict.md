@@ -1,6 +1,6 @@
-## Segmenting Image Data ##
+### Segmenting Image Data
 
-###Segmenting using the SimVascular Python shell
+#### Segmenting using the SimVascular Python shell
 
 3D CT or MR image volumes can be segmented within the SimVascular
 <a href='http://simvascular.github.io/docsPythonInterface.html#python_shell'> Python Shell </a> using the
@@ -27,7 +27,7 @@ prediction.py </a> Python script. For example
 </code></pre>
 
 
-###Segmenting using the SimVascular GUI Python Console
+#### Segmenting using the SimVascular GUI Python Console
 
 Image segmentation can also be performed from within the SimVascular GUI
 <a href='http://simvascular.github.io/docsPythonInterface.html#console'> Python console </a>.
