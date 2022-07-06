@@ -18,7 +18,3 @@ If you have any questions or suggestions, please feel free to contact us through
 - Seek support, suggest new features or report bugs, please contact us through [GitHub Issues](https://github.com/SimVascular/svFSI/issues) or [SimTK forum](https://simtk.org/plugins/phpBB/indexPhpbb.php?f=188).
 - Contribute your code to **svFSI**, please submit a pull request through GitHub.
 - Share your novel applications of **svFSI** with the community, please consider contribute your case to [svFSI-Tests](https://github.com/SimVascular/svFSI-Tests).
-
-<p><br/><br/><br/><br/><br/></p>
-
-
