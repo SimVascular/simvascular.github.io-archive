@@ -25,7 +25,23 @@ title: SimVascular Docs
       <% end %>
 
       <% if man_name == "svFSI" %>
-        <ul id="sidebar" class="nav nav-stacked fixed mansvFSI"> <%= partial "documentation/fsi_tutorial_TOC" %></ul>
+        <ul id="sidebar" class="nav nav-stacked fixed mansvFSI"> <%= partial "documentation/svfsi_TOC" %></ul>
+      <% end %>
+
+      <% if man_name == "svFSI-Fluid" %>
+        <ul id="sidebar" class="nav nav-stacked fixed mansvFSI-Fluid"> <%= partial "documentation/svfsi/fluid_TOC" %></ul>
+      <% end %>
+      
+      <% if man_name == "svFSI-Structure" %>
+        <ul id="sidebar" class="nav nav-stacked fixed mansvFSI-Structure"> <%= partial "documentation/svfsi/structure_TOC" %></ul>
+      <% end %>
+
+      <% if man_name == "svFSI-FSI" %>
+        <ul id="sidebar" class="nav nav-stacked fixed mansvFSI-FSI"> <%= partial "documentation/svfsi/fsi_TOC" %></ul>
+      <% end %>
+
+      <% if man_name == "svFSI-CEP" %>
+        <ul id="sidebar" class="nav nav-stacked fixed mansvFSI-CEP"> <%= partial "documentation/svfsi/cep_TOC" %></ul>
       <% end %>
 
       <% if man_name == "SimCardio" %>
@@ -72,7 +88,23 @@ title: SimVascular Docs
       <% end %>
 
       <% if man_name == "svFSI" %>
-        <div class="mansvFSI"><%= partial "documentation/fsi_tutorial_content" %></div>
+        <div class="mansvFSI"><%= partial "documentation/svfsi_content" %></div>
+      <% end %>
+
+      <% if man_name == "svFSI-Fluid" %>
+        <div class="mansvFSI-Fluid"><%= partial "documentation/svfsi/fluid_content" %></div>
+      <% end %>
+
+      <% if man_name == "svFSI-Structure" %>
+        <div class="mansvFSI-Structure"><%= partial "documentation/svfsi/structure_content" %></div>
+      <% end %>
+
+      <% if man_name == "svFSI-FSI" %>
+        <div class="mansvFSI-FSI"><%= partial "documentation/svfsi/fsi_content" %></div>
+      <% end %>
+
+      <% if man_name == "svFSI-CEP" %>
+        <div class="mansvFSI-CEP"><%= partial "documentation/svfsi/cep_content" %></div>
       <% end %>
 
       <% if man_name == "SimCardio" %>

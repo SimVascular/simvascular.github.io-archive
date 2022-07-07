@@ -1,0 +1,3 @@
+## Theory and Implementation
+
+This section briefly explains the theory and implementation of the nonlinear solid dynamics solver in **svFSI**. Two types of formulations are provided in **svFSI** for modeling solid mechanics: STRUCT and uSTRUCT. STRUCT uses a pure displacement-based formulation of the balance laws (mass and momentum conservation principles), while uSTRUCT uses a mixed (velocity-pressure) formulation of the governing equations. The latter approach uses either a stabilized equal-order discretization for velocity and pressure function spaces, or the inf-sup-conforming Taylor-Hood-type finite element discretization.
