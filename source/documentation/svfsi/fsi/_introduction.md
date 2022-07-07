@@ -1,7 +1,7 @@
 ## Fluid-Structure Interaction Modeling using **svFSI**
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/svfsi/fsi/imgs/Picture1.png">
+  <img class="svImg svImgMd" src="documentation/svfsi/fsi/imgs/Picture1.png" style="width:100%;height:auto;max-width: 30vw;">
   <figcaption class="svCaption" >Fluid and structure mesh are first created separately, and then used in svFSI to perform Fluid-Structure-Interaction simulations with Arbitrary Lagrangian–Eulerian (ALE) coordinates.</figcaption>
 </figure>
 
