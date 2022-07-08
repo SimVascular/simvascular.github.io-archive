@@ -156,17 +156,17 @@
 <p><h3>svFSI Guide</h3></p>
 <li><a href="#intro">Introduction</a></li>
 <li><a href="#feature">Main features</a></li>
+<li><a href="#input">Input file format</a></li>
+<li><a href="#mesh">Mesh format</a></li>
+<li><a href="#run">Run simulaiton</a></li>
+<li><a href="#resource">Resources</a></li>
 <li><a href="#install">Installation</a>
   <ul class="nav nav-stacked">
     <li><a href="#installer">Precompiled installer</a></li>
     <li><a href="#container">Docker container</a></li>
     <li><a href="#source">Build from source</a></li>
   </ul>
-</li>
-<li><a href="#input">Input file format</a></li>
-<li><a href="#mesh">Mesh format</a></li>
-<li><a href="#run">Run simulaiton</a></li>
-<li><a href="#resource">Resources</a></li></ul>
+</li></ul>
 
       
 
@@ -190,11 +190,9 @@
 
         <div class="mansvFSI"><section id="intro" class="group"><h2><strong>svFSI</strong> Guide</h2>
 
-<p>Human heart is an intrinsic multiphysics system. It&rsquo;s normal function requires synchronization and coupling of cardiac electrophysiology, tissue (myocardium) mechanics, and hemodynamics. Among the three physics, cardiac mechanics plays a central role, as it serves as the bridge between electrophysiology and blood flow. In a physiological setting, the myocardial cells (myocytes) in the heart tissue initiate and propagate an electrical impulse (action potential) that travels through the heart and drives the contraction of the cardiac muscle, which, in turn, propels the blood to sustain whole body circulation.</p>
+<p><strong>svFSI</strong> is an open-source multi-physics finite element solver. It provides rich features for general computational studies of diffusion, heat transfer, incompressible viscous fluid, nonlinear elastodynamics, fluid-structure interaction and electrophysiology. It also specializes in computational modeling of the whole heart dynamics. As part of the <a href="http://simvascular.github.io/docsSimCardio.html"><strong>SimCardio</strong></a> project, <strong>svFSI</strong> is capable of simulating myocardial electrical activity using state-of-the-art cellular activation models, employing nonlinear hyperelastic material models to simulate tissue mechanics and activation coupling strategies, and performing large deformation fluid-structure interaction to simulate the dynamics between the heart tissue and blood flow. <strong>svFSI</strong> could also be used to perform blood flow simulations by imposing the ventricular wall motion extracted from medical image data.</p>
 
-<p><strong>svFSI</strong> is an open-source multi-physics finite element solver designed for computational modeling of the whole heart dynamics. As part of the <a href="http://simvascular.github.io/docsSimCardio.html"><strong>SimCardio</strong></a> project, <strong>svFSI</strong> is capable of simulating myocardial electrical activity using state-of-the-art cellular activation models, employing nonlinear hyperelastic material models to simulate tissue mechanics and activation coupling strategies, and performing large deformation fluid-structure interaction (FSI) to simulate the dynamics between the heart tissue and blood flow. <strong>svFSI</strong> could also be used to perform blood flow simulations by imposing the ventricular wall motion extracted from medical image data.</p>
-
-<p><strong>svFSI</strong> is compatible with several mesh formats and can read a wide range of 2D and 3D element types. <strong>svFSI</strong> could be coupled to <a href="https://trilinos.github.io/index.html">Trilinos</a> linear solver library providing a wide choice of linear solvers and preconditioners for various applications. The methods employed are widely popular among the scientific community and continue to evolve through research and development. The solver is parallelized using MPI for inter-process communication and was demonstrated to scale efficiently on large supercomputing clusters. ParMETIS is used for partitioning the computational domains. Simulation results are outputted into VTK format that can be easily visualized in the free software <a href="https://www.paraview.org"> Paraview</a>.</p>
+<p><strong>svFSI</strong> is compatible with several mesh formats and can read a wide range of 2D and 3D element types. <strong>svFSI</strong> could be coupled to <a href="https://trilinos.github.io/index.html">Trilinos</a> linear solver library providing a wide choice of linear solvers and preconditioners for various applications. The methods employed are widely popular among the scientific community and continue to evolve through research and development. The solver is parallelized using MPI for inter-process communication and was demonstrated to scale efficiently on large supercomputing clusters. ParMETIS is used for partitioning the computational domains. Simulation results are outputted into VTK format that can be easily visualized in the free software <a href="https://www.paraview.org"> Paraview</a>. Details on how to be obtain and use <strong>svFSI</strong> is documented below.</p>
 </section>
 <section id="feature" class="group"><h2>Main features</h2>
 
@@ -248,6 +246,209 @@
 </tbody>
 </table>
 </section>
+<section id="input" class="group"><h2>Input file format</h2>
+
+<p><strong>svFSI</strong> uses plain-text input file. This input file will define the physics solved, mesh, linear solver, boundary conditions and general simulation parameters. An overview of the syntax could be found <a href=https://sites.google.com/site/memt63/tools/MUPFES/mupfes-scripting>here</a>. The input file for svFSI is a scripting code that sets values to specific parameters. A colon &ldquo;:&rdquo; is used as a separator between the keyword or key phrase and its value. If the parameters being set are single-valued constants, you may use a <strong>single line structure</strong> as,</p>
+<pre class="highlight plaintext"><code>&lt;keyword or key phrase&gt;: 1.3
+</code></pre>
+
+<p>First part, which is the part before &ldquo;:&rdquo;, is the keyword or key phrase to the parameter, and the second part, which is the part after &ldquo;:&rdquo;, is the value. This kind of single line structures can occur in any order in the script.</p>
+
+<p>There are five types of values that can be supplied as the parameter in the single line structure:</p>
+
+<ul>
+<li>logical (true/false)</li>
+<li>integer values</li>
+<li>real/float values</li>
+<li>strings or characters</li>
+<li>file paths</li>
+<li>vector of real or integer values</li>
+</ul>
+
+<p>For logical false, any of <code>False</code>, <code>0</code>, <code>F</code>, <code>f</code>, <code>false</code> can be used. Likewise, for logical true, any of <code>True</code>, <code>1</code>, <code>T</code>, <code>t</code>, <code>true</code> can be used. Real numbers can be formatted as {10.0, 10.0D0, 1.e1, 1.D1}. Any line that begins with <code>#</code> is treated as a comment. You may add comments, have space before keywords or after &ldquo;:&rdquo;.</p>
+
+<p>If the values to be set are a part of a bigger entity, you need to use the <strong>block structure</strong>, which uses braces (&ldquo;{&rdquo;, &ldquo;}&rdquo;) to mark the scope of that entity. E.g.:</p>
+<pre class="highlight plaintext"><code> Domain: 1 {
+    Density:             0.1      # [epsilon - inf)
+    Poisson ratio:       0.35     # [0.0 - (0.5-epsilon)]
+ }
+</code></pre>
+
+<p>In this example, &ldquo;Domain&rdquo; is a keyword (i.e., the entity to be specified) and &ldquo;1&rdquo; refers to the first &ldquo;Domain&rdquo;. Within this entity, &ldquo;Density&rdquo; is set to &ldquo;0.1&rdquo; and &ldquo;Poisson ratio&rdquo; is set to
+&ldquo;0.35&rdquo;. Note that the order of lines doesn&rsquo;t matter within each block enclosed by &ldquo;{&rdquo; and &ldquo;}&rdquo;. If a keyword doesn&rsquo;t have a default value, it has to be specified by the user. For the optional arguments, default value is shown.</p>
+
+<p>A comprehensive input template is provided <a href="https://github.com/SimVascular/svFSI-Tests/blob/master/svFSI_master.inp">here</a>, which contains all the available parameters and their meanings. The <strong>SimVascular</strong> GUI currently supports limited input configurations. To access more advanced functions of <strong>svFSI</strong>, users are recommended to create their own input file by modifying existing <a href="https://github.com/SimVascular/svFSI-Tests">templates</a>.</p>
+
+<p>Structurally, all input files are composed of three parts: 
+<ol>
+    <li> <a href="#general_para"> General simulation parameters</a>, such as time step size, format of results, location of results etc.</li>
+    <li> <a href="#mesh_info"> Mesh information</a>, such as volumetric mesh, surface mesh, scaling factor etc.</li>
+    <li> <a href="#equation_info"> Equation information</a>, such as physics solved (fluid, structure, electrophysiology etc.), boundary conditions, linear solver etc.</li>
+</ol></p>
+
+<p><a id="general_para"> <h4> General simulation parameters </h4></a> </p>
+
+<p>General simulation parameters describe the basic parameters about the problem including spatial dimension, time step control, file output, option to restart, etc. They are usually defined using the single line structure. For example:</p>
+<pre class="highlight plaintext"><code>Number of spatial dimensions: 3
+Number of time steps: 1600
+Time step size: 0.005
+Save results to VTK format: 1
+Increment in saving VTK files: 10
+Increment in saving restart files: 200
+...
+</code></pre>
+
+<p><a id="mesh_info"> <h4> Mesh information </h4></a> </p>
+
+<p>Mesh data is provided in the second part. It mainly includes the paths to volumetric meshes and boundary meshes. There may also be additional information such as domains, fiber orientation, initial values, prestress, etc. Multiples meshes can be loaded for the same or different equations within svFSI. svFSI supports reading multiple mesh formats as mentioned <a href="http://simvascular.github.io/docssvFSI.html#mesh">here</a>. Regardless of the mesh format, the mesh information is provided using the block structure.  Nested keywords &ldquo;Add mesh&rdquo; and &ldquo;Add face&rdquo; could be used to provide paths to the mesh and face files. The users should also provide a string-based name for each mesh and face immediately after the colon. This name will be useful when when setting boundary conditions later. For example:</p>
+<pre class="highlight plaintext"><code>Add mesh: mesh_name {
+   # Volumetric mesh
+   Mesh file path:    ./mesh/mesh-complete.mesh.vtu
+
+   # Surface meshes
+   Add face: face_name_1 {
+      Face file path: ./mesh/mesh-surfaces/face_1.vtp
+   }
+   Add face: face_name_ 2 {
+      Face file path: ./mesh/mesh-surfaces/face_2.vtp
+   }
+   Add face: face_name_3 {
+      Face file path: ./mesh/mesh-surfaces/face_3.vtp
+   }
+}
+</code></pre>
+
+<p><a id="equation_info"> <h4> Equation information </h4></a> </p>
+
+<p>Information on equations being solved is provided here. It includes the type of equation, coupling, boundary conditions, settings for the linear and nonlinear solver, and output control. The type of equation can be heat equation, linear elasticity, nonlinear elastodynamics, incompressible viscous fluid, fluid-structure interaction etc. Also, physics-specific material properties can be supplied. *<em>svFSI</em> also provides a rich selection of linear solvers (BIPN, GMRES, BICGSTAB, CG) and preconditioners (Trilinos-Diagonal, Trilinos-BlockJacobi, Trilinos-ILU, Trilinos-ILUT, Trilinos-IC, Trilinos-ICT, Trilinos-ML). In terms of boundary conditions, we provide choices such as Dirichlet, Neumann, Robin etc. These boundary conditions can be steady, unsteady, coupled to lumped parameter network or RCR-type. Boundary conditions are supplied in a nested block structure with keyword &ldquo;Add BC&rdquo;. Also, the string immediately after the colon should match the face name defined in mesh section. For example:</p>
+<pre class="highlight plaintext"><code>Add equation: fluid {
+   Coupled: 1
+   Min iterations: 3
+   Max iterations: 10
+   Tolerance: 1e-3
+
+   # Material property
+   Density: 1.06
+   Viscosity: Constant {Value: 0.04}
+
+   # Linear solver configuration
+   LS type: GMRES
+   {
+      Preconditioner: Trilinos-ILUT
+      Max iterations: 100
+      Tolerance:      1D-6
+      Krylov space dimension: 50
+   }
+
+   # Boundary conditions
+   Add BC: face_name_1 {
+      Type: Dir
+      Time dependence: Steady
+      Value: 0.0
+   }
+}
+</code></pre>
+</section>
+<section id="mesh" class="group"><h2>Mesh format</h2>
+
+<p><strong>svFSI</strong> supports multiple mesh types, such as plain text files (coordinates + connectivity), &ldquo;.msh&rdquo; file generated by Gambit, vtk files and NURBS meshes. </p>
+
+<p>SimVascular-based vtu/vtp format for mesh/faces is the default choice. <strong>svFSI</strong> supports below element types in vtu/vtp format:</p>
+
+<ul>
+<li> line (linear, quadratic)</li>
+<li> triangle (linear, quadratic)</li>
+<li> quadrilateral (bilinear, serendipity, biquadratic)</li>
+<li> tetrahedron (linear, quadratic)</li>
+<li> hexagonal brick (trilinear, quadratic/serendipity, triquadratic)</li>
+<li> wedge</li>
+</ul>
+
+<p>It is recommended to generate these mesh files using <strong>SimVascular</strong>. <strong>SimVascular</strong> GUI provides a complete pipeline that includes model construction, mesh generation, problem configuration, input file generation, and numerical simulation. Although the model construction and mesh generation have been discussed extensively in other parts of the <strong>SimVascular</strong> user guides, we will go over them briefly for the sake of completeness.</p>
+
+<p>Let&rsquo;s use an idealized left ventricular model as an example. First, we create a SV Project called LV_Inflation. In cardiovascular modeling, computational models are usually generated from medical images. However, as we are using an idealized ventricular geometry here, we can directly import the model into the <code>SV Data Manager</code> by right clicking <code>Models</code> and selecting <code>Import Solid Model</code>. The solid model can be a surface mesh stored in either stl or vtp format.</p>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/svfsi/main/imgs/import_model.png" style="width:100%;height:auto;max-width: 30vw;">
+  <figcaption class="svCaption" >Import solid model for mesh generation.</figcaption>
+</figure>
+
+<p>We could name the new model LV. When asked if you would like to extract faces from the model, click yes and accept the default separation angle (50 degree). Oftentimes, the imported model is not centered in the field of view. One can right click on the model and click <code>Global Reinit</code> to recenter the geometry. Double click the model name to open the <code>SV Modeling</code> window and rename each face corresponding to its physiological interpretation (base - LV basal plane; endo - endocardium; epi - epicardium) and set each of these face types as wall. You may also change the color of each face to distinguish them in the Display window.</p>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/svfsi/main/imgs/faces.png" style="width:100%;height:auto;max-width: 30vw;">
+  <figcaption class="svCaption" >Extract faces from the imported model.</figcaption>
+</figure>
+
+<p>Next we will generate an unstructured mesh from this idealized LV model. In the <code>SV Data Manager</code>, right click <code>Meshes</code> and select <code>Create Mesh</code>. Accepting the default options will create a mesh object named LV. Double click the mesh object to open the <code>SV Meshing</code> configuration window. The most import parameter here is <code>Global Max Edge Size</code>, which controls the size of the elements. We will set this value to 2.0 and run the mesher. A relatively coarse mesh will be generated. Users can reduce the <code>Global Max Edge Size</code> if a finer mesh is desired. </p>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/svfsi/main/imgs/Mesher.png" style="width:100%;height:auto;max-width: 30vw;">
+  <figcaption class="svCaption" >Meshing configuration.</figcaption>
+</figure>
+
+<p>To convert the generated mesh to the svFSI-ready format, right click the mesh object, LV, and select <code>Export Mesh Complete</code>.</p>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/svfsi/main/imgs/export_mesh.png" style="width:100%;height:auto;max-width: 30vw;">
+  <figcaption class="svCaption" >Export the complete mesh.</figcaption>
+</figure>
+
+<p>Open the destination folder to find the mesh files contained in a folder called &lt;mesh object name&gt;-mesh-complete (LV-mesh-complete in this case). In this folder, the vtu file (mesh-complete.mesh.vtu) contains the volume mesh of the ventricle. The surface (boundary) mesh files could be found in the subfolder mesh-surfaces in vtp format. This set of vtk files defines the computational domain of this problem and can be visualized in Paraview.</p>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/svfsi/main/imgs/mesh_folder.png" style="width:100%;height:auto;max-width: 30vw;">
+  <figcaption class="svCaption" >Layout of the mesh folder.</figcaption>
+</figure>
+
+<p><strong>svFSI</strong> also supports loading NURBS meshes. Limited support is available to import a bilinear quadrilateral mesh from Gambit-based &ldquo;.msh&rdquo;. An option to convert this into a biquadratic mesh is also available. <strong>svFSI</strong> also supports importing mesh in the form of a list of nodal coordinates and element connectivity. It is, however, the user&rsquo;s responsibility to provide information on faces. The face connectivity should include a &ldquo;GlobalElementID&rdquo; mapping between the face element and the corresponding mesh element to which the face belongs.</p>
+
+<p>We also provide a separate tool, <a href="https://github.com/SimVascular/svFSI-Tools/tree/main/mesh_converter">mesh-converter</a>, which can convert meshes generate by Gambit, GMSH to vtk format files. It also supports converting low-order elements to high-order elements.</p>
+
+<p>Nested keywords &ldquo;Add mesh&rdquo; and &ldquo;Add face&rdquo; could be used to provide paths to the mesh and face files. The users should also provide a string-based name for each mesh and face immediately after the colon.</p>
+
+<p>Multiples meshes can be loaded for the same or different equations within <strong>svFSI</strong>. <strong>svFSI</strong> supports reading multiple mesh formats as noted below. Some additional information specific to an equation may also be loaded within the mesh attribute such as domains, fiber directions, and initial values.</p>
+</section>
+<section id="run" class="group"><h2>Run Simulation</h2>
+
+<p>Though we can run the simulation through the <strong>SimVascular</strong> GUI. It currently does not support some advanced features. Hence, we recommend use the aforementioned input file to directly run the simulation in terminals. The MPI runs can be initiated through the following command</p>
+<pre class="highlight plaintext"><code>mpiexec -np {number of MPI processes}  {path to svFSI executable}  {path to the input file}
+</code></pre>
+
+<p>By default, <strong>svFSI</strong>  will create a results directory called n-procs, where n is the number of MPI processes for the simulation. This directory will have vtu files that contain all the requested output fields and a log file called histor.dat.</p>
+</section>
+<section id="resource" class="group"><h2>Resources</h2>
+
+<p>In addition to the documentation on this page, we also maintain collections of video tutorials, pre/post processing tools and public forums.</p>
+
+<h3>Tutorials</h3>
+
+<ul>
+<li>SimVascular group uploads hands-on tutorials to our <a href="https://www.youtube.com/channel/UCT61XgTRqpfb39Hyio9IqGQ">YouTube</a> channel periodically. Here are some for <strong>svFSI</strong>:
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=QIpyThIAD7k">Fluid-Structure Interaction (FSI)</a></li>
+<li><a href="https://www.youtube.com/watch?v=TCK3SmGwBa8">Cardiac electrophysiology modeling</a></li>
+<li><a href="https://www.youtube.com/watch?v=Jm3VSi6Aci8">Cardiac mechanics modeling</a></li>
+</ul></li>
+<li>We also maintain a large collection of examples that showcase different functionalities of <strong>svFSI</strong>. You can find them here: <a href="https://github.com/SimVascular/svFSI-Tests">https://github.com/SimVascular/svFSI-Tests</a>. Each case includes a README file that explains the problem in hand and some key aspects of the software configuration.</li>
+</ul>
+
+<h3>Pre/Post Processing Tool</h3>
+
+<p>We are also maintaining a collection of useful pre and post processing tools that are compatible with <strong>svFSI</strong>:
+<a href="https://github.com/SimVascular/svFSI-Tools">https://github.com/SimVascular/svFSI-Tools</a></p>
+
+<h3>Contact us</h3>
+
+<p>If you have any questions or suggestions, please feel free to contact us through one of the following ways.</p>
+
+<ul>
+<li>Seek support, suggest new features or report bugs, please contact us through <a href="https://github.com/SimVascular/svFSI/issues">GitHub Issues</a> or <a href="https://simtk.org/plugins/phpBB/indexPhpbb.php?f=188">SimTK forum</a>.</li>
+<li>Contribute your code to <strong>svFSI</strong>, please submit a pull request through GitHub.</li>
+<li>Share your novel applications of <strong>svFSI</strong> with the community, please consider contribute your case to <a href="https://github.com/SimVascular/svFSI-Tests">svFSI-Tests</a>.</li>
+</ul>
+</section>
 
 <section id="install" class="group"><h2>Installation</h2>
 
@@ -260,7 +461,7 @@
 <p>The <strong>svFSI</strong> executable (either built from source or downloaded from SimTK) is not packaged into each SimVascular release, so users have to manually add its path through <strong>SimVascular</strong> GUI. The configuration is under <code>Window</code> -&gt; <code>Preference</code> -&gt; <code>svFSI Simulation</code>.</p>
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/svfsi/main/imgs/path_to_binary.png" style="width:70%">
+  <img class="svImg svImgMd" src="documentation/svfsi/main/imgs/path_to_binary.png" style="width:100%;height:auto;max-width: 30vw;">
   <figcaption class="svCaption" >Set up path to svFSI solver in SimVascular.</figcaption>
 </figure>
 </section>
@@ -475,275 +676,6 @@ Trilinos-ML
   Krylov space dimension: 200
 }
 </code></pre>
-
-<p><br/></p>
-
-<h4>Plugin installation</h4>
-
-<p>To build the svFSI plugin, download the source code from</p>
-<pre class="highlight plaintext"><code>https://github.com/SimVascular/SimVascular-Plugin-svFSI
-</code></pre>
-
-<p>to a directory of your choosing. (Note that this repo is currently private, and the plugin is included with SimVascular). The plugin source code should not be in your SimVascular directory tree. Make a build directory and go there.</p>
-<pre class="highlight plaintext"><code>mkdir SimVascular-Plugin-svFSI_build &amp;&amp; cd SimVascular-Plugin-svFSI_build 
-</code></pre>
-
-<p>Initiate the cmake terminal interface to generate makefiles.</p>
-<pre class="highlight plaintext"><code>ccmake ../SimVascular-Plugin-svFSI
-</code></pre>
-
-<p>This will automatically search for compilers. Follow instructions if necessary. Push “c” for configure repeatedly until cmake presents the option “g” for generate. Hit “g” to create makefiles and exit. Run make:</p>
-<pre class="highlight plaintext"><code>make 
-</code></pre>
-
-<p>This will build the plugin. If passed, there should be a directory</p>
-<pre class="highlight plaintext"><code>SimVascular-Plugin-svFSI/build/lib/plugins
-</code></pre>
-
-<p>Add that directory to the environment variable</p>
-<pre class="highlight plaintext"><code>SV_PLUGIN_PATH
-</code></pre>
-
-<p>for example</p>
-<pre class="highlight plaintext"><code>export SV_PLUGIN_PATH=$SV_PLUGIN_PATH:~/SimVascular-Plugin-svFSI_build/lib/plugins
-</code></pre>
-
-<p>That directory should contain a library file, a “.dylib” on mac. It should follow the naming convention</p>
-<pre class="highlight plaintext"><code>libNAME.extension 
-</code></pre>
-
-<p>For example,</p>
-<pre class="highlight plaintext"><code>liborg_sv_gui_qt_svfsi.dylib
-</code></pre>
-
-<p>Strip the “lib” prefix and the file extension, then add it to the variable</p>
-<pre class="highlight plaintext"><code>SV_CUSTOM_PLUGINS 
-</code></pre>
-
-<p>as in</p>
-<pre class="highlight plaintext"><code>export SV_CUSTOM_PLUGINS=$SV_CUSTOM_PLUGINS:org_sv_gui_qt_svfsi
-</code></pre>
-
-<p>Finally, if running on Linux also set  </p>
-<pre class="highlight plaintext"><code>LD_LIBRARY_PATH
-</code></pre>
-
-<p>For example, </p>
-<pre class="highlight plaintext"><code>export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/SimVascular-Plugin-svFSI_build/lib/plugins
-</code></pre>
-
-<p>SimVascular will look for these variables in the current environment, and assuming that everything has passed, load the plugin without any additional information. It is a good idea to use the same compilers for anything you build, which cmake will do be default if also building SimVascular from source. These instructions are generic for SimVascular plugin, and work for plugins other that the svFSI plugin.</p>
-</section>
-
-<section id="input" class="group"><h2>Input file format</h2>
-
-<p><strong>svFSI</strong> uses plain-text input file. This input file will define the physics solved, mesh, linear solver, boundary conditions and general simulation parameters. An overview of the syntax could be found <a href=https://sites.google.com/site/memt63/tools/MUPFES/mupfes-scripting>here</a>. A comprehensive input template is provided <a href="https://github.com/SimVascular/svFSI-Tests/blob/master/svFSI_master.inp">here</a>, which contains all the available parameters and their meanings. The <strong>SimVascular</strong> GUI currently supports limited input configurations. To access more advanced functions of <strong>svFSI</strong>, users are recommended to create their own input file by modifying existing <a href="https://github.com/SimVascular/svFSI-Tests">templates</a>.</p>
-
-<p>Structurally, all input files are composed of three parts: </p>
-
-<ol>
-<li><p>General simulation parameters, such as time step size, format of results, location of results etc.</p></li>
-<li><p>Mesh information, such as volumetric mesh, surface mesh, scaling factor etc.</p></li>
-<li><p>Equations. In this part, users will define the physics solved (fluid, structure, electrophysiology etc.), boundary conditions, linear solver etc.</p></li>
-</ol>
-
-<p>Here, we use the input file for <a href="https://github.com/SimVascular/svFSI-Tests/blob/master/04-fluid/01-pipe3D_RCR/svFSI.inp">the 3D pipe flow with RCR boundary condition</a> as an example to demonstrate the structure of the input files.</p>
-<pre class="highlight plaintext"><code>#----------------------------------------------------------------
-# General simulation parameters
-
-Continue previous simulation: 0
-Number of spatial dimensions: 3
-Number of time steps: 1600
-Time step size: 0.005
-Spectral radius of infinite time step: 0.50
-Searched file name to trigger stop: STOP_SIM
-
-Save results to VTK format: 1
-Name prefix of saved VTK files: result
-Increment in saving VTK files: 10
-Start saving after time step: 1
-
-Increment in saving restart files: 200
-Convert BIN to VTK format: 0
-
-Verbose: 1
-Warning: 0
-Debug: 0
-
-#----------------------------------------------------------------
-# Mesh data
-Add mesh: msh {
-   Mesh file path:    mesh-complete/mesh-complete.mesh.vtu
-   Add face: lumen_inlet {
-      Face file path: mesh-complete/mesh-surfaces/lumen_inlet.vtp
-   }
-   Add face: lumen_outlet {
-      Face file path: mesh-complete/mesh-surfaces/lumen_outlet.vtp
-   }
-   Add face: lumen_wall {
-      Face file path: mesh-complete/mesh-surfaces/lumen_wall.vtp
-   }
-}
-
-#----------------------------------------------------------------
-# Equations
-Add equation: fluid {
-   Coupled: 1
-   Min iterations: 3
-   Max iterations: 10
-   Tolerance: 1e-3
-   Backflow stabilization coefficient: 0.2
-
-   # Material property
-   Density: 1.06
-   Viscosity: Constant {Value: 0.04}
-
-   # Output quantities
-   Output: Spatial {
-      Velocity: t
-      Pressure: t
-      Traction: t
-      WSS: t
-   }
-
-   # Linear solver configuration
-   LS type: NS
-   {
-      Max iterations:      10
-      NS-GM max iterations: 3
-      NS-CG max iterations: 500
-      Tolerance:           1D-3
-      NS-GM tolerance:     1D-3
-      NS-CG tolerance:     1D-3
-      Krylov space dimension: 50
-   }
-
-   # Boundary conditions
-   Add BC: lumen_inlet {
-      Type: Dir
-      Time dependence: Unsteady
-      Temporal values file path: lumen_inlet.flow
-      #Fourier coefficients file path: lumen_inlet.fcs
-      Profile: Parabolic
-      Impose flux: t
-   }
-
-   Add BC: lumen_outlet {
-      Type: Neu
-
-      ## RCR BC
-      Time dependence: RCR
-      RCR values: (121.0, 1.5D-4, 1212.0)
-      Distal pressure: 0.0
-   }
-
-   Add BC: lumen_wall {
-      Type: Dir
-      Time dependence: Steady
-      Value: 0.0
-   }
-}
-</code></pre>
-</section>
-<section id="mesh" class="group"><h2>Mesh format</h2>
-
-<p><strong>svFSI</strong> supports multiple mesh types, such as plain text files (coordinates + connectivity), &ldquo;.msh&rdquo; file generated by Gambit, vtk files and NURBS meshes. </p>
-
-<p>SimVascular-based vtu/vtp format for mesh/faces is the default choice. <strong>svFSI</strong> supports below element types in vtu/vtp format:</p>
-
-<ul>
-<li> line (linear, quadratic)</li>
-<li> triangle (linear, quadratic)</li>
-<li> quadrilateral (bilinear, serendipity, biquadratic)</li>
-<li> tetrahedron (linear, quadratic)</li>
-<li> hexagonal brick (trilinear, quadratic/serendipity, triquadratic)</li>
-<li> wedge</li>
-</ul>
-
-<p>It is recommended to generate these mesh files using <strong>SimVascular</strong>. <strong>SimVascular</strong> GUI provides a complete pipeline that includes model construction, mesh generation, problem configuration, input file generation, and numerical simulation. Although the model construction and mesh generation have been discussed extensively in other parts of the <strong>SimVascular</strong> user guides, we will go over them briefly for the sake of completeness.</p>
-
-<p>Let&rsquo;s use an idealized left ventricular model as an example. First, we create a SV Project called LV_Inflation. In cardiovascular modeling, computational models are usually generated from medical images. However, as we are using an idealized ventricular geometry here, we can directly import the model into the <code>SV Data Manager</code> by right clicking <code>Models</code> and selecting <code>Import Solid Model</code>. The solid model can be a surface mesh stored in either stl or vtp format.</p>
-
-<figure>
-  <img class="svImg svImgMd" src="documentation/svfsi/main/imgs/import_model.png" style="width:70%">
-  <figcaption class="svCaption" >Import solid model for mesh generation.</figcaption>
-</figure>
-
-<p>We could name the new model LV. When asked if you would like to extract faces from the model, click yes and accept the default separation angle (50 degree). Oftentimes, the imported model is not centered in the field of view. One can right click on the model and click <code>Global Reinit</code> to recenter the geometry. Double click the model name to open the <code>SV Modeling</code> window and rename each face corresponding to its physiological interpretation (base - LV basal plane; endo - endocardium; epi - epicardium) and set each of these face types as wall. You may also change the color of each face to distinguish them in the Display window.</p>
-
-<figure>
-  <img class="svImg svImgMd" src="documentation/svfsi/main/imgs/faces.png" style="width:70%">
-  <figcaption class="svCaption" >Extract faces from the imported model.</figcaption>
-</figure>
-
-<p>Next we will generate an unstructured mesh from this idealized LV model. In the <code>SV Data Manager</code>, right click <code>Meshes</code> and select <code>Create Mesh</code>. Accepting the default options will create a mesh object named LV. Double click the mesh object to open the <code>SV Meshing</code> configuration window. The most import parameter here is <code>Global Max Edge Size</code>, which controls the size of the elements. We will set this value to 2.0 and run the mesher. A relatively coarse mesh will be generated. Users can reduce the <code>Global Max Edge Size</code> if a finer mesh is desired. </p>
-
-<figure>
-  <img class="svImg svImgMd" src="documentation/svfsi/main/imgs/Mesher.png" style="width:70%">
-  <figcaption class="svCaption" >Meshing configuration.</figcaption>
-</figure>
-
-<p>To convert the generated mesh to the svFSI-ready format, right click the mesh object, LV, and select <code>Export Mesh Complete</code>.</p>
-
-<figure>
-  <img class="svImg svImgMd" src="documentation/svfsi/main/imgs/export_mesh.png" style="width:70%">
-  <figcaption class="svCaption" >Export the complete mesh.</figcaption>
-</figure>
-
-<p>Open the destination folder to find the mesh files contained in a folder called &lt;mesh object name&gt;-mesh-complete (LV-mesh-complete in this case). In this folder, the vtu file (mesh-complete.mesh.vtu) contains the volume mesh of the ventricle. The surface (boundary) mesh files could be found in the subfolder mesh-surfaces in vtp format. This set of vtk files defines the computational domain of this problem and can be visualized in Paraview.</p>
-
-<figure>
-  <img class="svImg svImgMd" src="documentation/svfsi/main/imgs/mesh_folder.png" style="width:70%">
-  <figcaption class="svCaption" >Layout of the mesh folder.</figcaption>
-</figure>
-
-<p><strong>svFSI</strong> also supports loading NURBS meshes. Limited support is available to import a bilinear quadrilateral mesh from Gambit-based &ldquo;.msh&rdquo;. An option to convert this into a biquadratic mesh is also available. <strong>svFSI</strong> also supports importing mesh in the form of a list of nodal coordinates and element connectivity. It is, however, the user&rsquo;s responsibility to provide information on faces. The face connectivity should include a &ldquo;GlobalElementID&rdquo; mapping between the face element and the corresponding mesh element to which the face belongs.</p>
-
-<p>We also provide a separate tool, <a href="https://github.com/SimVascular/svFSI-Tools/tree/main/mesh_converter">mesh-converter</a>, which can convert meshes generate by Gambit, GMSH to vtk format files. It also supports converting low-order elements to high-order elements.</p>
-
-<p>Nested keywords &ldquo;Add mesh&rdquo; and &ldquo;Add face&rdquo; could be used to provide paths to the mesh and face files. The users should also provide a string-based name for each mesh and face immediately after the colon.</p>
-
-<p>Multiples meshes can be loaded for the same or different equations within <strong>svFSI</strong>. <strong>svFSI</strong> supports reading multiple mesh formats as noted below. Some additional information specific to an equation may also be loaded within the mesh attribute such as domains, fiber directions, and initial values.</p>
-</section>
-<section id="run" class="group"><h2>Run Simulation</h2>
-
-<p>Though we can run the simulation through the <strong>SimVascular</strong> GUI. It currently does not support some advanced features. Hence, we recommend use the aforementioned input file to directly run the simulation in terminals. The MPI runs can be initiated through the following command</p>
-<pre class="highlight plaintext"><code>mpiexec -np {number of MPI processes}  {path to svFSI executable}  {path to the input file}
-</code></pre>
-
-<p>By default, <strong>svFSI</strong>  will create a results directory called n-procs, where n is the number of MPI processes for the simulation. This directory will have vtu files that contain all the requested output fields and a log file called histor.dat.</p>
-</section>
-<section id="resource" class="group"><h2>Resources</h2>
-
-<p>In addition to the documentation on this page, we also maintain collections of video tutorials, pre/post processing tools and public forums.</p>
-
-<h3>Tutorials</h3>
-
-<ul>
-<li>SimVascular group uploads hands-on tutorials to our <a href="https://www.youtube.com/channel/UCT61XgTRqpfb39Hyio9IqGQ">YouTube</a> channel periodically. Here are some for <strong>svFSI</strong>:
-
-<ul>
-<li><a href="https://www.youtube.com/watch?v=QIpyThIAD7k">Fluid-Structure Interaction (FSI)</a></li>
-<li><a href="https://www.youtube.com/watch?v=TCK3SmGwBa8">Cardiac electrophysiology modeling</a></li>
-<li><a href="https://www.youtube.com/watch?v=Jm3VSi6Aci8">Cardiac mechanics modeling</a></li>
-</ul></li>
-<li>We also maintain a large collection of examples that showcase different functionalities of <strong>svFSI</strong>. You can find them here: <a href="https://github.com/SimVascular/svFSI-Tests">https://github.com/SimVascular/svFSI-Tests</a>. Each case includes a README file that explains the problem in hand and some key aspects of the software configuration.</li>
-</ul>
-
-<h3>Pre/Post Processing Tool</h3>
-
-<p>We are also maintaining a collection of useful pre and post processing tools that are compatible with <strong>svFSI</strong>:
-<a href="https://github.com/SimVascular/svFSI-Tools">https://github.com/SimVascular/svFSI-Tools</a></p>
-
-<h3>Contact us</h3>
-
-<p>If you have any questions or suggestions, please feel free to contact us through one of the following ways.</p>
-
-<ul>
-<li>Seek support, suggest new features or report bugs, please contact us through <a href="https://github.com/SimVascular/svFSI/issues">GitHub Issues</a> or <a href="https://simtk.org/plugins/phpBB/indexPhpbb.php?f=188">SimTK forum</a>.</li>
-<li>Contribute your code to <strong>svFSI</strong>, please submit a pull request through GitHub.</li>
-<li>Share your novel applications of <strong>svFSI</strong> with the community, please consider contribute your case to <a href="https://github.com/SimVascular/svFSI-Tests">svFSI-Tests</a>.</li>
-</ul>
 
 <p><br/><br/><br/><br/><br/></p>
 </section></div>
