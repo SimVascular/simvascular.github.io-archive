@@ -1,8 +1,8 @@
-# SimCardio Guide 
+# Cardiac Modeling Guide 
 
 Human heart is an intrinsic multi-physics system. It's normal function requires synchronization and coupling of cardiac electrophysiology, tissue (myocardium) mechanics, and hemodynamics. Among the three physics, cardiac mechanics plays a central role, as it serves as the bridge between electrophysiology and blood flow. In a physiological setting, the myocardial cells (myocytes) in the heart tissue initiate and propagate an electrical impulse (action potential) that travels through the heart and drives the contraction of the cardiac muscle, which, in turn, propels the blood to sustain whole body circulation.
 
-The SimVascular <strong>SimCardio</strong> software suite includes a machine learning-based tool to automatically segment heart chambers from medical data and create patient-specific cardiac models, a finite element solver for performing multi-physics cardiac simulations, and python-based plugins to interactively create cardiac models, Purkinje network and set solver parameters from within the main SimVascular GUI application. While some of the interactive plugins are under development, the software allows flexibility to use scripting and perform simulations on high performance clusters.
+Here we present a software suite for cardiac modeling, which includes a machine learning-based tool to automatically segment heart chambers from medical data and create patient-specific cardiac models, a finite element solver for performing multi-physics cardiac simulations, and python-based plugins to interactively create cardiac models, Purkinje network and set solver parameters from within the main SimVascular GUI application. While some of the interactive plugins are under development, the software allows flexibility to use scripting and perform simulations on high performance clusters.
 
 
 ####[<strong>Cardiac Geometric Modeling Tool</strong>](http://simvascular.github.io/docsSimCardio.html#automatic-cardiac-modeling): 
