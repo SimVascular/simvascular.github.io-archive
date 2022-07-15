@@ -1,4 +1,4 @@
-## Known Issues ##
+## Known Issues
 
 <ol>
     <li>SimVascular does not record that the plugin was added to a project. The plugin must be added to the project every time a project is opened. The project **Purkinje-Network** directory is saved between project sessions.</li>

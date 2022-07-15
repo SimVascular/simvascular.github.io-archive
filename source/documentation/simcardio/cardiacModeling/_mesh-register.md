@@ -1,4 +1,4 @@
-## Mesh Registration ##
+### Mesh Registration
 
 We can simulate the LV flow over time by tracking the deformation of the heart from time-resolved imaging and impose this motion 
 to the fluid domains inside the heart, which leads to a deforming-domain CFD problem. To be able to track the deformation of the 

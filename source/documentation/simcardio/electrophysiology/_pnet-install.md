@@ -1,4 +1,4 @@
-## Plugin Installation ##
+## Plugin Installation
 
 The installer for the Purkinje plugin can be found on the <a href="https://simtk.org/projects/simvascular/">Simtk</a> website. The installer installs the shared libraries, the setup.sh script and a Python script in, <br/>
 

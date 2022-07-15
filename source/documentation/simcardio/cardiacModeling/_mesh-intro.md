@@ -1,4 +1,4 @@
-# Mesh Generation 
+## Mesh Generation 
 
 The <strong>Cardiac Geometric Modeling Tool</strong> can be used to generate left ventricle (LV) meshes from
 segmentation results. These meshes can then be used CFD modeling of LV flow combined with patient medical imaging data. 

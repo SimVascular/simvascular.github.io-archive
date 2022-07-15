@@ -1,9 +1,9 @@
-## Purkinje Plugin Workflow & Usage ##
+## Purkinje Plugin Workflow & Usage
 
 The Purkinje plugin can be applied only on a SimVascular generated mesh and not on the model. Therefore, it is recommended that the user first create a mesh either by following the regular workflow (i.e., Image, Path, Segmentation, Model and Mesh) or by importing a solid model using the Models tool. In the example below, we use the latter approach and load the left ventricular endocardium directly into the SV project. We then mesh the volume before using the plugin to generate Purkinje network.
 
 <!--             Modeling & Meshing               -->
-###Create SV mesh
+### Create SV mesh
 After creating an SV project, right-click on the Models tab to import a left ventricular solid model (.vtp) and run the Global Reinit command. During the import, extract faces on the model using the default settings.
 
 <figure>
@@ -48,7 +48,7 @@ We now mesh the model before adding the Purkinje network tool. Create a new mesh
 </figure>
 
 
-###Plugin workflow
+### Plugin workflow
 Here we provide a brief overview of the workflow to generate Purkinje network. Once the mesh is created, activate the Purkinje plugin so that it displays the triangular surfaces of the mesh. Purkinje network can then be created using the following steps:
 
 <ol>
@@ -84,7 +84,7 @@ Provide a starting point of the Purkinje network by moving the mouse cursor to a
     <figcaption class="svCaption" >Select the starting point and direction of the Purkinje network.</figcaption>
 </figure>
 
-Adjust the control parameters of the Purkinje network and generate by selecting the Create Network button. The network is displayed by checking the Show Network box. You can repeat the selection of the initial point and network creation until the results are satisfactory. A detailed description of the network control parameters is provided <a href="#parameters">below</a>.
+Adjust the control parameters of the Purkinje network and generate by selecting the Create Network button. The network is displayed by checking the Show Network box. You can repeat the selection of the initial point and network creation until the results are satisfactory. A detailed description of the network control parameters is provided below.
 
 <figure>
     <img class="svImg svImgMd" src="documentation/simcardio/electrophysiology/images/create-network.png">
@@ -96,7 +96,7 @@ Adjust the control parameters of the Purkinje network and generate by selecting 
     <figcaption class="svCaption" >Purkinje network is overlaid on the mesh in the Display window.</figcaption>
 </figure>
 
-The network is saved in .vtu format under the Purkinje-Network sub-folder of the project directory. Additionally you can find the .txt files that contain the information of end nodes, position coordinates, and network connectivity under the same folder. Further details about the contents of each file is provided <a href="#output">below</a>.
+The network is saved in .vtu format under the Purkinje-Network sub-folder of the project directory. Additionally you can find the .txt files that contain the information of end nodes, position coordinates, and network connectivity under the same folder. Further details about the contents of each file is provided below.
 
 <figure>
     <img class="svImg svImgMd" src="documentation/simcardio/electrophysiology/images/purkinje-paraview.png">
@@ -104,7 +104,7 @@ The network is saved in .vtu format under the Purkinje-Network sub-folder of the
 </figure>
 
 
-###Output Description
+### Output Description
 The Purkinje Network tool writes a set of files in the Purkinje-Network sub-folder within the SimVascular project directory. The files are prefixed with the name of the selected face. The files and their contents are described below:
 
 <ul>

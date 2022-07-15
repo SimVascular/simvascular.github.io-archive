@@ -1,2 +1,0 @@
-# Cardiac Electrophysiology Simulation Guide #
-

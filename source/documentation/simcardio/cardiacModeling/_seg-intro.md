@@ -1,4 +1,4 @@
-# Automated Image Segmentation 
+## Automated Image Segmentation 
 
 The SimVascular <strong>Cardiac Geometric Modeling Tool</strong> uses pre-trained deep neural network models to automatically 
 generate segmentations of major cardiac structures: the four heart chambers, aorta and pulmonary arteries. The segmentation tool 
