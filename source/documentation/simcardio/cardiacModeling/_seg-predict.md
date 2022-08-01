@@ -34,7 +34,7 @@ Image segmentation can also be performed from within the SimVascular GUI
 Use the Python console <strong>Text Editor</strong> mode to enter the following Python commands 
 
 <pre><code class='language-python' lang='python'>
-    from auto_lv.auto_lv import Segmentation
+    from sv_auto_lv_modeling.auto_lv import Segmentation
     data_path='/path/to/data'
     seg = Segmentation()
     seg.set_modality('ct')
