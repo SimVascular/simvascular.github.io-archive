@@ -6,8 +6,9 @@ The computational domain is a rectangular block, with dimensions of $3\times 7\t
 
 <figure>
   <img class="svImg svImgMd" src="documentation/svfsi/cep/imgs/cuboid.png">
-  <figcaption class="svCaption" >Computational domain of example 1.[reference]</figcaption>
+  <figcaption class="svCaption" >Computational domain.<a href="#ref-1">[1]</a></figcaption>
 </figure>
+
 
 Here is the breakdown of the input file for this study.
 
