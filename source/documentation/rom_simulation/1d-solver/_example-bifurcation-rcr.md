@@ -10,7 +10,7 @@ RCR boundary conditions are defined for both outlets.
 Simulation parameters are taken from Table III in <a href="#ref-12">[12]</a>. 
 
 The complete 1D Simulation input file is available 
-<a href="http://github.com/SimVascular/svOneDSolver/blob/master/test/bifurcation_RCR.in" > here </a>.
+<a href="http://github.com/SimVascular/svOneDSolver/blob/master/tests/cases/bifurcation_RCR.in" > here </a>.
  
 <h3> Simulation Results </h3> 
 The simulation is run for only 2 cycles; to reach a periodic state, at least 10 cycles are required.
