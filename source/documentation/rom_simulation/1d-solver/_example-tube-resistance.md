@@ -9,7 +9,7 @@ The outlet boundary condition is defined with a resistance <i>R<sub>2</sub>=100<
 The tube material is defind as a quasi-rigid wall (i.e. the wall stiffness approaches infinity).
 
 The complete 1D Simulation input file is available 
-<a href="http://github.com/SimVascular/svOneDSolver/blob/master/test/tube_r.in" > here </a>.
+<a href="http://github.com/SimVascular/svOneDSolver/blob/master/tests/cases/tube_r.in" > here </a>.
 
 <h3> Analytical Results </h3> 
 Using $\mu=0.04$ for viscosity the tube resistance can be analytically calculated as $R_1 = \frac{8\mu l \pi}{A^2} \approx 10.05309649 $.
