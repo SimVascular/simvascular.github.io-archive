@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SimVascular Docs</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+
+    <link href="css/shop-item.css" rel="stylesheet" type="text/css" />
+
+    <link href="css/codestyle.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="font-awesome-4.1.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
+
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                <i class="fa fa-bars" id="barIcon"></i>
+              </button>
+                <a class="navbar-brand" id="brandName" href="index.html">
+                  <img src="img/svlogo/svLogoSmallText.png" alt="...">
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+
+                  <!-- USER GUIDES -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b><span class="fa fa-user"></span> User Guides</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsQuickGuide.html"><b><span class="icon ion-ios7-bolt"></span> Getting Started</b></a></li>
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsModelGuide.html"><b><span class="icon ion-settings"></span> Modeling</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsMeshing.html"><b><span class="icon ion-ios7-keypad"></span> Meshing</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsFlowSolver.html"><b><span class="icon ion-play"></span> Simulation</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docssvFSI.html"><b><span class="icon ion-plus-round"></span> svFSI</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsSimCardio.html"><b><span class="icon ion-plus-round"></span> SimCardio</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsROMSimulation.html"><b><span class="icon ion-plus-round"></span> ROM Simulation</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsGenBC.html"><b><span class="icon ion-refresh"></span> GenBC</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsPythonInterface.html"><b><span class="icon ion-refresh"></span> Python Interface</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsReferences.html"><b><span class="icon ion-refresh"></span> References </b></a></li>
+                    </ul>
+                  </li>
+
+                  <!-- CLINCAL CASES -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b><i class="fa fa-stethoscope"></i> Clinical Cases</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase3.html"><b><span class="fa fa-user-md"></span> Coronary Normal</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase1.html"><b><span class="fa fa-user-md"></span> Aortofemoral Normal - 1</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase2.html"><b><span class="fa fa-user-md"></span> Aortofemoral Normal - 2</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase4.html"><b><span class="fa fa-user-md"></span> Healthy Pulmonary</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/projects/sv_tests"><b><span class="fa fa-user-md"></span> All demo projects</b></a></li>
+                    </ul>
+                  </li>
+
+                  <!-- DEVELOPER GUIDES -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b><span class="fa fa-caret-square-o-right"></span> Developer Guides</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/SimVascular/SimVascular/wiki/wiki_for_developers"><b><span class="fa fa-file-text-o"></span> Compile Source Code</b></a></li>
+                    </ul>
+                  </li>
+
+                  <!-- svCOMMUNITY -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b><i class="fa fa-users"></i> svCommunity</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/forums/viewforum.php?f=188"><b><span class="fa fa-users"></span> Public Forum</b></a></li>
+                      <li role="presentation" class="divider"></li>
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/SimVascular/SimVascular/wiki/"><b><span class="fa fa-file-text-o"></span> Wiki</b></a></li>
+		      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/mailman/listinfo/simvascular-news"><b><span class="fa fa-sign-in"></span> Join News Mailing List</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/pipermail/simvascular-news/"><b><span class="fa fa-pencil-square-o"></span> News Mailing List Archive</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/SimVascular/SimVascular/issues"><b><span class="fa fa-bug"></span> Report bugs and request features</b></a></li>
+                    </ul>
+                  </li>
+
+                  <!-- REFERENCES -->
+                  <li>
+                    <a href="docsRefs.html" id="dropdownMenu1" >
+                      <b><span class="icon ion-document-text"></span>References</b>
+                    </a>
+                  </li>
+
+                  <!-- Archives -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b> Archives</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="archiveQuickGuideSV2.html"><b>SimVascular 2.0</b></a></li>
+                    </ul>
+                  </li>
+
+                    <!-- <li><a href="docsQuickGuide.html" id="btnQuickGuide"><b><span class="icon ion-ios7-bolt"></span> Quick Guide</b></a></li>
+                    <li><a href="docsModelGuide.html" id="btnModelGuide"><b><span class="icon ion-settings"></span> Modeling</b></a></li>
+
+                    <li><a href="docsMeshing.html" id="btnMeshing"><b><span class="icon ion-ios7-keypad"></span> Meshing</b></a></li>
+                    <li><a href="docsPresolver.html" id="btnPresolver"><b><span class="icon ion-log-in"></span> svPre</b></a></li>
+                    <li><a href="docsFlowSolver.html" id="btnFlowSolver"><b><span class="icon ion-play"></span> svSolver</b></a></li>
+                    <li><a href="docsRefs.html" id="btnRefs"><b><span class="icon ion-document-text"></span> References</b></a></li>
+                    <li><a href="clinicalCase1.html" id="btnRefs"><b>Case Studies</b></a></li> -->
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <!--Nav Bar -->
+<div class="row">
+    <div class="col-xs-1 col-sm-1 hidden-md hidden-lg">
+    </div>
+    <!-- ONE COLUMN OF SPACE -->
+    <nav class="hidden-xs hidden-sm col-md-2 col-lg-2 bs-docs-sidebar">
+
+
+
+
+
+
+      
+        <ul id="sidebar" class="nav nav-stacked fixed mansvFSI-Structure"> <!--Nav Bar -->
+<p><h4>Cardiac Mechanics <br> Modeling using svFSI</h4></p>
+<li><a href="#intro">Introduction</a></li>
+<li><a href="#mesh-gen">Mesh generation</a></li>
+<li><a href="#solver-input">Input file</a></li>
+
+<li><a href="#theory">Theory & Implementation</a>
+  <ul class="nav nav-stacked">
+    <li><a href="#kinematics">Kinematics</a></li>
+    <li><a href="#struct">STRUCT: displacement- <br> based elastodynamics</a></li>
+    <li><a href="#ustruct">uSTRUCT: mixed formu- <br> lation elastodynamics</a></li>
+    <li><a href="#material-models">Material models</a></li>
+  </ul>
+</li>
+<li><a href="#refs">References</a></li>
+</li>
+
+</ul>
+
+
+
+
+
+
+
+
+    </nav>
+
+    <!--Main Content -->
+    <div class="col-xs-10 col-sm-10 col-md-9 col-lg-9" id="manualContent">
+
+      <!-- ACTUAL CONTENT -->
+
+
+
+
+
+
+
+        <div class="mansvFSI-Structure">
+<section id="intro" class="group"><h2>Cardiac Mechanics Modeling using <strong>svFSI</strong></h2>
+
+<p>Modeling cardiac mechanics is a challenging task as the heart muscle is a complex fibrous structure that is predominantly incompressible <a href="#ref-1">[1]</a>, and undergoes large deformation during a cardiac cycle. <strong>svFSI</strong> is designed specifically to tackles all these challenges. It has a robust implementation of nonlinear FEM for large deformation problems and several advanced fiber-reinforced hyperelastic material models. In the following sections, we will demonstrate <strong>svFSI</strong>&lsquo;s capability in modeling cardiac mechanics using the benchmark example from Land et al. <a href="#ref-2">[2]</a>, i.e., the passive inflation of an idealized left ventricle. The complete example can be downloaded from <a href="https://github.com/SimVascular/svFSI-Tests/tree/master/05-struct/02-LV-Guccione-passive">here</a> and you can find the accompanying YouTube tutorial <a href="https://www.youtube.com/watch?v=Jm3VSi6Aci8&amp;list=PL1CBZ8Wh-xvRnux0eMmbZPbx-C078Qzqu&amp;index=2">here</a>. We will also briefly explain the theory and implementation of nonlinear continuum mechanics in <strong>svFSI</strong>.</p>
+</section>
+<section id="mesh-gen" class="group"><h2>Mesh Generation</h2>
+
+<p>Mesh generation for cardiac mechanics modeling are quite standard and can be achieved following the general guide <a href="http://simvascular.github.io/docssvFSI.html#mesh">here</a>.</p>
+
+<p>On the other hand, the heart wall is a composite of layers (or sheets) of parallel myocytes, which are the predominant fiber types. These fiber and sheet directions enable defining a local orthonormal coordinate system inside the cardiac muscle. This local coordinate system is crucial for using a structurally-based constitutive relation for the cardiac muscle <a href="#ref-9">[9]</a>. For 3D problems, the users are required to prescribe fiber and sheet directions in the computational domain for certain constitutive relations. Users are provided an option to define a constant fiber direction through the following input directives,</p>
+<pre class="highlight plaintext"><code># Fiber direction
+Fiber direction: (1.0, 0.0, 0.0)
+
+# Sheet direction
+Fiber direction: (0.0, 1.0, 0.0)
+</code></pre>
+
+<p><strong>svFSI</strong> also supports specifying distributed fiber and sheet direction generated by rule-based methods <a href="#ref-3">[3]</a> through the following input commands,</p>
+<pre class="highlight plaintext"><code># Fiber direction
+Fiber direction file path: fibersLong.vtu
+
+# Sheet direction
+Fiber direction file path: fibersSheet.vtu
+</code></pre>
+
+<p>In the latter approach, the vtu file should have the local coordinate system stored as a vector with the name &ldquo;FIB_DIR&rdquo; at the centroid of each element. An example is provided <a href="https://github.com/SimVascular/svFSI-Tests/blob/master/06-ustruct/03-LV-Guccione-active/mesh/P1/fibersLong.vtu">here</a>.</p>
+</section>
+<section id="solver-input" class="group"><h2>Input File</h2>
+
+<p><strong>svFSI</strong> requires a plain-text input file to specify simulation parameters. An overview of the syntax could be found <a href=https://sites.google.com/site/memt63/tools/MUPFES/mupfes-scripting>here</a>. The <strong>SimVascular</strong> GUI currently supports limited input configurations. To access more advanced functions of <strong>svFSI</strong>, users are recommended to create their own input file by modifying existing <a href="https://github.com/SimVascular/svFSI-Tests">templates</a>. Below is a template of the input file for modeling passive inflation of a left ventricle,</p>
+<pre class="highlight plaintext"><code># File svFSI.inp
+#----------------------------------------------------------------
+# General simulation parameters
+
+Continue previous simulation: f
+Number of spatial dimensions: 3
+Number of time steps: 100
+Time step size: 0.01
+Spectral radius of infinite time step: 0.50
+Searched file name to trigger stop: STOP_SIM
+
+Save results to VTK format: 1
+Name prefix of saved VTK files: result
+Increment in saving VTK files: 1
+Start saving after time step: 1
+
+Increment in saving restart files: 100
+Convert BIN to VTK format: 0
+
+Verbose: 1
+Warning: 1
+Debug: 0
+
+#----------------------------------------------------------------
+# Mesh data including volume (vtu) and surface (vtp) meshes,
+# domains and fiber distributions
+
+Add mesh: msh {
+   Mesh file path:    &lt;path to mesh-complete folder&gt;/mesh-complete.mesh.vtu
+   Add face: endo {
+      Face file path: &lt;path to mesh-complete folder&gt;/mesh-surfaces/endo.vtp
+   }
+   Add face: epi {
+      Face file path: &lt;path to mesh-complete folder&gt;/mesh-surfaces/epi.vtp
+   }
+   Add face: base {
+      Face file path: &lt;path to mesh-complete folder&gt;/mesh-surfaces/base.vtp
+   }
+   Fiber direction: (1.0, 0.0, 0.0)
+   Fiber direction: (0.0, 1.0, 0.0)
+}
+
+#----------------------------------------------------------------
+# Equations solved
+# Here we use mixed formulation, ustruct, with stabilization
+# displacement-based formulation can be invoked through struct
+Add equation: ustruct {
+   # Define min and max number of iterations, and convergence
+   # tolerance for the nonlinear solver (Newton method)
+   Coupled: 1
+   Min iterations: 4
+   Max iterations: 10
+   Tolerance: 1e-6
+   Use Taylor-Hood type basis: f
+
+   # Define constitutive model and its parameters
+   Constitutive model: Guccione {
+      C:   1.0e4
+      bf:  1.0
+      bt:  1.0
+      bfs: 1.0
+   }
+
+   # Define a small density value for quasi-steady (static)
+   # simulation
+   Density: 1e-3
+
+   # Define Poisson ratio
+   Poisson ratio: 0.5
+
+#==================================================================================
+#  This block is for struct; remove if ustruct is used
+   # Define elasticity modulus for the volumetric part of the
+   # strain energy function
+   Elasticity modulus: 1.0
+   # Penalty method to enforce incompressibility
+   Dilational penalty model: ST91
+   # Use a penalty parameter, if different from bulk modulus
+   Penalty parameter: 1.0E6
+#==================================================================================
+
+#==================================================================================
+#  This block is for ustruct; remove if struct is used
+   # Define elasticity modulus to calculate tauM/tauC
+   Elasticity modulus: 2.0e5
+   # Stabilization paramters
+   Momentum stabilization coefficient: 1e-3
+   Continuity stabilization coefficient: 1e-3
+#==================================================================================
+
+   # Define variables for output
+   Output: Spatial {
+      Displacement: t
+      Velocity: t
+      Jacobian: t
+   }
+
+   # Linear solver parameter
+   # Jacobi preconditioner (FSILS) is the default.
+   # For ustruct, trilinos-ilu preconditioner is recommended.
+   LS type: GMRES
+   {
+      Preconditioner:      FSILS
+      Tolerance:           1D-6
+      Max iterations:      1000
+      Krylov space dimension: 50
+   }
+
+   # Apply zero displacement BC at the base
+   Add BC: base {
+      Type: Dir
+      Value: 0.0
+      Impose on state variable integral: t
+   }
+
+   # Add pressure load at the endo surface
+   # Here we define a ramp function to linearly
+   # increase pressure load from zero to the
+   # desired value to increase solver stability.
+   # Follower pressure load is set as the direction
+   # of the applied load follows deformation.
+   Add BC: endo {
+      Type: Neu
+      Time dependence: Unsteady
+      Temporal values file path: &lt;path to load.dat file&gt;
+      Ramp function: t
+      Follower pressure load: t
+   }
+}
+</code></pre>
+
+<p>The applied load on the endocardial surface is provided in a file, load.dat, defining the ramp function. In this file, the first line specifies that there are two data points and the value will change linearly. The second and third line specify the time and the value at that time. Note that for a ramp function, the code expects data at two time points only. Should the simulation go beyond the last time stamp (t=1.0 in the current example), a constant value equal to the last extrema (1.0e4) will be applied.</p>
+<pre class="highlight plaintext"><code>2    1
+0.0  0.0
+1.0  1.0e4
+# content of load.dat
+</code></pre>
+</section>
+
+<section id="theory" class="group"><h2>Theory and Implementation</h2>
+
+<p>This section briefly explains the theory and implementation of the nonlinear solid dynamics solver in <strong>svFSI</strong>. Two types of formulations are provided in <strong>svFSI</strong> for modeling solid mechanics: STRUCT and uSTRUCT. STRUCT uses a pure displacement-based formulation of the balance laws (mass and momentum conservation principles), while uSTRUCT uses a mixed (velocity-pressure) formulation of the governing equations. The latter approach uses either a stabilized equal-order discretization for velocity and pressure function spaces, or the inf-sup-conforming Taylor-Hood-type finite element discretization.</p>
+</section>
+<section id="kinematics" class="subgroup"><h3>Kinematics</h3>
+
+<p>During a cardiac cycle, the heart undergoes large deformations which can no longer be described by linear elasticity. Since the domain is continuously deforming, we introduce the concepts of a reference configuration (denoted $\Omega_{0}$) and a current configuration (denoted $\Omega_{t}$). The reference configuration is fixed for all times, and often refers to the initial geometry when $t=0$. We will use the vector $\mathbf{X}$ to denote the physical coordinates of the geometry in the reference configuration, and define the following relation:</p>
+
+<p>$$\mathbf{x}(\mathbf{X}, t)=\mathbf{X}+\mathbf{u}(\mathbf{X}, t)$$</p>
+
+<p>where $\mathbf{x}$ describes the physical coordinates of the geometry in the current configuration and $\mathbf{u}$ is the time-varying displacement vector field on $\Omega_{0}$ which acts as a mapping between the reference and current configurations such that $\mathbf{u}: \Omega_{0} \Rightarrow \Omega_{t} .$ We also define the following relationships and tensors, which are standard for describing nonlinear structural mechanics:</p>
+
+<p>$$ \ddot{\mathbf{u}}=\frac{d^{2} \mathbf{u}}{d t^{2}}, \quad \mathbf{F}=\frac{\partial \mathbf{x}}{\partial \mathbf{X}}, \quad  J=\operatorname{det}(\mathbf{F}) $$</p>
+
+<p>$$  \mathbf{E}=\frac{1}{2}(\mathbf{C}-\mathbf{I}), ~~ \mathbf{C}=\mathbf{F}^{T} \mathbf{F} $$</p>
+
+<p>where $\ddot{\mathbf{u}}$ refers to the structural acceleration and the time derivative operator, $d^{2} / d t^{2}$, is applied on the reference configuration. $\mathbf{F}$ denotes the deformation gradient tensor and $J$ is the the determinant of $\mathbf{F}$ tensor that denotes the Jacobian of the transformation. $\mathbf{C}$ is the Cauchy-Green deformation tensor while $\mathbf{E}$ is the Green-Lagrange strain tensor.</p>
+</section>
+<section id="struct" class="subgroup"><h3>STRUCT: displacement-based nonlinear elastodynamics</h3>
+
+<p>The STRUCT equation solves equations for nonlinear structural dynamics using finite element formulation. We start with the function spaces and weak form. We require that the trial and weighting functions satisfy their respective properties on the current domain. The strong form of the momentum balance is</p>
+
+<p>$$ \rho\ddot{\mathbf{u}} = \nabla_{x}\cdot{\sigma} + \rho\mathbf{f_b}, $$
+$$ \sigma\cdot \mathbf{n} = \mathbf{h},~\mathrm{on}~\left(\Gamma_{t}\right)_{h}. $$</p>
+
+<p>where $\sigma$ is the stress term in the current configuration.</p>
+
+<p>The resulting weak form of the structural dynamics equations is </p>
+
+<p>$$ \int_{\Omega_{t}} \mathbf{w} \cdot \rho \ddot{\mathbf{u}} d \Omega+\int_{\Omega_{0}} \nabla_{X} \mathbf{w}:(\mathbf{F} \mathbf{S}) d \Omega-\int_{\Omega_{t}} \mathbf{w} \cdot \rho \mathbf{f_b} d \Omega-\int_{\left(\Gamma_{t}\right)_{h}} \mathbf{w} \cdot \mathbf{h} d \Gamma_{h}=0 $$</p>
+
+<p>The acceleration term (i.e. $\int_{\Omega_{t}} \mathbf{w} \cdot \rho \ddot{\mathbf{u}} d \Omega$), body forcing term (i.e. $\int_{\Omega_{t}} \mathbf{w} \cdot \mathbf{f_b} d \Omega$), and the natural boundary condition term (i.e. $\int_{\left(\Gamma_{t}\right)_{h}} \mathbf{w} \cdot \mathbf{h} d \Gamma_{h}$) are all evaluated in the current configuration. These terms are commonly referred to as external work done on the structure by body forces and surface tractions. The remaining stress term in the equation is often referred to as internal work done on the structure by internal stresses, which we will treat differently here. We rewrite this in the reference configuration in terms of the deformation gradient and the second Piola-Kirchhoff stress tensor, which is commonly denoted as $\mathbf{S}$. </p>
+
+<p><strong>svFSI</strong>  uses a splitting approach where the strain energy and the resulting second Piola-Kirchhoff stress tensor, $\mathbf{S}$, are decomposed into deviatoric (or isochoric, $\mathbf{S}_{iso}$) and dilational (or volumetric, $\mathbf{S}_{vol}$) components. The specific form of $\mathbf{S}$ will depend on the chosen constitutive model (isochoric and volumetric). More information on these <a href="#material-model">Material models</a> can be found in the literature <a href="#ref-1">[1]</a>. It is noted that the symbol $E$ denotes the elastic modulus of the structure and is not to be confused with $\mathbf{E}$, which denotes the Green-Lagrange strain tensor, and $\nu$ represents Poisson&rsquo;s ratio. Some key material parameters can then be defined as,</p>
+
+<p>$$ \lambda=\frac{E v}{(1+v)(1-2 v)}, \quad \mu=\frac{E}{2(1+v)}, \quad \kappa=\lambda + \frac{2}{3} \mu $$</p>
+
+<p>where, $\lambda$ and $\mu$ are the Lame&rsquo;s first and second parameters, respectively, and $\kappa$ is the bulk modulus. The second Piola-Kirchhoff stress tensors for a few standard constitutive models are given as,</p>
+
+<p>$$ \mathbf{S}^{StVK} = 2 \mu \mathbf{E} + \lambda \operatorname{tr}(\mathbf{E}) \mathbf{I}, ~~~ \textrm{St. Venant-Kirchhoff} $$
+$$ \mathbf{S}^{mStVK} = \kappa \operatorname{ln}(J) \mathbf{C}^{-1} + \mu(\mathbf{C} - \mathbf{I}), ~~~ \textrm{Modified St. Venant-Kirchhoff} $$
+$$ \mathbf{S_{iso}}^{nHK} = \mu J^{-2/3} \left(\mathbf{I} - \frac{1}{3} \operatorname{tr}(\mathbf{C}) \mathbf{C}^{-1} \right), ~~ \textrm{Neo-Hookean} $$</p>
+
+<p>where $\mathbf{I}$ is the identity matrix. For the Neo-Hookean and other hyperelastic constitutive models, the $\mathbf{S}$ tensor is computed as $\mathbf{S} = \mathbf{S_{iso}} + \mathbf{S_{vol}}$, where $\mathbf{S_{vol}} = p J \mathbf{C}^{-1}$, and $p$ is the hydrostatic pressure computed based on the chosen dilational strain-energy function. See the section on <a href="#material-model">Material models</a> and the corresponding references for the available dilational penalty models in <strong>svFSI</strong> .</p>
+</section>
+<section id="ustruct" class="subgroup"><h3>uSTRUCT: mixed formulation nonlinear elastodynamics</h3>
+
+<p><strong>svFSI</strong> allows solving nonlinear elastodynamics using a mixed formulation where the structure&rsquo;s velocity and pressure are the unknown degrees of freedom <a href="#ref-4">[4]</a>. Two variants are available within this feature: (a) first, a novel variational multiscale stabilized (VMS) formulation that allows equal-order interpolation of velocity and pressure bases using a unified framework <a href="#ref-4">[4]</a>; (b) second, using the classical inf-sup stable Taylor-Hood type elements where the velocity basis is derived from a function space that is one order higher relative to the pressure basis. In the displacement-based formulation, a hyperelastic material model assumes the existence of a Helmholtz free energy potential. However, uSTRUCT postulates hyperelasticity using Gibbs free energy potential <a href="#ref-4">[4]</a> and takes the following additive decoupled form as,
+$$
+G(\overline{\mathbf{C}},p,T) = G_{iso}(\overline{\mathbf{C}},T) + G_{vol}(p,T)
+$$</p>
+
+<p>where $G_{vol}(p,T)=\int \rho^{-1}dp$, $\overline{\mathbf{C}}=J^{-2/3}\mathbf{C}$, $p$ is the pressure and $T$ is the temperature. It is worth mentioning that the free energy above is the specific free energy, i.e. the energy per unit mass. The free energy per unit volume is $G^R=\rho_0G$, where $\rho_0$ is the density of the reference configuration. The Helmholtz free energy per unit volume can be obtained by a Legendre transformation of $-G^R$ as,</p>
+
+<p>$$
+H^R(\overline{\mathbf{C}},J,T)=\sup_p\left(-pJ+G^R(\overline{\mathbf{C}},p,T) \right).
+$$</p>
+
+<p>and due to the additive splitting of the Gibbs free energy, we have, </p>
+
+<p>$$
+H^R(\overline{\mathbf{C}},J,T)=G_{iso}^R(\overline{\mathbf{C}},T) + \sup_p\left(-pJ+G_{vol}^R(p,T) \right).
+$$</p>
+
+<p>It is noted that Gibbs free energy naturally introduces pressure into the stress term. The governing equations for the motion of a continuum body in the current configuration are,</p>
+
+<p>$$ \frac{\mathrm{d} \mathbf{u}}{\mathrm{d} t} - \mathbf{v} = \mathbf{0} $$
+$$ \beta(p) \frac{\mathrm{d} p}{\mathrm{d} t} + \nabla_x \cdot \mathbf{v} = 0 $$
+$$ \rho(p) \frac{\mathrm{d} \mathbf{v}}{\mathrm{d} t} - \nabla_x \cdot \mathbf{\sigma_{dev}} + \nabla_x p - \rho(p) \mathbf{f_b} = \mathbf{0}. $$</p>
+
+<p>The above system of equations represent the kinematic relation between displacement and velocity, balance of mass and linear momentum. $\sigma_{dev}$ is the deviatoric Cauchy stress, while $\rho$ and $\beta$ are the density and isothermal compressibility coefficient, respectively, defined as functions of pressure. The expressions for these quantities are given as follows,</p>
+
+<p>$$ \rho(p) = \left( \frac{\mathrm{d} G_{vol}}{\mathrm{d} p} \right)^{-1}, $$
+$$ \beta(p) = \frac{1}{\rho} \frac{\mathrm{d} \rho}{\mathrm{d} p} = -\frac{\partial^2 G_{vol}}{\partial p^2} / \frac{\partial G_{vol}}{\partial p}, $$
+$$ \mathbf{\sigma_{dev}} = J^{-1} \bar{\mathbf{F}} \left( \mathbb{P}:\bar{\mathbf{S}} \right) \bar{\mathbf{F}}^T, $$
+$$ \bar{\mathbf{S}} = 2 \frac{\partial G_{iso}^R}{\partial \bar{\mathbf{C}}} = 2 \frac{\partial (\rho_0 G_{iso})}{\partial \bar{\mathbf{C}}}, $$</p>
+
+<p>where $\mathbb{P} = \mathbb{I} - \frac{1}{3}\mathbf{C} \otimes \mathbf{C}^{-1}$ is the projection tensor, $\bar{\mathbf{F}} = J^{-1/3} \mathbf{F}$ and $\bar{\mathbf{C}} = J^{-2/3} \mathbf{C}$.</p>
+
+<p>This mixed finite element problem is stabilized using variational multiscale method to allow using equal-order interpolating functions for velocity and pressure unknowns, employ linear elements and handle material incompressibility without suffering from locking issues. Defining an appropriate mixed function space, the stabilized weak form can then be written in the current configuration as,</p>
+
+<p>$$ \mathbf{B}_k :=  \int_{\Omega_x} \mathbf{w}_\mathbf{u} \cdot \left( \frac{\mathrm{d} \mathbf{u}}{\mathrm{d} t} - \mathbf{v} \right) \mathrm{d} \Omega_x = \mathbf{0} $$</p>
+
+<p>$$ \mathbf{B}_p :=  \int_{\Omega_x} w_p \left( \beta(p) \frac{\mathrm{d} p}{\mathrm{d} t} + \nabla_x \cdot \mathbf{v} \right) \mathrm{d} \Omega_\mathbf{x} \ + \sum_e \int_{\Omega_x^e} \tau_M^e \nabla_x w_p \cdot \left( \rho(p)\frac{\mathrm{d} \mathbf{v}}{\mathrm{d} t} - \nabla_x \cdot \mathbf{\sigma_{dev}} + \nabla_x p - \rho(p)\mathbf{f_b} \right) \mathrm{d} \Omega_x^e = 0 $$</p>
+
+<p>$$ \mathbf{B}_m :=  \int_{\Omega_x} \left( \mathbf{w}_\mathbf{v} \cdot \rho(p) \frac{\mathrm{d} \mathbf{v}}{\mathrm{d} t} + \nabla_x \mathbf{w}_\mathbf{v} : \mathbf{\sigma_{dev}} - \nabla_x \cdot \mathbf{w}_\mathbf{v} p - \mathbf{w}_\mathbf{v} \cdot \rho(p)\mathbf{f_b} \right) \mathrm{d} \Omega_x \ -\int_{\Gamma_x^h} \mathbf{w}_\mathbf{v} \cdot \mathbf{h} \mathrm{d} \Gamma_x + \sum_e \int_{\Omega_x^e} \tau_C \left(\nabla_x \cdot \mathbf{w}_\mathbf{v} \right) \left( \beta(p) \frac{\mathrm{d} p}{\mathrm{d} t} + \nabla_x \cdot \mathbf{v} \right) \mathrm{d} \Omega_x^e = 0. $$</p>
+
+<p>The stabilization parameters are chosen as, </p>
+
+<p>$$
+\mathbf{\tau}_M = \tau_M\mathbf{I}_{nd}, \quad \tau_M = c_m \frac{\Delta x^e}{c\rho}, \quad \tau_C = c_c c\Delta x^e \rho
+$$</p>
+
+<p>where, $\Delta x^e$ is the diameter of the circumscribing sphere of the tetrahedral element, $c_m$ and $c_c$ are two non-dimensional parameters, and $c$ is the maximum wave speed in the solid body. For compressible materials, $c$ is the bulk wave speed. Assuming isotropic small-strain linear elastic material, the bulk wave speed can be approximated as, $c=\sqrt{ \left( \lambda+2\mu \right) / \rho_0}$, where $\lambda$ and $\mu$ are the Lame&rsquo;s parameters. For incompressible materials, $c = \sqrt{\frac{\mu}{\rho_0}}$ is the shear wave speed. Further details about the formulation, finite element discretization and time integration could be found in Liu et al. <a href="#ref-4">[4]</a>.</p>
+</section>
+<section id="material-models" class="subgroup"><h3>Material models</h3>
+
+<p>Below is the list of available material constitutive models in <strong>svFSI</strong> :</p>
+
+<table class="table table-bordered">
+  <caption>Volumetric constitutive models for the struct/ustruct equations</caption>
+  <thead>
+  <tr>
+    <th>Volumetric Model</th>
+    <th>Input Keyword</th>
+  </tr>
+  </thead>
+  <tr>
+    <td>Quadratic model</td>
+    <td> &ldquo;quad&rdquo;, &ldquo;Quad&rdquo;, &ldquo;quadratic&rdquo;, &ldquo;Quadratic&rdquo; </td>
+  </tr>
+  <tr>
+    <td>Simo-Taylor91 model<a href="#ref-5">[5]</a></td>
+    <td>&ldquo;ST91&rdquo;, &ldquo;Simo-Taylor91&rdquo;</td>
+  </tr>
+  <tr>
+    <td>Miehe94 model<a href="#ref-6">[6]</a></td>
+    <td>&ldquo;M94&rdquo;, &ldquo;Miehe94&rdquo;</td>
+  </tr>
+</table>
+
+<table class="table table-bordered">
+  <caption>Isochoric constitutive models for the struct/ustruct equations</caption>
+  <thead>
+  <tr>
+    <th>Isochoric Model</th>
+    <th>Input Keyword</th>
+  </tr>
+  </thead>
+    <tr>
+      <td>Saint Venant-Kirchhoff$^\dagger$ </td>
+      <td>&ldquo;stVK&rdquo;, &ldquo;stVenantKirchhoff&rdquo; </td>
+    </tr>
+    <tr>
+      <td>modified Saint Venant-Kirchhoff$^\dagger$</td>
+      <td>&ldquo;m-stVK&rdquo;, &ldquo;modified-stVK&rdquo;,  &ldquo;modified-stVenantKirchhoff&rdquo; </td>
+    </tr>
+    <tr>
+      <td>Neo-Hookean model </td>
+      <td>&ldquo;nHK&rdquo;, &ldquo;nHK91&rdquo;, &ldquo;neoHookean&rdquo;, &ldquo;neoHookeanSimo91&rdquo; </td>
+    </tr>
+    <tr>
+      <td>Mooney-Rivlin model </td>
+      <td>&ldquo;MR&rdquo;, &ldquo;Mooney-Rivlin&rdquo; </td>
+    </tr>
+    <tr>
+      <td>Holzapfel-Gasser-Ogden model <a href="#ref-7">[7]</a> </td>
+      <td> &ldquo;HGO&rdquo; </td>
+    </tr>
+    <tr>
+      <td>Guccione model <a href="#ref-8">[8]</a> </td>
+      <td> &ldquo;Guccione&rdquo;, &ldquo;Gucci&rdquo; </td>
+    </tr>
+    <tr>
+      <td>Holzapfel-Ogden model <a href="#ref-9">[9]</a></td>
+      <td> &ldquo;HO&rdquo;, &ldquo;Holzapfel&rdquo; </td>
+    </tr>
+</table>
+
+<p>$^\dagger$ These models are not available for ustruct.</p>
+</section>
+<section id="refs" class="subgroup"><h2>References</h2>
+
+<p><a id="ref-1"> <a href="https://www.wiley.com/en-us/Nonlinear+Solid+Mechanics%3A+A+Continuum+Approach+for+Engineering-p-9780471823193">
+[1] Holzapfel, G. A. (2002). <strong>Nonlinear solid mechanics: a continuum approach for engineering science</strong>. Wiley. </a></a></p>
+
+<p><a id="ref-2"> <a href="https://doi.org/10.1098/rspa.2015.0641">
+[2] Land, S., Gurev, V., Arens, S., Augustin, C. M., Baron, L., Blake, R., Bradley, C., Castro, S., Crozier, A., Favino, M., Fastl, T. E., Fritz, T., Gao, H., Gizzi, A., Griffith, B. E., Hurtado, D. E., Krause, R., Luo, X., Nash, M. P., … Niederer, S. A. (2015). <strong>Verification of cardiac mechanics software: benchmark problems and solutions for testing active and passive material behaviour</strong>. Proceedings of the Royal Society A: Mathematical, Physical and Engineering Science, 471 (2184), 20150641. https://doi.org/10.1098/rspa.2015.0641 </a></a></p>
+
+<p><a id="ref-3"> <a href="https://doi.org/10.1007/s10439-012-0593-5">
+[3] Bayer, J. D., Blake, R. C., Plank, G., &amp; Trayanova, N. A. (2012). <strong>A Novel Rule-Based Algorithm for Assigning Myocardial Fiber Orientation to Computational Heart Models</strong>. Annals of Biomedical Engineering, 40(10), 2243–2254. https://doi.org/10.1007/s10439-012-0593-5 </a></a></p>
+
+<p><a id="ref-4"> <a href="https://doi.org/10.1016/J.CMA.2018.03.045">
+[4] Liu, J., &amp; Marsden, A. L. (2018). <strong>A unified continuum and variational multiscale formulation for fluids, solids, and fluid–structure interaction</strong>. Computer Methods in Applied Mechanics and Engineering, 337, 549–597. https://doi.org/10.1016/J.CMA.2018.03.045 </a></a></p>
+
+<p><a id="ref-5"> <a href="https://doi.org/10.1016/0045-7825(91)90100-K">
+[5] Simo, J. C., &amp; Taylor, R. L. (1991). <strong>Quasi-incompressible finite elasticity in principal stretches. Continuum basis and numerical algorithms</strong>. Computer Methods in Applied Mechanics and Engineering, 85(3), 273–310. https://doi.org/10.1016/0045-7825(91)90100-K</a></a></p>
+
+<p><a id="ref-6"> <a href="https://doi.org/10.1002/nme.1620371202">
+[6] Miehe, C. (1994). <strong>Aspects of the formulation and finite element implementation of large strain isotropic elasticity</strong>. International Journal for Numerical Methods in Engineering, 37(12), 1981–2004. https://doi.org/10.1002/nme.1620371202 </a></a></p>
+
+<p><a id="ref-7"> <a href="https://doi.org/10.1098/rsif.2005.0073">
+[7] Gasser, T. C., Ogden, R. W., &amp; Holzapfel, G. A. (2006). <strong>Hyperelastic modelling of arterial layers with distributed collagen fibre orientations</strong>. Journal of The Royal Society Interface, 3(6), 15–35. https://doi.org/10.1098/rsif.2005.0073 </a></a></p>
+
+<p><a id="ref-8"> <a href="https://doi.org/10.1115/1.2894084">
+[8] Guccione, J. M., McCulloch, A. D., &amp; Waldman, L. K. (1991). <strong>Passive material properties of intact ventricular myocardium determined from a cylindrical model</strong>. Journal of Biomechanical Engineering, 113(February), 42–55. https://doi.org/10.1115/1.2894084 </a></a></p>
+
+<p><a id="ref-9"> <a href="https://doi.org/10.1098/rsta.2009.0091">
+[9] Holzapfel, G. A, &amp; Ogden, R. W. (2009). <strong>Constitutive modelling of passive myocardium: a structurally based framework for material characterization</strong>. Philosophical Transactions of the Royal Society Series A, 367(1902), 3445–3475. https://doi.org/10.1098/rsta.2009.0091 </a></a></p>
+
+<p><a id="ref-10"> <a href="https://doi.org/10.1016/J.JMBBM.2014.06.016">
+[10] Nolan, D. R., Gower, A. L., Destrade, M., Ogden, R. W., &amp; McGarry, J. P. (2014). <strong>A robust anisotropic hyperelastic formulation for the modelling of soft tissue</strong>. Journal of the Mechanical Behavior of Biomedical Materials, 39, 48–60. https://doi.org/10.1016/J.JMBBM.2014.06.016 </a></a></p>
+
+<p><br><br><br><br><br></p>
+</section>
+</div>
+
+
+
+
+
+
+
+
+    </div>
+</div>
+
+
+    <!-- /.container -->
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container-fluid text-center">
+          <ul class="nav navbar-nav">
+            <li><a>Copyright &copy; SimVascular Development Team - 2017</a></li>
+          </ul>
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+    <script src="js/jquery-1.11.0.js" type="text/javascript"></script><script src="js/bootstrap.min.js" type="text/javascript"></script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+      });
+      $('body').scrollspy({
+        target: '.bs-docs-sidebar',
+        offset: 40
+      });
+    </script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-55333921-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <script type="text/javascript"
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SimVascular Docs</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+
+    <link href="css/shop-item.css" rel="stylesheet" type="text/css" />
+
+    <link href="css/codestyle.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="font-awesome-4.1.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
+
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                <i class="fa fa-bars" id="barIcon"></i>
+              </button>
+                <a class="navbar-brand" id="brandName" href="index.html">
+                  <img src="img/svlogo/svLogoSmallText.png" alt="...">
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+
+                  <!-- USER GUIDES -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b><span class="fa fa-user"></span> User Guides</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsQuickGuide.html"><b><span class="icon ion-ios7-bolt"></span> Getting Started</b></a></li>
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsModelGuide.html"><b><span class="icon ion-settings"></span> Modeling</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsMeshing.html"><b><span class="icon ion-ios7-keypad"></span> Meshing</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsFlowSolver.html"><b><span class="icon ion-play"></span> Simulation</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docssvFSI.html"><b><span class="icon ion-plus-round"></span> svFSI</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsSimCardio.html"><b><span class="icon ion-plus-round"></span> SimCardio</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsROMSimulation.html"><b><span class="icon ion-plus-round"></span> ROM Simulation</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsGenBC.html"><b><span class="icon ion-refresh"></span> GenBC</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsPythonInterface.html"><b><span class="icon ion-refresh"></span> Python Interface</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="docsReferences.html"><b><span class="icon ion-refresh"></span> References </b></a></li>
+                    </ul>
+                  </li>
+
+                  <!-- CLINCAL CASES -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b><i class="fa fa-stethoscope"></i> Clinical Cases</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase3.html"><b><span class="fa fa-user-md"></span> Coronary Normal</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase1.html"><b><span class="fa fa-user-md"></span> Aortofemoral Normal - 1</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase2.html"><b><span class="fa fa-user-md"></span> Aortofemoral Normal - 2</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="clinicalCase4.html"><b><span class="fa fa-user-md"></span> Healthy Pulmonary</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/projects/sv_tests"><b><span class="fa fa-user-md"></span> All demo projects</b></a></li>
+                    </ul>
+                  </li>
+
+                  <!-- DEVELOPER GUIDES -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b><span class="fa fa-caret-square-o-right"></span> Developer Guides</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/SimVascular/SimVascular/wiki/wiki_for_developers"><b><span class="fa fa-file-text-o"></span> Compile Source Code</b></a></li>
+                    </ul>
+                  </li>
+
+                  <!-- svCOMMUNITY -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b><i class="fa fa-users"></i> svCommunity</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/forums/viewforum.php?f=188"><b><span class="fa fa-users"></span> Public Forum</b></a></li>
+                      <li role="presentation" class="divider"></li>
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/SimVascular/SimVascular/wiki/"><b><span class="fa fa-file-text-o"></span> Wiki</b></a></li>
+		      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/mailman/listinfo/simvascular-news"><b><span class="fa fa-sign-in"></span> Join News Mailing List</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://simtk.org/pipermail/simvascular-news/"><b><span class="fa fa-pencil-square-o"></span> News Mailing List Archive</b></a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/SimVascular/SimVascular/issues"><b><span class="fa fa-bug"></span> Report bugs and request features</b></a></li>
+                    </ul>
+                  </li>
+
+                  <!-- REFERENCES -->
+                  <li>
+                    <a href="docsRefs.html" id="dropdownMenu1" >
+                      <b><span class="icon ion-document-text"></span>References</b>
+                    </a>
+                  </li>
+
+                  <!-- Archives -->
+                  <li>
+                    <a href="#" id="dropdownMenu1" data-toggle="dropdown">
+                      <b> Archives</b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="archiveQuickGuideSV2.html"><b>SimVascular 2.0</b></a></li>
+                    </ul>
+                  </li>
+
+                    <!-- <li><a href="docsQuickGuide.html" id="btnQuickGuide"><b><span class="icon ion-ios7-bolt"></span> Quick Guide</b></a></li>
+                    <li><a href="docsModelGuide.html" id="btnModelGuide"><b><span class="icon ion-settings"></span> Modeling</b></a></li>
+
+                    <li><a href="docsMeshing.html" id="btnMeshing"><b><span class="icon ion-ios7-keypad"></span> Meshing</b></a></li>
+                    <li><a href="docsPresolver.html" id="btnPresolver"><b><span class="icon ion-log-in"></span> svPre</b></a></li>
+                    <li><a href="docsFlowSolver.html" id="btnFlowSolver"><b><span class="icon ion-play"></span> svSolver</b></a></li>
+                    <li><a href="docsRefs.html" id="btnRefs"><b><span class="icon ion-document-text"></span> References</b></a></li>
+                    <li><a href="clinicalCase1.html" id="btnRefs"><b>Case Studies</b></a></li> -->
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <!--Nav Bar -->
+<div class="row">
+    <div class="col-xs-1 col-sm-1 hidden-md hidden-lg">
+    </div>
+    <!-- ONE COLUMN OF SPACE -->
+    <nav class="hidden-xs hidden-sm col-md-2 col-lg-2 bs-docs-sidebar">
+
+
+
+
+
+
+      
+
+
+        <ul id="sidebar" class="nav nav-stacked fixed mansvFSI-CEP"> <!--Nav Bar -->
+<p><h4>Electrophysiology <br> Modeling using svFSI</h4></p>
+<li><a href="#intro">Introduction</a></li>
+<li><a href="#theory">Theory & Implementation</a>
+    <ul class="nav nav-stacked">
+        <li><a href="#propagation">Propagation model</a></li>
+        <li><a href="#activation">Cellular activation <br> models</a></li>
+    </ul>
+</li>
+<li><a href="#example">Example</a></li>
+<li><a href="#ref">Reference</a></li>
+</ul>
+
+
+
+
+
+
+    </nav>
+
+    <!--Main Content -->
+    <div class="col-xs-10 col-sm-10 col-md-9 col-lg-9" id="manualContent">
+
+      <!-- ACTUAL CONTENT -->
+
+
+
+
+
+
+
+
+
+        <div class="mansvFSI-CEP"><section id="intro" class="group"><h2>Cardiac Electrophysiology Simulation using <strong>svFSI</strong></h2>
+
+<p>The electrical activity in a heart is initiated at the sinoatrial node, which is located at the right atrium of the heart. A small cluster of pacemaker cells periodically emits electrical signals into the heart’s conduction system. These signals first travel at a high speed through a network of special cells that allows the signals to reach the whole heart rapidly. Finally, they travel into the ventricular muscles, and cause the entire heart to contract almost simultaneously. The electrical signals travel between cells through a process called depolarization, during which voltage-sensitive protein channels on the cell membrane open to allow positively charged ions to move in and out of the cell, leading to ionic currents.</p>
+</section>
+
+<section id="theory" class="group"><h2>Mathematical Model of Cardiac Electrophysiology</h2>
+</section>
+<section id="propagation" class="subgroup"><h3>Propagation model</h3>
+
+<p>The propagation of electrical signal in the heart is governed by a reaction-diffusion like equation,</p>
+
+<p>$$\frac{\partial V}{\partial t} + \frac{I_{ion} - I_{app}(t)}{C_m}  = \nabla \cdot\left( \mathbf{D}\nabla V \right) $$ 
+$$ \mathrm{in~} \Omega^E\times(0,T] \nonumber$$
+$$(\mathbf{D}\nabla V) \cdot \mathbf{N}=0 \mathrm{~on~} \partial\Omega^E\times(0,T]$$</p>
+
+<p>$V$ is the local transmembrane potential. $C_m$ is the local membrane capacitance per unit area. $I_{ion}$ and $I_{app}$ are the ionic current flux (current per unit area) and applied external current flux, respectively. Here, $\mathbf{D}$ dictates the propagation velocity of the electrical signal and has the similar physical meaning as the diffusivity. It is calculated as</p>
+
+<p>$$
+\mathbf{D} =\frac{\sigma}{\chi C_m}
+$$</p>
+
+<p>$\sigma$ is the conductivity tensor and has the unit $S/m$. $\chi$ is the ratio of membrane area over tissue volume. Then, $\mathbf{D}$ is a tensor with the dimension $Length^2/Time$.</p>
+
+<p>The above equation is the mono-domain description of the cardiac electrophysiology, i.e. we don&rsquo;t solve the intra- and extra-cellular electrical signal propagation separately. The mono-domain and multi-domain conductivities are connected through the following relation,</p>
+
+<p>$$  \sigma = \frac{\sigma_i\sigma_e}{\sigma_i + \sigma_e} $$</p>
+
+<p>where $\sigma_i$ and $\sigma_e$ are the intra- and extra-cellular conductivity tensors <a href="#ref-1">[1]</a>. It is commonly assumed that the conductivity is transversely isotropic,</p>
+
+<p>$$ \mathbf{\sigma} = \sigma_f \mathbf{f}\otimes \mathbf{f} + \sigma_s (\mathbf{I}-\mathbf{f}\otimes \mathbf{f}) $$</p>
+
+<p>where $\sigma_f$ and $\sigma_s$ are the conductivities along the fiber direction and in the transverse plane. $\mathbf{f}$ is the fiber direction vector.</p>
+
+<p>In <strong>svFSI</strong>, we directly specify $\mathbf{D}$ in the input file. We choose a slightly different form to enforce the transverse isotropy of the conductivity tensor,</p>
+
+<p>$$  \mathbf{D} = D_{iso}\mathbf{I} + \sum_{n=1}^{nsd}D_{ani,n}\mathbf{fN}_n\otimes\mathbf{fN}_n $$</p>
+
+<p>Here, $nsd$ is the dimension, and $\mathbf{fN_n}$ is the local orthonormal coordinate system built by fiber direction and sheet direction. To connect with the previous expression, we have $D_f=D_{iso}+D_{ani}$ and $D_s=D_{iso}$.</p>
+</section>
+<section id="activation" class="subgroup"><h3>Cellular activation models</h3>
+
+<p>Depending on how the depolarization and repolarization within a single cardiac myocyte is described, the electrophysiology models can be roughly divided into two categories: biophysics-based ionic models (such as the ten Tusscher-Panfilov (TTP) model<a href="#ref-2">[2]</a><a href="#ref-3">[3]</a>), and phenomenological models (such as the Aliev-Panfilov (AP), Fitzhugh-Nagumo (FN) models<a href="#ref-4">[4]</a>).</p>
+
+<p><br/></p>
+
+<h4>Biophysics-based ionic models</h4>
+
+<p>Between cardiac myocytes, the propagation of the electrical signal is enabled by the transmembrane motion of different ions, such as $K^+$, $Na^+$ and $Ca^{2+}$ during depolarization and repolarization of the myocytes. Cellular biophysics-based activation models are designed to capture these ionic movements. One of the popular biophysics-based ionic models, the TTP model <a href="#ref-3">[3]</a> is implemented in <strong>svFSI</strong>. Here, we will briefly illustrate the ionic currents involved in the TTP model.</p>
+
+<p>In the TTP model, the ionic current is expressed as</p>
+
+<p>$$  I_{ion} = I_{Na} + I_{Kl} + I_{to} + I_{Kr} + I_{Ks} + I_{CaL} + I_{NaCa} + I_{NaK} + I_{pCa} + I_{pK} + I_{bCa} + I_{bNa} $$</p>
+
+<p>The governing equations for each current can be found in <a href="#ref-3">[3]</a>.</p>
+
+<p>Since, intracellular calcium concentration is the driving factor behind excitation-contraction coupling, we focus on the calcium dynamics here. In the TTP model,the following calcium concentrations are included:</p>
+
+<ul>
+  <li> $Ca_{itotal}$: total (free+buffered) cytoplasmic $Ca^{2+}$ concentration.</li>
+  <li> $Ca_{SRtotal}$: total SR $Ca^{2+}$ concentration.</li>
+  <li> $Ca_{SStotal}$: total dyadic space $Ca^{2+}$ concentration.</li>
+  <li> $Ca_i$: free cytoplasmic $Ca^{2+}$ concentration.</li>
+  <li> $Ca_{SR}$: free SR $Ca^{2+}$ concentration.</li>
+  <li> $Ca_{SS}$: free dyadic space $Ca^{2+}$ concentration.</li>
+</ul>
+
+<p>Sarcoplasmic reticulum (SR) is a membrane structure within the muscle cell, whose main function is to store $Ca^{2+}$. Dyadic space is the region bounded by the T-tubule and SR. $Ca^{2+}$ ions are considered buffered if they are bound to negatively charged proteins (called buffers). Otherwise they are considered free. The action potential transmitted through the gap junction cause the current myocyte to depolarize. The depolarization opens the L-type (long-lasting) Ca channel located on the surface membrane. A small amount of $Ca^{2+}$ enters the myocyte due to potential, leading to a sharp increase of $Ca^{2+}$ in the dyadic space, which is a small region. This increase triggers the SR to release a large amount of $Ca^{2+}$ (calcium-induced calcium release) to enable the excitation-contraction. During diastole, calcium is removed from the cytoplasm through two ways. Ca is pumped (1) back into the SR and (2) out of the cell, mainly by the sodium-calcium exchange (NCX).</p>
+
+<p>For the TTP model in <strong>svFSI</strong>, the following units have to be used: time in [ms], length [mm], amount of substance [mmol], voltage [mV]. Mass can be in [g].</p>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/svfsi/cep/imgs/Calcium.png">
+  <figcaption class="svCaption" >Structures involved in $Ca^{2+}$ cycling<a href="#ref-6">[6]</a>.</figcaption>
+</figure>
+
+<p><br/></p>
+
+<h4>Phenomenological models</h4>
+
+<p>Phenomenological models are derived based on some observations of the full ion model <a href="#ref-4">[4]</a>. Instead of following the transmembrane ionic currents, they use an oscillation system with a fast ($V$) and a slow ($r$) variable to mimic the behaviors of the action potentials. The oscillators, without considering the diffusion term, are modeled as</p>
+
+<p>$$ \frac{\mathrm{d}V}{\mathrm{d}t}=f^{V}(V,r)  $$
+$$ \frac{\mathrm{d}r}{\mathrm{d}t}=f^{r}(V,r)  $$</p>
+
+<p>Note that this set of equations describes the electrophysiology in a single cardiac myocyte, and the choice of $f^V$ and $f^r$ will determine if this is a pacemaker cell or a non-pacemaker cell.</p>
+
+<p>The FitzHugh-Nagumo (FN) model describes the pacemaker cells with</p>
+
+<p>$$  f^V = c[V(V-\alpha)(1-V)-r] $$
+$$  f^r = V-br+a $$</p>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/svfsi/cep/imgs/FN_model.png">
+  <figcaption class="svCaption" >Action potential calculated from FitzHugh-Nagumo model.</figcaption>
+</figure>
+
+<p>The Aliev-Panfilov (AP) model describes the non-pacemaker cells with</p>
+
+<p>$$  f^V = cV(V-\alpha)(1-V)-Vr $$</p>
+
+<p>$$  f^r = \left( \gamma+\frac{\mu_1r}{\mu_2+V}\right)[-r-cV(V-b-1)] $$</p>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/svfsi/cep/imgs/AP_model.png">
+  <figcaption class="svCaption" >Action potential calculated from Aliev-Panfilov model.</figcaption>
+</figure>
+
+<p>Note that $V$ and $t$ are non-dimensional values here. The following equations are used to recover the physiological action potential and time:</p>
+
+<p>$$  \mathrm{FitzHugh-Nagumo model}: V^{fhn}=(65V-35)mV; ~~ t^{fhn} = (220t) ms $$</p>
+
+<p>$$  \mathrm{Aliev-Panfilov model}: V^{ap}=(100V-80)mV; ~~ t^{ap} = (12.9t) ms  $$</p>
+
+<p>Another class of phenomenological models exists that include additional variables to account for intra-cellular calcium kinetics. One such model is the Bueno-Orovio (BO) model <a href="#ref-5">[5]</a> that can serve as a trade-off between the complex TTP model and the simplified phenomenological AP model.</p>
+
+<p><br/></p>
+
+<h4>Activation models available in svFSI</h4>
+
+<p>The following table provides a summary of all the available electrophysiology models in <strong>svFSI</strong>.</p>
+
+<p><table class="table table-bordered">
+    <caption>Available cardiac electrophysiology models.</caption>
+    <thead>
+    <tr>
+      <th>Electrophysiology Model</th>
+      <th>Input Keyword</th>
+    </tr>
+    </thead>
+    <tr>
+      <td>Aliev-Panfilov model<a href="#ref-4">[4]</td>
+      <td>&ldquo;ap&rdquo;, &ldquo;aliev-panfilov&rdquo;</td>
+    </tr>
+    <tr>
+      <td>Fitzhugh-Nagumo model<a href="#ref-4">[4]</a></td>
+      <td>&ldquo;fn&rdquo;, &ldquo;fitzhugh-nagumo&rdquo;</td>
+    </tr>
+    <tr>
+      <td>Bueno-Orovio-Cherry-Fenton model<a href="#ref-5">[5]</a></td>
+      <td>&ldquo;bo&rdquo;, &ldquo;bueno-orovio&rdquo;</td>
+    </tr>
+    <tr>
+      <td>tenTusscher-Panfilov model<a href="#ref-3">[3]</a></td>
+      <td>&ldquo;ttp&rdquo;, &ldquo;tentusscher-panfilov&rdquo;</td>
+    </tr>
+  </table></p>
+</section>
+
+<section id="example" class="group"><h2>Example - Activation of a Myocardial Block</h2>
+
+<p>In this section, we will provide a example of cardiac electrophysiology modeling. This example is a widely used benchmark test, activation of a block of cardiac tissue <a href="#ref-1">[1]</a>. More examples are available on <a href="https://github.com/SimVascular/svFSI-Tests/tree/master/08-cep">GitHub</a>.</p>
+
+<p>The computational domain is a rectangular block, with dimensions of $3\times 7\times 20 mm$. A small cluster of cells located at one corner of the block (marked as S) will recive an initial stimulus, and the TTP model is used to model the activation of the rest of the domain. The entire simulation set-up along with results can be found on <a href="https://github.com/SimVascular/svFSI-Tests/tree/master/08-cep/03-benchmark_tTP">GitHub</a>.</p>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/svfsi/cep/imgs/cuboid.png">
+  <figcaption class="svCaption" >Computational domain of example 1.[reference]</figcaption>
+</figure>
+
+<p>Here is the breakdown of the input file for this study.</p>
+<pre class="highlight plaintext"><code># File svFSI.inp
+#----------------------------------------------------------------
+# General simulation parameters
+
+Continue previous simulation: f
+Number of spatial dimensions: 3
+Number of time steps: 100000
+Time step size: 0.01
+Spectral radius of infinite time step: 0.50
+Searched file name to trigger stop: STOP_SIM
+
+Save results to VTK format: 1
+Name prefix of saved VTK files: result
+Increment in saving VTK files: 100
+Start saving after time step: 1
+
+Increment in saving restart files: 100
+Convert BIN to VTK format: 0
+
+Verbose: 1
+Warning: 1
+Debug: 0
+
+#----------------------------------------------------------------
+# Mesh data
+Add mesh: msh {
+   Mesh file path):   mesh/h0.1/mesh-complete.mesh.vtu
+   Add face: X0 {
+      Face file path: mesh/h0.1/mesh-surfaces/X0.vtp
+   }
+   Add face: X1 {
+      Face file path: mesh/h0.1/mesh-surfaces/X1.vtp
+   }
+   Add face: Y0 {
+      Face file path: mesh/h0.1/mesh-surfaces/Y0.vtp
+   }
+   Add face: Y1 {
+      Face file path: mesh/h0.1/mesh-surfaces/Y1.vtp
+   }
+   Add face: Z0 {
+      Face file path: mesh/h0.1/mesh-surfaces/Z0.vtp
+   }
+   Add face: Z1 {
+      Face file path: mesh/h0.1/mesh-surfaces/Z1.vtp
+   }
+
+   Fiber direction: (1, 0, 0)
+
+   # Here we also need to supply a domain information to separate
+   # pacemaker cells and non-pacemaker cells. domain_info.dat
+   # is a plaintext file store the domain ID of each element.
+   # id == 1: non-pacemaker cells
+   # id == 2: pacemaker cells (recivies stimulus)
+   Domain file path: mesh/h0.1/domain_info.dat
+}
+
+#----------------------------------------------------------------
+# Equations
+Add equation: CEP {
+   Coupled: 1
+   Min iterations: 1
+   Max iterations: 5
+   Tolerance: 1e-6
+
+   # Here domain id == 1 are non-pacemaker cells
+   Domain: 1 {
+      Electrophysiology model: TTP
+      Conductivity (iso): 0.012571
+      Conductivity (ani): 0.082715
+      ODE solver: RK
+   }
+
+   # Here domain id == 2 are pacemaker cells
+   Domain: 2 {
+      Electrophysiology model: TTP
+      Conductivity (iso): 0.012571
+      Conductivity (ani): 0.082715
+      # Stimulus to initiate the depolarization process
+      Stimulus: Istim {
+         Amplitude: -35.714
+         Start time: 0.0
+         Duration: 2.0
+         Cycle length: 10000.0
+      }
+      ODE solver: RK
+   }
+
+   Output: Spatial {
+      Action_potential: t
+   }
+
+   LS type: GMRES
+   {
+      Max iterations:      100
+      Tolerance:           1D-6
+      Krylov space dimension: 50
+   }
+}
+</code></pre>
+
+<figure>
+  <img class="svImg svImgMd" src="documentation/svfsi/cep/imgs/ttp_cuboid.gif">
+  <figcaption class="svCaption" >Activation of the cuboid.</figcaption>
+</figure>
+</section>
+<section id="ref" class="group"><h2>References</h2>
+
+<p><a id="ref-1"> <a href="https://doi.org/10.1098/rsta.2011.0139">
+[1] Niederer, S. A., Kerfoot, E., Benson, A. P., Bernabeu, M. O., Bernus, O., Bradley, C., Cherry, E. M., Clayton, R., Fenton, F. H., Garny, A., Heidenreich, E., Land, S., Maleckar, M., Pathmanathan, P., Plank, G., Rodriguez, J. F., Roy, I., Sachse, F. B., Seemann, G., … Smith, N. P. (2011). <strong>Verification of cardiac tissue electrophysiology simulators using an N-version benchmark.</strong> Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences, 369(1954), 4331–4351.  </a></a></p>
+
+<p><a id="ref-2"> <a href="https://doi.org/10.1152/ajpheart.00794.2003">
+[2] ten Tusscher, K. H. W. J., Noble, D., Noble, P. J., & Panfilov, A. V. (2004). <strong>A model for human ventricular tissue.</strong> American Journal of Physiology-Heart and Circulatory Physiology, 286(4), H1573–H1589.  </a></a></p>
+
+<p><a id="ref-3"> <a href="https://doi.org/10.1152/ajpheart.00109.2006">
+[3] ten Tusscher, K. H. W. J., & Panfilov, A. V. (2006). <strong>Alternans and spiral breakup in a human ventricular tissue model.</strong> American Journal of Physiology-Heart and Circulatory Physiology, 291(3), H1088–H1100.</a></a></p>
+
+<p><a id="ref-4"> <a href="https://doi.org/10.1002/nme.2571">
+[4] Göktepe, S., & Kuhl, E. (2009). <strong>Computational modeling of cardiac electrophysiology: A novel finite element approach.</strong> International Journal for Numerical Methods in Engineering, 79(2), 156–178.</a></a></p>
+
+<p><a id="ref-5"> <a href="https://doi.org/10.1016/j.jtbi.2008.03.029">
+[5] Bueno-Orovio, A., Cherry, E. M., & Fenton, F. H. (2008). <strong>Minimal model for human ventricular action potentials in tissue.</strong> Journal of Theoretical Biology, 253(3), 544–560.</a></a></p>
+
+<p><a id="ref-6"> <a href="https://doi.org/10.1146/annurev.physiol.70.113006.100455">
+[6] Bers, D. M. (2008). <strong>Calcium Cycling and Signaling in Cardiac Myocytes.</strong> Annual Review of Physiology, 70(1), 23–49.</a></a></p>
+
+<p><br/><br/><br/><br/><br/></p>
+</section>
+</div>
+
+
+
+
+
+
+    </div>
+</div>
+
+
+    <!-- /.container -->
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container-fluid text-center">
+          <ul class="nav navbar-nav">
+            <li><a>Copyright &copy; SimVascular Development Team - 2017</a></li>
+          </ul>
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+    <script src="js/jquery-1.11.0.js" type="text/javascript"></script><script src="js/bootstrap.min.js" type="text/javascript"></script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+      });
+      $('body').scrollspy({
+        target: '.bs-docs-sidebar',
+        offset: 40
+      });
+    </script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-55333921-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <script type="text/javascript"
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+</body>
+
+</html>
