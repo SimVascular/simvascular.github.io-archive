@@ -1,4 +1,4 @@
-## Input Requirements ##
+### Input Requirements
 
 The preferred input format of the image volumes is <b>.nii.gz</b>, <b>.nii</b> or <b>.vti</b> files. 
 The segmentation method requires an image to have an identity orientation matrix. 

@@ -1,6 +1,6 @@
-## Constructing LV Surface Meshes ##
+### Constructing LV Surface Meshes
 
-### Using SimVascular Python Shell
+#### Using SimVascular Python Shell
 
 The SimVascular
 <a href='http://simvascular.github.io/docsPythonInterface.html#python_shell'> Python Shell </a>
@@ -28,7 +28,7 @@ surface_main.py </a> Python surface generation script using the following comman
 </code></pre>
 
 
-###Using SimVascular Python Console
+#### Using SimVascular Python Console
 
 The SimVascular GUI <a href='http://simvascular.github.io/docsPythonInterface.html#console'> Python Console </a>
 can be used for surface generation. Use the Python console <strong>Text Editor</strong> mode to enter the following Python commands 

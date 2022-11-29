@@ -1,6 +1,6 @@
-## Volumetric Meshing 
+### Volumetric Meshing 
 
-###Using SimVascular Python Shell
+#### Using SimVascular Python Shell
 
 The volumetric meshing script 
 <a href="https://github.com/SimVascular/SimVascular/tree/master/Python/site-packages/sv_auto_lv_modeling/modeling/volume_mesh_main.py"> 
@@ -30,7 +30,7 @@ volume\_mesh\_main.py </a> is used to generate a finite element mesh.
 </code></pre>
 
 
-###Using the SimVascular Python Console
+#### Using the SimVascular Python Console
 
 Within the Python plugin, we can use the <strong>Text Editor</strong> mode and enter the following lines to create a Python script.
 
