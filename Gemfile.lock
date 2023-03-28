@@ -21,7 +21,7 @@ GEM
     compass-import-once (1.0.4)
       sass (>= 3.2, < 3.5)
     erubis (2.7.0)
-    execjs (2.2.1)
+    execjs (2.8.1)
     ffi (1.15.1)
     font-awesome-sass (4.2.0)
       sass (~> 3.2)
@@ -105,7 +105,7 @@ GEM
     tzinfo (1.2.6)
       thread_safe (~> 0.1)
     uber (0.0.8)
-    uglifier (2.5.3)
+    uglifier (2.7.2)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
 
